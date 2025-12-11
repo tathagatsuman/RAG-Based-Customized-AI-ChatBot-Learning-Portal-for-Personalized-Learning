@@ -1,0 +1,275 @@
+{
+    "daa1a37a-4016-4eff-9fc9-16fb6b5a6b43": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "The second problem for DAGs is what is called the\u00a0\nlongest path. So, we have a DAG without cycles,\u00a0\u00a0 we saw that a topological sort will enumerate\u00a0\nthis in some feasible order such that if i\u00a0\u00a0 depend, if j depends on i if there is an edge from\u00a0\ni to j, the"
+    },
+    "95587a77-1c1f-4759-a36d-0fbe9377f245": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "n I will always be enumerated before j.\u00a0\u00a0 Now, let us look at a typical scenario. So, for\u00a0\nexample, supposing these are courses and these\u00a0\u00a0 edges represent prerequisites, and it takes a\u00a0\nsemester to do a course, for example, then we can\u00a0\u00a0 see how much time"
+    },
+    "3715766c-e746-4d7c-bf0b-7f4e063a4dfb": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": " it will take for us to complete\u00a0\nall the courses and finish the program.\n\u00a0 So, each course takes a semester. And now we\u00a0\nexecute these courses or we take these courses\u00a0\u00a0 as fast as possible. So, initially because 0 and\u00a0\n1 have no prerequisites, we can tak"
+    },
+    "14622f34-a91c-47ce-a772-17d9341a2b03": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "e them in the\u00a0\u00a0 first semester, then having done 0 and 1, we find\u00a0\nthat we can do 2 and 4 because they only depend\u00a0\u00a0 on 0 and 1. And we can do 3 as well. So, 2, 3, and\u00a0\n4 are courses we can take in the second semester.\u00a0\u00a0 Now having done all of this, we sti"
+    },
+    "6253e86d-260a-47a8-8b83-8ebe0fd99b67": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "ll cannot take\u00a0\ncourses 6 and 7, because they depend on 5.\n\u00a0 So, we have to do 5 alone in the next semester,\u00a0\nhaving done 5 alone in the next semester, then we\u00a0\u00a0 can do 6, and then we can do 7. So, this set of 0\u00a0\nto 7, 8 courses will actually take us 5 sem"
+    },
+    "e641d699-100f-40dd-b0e3-43d1c337dac1": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "esters\u00a0\u00a0 to complete, given these dependencies.\n \nSo, our task now is to find the longest path\u00a0\u00a0 in a DAG. And as you can imagine, this\u00a0\nis closely related to the order in which\u00a0\u00a0 they are enumerated. So, this is very closely\u00a0\nrelated topological sort. So,"
+    },
+    "d065686a-55ba-460e-bff5-dad533b4b33d": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": " if we have a DAG,\u00a0\u00a0 and then the indegree of a node is 0, then\u00a0\nthe longest path to that node is 0. And that\u00a0\u00a0 in other words, it can be done on the very first\u00a0\nday, if you only think about it. So, there is no\u00a0\u00a0 requirement the longest path represents\u00a0\nho"
+    },
+    "a6f7f68c-2387-4c5c-8aca-b2541e96bd40": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "w many requirements I need to satisfy\u00a0\u00a0 sequentially in order to get to the task. So, if\u00a0\nan indegree is 0, then I can do it immediately.\n\u00a0 If it is not 0, then it has some incoming edges.\u00a0\nSo, if I knew how long it took to come there,\u00a0\u00a0 the longest path t"
+    },
+    "1143539a-cdea-4bb9-8e99-9fbdc3545ad4": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "o each of the incoming\u00a0\nedges, then I can take the maximum among these,\u00a0\u00a0 that is the constraint now I have to\u00a0\nwait for all of them to be completed. So,\u00a0\u00a0 I can take the one which is going to get completed\u00a0\nlatest, the maximum among the latest longest pat"
+    },
+    "9ec294e2-dcd9-4e54-808e-a7cc31c96920": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "hs\u00a0\u00a0 to all the incoming edges. And then my incoming\u00a0\nlong, my longest path will be 1 plus path\n \n\u00a0 So, since I need to know the maximum of\u00a0\nthese longest paths, I need to enumerate\u00a0\u00a0 them before I enumerate this vertex. But this is\u00a0\nprecisely the point of"
+    },
+    "cccc3c4d-ce7c-4f4a-8ca0-e70598de06a8": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": " topological sorting. So,\u00a0\u00a0 when I am processing a vertex k and trying to\u00a0\ncompute its longest path, I need to know the\u00a0\u00a0 longest parts of everything which has an edge\u00a0\npointing into k, but in a topological ordering,\u00a0\u00a0 this would have been done. So, if I, "
+    },
+    "2f3f5b81-4cd5-4f82-926c-3a0f06f6922f": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "if I compute\u00a0\nlongest path following a topological ordering,\u00a0\u00a0 then this kind of recursive or inductive\u00a0\ndefinition that I have done here can be satisfied.\u00a0\u00a0 So, what we will do is compute longest\u00a0\npath in the topological order.\n \n\u00a0 So, let us assume that "
+    },
+    "68aeb6cd-9ebc-45ac-914c-9e73540d2d5e": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "we have some topological\u00a0\nordering of our vertices, then we know that\u00a0\u00a0 everything in the every vertex in this list has\u00a0\nall its neighbors appearing before it. So, we can\u00a0\u00a0 go from left to right, having fixed a topological\u00a0\nordering, fixed to right, and we"
+    },
+    "671725cf-c573-4383-8a6a-c77175dd697f": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": " can do this. And\u00a0\u00a0 we do not have to first compute the topological\u00a0\norder and then scan it again as we are going\u00a0\u00a0 along, as we are computing the topological order\u00a0\nat any inductive point in a topological order, we\u00a0\u00a0 have the same scenario that is everyth"
+    },
+    "82c16d8e-29cb-44c6-b7c8-2b0a6c315c8a": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "ing that I\u00a0\ndepend on has been enumerated before me. So, I can\u00a0\u00a0 inductively compute the longest path along with\u00a0\nthe topological ordering in one single pass.\n \n\u00a0 So, as before, we start by computing the\u00a0\nindegree of every vertex, and now we will\u00a0\u00a0 also si"
+    },
+    "15735069-6bbc-45cf-9cde-1b679323ac44": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "multaneously compute the longest\u00a0\npath of every vertex. So, we initialize\u00a0\u00a0 the longest path to be 0 by assumption. And now\u00a0\nwherever I have indegree 0, it is 0. Now when I\u00a0\u00a0 enumerate something, I\u00a0\neliminate it from the graph,\u00a0\u00a0 I update the indegrees. Bu"
+    },
+    "8783c147-8712-4135-9348-450f21ce4b25": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "t I will also update the\u00a0\nlongest path. So, now I know for instance, that\u00a0\u00a0 it takes 2 takes me at least one step to reach\u00a0\n2 because I have to do something before it.\n\u00a0 So, I will update the longest path to 2 and to 7\u00a0\nas being 1 plus the longest path to "
+    },
+    "ba7cd415-b0ab-4c45-ae00-346661355a25": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "the vertex,\u00a0\u00a0 which I just eliminated. So, I am incrementally\u00a0\nupdating the longest path. So, now if I enumerate\u00a0\u00a0 0, then again, I know that its longest path to\u00a0\n0, but it will now contribute 1 to both 3 and 4.\u00a0\u00a0 Notice that the longest path to 2 remains\u00a0"
+    },
+    "4c03732f-0f41-4ce1-9d7e-33a329b0f9fc": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "\n1, because the longest path to this was 0,\u00a0\u00a0 the longest path to this was 0. So, it is\u00a0\nthe maximum of both these quantities plus 1,\u00a0\u00a0 so I already knew it was 1. So, having enumerated\u00a0\nthe new vertex 0 does not give me any new\u00a0\u00a0 information about the lon"
+    },
+    "d1f7ce47-67ba-40b2-99ca-b20df06de54b": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "gest path to vertex 2.\nNow I enumerate vertex 3. So, vertex 3 currently\u00a0\u00a0 already has listed longest path of 1, and\u00a0\nnow 3 was pointing into vertex 5. So, now 5\u00a0\u00a0 must take 2 steps to be reached because it has to\u00a0\nbe reached via 3 and 3 already takes 1 ste"
+    },
+    "fc93c63b-ce36-4dc7-9cad-02cb3a0fcc45": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "p. So,\u00a0\u00a0 the longest part of 5, which was earlier 0,\u00a0\nas a default assumption has suddenly become 2.\u00a0\u00a0 And I keep doing this. Next, I eliminate 2.\u00a0\nAnd when I eliminate 2, nothing new happens\u00a0\u00a0 because we had the situation like before,\u00a0\nwhere 2 and 3 both "
+    },
+    "cf1d8712-2b61-46ed-9343-b466473d6689": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "had longest path 1. So,\u00a0\u00a0 when I upgraded from 3, I already knew that 5\u00a0\nneeded longest but 2, so I get no change.\n\u00a0 So now, if I enumerate 5, then I get that\u00a0\n6 requires 3 steps, if I enumerate 6,\u00a0\u00a0 then I get that 7 requires 4 steps. Finally,\u00a0\nwhen I enu"
+    },
+    "c4bb9e5f-bff8-477c-ab02-ff91c16d8117": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "merate 4, I get no new information\u00a0\u00a0 for 7 because 4 required only 1 step and 7\u00a0\nwe already know requires 4 steps. So finally,\u00a0\u00a0 enumerate 7 and I have this sequence. So, I have\u00a0\nthe sequence below, which I computed along with\u00a0\u00a0 a topological sort above te"
+    },
+    "5f589e56-85c2-4eee-8dfb-95c821b7f8de": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "lling me the longest\u00a0\npath to each of these vertices in my graph.\n \n\u00a0 So, here is a variation of our topological sort\u00a0\nalgorithm, which we are now directly giving in\u00a0\u00a0 terms of an adjacency list, because we saw that\u00a0\nfor a topological sort, the list makes "
+    },
+    "0a32cd82-e5fc-4be0-8d7b-6feddccdd783": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "a lot more\u00a0\u00a0 sense in adjacency matrix. So, the new thing here\u00a0\nis that we are keeping track of this longest path\u00a0\u00a0 metric. So, we are not really interested. So,\u00a0\nwe are implicitly doing the topological sort.\u00a0\u00a0 But the purpose of this particular function\u00a0\n"
+    },
+    "6276a7a9-6c77-4d38-a23a-3e154aa11cf5": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "is not to give us a topological order.\n\u00a0 So, we are not keeping track of what we were doing\u00a0\nearlier, which was the topologically sorted list.\u00a0\u00a0 Instead, we will keep this longest path\u00a0\nfunction as a dictionary, longest path\u00a0\u00a0 l path of I will be the longe"
+    },
+    "91096bb8-af8a-4955-a940-6a5f2957402e": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "st path to\u00a0\ni. So, we initialize the in degree and the\u00a0\u00a0 longest path of every vertex to be 0. Now, as\u00a0\nbefore, we will walk through all the vertices\u00a0\u00a0 and update the degree in time\u00a0\nproportional to the number of vertices.\n\u00a0 Now as before, because we are d"
+    },
+    "7c836a80-6d43-4760-9e6a-697337a78265": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "oing the same\u00a0\ntopological calculation sort calculations before\u00a0\u00a0 we keep the 0-degree queue, and we put all\u00a0\nthe 0-degree vertices into the queue. So far,\u00a0\u00a0 we have done nothing different from what we are\u00a0\ndoing before, except that instead of keeping trac"
+    },
+    "0dacdbac-d3e8-4a57-a25c-d876a1023b00": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "k\u00a0\u00a0 of this topological sort lists, we are keeping\u00a0\ntrack of this l path longest path dictionary. \n\u00a0 So now, as long as there are 0-degree vertices\u00a0\nto process, we take out the highest one.\u00a0\u00a0 So now for every outgoing edge from here, for\u00a0\nevery k, which is"
+    },
+    "f0c6fdfb-de51-46d8-9299-3885503a1085": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": " in the adjacency list of j,\u00a0\u00a0 we update, its indegree as before, and\u00a0\nnow is the new step. So, this is new.\u00a0\u00a0 So, what we are doing now is we are saying\u00a0\nthe longest path of k is the maximum of\u00a0\u00a0 what we already knew, and 1 plus the longest\u00a0\npart of j, wh"
+    },
+    "87f13b7f-6470-4adc-b02c-5e71ae6e1d2e": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "ich we have just discovered.\n\u00a0 So, this is the only difference actually between\u00a0\nthe topological sort algorithm and the longest\u00a0\u00a0 path algorithm, except for the fact that we are,\u00a0\nwe can also keep track of the topological sort\u00a0\u00a0 here if we wished, but we h"
+    },
+    "068d7cf7-a147-44c6-a486-2f40a852baae": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "ave not done so. And\u00a0\nthen, as before, if we discovered that the newly\u00a0\u00a0 decremented degree has become 0, we\u00a0\nput it into the queue so that it will\u00a0\u00a0 be processed when its turn comes. \nAnd finally, instead of returning the\u00a0\u00a0 topological sort list, we are r"
+    },
+    "c3dc6cf9-b5e1-4d7f-8f15-765662321255": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "eturning\u00a0\nthis path, this longest path dictionary.\u00a0\u00a0 So, this is basically very similar to topological\u00a0\nsorting and so is the analysis, initializing takes\u00a0\u00a0 n plus n time, and inside the loop, which runs\u00a0\nn times, we do an update which is an amortized\u00a0\u00a0 m "
+    },
+    "58ce7ec7-1fd9-49e0-943d-af5834266fd3": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "time update, because we have to do it to the\u00a0\nsum of the degrees and so, this is m plus n.\n \n\u00a0 So, basically with directed acyclic graphs now,\u00a0\nwe can do both these things very efficiently we\u00a0\u00a0 can get the feasible schedule with topological\u00a0\nsort. And whil"
+    },
+    "50a59be0-ebe7-4db4-81d2-72724343f48d": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "e we are doing the topological sort,\u00a0\u00a0 we can also compute through the dependencies\u00a0\nthe longest path that is the minimum time. So,\u00a0\u00a0 the longest path is really telling me the\u00a0\nminimum time it will take me to finish\u00a0\u00a0 all the tasks according to the depende"
+    },
+    "6a5773df-185a-496d-9731-a293d16a465a": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "ncies.\nNow, of course, the longest path makes sense\u00a0\u00a0 for any graph and I can take any graph which\u00a0\ndoes not have cycles and say if I have cycles,\u00a0\u00a0 then the way we have defined path, we can\u00a0\ngo round and round. So, we can basically\u00a0\u00a0 look at paths which d"
+    },
+    "f3e4ac06-81f3-474d-8f5b-f86761fb521e": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "o not repeat\u00a0\nvertices and ask what is the longest path\u00a0\u00a0 in a graph, so this is often called\u00a0\nthe diameter of the graph.\n\u00a0 Now, it turns out that computing this in general\u00a0\nis very hard. So, when DAGs we have a very\u00a0\u00a0 efficient algorithm, we have somethin"
+    },
+    "703f4831-cc04-4705-8492-975f0acf1fef": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "g which\u00a0\nis essentially linear in the size of the DAG,\u00a0\u00a0 remember o m plus n is basically linear in the\u00a0\nsize of the graph. And if we go to a non-DAG\u00a0\u00a0 then this problem becomes hopelessly complicated.\u00a0\nSo, short of trying out all paths and finding out\u00a0\u00a0 w"
+    },
+    "90f5de6d-22e9-4d5b-ad65-3131b033482e": {
+        "content_id": 38,
+        "course_name": "PDSA",
+        "title": "Longest Path in DAGs",
+        "week": 4,
+        "chunk": "hich is the longest there is no really good\u00a0\nstrategy which works across all graphs. So,\u00a0\u00a0 longest path in general is a very hard problem in\u00a0\ngraphs, but for DAGs it is surprisingly simple."
+    }
+}

@@ -1,0 +1,310 @@
+{
+    "a54116ff-3f55-4745-b6cd-44ebbd2f8869": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "So, with this background about analysis of\nalgorithms, let us start looking at some basic algorithms, starting with one set we already\nexamined. So, the first problem we looked at in the\nSIM card case was to search for a value in a list. So, the search pro"
+    },
+    "1552ad42-082c-47cb-a8d6-ee23ff3774a4": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "blem says given a value\nv and given a list l, is v present in l. So, as we said if we know nothing about the\nlist, then the Naive solution is just the simple Python loop, which says for every x\nin l. Check if the value of v is a value x that\nyou are lookin"
+    },
+    "0f83fc7e-5ec5-4425-9cfb-748564c2edea": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "g for; if so, you return True. If you have exhausted all the elements in\nl and not found in v, then you return False. So, this is a Naive solution, which scans\nthe entire list. So, the input size as we said for a list is\nthe length of the list; and in this"
+    },
+    "2f59ea16-9dca-43f5-86ae-cab046c9ef7a": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " case the worst case as we have discussed before will\nhappen, when the value v is not present in the list, because you will have to go through\nevery element of the list. So, x will pass through every element in the\nlist, and each of this x will not be v; a"
+    },
+    "03716be6-3703-4f80-8114-79440b7b1709": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "nd eventually you will come out of that loop\nand then return False. So, here using this analysis in our earlier\nterminology, we argued that the worst-case complexity of this particular algorithm is\nbig O of n. So, notice this is a worst case, because I\ncou"
+    },
+    "83c3459d-8ade-4a8a-a7e3-78d999ce47ec": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "ld very well have situations, where v is found in a very first position. So, there is kind of best-case scenario, but\nI am not interested in best case scenarios; because they do not tell me much, they are\nlike lucky shots. So, I am looking at what is the w"
+    },
+    "a8ebdef4-4bd4-45db-8753-9b971937e136": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "orst thing\nthat the algorithm do; so, the worst case scenario here is O of n. So, then we said what if this list is sorted\nin ascending order? So, then we came up with this strategy that\nguess my birthday strategy; where I compare v with the midpoint of v,"
+    },
+    "32f2bb29-f43b-4f85-aee6-b840f6ae5a35": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " interval I am searching\nin. So, I have 0 to n minus 1 as positions in\nmy list, such that the values are in ascending order; so, I search at the midpoint. Now, if the midpoint happens to be the value\nI am looking for, I am done. If it is not the value I am"
+    },
+    "603a4221-6d4a-40bb-9ab5-108b28786736": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " looking for, then\nthe value I will looking for is either beyond the midpoint or before the midpoint. So, depending on whether it is bigger than\nthe midpoint value or smaller than the midpoint value; I either search the second half of\nthe list, or the firs"
+    },
+    "b5a04f57-9c47-4350-90bc-5e9d79f4618e": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "t half of the list. So, that is what this function binary search\nas it is called list doing. So, if we first checks that if I have run\nout of values to look at; remember I am shrinking this thing. So, when I shrink it down from n to n by 2\nto n by 4 and so"
+    },
+    "e9f64b73-cc19-4ed0-8bce-77116107ee47": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " on; eventually I will come to a list whose length is 1. Now, if it is not the value 1, then I will\nlook at left of 1, which will be the empty list; or the right of that one element, which\nwill again be the empty list. So, I will have to search in an empty"
+    },
+    "2fd35aef-ac14-44a3-b824-bc693b245be3": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " list;\nbut obviously I cannot assign v in an empty list. So, if the empty list is where I have reached\nand return False. Otherwise, I use this integer division to\nget the length divided by 2 as a midpoint. I check whether the midpoint is the valid\none. If "
+    },
+    "91cbfb29-1ae4-4a34-8b06-8c9b0907d197": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "the midpoint is equal to v, then I return\nTrue; if this is not the case, then I must now decide whether to go left or right. So, if the value I am looking for, it is not\nthe midpoint; so, it is either strictly less than or strictly greater than. So, if it "
+    },
+    "a8098047-dc5c-49d1-acc6-00608d60044d": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "is strictly less than, then I will\nsearch in the slice up to, but not including the midpoint. So, remember in Python, this will go up to\nm minus 1; it will go from 0 to m minus 1. And not hit m, which is the midpoint which\nwe have already seen. Otherwise, "
+    },
+    "e6e36b16-2c85-4224-a132-834d1d8eb5d5": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "if it is not smaller, it is bigger;\nand if it is bigger, then I want to start beyond the midpoint. So, m is the midpoint, so I start which I\nhave already checked; so, I go to m plus 1 till the end of the list. So, this slice notation is very convenient\nin "
+    },
+    "741ad85e-3ae9-4e73-806e-2911c74397bb": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "Python, to express the beginning of the list to m; or m plus 1 to the end of the list. So, in both cases I am skipping m, here because\nm is not included in this range calculation. And here because I am starting at m plus 1;\nso, this as we said is called bi"
+    },
+    "9af7f7e5-b625-411c-b831-a21ec08a176e": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "nary search. So, how long does this take? We have argued before many times, as this\ntakes time proportional to how many steps you need to halve the interval down to 1. So, each step halves the interval and so we\nstopped when this interval becomes empty. So"
+    },
+    "283d18fe-eb5e-4cdb-ae7d-2f8e75b0b5d9": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": ", log of n remember log of no with no base\nis always to the base 2 by assumption. Log of n is a number of times we divide n\nto get 1; and now I have an interval of size 1 and I divide by 2 again, I get 0. So, log of n plus 1, but we will ignore the\nplus 1;"
+    },
+    "15141371-2a2e-4a3a-8e82-a6b59ebd9499": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " so, this is going to be big O of log n. So, that is one way to do the calculation,\njust to analyze at a kind of at the level of the meaning of the program. Try to argue what it is doing and make the\nkind of high level of analysis of that. Now, there is a "
+    },
+    "928c48fe-e0d5-472b-9475-5577094835e5": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "more explicit way to do this,\nespecially for functions like this, which essentially, I just shortened to make it fit\non the page; so, binary search uses itself. So, this is a recursive function. So, function on the full list calls itself\none half the list."
+    },
+    "73de5021-edd3-4b8a-b080-f59405aa92b1": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " So, let T of n as we normally say be the time\nit takes to search a list of length n. So, we have two cases if the length is 0,\nit is an empty list; then we just check and leave. So, this is one basic operation checking whether\nthe list is empty or not; so"
+    },
+    "45f7febe-42cb-4a14-ad32-c348a101abd1": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": ", in one step I get my answer, which is always False. On the other hand, if the answer is not that,\nthen I have to do some work. So, I have to compute the midpoint, check\nthis and all that. So, in the worst case remember this is always\nworst case; what I h"
+    },
+    "14baa6da-e30a-48f6-9dfd-e970515bc96f": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "ave to is I have to search either the first half or the second half. So, I have to solve the same problem for half\nthe list; so that is T n by 2. And I have already spent one step deciding\nwhich half to do and all that, more than one step. But, as I said w"
+    },
+    "7e1330f7-9138-4121-8606-da4bce692c1c": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "e have collapsed it all that\nsaying this whole thing is of three steps or for steps or whatever it is that, you want\nto count for these comparisons and divisions and all that. So, we have spent certain amount of time,\nbut a fixed amount of time to decide w"
+    },
+    "f7a09db4-41de-4cb6-8d03-0ae5fc16471c": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "hich half to call, and then we have to solve that. So, it is T n by 2 plus 1; so this is what\nis called the recurrence. So, T of n for binary search is 1 if n is\n0; and if n is bigger than 0, it is T n by 2 plus 1. So, how do we solve this? The easiest way"
+    },
+    "151c0527-bd45-42fb-b1b4-ecc1b60daef2": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " to solve this, if you can\nmanage to find out a pattern is to unwind it. So, unwind it means you take the definition\nand you keep expanding it again and again. So, we start with T of n, so what is T of\nn? by definition it is T of n by 2 plus 1. So, I do no"
+    },
+    "0788020a-aeee-41b2-913c-9b34aad56537": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "t know what this value is? So, I again apply the definition to it. So, if I trick n by 2 as the input, then it\nwill expand as T of n by 4, half of it plus 1. So, this is an expansion of this part and\nthen I have this old plus 1 coming here; so, this is wha"
+    },
+    "f8e865c3-0d40-4de9-bed2-44548312cc67": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "t mean by unwinding. You take the definition whenever you have\na expression which you do not know the answer to apply the definition again. So, T of n, I apply the definition, got T\nof n by 2; T of n by 2, I got the definition; I apply the definition again"
+    },
+    "03f87651-9853-4a7c-a104-a9347ba9c0ee": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " I got T of n\nby 4. So, now if I kind of simplify this and rewrite\nit; I will take this two once together and say there are 2 ones. But I will also rewrite this and saying that\nI divided by 2 twice. So, instead of writing it as 4, I will write\nit as divide"
+    },
+    "3d41c98d-cdc6-4062-b6b6-edd66277461d": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "d by 2 to the power 2; showing that I divided twice. I started with n and divided by 2, started\nwith n by 2 and divided by 2 again. So, in general now if I do this k times, that\nis why if I applied this binary search case k times, I have gone left and righ"
+    },
+    "6bf984f3-2f41-4f26-8f3c-bc9e82513123": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "t left and\nright. Then the interval would have been divided\nby 2k times; so I would have an interval of size n by 2 to the k. And each time I would have spent one step\nof work to try and decide whether to go left or right. So, I would have spent k times on"
+    },
+    "2bbe4199-3668-42e4-bca0-0fb07c399b3f": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "e work; so\nI would have T n by 2 to the k plus k times 1. Now, of course we said and we have seen many\ntimes, as when will n by 2 to the k reach the limit that we want, when it becomes 1. So, after log n steps, I will have T to the\n1; so 2 to the k is equa"
+    },
+    "f9113702-6d7a-448d-8c6e-5bf05728a60b": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "l to 1. So, after log n steps, I will end up with\nT to the 1 plus log n of course. So, T to the 1 plus k, where K is log n. but,\nwhat T of 1? T of 1 is T of 0, because 1 by 0, 1 by 2 is\n0 plus 1. So, if I expand this T of 1 one more time,\nbecause I do not "
+    },
+    "302a9955-169d-475c-a5ec-aa49ce919154": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "have an expression T of 1. I get T of 0 plus 1 plus log n; log n because\nI stopped with k equal to log n. So, I get this plus 1 that is 2, because T\nof 0 is 1, I have a 1 here; so, 2 plus log n, so, again it is big O of log n. So, the interesting thing her"
+    },
+    "dd294927-c2e6-4e77-8619-c52f8bb603f2": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "e is that without\ntrying to analyze what is happening; so notice that I am not this this whole thing here that\nI have done on the left hand side. It was merely a kind of algebraic manipulation\nbased on what is happening in the code. So, I have not try to u"
+    },
+    "7cad1780-9866-4d63-8831-12378ffaacc7": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "nderstand what is happening\nin the code. So, the earlier analysis, which I gave you\nsaid, I am halving the interval and the interval keeps halving; and at thumb point interval\nbecome the trivial interval, and how many times it will take. So, here I am not "
+    },
+    "b9006e5f-b8a7-4986-88d6-639f2c9bea2e": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "asking anything about what\nthe algorithm is doing. I am just saying this is the call; if I call\nit with n, it ends up calling itself with n by 2. And in order to do that, I have to do a certain\namount of work in between. So, this is a more syntactic way of"
+    },
+    "364d37c9-e1bc-4d1d-b276-352d1913c49c": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " analyzing\nan algorithm; it does not require me to understand at a higher level, what process the algorithm\nis doing and yet I arrived at same answer. So, this is useful to know that when you have\na kind of recursive algorithm like this; it is very importa"
+    },
+    "d3b29a5f-8b47-4830-b7ed-6f25f276f75a": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "nt to be able to write this\nrecurrence. And then usually you can solve it by unwinding\nit like this. So, to summarize the first non-trivial algorithm\nthat we have seen in this course is searching. So, given a value, given a list, search for\nthis value in t"
+    },
+    "cf2c42b9-5d6f-4763-aebc-6ab22c877ae3": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "he list; if the list is not sorted, you cannot do anything better and\nbig O of n. So, we have to scan the entire list and the\nworst case is when the value is not present. On the other hand, if the list is sorted,\nthen we can use its binary search by lookin"
+    },
+    "66bfec5d-8fa8-40b7-b4c5-5ef1a4ea9283": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "g at the midpoint. And an order log n time by, halving the interval\nto search at each time; I will find or not find the value in log n steps. So, this is really remarkable if you think\nabout it; because it says that log of say 10 to the power 6 is roughly "
+    },
+    "1e20ebaf-1b0f-448b-9ded-a3e3072356c0": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "20. So, that means if I give you one million sorted\nvalues, and I give you a new value which is not present in these one million sorted values;\nyou will only look at 20 of them. So, ninety nine (thous), nine hundred and\nninety nine thousand nine hundred an"
+    },
+    "36ec6282-0dda-4ea0-9fae-3e89d98abd3d": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": "d eighty values, you will have to you can ignore. So, these many values can be ignored; you\nhave start with one million values. So, this truly a remarkable property that\nalmost the entire list you can ignore; and still, you can convince me that the value\nI"
+    },
+    "93645a6e-6613-485d-add8-786d0c49d421": {
+        "content_id": 16,
+        "course_name": "PDSA",
+        "title": "Searching in a List",
+        "week": 2,
+        "chunk": " am looking for is not there. So, this is truly remarkable."
+    }
+}

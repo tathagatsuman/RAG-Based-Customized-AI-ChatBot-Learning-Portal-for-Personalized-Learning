@@ -1,0 +1,338 @@
+{
+    "86a38f4f-3697-4043-80c2-ed21263a8c03": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "So, let us continue our recap\u00a0\nof python and go back to\u00a0\u00a0 the gcd which we saw in the first of these\u00a0\nrecap lectures. So, remember that the gcd\u00a0\u00a0 is the number which, the largest divisor\u00a0\nof both m and n and we had two versions of\u00a0\u00a0 gcd that we had compute"
+    },
+    "e9922d54-4ebd-482b-9bd8-f0da1b6e5eba": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "d, one which actually\u00a0\ncomputed the list of common factors between\u00a0\u00a0 m and n and then found the last one, so this\u00a0\nis the last common factor or we said we do\u00a0\u00a0 not actually need the entire list because only the\u00a0\nlast one is important, so I can just increme"
+    },
+    "e12b4cba-8361-4c16-8639-8995241e1418": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "ntally\u00a0\u00a0 keep track of this most recent common factor.\nBut in both of these the operational aspect\u00a0\u00a0 that has to be executed is this\u00a0\nfor loop, so I have to run over\u00a0\u00a0 all i ranging from 1 to the minimum of m and n and\u00a0\nthis is something that we wanted to "
+    },
+    "9248c020-a8c2-4c5e-be4a-ec67e461dcfe": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "improve on.\n\u00a0 So, let us see whether there is a kind of\u00a0\ndifferent strategy to look at gcd, instead of,\u00a0\u00a0 so what we have done right now is what you might\u00a0\ncall the naive or the brute force strategy. We\u00a0\u00a0 took the took the definition of factors and we\u00a0\njus"
+    },
+    "e8e81f72-4c55-4d06-9496-7a481d2b06c1": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "t literally computed all the common factors\u00a0\u00a0 and tried to find the largest common factor.\nSo, sometimes you need to think in a kind of\u00a0\u00a0 different or orthogonal way about the problem\u00a0\nin order to find a better way to solve it.\u00a0\u00a0 So, here is a different wa"
+    },
+    "8c6a44a1-167a-4463-880c-4c722668ed91": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "y of thinking about it.\u00a0\nSo, supposing d is indeed a common factor of m and\u00a0\u00a0 n, so d divides m and d divides n, that means I\u00a0\ncan write m as a multiple of d some a times d,\u00a0\u00a0 and b is also a multiple of d some b times d,\u00a0\nn is a multiple of d b times d, s"
+    },
+    "48b08cf1-a4a8-4f77-820e-e0b62b987ccc": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "o m and n are\u00a0\u00a0 both multiples of d because d by assumption\u00a0\nis something that divides both m and n.\n\u00a0 But now let me look at m minus n then with\u00a0\nsome very simple algebra you can say that m\u00a0\u00a0 minus n is a d minus b d and therefore it is a\u00a0\nminus b times d"
+    },
+    "ad012a7c-6468-45cc-bdaf-262ce1d4a2c0": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": ". So, assuming that, let us assume\u00a0\u00a0 for the moment it does not really matter if m is\u00a0\nbigger than n, a minus b is going to be positive\u00a0\u00a0 if m is smaller than n, m minus, a minus b is\u00a0\ngoing to be negative, but the main point is that\u00a0\u00a0 d is also a number t"
+    },
+    "96b116d8-9804-4f1e-86cc-d5ed274e1fb7": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "hat divides m minus n.\nNow, m minus n is a smaller number. So,\u00a0\u00a0 what we are really saying is that if we want to\u00a0\nsolve a problem with m and n, we can actually\u00a0\u00a0 reduce it to a problem with smaller numbers,\u00a0\nso we can keep simplifying the problem we are\u00a0\u00a0 "
+    },
+    "9e5c5d2c-f8be-4716-b705-b559e5399777": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "solving and come up with a final solution\u00a0\nwhich is based on very small numbers.\n\u00a0 So, these are what are called recursive\u00a0\ndefinitions, so we want a function which is\u00a0\u00a0 recursively defined so we have to have a situation\u00a0\nwhere we can declare that we know "
+    },
+    "6be62d83-92ba-458c-b791-272ec0573351": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "the answer\u00a0\u00a0 and the situation we know the answer is\u00a0\nwhen one of the numbers divides (()) (2:56),\u00a0\u00a0 supposing I ask you what is the gcd of 9 and\u00a0\n3, then you know that 3 actually divides 9,\u00a0\u00a0 so you can just return 3 because if the smaller\u00a0\nof the 2 numbe"
+    },
+    "c3b7fa89-efbb-4202-af4d-167369151284": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "rs actually divides the bigger\u00a0\u00a0 number directly then it is the gcd, because it\u00a0\nis the largest factor of itself and there is no\u00a0\u00a0 larger factor of 3 than 3 and 3 divides 9.\nSo, if the second number, we are assuming the\u00a0\u00a0 second number is smaller in this c"
+    },
+    "40edaff6-67f7-45ba-9c2a-a07673cdc7a8": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "ategory. So,\u00a0\nif n divides m then we can just directly say\u00a0\u00a0 that we are done, if n does not divide m then\u00a0\nwe have to do some work. So, earlier our work\u00a0\u00a0 consisted of actually explicitly computing\u00a0\nall the factors of m and all the factors of n,\u00a0\u00a0 up to t"
+    },
+    "c7f6cc86-36a8-42c4-abab-c5f7a4e54b0e": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "he minimum of m comma n.\nInstead what we are going to do is exploit\u00a0\u00a0 this observation and say let us take the smaller\u00a0\nnumber n and look at the gcd of that number\u00a0\u00a0 with the difference m minus n. So, we reduce\u00a0\nthis problem of m n to the problem of n m mi"
+    },
+    "dbad0868-7f50-492e-8a53-e2376eaf58c2": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "nus\u00a0\u00a0 n where n we assume is small. So, here is how\u00a0\nwe write it, so we have this gcd of m comma n\u00a0\u00a0 but we do not know of course whether m\u00a0\nis bigger than n or smaller than n.\n\u00a0 So, what we do is we first figure out which is\u00a0\nbigger and which is smaller a"
+    },
+    "304c268e-773b-4b09-b99a-9a217e9cbfed": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "nd call them a and b.\u00a0\u00a0 So, a is the bigger one the maximum,\u00a0\nand b is the smaller one the minimum.\u00a0\u00a0 So, now if the smaller one that is b divides\u00a0\na, so a divided by b has remainder 0,\u00a0\u00a0 then b is already the gcd and I am\u00a0\ndone so this is the base case.\n\u00a0"
+    },
+    "4b5ff549-5348-4116-99be-c355de983a10": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": " Otherwise I take the smaller number which I know\u00a0\nis b because I have already computed that b is a\u00a0\u00a0 minimum and I take the difference a minus b.\u00a0\nSo, you might be tempted to think that after\u00a0\u00a0 this a minus b will be smaller than b but it\u00a0\nis not the case"
+    },
+    "0002a517-0b53-42bf-994d-b6e62d94a90c": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": " in general. So, supposing I say\u00a0\u00a0 something like gcd of 97 comma 2 then 2 does\u00a0\nnot divide 97 because 97 is an odd number.\n\u00a0 So, I will end up saying that\u00a0\nb is 2 and a minus b is 95.\u00a0\u00a0 So, the next call will be gcd of b and b minus\u00a0\na, a minus b, so it w"
+    },
+    "cdcf8c86-9ece-41dd-984f-44c34b445e5e": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "ill be 2 comma 95. So, in\u00a0\u00a0 general each time when I call this gcd recursively\u00a0\nI cannot I am not guaranteeing that I am calling\u00a0\u00a0 it with the right order bigger and smaller which\u00a0\nis why I need to fix that inside the function,\u00a0\u00a0 so I get two numbers I fir"
+    },
+    "7aac37f0-2310-4448-9397-04f94c7ecab6": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "st identify which is\u00a0\nsmaller which is bigger and then I proceed.\n\u00a0 But otherwise this now you see that\u00a0\nthere are no factors, no list nothing,\u00a0\u00a0 I am not explicitly keeping track of the factors\u00a0\nof any number, I am only signaling when one number\u00a0\u00a0 is smal"
+    },
+    "7be400e1-65d9-4b09-904e-4edfcacbafd6": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "ler than the other number, divides the\u00a0\nother number. So, now because of this property,\u00a0\u00a0 supposing a number divides both m and n\u00a0\nthen it must also divide m minus n.\n\u00a0 So, in particular if you look at the gcd, the\u00a0\nlargest number that divides m and n that"
+    },
+    "8cfcd7e9-0b11-4935-99ed-5419d1121efc": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": " number\u00a0\u00a0 is also a d of some form, so the largest number\u00a0\nthat divides m and n also divides m minus n,\u00a0\u00a0 so at every point when I reduce the problem I am\u00a0\nnot changing the value I report, the gcd before\u00a0\u00a0 and the gcd after are the same, anything that\u00a0\ndiv"
+    },
+    "d45c4873-051b-4b4a-81bd-04020e10ffc0": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "ides m comma n also divides n m minus n.\n\u00a0 So, by reducing this problem each time I am\u00a0\nguaranteeing that the answer does not change\u00a0\u00a0 and finally I reduce it to a simple\u00a0\ncase where I just check whether\u00a0\u00a0 smaller number divides a bigger number.\u00a0\nSo, this "
+    },
+    "9ed9c867-6787-4d3e-9dad-91be60f2c6c3": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "is our recursive function.\n\u00a0 Now, the problem with this is actually that this\u00a0\ndoes not solve our original problem, our original\u00a0\u00a0 problem was when we were computing this list of\u00a0\nfactors it was taking time proportional to the\u00a0\u00a0 minimum of m and n. Now, he"
+    },
+    "8925e9cb-883e-4fc1-9d3f-c803f94de280": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "re actually is going\u00a0\nto be a little worse, it is going to take time\u00a0\u00a0 proportional to the maximum of m and n. So, to\u00a0\nunderstand this let us look at an example.\n\u00a0 So, supposing I take the gcd of 2 and some\u00a0\nlarge odd number, then as we saw b minus,\u00a0\u00a0 b is"
+    },
+    "42202a8f-c8bb-4093-bddf-9bafee3c17c2": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": " going to be 2 and a minus b is going\u00a0\nto be the large odd number minus 2. So,\u00a0\u00a0 9999 is going to reduce to 9997, that is going\u00a0\nto reduce by 2 to 9995, so I am going to keep\u00a0\u00a0 doing this approximately so I am reducing by 2 so\u00a0\nthis is approximately 10000 "
+    },
+    "b8079175-d1a1-45cd-9474-333f9b2b1207": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "the second number.\n\u00a0 So, if I keep reducing by 2 after about\u00a0\n5000 steps I will come down to 2 comma 3\u00a0\u00a0 and when I do 2 comma 3 and I do this\u00a0\nthing now 2 becomes a smaller number\u00a0\u00a0 so then I get 3 minus 2 the difference is 1\u00a0\u00a0 and so I get gcd of 2, 1 an"
+    },
+    "18d3c970-872c-417c-8aed-9afd2f60d72b": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "d now since 1\u00a0\ndivides 2 finally I use the base case to get\u00a0\u00a0 the fact which was kind of obvious right from the\u00a0\nbeginning that I have 2 and I have an odd number,\u00a0\u00a0 then I do not have any possibility\u00a0\nthat that number is divisible by 2.\u00a0\u00a0 So, the gcd is 2 "
+    },
+    "8804b5ce-292c-49cd-b9f9-0e160a048688": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "saying there is no common\u00a0\nfactor between 2 and any odd number.\n\u00a0 So, the problem here is that this takes\u00a0\napproximately 5000 steps, so this is not\u00a0\u00a0 a nice thing as we will see, so we would\u00a0\nlike to do something much faster than this.\u00a0\u00a0 But we can use the"
+    },
+    "02233f96-0d36-4818-b0d3-25dc328610fe": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": " basis of this recursive thing\u00a0\nto come up with a more clever recursive thing.\n\u00a0 So, this is what is called Euclid s algorithm. So,\u00a0\nsuppose now earlier we looked at common factors we\u00a0\u00a0 said suppose d divides both, now let us suppose\u00a0\nthat we are not in th"
+    },
+    "88a3f63c-3524-4ef0-95db-8887a5c848da": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "e base case, the second\u00a0\u00a0 number does not divide the first number that is\u00a0\nwhere we have to figure out what to do next.\n\u00a0 If the second number n divides m then we are\u00a0\ndone, so the question is what do we do when we are\u00a0\u00a0 not finished, how do we reduce it t"
+    },
+    "8523d394-2178-477f-b1a7-a1c60793d79d": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "o a smaller\u00a0\nproblem. So, in the earlier case we took\u00a0\u00a0 m minus n but now we want to do\u00a0\nsomething more clever than that.\u00a0\u00a0 So, if n does not divide m then when I\u00a0\ndivide m by n there is a remainder.\n\u00a0 So, this is written as, this is if you\u00a0\nremember from "
+    },
+    "e5e4c590-0b74-4a46-88d2-296287c27299": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "school this is called the\u00a0\u00a0 quotient and the remainder so m divided by n\u00a0\nit goes a certain number of times so that it\u00a0\u00a0 goes into it q times and leaves a remainder\u00a0\nr, so I can write m as q times n plus r. \n\u00a0 Now, let us look at a possible common divisor "
+    },
+    "34af4fa9-2dd6-41a2-b08c-c383eb9420a2": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "d\u00a0\nfor both m and n. So, as before if d divides m\u00a0\u00a0 and d divides n, I can write each of them as a\u00a0\nmultiple of d. So, I can write m as a times d,\u00a0\u00a0 I can write n as b times d. So, now if I look\u00a0\nat the equation above m is equal to q n plus r,\u00a0\u00a0 I can repl"
+    },
+    "8a0b363d-53ad-4c87-b45b-dde69e2c846b": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "ace this m by a times d and\u00a0\nI can replace this n by b times d.\n\u00a0 So, I have on the left something which is a\u00a0\nmultiple of d and I have something on the right\u00a0\u00a0 which is a multiple of d plus something. Now,\u00a0\nthis is not very difficult to show but you can\u00a0\u00a0"
+    },
+    "aab6ff2b-28d1-4468-8824-59f9986ffdef": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": " easily justify to yourself that if the left hand\u00a0\nside is something times d then the right hand\u00a0\u00a0 side must also be something times d and if d is a\u00a0\nfactor here then d must also be a factor there.\n\u00a0 So, from this expression you can conclude that\u00a0\nr must a"
+    },
+    "f145a58e-3923-411f-b5fb-e09ae8b2efe9": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "lso be of the form something times d,\u00a0\u00a0 so let us call it c times d. So, in other words\u00a0\nwhen I find that n does not divide m not only does\u00a0\u00a0 m minus n as we saw before have d as a factor\u00a0\nbut m remainder n also has d as a factor.\n\u00a0 So, this gives us what "
+    },
+    "7e608d59-1d08-45df-a0af-b259d68c7d96": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "is called Euclid s\u00a0\nalgorithm. So, in Euclid s algorithm the\u00a0\u00a0 difference is that we instead of taking m minus\u00a0\nn as in the previous case we take in mathematical\u00a0\u00a0 terms m mod n, m mod n is the remainder which in\u00a0\npython terms is this percent operator, so "
+    },
+    "78308e50-4b33-4d29-840b-97ead09f9625": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "the only\u00a0\u00a0 difference between the previous thing and this is\u00a0\nearlier it was a minus b, now it is a percent b,\u00a0\u00a0 everything else is the same, I compute a to\u00a0\nbe the maximum, b to be the minimum, if b\u00a0\u00a0 divides a then I return b as before, the smaller\u00a0\nnumb"
+    },
+    "7b00af8f-3fe5-46fb-a240-b152bea47b0b": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "er divides the larger number it is the gcd,\u00a0\u00a0 otherwise I go down to the smaller number\u00a0\nand the remainder not the difference.\n\u00a0 So, we can actually show that this is a\u00a0\ndramatic improvement, so this takes time\u00a0\u00a0 proportional to the number of digits so ear"
+    },
+    "d005e4f0-714c-465c-a312-881202c5a3fb": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "lier we\u00a0\nhad looked at for example the gcd of 2 and 9999,\u00a0\u00a0 and we said that this is going to take\u00a0\nsomething like 5000 steps because it\u00a0\u00a0 takes time proportionate to the maximum\u00a0\nof the two numbers but this gcd will\u00a0\u00a0 actually take something proportional "
+    },
+    "13b3f13a-a859-4ee5-8b7f-be57c29a97b4": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "to\u00a0\n4 because there are 4 digits in this.\n\u00a0 So, in general when we are dealing with\u00a0\nnumbers this is what we would like, so think\u00a0\u00a0 of multiplication, if I take 32 times 4 and I take\u00a0\n322 times 6, my number on the right has multiplied\u00a0\u00a0 by a factor of 10 b"
+    },
+    "09f6a9e8-690e-4472-ab9b-b7428f28f6d0": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "ut clearly if I do the\u00a0\nmultiplication the extra work that I get\u00a0\u00a0 is I have to multiply one more digit.\nSo, a reasonable problem, a reasonable\u00a0\u00a0 algorithm for any numerical problem like\u00a0\nthis should grow as the number of digits,\u00a0\u00a0 it would be tremendously"
+    },
+    "1bd33987-c5f9-4138-8b5c-f3862e8d9fae": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": " difficult for us if in\u00a0\norder to add two 4 digit numbers it takes 10 times\u00a0\u00a0 as long as it takes to add two 3 digit numbers, it\u00a0\ndoes not, we just have to carry one more step.\n\u00a0 So, if I have 4 digits it takes me so many time,\u00a0\nif I take 5 digit I have on"
+    },
+    "b1bd374b-a9f9-4345-ac8a-00e566d07b3c": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "e more carry to answer,\u00a0\u00a0 one more column to add. So, we really want things\u00a0\nwhich are proportional to the number of digits and\u00a0\u00a0 it turns out we are not going to prove it here,\u00a0\nbut Euclid s algorithm has this property.\n\u00a0 The other important reason to loo"
+    },
+    "18bb1a4c-26fe-43ff-a64d-a77f73bdd92f": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "k at Euclid s\u00a0\nalgorithm other than it being a nice example is\u00a0\u00a0 actually is one of the first examples that\u00a0\nwe know of a non-trivial algorithm. So,\u00a0\u00a0 remember that we have started with the problem\u00a0\ntalking about divisors and factors and all that\u00a0\u00a0 and we "
+    },
+    "53d4e38f-cc45-4caf-83d2-7979d467b45c": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "have completely translated it into\u00a0\nsome properties of numbers and remainders.\n\u00a0 So, we are kind of approach the problem from a\u00a0\ndifferent angle and come up with a significantly\u00a0\u00a0 better solution. So, this is what I mean by\u00a0\na non-trivial algorithm, it is "
+    },
+    "f11b8159-fe97-4db0-8513-e79dd5384055": {
+        "content_id": 5,
+        "course_name": "PDSA",
+        "title": "Python Recap - III",
+        "week": 1,
+        "chunk": "not an obvious\u00a0\u00a0 algorithm and it significantly improves\u00a0\nthe performance of the obvious algorithm."
+    }
+}

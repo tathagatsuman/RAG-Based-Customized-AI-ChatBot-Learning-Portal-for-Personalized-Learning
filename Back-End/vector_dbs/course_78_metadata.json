@@ -1,0 +1,800 @@
+{
+    "cd0ff2a6-bb43-49f6-b1d7-ba0e146f0e73": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "So, till now the focus of the course has been on\u00a0\ntrying to find efficient algorithms, but sometimes\u00a0\u00a0 efficient algorithms do not exist. So, how do you\u00a0\nwork in that situation, to show that something\u00a0\u00a0 cannot be done efficiently? So, this is the realm\u00a0\nof"
+    },
+    "3059a1d2-004b-42af-9491-e4711be9d6de": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " what is called intractability. So, we will look\u00a0\u00a0 at intractability, so we will begin by looking\u00a0\nat something called checking algorithms. \n\u00a0 So, when we look at efficient problems for which\u00a0\nwe have reasonably efficient algorithms. So,\u00a0\u00a0 we looked at sho"
+    },
+    "d0ff7c0b-d8ca-43cd-b230-f98716b14365": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "rtest paths, minimum cost\u00a0\nspanning trees, maximum flow. By efficient\u00a0\u00a0 we typically mean that they have this polynomial\u00a0\ntime algorithm. So, polynomial time is generically\u00a0\u00a0 taken as definition of efficient solution.\u00a0\nAlthough we have seen that even in po"
+    },
+    "074756da-bc04-46f5-8487-9d3e4d3a2696": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "lynomial\u00a0\u00a0 time, if you have something that runs in n cube,\u00a0\nthis is something that runs in n log n. \n\u00a0 There is a huge practical difference in what\u00a0\nsize problem we can solve with one rather than\u00a0\u00a0 the other. But from a more abstract perspective\u00a0\nof algor"
+    },
+    "078a6098-a48c-4dc7-b9c0-70d12f57282d": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "ithms, anything which is of the form\u00a0\u00a0 polynomial n to the power k for some fix k\u00a0\nis considered to be good. So, now we have\u00a0\u00a0 efficient algorithms, what do these efficient\u00a0\nalgorithms do? Well, they actually find a solution\u00a0\u00a0 from a large set of possible "
+    },
+    "af8d3877-0b43-447a-bf31-d3c1925204f3": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "solutions. \nSo, if you are looking for the shortest path,\u00a0\u00a0 there are many paths. And we said,\u00a0\nin general, they are exponentially\u00a0\u00a0 many paths. The same way there are exponentially\u00a0\nmany spanning trees, maximum flow also, we said,\u00a0\u00a0 if you are not careful"
+    },
+    "b1c1afee-1f91-4c07-b270-b33cff6935d4": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": ", the Ford Fulkerson\u00a0\nalgorithm will do something which is going to be\u00a0\u00a0 proportional to the size of the actual flow. \nSo, what these algorithms managed to do is somehow\u00a0\u00a0 prune this search and find the correct solution\u00a0\nwithout actually examining all thes"
+    },
+    "c83a02f5-6639-413c-bf83-b234a376f482": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "e exponentially\u00a0\u00a0 many solutions. So, there is some clever way\u00a0\nin which you cut through this exponential.\u00a0\u00a0 But there is always the brute force possibility,\u00a0\nso the brute force possibility just says enumerate\u00a0\u00a0 every possible path, every possible spanning"
+    },
+    "55e4b1cd-6b85-45cf-8da4-b877c9c1cca6": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "\u00a0\ntree. And then check whether or not that is\u00a0\u00a0 the best one, or find the minimum or\u00a0\nthe maximum across all of these. \n\u00a0 So, now, this is in general going to be very\u00a0\ninefficient. It will be correct, because you\u00a0\u00a0 are explicitly enumerating every possible"
+    },
+    "e4d2453a-7511-47b3-a8e1-9b5e844eedc9": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " solution\u00a0\nand picking the best one. But it is not going to\u00a0\u00a0 be computationally tractable. So, the question, as\u00a0\nI said, is, can we always do this? Can we always\u00a0\u00a0 somehow bypass this exponential search by finding\u00a0\na clever algorithm? So, do all problems "
+    },
+    "ebeb6307-0fb2-4b3a-8845-00dc505a6439": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "admit\u00a0\u00a0 such efficient solutions, which bypass this\u00a0\nand unfortunately, this is not the case. \n\u00a0 So, we will see that there is a large class of\u00a0\nproblems. And these problems are very natural,\u00a0\u00a0 they are problems which actually arise in the\u00a0\nday to day thin"
+    },
+    "160d95d5-6dd5-4470-af91-c728f23ad4a5": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "gs that we have to deal with.\u00a0\u00a0 And therefore, it is a bit challenging that\u00a0\nnone of them is known to have a theoretically\u00a0\u00a0 efficient algorithm of the same type that we\u00a0\nhave seen here for shortest paths, and so on. \n\u00a0 So, let us look at a general questio"
+    },
+    "9a0587cd-b884-4fee-b537-cde5fdc8cc7c": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "n, which is\u00a0\nthe problem of solving something versus checking\u00a0\u00a0 that a solution is correct, the problem of\u00a0\ngenerating a solution versus checking a solution.\u00a0\u00a0 So, supposing as a maths teacher, I assign you\u00a0\nsome homework. So, I give you a large number,\u00a0\u00a0 "
+    },
+    "ca9fff3a-42ff-47e6-907e-0310f6835e21": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "which I know is the product of two primes, it\u00a0\nis a product of two large primes, and I tell you\u00a0\u00a0 find these prime numbers. \nSo, as a student, you are given this\u00a0\u00a0 large number N, and you have to find these\u00a0\nprimes p and q says p times q equal to n.\u00a0\u00a0 And "
+    },
+    "ccc3976c-23fb-4e02-b61f-16eb665fe5e3": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "you can imagine that this will be complicated,\u00a0\nbecause you have searched, you have to search for\u00a0\u00a0 these large primes. Because assuming they are\u00a0\nreally large, you have to go through all the\u00a0\u00a0 primes up to p in order to find them. So, in fact,\u00a0\nthere is n"
+    },
+    "9ecfcb6a-2351-4358-9bf3-baddb336d752": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "o known way to do this efficiently. \n\u00a0 So, this is the students problem, the students\u00a0\nproblem is to generate a solution. And it could\u00a0\u00a0 take arbitrarily long depending on how much time\u00a0\nthe student is willing to spend on it, and how\u00a0\u00a0 careful the student "
+    },
+    "ffb1d3e0-4c30-44e7-bfe9-17ead8bc63af": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "is about calculations. Now the\u00a0\nstudent submits the homework and I have to correct\u00a0\u00a0 it. So, what do I have to do? Well, as a teacher,\u00a0\nthe student gives me a p and a q. I am not really\u00a0\u00a0 interested maybe in how that student arrived at p\u00a0\nand q, I just wan"
+    },
+    "1f2a5ca4-b230-49a0-acdf-38eb923d1e9e": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "t to check if it is correct. \n\u00a0 So, if I want to check, it is correct, I do\u00a0\nnot have to do any searching for p and q. I\u00a0\u00a0 have given p and q and I know the target, I need\u00a0\nthat p and q is factors of n, and I know that\u00a0\u00a0 they must multiply to n. So, I just"
+    },
+    "903403aa-f08c-4eca-8fb6-76ac6722f071": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " multiply p\u00a0\nby q, which is a relatively simple procedure,\u00a0\u00a0 check if it is equal to n. So, as a teacher, my\u00a0\ngoal is only to check the answer. As a student,\u00a0\u00a0 the person who is assigned this problem,\u00a0\nthe goal is to find the answer. \n\u00a0 And it seems intuit"
+    },
+    "f86a2b59-6e3b-45b9-acc1-459defb17ae8": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "ive, that generating a\u00a0\nsolution is harder than checking a solution.\u00a0\u00a0 So, this example leads us to the notion of a\u00a0\nchecking algorithm. So, I am given a problem\u00a0\u00a0 p, which I want to solve. And I want to talk\u00a0\nabout a checking algorithm for that problem,\u00a0\u00a0"
+    },
+    "4db88b66-035b-4d39-b5d8-abf4f025bece": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " rather than a solution for the problem, I\u00a0\nwant to check out, talk about what would be\u00a0\u00a0 a checking algorithm. So, checking algorithm\u00a0\nlike here, we will take us solution. \n\u00a0 So, the student has already solved the\u00a0\nproblem. So, the checking algorithm only"
+    },
+    "b6f1d45a-af03-445d-838b-db338444e102": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "\u00a0\u00a0 has to validate the solution. So, it takes\u00a0\nthe input. So, it will take N in this case,\u00a0\u00a0 it will take the input and it will take\u00a0\nthe certificate that is the solution, which\u00a0\u00a0 is supposed to be the correct one.\u00a0\nIn this case, it will be p and q.\u00a0\u00a0 And "
+    },
+    "a9f88959-d6fd-4773-a72f-e0a43a92212e": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "then you check whether the certificate,\u00a0\nthe solution that the student has given you\u00a0\u00a0 is correct for that given input or not. \nSo, you have to validate whether that solution\u00a0\u00a0 is correct. So, in our situation, the\u00a0\ninput instance is the number, the large\u00a0"
+    },
+    "d4174b8f-cd00-47d4-8d7f-bbd1bfb6703d": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "\u00a0 product that you need to factorize. The solution\u00a0\nthat student predict presents the certificate\u00a0\u00a0 is the set of factors. And checking consists of\u00a0\nmultiplying these two factors and validating,\u00a0\u00a0 they actually multiply to the number you started\u00a0\nwith. So,"
+    },
+    "7d968594-49be-40cb-baa0-97e7bb042862": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " this is a checking algorithm. \n\u00a0 So, let us look at a problem now, which is very\u00a0\ncentral to this whole notion of intractability.\u00a0\u00a0 It is called Boolean satisfiability. So, as\u00a0\nyou know from programming a Boolean variable\u00a0\u00a0 is something that can take valu"
+    },
+    "5b909d97-774f-4f40-a99c-a191813f80ff": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "es true and\u00a0\nfalse. And we, we know that we can take Boolean\u00a0\u00a0 values and we can operate on them.\u00a0\nSo, we can negate them for instance,\u00a0\u00a0 true becomes false, false becomes true, we\u00a0\ncan take the disjunction x or y is true if\u00a0\u00a0 either x is true or y is true"
+    },
+    "030a54d0-35b8-474e-9e2a-636bf1429a0a": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": ", or both. \nSo, at least one of them must be true, and x\u00a0\u00a0 and y, which says that both of them are true. If\u00a0\neither one of them is false, the answer is false.\u00a0\u00a0 So, in in logical notation, this is conventional\u00a0\nto write it, so you use this symbol for NOT,\u00a0"
+    },
+    "68040ad2-4dd8-4b1d-9174-8d0a359a9bb4": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "\u00a0 this V symbol for OR, and this inverted V symbol\u00a0\nfor AND. So, we will use these to write formulas.\u00a0\u00a0 So, what we have in Boolean satisfiability\u00a0\nis we have such a formula, but the formula\u00a0\u00a0 consists of variables. \nSo, we have some x1, or not x2,\u00a0\u00a0 or x3"
+    },
+    "2e99dd11-3494-46b1-a356-32d4262ca0f3": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " and so on. But this is in a particular form,\u00a0\nthe particular form is that I have only ORs here.\u00a0\u00a0 And the NOT is attached to one of the excise. So,\u00a0\nthe excise are variables. So, each of these excise\u00a0\u00a0 is an individual value. So, these are called\u00a0\nliteral"
+    },
+    "46fc6599-f49f-451c-9930-0ba33fd46bc0": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "s. So, literal is either a variable, or the\u00a0\u00a0 negation of a variable like a, not x2, or not ex\u00a0\nfour. So x 3, so these are all the literals. \n\u00a0 So, a clause consists of literals, which\u00a0\nare connected by or, it is a disjunction of,\u00a0\u00a0 of literals. So, each p"
+    },
+    "5daa2536-72d1-4293-9bed-15cd4988f589": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "art of the clause can\u00a0\nbe a x or a not x. And they are connected by\u00a0\u00a0 or. And now a formula will be something which is a\u00a0\ncollection of these clauses connected by and. So,\u00a0\u00a0 it will be C1, which is a clause of this form,\u00a0\nand C2, which is another clause of"
+    },
+    "61a81f74-ac3e-4a3b-8d64-7a145a07f456": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " this form,\u00a0\u00a0 and C3. So, in order for this formula to be true,\u00a0\nwe need that this whole clause must evaluate to 2,\u00a0\u00a0 this whole clause must value at 2 and so on. \nBut within a clause because we have disjunction,\u00a0\u00a0 it is enough for any one of those\u00a0\nexcise"
+    },
+    "4b101e79-aace-4a3e-93ef-705d1802df6d": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " within the clause to be true. So,\u00a0\u00a0 that is the challenge now, which Xi should I make\u00a0\ntrue, so that all the clauses become true? \n\u00a0 So, this is called the satisfiability\u00a0\nproblem. I need to assign\u00a0\u00a0 values to each of the\u00a0\nvariables. So, every variable xi"
+    },
+    "2bd04166-b043-4b98-a686-55d852b9ebbb": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "\u00a0\u00a0 should be assigned either true or false. Once\u00a0\nI assign the value true, or the value false,\u00a0\u00a0 then for instance, I can evaluate the formula and\u00a0\ncheck whether this particular assignment of true\u00a0\u00a0 or false makes the formula true. If it does, then\u00a0\nit is "
+    },
+    "4ce731e9-797a-43bb-a2fc-50bc9f3c772f": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "supposed to be satisfiable assignment. So,\u00a0\u00a0 satisfiability says, find an assignment that makes\u00a0\nthe formula true. So, if I take this particular\u00a0\u00a0 example here, so there are three variables,\u00a0\nx1 x2 x3, now, I want to make this true. \n\u00a0 So, there could be m"
+    },
+    "ef5241a2-f45d-455d-a552-92ccc3f74268": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "any different strategies.\u00a0\nYou could say, greedily for instance, I need to\u00a0\u00a0 make each of these clauses true. So, if I greedily\u00a0\nstart, I can say that maybe I make this one true.\u00a0\u00a0 So, maybe I should make x1 to be true. And that\u00a0\nwill guarantee that the fi"
+    },
+    "4f728d15-f65c-4f67-9c3f-6753e2f4da8b": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "rst clause is true.\u00a0\u00a0 If the first clause is, if x1 is true, then\u00a0\nthis clause also has x1. So, this is also true.\u00a0\u00a0 So, these two clauses have both become true,\u00a0\nbecause I have decided to make x1 true. \n\u00a0 But I have not said anything about x2 and x3. So,\u00a0"
+    },
+    "c9388180-c619-4907-8a42-ed258c5e90d1": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "\nI do not know anything about this one. So, let us\u00a0\u00a0 say I want to now proceed to make that true. So,\u00a0\nthen my next step in this kind of greedy heuristic\u00a0\u00a0 search could be, let me take the next value, which\u00a0\nI have not yet set to true and make that true. S"
+    },
+    "c235ef8e-f731-484f-b1a7-011a8cb01ddb": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "o,\u00a0\u00a0 now I have set x2 to be true. Now, I come to the\u00a0\nthird clause, and I find that Oh, x 1 is true. \n\u00a0 So, this is going to be false, x2 is also true.\u00a0\nSo, this is also going to be false. So, I have\u00a0\u00a0 because of my previous choices for x1 and x2, I\u00a0\nhave"
+    },
+    "89742c22-cfa2-436c-afbb-28b932aaf755": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " already fixed in some sense that 2 of these\u00a0\u00a0 literals in this clause are false. So, the\u00a0\nonly way to make the whole clause true is\u00a0\u00a0 to make this part true, which means I must\u00a0\nset x3 to be false. So, using this kind of,\u00a0\u00a0 this is not an algorithm is jus"
+    },
+    "a594a35b-8c9a-4560-9b5f-be6ea04ac188": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "t a guessing game.\u00a0\nI have shown you that if I make x1 true and x2 and\u00a0\u00a0 x3 false then this formula will actually evaluate\u00a0\nto true. So, this formula is satisfiable. \n\u00a0 Now I can add one clause to that. So, I am\u00a0\ntaking the same formula and add 1 more clau"
+    },
+    "81bc2b3a-4267-42ec-8ef3-c9c746039f66": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "se,\u00a0\u00a0 which says x3 or not x1. Now, you can see that\u00a0\u00a0 this particular assignment no longer\u00a0\nsatisfies this because I have thanks to this,\u00a0\u00a0 this is false, x3 is false. And thanks to this,\u00a0\nnot x1 is also false. So, this particular form\u00a0\u00a0 clause is not sat"
+    },
+    "c4efa138-004e-41e2-b19f-3bda0b80e8a4": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "isfied by the assignment,\u00a0\nwhich I found for the original formula. \n\u00a0 And you can reason about why this is not going to\u00a0\nwork in general. Because if I, if I want to make\u00a0\u00a0 this formula true, then you can work backwards.\u00a0\nSo, I am not going to prove it to y"
+    },
+    "9afebe02-cebe-42d8-aa59-fd4609d356aa": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "ou, but you can\u00a0\u00a0 check for yourself that if I make x3 through here,\u00a0\nthen this is going to become false. And if this\u00a0\u00a0 becomes false, and you work backwards, so this is\u00a0\ntrue here, so this is going to become false. \n\u00a0 So, if this is false, then this\u00a0\nmust"
+    },
+    "e3235d1d-f435-4d21-b6b5-bac51297d807": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " be true, I have no choice.\u00a0\u00a0 If this is true, then this is false. And\u00a0\nif this is false, then this must be true.\u00a0\u00a0 So, now look at what we have, x3 was taken to\u00a0\nbe true, because I was forced to make something\u00a0\u00a0 here. So, this became false, not x3. So, x\u00a0"
+    },
+    "6bb1820b-b17a-4c27-9dd7-d12f0e2181f9": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "\n3 is set to true. So, not x3 becomes false,\u00a0\u00a0 x2 became true, so not x2 becomes false, and x1\u00a0\nhad to become true. So, not x1 becomes false. \n\u00a0 So, in the process of setting the red clause to\u00a0\nbe true, I have ended up making the last clause\u00a0\u00a0 false. And y"
+    },
+    "5f32eecb-1597-4cb3-a348-964c9154d1b2": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "ou can check that there is no way to\u00a0\nmake this true by just exhaustively checking. So,\u00a0\u00a0 one way to do it is there are three variables,\u00a0\nwhich I call possible eight combinations,\u00a0\u00a0 of setting x1 to be true or false, x2 to\u00a0\nbe true or false, xA to be true "
+    },
+    "b836f6dc-16f2-448f-ae96-8eb89df3dab7": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "or false,\u00a0\u00a0 and none of them will work. \nSo, this is a formula which has become\u00a0\u00a0 unsatisfied. There is no satisfying assignment.\u00a0\nSo, this is the Boolean satisfiability question\u00a0\u00a0 basically says, I give you a formula in\u00a0\nthis particular form, I give you c"
+    },
+    "ad51138b-d9c5-4cb3-9c2e-b07bd97dfdda": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "lauses,\u00a0\u00a0 where inside a clause I have literals\u00a0\nwith disjunctions. And then I give you\u00a0\u00a0 these clauses connected by hands. And\u00a0\nthen your question is to answer is whether\u00a0\u00a0 there is an assignment to these variables,\u00a0\nwhich makes these clauses true or not."
+    },
+    "17408f70-307a-45d8-b3f1-deec3ea83315": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " \n\u00a0 So, now, if I have to generate a solution,\u00a0\nas we said, we can always try every possible\u00a0\u00a0 assignment. We can take an assignment\u00a0\nV, which our evaluation as it is called,\u00a0\u00a0 which assigns true or false to x1, true or false\u00a0\nto x2, and so on. And if ther"
+    },
+    "b9803426-04cb-44ba-9171-161590b9742e": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "e are n variables,\u00a0\u00a0 then there are two choices for each variable.\u00a0\nSo, two times two times two n times is 2 to\u00a0\u00a0 the power n. So, I have an exponential number\u00a0\nof different valuations which can arise. \n\u00a0 So, question is, can I do better? So, this was\u00a0\nthe"
+    },
+    "c725dc26-4ad4-4e7a-b68c-ea38891b1177": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " whole idea of having efficient algorithms that\u00a0\u00a0 there is an exponential search space. But there is\u00a0\na clever way of cutting through that exponential\u00a0\u00a0 search space and finding the assignment or not\u00a0\nfinding the assignment quickly. Unfortunately,\u00a0\u00a0 we do "
+    },
+    "beef4985-a725-40d0-8f9b-9300b92b419b": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "not know. So, this is literally the\u00a0\nsituation with Boolean satisfiability. \n\u00a0 That we have no idea whether there is an\u00a0\nalgorithm which is guaranteed to find this\u00a0\u00a0 satisfying assignment without exploring all these\u00a0\n2 to the n possible assignments. In som"
+    },
+    "d24cacfa-69c4-4016-9ee1-a9e153359855": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "e cases,\u00a0\u00a0 it may work but, whether there is something that\u00a0\nworks for all such formulas, we do not know.\u00a0\u00a0 On the other hand, it clearly has a very\u00a0\nefficient checking algorithm. Because a\u00a0\u00a0 checking algorithm will take a solution. \nSo, what is the soluti"
+    },
+    "5c5cb70f-c8fb-4b9c-9347-c981e966cf75": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "on? A solution is the\u00a0\u00a0 form what we saw before, it will say x1 is\u00a0\ntrue x2 is true, x3 is false. So, this is\u00a0\u00a0 my candidate solution. So, what you have to do is\u00a0\nthen plug in these values in the formula and then\u00a0\u00a0 evaluate. Because you know what, or means"
+    },
+    "4e8ef360-dc5f-40b0-b5c8-f5f66a944f8f": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": ", you\u00a0\nknow, what not means you know what and means. \n\u00a0 So, if you substitute explicit true\u00a0\nfalse for each of the variables,\u00a0\u00a0 according to the valuation, you can evaluate\u00a0\nthe formula explicitly, quickly in linear time,\u00a0\u00a0 and tell me whether the formula "
+    },
+    "7901f260-da33-4f2f-bbb9-afb55c2a790d": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "is actually true\u00a0\nunder this valuation, so, whether this is a real\u00a0\u00a0 satisfying valuation or not. So, checking is\u00a0\nefficient, generating appears to be not efficient.\u00a0\u00a0 Now, as I said before, it does not mean\u00a0\nthat no Boolean formula can be solved. \n\u00a0 So, w"
+    },
+    "ca063fa8-7533-43f3-bd00-864124d72982": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "e have taken this particular form where we\u00a0\nhave these clauses consisting of disjunctions,\u00a0\u00a0 literals, and we combine these clauses using and.\u00a0\nSo, this is a particular form called conjunctive.\u00a0\u00a0 normal form, but what if we reversed supposing we\u00a0\nconstruct"
+    },
+    "0e941e90-486d-43f4-b867-92261de38a5b": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " these clauses using AND? And we connect\u00a0\u00a0 the clauses using OR? So, that is the opposite.\u00a0\nSo, we are now in earlier it or inside the clause\u00a0\u00a0 and, and connecting the clauses. \nNow we have AND inside the clause,\u00a0\u00a0 and we have OR outside the clause.\u00a0\nSo, w"
+    },
+    "1225742d-264e-4b29-87f0-dca7c1fbce98": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "e write it as C1 or C2 or Cn.\u00a0\u00a0 Now the problem becomes very\u00a0\neasy, because if this is a clause,\u00a0\u00a0 I can check whether this is true or not by just\u00a0\nwalking down and saying, this says everything has\u00a0\u00a0 to be correct. So, this forces me to set t1 x1\u00a0\nto be tr"
+    },
+    "788c80e1-a686-4c58-891a-5918f0e36847": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "ue. It forces me to set x2 to be false,\u00a0\u00a0 it forces me to set x3 to be true and so on. \nSo, each clause forces a valuation to make that\u00a0\u00a0 clause true. And I have to make one of the\u00a0\nclauses. So, each clause forces a unique\u00a0\u00a0 valuation. So, I check whether "
+    },
+    "796e85c3-7b2d-449b-a6b8-1efd7c427f1f": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "the moment I find\u00a0\na clause which is satisfiable, because by that\u00a0\u00a0 fixed valuation that that clause is enforcing.\u00a0\nBecause it is the and have some literals. So,\u00a0\u00a0 it is saying these literals must have these\u00a0\nvalues, otherwise this and will not be true. \n\u00a0"
+    },
+    "ee107ddf-ab02-4217-8d42-ad9a74a90d78": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " If that is possible, if there is no contradiction\u00a0\ninside the clause, if I write inside a clause,\u00a0\u00a0 if I write x1 and not x1 and something\u00a0\nthen clearly that clause is not going to\u00a0\u00a0 be satisfiable. But otherwise, I am going to be\u00a0\nable to find one in gen"
+    },
+    "b91a97fa-a68c-4e96-8c8b-66218b039498": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "eral. So, once I find that\u00a0\u00a0 I am done. Because if I can satisfy C1, I do not\u00a0\ncare about the rest, because it is only an OR.\u00a0\u00a0 The moment I can satisfy one clause, the\u00a0\nwhole disjunction is satisfiable. \n\u00a0 So, this becomes much easier.\u00a0\nI can just try C1 "
+    },
+    "29946425-6fd1-4823-87c2-2d28d562012f": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "that involves\u00a0\u00a0 fixing a valuation by looking at all the literals\u00a0\nin C1 and checking if that makes the C1 true, if\u00a0\u00a0 true I am done. If I cannot find such evaluation,\u00a0\nif that C1 has a contradiction, I move to C2.\u00a0\u00a0 So, in one scan, I can fix the valuatio"
+    },
+    "692ea661-47c0-439d-b78b-45e7967d979c": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "n and\u00a0\ncheck whether this valuation works or not. \n\u00a0 So, therefore, it is important that the\u00a0\nsatisfiability problem is stated the way\u00a0\u00a0 we stated it, which is that we have ORs\u00a0\nhere, and we have ANDs here. Otherwise,\u00a0\u00a0 it becomes a trivial problem computa"
+    },
+    "94260fc7-edcb-4043-b7bb-e034ce06689c": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "tionally.\u00a0\nSo, that is called conjunctive normal form. \n\u00a0 Now, let us look at a very different problem.\u00a0\nSo, let us look at a problem which you may have\u00a0\u00a0 heard of called a traveling salesman problem.\u00a0\nSo, this is a variation of our many shortest\u00a0\u00a0 paths p"
+    },
+    "e9fb401c-8003-400e-b508-ee48f678b525": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "roblem. So, a traveling salesman problem\u00a0\nconsists of a network of cities, and there is a\u00a0\u00a0 distance between each pair of cities. Now\u00a0\nyou can go from anywhere to anywhere. So,\u00a0\u00a0 you can think of this as a complete graph. \nSo, for every pair of cities, the"
+    },
+    "3f419835-39d8-441a-a403-68d742ca5332": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "re is a way of\u00a0\u00a0 going directly from one city to another by paying\u00a0\nsome cost or some time or some distance. So, our\u00a0\u00a0 goal is to find the shortest tour for the salesman\u00a0\nthat visits every city exactly once. So, tour is\u00a0\u00a0 something which is just a cycle, w"
+    },
+    "f4716f8c-f665-48af-9a93-2235fa5a459f": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "hich starts at\u00a0\nsome city visits every city and comes back. \n\u00a0 It should be a simple cycle, I am not allowed to\u00a0\nvisit the same city twice, it must visit all the\u00a0\u00a0 vertices so every vertex must appear in the cycle.\u00a0\nAnd among all cycles, it must be of mini"
+    },
+    "fed7ff6c-dbf9-4926-8c51-635194e7863d": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "mum cost.\u00a0\u00a0 Now, clearly, there are cycles, because it is\u00a0\na complete graph. So, I can find many cycles,\u00a0\u00a0 so there is no problem of finding cycles, the\u00a0\nproblem is to find the minimum cost cycle.\u00a0\u00a0 So, this looks clearly like\u00a0\na difficult problem to solve"
+    },
+    "b7c1090f-8a56-42bf-ade4-03505521966b": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": ",\u00a0\u00a0 because there are exponentially many cycles,\u00a0\nand I have to search through all of them. \n\u00a0 But let us look at the checking part of it.\u00a0\nSupposing somebody claims to solve have this\u00a0\u00a0 problem? How would we validate that thing? So,\u00a0\nhow do we how can we "
+    },
+    "7bd1c202-fddf-41d0-b7f7-e2ffa775da97": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "design a checking algorithm\u00a0\u00a0 for this problem? So, remember that a checking\u00a0\nalgorithm is take a solution and say yes or no?\u00a0\u00a0 So, here, what would be a solution? A solution\u00a0\nwould be a cycle like this. If somebody will say,\u00a0\u00a0 here is my cycle, this is my"
+    },
+    "3735c27f-a6ea-49ef-9a4e-69b9a55bfeee": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " tour for the\u00a0\ntraveling salesman, and it is the best tour\u00a0\u00a0 that the traveling salesman can take. \nSo, what can we do? We can verify that it\u00a0\u00a0 is a simple cycle, and that it visits all\u00a0\nthe vertices. So, that is easy, because\u00a0\u00a0 that is just a graph theore"
+    },
+    "c975fc2b-993b-49be-9d62-f1095b0056a8": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "tic property of that\u00a0\nthing, we just have to check that every node is\u00a0\u00a0 connected to the next node, every node appears\u00a0\nthere and no node, node except the starting\u00a0\u00a0 and the ending point appear twice, everything\u00a0\nelse appears only once. So, that is easy. \n"
+    },
+    "98d18b6a-b0d0-47cc-a0dc-1959e489733f": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "\u00a0 And of course, by looking at the edges\u00a0\ninvolved in this, I look at xi xi plus 1\u00a0\u00a0 in this particular sequence, I can get the edge\u00a0\nweight from the graph, and I can add it up. So,\u00a0\u00a0 I can find the cost. But I need to find the\u00a0\nminimum cost. So, how do I "
+    },
+    "577ceb02-e16f-4d85-b544-c64e9ea91955": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "validate that this cost\u00a0\u00a0 is the minimum among all the cycles? Because I do\u00a0\nnot have a reference for that solution, so how do\u00a0\u00a0 I check that? It is the least cost cycle? \nSo, there is that bottleneck. Now, for this\u00a0\u00a0 problem to convert it into a checking "
+    },
+    "7ba7a423-4683-46ad-a971-c0d3a5eef2fd": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "problem?\u00a0\nI do not have a way of validating the numerical\u00a0\u00a0 answer that I am going to get. I can validate the\u00a0\nstructure of the answer that it is a cycle that\u00a0\u00a0 visits all the cities, I can compute the numerical\u00a0\ncost of this answer. But whether it is mini"
+    },
+    "922bb4c8-1efc-43b2-8ada-895846a5be2a": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "mum or\u00a0\u00a0 not, is something that is not obvious. \nSo, the way you get around this,\u00a0\u00a0 is to ask a question slightly differently.\u00a0\nSo, you transform the problem and say,\u00a0\u00a0 is there a tour for the salesman with a\u00a0\nbudget of K? So, so imagine that those\u00a0\u00a0 costs"
+    },
+    "ae8b63a5-d100-415d-8838-1ff297e8fa2c": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " represent some ticket costs of traveling\u00a0\nbetween the two cities. So, you have a total\u00a0\u00a0 budget of K to buy tickets, so can you achieve\u00a0\na traveling salesman tour with a budget of K.\u00a0\u00a0 Now the problem is easy, because I can check it by\u00a0\nfinding out if the"
+    },
+    "8f3b5a08-f6e9-460a-8dd7-2951227bca19": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "re is a solution and verifying\u00a0\u00a0 if the cost of the solution is within K. \nI am not asking whether this K is minimum or not,\u00a0\u00a0 I am just saying is the cost within budget.\u00a0\nNow, how do I solve the original problem? Well,\u00a0\u00a0 I try different Ks. And how do I f"
+    },
+    "9331f1f6-6557-4924-9829-f028a104a03f": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "ind different\u00a0\nKs? Well, I need to start with some value. So,\u00a0\u00a0 I need to have a bound on the Ks. But\u00a0\nthere is a kind of very easy upper bound,\u00a0\u00a0 if I add up the cost of all the edges in the\u00a0\ngraph. Now you know that the site tour traveling\u00a0\u00a0 salesman tou"
+    },
+    "c974b6fb-7e62-4948-9b7b-464adf1c0b66": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "r is going to take some n edges. \nIt is going to connect n vertices in a cycle. So,\u00a0\u00a0 I am going to have n edges going from the first\u00a0\nto the second to the third to the nth and back to\u00a0\u00a0 the first one. So, the sum of these n edges cannot\u00a0\nexceed the sum of"
+    },
+    "372bc0b3-edf5-4b92-b730-8ef49c089ff7": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " the weights of all the edges in\u00a0\u00a0 the graph. So, if I just add up the entire edge\u00a0\nweight of the graph, I get an upper bound. So,\u00a0\u00a0 my K that I want to achieve the minimum cost\u00a0\nis somewhere between 0 and that maximum. \n\u00a0 So, I can start with the maximum "
+    },
+    "906e02e3-1bda-4573-95df-837b6083d864": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "by 2, and I\u00a0\ncan say is it achievable? If it is achievable,\u00a0\u00a0 then I will say, can I achieve something smaller?\u00a0\nIf it is not achievable, then I need to achieve\u00a0\u00a0 something bigger. So, I can do a binary search,\u00a0\nI can say if my overall things adds up to 10"
+    },
+    "dcb52006-b951-4af2-b7fd-3fe191934d31": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "00,\u00a0\u00a0 then I can say, is it achievable with a cost\u00a0\nof 500? If the answer is yes, then I will say,\u00a0\u00a0 is it achievable 250? The answer is no, then I\u00a0\nneed to go above 500. So, I will look at 750. \n\u00a0 So, I just do the usual binary search\u00a0\nso, I can find the "
+    },
+    "1bbc4e7b-83fd-4eaf-ac2b-60a1c71a0a14": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "optimum K by doing\u00a0\u00a0 a logarithmic number of searches. So, assuming\u00a0\nthat somebody is there, who is going to produce\u00a0\u00a0 an answer for me, I can do a logarithmic number\u00a0\nof checks to find the solution that works. \n\u00a0 So, here is another problem, this is\u00a0\nprob"
+    },
+    "9f41b6e4-2fe6-402a-bab4-ea04566d0015": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "lem is called independent set.\u00a0\u00a0 So, we say that two edges are independent, if\u00a0\nthey are not connected by an edge. For example,\u00a0\u00a0 two vertices, so, example 1 and 4 are independent,\u00a0\nbecause there is no edge connecting one and four.\u00a0\u00a0 So, an independent set"
+    },
+    "005f8454-81df-42e7-8de8-45db1d4982c7": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " is a set where\u00a0\nall the vertices are independent. So,\u00a0\u00a0 for example, supposing I take 1, 4 and 5, then\u00a0\nthere is no edge between any pair of these. \n\u00a0 1 and 4 are not connected, 4 and five are\u00a0\nnot connected, 1 and 5 are not connected.\u00a0\u00a0 So, this is an in"
+    },
+    "f5d66805-c063-4fec-a046-834d029dc477": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "dependent set, then nothing\u00a0\nin there which connects each other. So, this\u00a0\u00a0 is the basis of many interesting problems that you\u00a0\nmight solve. So, for instance, supposing these are\u00a0\u00a0 people, and you want to form a committee, but\u00a0\nyou do not want to have a co"
+    },
+    "1d874d3b-4ff5-41f4-8bd6-098094068307": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "mmittee in which\u00a0\u00a0 friends collaborate to achieve some outcome. \nSo, you want to make sure that the committee\u00a0\u00a0 consists of people who do not know each other\u00a0\nwell, so that they will come up with a neutral\u00a0\u00a0 solution, and they will not have any bias.\u00a0\nSo, "
+    },
+    "41671b3d-5dd9-4476-8e48-9943a501a491": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "you would like to find, so these edges now\u00a0\u00a0 represent friendship. And you would like to find a\u00a0\ncommittee in which no two people are friends. So,\u00a0\u00a0 that is an independent set. And the largest\u00a0\nsuch typical thing is what we want to find. \n\u00a0 So, we want to "
+    },
+    "5cbeb78b-1f6f-4ad5-a0ba-15d40a855af6": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "usually find the largest\u00a0\nindependent set in a given graph.\u00a0\u00a0 So, here, for instance, this collection 345 is an\u00a0\nindependent size 3, and it turns out, this is the\u00a0\u00a0 largest set, we also saw another one, like 145.\u00a0\nSo, there may be more than one. But we wan"
+    },
+    "e42cf727-5a04-47e1-b5f0-ee7dcb88dc9f": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "t to\u00a0\u00a0 find out the size of the largest independence. So,\u00a0\nthis is a standard graph theoretic problem. \n\u00a0 Again, there is no easy way to solve\u00a0\nthis apparently, except to look at\u00a0\u00a0 first of all, you have to identify all the\u00a0\nindependent sets, and try to fi"
+    },
+    "7649d33f-aefd-4fa9-98a1-e11d3051782a": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "nd the largest one.\u00a0\u00a0 So, now, if we want to check this, if I give you a\u00a0\nset of vertices, you can certainly validate it is\u00a0\u00a0 an independent set. Because you can check that no\u00a0\ntwo, no two vertices in that thing form an edge.\u00a0\u00a0 But how would you check that"
+    },
+    "ec482e28-22e9-4ca3-88ef-ccc1f3ac5ba4": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " is minimum? Well, we\u00a0\nhave to have a budget, just like for the traveling\u00a0\u00a0 salesman problem, I have to ask you, is this a\u00a0\nminimum, is this an independent set whose size\u00a0\u00a0 is at most K? So, then if you, if it is K, it is\u00a0\nfine and independent, otherwise, "
+    },
+    "7b689cf0-89a7-4d59-840f-f8f8f2069899": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "you say no. \n\u00a0 So, there is a dual problem called vertex cover.\u00a0\nSo, in independent set we were looking for pairs\u00a0\u00a0 of vertices which are not connected by an edge.\u00a0\nHere, I am looking at vertices which connect to\u00a0\u00a0 all the edges. So, if I look at this vert"
+    },
+    "5e491da8-5be5-4603-b2c4-705119494822": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "ex 2\u00a0\nfor instance, then it covers all these edges,\u00a0\u00a0 which are adjacent to 2. So, anything which is\u00a0\nincident to 2, is covered by 2. So, node u covers\u00a0\u00a0 every edge uv, which is incident on u. \nSo, what we want is a vertex cover. So,\u00a0\u00a0 a vertex cover is so"
+    },
+    "0038b89a-8015-44d2-a457-082fbaa7de74": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "mething which has a collection\u00a0\nof vertices cover all edges. So, for instance, if\u00a0\u00a0 I take this one, then I will get these edges. So,\u00a0\nnow I have a few edges which are missed out. So,\u00a0\u00a0 I could, for instance, want to cover this edge, I\u00a0\ncould take this ver"
+    },
+    "5fa3325b-a199-4e81-89a3-e3e02300d76b": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "tex. So, if I take this vertex,\u00a0\u00a0 then these three edges also get covered.\u00a0\nAnd now I have something at the bottom. \n\u00a0 So, I could take, for instance, this vertex\u00a0\nand cover this. So, now if I, if I take these\u00a0\u00a0 three vertices, then between them, they cove"
+    },
+    "47648c47-773c-4336-a287-07001c8a9a80": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "r\u00a0\nall the edges. Now some edges can be covered\u00a0\u00a0 multiple times, that is not a problem, I just\u00a0\nwant to make sure that every edge is covered.\u00a0\u00a0 So, if you imagine, for instance, that\u00a0\nthese are stretches of road and you want\u00a0\u00a0 to put a camera at an inters"
+    },
+    "4a7a1592-5040-47ed-a2f5-bf833233a8fb": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "ection. \nAnd that camera can actually swivel\u00a0\u00a0 around and scan all the roads\u00a0\nwhich meet at that intersection,\u00a0\u00a0 then what we are asking is, where should I put the\u00a0\ncamera so the minimum number of cameras are used\u00a0\u00a0 and yet I, I am able to watch the traffi"
+    },
+    "3581e15d-a5ee-4657-954a-906ab7a68e8a": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "c on all\u00a0\nthe roads in my network. So, this is a typical\u00a0\u00a0 example of finding so I want in this case, I\u00a0\nwant the smallest vertex cover not the largest\u00a0\u00a0 independent set in the earlier case, the smallest\u00a0\nvertex cover. And again, here, for instance,\u00a0\u00a0 one "
+    },
+    "8cb0926c-e373-46d5-9117-4226cca96f36": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "small vertex cover is 1, 2, 6 and 7. \nSo, checking version of this problem is,\u00a0\u00a0 is there a vertex cover of size K?\u00a0\nAgain, if I give you a set of vertices,\u00a0\u00a0 you can check if it is a vertex cover, but is it\u00a0\na smallest one? Then you have to do some work. "
+    },
+    "875d066a-a830-4b03-85fb-2814d9b1c418": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "\n\u00a0 So, these two problems appear to be similar,\u00a0\nare they connected? Well, actually, yes,\u00a0\u00a0 you can show that if U is an independent set,\u00a0\nand it has some size K, then its complement.\u00a0\u00a0 The set of vertices minus U is a vertex cover of\u00a0\nsize N minus K. So, "
+    },
+    "76caa9f0-56e3-475e-acb4-8d62636b88cf": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "why is this the case? Well,\u00a0\u00a0 if I look at the forward direction,\u00a0\nso supposing U is an independent set,\u00a0\u00a0 then you know that every edge has to\u00a0\nbe at most having one endpoint in U,\u00a0\u00a0 because it is an independent set. \nThere are no edges between the vertic"
+    },
+    "fa7a3f33-61f9-4594-8c8c-0d1640c53545": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "es\u00a0\u00a0 in the set. So, every edge has one endpoint\u00a0\noutside the set. In other words, outside the set,\u00a0\u00a0 the complement covers every edge. So, the\u00a0\ncomplement is actually a vertex cover. Conversely,\u00a0\u00a0 if I have a vertex cover, then we know that every\u00a0\nedge ha"
+    },
+    "a608b0b1-b93c-4367-a4ca-53cc9f7c43b6": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "s one endpoint in their vertex cover. \n\u00a0 So, if I look at any two vertices outside that\u00a0\nvertex cover, there cannot be an edge between\u00a0\u00a0 them. Because if there is an edge between them,\u00a0\none endpoint of the edge must be in the vertex\u00a0\u00a0 cover. So, there can "
+    },
+    "6e42f876-6a5a-4fc3-907f-392f4bb3cdd6": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "be no edges between them.\u00a0\nSo, the complement forms and independent set. \n\u00a0 So, this basically says that independent set\u00a0\nand vertex cover both reduce to each other. So,\u00a0\u00a0 we saw last time that we can use reductions in\u00a0\ntwo ways, either we can translate an"
+    },
+    "2ece0da4-794a-4245-a177-25ac809c1623": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": " efficient\u00a0\u00a0 solution for B into an efficient solution\u00a0\nfor A or we can argue that, if there is no\u00a0\u00a0 good solution for A, then they could not have\u00a0\nbeen a good solution for B. So, here we can say\u00a0\u00a0 that both vertex cover and independent\u00a0\nsets seem to be di"
+    },
+    "aeb03bfb-776c-43e4-8a83-42226bf86bf6": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "fficult problems. \n\u00a0 Because we have to go through all subsets of\u00a0\nthings to find good sets on both types. And they\u00a0\u00a0 reduce to each other. So, if I can solve one,\u00a0\nI can solve the other because we saw that every\u00a0\u00a0 independent set generates a vertex cover "
+    },
+    "5f6cf094-e0cc-4c79-9e2c-631fb7006ed3": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "as its\u00a0\ncomplement and every vertex cover generates an\u00a0\u00a0 independent set as its complement. So, if\u00a0\nI want to find the largest independent set,\u00a0\u00a0 it is equivalent to finding the smallest\u00a0\nvertex cover and vice versa. \n\u00a0 So, these reduce to each other. So,\u00a0"
+    },
+    "3e24563f-7ddd-4afe-98d8-a03dea125dfc": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "\nthese are both as it will turn out\u00a0\u00a0 difficult problems to solve. Just like the other\u00a0\nproblems we have been looking at like traveling\u00a0\u00a0 salesman and Boolean satisfiability. But they\u00a0\nare checkable. If we put this constraint of K,\u00a0\u00a0 and they are inter red"
+    },
+    "b64f67b1-f0db-4787-b741-a8534738fdfb": {
+        "content_id": 78,
+        "course_name": "PDSA",
+        "title": "Intractability  Checking Algorithms",
+        "week": 11,
+        "chunk": "ucible, if we can solve one,\u00a0\nwe can solve the other. So, this is the basis of\u00a0\u00a0 what we are going to look at next, this inter\u00a0\nrelatability of intractable problems."
+    }
+}

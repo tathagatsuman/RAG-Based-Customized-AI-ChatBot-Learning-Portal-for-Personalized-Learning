@@ -1,0 +1,982 @@
+{
+    "4215dd3a-b4d0-4269-ab40-918ad4fe115f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "After spending some time on data\u00a0\nstructures, we have looked at the union find\u00a0\u00a0 data structure for disjoint set, we have seen\u00a0\nheaps, how to maintain priority queues in heaps.\u00a0\u00a0 We have seen balanced binary search trees.\u00a0\nNow let us get back to algorithms"
+    },
+    "0b9ce369-d471-4d31-a996-8d815b40f656": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " per se,\u00a0\u00a0 and try to understand some general strategies\u00a0\nthat are there for designing algorithms. \n\u00a0 So, one of the tempting strategies for designing\u00a0\nan algorithm is what is called a greedy strategy.\u00a0\u00a0 So, let us look at greedy algorithms,\u00a0\nsome examples"
+    },
+    "423f0cd6-6d93-4ea3-826e-467296b0722a": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " of them and see what it\u00a0\u00a0 is that we need to show in order\u00a0\nto justify a greedy algorithm.\n\u00a0 So, first of all, what is a greedy algorithm per\u00a0\nse? So, usually, we are computing some kind of a\u00a0\u00a0 global quantity. So, we want to find out for\u00a0\ninstance, a min"
+    },
+    "2f2eb6ee-1669-46ef-aa58-dbd2ac92699d": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "imum cost spanning tree. So,\u00a0\u00a0 among all the trees that you can draw on a graph,\u00a0\nyou want to find the one that has a minimum cost.\u00a0\u00a0 In order to build this tree, we have\u00a0\nto add edges at step by step. So,\u00a0\u00a0 we need to decide whether to add an edge or\u00a0\nnot"
+    },
+    "656ad91d-7f73-4e74-93eb-cc6b89f85ab8": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " to add an edge to construct this tree.\n\u00a0 So, we need to make a choice as to whether to keep\u00a0\nan edge in the tree or not use it in the tree. So,\u00a0\u00a0 that is a local choice. So, you need to make\u00a0\na sequence of choices such that the overall\u00a0\u00a0 outcome that you "
+    },
+    "540e023c-84c2-4f4d-ae47-90db8a6ab6ea": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "get is optimum with respect\u00a0\nto whatever it is you are looking for.\u00a0\u00a0 So, what a greedy strategy does is it makes\u00a0\nthis choice, this next choice based on some\u00a0\u00a0 local property, it says, this is the smallest\u00a0\nthing I can see right now, or this is the closes"
+    },
+    "ca2fc686-1ccd-48c4-8573-a05ccadd1b78": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "t\u00a0\u00a0 thing I can see right now. So, let me add it.\nAnd it will never go back and revisit this choice.\u00a0\u00a0 It is never going to go back and say, the smallest\u00a0\nthing that I chose then did not work, maybe I\u00a0\u00a0 should go back and check the second smallest\u00a0\nthing, "
+    },
+    "a162afa4-b39e-42b4-88af-e7672e9d51d3": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "maybe that will give me a better one.\u00a0\u00a0 So, a greedy algorithm will only go forwards, it\u00a0\nwill all pick up something which looks good now,\u00a0\u00a0 put it into its solution, and never\u00a0\ngo back and change that solution.\n\u00a0 So, if you do not do that, I mean, if you "
+    },
+    "1fecc139-9501-48a2-a9a4-8bc0096a610a": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "actually\u00a0\ngo back and change then you follow some strategy\u00a0\u00a0 to find a solution you say this is not good\u00a0\nenough, then you will go back and you will\u00a0\u00a0 find another strategy then you go back and find\u00a0\nanother strategy, this is called backtracking.\u00a0\u00a0 So, you"
+    },
+    "a5f66fc9-c6c4-4065-8dca-2de643f9587f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " keep going back and searching through\u00a0\nvarious possibilities. And somewhere somehow\u00a0\u00a0 you stumble upon the correct algorithm.\nSo, you have to search through a number of\u00a0\u00a0 possibilities to find the optimum. But a greedy\u00a0\nstrategy, has this very local way o"
+    },
+    "044be997-0f8d-4a70-a9e1-a22550a79e84": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "f saying okay\u00a0\u00a0 at this point, go this way at this point go this\u00a0\nway. So, it just follows one path through your\u00a0\u00a0 state space and finds the optimum solution. So,\u00a0\nthis drastically reduces how many solutions you\u00a0\u00a0 have to evaluate for optimality, and there"
+    },
+    "8b1b8abf-493d-492b-bc48-dff273498ecc": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "fore\u00a0\nit makes the algorithms very efficient.\n\u00a0 But the real problem is that when you have such\u00a0\na greedy strategy, you have to justify the fact\u00a0\u00a0 that you are never going to go back and relook\u00a0\nat something which you have chosen before. How\u00a0\u00a0 do you know "
+    },
+    "84f8832f-e6d9-4ffb-a593-c5ff2df2d399": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "when you pick up something which\u00a0\nseems to be good now that this is going to be\u00a0\u00a0 the best choice you have ever made. So, just\u00a0\nimagine that you are trying to buy something,\u00a0\u00a0 suppose you are trying to buy a phone,\u00a0\nand today the price seems to be low.\n\u00a0 N"
+    },
+    "a22325d3-a179-484a-8ea1-418ff9f0961b": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ow, the strategy that you might want to do is say\u00a0\nthat, if this is the lowest price I have seen so\u00a0\u00a0 far, I should use it, but what if tomorrow there\u00a0\nis a discount offered and then you will regret\u00a0\u00a0 it. So, greedy strategy is kind of in that same\u00a0\nsituat"
+    },
+    "0af7b495-7651-46fc-8d47-d91fd6158c0c": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ion that it sees something which is good.\u00a0\u00a0 And it is, let us take it but there is no\u00a0\nguarantee in general that something better will\u00a0\u00a0 not come later on or put it another way you buy\u00a0\nthis cheap phone and then tomorrow breaks down.\n\u00a0 So, if you are paid "
+    },
+    "db896826-3d77-4c83-9bba-f378663e9429": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "a little bit\u00a0\nmore and got a slightly better phone,\u00a0\u00a0 then the phone would have lasted allot longer.\u00a0\nSo, in the long run you would have paid less.\u00a0\u00a0 So, this is the difference between in real life a\u00a0\ngreedy strategy and a strategy which looks ahead\u00a0\u00a0 a li"
+    },
+    "290cd467-9ab6-49dc-bf43-5b456aa479ec": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ttle bit to see the consequences of what will\u00a0\nhappen. So, greedy strategy does not look ahead.\u00a0\u00a0 So, we have seen several examples\u00a0\nalready of greedy strategies.\n\u00a0 So, the first example was our shortest\u00a0\npath algorithm due to Dijkstra. So,\u00a0\u00a0 we started at"
+    },
+    "98084228-52ca-46de-9234-7a5e77fc1497": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " a source vertex and we tried to\u00a0\nfind the shortest path to every other vertex.\u00a0\u00a0 And what we did was we maintained this\u00a0\ncollection of visited vertices and we\u00a0\u00a0 kept incrementally keeping track of the shortest\u00a0\ndistance to every unvisited vertex from this"
+    },
+    "6ba77569-a92d-4ff8-9470-d6aa05652a75": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " set.\u00a0\u00a0 And we said that whenever we find\u00a0\nnow the shortest unvisited vertex,\u00a0\u00a0 we will add that to the set and freeze its\u00a0\ndistance once and for all we say that now, there\u00a0\u00a0 is no better way of getting to that vertex.\nSo, the global property that we want "
+    },
+    "9ce01da0-74ce-4623-a4c0-b05775fc8180": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "is that\u00a0\u00a0 we want the shortest distance to every vertex from\u00a0\nthe start vertex that we began with and the greedy\u00a0\u00a0 strategy is to locally pick the next unvisited\u00a0\nvertex whose distance is currently the smallest.\u00a0\u00a0 And we showed that because we do not have "
+    },
+    "c6346d7b-1345-446b-8edc-9045393587a1": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "negative\u00a0\nedges, you cannot find a better path later on. So,\u00a0\u00a0 we proved it actually. So, for the Dijkstra\u00a0\nalgorithm we actually proved that this works.\n\u00a0 Another algorithm which is greedy was Prim\u2019s\u00a0\nminimum cost spanning tree thing. It was very\u00a0\u00a0 simila"
+    },
+    "8e856861-e11c-4933-b7b6-dbe71226dae7": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "r to Dijkstra in spirit, you grow this tree,\u00a0\nwhich is like the visited set in Dijkstra, and you\u00a0\u00a0 add a new note to the tree which is connected by\u00a0\nthe shortest edge among all the other unvisited\u00a0\u00a0 nodes. So, you add a new node to the tree and\u00a0\nthen we us"
+    },
+    "94944f87-d728-4779-a707-5735a8c7ce1b": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "e that separator lemma to show that the\u00a0\u00a0 edge that we are using must be in the spanning\u00a0\ntree because it is something which connects this\u00a0\u00a0 set to that set. It is a, it is a separator edge\u00a0\nwhich connects two partitions of your vertex.\n\u00a0 But again, we nee"
+    },
+    "3fc51461-c38f-4d47-a6fe-5b53d10cb1c0": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ded a proof so, we have a\u00a0\nstrategy. So, but why does this give us a minimum\u00a0\u00a0 cost spanning tree overall, because the separator\u00a0\nlemma guarantees that whenever we pick up in this\u00a0\u00a0 greedy strategy, it is actually belongs to the\u00a0\nspanning tree. And the sam"
+    },
+    "a111b19c-09e9-4f3e-8e69-4ac9cb5b3d30": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "e is true in Kruskal\u2019s\u00a0\u00a0 algorithm, that is also a greedy strategy, we have\u00a0\na bunch of edges which we have not used so far,\u00a0\u00a0 we pick the smallest one which does\u00a0\nnot conflict, what we are doing,\u00a0\u00a0 it does not create a cycle in the tree.\nAgain, the reason"
+    },
+    "ac12689b-4621-4b4b-b09f-0424dc9bd642": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " it works is because of\u00a0\u00a0 the separator lemma, but otherwise, there is no\u00a0\nguarantee that picking up the smallest edge now\u00a0\u00a0 does not create a problem later on. So, in all\u00a0\nthese greedy algorithms, we explicitly proved that\u00a0\u00a0 the algorithm strategy was cor"
+    },
+    "a3ca04ed-103b-46bb-b728-9710ce71bf37": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "rect that what it\u00a0\nproduced was something which achieved the global\u00a0\u00a0 optimum value, the shortest path of the minimum\u00a0\ncost spanning tree that we were looking for.\n\u00a0 So, what we are going to do now is look at other\u00a0\nexamples and argue why it is not trivial"
+    },
+    "faab7573-f51e-494f-9103-a353e97de8c4": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " to do\u00a0\u00a0 this, again, why you need to actually show that\u00a0\nthe greedy strategy that you have picked is a\u00a0\u00a0 good one, then we will look at some approaches\u00a0\nto show that. So, let us look at this problem.\u00a0\u00a0 So, suppose like I am sitting now, there is\u00a0\na specia"
+    },
+    "ec17205e-44c9-402e-8ef6-716bef307932": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "l classroom in which one can record\u00a0\u00a0 these lectures. So, a number of people want\u00a0\nto do this. So, different teachers need to use\u00a0\u00a0 this classroom but suppose there is only one.\nSo, each teacher has a particular time when they\u00a0\u00a0 are ready and willing to re"
+    },
+    "af925503-ecd5-4e95-a1e8-5fcc2f6196d6": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "cord it. So, they have\u00a0\ncertain preferences or slots. So, every instructor\u00a0\u00a0 has a preference saying I want to record\u00a0\nfrom two o clock to five o clock on Thursday\u00a0\u00a0 afternoon, and other person will say I want\u00a0\nto record from eleven o clock to one o clock\u00a0"
+    },
+    "90766446-5f0d-493c-8fad-bdab6941f905": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "\u00a0 on a Friday morning. Now these two are fine, but\u00a0\nsomebody else wants to record from nine o clock to\u00a0\u00a0 twelve o clock on a Friday morning then nine to\u00a0\ntwelve and eleven to one are not compatible.\n\u00a0 So, you might have slots chosen by the\u00a0\ninstructors whi"
+    },
+    "593f0098-556f-488c-9bd3-ceb6c9a1c7c8": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ch overlap, so you may not be\u00a0\u00a0 able to honor all the requests for booking.\u00a0\nSo, now, if we have next week's bookings\u00a0\u00a0 available to us, then the question is how many\u00a0\ninstructors can be allotted their chosen slots\u00a0\u00a0 so that we maximize the number of happy"
+    },
+    "c08e61c1-44c3-495a-aae1-bc335390d1b4": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "\u00a0\ninstructors so you want to choose the number of\u00a0\u00a0 subsets of the bookings such that these do\u00a0\nnot overlap and if I collect together all\u00a0\u00a0 the bookings which are actually honored,\u00a0\nthis set is as large as possible.\n\u00a0 So, this is the property that is the\u00a0\n"
+    },
+    "eb2b59f5-452e-49be-a17c-f7ecee62487b": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "global optimum, I want to choose a subset\u00a0\u00a0 of compatible bookings of largest sites.\u00a0\nCompatible means that no two bookings in the set\u00a0\u00a0 overlap in time so it does not require two\u00a0\npeople to be using the studio at the same time.\u00a0\u00a0 So, since we are discussi"
+    },
+    "fd64ffe4-dd0b-4f82-bfeb-29d487433bd3": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ng greedy strategies,\u00a0\nwhat we will do is we will try to build up this\u00a0\u00a0 set of allotted bookings one by one. So,\u00a0\neventually we want a collection of booking\u00a0\u00a0 saying these are all the bookings\u00a0\nwhich are granted for next week.\n\u00a0 But you must start somewhe"
+    },
+    "660d3c24-700f-4431-a1bf-c46f26fae8f0": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "re so, you must\u00a0\npick up a booking according to some local\u00a0\u00a0 strategy you will say I like this booking because\u00a0\nit is a small slot or I like this booking because\u00a0\u00a0 it overlaps with very few slots. So, there might\u00a0\nbe many reasons why you think a particular"
+    },
+    "8338a4a5-fd78-4404-85a5-e7f2da7e77f9": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " booking\u00a0\u00a0 is a good one to pick first. So, you pick the\u00a0\nnext booking to allot based on a local strategy.\u00a0\u00a0 Now because you have picked this booking just like\u00a0\nin Kruskal\u2019s algorithm because you picked an edge\u00a0\u00a0 certain other edges now are going to be not"
+    },
+    "37045493-b646-4414-bd04-ee5191dd7032": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "\u00a0\nuseful anymore because they will create cycles.\n\u00a0 So, here what will happen is you pick a booking\u00a0\nevery booking which overlaps with this is now\u00a0\u00a0 ruled out because you can no longer allot\u00a0\nthose slots. So, you will eliminate some\u00a0\u00a0 bookings from your op"
+    },
+    "d29a0188-15ac-45a6-9fd2-b2cdf9ddcc8a": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "tion and then you\u00a0\nwill keep going like this, now you will\u00a0\u00a0 pick the next booking which survives this pruning\u00a0\nprocess and say now I have got a second booking\u00a0\u00a0 which I can add to my set. Now you will remove\u00a0\neverything which is incompatible with that.\n\u00a0 "
+    },
+    "8f7d7c9f-2030-4d4e-9fb6-28fb0fd1016d": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "And finally, you will get a sequence of bookings\u00a0\nand when you have run out of bookings that you can\u00a0\u00a0 add then all bookings are in conflict with some\u00a0\nbooking you have taken you will say this is the\u00a0\u00a0 final answer. The question is why is the final\u00a0\nanswer"
+    },
+    "88c90980-a1b2-466b-9129-1bde970f72e6": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " that I have produced now the correct one.\u00a0\u00a0 So, let us see what we could choose\u00a0\nas this local strategy, the next\u00a0\u00a0 booking to allot and see why it is not such an\u00a0\nobvious thing to choose one which is correct.\n\u00a0 So, let us start with a very trivial strate"
+    },
+    "e07febbb-6ac7-458f-be51-6e3216941f12": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "gy.\u00a0\nSo, I pick up the first booking in terms of\u00a0\u00a0 time so the person who has asked for a Monday\u00a0\nmorning eight o'clock slot I just give them the\u00a0\u00a0 booking because there is the first come first\u00a0\nserve. So, they are the ones who asked for it,\u00a0\u00a0 earliest not"
+    },
+    "3a14a160-5481-44d3-bfa9-26aa44cc2920": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " that they made the booking\u00a0\nearliest but they required the studio\u00a0\u00a0 earliest in the week, so I give it to them.\u00a0\nSo, would this be a sound strategy?\n\u00a0 Well, one way to show that it is not sound is to\u00a0\nproduce a situation where this will not give you\u00a0\u00a0 the"
+    },
+    "e09e594b-0c98-4201-a055-eadd55937d98": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " correct answer. So, here is a situation.\u00a0\nSo, here time is going from left to right. So,\u00a0\u00a0 let us just assume that we are keeping a calendar\u00a0\nand we are just keeping time from left to right,\u00a0\u00a0 Monday to Sunday, or whatever it is. So, now the\u00a0\ngreen lines "
+    },
+    "cb058253-341d-4c8c-92cc-237c56619b53": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "are the intervals that the booking\u00a0\u00a0 occupies. So, this is called interval\u00a0\nscheduling, each request spans an interval.\n\u00a0 And if two intervals overlap, they are\u00a0\nincompatible. So, now the earliest booking,\u00a0\u00a0 unfortunately, happens to be a very long one.\u00a0\nI"
+    },
+    "6c9aca58-5f05-40ec-979d-e15744465137": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "t takes the entire week. And my goal is not\u00a0\u00a0 to maximize the usage of the studio in terms of\u00a0\nhours. So, that is also important, it is important\u00a0\u00a0 to know what it is you are trying to optimize.\u00a0\nSo, I am not trying to maximize the amount of\u00a0\u00a0 time the stu"
+    },
+    "6a7511b7-295b-4d61-871d-ddba9bf7bdaf": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "dio is being used, I am trying\u00a0\nto optimize the happiness of my teachers.\n\u00a0 And I want to keep as many instructors happy as\u00a0\npossible. So, I want the maximum number of people\u00a0\u00a0 to get the slot that they asked for, even if there\u00a0\nare gaps in between where t"
+    },
+    "afa7e605-1033-498a-af93-67f517e7001c": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "he studio is not being\u00a0\u00a0 used. So, in this case, it is clear that it is\u00a0\nbest to give these five non overlapping slots\u00a0\u00a0 of choice, rather than give this one long\u00a0\nslot a choice, but this one long slot\u00a0\u00a0 is the earliest slot. So, strategy one fails,\u00a0\nbecau"
+    },
+    "9e0a21fd-e48b-4791-8d31-6b3ffc99718e": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "se you could have a situation like this.\n\u00a0 So, this is the type of analysis that you need\u00a0\nto do you have to come up. So, it looks like\u00a0\u00a0 a plausible strategy, maybe not a very clever\u00a0\none. But you have to say why this strategy is\u00a0\u00a0 not going to work? Or i"
+    },
+    "18eb3a1e-5e0d-4ad5-821e-1bdc122d4a7f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "f it does work, say why\u00a0\nit does work. So here is another strategy. So,\u00a0\u00a0 maybe starting earliest is not a good idea. But\u00a0\nsurely it is a sound strategy to pick small slots.\u00a0\u00a0 So, if I take a small slot and allot it, then it\u00a0\nwill leave a lot of time free "
+    },
+    "7e3ed2b0-df8c-414f-9736-21a89af200a2": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "for other slots.\n\u00a0 So, can I take the smallest slot. So, if\u00a0\nsomebody wants to record only for 20 minutes,\u00a0\u00a0 so can I say you can go ahead and take 20 minutes,\u00a0\nbecause if you use it only for 20 minutes,\u00a0\u00a0 then you are less likely to interfere with the\u00a0\not"
+    },
+    "d5b81c26-4fa8-4db8-a981-6cb3d00650ac": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "her people slots. So, it seems plausible when\u00a0\u00a0 you think of it that way. But this also does not\u00a0\nwork, because you could have an example like this.\u00a0\u00a0 So, you could have two long slots. And you could\u00a0\nhave one small slot, which unfortunately overlaps\u00a0\u00a0 wit"
+    },
+    "67401d22-723b-46ac-89d8-54f7224da93a": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "h both of these. So, if I now allotted to\u00a0\nthe shortest slot, I will rule out two slots.\n\u00a0 So, only one teacher will get a chance to use\u00a0\nthe recording studio. Whereas if I had not used\u00a0\u00a0 the strategy, but given it to the two longest\u00a0\nslots, I would have g"
+    },
+    "ea3fb572-4160-45ae-846c-8517c0fee0ec": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ot two people using it. So,\u00a0\u00a0 remember, the criterion is the number of\u00a0\nslots allotted and not necessarily the time\u00a0\u00a0 duration for which the studio is in use.\u00a0\nSo, this is also not a good strategy.\u00a0\u00a0 So, let us look at a third strategy. So, when I\u00a0\ntake a "
+    },
+    "116b30f0-a1ed-4a40-824e-00be4608ac8f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "slot, there are various other instructors\u00a0\u00a0 whose slots intersect with my slot.\nSo, my slot is incompatible with a number\u00a0\u00a0 of instructors, because they overlap. So,\u00a0\nwhat if I pick a slot, which is overlapping\u00a0\u00a0 with the smallest such set, so I pick a slo"
+    },
+    "6a4fb2fe-e8e7-4e01-a8d2-4b55591e1a0b": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "t,\u00a0\nwhich is least incompatible in some sense,\u00a0\u00a0 then again, this seems plausible. If I pick\u00a0\nsomething which is least incompatible, it will\u00a0\u00a0 reduce the pool by the minimum amount,\u00a0\nremember what happens, I pick a slot and\u00a0\u00a0 then once I pick that slot, ev"
+    },
+    "6115f0d3-2040-497f-87db-db650f7a8c12": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ery slot which\u00a0\nis overlapping with it has to be thrown out.\n\u00a0 So, if I pick one which throws out the least\u00a0\nnumber of other slots, then maybe I am in\u00a0\u00a0 good shape. So, this requires a slightly more\u00a0\ncomplicated example to describe, but here is one.\u00a0\u00a0 So, "
+    },
+    "961cda05-f390-4532-8409-21fd2c00bc97": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "in this if you look at any of this lot, so\u00a0\nthis is incompatible with all four of these. So,\u00a0\u00a0 is this so this is also incompatible,\u00a0\nall four. So, all the top row things\u00a0\u00a0 have four things which are incompatible. And\u00a0\nthese four things have themselves so "
+    },
+    "67b3ad08-ff0d-46e8-b4bc-59ffba1b003e": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "the three\u00a0\u00a0 others in the same time slot plus the two above,\u00a0\nso they have five things we are incompatible.\n\u00a0 So, here I have four incompatible\u00a0\nthings. So, actually, here I have\u00a0\u00a0 five, because this is also incompatible there.\u00a0\nAnd here I have five, the t"
+    },
+    "7b65af01-6465-4f18-9ecf-3c044ef9c8b7": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "hree which are in\u00a0\u00a0 the same stack and the two above. Whereas this\u00a0\nparticular slot is only incompatible with two\u00a0\u00a0 the two in the middle on the top row. So,\u00a0\nby this strategy, I would start with this.\u00a0\u00a0 But if I start with this, then unfortunately what\u00a0\nh"
+    },
+    "8f41d7d1-8773-4d74-8b19-49bb248263db": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "appens is that I have ruled out these two.\n\u00a0 Therefore, the only thing I can do is\u00a0\nto take one of this left hand side and\u00a0\u00a0 one of these right hand sides. So, I can\u00a0\nonly complete this with three recordings.\u00a0\u00a0 I can take the middle one, and then I can tak"
+    },
+    "82eef7ca-81db-45e2-a66a-ccc42d691ac6": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "e\u00a0\none from the left hand side either top row or\u00a0\u00a0 the one from the stack, because they are all\u00a0\nincompatible so I end up with a choice of three.\u00a0\u00a0 Whereas if I actually look\u00a0\nat the top row clearly I can\u00a0\u00a0 achieve four but this four does not include\u00a0\nthis"
+    },
+    "95c8a0da-3974-4190-8b67-fa89faf97afa": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " slot which had the minimum conflict.\n\u00a0 So, choosing the booking that overlaps the minimum\u00a0\nnumber of other bookings also does not work.\u00a0\u00a0 So, what you can see from this is that it is\u00a0\neasy to think of greedy strategies, which seem\u00a0\u00a0 plausible and even giv"
+    },
+    "68c4af4b-7985-4e0e-a6c7-1bb7658b9ef6": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "e an argument as to why this\u00a0\ngreedy strategy seems like a correct thing to do.\u00a0\u00a0 But it is a different thing to actually\u00a0\njustify that it works. And in some cases,\u00a0\u00a0 it is easy to say it does not work by showing\u00a0\nyou some situation where it does not apply"
+    },
+    "308cdcbb-bef8-43c0-b1c4-3ba60769d10b": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": ".\n\u00a0 In some cases, you have to come up with a little\u00a0\nbit more thought, to come up with a situation\u00a0\u00a0 where it does not apply. So, by no means is\u00a0\nit obvious that a greedy strategy will work?\u00a0\u00a0 And in most situations, unfortunately,\u00a0\ngreedy strategies do n"
+    },
+    "c20ddba2-36ae-4224-9a31-d1da61a5569e": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ot do a good job.\u00a0\u00a0 So, here is the fourth strategy. So, we\u00a0\nstarted with the strategy which says,\u00a0\u00a0 let us choose one who is\u00a0\nstarting time is earliest.\u00a0\u00a0 So, here is a dual one. It does not sound very\u00a0\npromising, because it looks very similar.\n\u00a0 But let "
+    },
+    "06a8562b-9dc7-45f4-a670-b4aeb725cbbe": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "us start with the booking\u00a0\nwhose finished time is the earliest.\u00a0\u00a0 So, can we come up with a counter example?\u00a0\nSo, supposing you porter around like we\u00a0\u00a0 have done for some time. It is difficult\u00a0\nto come up with a counter example maybe.\u00a0\u00a0 So, either you have"
+    },
+    "29c2b2fa-b837-4df7-a917-b9a558db1f0d": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " to come up with a\u00a0\ncounter example, counter example. Or\u00a0\u00a0 if you are convinced that this\u00a0\nis actually the correct strategy,\u00a0\u00a0 then you must prove to me that it is correct.\nSo, it turns out that this is actually a correct\u00a0\u00a0 strategy. So, this particular st"
+    },
+    "26d9b129-5740-48ab-86e6-fadc484782a3": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "rategy of not\u00a0\nchoosing the starting time that is earliest,\u00a0\u00a0 but using the finishing time that is earliest,\u00a0\nis actually a good strategy for doing this.\u00a0\u00a0 But how do you prove that it is correct,\u00a0\nthat is what we are going to argue.\n\u00a0 So, first, let us de"
+    },
+    "bb0e8e33-3bd9-420d-9c97-7240e7e7bb8f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "scribe the strategy more\u00a0\nformally. So, I have a collection of bookings.\u00a0\u00a0 Remember, each booking has a starting time\u00a0\nand a finishing time. So, I have a collection\u00a0\u00a0 of bookings. And from these bookings, I want to\u00a0\nconstruct a subset of bookings which are"
+    },
+    "b63edcef-c4b6-4a04-8afb-bd9ff8da081f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " mutually\u00a0\u00a0 compatible, they do not overlap with each other\u00a0\nsuch that this subset is as large as possible.\u00a0\u00a0 So, I start with that, and I have\u00a0\na new set, which I am going to pull\u00a0\u00a0 out from the set B of accepted bookings.\nSo, initially, I have no accepte"
+    },
+    "d0829d12-4aa4-494b-b441-48e11724cdaf": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "d bookings,\u00a0\u00a0 everything is in this booking set, that is\u00a0\nbookings which have yet to be processed,\u00a0\u00a0 and A has the ones which have been\u00a0\naccepted. So, initially A is empty.\u00a0\u00a0 So, at any given point in the greedy strategy\u00a0\nsays among all the available booki"
+    },
+    "b2c81e34-2358-48e4-ac03-42788514f921": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ngs now,\u00a0\u00a0 the available means by assumption are not\u00a0\nconflicting with any booking I have already\u00a0\u00a0 chosen. So, among all the available bookings,\u00a0\nif there is at least one so it is not empty,\u00a0\u00a0 pick the one with the earliest finishing time.\nSo, you pick a "
+    },
+    "11f34675-54dd-43ee-bc83-2d7c3397f24f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "small b in that set the earliest\u00a0\u00a0 finishing time and add it. And that is the\u00a0\ngreediness, I just pick it up. I do not have\u00a0\u00a0 any second thoughts about it, I just pick. Of\u00a0\ncourse, if there are multiple ones the same\u00a0\u00a0 finishing time, we will choose one, b"
+    },
+    "e202efdc-31b6-49cc-80aa-0900eaed40f0": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ut you just\u00a0\npick one with the smallest finishing time and put\u00a0\u00a0 it in. And now you have to prune everything which\u00a0\nis in conflict with the small b has to be removed,\u00a0\u00a0 because we cannot honor those anymore.\nSo, you have to remove from capital B\u00a0\u00a0 every bo"
+    },
+    "9367eab1-126e-4a76-9581-243a9f21f1db": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "oking which overlaps with small b. So,\u00a0\nthis is the algorithm it is very straightforward.\u00a0\u00a0 So, let us see how it works. So, supposing I have\u00a0\nthese bookings 1 to 9. So, you can see that again,\u00a0\u00a0 time is going from left to right. So, this is the\u00a0\ndirection"
+    },
+    "d9b2fe55-6c17-4418-973b-5ec356e80b8f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " of time. So, the earliest booking in\u00a0\u00a0 all these that ends is 1. So, 1 is the booking\u00a0\nthat whose time slot ends the earliest. So, 1,\u00a0\u00a0 2, and 6 all start roughly together, but\u00a0\n1 certainly ends earlier than others.\n\u00a0 So, I remove, I add 1 to my set A and"
+    },
+    "90947e87-c2b0-460b-96c2-1a0327e161ac": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " in\u00a0\nthe process, these two get removed because\u00a0\u00a0 they overlap with 1, none of the other bookings\u00a0\noverlaps with 1 directly. But these two bookings\u00a0\u00a0 I cannot honor because they would require\u00a0\nthe studio at the same time as booking 1.\u00a0\u00a0 So, now these dashe"
+    },
+    "1041a0b2-2d80-490d-9507-c0713ef45ab8": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "d lines are the ones which\u00a0\nare ruled out. So, among the remaining things,\u00a0\u00a0 it is clear that 3 is the next one which\u00a0\nshould be chosen because it is the smallest\u00a0\u00a0 finishing time among the unprocessed.\nSo, the black solid lines are those which\u00a0\u00a0 are still"
+    },
+    "dee015d7-0717-40b9-b17a-323b34029a73": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " in capital B. The green one, so this is\u00a0\nA, the green ones are in A and the dashed lines\u00a0\u00a0 are the ones which have been eliminated from\u00a0\nB because they conflict with something in A.\u00a0\u00a0 So, I choose 3. And in the process of choosing\u00a0\n3, 4 gets ruled out bec"
+    },
+    "1dd59a1f-c121-4ef2-8fe9-24351dc8a2ac": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ause 4 overlaps with 3,\u00a0\u00a0 but 5 7 8 and 9 are okay. Now, I look at this,\u00a0\nand then the next thing I choose is 7, because 7\u00a0\u00a0 finishes before 5. So, I choose 7, and\u00a0\nin the process 5 gets ruled out.\n\u00a0 And finally, if you look carefully,\u00a0\n8 finishes before 9"
+    },
+    "201b8a8d-f32d-4b5c-bcb9-04754f26f41f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": ", so I choose 8.\u00a0\u00a0 So, this is how the algorithm works. It looks\u00a0\namong all the remaining ones, which one has\u00a0\u00a0 the earliest finishing time, picks it up and\u00a0\nthen rules out everything else. So, this is\u00a0\u00a0 the greedy algorithm.\nAnd what we want to argue now "
+    },
+    "55c3dc37-cec4-4672-b8b7-1b691e2a4060": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "first is how to show\u00a0\u00a0 that this actually produces the largest subset\u00a0\nof compatible jobs. So, we saw that the algorithm\u00a0\u00a0 takes a set of bookings B and it produces to the\u00a0\nsolution A by following this greedy strategy,\u00a0\u00a0 but why is this optimal? So, you ha"
+    },
+    "b5dfebdc-77f8-4686-a14a-ed55ca904524": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ve to do\u00a0\nsomething to prove this. So, when we looked at\u00a0\u00a0 Dijkstra\u2019s algorithm, Prim\u2019s algorithm, we looked\u00a0\nat the problem we were studying and we said,\u00a0\u00a0 in the context of this problem, there is\u00a0\na lemma or there is something which shows\u00a0\u00a0 that a later "
+    },
+    "26cbf3d6-95e9-4c94-b966-248e1eb8fe91": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "thing cannot change anything.\nSo, like that we have to come up with a strategy.\u00a0\u00a0 So, here, we are not going to come up with\u00a0\nany fixed because we do not really have\u00a0\u00a0 any handle on this problem. So, let us just\u00a0\nsay, let us look at some optimal solution. "
+    },
+    "a352be27-9e4e-4ea3-afca-6e812f28e3f7": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "So,\u00a0\u00a0 let us say that there is a different solution\u00a0\nwith somebody else's produced through whatever\u00a0\u00a0 algorithm which I do not know. And the claim is\u00a0\nthat that is optimal. So, there is a capital O,\u00a0\u00a0 which is a optimal set of bookings.\nAnd I have a set of"
+    },
+    "11eb5349-87b5-4e8f-9af8-15df722b0c52": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " bookings A. Now, the first\u00a0\u00a0 thing to notice that I am not claiming that A\u00a0\nand O are the same. Very obviously, I could have,\u00a0\u00a0 for instance, a situation where I have bookings\u00a0\nlike this. So, supposing these are my bookings,\u00a0\u00a0 then it could be that my alg"
+    },
+    "6b84db03-20bf-4b9e-bfaf-e50829b47dfe": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "orithm because it is\u00a0\nthe early finishing algorithm picks these two, and\u00a0\u00a0 the optimal algorithm picks these two. But you can\u00a0\nsee that there is no way to pick more than two.\n\u00a0 So, the optimality is in the number, but it is\u00a0\nnot in the choice of which slot"
+    },
+    "b4bd8ddf-a476-4064-8ed0-cb2c989c4b4d": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "s are honored. So,\u00a0\u00a0 remember, we are not looking at other constraints,\u00a0\nlike, whether the thing is used for a longer\u00a0\u00a0 time or not. For instance, I could have a\u00a0\nsituation where I have two really long slots.\u00a0\u00a0 And two really short slots.\u00a0\u00a0 Now, my algorit"
+    },
+    "b91db559-4882-40a7-8d9f-960326250a6b": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "hm, the algorithm A that we\u00a0\ndescribed, will pick this one, because it\u00a0\u00a0 finishes first, throughout this one, then it\u00a0\nwill pick this one and throw out this one.\n\u00a0 So, it will pick two, but it will pick two\u00a0\nwith use of studio for a very short time.\u00a0\u00a0 And "
+    },
+    "434d4571-477d-42ec-b1c7-a1190678ed3a": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "perhaps O instead picks this one and this one.\u00a0\u00a0 So, in a sense O has done better because it\u00a0\nis using the studio for more, but it does not\u00a0\u00a0 matter because we are only counting the size. So,\u00a0\nwhat we really want to argue is that the size of\u00a0\u00a0 A as a set a"
+    },
+    "8db0525d-852e-4673-85ae-1721ec7d71be": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "nd the size of O as a set are the\u00a0\nsame. So, we just saying to the same number\u00a0\u00a0 of people may not be the same people with the\u00a0\nsame number of people are being satisfied.\n\u00a0 So, to do this, we will first to prove that\u00a0\nthis is true that the size of A and th"
+    },
+    "8e39dea3-9906-48e3-8e7e-6eae2526a174": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "e size\u00a0\u00a0 of O are the same, we will just reorganize A\u00a0\nand O to be a little bit more structured than\u00a0\u00a0 they are. So, remember that each job has\u00a0\na starting time and a finishing time. So,\u00a0\u00a0 obviously the starting time of a job was\u00a0\nmade before its finishing"
+    },
+    "0f12c846-ae85-444b-8eb3-7f37c6cd62f7": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " time. Otherwise,\u00a0\u00a0 it does not make sense. I cannot have a slide slot\u00a0\nthat starts at three o clock in the afternoon and\u00a0\u00a0 finishes at two o clock in the afternoon.\nSo, every starting slot, starting time must\u00a0\u00a0 be before the corresponding finishing time o"
+    },
+    "eebdad81-0463-47d8-a52a-bf8d7f73c47a": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "f\u00a0\nthat job. But since these are compatible in A,\u00a0\u00a0 we know that the all these things are\u00a0\ndisjoint. So, I can order them in time. So,\u00a0\u00a0 I can pick a sequence in which to enumerate them\u00a0\nsuch that the finishing time of the first job\u00a0\u00a0 is before the startin"
+    },
+    "935cda4b-7234-4192-b27b-13cd462cd8d0": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "g time of the second\u00a0\njob. And this finishing time of the second job\u00a0\u00a0 is before the starting time of the third\u00a0\njob. So, I am just ordering them in time.\n\u00a0 So, the first job finishes, then the second\u00a0\njob finishes, then the third job finishes,\u00a0\u00a0 and I kno"
+    },
+    "fa91a7a4-8c2c-41da-a4dc-4c5efbd56b45": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "w that they do not conflict because\u00a0\notherwise it would not be in my solution. And I\u00a0\u00a0 can do the same thing for this so-called optimal\u00a0\nset which somebody has produced, they are also\u00a0\u00a0 an order in the same sequence I can say that\u00a0\nj1 is before j2 in time "
+    },
+    "09c89526-2986-4393-baf5-560cb38b569f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "j2 is before j3.\n\u00a0 And the claim is that I have produced k but\u00a0\nthe optimal solution has produced mn if it is\u00a0\u00a0 optimal not and I am not optimal with my\u00a0\nalgorithm, then m must be bigger than K.\u00a0\u00a0 So, my goal is to show that k and m are the same.\u00a0\u00a0 So, we "
+    },
+    "1e4a65ee-82b1-4110-b9f5-91b879af907f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "want to show that k is equal to m that will\u00a0\nprove that the two sets are of the same size.\n\u00a0 So, the way we will do this is to use this\u00a0\nsequence to argue that at every point in the\u00a0\u00a0 sequence, our in time, the solution produced by A\u00a0\nis ahead of the solut"
+    },
+    "6009f77d-b663-428b-8604-c90734be1a12": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ion produced by O. Solution\u00a0\u00a0 produced by O in time. So, it is ahead in time.\u00a0\nSo, what I mean by that is that if I look at the\u00a0\u00a0 corresponding job if I look at i1 and j1 and if I\u00a0\nlook at i2 and j2, for each job in the sequence,\u00a0\u00a0 if I look at that l th j"
+    },
+    "bee27701-6056-4d2c-8027-95fc8a5f0067": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ob, then the l\u00a0\nth job in my set in the A set finishes\u00a0\u00a0 earlier than the l th job in\u00a0\nO set equal to earlier.\n\u00a0 So, f of il should be less than equal to remember\u00a0\nf is the finish time, the finish time of the l th\u00a0\u00a0 job in the accepted set is less than or "
+    },
+    "06a3ae6a-d13c-4b82-8649-6cef287f3c7d": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "equal to\u00a0\nthe finish time of the l th job in the so-called\u00a0\u00a0 optimal set. So, why is this true? Well, we will\u00a0\nprove it by induction by l equal to 1 so on. So,\u00a0\u00a0 for the first job remember that what our algorithm\u00a0\ndoes is it starts with the pool of all job"
+    },
+    "1b84fe63-98a3-49a7-bcd9-d30e8c2eae18": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "s and it\u00a0\u00a0 picks the job which ends the earliest globally.\nSo, by definition, i1 the algorithm\u00a0\u00a0 are the set capital A contain consists of the\u00a0\nfirst job which ends globally before every other\u00a0\u00a0 job. So, the set O cannot have a job which starts\u00a0\nand finish"
+    },
+    "ebb53032-8d9d-4218-b033-ae3127696e3f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "es earlier than that. So, therefore,\u00a0\u00a0 i1 cannot finish later than j1. So, initially it\u00a0\nis true. Now, let us see what happens inductively.\u00a0\u00a0 So, we are doing it interactively. So, we are\u00a0\nassuming that we have come up to some point up\u00a0\u00a0 to some l minus 1 "
+    },
+    "28c4c782-0539-42c6-bf5b-96f982f9b5e9": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "and so far, we have proved it\u00a0\nevery step the job on top finishes before the\u00a0\u00a0 job at the bottom and now we have to argue that\u00a0\nit also holds for the current job number l.\n\u00a0 So, why is this? So, we want to show that\u00a0\nf of il is less than equal to f of jl. "
+    },
+    "3ef4ee0a-6a92-4c99-906d-99eeba31da25": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "So,\u00a0\u00a0 remember that at the previous step, we already\u00a0\nknew this, f of i of l minus 1 by induction. So,\u00a0\u00a0 this is induction f of i of l minus 1 was\u00a0\nalready smaller than f of j of l minus 1 and this\u00a0\u00a0 is because B sorted\u00a0\u00a0 out. So, since B sorted, I know th"
+    },
+    "9036a04f-ca64-4cf9-8c3d-0ecaf3faf51f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "at the next\u00a0\njob that is in B starts after the previous\u00a0\u00a0 job ends. So, the starting point of so this\u00a0\nshould be sorry, this is this is J sub l.\n\u00a0 So, the starting point of the jth, lth job in the\u00a0\nj sequence is after the finishing point of the l\u00a0\u00a0 minus p"
+    },
+    "de837a07-a62c-4967-9d91-9893daef7a6a": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "oint 1. So, the first inequalities because\u00a0\nmy induction shows me that the A sequences ahead\u00a0\u00a0 of the B sequence at l minus 1 and the second\u00a0\ninequality says that the B sequence is sorted. So,\u00a0\u00a0 the lth job must start only after the l minus\u00a0\n1 job is finis"
+    },
+    "d699143f-cc2b-4e95-a851-9bab8a03d87b": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "hed. From this it follows that\u00a0\u00a0 f of il minus 1 is less than s of fj. Because\u00a0\nI have these two inequalities. So, therefore,\u00a0\u00a0 if this was actually going to be smaller.\nSo, the job j is compatible with my thing,\u00a0\u00a0 because f of i have l minus 1.\u00a0\nSo, remem"
+    },
+    "03d383e6-8e4d-4387-a265-d24be215e47c": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ber, this is the s of,\u00a0\u00a0 j of l. The l minus 1 job, which I have put in\u00a0\nset A finishes before this job that the optimal\u00a0\u00a0 one picks. So, if that job was available to me,\u00a0\nit is available to me. And if it finished before,\u00a0\u00a0 il I would have picked it. Becau"
+    },
+    "02d2e97d-5f92-464c-b7b8-ebab6e0e106c": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "se my strategy\u00a0\nsays pick the one with finishes earliest. So,\u00a0\u00a0 if f of jl is actually strictly smaller than f of\u00a0\nil, then the greedy strategy would have to jl.\n\u00a0 So, if you are claiming that he did not pick jl,\u00a0\nthen it must be that il is smaller than or"
+    },
+    "974323c0-af03-4891-8882-73b17b625ef9": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " equal\u00a0\u00a0 to. So, that is the proof. So, therefore, if I\u00a0\nhave already got this greedy strategy, maintaining\u00a0\u00a0 its lead, in some sense, finishing before the\u00a0\noptimal strategy up to l minus 1, it still stays\u00a0\u00a0 ahead one more step. So, so far, so good.\nSo, no"
+    },
+    "bbf4d67c-1626-4b6f-a550-cd27623a12b6": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "w then what?\u00a0\u00a0 So, now, we still have to justify that k is equal\u00a0\nto m. What we have shown is that at every stage,\u00a0\u00a0 we are no later in time when we have finished\u00a0\nthat many jobs in A then we are in O.\u00a0\u00a0 So, why does this guarantee that\u00a0\nI have no more job"
+    },
+    "b18ab32a-ab8a-4782-a5b3-1c6732b54cca": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "s in O, than in\u00a0\u00a0 A. So, supposing it is not the case. So, supposing\u00a0\nI have more jobs strictly more jobs in M,\u00a0\u00a0 than in A. So, when I finish at ik, and\u00a0\nI am a jk, at this point, I know that\u00a0\u00a0 the this is smaller than this.\nThis is what we have proved.\u00a0\u00a0"
+    },
+    "4a603a1f-b5bb-4f9a-a4f7-50797df55d0a": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " Now if this next job is there. And I am not\u00a0\ngoing to add it, it means that at this point,\u00a0\u00a0 I have run out of jobs to add, so everything else\u00a0\nis incompatible with the set I have picked, so\u00a0\u00a0 no more jobs remain, that is why I stopped at ik.\u00a0\nBut the job"
+    },
+    "22e2b5ca-2187-4e8a-af67-459636a86d8c": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " that is remaining is not incompatible,\u00a0\u00a0 because for the same reason, we know that ik\u00a0\nis smaller than jk in the finish time but jk\u00a0\u00a0 is smaller than jk plus 1 in the start time.\nSo, the next request which comes after that in O\u00a0\u00a0 is not finished. So, this"
+    },
+    "b23086c3-ab7a-4362-8105-64882a95a83b": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " means\u00a0\nthat B is not finished at that time.\u00a0\u00a0 So, therefore, our assumption\u00a0\nthat B is empty and we stopped\u00a0\u00a0 is wrong. So, we could not have stopped at K\u00a0\nbecause B became empty. So, we must be able to\u00a0\u00a0 add k plus 1. So, if m is strictly bigger than k,\u00a0"
+    },
+    "80c3db0c-3730-414a-b99e-f146d3d4fb97": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "\nthen there is something wrong with our assumption\u00a0\u00a0 and therefore m cannot be strictly bigger than\u00a0\nK. So, this is this proof by contradiction.\n\u00a0 You assume something and you show that it leads to\u00a0\nsome absurdity. And because that absurdity is not\u00a0\u00a0 possi"
+    },
+    "f813c3f9-c342-40e7-a17c-db79d0b1d328": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "ble, the original thing must have been wrong.\u00a0\nSo, it cannot be that therefore, this is not\u00a0\u00a0 a valid assumption. So, m cannot be bigger\u00a0\nthan k, can be at most k. Since you claim\u00a0\u00a0 that O is optimal, and I claim that I have\u00a0\nproduced k, then m must be equ"
+    },
+    "53271d00-b39b-48d1-ada6-ec6e5852cde5": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "al to k.\n\u00a0 So, implementing this algorithm like many greedy\u00a0\nalgorithms implementing it is not very hard, so,\u00a0\u00a0 what I need to do first of all is to be able to\u00a0\nlook up the next job by finishing times I need\u00a0\u00a0 to sort. So, n log n time I need to take the s"
+    },
+    "4d74d6de-0b8e-492d-9240-1c9965ae2483": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "et\u00a0\nof bookings which are given in capital B and sort\u00a0\u00a0 them by finishing time. And now, for convenience,\u00a0\nI will sort them and renumber them. So, the first\u00a0\u00a0 job now job one in my sequence will be the one\u00a0\nthat finishes first job to second and so on. \n\u00a0 S"
+    },
+    "2bec7f71-6c2d-4600-8990-dcc00ecfa6eb": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "o, the starting times may be jumbled up,\u00a0\nbut the finishing times are in sequence.\u00a0\u00a0 So, I will now keep the start and finish time\u00a0\nfor easy lookups. So, I will say capital S of\u00a0\u00a0 i is a dictionary which tells me the starting\u00a0\ntime of request i. F of i is "
+    },
+    "fca7119f-2bbb-46d3-b99e-a110ead61f6a": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "the finish time\u00a0\u00a0 of request i. So, now I pick up the first booking.\u00a0\nAnd what I will do is I know it is finishing time,\u00a0\u00a0 so I can now go ahead. So, all the jobs to\u00a0\nmy right finish later than this, but I need\u00a0\u00a0 to find one which starts later than this.\nS"
+    },
+    "7d4cbe5a-9c3c-43e7-ab52-97fe807612fa": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "o, since they are ordered by finishing time,\u00a0\u00a0 I am going to be processing them in earliest\u00a0\nfinishing time. But I need the earliest job,\u00a0\u00a0 which finishes after this, but which\u00a0\nstarts after this. So, in general,\u00a0\u00a0 after adding looking j, I need to go to t"
+    },
+    "cf6d8a3a-3e64-473e-b289-ff7b502415f9": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "he\u00a0\nright and find the smallest r such that,\u00a0\u00a0 of course it will finish later than this\u00a0\nbecause I am doing it in order to finish time.\u00a0\u00a0 But it must also be compatible. So, it is starting\u00a0\ntime must be bigger than my finishing time.\n\u00a0 So, I go to the righ"
+    },
+    "3c2c80bf-c6f2-4bd5-9ed3-2d438d6f501f": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "t, so I will skip\u00a0\nover everything between j and r. Then\u00a0\u00a0 after looking at r I will skip over it. So,\u00a0\nI am not going to go back because everything\u00a0\u00a0 before that is already ruled out because it is\u00a0\nalready overlapping with something. So, I go from\u00a0\u00a0 r and"
+    },
+    "ee16411d-ed12-4269-a14a-247c2d4030d1": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " I look for the next r prime which is to\u00a0\nthe right of r prime which starts after r ends,\u00a0\u00a0 and so on. So, this is a single scan, I need\u00a0\nto only go through the jobs in one pass.\n\u00a0 I start with the first one, it will cancel\u00a0\nout a bunch of jobs. And I will"
+    },
+    "4ba08c97-e4bd-45ab-9618-9e727258abb5": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": " find the first\u00a0\u00a0 job which is not canceled, which can be\u00a0\nstarted after this job ends. And because\u00a0\u00a0 it is an order of finish time, this will be\u00a0\nthe earliest finish time among all compatible\u00a0\u00a0 jobs. And then I keep going, so this is\u00a0\nthe implementation. "
+    },
+    "0383c097-6a61-4e48-b099-4ad1319f587b": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "So, it is going to be\u00a0\u00a0 an order n log n sort plus a linear scan.\u00a0\nSo, it is a very efficient algorithm.\n\u00a0 So, what we have seen is that this notion\u00a0\nof a greedy algorithm is one which makes a\u00a0\u00a0 lot of choices locally, it looks at the current\u00a0\nsituation an"
+    },
+    "b8e8e24b-a785-48cc-a3df-9e1ecc2082fb": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "d says this looks best right now,\u00a0\u00a0 in order to achieve something which is globally\u00a0\ngoing to be optimal. So, we pick the shortest edge\u00a0\u00a0 now, or the shortest distance now in Dijkstra.\u00a0\nIn this case, we pick the shortest finish time,\u00a0\u00a0 among those things w"
+    },
+    "ba36453a-b81e-4533-9f03-004f87b05187": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "hich are remaining right\u00a0\nnow, such that globally, we are going to achieve\u00a0\u00a0 the maximum number of jobs which are satisfied,\u00a0\nor we are going to globally achieve the minimum\u00a0\u00a0 cost spanning tree or whatever.\nSo, in order to do this correctly,\u00a0\u00a0 we have to "
+    },
+    "33707a70-e0b1-4c75-8677-06c793bcd990": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "make sure that this not going back\u00a0\nand revisiting a choice is actually correct.\u00a0\u00a0 So, since the algorithm never goes back\u00a0\nand revisit, the choice is very efficient,\u00a0\u00a0 because it only follows one trajectory. So,\u00a0\nit is going to be a very simple algorithm,"
+    },
+    "ddefdfcf-8a62-42a9-951c-4855bbdb38e6": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "\u00a0\u00a0 like the one we saw here, which is actually\u00a0\nn log n is to sort and then a scan.\u00a0\u00a0 But we need to show that the strategy is\u00a0\noptimal that we know we do not go back.\n\u00a0 And because we do not go back, we are never\u00a0\ngoing to reconsider so that we have alway"
+    },
+    "0512e6e5-8490-4eff-a700-92470636ae60": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "s\u00a0\u00a0 made the correct choice. So, and in many\u00a0\nstraightforward problems like this interval\u00a0\u00a0 scheduling thing. The problem is that there are\u00a0\nmany things which look naturally greedy. So,\u00a0\u00a0 greedy strategies are not difficult to\u00a0\nthink of, and to informally "
+    },
+    "f75fa64a-01ed-424c-a1d8-92a83efcdbf9": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "justify. So,\u00a0\u00a0 we have to somehow make sure that these greedy\u00a0\nstrategies that we come up with are not wrong.\n\u00a0 So, we already saw that the first three\u00a0\ngreedy strategies we came up with for\u00a0\u00a0 interval scheduling, we could come up with counter\u00a0\nexamples. S"
+    },
+    "1d366a9f-709b-43a9-98fb-8b01907a59d7": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "o, most greedy strategies are wrong.\u00a0\u00a0 So, when you pick up a greedy strategy, if you are\u00a0\nfollowing a greedy strategy to solve a problem,\u00a0\u00a0 you need to provide a proof that what you\u00a0\nare doing is actually optimal. Otherwise,\u00a0\u00a0 it is suspect. So, every gre"
+    },
+    "b44b4722-ddfc-4ac9-b0dd-3d88f88907fe": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "edy strategy\u00a0\nneeds a proof. So, just keep that in mind.\u00a0\u00a0 So, we saw in this particular case, one\u00a0\nway to prove this, which is to show that\u00a0\u00a0 step by step, if I just examine\u00a0\nthe order in which things are taken\u00a0\u00a0 step by step, the greedy solution\u00a0\nstays a"
+    },
+    "e502bd04-6318-45e4-9b0a-604b24aef28e": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "head of the optimal solution.\n\u00a0 So, there are many different ways to prove\u00a0\ngreedy things. And there is no uniform strategy,\u00a0\u00a0 unfortunately, but we can just look at a number\u00a0\nof examples to come up with different ways of\u00a0\u00a0 proving it. So, this is one part"
+    },
+    "b62de4df-095b-4222-af3a-74fab5231a7b": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "icular\u00a0\nsolution which says that I can take an\u00a0\u00a0 optimal solution and I can kind of incrementally\u00a0\nshow that my solution is never worse than that.\u00a0\u00a0 Later, we will see other examples where we can\u00a0\ntake an optimal solution and rearrange it to\u00a0\u00a0 be the same "
+    },
+    "42d9c33a-b41c-4898-b7a3-51b29963b198": {
+        "content_id": 52,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Interval Scheduling",
+        "week": 7,
+        "chunk": "as the actual solution that we get.\u00a0\nSo, that will be a different way of proving it."
+    }
+}

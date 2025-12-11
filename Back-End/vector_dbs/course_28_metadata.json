@@ -1,0 +1,499 @@
+{
+    "6cb68062-dab9-4898-b6c7-f2d60c5f788b": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "So, we saw, that a list is a flexible\u00a0\nstructure, which is distributed in memory,\u00a0\u00a0 but which allows us to manipulate things locally\u00a0\nso that we can add and delete items in the middle\u00a0\u00a0 of a list at low cost, as opposed to an array,\u00a0\nwhich actually happens"
+    },
+    "5e3fd41e-f02b-4c2a-95fb-09aaeda164ca": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " as a contiguous block of\u00a0\u00a0 memory. So, it is efficient to randomly\u00a0\naccess the ith element of an array. \n\u00a0 But if you have to insert or remove things in\u00a0\nan array, then you have to shift everything\u00a0\u00a0 up or down by one position, so that can be an\u00a0\nexpensiv"
+    },
+    "4e06b1f3-792b-4be8-ab3c-c8150d4e9d36": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "e task. So, arrays are not flexible, but\u00a0\u00a0 they support random access, lists are flexible,\u00a0\nbut to get to the ith element, you have to start\u00a0\u00a0 from the beginning and spend time proportional\u00a0\nto the position you want to reach. \n\u00a0 So, now in Python, we have "
+    },
+    "54368bdf-f9c0-4ab6-b8ca-eb656832a2e1": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "this built-in\u00a0\nlist and we also have a library called numpy,\u00a0\u00a0 which provides arrays. So, let us try and\u00a0\nunderstand how lists actually work in Python. \n\u00a0 So, we saw that, sequences can be\u00a0\nstored either as lists or as arrays,\u00a0\u00a0 so lists are flexible. You "
+    },
+    "8e22f979-e561-474a-8a87-2e4987ef542a": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "can insert\u00a0\nand delete items in the middle of a list\u00a0\u00a0 quite easily, but getting to the ith element\u00a0\ntakes time proportional to i. So, in general,\u00a0\u00a0 if I have to walk across a list to get to the\u00a0\nnth element will take me order n time. \n\u00a0 On the other hand,"
+    },
+    "d6731a36-ecda-4cf0-ab73-f75fb0e517c9": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " arrays are declared\u00a0\ncontiguously in memory. So, we are starting from\u00a0\u00a0 the first position, we can compute the offset\u00a0\nof the ith element and get there in one step.\u00a0\u00a0 So, these arrays support random access,\u00a0\nbut because they are contiguous and must\u00a0\u00a0 rema"
+    },
+    "e5e157c1-c313-4e23-87fa-13c0846f4687": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "in contiguous, we cannot have holes in\u00a0\nthem. So, if we want to insert an element,\u00a0\u00a0 we have to push everything. If we delete\u00a0\nan element, we have to shrink the array,\u00a0\u00a0 and this can take again order n time. \nSo, what we said is, when we\u00a0\u00a0 do an algorithm "
+    },
+    "5e34006b-405f-4e9c-9a90-e82cf76a2c99": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "like sorting or searching,\u00a0\nwe do these operations, of looking up A[i],\u00a0\u00a0 A[j] exchanging them, and so on, so we need to\u00a0\nbe conscious about which implementation we are\u00a0\u00a0 using of this list or sequence in order to make\u00a0\nsure that the analysis we do is accu"
+    },
+    "a2f5a6cc-13d1-40f4-ae87-524c7dea1ad2": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "rate. \n\u00a0 So, these are the classical understanding\u00a0\nof listen arrays, but now we have a built-in\u00a0\u00a0 list type in Python. So, the name, of\u00a0\ncourse, suggests that it should be a flexible\u00a0\u00a0 list. And we do have operations which allow us\u00a0\nto insert items at the"
+    },
+    "fd492844-d101-47dc-a46a-2d1eb6c70bf8": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " beginning of the list,\u00a0\u00a0 to replace a smaller slice by a bigger\u00a0\nslice or a bigger slice by a smaller slice,\u00a0\u00a0 so we can shrink and grow\u00a0\nlists quite arbitrarily. \n\u00a0 So, the question is, is the built-in list type\u00a0\nin Python, really a flexible linked list "
+    },
+    "3014a9f8-d0d8-4f62-8f21-cd9568bed8a3": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "of the\u00a0\u00a0 type of implementation that we saw? We also have\u00a0\nseparately a library called numpy, which provides\u00a0\u00a0 arrays in Python. So, are these numpy arrays\u00a0\nactually faster than lists in Python? \n\u00a0 So, let us answer the first question. In\u00a0\nfact, lists in P"
+    },
+    "1466d2aa-5bcd-477a-bfc1-8863a4e65fff": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ython are not implemented\u00a0\u00a0 as flexible linked lists, rather, they\u00a0\nare actually implemented as arrays. So,\u00a0\u00a0 when you define a list in Python, Python actually\u00a0\nallocates a contiguous block of memory, which is\u00a0\u00a0 much larger than the list is because the lis"
+    },
+    "84a4963d-da36-4d85-95c6-4e13e21a5c75": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "t, of\u00a0\ncourse, when you start, it is typically empty. \n\u00a0 So even if you declare an empty list, you get\u00a0\na large block of memory. And till that memory\u00a0\u00a0 fills up, the list will be accommodated in\u00a0\nthe array. And once your list grows beyond\u00a0\u00a0 the size of the"
+    },
+    "4a2336a9-3f5d-4513-9c66-b8053485408d": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " array that you have, then you\u00a0\nwill get a new array, which is double the size.\u00a0\u00a0 So, effectively, when you're working on\u00a0\na list and the size does not change much,\u00a0\u00a0 you are manipulating it within an array, and\u00a0\nwhen you get a new list, you grow the list\u00a0"
+    },
+    "058a9c4f-b44c-4d2d-a94c-59cf8238224b": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "\u00a0 beyond the size of the array, then you get\u00a0\na new array, which is double the size. \n\u00a0 So, inside this array, so now we have this\u00a0\narray, which we think of is a block of memory.\u00a0\u00a0 So, this is my L0, L1 and so on. And in\u00a0\ngeneral, there will be at the end "
+    },
+    "48741db0-7198-4aff-bbc6-bc51682e5d8c": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "of the array,\u00a0\u00a0 some unused space, because the array\u00a0\nthat is given to me is bigger than\u00a0\u00a0 the list that I am actually storing\u00a0\nin it. So, what Python does is,\u00a0\u00a0 it keeps track of this position. \nSo, it keeps track of the last position.\u00a0\u00a0 So, now, if you w"
+    },
+    "1843cc64-d0b1-4fda-b47a-331ce8430388": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ant to add an element to the\u00a0\narray, it is very simple. You just remove, you put\u00a0\u00a0 a new element here, you move this pointer here,\u00a0\nand now your free space starts at this point.\u00a0\u00a0 So, extending an array by adding an element to the\u00a0\nright is easy. So, exten"
+    },
+    "f889c45a-1f61-47f6-8db5-4f51a32fa369": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ding a list in Python by\u00a0\u00a0 adding a limit to the right is easy provided, of\u00a0\ncourse, you do not overflow that boundary. \n\u00a0 So, Python also provides an operation called\u00a0\npop, which returns the last element. So,\u00a0\u00a0 it removes the last element and then returns"
+    },
+    "019ebfbd-6890-42b3-920c-3009e25a4e43": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " it\u00a0\nback to you and shrinks the array by one. And for\u00a0\u00a0 the same reason it is also easy, because I just\u00a0\nhave to move this pointer up, declared this to be\u00a0\u00a0 free and return whatever was there as the return\u00a0\nvalue. So, append and pop are constant time. \n\u00a0 "
+    },
+    "ca7f076d-a4dd-4374-adbe-ca4e213d11c0": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "Now, we said that it is constant time, but\u00a0\nwhat happens when we have to expand the array\u00a0\u00a0 and create a new array? So, as I said, at\u00a0\nsome point, you will have to double the size.\u00a0\u00a0 So, doubling the size might require you to move,\u00a0\nyou may not have space "
+    },
+    "a005ab41-9059-4c59-abde-245aef594793": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "right here, so you might\u00a0\u00a0 have to double the size somewhere else. \nSo, you might go from an order n size array\u00a0\u00a0 here to an order 2n size array somewhere else in\u00a0\nthe memory. So, you might have to copy all these n\u00a0\u00a0 elements and then extend it to the n pl"
+    },
+    "6c61aaf4-1c5e-493c-a767-333d87836914": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "us oneth\u00a0\nelement. But that is a linear operation, that\u00a0\u00a0 is order n, and that happens once. So, it happens\u00a0\nonce, when you do this extension beyond that. \n\u00a0 So, if I amortize the cost, in order to reach\u00a0\nthat order n operation, I must have grown the\u00a0\u00a0 arr"
+    },
+    "97a9af38-9478-460a-8dc7-21eed6b62bd6": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ay n times. So, those n adds could have\u00a0\nbeen distributed among the n appends. So,\u00a0\u00a0 effectively each append we can think of as\u00a0\nhaving taken two steps on an average. So, I do\u00a0\u00a0 one plus one plus one n times, and then I do one\u00a0\nsingle n. So, this is what h"
+    },
+    "c39a45b8-a83c-46fc-a55a-0be76ec484d7": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "appens when I have to\u00a0\u00a0 expand beyond the array that is given to me. \nBut if I think of this whole thing as a chunk,\u00a0\u00a0 this is around two n. And how many operations\u00a0\nhave I done? I have at least n operations. So,\u00a0\u00a0 2n steps have been spent over n operation"
+    },
+    "14a4a3d0-aa83-4fe8-b514-92d56c1a0720": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": ",\u00a0\nso each step, each operation roughly took\u00a0\u00a0 two steps instead of one step. So, that is what\u00a0\nwe mean by saying that this append and pop. \n\u00a0 Because they happened at the end of the array,\u00a0\nand only occasionally they cause you to spend a\u00a0\u00a0 little bit of t"
+    },
+    "5e4f3338-0723-4f7d-bcb9-0b5ab5bdd6b8": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ime transferring the contents\u00a0\nfrom a smaller array to double the size,\u00a0\u00a0 these are amortized 0 order 1. Oder\u00a0\n1 means, remember, order 1 means\u00a0\u00a0 it is less than c times one for some C, so it\u00a0\njust means it takes a constant amount of time. \n\u00a0 So, there is "
+    },
+    "1d9fa661-f31b-452d-b15f-08356bdb3ca3": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "no dependence on the input. On\u00a0\nthe other hand, as you would expect, because\u00a0\u00a0 this is an array, and exactly the same problem,\u00a0\nhappens in an array. So, when I have a sequence,\u00a0\u00a0 and I want to delete this element, I have to\u00a0\nshrink everything from the righ"
+    },
+    "a0cab16e-c86e-41d9-b0ee-942559c1f3d0": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "t to the left\u00a0\u00a0 or if I want to insert an element here, I\u00a0\nhave to push everything to the right. \n\u00a0 So, insertion and deletion in the middle of\u00a0\nan array will be expensive, because I have\u00a0\u00a0 to push everything one position to the right or\u00a0\npull everything b"
+    },
+    "275bea17-c776-4b0c-9d96-fec9c873f091": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ack one position to the left.\u00a0\u00a0 So, insert and delete actually require order n.\u00a0\nSo, effectively, lists in Python are more like\u00a0\u00a0 arrays in a normal programming language than\u00a0\nlists in a normal programming language. \n\u00a0 So, a list in a normal programming la"
+    },
+    "22817889-299a-438a-8818-6a6893e94eb1": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "nguage will\u00a0\nbehave like the flexible linked list structure\u00a0\u00a0 that we described earlier, where you have these\u00a0\nnodes, which point to the next node and so on,\u00a0\u00a0 and you start from the head, and you have\u00a0\nto navigate your way through the list,\u00a0\u00a0 which will b"
+    },
+    "40618d39-ec85-4991-90a7-f6a021c22f7b": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "e scattered in memory. That\u00a0\nis not how a Python list works. \n\u00a0 So, we have programming notation, which\u00a0\nmakes it look like we are dealing with\u00a0\u00a0 a flexible structure, as I said, because\u00a0\nyou can take a slice and shrink it and you\u00a0\u00a0 can take a slice and in"
+    },
+    "3c979edc-de82-42ab-b9a7-3221a303f201": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "crease it. You\u00a0\ncan insert in the middle of an array,\u00a0\u00a0 you can pull them apart, put them together. So,\u00a0\nit looks like these lists are actually flexible,\u00a0\u00a0 but the implementation because\u00a0\nmost often we use them like arrays,\u00a0\u00a0 the decision in Python is to k"
+    },
+    "0905f63d-812c-4b93-a517-5b01944170d9": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "eep these as\u00a0\narrays and the underlying implementation.  \n\u00a0 So, arrays are useful for\u00a0\nrepresenting matrices. So, we saw\u00a0\u00a0 that, in the maths course, that one of the reasons\u00a0\nyou will use a matrix, which represent a graph,\u00a0\u00a0 and we will come across these i"
+    },
+    "e0bcd848-2269-4625-9ceb-b9ef84077ae1": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "n this course\u00a0\nas well. So, matrices will play a role\u00a0\u00a0 in terms of dealing with graphs. So, if we\u00a0\ntake a two-dimensional matrix, for example,\u00a0\u00a0 which has a row with 01, and another row with 10,\u00a0\nthe typical way you will represent it using list\u00a0\u00a0 is to wr"
+    },
+    "4785d5a4-234d-4e11-910c-874140bd7137": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ite it out row by row. \nI mean, you could also do it column by column,\u00a0\u00a0 but the convention is row by row. So, you write\u00a0\nout the first row. So, this first row is this one,\u00a0\u00a0 and then, this second row is another\u00a0\nlist, and this whole thing is inside\u00a0\u00a0 a ne"
+    },
+    "2ecf6177-62cf-4b87-90ae-31229ed98ec5": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "sted list on the outside. So, it is a list\u00a0\nof lists. So, each inner list is a row, and the\u00a0\u00a0 outer list corresponds to the set of columns. This\u00a0\nis of course, a square matrix, but in general,\u00a0\u00a0 you could have a rectangular matrix,\u00a0\nso each row will have a"
+    },
+    "3ba67081-438a-4f53-8099-ab76e76ff514": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " fixed length,\u00a0\u00a0 and the number of columns will be fixed, but\u00a0\nthe two need not be equal to each other. \n\u00a0 So, what happens if we use lists in Python to\u00a0\nrepresent arrays? The problem comes because\u00a0\u00a0 lists in Python are mutable. So, let us look\u00a0\nat this ex"
+    },
+    "4bc6f897-086c-4ac1-a83a-2b91943d6e74": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ample. Supposing we want to create a\u00a0\u00a0 three-dimensional array, which looks like this.\u00a0\nIt has a 3x3 matrix, which has all zeros. So,\u00a0\u00a0 it might be tempting to first create because\u00a0\nit is easy to write down one row. \n\u00a0 So, we have one row, which is represe"
+    },
+    "9d55e346-e33d-4602-8949-df0d3374b9ae": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "nted\u00a0\nas we said by a list, so each row is a list.\u00a0\u00a0 So, we write down the first row and call it 000\u00a0\nand then we just write three copies of that,\u00a0\u00a0 and say that, this is the first row,\u00a0\nsecond row and third row, so now this is\u00a0\u00a0 an array, which has three "
+    },
+    "745e6cc7-45f7-4a5f-8fbe-6fc7e667e53a": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "rows and three columns.\u00a0\nSo, the length of each list inside is the number\u00a0\u00a0 of columns, and the total number of lists\u00a0\ninside is the number of rows in my array.\u00a0\u00a0 So, this is a zero matrix,\u00a0\nbut there is a problem. \n\u00a0 So, supposing I now take an element\u00a0\ni"
+    },
+    "8599fe29-22a5-44a3-a70e-ce96f993f9a4": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "n this matrix. So, I take this\u00a0\u00a0 matrix, and I take the center\u00a0\nelement. So, the center element,\u00a0\u00a0 so remember, the columns and rows are numbered\u00a0\nfrom 0, so This is 0 1 2 and this is 0 1 2.\u00a0\u00a0 So, I take this element, and I assign it to be\u00a0\n1. So, if I now"
+    },
+    "b4de364c-57c6-4dbb-80c7-93b31316392a": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " do this, so I just take 0 matrix\u00a0\u00a0 1, 1, that is the list number 1, and\u00a0\nentry number 1, and assign it to 1. \n\u00a0 And if I print the 0 matrix, now suddenly you find\u00a0\nthat the first row and the last row also have a 1.\u00a0\u00a0 And the reason for this is because of "
+    },
+    "a68f847d-79ea-4225-86d4-6a4d3a098987": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "this\u00a0\nway that lists are organized. So essentially,\u00a0\u00a0 we had this 0 list, which was pointing to\u00a0\n0,0,0. And then when I created 0 matrix,\u00a0\u00a0 and I said, I have three copies\u00a0\nof 0 list, essentially, I have\u00a0\u00a0 all these three entries pointing to the same\u00a0\u00a0 obj"
+    },
+    "63d0d38b-2ba8-4e7c-9b4e-2b7637f8fe59": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ect, the same item in memory. \nSo, now, if I take this through any one of those\u00a0\u00a0 copies, like if I go through here, and then I\u00a0\nreplace this by 1, then unfortunately, for the\u00a0\u00a0 other copies, also that copy is replaced by 1. So,\u00a0\nwhen we have this mutabili"
+    },
+    "b6671ce0-2a9d-43b8-902c-7f0d9dfd517c": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ty we unintentionally,\u00a0\u00a0 sometimes alias different parts of a\u00a0\nlist or different lists together. \n\u00a0 So, when we set up a matrix, we have to do this\u00a0\nquite often. We quite often have to initialize\u00a0\u00a0 a matrix to an mxn or an nxn matrix of 0. And\u00a0\nit is tempt"
+    },
+    "3641dde8-1f95-49d1-a137-54c688227591": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ing to do this, but it is dangerous,\u00a0\u00a0 you should not do this. So, what we can do,\u00a0\nfor instance, in Python, the most common way\u00a0\u00a0 to do this is to use this list comprehension.\nSo, what you say is that I first create a row of\u00a0\u00a0 two independent zeros, I mea"
+    },
+    "256fe720-3e17-49b0-9f4f-bafa4d898d16": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "n, three independent\u00a0\nzeros, and I do this three times. So, each of\u00a0\u00a0 these zeros is now a separate 0, and now this\u00a0\nactually creates an entry in which all the 9\u00a0\u00a0 entries are pointing to distinct elements\u00a0\nin memory. So, you need to use this kind\u00a0\u00a0 of cum"
+    },
+    "135eb872-d5f0-45bf-9b3d-03a3f18601e5": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "bersome notation, in order to work with\u00a0\nmatrices in this list language of Python. \n\u00a0 So, even though the underlying representation\u00a0\nis as an array, the notation for lists in\u00a0\u00a0 Python does not have a convenient way of actually\u00a0\nexpressing an array as we wo"
+    },
+    "751dd91f-363d-43da-8738-3320d8d56aa8": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "uld like. .we cannot\u00a0\u00a0 just say I want an mxn array, I want an mxn list,\u00a0\nI have to grow that list from an empty list. \n\u00a0 So, the solution is to use numpy, which is a\u00a0\nlibrary, which provides among other things,\u00a0\u00a0 arrays. So, this is the normal way you use"
+    },
+    "caa646bd-d1b5-451a-a75b-5c8185b25398": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " it.\u00a0\nYou import numpy, and just to save on space,\u00a0\u00a0 you normally import it with an alias, so you\u00a0\ncall it np. So here, for instance, is the same\u00a0\u00a0 code that we wrote before to get a 0 matrix, which\u00a0\nis 3x3 np numpy has a function called zeros. \n\u00a0 So, you "
+    },
+    "1a6315cc-d11c-45ce-a3a3-03260fbffc6a": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "pass the shape that you want, so the shape\u00a0\ntells you how many rows and how many columns.\u00a0\u00a0 So, this is a function, which returns to\u00a0\nyou a 3x3 matrix or a 3x3 array of zeros.\u00a0\u00a0 So, in general numpy allows you to create an\u00a0\narray from any kind of a sequenc"
+    },
+    "39410366-078c-4bde-81a8-9a1e941718b4": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "e. So, here for\u00a0\u00a0 instance, is the same thing, which, so this is,\u00a0\nthis should not be. So, you can say for example,\u00a0\u00a0 new array is equal to np dot array, and we can\u00a0\ntake our earlier thing. For example, remember 0,1\u00a0\u00a0 and 1, 0. \nSo, this was the,\u00a0\u00a0 we had "
+    },
+    "e7b6eac6-1d16-46db-b9a5-92bb7aa00614": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "said earlier that this represents that\u00a0\nmatrix 0,1,1,0. So this nested thing. So,\u00a0\u00a0 this sequence, if I pass it to this array\u00a0\nfunction in in numpy, this will actually\u00a0\u00a0 produce an array with exactly that structure.\u00a0\nSo, you can take any normal Python sequ"
+    },
+    "cfa44648-b3a1-452c-9d29-6fe0b2a80d35": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ence,\u00a0\u00a0 either a list or even a tuple, and pass it\u00a0\nto this array function, and it will create\u00a0\u00a0 one array, which is called the corresponding\u00a0\nentries, but in in numpy s array format. \n\u00a0 So, one of the ways that we can construct lists\u00a0\nfrom say, i to j is "
+    },
+    "676b92e8-de6b-4612-a72a-0c1c55149921": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "to use the range function,\u00a0\u00a0 so the same thing is there in numpy. And just to\u00a0\ndistinguish, it is called a range because it is an\u00a0\u00a0 array range function and not the range function.\u00a0\nSo, this will create an array, which has 0,1,2,\u00a0\u00a0 a single row with 0,1,2,"
+    },
+    "e2ddb2ec-48d3-4aa1-9f27-c4c81b558fae": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "3,4. So, then the\u00a0\nrepresentation is, I mean, the notation is\u00a0\u00a0 similar, but typically you have\u00a0\nthese extra a s hanging around to\u00a0\u00a0 tell you that this is a numpy function. \nSo, one advantage of working with numpy,\u00a0\u00a0 is that, you can actually do operations"
+    },
+    "77784eb5-0aed-4735-a9a8-ec34b4efab22": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " on arrays\u00a0\nas a whole without writing these nested loops. If\u00a0\u00a0 I have to operate on all elements of a nested\u00a0\nlist representation, then I have to write a for\u00a0\u00a0 loop which runs through all the rows and\u00a0\nall the columns and updates every ij. \n\u00a0 Now, if you "
+    },
+    "1b48e55e-231c-46be-974a-2ebedf40890a": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "want to say, take two matrices\u00a0\nor two arrays of the same size and add them\u00a0\u00a0 together element by element, then normally\u00a0\nin mathematics, you will write a plus B.\u00a0\u00a0 And now numpy supports that.\u00a0\nSo, for example, this will take\u00a0\u00a0 the array a and multiply ev"
+    },
+    "76a48f28-9a97-4c28-a60c-529f54c429b7": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ery element\u00a0\nin A by 3, so this is like a scalar\u00a0\u00a0 multiplication of every element in A. \nSo, this takes, for example, if I had\u00a0\u00a0 1,0,0,0,2,3,1,4,7 then this will take every entry\u00a0\nand make it 3 times. So, this will become 3,\u00a0\u00a0 this will remain 0, this wil"
+    },
+    "1a43d319-5fc0-4216-a31d-27e0b0e9917d": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "l become 0, this\u00a0\nwill become 6,9,3, 12,21. So, this will be\u00a0\u00a0 the new array which is three times A. And then\u00a0\nif I add b, then each element wise will become\u00a0\u00a0 added and I get a new array C out of this. \nSo, this kind of a block operation\u00a0\u00a0 can be expresse"
+    },
+    "6e0e58be-ebe0-4309-a310-8278b73d6f5d": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "d on arrays exactly as you would\u00a0\ndo with numerical variables. And you can also do\u00a0\u00a0 matrix operations. So, this is the numpy\u00a0\nfunction with just the matrix multiplication. So,\u00a0\u00a0 if you remember matrix multiplication, you take a\u00a0\nrow of A and a column of B"
+    },
+    "9403ae9b-6503-4dbd-9a35-13316c9fa1d7": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " and then point wise you\u00a0\u00a0 multiply them and add it up right. \nSo, you want A ik times B kj,\u00a0\u00a0 for all k. And this will give me one entry C\u00a0\nij. So, the ijth entry in the target is obtained\u00a0\u00a0 by taking the ith row the jth column and then\u00a0\nadding them up mu"
+    },
+    "677373d3-5d45-482f-812c-9dbeaee8b78b": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ltiplying and adding them. So,\u00a0\u00a0 these things are very useful because we use these\u00a0\nkind of operations a lot in many of data science\u00a0\u00a0 manipulations. \nSo, for this reason, numpy has become\u00a0\u00a0 a very popular library in Python. But for us in\u00a0\nthis course, our"
+    },
+    "a40cdb1f-f50f-4932-8b2d-1e4a34f2b47b": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " main interest in numpy is that\u00a0\u00a0 it allows us to write these kinds of definitions\u00a0\nto create NxN arrays quickly without going through\u00a0\u00a0 this cumbersome list comprehension notation and\u00a0\nworrying about whether we are in this mutable\u00a0\u00a0 aliased mode where som"
+    },
+    "9c2a052a-a73b-4150-b607-c79299d7018b": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ething will\u00a0\naccidentally disturb something else.\n\u00a0 So, to summarize, Python lists despite the name\u00a0\nof the data structure, Python lists are not\u00a0\u00a0 lists in the conventional sense that computing\u00a0\ncalls lists. They are not these flexible linked\u00a0\u00a0 lists with "
+    },
+    "c761b574-c56f-4be1-9dfc-1670d3fbecf8": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "nodes pointing to each other, rather,\u00a0\nthey are implemented as arrays with a pointer to\u00a0\u00a0 the end of the list within the array. \nSo, the list starts at the beginning of the\u00a0\u00a0 array and it gradually grows. And when it\u00a0\novershoots, the amount of space alloca"
+    },
+    "f031662a-1de6-49f8-be81-ba8b334c1f90": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ted,\u00a0\u00a0 then the array that is used for the list will be\u00a0\ndoubled. So, Python will automatically allocate\u00a0\u00a0 a new array of double the size, move everything\u00a0\nthere and let you continue. So, in this process,\u00a0\u00a0 append is cheap, because I am just adding\u00a0\nand mo"
+    },
+    "b45ec1fd-5d10-40bb-90db-ec6a7b4375fc": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "ving appointed to the right. \n\u00a0 And even though I periodically overshoot and have\u00a0\nto go across we said this amortized cost remains\u00a0\u00a0 order 1. On the other hand, if I have\u00a0\nto insert something as we will see,\u00a0\u00a0 if I have to insert something, then I have to"
+    },
+    "2adc810b-d6fd-405e-b7ef-bd2dcce6e866": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " push\u00a0\neverything. So inserting is actually an expensive\u00a0\u00a0 operation, because it takes order n time. Then we\u00a0\nsaid that arrays or matrices as we will use are\u00a0\u00a0 actually can be represented as multi-dimensional\u00a0\nlists, but then we have to be careful about\u00a0\u00a0 "
+    },
+    "590cecd5-5e1e-4abe-84b4-2d0bce186f67": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": "this mutability, aliasing and all that. \nSo, for that reason, numpy arrays are actually\u00a0\u00a0 easier to use. So, though Python\u00a0\nlists are implemented as arrays,\u00a0\u00a0 the notation of lists makes it cumbersome to\u00a0\nuse them as arrays sometimes. So, therefore,\u00a0\u00a0 many"
+    },
+    "91786270-39f3-451a-a8fa-3aa47f69abbc": {
+        "content_id": 28,
+        "course_name": "PDSA",
+        "title": "Implementation of Lists in Python",
+        "week": 3,
+        "chunk": " times when we need matrices or arrays,\u00a0\nespecially in the context of this adjacency matrix\u00a0\u00a0 of a graph, we will actually use a numpy matrix\u00a0\nrather than use the Python nested list."
+    }
+}

@@ -1,0 +1,163 @@
+{
+    "a666855f-b6e7-4c98-92a2-77e7f6e320fe": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "We had created in the lecture a class which\nwould represent the time that a piece of code takes, so a timer class. So, here is a more elaborate version of the\nclass. So, let us go through the code just to understand\nwhat this elaborate version is doing. So"
+    },
+    "9be4a44c-8824-4d17-a87e-9f281ae9210d": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": ", first of all if you remember code can\nthrow exceptions. So, what we are going to do is make this kind\nof this timer sort of little bit proof again except, misuse by saying that you must stop\nit only after you start it and so on. So, we will have a new er"
+    },
+    "46124593-e238-496a-b7a9-418dea49d3b3": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "ror that we are creating\nand this is just a way of creating a new error. So, we say that timer error is a new class\nwhich is of type exception, it inherits from exception. So, just, so these quotes inside these double,\ntriple quotes, these are what are cal"
+    },
+    "f462db8e-2e87-490c-98bb-7b4b10fe8c05": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "led documentation string. So, they are the things that you get when\nyou hover over a function. So, let me see if we can see that. Let me just execute this and then \nif I go and for instance if I sometimes if I hover over something, I might see it. So, it i"
+    },
+    "fc79811c-d0d3-44fe-92b2-dd426bba3f15": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "s loading something, but anyway we\nwill come back to that, but anyway. So, the main thing is now we have this timer\nerror exception. So, when we start the timer instead of setting\nit to 0, we will put the start time and elapsed time to none to say that it "
+    },
+    "b1b1536c-a39a-48b9-ab94-76800679733e": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "is not set. So, now when you start the timer, it must\nbe a timer which is not running. So, that is the difference now. We can check that this timer is not running\nby saying is the start none or not, if the start time is not none, it means the time\nis alrea"
+    },
+    "064f36ab-f78c-49c4-8c95-4bc760299f2f": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "dy running, so we can raise an error saying timer is running, please use stop. So, do not restart the timer because it is\nalready running, this is a mistake. Otherwise, if there is no error, if you do\nnot raise. This word raise is basically to create an\nex"
+    },
+    "f8cc38cd-541b-44dd-82ec-eac7716184ef": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "ception. So, if you do not raise an exception, you\ndo what we had seen in the slide which is you set the start time to the current value\nof performance counter. Remember the current value performance counter\nhas no independent meaning; it is just used as a"
+    },
+    "f360bc7e-71a1-48f5-a81a-543d1501f355": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": " reference to subtract later. Similarly, when you stop the timer you check\nwhether the timer is running. So, if the timer is start time is none, it\nmeans the timer is not running and you give an error saying timer is not running, please\nuse start. Otherwis"
+    },
+    "c0155261-49d1-479e-b252-24183aa7b462": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "e, you create, you set the elapsed\ntime to the current value of the performance counter minus the start time and you reset\nthe start time to none. So, now the timer can be run again because\nyou have stopped it, but you have saved the time elapsed time. So,"
+    },
+    "4b0a4029-7de1-47a3-8d9f-863b7f08faa2": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": " you can look up the elapses time, but\nthe timer is not running, and it is ready to run again. And finally, elapsed as we said, will check\nthat actually that the elapses time is something meaningful, it is not the first time when\nyou never set it. So, if t"
+    },
+    "93c7d5f4-408c-4bc4-aea3-8ddd2fd13e0e": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "he elapses time is not none, it will\ngive you the elapses time, otherwise it will throw an error. And finally, we have if you just want to dump\nthe value of the timer, then you get the elapsed time. So, that is the string function. So, now this is the piec"
+    },
+    "c1b3e6aa-a1b5-47a6-9d14-e5ac8dec7f78": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "e of code that I wanted\nto show you. So, this is just a trivial piece of code. It is just a loop, which is running this n\nequal to n plus i for i ranging from 1 to some large numbers. So, what is that large number, I am doing\nit for 10 to the power j, wher"
+    },
+    "458c142b-78f6-4bf8-8e5b-dd13a22cbf7b": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "e j ranges from 4 to 9. So, I am doing it for 10 to the power 4, which\nis 1 with four zeros. So, it is 10,000 100,000 that is 10 to the\npower 5, 1 lakh, 10 to the power 6, and 10 to the power 7, and then 10 to the power 8\nbecause 4 to 9 will be 4 5 6 7 8. "
+    },
+    "49970b77-0453-48a2-9365-ceb413250980": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "So, it is running it for each of these values. And what are we doing before we start the\nloop, we are running, starting the timer and when we finish the loop, we are stopping the\ntimer. So, this is just a simple loop to tell us\nhow long Python takes to exe"
+    },
+    "723c7f66-42a9-4d4b-8676-18ecbd8dc75a": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "cute something as trivial as n equal to n plus i that many\ntimes. So, if you run this, and you can see that\nthe first time, the time when it takes 10,000 it runs in 0.01 it is probably difficult to\nsee on the screen but I will share this code with you and "
+    },
+    "8b13dbd1-99d4-4fbc-a1ad-5d5f1f38c75a": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "you can run it, you can trust\nme to say when j equal to four the output of the timer is 0.001 that is one thousandth\nof a second. When this is 10 to the power 5, it is 0.01\nis one hundredth of a second, when it is 10 to the power 6 it is 0.13, it is about "
+    },
+    "653a387b-21ca-4676-9396-8124588e492f": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "0.1\nseconds, when it is n to the power 7 and this is what I promised you in the lecture that\n10 to the power 7 operations per second it takes 1.3 seconds and 10 to the power 8 it\ntakes 13 seconds so you can see that there is an clear 10 factors slow down r"
+    },
+    "83f93b66-2184-46f6-bcf6-a9549634a83c": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "ather when\nI increase the number of operations by a factor of 10. So, when I go from 1000 to 10,000 from 10,000\nto 1 lakh, from one lakh to 10 lakhs, 10 lakhs to 1 crore each time, this loop takes 10 times\nas much. And it is useful to calibrate now our exp"
+    },
+    "f12629b9-cf6e-4b83-9084-6e0d17a86b56": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "ectations\nwhen we run code, we will see later on that when we are trying to, for instance, if you\nare trying to sort a list or you are trying to do some other complicated operation on\na large structure, then you might actually end up taking some 10 to the "
+    },
+    "770d879b-19eb-488f-b853-4b6115ae3e58": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "power some number\nof steps as we will see. And it will be useful to estimate how long\nit is going to take without actually running the code, we have a kind of a clear idea that\nif it is going to be, if I have to traverse a list, for example, whose size is "
+    },
+    "6e4c4302-d26d-4190-ae1e-62a135a1d4b2": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": "10 to the\npower 7 is going to take me 1 second just to go from this end to that end because power\n8 is going to be 10 seconds just to go from this end to that end without even doing anything. So, we will come back to this later on. But it is useful to have"
+    },
+    "885e6288-cacf-4b7b-916b-6f2e6f52951a": {
+        "content_id": 10,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 03",
+        "week": 1,
+        "chunk": " this kind of timer\nto give us an idea about how long things actually take when they run because we can do a theoretical\ncalculation but there is nothing like seeing it in kind of black and white to know exactly\nhow long your code is taking."
+    }
+}

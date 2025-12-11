@@ -1,0 +1,1150 @@
+{
+    "2d957995-e6f1-4631-a05e-6e0371451eb6": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "Our first two examples of greedy algorithms were\u00a0\nin the realm of scheduling. Now, first of all,\u00a0\u00a0 you should not assume that all scheduling\u00a0\nalgorithms have greedy solutions. There are\u00a0\u00a0 other types of scheduling algorithms which do not\u00a0\nhave greedy solut"
+    },
+    "c23647c3-06e5-4d96-b0da-602400888f6c": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ions. So, it very much depends on\u00a0\u00a0 what criterion you are trying to optimize.\u00a0\nSo, the kinds of criteria we used admitted\u00a0\u00a0 greedy algorithms but others may not. But now, we\u00a0\nwill change focus and look at a different domain.\u00a0\u00a0 And this domain is that of c"
+    },
+    "cfa8186a-9eb5-4a5a-b549-19769133fab2": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ommunication. So, we\u00a0\nare going to look at efficient communication. \n\u00a0 So, when we communicate, when we send a WhatsApp\u00a0\nor a message or an email, we are communicating\u00a0\u00a0 in some language. So, it could be English,\u00a0\nor Hindi, or Tamil or any other language.\u00a0"
+    },
+    "81f4e308-4815-4155-9c2c-abf72748b037": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "\u00a0 And each language has its own alphabet, its\u00a0\nown set of symbols that need to be send. So,\u00a0\u00a0 when I read an English message, I read\u00a0\ncertain letters. If I read a Hindi message,\u00a0\u00a0 I will be reading Devanagari\u00a0\nas different character set. \n\u00a0 But as we all k"
+    },
+    "b7d434d7-9203-4e79-b1c3-0c34cfa1d766": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "now this whole communication\u00a0\nhappens digitally. And in digital communication,\u00a0\u00a0 the only thing that gets transmitted from the\u00a0\nsender to the receiver is a sequence of 0's\u00a0\u00a0 and 1's. So, we have these symbols which\u00a0\nare meaningful to us ABCD ka kha ga gha\u00a0"
+    },
+    "b26fb760-78a0-4615-87df-0481c5b02f84": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "\u00a0 and all that. But they are actually being\u00a0\ntransmitted 0's and 1's. So, therefore,\u00a0\u00a0 there must be some encoding, there must be some\u00a0\nway of taking the letters or symbols that we\u00a0\u00a0 need in our natural language and writing it as a\u00a0\nsequence of 0's and 1's"
+    },
+    "8dbc3880-3d49-4337-b175-97030ae0bb82": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " So, that at the other end,\u00a0\u00a0 we can transform it backwards from the 0\u00a0\n1 sequence to the letters and read it. \n\u00a0 So, for instance, let us take a very simple case\u00a0\nsupposing we just take the lowercase letters,\u00a0\u00a0 A to Z in English in the Roman alphabet whic"
+    },
+    "de84d4fd-26c3-4b26-bb93-f3c839ebb2f2": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "h\u00a0\nis what we use for English. So, as we all know,\u00a0\u00a0 there are 26 letters in this alphabet. Now, if we\u00a0\nwant to take 26 different characters and encode\u00a0\u00a0 them using binary strings, we cannot make do\u00a0\nwith 4 bits or 4 binary digits, because with\u00a0\u00a0 4 binary "
+    },
+    "56e0c4ed-7550-42fe-94dd-c96970268747": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "digits, we can only create 2 to the 4 or\u00a0\n16 combinations. So, 2 to the 4 is too small. \n\u00a0 So, the next power of 2 if I go to 5 bits is 2 to\u00a0\nthe 5 is 32. So, with 32 combinations I can use 26\u00a0\u00a0 of them for my letters and I have 6 spare. But so,\u00a0\nI need if"
+    },
+    "5f860def-4730-4af1-b04e-f8a67bc399de": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " I use this encoding I need to use 5 bits\u00a0\u00a0 for each letter and each letter will be denoted\u00a0\nobviously by a different sequence of 5 bits.\u00a0\u00a0 So, the question about efficient communication\u00a0\nis, is there some way to do better than this\u00a0\u00a0 obvious approach. \nSo"
+    },
+    "cc136e8d-4653-4a1a-97a9-ebac04b490c6": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": ", the obvious approach\u00a0\u00a0 says take the size of your symbol set or alphabet\u00a0\nsee which power of 2 is the smallest power which\u00a0\u00a0 exceeds that and use as many bits. So, now, I will\u00a0\nget a message which I will break up into sequences\u00a0\u00a0 of 5 bits each and each "
+    },
+    "05ffb641-9252-4559-9f10-f2825d4bfa6d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "five bits will be a\u00a0\nvalid letter and I will be able to recover it.\u00a0\u00a0 So, the intuition is that not all letters\u00a0\u00a0 are used as frequently as each other. So,\u00a0\nsome letters happen more frequently. \n\u00a0 So, if you play a game like scrabble for instance\u00a0\nyou will"
+    },
+    "9554e9ab-440d-4ce0-94ff-cc20b5513ae4": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " know, that some letters in the scrabble\u00a0\u00a0 board have lower points. And they also, occur\u00a0\nin the set with more frequency. So, there are\u00a0\u00a0 letters like E which for instance there are\u00a0\nmore E's because you needed to make more words.\u00a0\u00a0 Whereas letters like Q "
+    },
+    "2f561e8f-5edc-438d-8d2d-d51359ecf04c": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "and Z which are rare have\u00a0\nhigher points but you also, get only one of them\u00a0\u00a0 this side. So, there is a natural frequency\u00a0\nwith each letter depending on the language. \n\u00a0 So, English has a different frequency,\u00a0\nGerman has a different frequency. So, even\u00a0\u00a0 l"
+    },
+    "98b8dd38-5ba9-43d3-b500-fedee001c235": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "anguages which use the same underlying set\u00a0\nof letters may not have the same frequency\u00a0\u00a0 because of the vocabulary. And of course, in\u00a0\ndevanagari if you are using Hindi or Marathi,\u00a0\u00a0 you might see a different frequency of the\u00a0\nletters that are there. So, t"
+    },
+    "444b904c-b3ef-495e-8345-022f1938de8e": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "he idea for\u00a0\u00a0 optimization is take those letters which occur\u00a0\nvery frequently and try to use shorter codes. \n\u00a0 And those letters which occurred more rarely\u00a0\nuse longer codes because you will use them\u00a0\u00a0 only once in a while. So, it is okay to\u00a0\nspend a few m"
+    },
+    "ce59eb65-2ebc-4fd8-8de0-d18036c27508": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ore bits transmitting them.\u00a0\u00a0 So, this takes us from what we call a fixed\u00a0\nlength coding. So, this is a fixed length coding.\u00a0\u00a0 So, every letter was encoded using 5 bits.\u00a0\nNow, we go to a variable length coding.\u00a0\u00a0 And one of the earliest and most well-known"
+    },
+    "0a29baaa-3bf3-4986-8016-4518baf84120": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "\u00a0\nvariable length encoding is the one that\u00a0\u00a0 was used originally in telegrams. \nIt is called Morse code. So, in Morse code\u00a0\u00a0 everything is encoded as dots and dashes. So, this\u00a0\nwas a physical device. So, you if you pressed it\u00a0\u00a0 lightly you get a dot if you"
+    },
+    "4245ec79-bf33-4762-bb60-b1bfc8d4ac55": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " press it for a\u00a0\nlonger time, you get a dash. So, it is like,\u00a0\u00a0 analogous to sending 0's and 1's you have\u00a0\n2 symbols dot and dash. So, if you look at\u00a0\u00a0 the Morse code you can look it up on Wikipedia\u00a0\nor somewhere you will see that the encoding of\u00a0\u00a0 E is a "
+    },
+    "24ccc4df-c61c-4c79-87c6-a8ac66a261b5": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "dot. The encoding of t is a dash. \nSo, in our translation here e is a 0 and t is\u00a0\u00a0 a 1 because for us 0 is a dot and 1 is a dash and\u00a0\na for instance is a dot followed by a dash. So,\u00a0\u00a0 a would be 0 1. So, Now, let us look at one\u00a0\ndifficulty that we have wit"
+    },
+    "b34b9a36-c1ef-4eaf-9fcd-1847a92ecd2b": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "h this variable\u00a0\u00a0 length coding. So, supposing at the other end\u00a0\nI receive the sequence 0101. Now, my next job\u00a0\u00a0 is to decode what the sequence are so, I have\u00a0\nto transform it back into these letters. \n\u00a0 So, if I look at 0101 I can see that a is\u00a0\n01. So, I"
+    },
+    "05d9aa57-66e8-4bf6-a732-1b4cb4d742c8": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " can decode it as a followed by a.\u00a0\u00a0 But notice that this is not the only thing\u00a0\nbecause I could also break it up as a followed\u00a0\u00a0 by e followed by t for example. So, I can get aet\u00a0\nor I can say that this these 2 are both e's and\u00a0\u00a0 these are t's or I can sa"
+    },
+    "6f52d692-0106-429e-aa8c-b416baeafdfa": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "y that this is a and\u00a0\nthis is an e. And so, there are all kinds of\u00a0\u00a0 interpretations of this because it is not very\u00a0\nclear where the boundaries of the letters are\u00a0\u00a0 when we are doing a fixed length encoding, we\u00a0\nknow that every 5 bits constitutes a letter."
+    },
+    "b0e57f09-6a40-4c7a-8969-12db7d3f7260": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " \n\u00a0 So, I can just break it up into blocks of\u00a0\nthe same size and decode each block. Now,\u00a0\u00a0 the blocks are of different lengths I need\u00a0\nto know where the block boundaries are.\u00a0\u00a0 So, what does Morse code do? Well, Morse code\u00a0\nactually uses a subtle thing. So"
+    },
+    "7aee5ca6-e2b0-44e6-80eb-8bd2499d9765": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": ", it there is\u00a0\u00a0 a kind of a gap. So, Morse operator who is\u00a0\nsending Morse code will actually press a\u00a0\u00a0 dot for an E and then wait press a dash for a t\u00a0\nand then wait and then quickly press a dot and\u00a0\u00a0 a dash and then wait. So, there is a pause. \nSo, implic"
+    },
+    "d7bb8ffd-2bb2-4976-a7f5-d18c9374a617": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "itly actually there is a third letter\u00a0\u00a0 which is giving you these boundaries. So,\u00a0\nit is not a 2-letter encoding but a 3-letter\u00a0\u00a0 encoding. Because there is a pause, which you\u00a0\ncan interpret as an extra letter telling you\u00a0\u00a0 where the boundaries between the"
+    },
+    "22ed248b-dc77-43f2-97bb-d760dc85018b": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " encodings of 0's\u00a0\nand 1's are. So, we are working with a 2-letter\u00a0\u00a0 encoding. So, that will not work for us. \nSo, what we really want to make sure is that we\u00a0\u00a0 have this unambiguous way of taking an encoded\u00a0\nsequence of 0's and 1's and recovering what we\u00a0"
+    },
+    "43eeb536-75fd-48cc-beb8-05a9a474a0b8": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "\u00a0 started with. So, for this what we want to make\u00a0\nsure is that when we are processing a sequence\u00a0\u00a0 at any point, we are not unsure. So, here\u00a0\nthis is the problem. If I read this 0,\u00a0\u00a0 at this point it could be an e. Or it could be\u00a0\nthat I have to read the "
+    },
+    "910de6c6-f4e3-4e06-bf72-86be41f1379d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "1 and make it an a. \n\u00a0 So, the problem is that when I have finished\u00a0\nreading the 0, I am not sure whether the letter\u00a0\u00a0 is over is it an e or the letter is not over.\u00a0\nSo, we do not want this kind of a situation where\u00a0\u00a0 the code for 1 letter is included as t"
+    },
+    "b865592c-c6d1-4575-a485-fd2ce9007bef": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "he\u00a0\nbeginning of the code for another letter. So,\u00a0\u00a0 it is called a prefix. So, what we\u00a0\nwant really is a code an encoding\u00a0\u00a0 where for any x if I take the encoding of x, it\u00a0\nis not the prefix of encoding of any other y. \n\u00a0 So, when I see x as my encoded let"
+    },
+    "b8023963-911d-4986-8235-f5f9c8fd9fc3": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ter, I am\u00a0\nguaranteed that this is correct I can stop here\u00a0\u00a0 and then extract those letters and not proceed.\u00a0\nSo, in our case as we said the encoding of e\u00a0\u00a0 in Morse code is 0 and the encoding of a is 01.\u00a0\nSo, if I look at a prefix of this, I get the\u00a0\u00a0 enc"
+    },
+    "e67cdf05-1f32-49d7-8ef7-097dba8f0b50": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "oding of e. So, this is not a prefix code. A\u00a0\nprefix code is a code in which I never have this\u00a0\u00a0 kind of overlap, I do not have any letter which is\u00a0\na prefix of another letter after the encoding. \n\u00a0 So, here is an example of a prefix code. So,\u00a0\nif I look a"
+    },
+    "f559e1f4-7a90-491b-840b-cb084b860968": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "t this, for instance there is so,\u00a0\u00a0 0 could be 01, or 000, or 001. So, that means that\u00a0\nthere is no letter which I can encode with just 0.\u00a0\u00a0 Because if I read just 0 and if I can stop then\u00a0\nI do not know whether I should wait or not.\u00a0\u00a0 So, you can see that"
+    },
+    "3c71d467-c2a9-4dde-9cae-1279e5044323": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " 11 is not a prefix of\u00a0\nanything. 01 is not a prefix of anything.\u00a0\u00a0 If I have 00, then I cannot stop because I must go\u00a0\nto 001 or 000. So, this is an example of a prefix\u00a0\u00a0 code. And when you have a prefix code. \nNow, if I give you a sequence of letters\u00a0\u00a0 l"
+    },
+    "16f84bd3-2c35-4789-80e4-9c8471d211e8": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ike this it is quite easy. Because I can\u00a0\nstart with this, I can say case 0 does not\u00a0\u00a0 correspond to anything. 00 does not correspond\u00a0\nto anything. 001 does correspond to something so,\u00a0\u00a0 this must be a boundary. So, I can do this\u00a0\nand say that the first le"
+    },
+    "d7c6a968-37b9-41aa-878f-b9247c5f7a01": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "tter must be a C.\u00a0\u00a0 Now, again, I can start from here and do\u00a0\nthe same thing. And I will find that at 000.\u00a0\u00a0 That is the first time I hit a boundary where I\u00a0\nhave a valid encoding so, that must be an e. \n\u00a0 And then again, I have a 001 which is a C and\u00a0\nthe"
+    },
+    "bffb36ae-3379-45cf-872a-1d7d718b7580": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "n I have a 11 which is an a and a 01 which\u00a0\u00a0 is a b. So, if I have a prefix code then every\u00a0\ntime, I see the encoding of a complete letter I\u00a0\u00a0 can break it off and say okay now I have seen this\u00a0\nletter and I can read off the thing unambiguously\u00a0\u00a0 there is "
+    },
+    "dfc70448-8f23-41e1-b508-1808580c9c48": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "no 2 ways of decoding this code. So,\u00a0\nthat is the kind of code that we want. \n\u00a0 Now, our goal, if you\u00a0\nremember was to find encodings\u00a0\u00a0 which reduced the total number of bits that we\u00a0\nsent we said that we have a frequent if we have\u00a0\u00a0 this fixed length enco"
+    },
+    "bb541a48-3752-4260-a66a-d05669991b66": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ding, we are going to send\u00a0\n5 bits per letter. But if we have more frequent\u00a0\u00a0 and less frequent letters it may be a good idea\u00a0\nto vary the length so, that the more frequent\u00a0\u00a0 letters have shorter encodings and the less\u00a0\nfrequent letters have longer encodin"
+    },
+    "2f094f33-7728-40b3-968f-2fb05444a6a9": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "g. So, that\u00a0\u00a0 was the whole point of going to prefix codes. \nSo, what we are really interested in this building\u00a0\u00a0 some kind of an optimal prefix code, a prefix\u00a0\ncode, which will use as few lead bits as possible\u00a0\u00a0 when transmitting a message. So, the first "
+    },
+    "b504646b-4569-4be6-ad01-d598a0327567": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "step\u00a0\nis to measure the frequency. So, we need to know\u00a0\u00a0 each symbol that we are going to encode how\u00a0\nfrequent it is. So, we have to measure the\u00a0\u00a0 frequency of every letter in our alphabet.\u00a0\nSo, how do you measure the frequency? \n\u00a0 Well, the standard way t"
+    },
+    "8390b67e-8303-4a8e-b024-f81200543ede": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "o measure the frequency\u00a0\nis to just take a large set of documents. So,\u00a0\u00a0 you could go to a library of course\u00a0\nnowadays, it is easier because if the\u00a0\u00a0 things are digitized you do not have to count\u00a0\nby hand you can use your program to count it.\u00a0\u00a0 But you wil"
+    },
+    "62240971-bd0e-4264-b468-2f08abf1b64f": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "l count all the letters, you will\u00a0\nsee how many letters there are across all\u00a0\u00a0 these books. Then you will see of this how many\u00a0\nare a's how many are b's how many are c's. \n\u00a0 So, all the letters which are of interest to you,\u00a0\nyou will count them and establi"
+    },
+    "52f22d64-9711-48f6-9a05-554bb56212a4": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "sh their frequency\u00a0\u00a0 as a fraction the number of times you see an a\u00a0\ndivided by the total number of letters a to z,\u00a0\u00a0 now (())(10:53) and so on. So, this is\u00a0\na fraction so, this we will call f of x.\u00a0\u00a0 So, if I have an alphabet with n letters in it\u00a0\nx1 to x"
+    },
+    "7a1f29e3-fd71-4d96-9ba9-5e017535ffd5": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "n. And then each of these letters will\u00a0\u00a0 have a frequency. And because it is a fraction of\u00a0\nthe total number of letters that appears across\u00a0\u00a0 all the documents that I have counted\u00a0\nthese fractions will add up to 1. \n\u00a0 So, if you remember in probability thi"
+    },
+    "ff731e29-de25-4ce6-9943-ead4a887d85b": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "s is how\u00a0\nit works you have a probability assigned to each\u00a0\u00a0 event and the total sum of the probabilities\u00a0\nis 1 and each probability is between 0 and 1.\u00a0\u00a0 So, you can think of f of x1 as the\u00a0\nprobability that a given letter is x1\u00a0\u00a0 because this is the freq"
+    },
+    "27cf3759-1cec-4fb9-860e-055295694af5": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "uency with which x1 turns\u00a0\nup. So, if I am just generating letters at random\u00a0\u00a0 then x1 will turn up with probability f of x1. \n\u00a0 Now, this probability is of course estimated from\u00a0\nthe documents that I read if I read a different\u00a0\u00a0 set of documents might cha"
+    },
+    "a2fd51fa-0b83-4737-b53c-db9a66d1c0ec": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "nge. And as we already\u00a0\nsaid it might vary from language to language. So,\u00a0\u00a0 if I read a set of English documents the frequency\u00a0\nof the letters may be different from a set of\u00a0\u00a0 French documents or a set of documents in some\u00a0\nother language which uses the sa"
+    },
+    "ad49991d-3922-4df9-8422-132bd53e2ccd": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "me alphabet.\u00a0\u00a0 So, if we look at our message. So, now\u00a0\nthere is an unfortunate thing here. \n\u00a0 So, let us do this n is not the same as that\u00a0\nand I will fix it later on. So, let us now,\u00a0\u00a0 use small n for the total length of the\u00a0\nmessage. So, we are sending a"
+    },
+    "615b5156-987b-49fe-bbe2-bf97a0ed842d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " message.\u00a0\u00a0 So, we are sending a message in English or Hindi\u00a0\nor Tamil and that message has so many characters\u00a0\u00a0 in the source language, in the language we\u00a0\nare trying to send. Now, each letter in our\u00a0\u00a0 source language appears these many\u00a0\ntimes the its fre"
+    },
+    "60471641-8dc6-4291-b68b-2d070c359ad1": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "quency times n. \n\u00a0 So, if for example, letter x1 has a frequency\u00a0\nof 0.1 it means that one tenth of every message\u00a0\u00a0 will have x1. So, if I have 100 letters in\u00a0\nmy message then 10 of them will be x1. So,\u00a0\u00a0 that is what we are saying we take the frequency\u00a0\ni"
+    },
+    "1ac77ca0-9359-4683-959a-489aa698cf14": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "t is a fraction multiplied by the length of the\u00a0\u00a0 message you will get the total number of\u00a0\ntimes that particular letter occurs. \n\u00a0 So, we now are trying to construct\u00a0\nthis encoding. So, we are\u00a0\u00a0 wondering about how many bits I eventually\u00a0\nuse to send my m"
+    },
+    "f47a24c0-adca-4583-9f7a-a1be74e31037": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "essage M. So, each letter\u00a0\u00a0 in our encoding has a representation in\u00a0\n01 which we write capital E of x. So, x\u00a0\u00a0 like a or b, or c is denoted by 01001 and so,\u00a0\non that is e of x. So, each letter is blown up\u00a0\u00a0 by the length of its encoding, So, every time\u00a0\nI "
+    },
+    "1e56ca33-d89d-4faf-b7a4-8e7aa4b4d2ae": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "see an a we will replace it by the string\u00a0\u00a0 representing a in binary. \nSo, each symbol single symbol\u00a0\u00a0 a will be blown up to 3 symbols or 4\u00a0\nsymbols or whatever it is that I have.\u00a0\u00a0 So, if I look at the total length of my message\u00a0\nnow it is going to be the"
+    },
+    "3744d9d5-26e8-4284-98c6-4f908facc6b3": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " number of letters times\u00a0\u00a0 the frequency of the letter. So, this\u00a0\ntogether tells us the number of times\u00a0\u00a0 x occurs times the length of. So, if I\u00a0\nlook at a n times the frequency of a will\u00a0\u00a0 tell me how many a's there are multiply\u00a0\nby the number of bits I u"
+    },
+    "f5d90cbd-c655-460e-b20f-55505a070a99": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "sed to a. \n\u00a0 Then b times in frequency of b show me how many\u00a0\nb's there are then the times the length of the\u00a0\u00a0 b and then n times the frequency of c and so on\u00a0\nand that is added up. So, this is my total message\u00a0\u00a0 length. And if I take the total message len"
+    },
+    "80437421-771e-4f9d-bb87-48718436e08a": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "gth\u00a0\nthis gives me the overall number of bits. So,\u00a0\u00a0 I use so many bits overall. And I have\u00a0\nby assumption small n letters encoded so,\u00a0\u00a0 if I divide by n I will get the average\u00a0\nrate. So, the average is just this part.\n\u00a0 The summation of F x E x the other "
+    },
+    "e106d2c7-606a-40c2-a938-cc07d4639292": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ways that\u00a0\nis why you can think of it as a probability.\u00a0\u00a0 If you remember probability this is the\u00a0\nexpectation. The expectation is the probability\u00a0\u00a0 of each event times the event itself. So, this is\u00a0\nthe probability times the length of that thing.\u00a0\u00a0 So, th"
+    },
+    "891fef06-d7f5-4ece-80b3-4048067e565b": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "is is what we really want to think\u00a0\nabout how many bits on an average are\u00a0\u00a0 we using per letter in our encoding. \nSo, let us look at a concrete example to\u00a0\u00a0 understand this. So, let us take this earlier\u00a0\nencoding that we had, so we had come up with a\u00a0\u00a0 kin"
+    },
+    "af4997fc-b5d2-45f9-bde5-4f2e112b4351": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "d of just to show what a code look like we had\u00a0\ncome up with this encoding. So, this is the same\u00a0\u00a0 encoding. But now we also have to associate\u00a0\nsome frequencies. So, I am just putting some\u00a0\u00a0 random frequencies add up to 1. So, you\u00a0\ncan just check that this"
+    },
+    "62c9cb31-edaf-4d8b-bcef-b1ce204f3306": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " adds up to 1. \n\u00a0 So, if I take this, then I need to assign to\u00a0\neach of these I mean so, the length is clear. So,\u00a0\u00a0 the length is 2 to 3 2 3. So, if I want to compute\u00a0\nnow how many bits, I will take for a message\u00a0\u00a0 what we said is that we will have to basi"
+    },
+    "894eacf6-25b3-43a0-b80e-05cb5037e596": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "cally\u00a0\ngo back and just so it does not matter how long\u00a0\u00a0 the message is because I can divide by n.\u00a0\nSo, I can get to this I just want to take\u00a0\u00a0 the average by taking the number of the\u00a0\nfrequency of each letter times its length. \n\u00a0 So, if I take this, I hav"
+    },
+    "5e674be3-e91d-47df-bf4b-fc03f873b622": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "e 0.32 times 2 from\u00a0\nthis from this part, then I have 0.25 times 2,\u00a0\u00a0 then I have 0.2 times 3 0.18 times 2, and 0.05\u00a0\ntimes 3. And if I add this up this comes to 2.25.\u00a0\u00a0 So, what this is saying is that if I use this\u00a0\nparticular encoding for this an assumin"
+    },
+    "738bead9-87f4-43c4-9f1b-7b3a63a4c700": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "g. So,\u00a0\u00a0 it is always assuming the frequencies if I assume\u00a0\nthis is the frequency and this is the encoding\u00a0\u00a0 then I am going to be using on an\u00a0\naverage 2.25 bits per letter. \n\u00a0 And remember that if I wanted a fixed length\u00a0\nencoding, I have to use as many b"
+    },
+    "1d0c2c09-6e62-4d19-ab53-f921fd3ee8d8": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "its as I need to\u00a0\u00a0 cross 5. So, I cannot use just 2 bits because if I\u00a0\nhave only 2 bits, I can only encode 4 letters so,\u00a0\u00a0 I am forced to use 3 bits. So, in a fixed length\u00a0\nencoding I would be using 3 bits per letter.\u00a0\u00a0 Here, I am using 2.25 bits per lette"
+    },
+    "3f5a2d19-1078-42e7-9c54-b5a56d695b7d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "r.\u00a0\nSo, by going to this variable and\u00a0\u00a0 length encoding on the length of the\u00a0\nmessage I am reducing it by one fourth. \n\u00a0 0.75 by 3 so, 25 percent saving in\u00a0\nterms of the cost of transmission.\u00a0\u00a0 But the problem is that this choice of encoding is\u00a0\nnot fixed "
+    },
+    "e6580d8e-00f9-4145-a8f3-3a3e2a4ec36d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "and there may be a better one. So, here\u00a0\u00a0 is a better one. So, I have just permuted this row\u00a0\nhere a little bit. So, in some sense, the a and e\u00a0\u00a0 are the same as before but these three values have\u00a0\nnow been shuffled. So, in particular I have moved\u00a0\u00a0 the lo"
+    },
+    "24cd56cc-d066-4f3d-b12b-b9e2fd7fff96": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ng sequence from c to d. \nAnd there is a reason to do that\u00a0\u00a0 because you can see that d has a lower frequency\u00a0\nthan c. So, it makes sense from our intuition\u00a0\u00a0 that you should use a longer sequence to\u00a0\nrepresent lower frequency letters. And indeed,\u00a0\u00a0 if you"
+    },
+    "bc5dfaf7-c2e5-47a0-8977-126e68d5b09f": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " calculate the same quantity this quantity\u00a0\nif you calculate it now for the new thing. \n\u00a0 It turns out to reduce from\u00a0\n2.25 to 2.23. Now, 2.23 is\u00a0\u00a0 per letter. So, you can imagine that if we send a\u00a0\nmessage which has got 1000s of letters there is a\u00a0\u00a0 subst"
+    },
+    "999dca51-cc68-41e4-bf41-63a34a82d0ee": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "antial saving even though the saving per\u00a0\nletter is only come down by 0.02. So, this is\u00a0\u00a0 our goal then our goal is that we are given this\u00a0\ntable we are given this row and this row we are\u00a0\u00a0 given the letters and from some experimental\u00a0\nevidence we are give"
+    },
+    "3509bb92-5050-4070-b02f-11f5bbb2b24a": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "n the frequencies. \n\u00a0 And our goal is to find this best encoding. And\u00a0\nthe best encoding is defined in terms of this\u00a0\u00a0 average bits per letter which we will call abl.\u00a0\nSo, given an alphabet and with this associated\u00a0\u00a0 frequency information compute an encodi"
+    },
+    "be29b967-4bee-456d-a0b5-f80942769bf1": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ng\u00a0\nwhich minimizes abl this is our goal. \n\u00a0 So, to do this we will first look at our codes\u00a0\nas binary trees. So, here is the encoding\u00a0\u00a0 that we had before and here is a binary tree.\u00a0\nNow, how does this binary tree represented? Well,\u00a0\u00a0 first of all, as you"
+    },
+    "db07cc1c-d219-4259-a282-6d85156cd58e": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " can see the letters\u00a0\nare sitting at the leaves of the tree.\u00a0\u00a0 So, that is one part of it. So, the\u00a0\nletters are at the leaves of the tree. \n\u00a0 And now, how do you read off the code when you\u00a0\nread off the code by actually looking at the\u00a0\u00a0 path from the root."
+    },
+    "d0ad3a44-6519-4760-9488-d6e3203b7fed": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " So, if I named these as 0 for\u00a0\nleft and 1 for right then 1 1 takes me to a. So,\u00a0\u00a0 the code for a is 11, 001 001 it takes me to d.\u00a0\nSo, the code for D is 001. So, in that sense the\u00a0\u00a0 paths of this binary tree represent the sequence\u00a0\nof letters which encode"
+    },
+    "990d69df-52b5-4a6c-bffd-7c553fabf27f": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " that letter at the leaf\u00a0\u00a0 and there is nothing in the middle. \nAnd why is there nothing in the middle\u00a0\u00a0 because if I had something here if supposing I\u00a0\nuse this to encode f then that would mean that\u00a0\u00a0 the encoding 0 represents f but then if I extend\u00a0\nthe "
+    },
+    "aa934476-1fd9-46e2-9145-c4c3a0b4adf9": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "encoding to 01 it represents c. So, this is\u00a0\u00a0 not a prefix code anymore. So, by ensuring that\u00a0\nall the encoded values are sitting at the leaves\u00a0\u00a0 no encoding leads to another encoding. \nI mean I do not have an encoding sitting below\u00a0\u00a0 another encoding whic"
+    },
+    "896b5881-5baf-4e0d-be08-3d3adfff4a07": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "h is the same as saying that\u00a0\nno encoding is a prefix of the other encoding. So,\u00a0\u00a0 there are no internal nodes in this tree, which\u00a0\nencode letters. So, we will reason about our codes\u00a0\u00a0 using this representation because it is easier\u00a0\nto prove things about t"
+    },
+    "fbe56872-3d03-4b48-bc9e-0cf93f57bacb": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "his representation. \n\u00a0 So, the first observation is\u00a0\nthat this tree will always be\u00a0\u00a0 full. Now, full is something we have not seen\u00a0\nbefore we have seen complete. So, complete\u00a0\u00a0 binary tree is one where every level is filled.\u00a0\nAnd then we saw this heap kind"
+    },
+    "65d2a11c-1a06-4433-b475-7400c4712fa1": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " of thing where\u00a0\u00a0 we fill level by level. Now, full is something\u00a0\nwhich is not complete and it is not like a heap\u00a0\u00a0 is not necessarily filled level by level, but it\u00a0\nhas a property that I never have one child.\n\u00a0 So, I cannot have just one thing sticking of"
+    },
+    "a22b7fe9-e4b2-404e-b5f3-bea99889dd8d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "f here\u00a0\nthis is not full. So, why is it that any optimal\u00a0\u00a0 tree must be full? Well, imagine that I had only\u00a0\none child. So, supposing I have a situation where\u00a0\u00a0 at some point I have only one child and then below\u00a0\nthat I have something. So, this node has on"
+    },
+    "189f327b-7faf-4e5a-9162-0ef2d591ebac": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ly one\u00a0\u00a0 but then if it has only one child if you remember\u00a0\nwe did this also when we did a delete for a\u00a0\u00a0 binary search tree I could as well move this\u00a0\nwhole thing up and nothing will change. \n\u00a0 So, if I have only one child, I can promote that\u00a0\nchild and r"
+    },
+    "737d5621-9348-49b9-9d34-87e1874ec33a": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "eplace the node above by the child node\u00a0\u00a0 and I will get a shorter tree and nothing else\u00a0\nwill change because there was no other child. So,\u00a0\u00a0 no path is getting confused by this. So, I\u00a0\nwill end up with a valid encoding which has\u00a0\u00a0 shorter paths to some of"
+    },
+    "ed863bd6-585c-43e0-b50e-7d653daa7d1d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " the letters So,\u00a0\nshorter encodings for some of the letters\u00a0\u00a0 so I might as well use it. So, every\u00a0\noptimal prefix code must be full. \n\u00a0 Because otherwise I could make it more\u00a0\noptimal by reducing the path lengths.\u00a0\u00a0 Now, second thing is that if I take two"
+    },
+    "49f20732-6cbc-4257-8cfe-4c5dfd607a4f": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " leaves we\u00a0\ntake a leaf like this and if I take a leaf like\u00a0\u00a0 this, then c is some sense is higher than e. So,\u00a0\nif depending on which you are thinking about it,\u00a0\u00a0 usually we talk about the depth. So, we\u00a0\nstart from the root and come down. So,\u00a0\u00a0 the depth o"
+    },
+    "556afaff-4425-42ec-a266-01e3c8dba1ca": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "f c is smaller than the depth of e. \nAnd what we would like to claim is that\u00a0\u00a0 things which are at a smaller depth, which are\u00a0\nhigher in the tree, they have shorter encodings\u00a0\u00a0 and if they have shorter encodings, they must have\u00a0\nhigher frequencies. So, wha"
+    },
+    "de8620ed-71b3-4c5b-9995-6b42864bba79": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "t we claim is that if\u00a0\u00a0 your tree is optimal and x is sitting higher than\u00a0\ny then it must have a frequency which is bigger\u00a0\u00a0 than y you cannot have a smaller frequency than y.\u00a0\nAnd the reason is simple because if in fact it was\u00a0\u00a0 the case that f of c is sm"
+    },
+    "431dd544-3154-487e-afc4-e8fd06cf069b": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "aller than f of e. \nSo, c has a shorter encoding, e has a longer\u00a0\u00a0 encoding but f is actually c is actually less\u00a0\nfrequent than e then I could just swap these\u00a0\u00a0 2 labels. And if I swap these 2 labels in that\u00a0\nformula you will see that the multiplication no"
+    },
+    "f9e2b22a-5bbb-4737-97ce-dbe53cb7f0d0": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "w,\u00a0\u00a0 is multiplied by a different frequency\u00a0\nwhich brings it down. So, if I exchange\u00a0\u00a0 the labels that average bit length will have\u00a0\nto improve. So, this is the second claim.\n\u00a0 Now, the third claim is that if\u00a0\nsomething is at maximal depth\u00a0\u00a0 is a leaf at m"
+    },
+    "b40a6f38-c234-45ee-bb95-9f1dbd276531": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "aximum depth then it must also have\u00a0\na leaf on its side. So, for example this is a leaf\u00a0\u00a0 whose partner whose sibling is not a leaf\u00a0\nbut c is not at maximum depth say the maximum\u00a0\u00a0 depth is here. And here this has another\u00a0\nleaf here. Now, this is obvious b"
+    },
+    "439c9b6c-6f63-4b5d-9097-7b4bd2974135": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ecause if\u00a0\u00a0 this thing does not have a partner which\u00a0\nis a leaf, then that must have 2 children\u00a0\u00a0 because remember this is a full tree. \nSo, if it has a partner that is not a leaf\u00a0\u00a0 it must have children but then those children must\u00a0\neventually lead to lea"
+    },
+    "732a0987-2de5-4053-849e-e75d76c22e77": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ves which are further down.\u00a0\u00a0 So, those leaves which are further down will\u00a0\nbe deeper than the leaf that we started with.\u00a0\u00a0 And we were only talking about leaves at\u00a0\nmaximum depth. So, if I am at maximum depth\u00a0\u00a0 and if I am leaf then my partner is also\u00a0\na "
+    },
+    "843e1850-f3d6-4ef2-935e-bb6d8d5f2c98": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "leaf that is a very simple state. \n\u00a0 So, we have these 3 claims. So, every optimum\u00a0\nprefix tree must be a full tree every node has\u00a0\u00a0 0 or 2 children if I have a leaf which is higher\u00a0\nthan another leaf then the frequency of this leaf\u00a0\u00a0 cannot be smaller tha"
+    },
+    "e1ca22c7-6274-4f46-bc16-16950b2411ae": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "n this one it must\u00a0\nbe greater than equal to and the third\u00a0\u00a0 thing says at a leaf at the bottom most\u00a0\nlevel must be paired with another leaf.\u00a0\u00a0 So, this gives us enough to construct\u00a0\na tree optimum tree recursively. So,\u00a0\u00a0 how does it work? \nSo, the first t"
+    },
+    "03ec69c6-63e7-40b8-88d5-1f990128db98": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "hing is that we\u00a0\u00a0 should be claim three I think so, from claim 3\u00a0\nwe know that at the bottom most level of the tree\u00a0\u00a0 we have pairs of leaves. Now, those leaves at the\u00a0\nbottom most level of the tree must have the lowest\u00a0\u00a0 frequencies among all the leaves t"
+    },
+    "d46879f9-c042-44f5-995c-240b330db8a3": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "hey cannot have\u00a0\nhigher frequency than anything which is higher.\u00a0\u00a0 Remember that this is always be\u00a0\nthree I will fix it later. So,\u00a0\u00a0 now these must be the lowest frequency. \nSo, basically, I can target that I can say that\u00a0\u00a0 push the lowest frequency letter"
+    },
+    "cf80365d-19b6-483c-9e90-48b82a845f4d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "s\u00a0\nto the bottom of the tree.\u00a0\u00a0 So, what I will do is I will pick the 2 letters\u00a0\nx and y which have the smallest f x and f y the\u00a0\u00a0 smallest frequencies in my alphabet. And I\u00a0\nwill assign them in principle to the bottom.\u00a0\u00a0 But the way I will do it is I mean"
+    },
+    "befc15ba-9812-4d25-88a5-1db8d6413288": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " I am going\u00a0\nto actually build up this thing recursively. So,\u00a0\u00a0 in principle, these have to go to the bottom. \nSo, let us assume that they are assigned to the\u00a0\u00a0 bottom. So, now I have to process the rest of the\u00a0\ntree and how do I process the rest of the tr"
+    },
+    "7a2263d4-71b0-452d-a02f-79781e07e066": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ee?\u00a0\u00a0 Well, I pretend that these 2 have been processed.\u00a0\nSo, I pretend that these 2 have been processed\u00a0\u00a0 by combining them into a single node which\u00a0\nrepresents both x and y. So, I will call it\u00a0\u00a0 a compound letter x y. So, x y is a new letter\u00a0\nwhich stands"
+    },
+    "9dd830aa-a8ac-4f42-b8c7-a4f6e20f9cc2": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " for a combination of x and y. \n\u00a0 So, basically, we are saying that at the\u00a0\nbottom we are assuming now that we have\u00a0\u00a0 something like this. So, we are going to pretend\u00a0\nthat instead of this we have something like this.\u00a0\u00a0 And what is going to be the frequenc"
+    },
+    "df7364ed-932d-49fc-a376-6651c966c6f7": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "y of this x y?\u00a0\nWell, x, y has to combine how many times x occurs\u00a0\u00a0 and how many times y occurs. So, it is going to\u00a0\nhave a frequency of f x plus f y. So, what I have\u00a0\u00a0 done is I have taken my original alphabet. \nAnd I have removed these 2 nodes correspond"
+    },
+    "fca4ca64-bd47-409c-8460-4283e858255c": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ing\u00a0\u00a0 to two letters x and y with smallest frequency\u00a0\nand replace them by a letter a kind of fictitious\u00a0\u00a0 compound letter x, y whose frequency is the sum\u00a0\nof the 2. So, I have transformed my alphabet into\u00a0\u00a0 something with 1 letter less. So, a prime has\u00a0\na "
+    },
+    "8fbd59c5-3215-4c19-b771-45f9519b75ba": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "minus x comma y plus the new letter x y. \n\u00a0 Now, will have a smaller alphabet I will just\u00a0\nassume that I can solve the smaller alphabet.\u00a0\u00a0 So, we will see what is the base case, the base\u00a0\ncase is when your alphabet has only two letters.\u00a0\u00a0 When you have any"
+    },
+    "ad64491c-dd70-47f5-818a-574ab7690412": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " two letters then you\u00a0\nhave no choice. So, you have two letters.\u00a0\u00a0 So, you will just put, say x1 and x2. So, this\u00a0\nis my smallest encoding that I can do take two\u00a0\u00a0 letters and call one, 0 and call one the other one\u00a0\n1 in terms of the representation in bina"
+    },
+    "054a7f42-f1b8-4e71-ad1d-faf914695e15": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ry. \n\u00a0 So, I will just keep going down. So, I will\u00a0\nstart with n letters go down to n minus 1\u00a0\u00a0 letters n minus 2 letters. When I get 2 letters\u00a0\nI have a trivial tree and now, I have to go back\u00a0\u00a0 so, this is the point. So, the\u00a0\nrecursion has to be unravele"
+    },
+    "c09a103d-66bb-4384-8be9-bc73f9005b1b": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "d.\u00a0\u00a0 So, in this recursive solution, which I have\u00a0\njust constructed so, I had added this letter x y\u00a0\u00a0 and the rest of the tree is sitting here.\u00a0\nNow, I do not know what the rest of the tree\u00a0\u00a0 looks like but certainly there will be\u00a0\nbecause I am solving it "
+    },
+    "05fa6da4-40fe-426e-ab62-5952142b9c54": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "for this alphabet\u00a0\u00a0 there has to be a leaf labeled x y. \nSo, I will take that leaf labeled x y\u00a0\u00a0 and I will expand it by I will reverse the process\u00a0\nwhat did you do earlier I took this and I imagined\u00a0\u00a0 that I had done this. So, I will now do this in\u00a0\nrever"
+    },
+    "91f85d30-3879-4cba-bb2e-b7e34616fc14": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "se I will take that leaf and replace it by an\u00a0\u00a0 internal node and 2 children labeled x and y. So,\u00a0\nthis is a recursive algorithm and this is called\u00a0\u00a0 Huffman coding after the person who discovered\u00a0\nor invented it called David Huffman. \n\u00a0 So, let us see how"
+    },
+    "a08d8176-459e-4b1b-b5b2-b4e2d219f448": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " this algorithm works to get an\u00a0\nidea about what it is doing. So, supposing we have\u00a0\u00a0 that original example that we had constructed but\u00a0\nnow, I am only recording the frequencies I am not\u00a0\u00a0 assuming the encoding because I have to discover\u00a0\nthe encoding. So,"
+    },
+    "b93e9e8a-01da-42af-bba7-1383294eecaa": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " these are my letters and this is\u00a0\u00a0 the frequencies This is the same table that we had\u00a0\nearlier. So, you can go back and check that. \n\u00a0 So, this is the same frequency table I add here\u00a0\n0.32 2.25 0.2 0.18 0.05. So, now I have this\u00a0\u00a0 frequency table now, wha"
+    },
+    "11c8b37d-af8d-4839-a02d-33a012e3acbd": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "t I will do is I\u00a0\nwill look for the 2 smallest letter. So,\u00a0\u00a0 it is the 2 smallest letters here are d and e. So,\u00a0\nI will combine d and e as a single letter de and\u00a0\u00a0 I will reconstruct this table where I have one\u00a0\nletter less, I remove d and e separately and"
+    },
+    "3ef717c5-66c5-4cd7-89d2-8a44c5dfa683": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " I\u00a0\u00a0 produce a new compound letter called d which\u00a0\nis a frequency 0.18 plus 0.05 which is 0.23.\u00a0\u00a0 Now, I do the same thing now, I look in\u00a0\nthis and I see which are the 2 smallest\u00a0\u00a0 I find that this and this are the 2 smallest\u00a0\namong the frequencies that I "
+    },
+    "f361668d-a398-4f85-8b77-f6a34184e8c4": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "have now got. \n\u00a0 So, I will combine the letter c with this\u00a0\ncompound letter de and I will create a new\u00a0\u00a0 compound letter which I will call cde and\u00a0\nits frequency is going to be the sum of\u00a0\u00a0 these 2 it is going to be 0.2 plus 0.23. So,\u00a0\nis going to be 0.43."
+    },
+    "7764ccad-0d79-4ec3-8a22-a27e1217281e": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " Now, if I look at this, I\u00a0\u00a0 find that these 2 are the 2 smallest letters. \nSo, I will now, combine a and b as the letter ab.\u00a0\u00a0 Now, I have reached an alphabet a new alphabet\u00a0\nwhich has come down to 2 letters. There is a\u00a0\u00a0 letter called ab and this letter "
+    },
+    "a7c2f23c-c568-4035-b1b3-479e79a50c4d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "called cde\u00a0\nbut in this compound sense if I do not care\u00a0\u00a0 what the letters are called there are only\u00a0\n2 letters. So, this is my base case. So,\u00a0\u00a0 in the base case I can build a tree and what\u00a0\nis the tree look like it just looks like\u00a0\u00a0 a root node with 2 chi"
+    },
+    "eaae0658-6498-4e31-82cc-9113f262273f": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ldren. \nSo, 0 encodes in I mean I can choose either\u00a0\u00a0 order it does not matter 0 encodes a b 1 encode\u00a0\ncd I could do the other way around also. Now, I\u00a0\u00a0 have to unravel this recursion so, I have to take\u00a0\nthe last thing I did the last thing I did was to\u00a0\u00a0 c"
+    },
+    "be8fed99-8ced-49b9-a176-c6c59e6dee1d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ombine a and b into ab. So, I will now\u00a0\ntake that leaf node remember what it said,\u00a0\u00a0 d prime you take the leaf node label x y and you\u00a0\nsplit it as 2 node leaves called x and y. \n\u00a0 So, I will basically split this compound leaf.\u00a0\nSo, that ab which was here i"
+    },
+    "9557a312-f3ba-474e-8639-a0a910fb9c05": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "s now replaced by\u00a0\u00a0 2 new leaves below it called a and b. Now,\u00a0\nif I look at this step the next thing,\u00a0\u00a0 I did was cde. So, I take this letter and\u00a0\nsplit it. So, I split this letter. \n\u00a0 And again, I can do it left or right it does not\u00a0\nmatter I could have "
+    },
+    "87c72ccd-2a91-493e-9510-d12d27be4e92": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "also done de and c it does not\u00a0\u00a0 really matter how I do it. Finally, the optimum\u00a0\ncode will be up to this 01 relabeling. So, there\u00a0\u00a0 is no clear reason why one is better than the\u00a0\nother. But I just create 2 children based on the\u00a0\u00a0 what I had combined. And "
+    },
+    "32248dec-7cc5-4f9b-96e4-b571f9b5d7bb": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "then in the final step,\u00a0\nI split this de because that was the first thing I\u00a0\u00a0 do. So, I split this de and I get this code. \nNow, earlier if you recall we had reversed\u00a0\u00a0 encoding of this. So, the earlier encoding\u00a0\nof this was actually optimum. But we had\u00a0\u00a0 "
+    },
+    "86c33bdf-980d-4ecf-b6f7-635c850421ca": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "done the encoding in reverse. So, we actually\u00a0\nsplit it from right to left rather than left.\u00a0\u00a0 But this is exactly the same encoding except\u00a0\nthat every 0 is a 1 and every 1 is a 0. This\u00a0\u00a0 is what we were working with before. So,\u00a0\nthat is actually that 2.23"
+    },
+    "c5038ae5-a3ed-48a9-8536-77eca8dd7b2e": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " which we found\u00a0\u00a0 was actually an optimum encoding. And this\u00a0\nis how the algorithm would find it. \n\u00a0 So, now, the question is why is this optimum?\u00a0\nSo, this is how the algorithm works. But like\u00a0\u00a0 any greedy thing which is, so here, why is it\u00a0\ngreedy? Becau"
+    },
+    "ed830723-9576-4965-838f-6af462e2d5e2": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "se at every point, we are just taking\u00a0\u00a0 the two letters, which have the current lowest\u00a0\nfrequency, and we are combining them without\u00a0\u00a0 asking whether anything better is possible. \nSo, the optimality of this is by induction on the\u00a0\u00a0 size of the alphabet. So"
+    },
+    "5e69fd52-d473-4f6c-9b65-1787b0176823": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": ", as we said, if you have\u00a0\nonly 2 letters in your alphabet there is nothing\u00a0\u00a0 much you can do you can just split them into 2\u00a0\nleaves and call them one of them 0 one of them\u00a0\u00a0 1 So, that is optimal. Now, let us assume that\u00a0\nfor any alphabet of size k minus "
+    },
+    "21d875bc-51f3-4232-834a-ac4a9c676ec2": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "1 are algorithm\u00a0\u00a0 produces an optimal tree. And Now I am working\u00a0\nwith a tree of size alphabet of size k. \n\u00a0 So, the algorithm says combine the two letters\u00a0\nof lowest frequency construct a tree for the\u00a0\u00a0 smaller alphabet, which by induction is going\u00a0\nto be"
+    },
+    "6b17ed53-a51e-42ab-ab79-fd44d459b781": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " optimal, and expand the leaf to get t.\u00a0\u00a0 So, the question is what\u00a0\nhappens when I expand this leaf.\u00a0\u00a0 So, the claim is that the bit length of this\u00a0\nexpanded t is exactly the bit length of the old\u00a0\u00a0 the optimal t prime which I got in the recursive\u00a0\nthing p"
+    },
+    "4a90dc62-f22a-45af-b3e6-2a6aaf509bf1": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "lus the combined frequency of this new\u00a0\u00a0 letter which I have combined and then destroyed\u00a0\nf of x y remember f of x y is f x plus f y. \n\u00a0 So, this is a this is saying that after I\u00a0\nsplit this tree of course, the path length\u00a0\u00a0 to those new letters is one mor"
+    },
+    "524c1d45-d525-4c3b-82d4-dacad2c5e2d6": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "e than it was\u00a0\nbefore. So, the average bit length is going\u00a0\u00a0 to increase. And how much is going to increase\u00a0\nis going to increase precisely as f x plus f y\u00a0\u00a0 which is the same as f x y. So, notice that\u00a0\nnothing else changes the tree otherwise was\u00a0\u00a0 untouch"
+    },
+    "555f2cfa-236e-4072-aeee-dfe78958846e": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ed. So, the only difference is that I take\u00a0\nout so, I have this x y. So, I will remove it and\u00a0\u00a0 instead I will put an x and a y below it. \nSo, this is the only change that happens. So,\u00a0\u00a0 I am going to subtract from the bit length, the\u00a0\ncontribution of the "
+    },
+    "536fa651-ef67-4be6-bb53-ea67ab52c4ff": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "letter x y that I had before,\u00a0\u00a0 and that x y, remember, depth is a proxy for the\u00a0\npath length which is a proxy for the encoding\u00a0\u00a0 length. So, if something is a depth 1 it is 1 bit\u00a0\nwith the depth 3 to 3 bits and so on. So, if I\u00a0\u00a0 take depth of the letter e"
+    },
+    "4de87ca0-8fbd-4ab0-9d95-465d9655b5a3": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ncoding x y times the\u00a0\nfrequency of x y that is the bit length of that\u00a0\u00a0 hypothetical letter x y which was contributing\u00a0\nto the average bit length of t prime. \n\u00a0 Now, I am going to remove that node so, that is\u00a0\nno longer there. And instead, I am going to h"
+    },
+    "82f66cfb-a7ae-47cf-a169-51346aa8b8d3": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ave\u00a0\u00a0 two new contributions which is the\u00a0\ndepth of y times the encoding of y.\u00a0\u00a0 And I mean the depth of y times the frequency of\u00a0\ny and the depth of x times the frequency of x.\u00a0\u00a0 But these are all connected the frequency of x,\u00a0\ny is just the frequency of x"
+    },
+    "62066d2f-db73-47cb-9b1b-314450fc3342": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " plus the frequency\u00a0\u00a0 of y. That is how we defined it. And the depth is\u00a0\nnow exactly increasing by 1. So, I am removing.\n\u00a0 Let me call it d d of x y times f of x y and I am\u00a0\nadding instead d of x f of x plus d of y f of y.\u00a0\u00a0 So, this is d of x sorry\u00a0\nthis "
+    },
+    "fd05ce83-4b28-4512-944e-0072fb4f1e25": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "is f of x plus f of y.\u00a0\u00a0 And this is 1 plus d of x y. This is 1 plus\u00a0\nd of x y. So, I am going to cancel d of x\u00a0\u00a0 y f of x d of x y f of x I am simply\u00a0\ngoing to cancel d of x y f of y and d of y\u00a0\u00a0 d of x y f of y. So, what I am left\u00a0\nwith is 1 copy of f x "
+    },
+    "a8d6af76-b20d-4aa2-9240-3470507e9952": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "and 1 copy of f y\u00a0\u00a0 and that is precisely f x plus f y. \nSo, this is what is being added back and\u00a0\u00a0 f x plus f y is just f of x y. So, if you work it\u00a0\nout for yourself you can see that by subtracting\u00a0\u00a0 depth of x y times f of x y and adding back depth\u00a0\nof "
+    },
+    "149c0749-21c1-49e9-b124-825f200dba07": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "x times f of x plus depth y times f of y the\u00a0\u00a0 net changes f of x y. So, the net increases\u00a0\nf of x plus f of y which is f of x y. \n\u00a0 So, this is what we have now, we have to somehow\u00a0\nargue so, all we can show by induction is that\u00a0\u00a0 this tree was optimal. S"
+    },
+    "1f510fdc-3bc9-4bc7-a683-02f372cb1b33": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "o, why is this tree that\u00a0\nI have got by doing this reverse transformation\u00a0\u00a0 optimal. So, let us assume that we have some\u00a0\noptimal tree S for the current alphabet.\u00a0\u00a0 And let us assume that that tree is better\u00a0\nthan the tree that I just constructed. So,\u00a0\u00a0 it"
+    },
+    "8a502511-1bde-497b-a77b-48568e1655cb": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "s average bit length is strictly\u00a0\nless than average bit length of t. \n\u00a0 Now, in that tree the leaves could have\u00a0\nany arbitrary label but I know that the\u00a0\u00a0 lowest leaf labels will have\u00a0\nthe lowest frequencies. So,\u00a0\u00a0 they could be paired in different\u00a0\nways. "
+    },
+    "36ddfcdb-d869-4fc9-9479-8daa2da822dd": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "So, if I have 4 labels\u00a0\u00a0 I could have a, b, c, d, like this. But I could\u00a0\nalso write a, c, b, d and this would have the\u00a0\u00a0 same bit length. If I just exchange the labels at\u00a0\nequal depth there will be no change need no change\u00a0\u00a0 in the bit length. So, it coul"
+    },
+    "576d977a-a99a-4e14-907c-f1e5774b2f3b": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "d be that S has\u00a0\nsome arbitrary way in which it has done it. \n\u00a0 But I can always shuffle it around keeping things\u00a0\nat the same level. And I know that my x and y,\u00a0\u00a0 the ones I am interested in must be at the\u00a0\nlowest level. So, I can bring them together\u00a0\u00a0 at"
+    },
+    "4bdaf90b-76e9-4b75-8cbb-bd0df214c74b": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " the lowest level because they occur in pairs.\u00a0\nSo, I will take S and I will first rearrange the\u00a0\u00a0 leafs at the lowest level so, that x and y come\u00a0\ntogether having got them together in that tree\u00a0\u00a0 S I will merge that exactly as I did here. \nBut I am not ma"
+    },
+    "569c144c-9d4d-46b3-a883-4c02f8317c11": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "king it a recursive call I am\u00a0\u00a0 physically taking S the tree S and I am looking\u00a0\nat the leaf x y and sorry the leafs x and y\u00a0\u00a0 and I am merging these into a single new leaf\u00a0\ncalled x y. So, I am going to contract these.\u00a0\u00a0 So, I get a tree S prime. So, I ha"
+    },
+    "b5d3e5bf-b337-4e73-a24a-28ef09f2cf0a": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ve taken\u00a0\nan optimum alleged optimum tree S for a\u00a0\u00a0 I have found a leaf in it which is called x and\u00a0\na leaf called y which are siblings and I have\u00a0\u00a0 merged them to form a new node called x y. \nSo, now this is a tree S prime which is a encoding\u00a0\u00a0 of a small"
+    },
+    "9c416452-0a6c-438f-81e2-eaf39a4cc0eb": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "er alphabet this smaller alphabet A\u00a0\nprime. So, S prime is over A prime but A prime we\u00a0\u00a0 already have an optimal thing T prime is already\u00a0\nknown to be optimal by induction for A prime. So,\u00a0\u00a0 S prime cannot be bigger than T, S prime cannot\u00a0\nbe smaller than "
+    },
+    "2cc7944c-55a7-4769-88dd-afc105e1d37c": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "T prime. So, it must be that the\u00a0\u00a0 average bit length of T prime the known optimum\u00a0\nis at least as good as that of S prime. \n\u00a0 So, that means that if I look at the\u00a0\ndifference between S and S prime is\u00a0\u00a0 going to be by the same calculation the same\u00a0\nas diff"
+    },
+    "1a4968a7-e392-426e-a646-d66a45c0780a": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "erence T and T prime namely f of x y.\u00a0\u00a0 This claim holds for S and S prime because I have\u00a0\ndone exactly the same operation. And therefore,\u00a0\u00a0 it means that if this is smaller than this then\u00a0\nthis must also be smaller than that. So, that the\u00a0\u00a0 T that I const"
+    },
+    "fccbe05c-ea54-4aae-acb9-b91a099c69a4": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ructed cannot be worse than the S\u00a0\nthat I constructed. So, this assumption that I\u00a0\u00a0 have is strictly better S is wrong. So, that\u00a0\nis the proof of optimality by induction.\n\u00a0 So, how would you implement this? Well, what we\u00a0\nhave to do is we have to keep look"
+    },
+    "6a18b88f-f94b-481d-b9cf-4d82ca151bbb": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ing for these\u00a0\u00a0 two letters of minimum frequency and replace them\u00a0\nwith a combined letter of composite letters or\u00a0\u00a0 combined frequency. And if you do this naively\u00a0\nthen you will have to scan the frequencies find\u00a0\u00a0 the two minimum, minimum and second minimu"
+    },
+    "ea0d615d-a695-4e90-bc2f-c8a9a2778ad3": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "m and\u00a0\ncombine them, add them and put them back. \n\u00a0 So, this will take a linear time to scan and we do\u00a0\nthis we have to keep shrinking by one. So, we have\u00a0\u00a0 the time I mean we do linear scan and everything\u00a0\noverall is going to be a quadratic calculation.\u00a0\u00a0"
+    },
+    "b2fa1ea4-0956-48a8-a33d-ab2f9fda5db4": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " Now, as you might guess whenever we need to find\u00a0\nrepeatedly find the minimum and then replace it\u00a0\u00a0 back with something else and keep maintain the\u00a0\nminimum the correct thing to do is a heap. \n\u00a0 So, if we keep the frequencies of\u00a0\nthe letters in a heap then"
+    },
+    "3f1571c9-a5d9-4b63-92b0-605a61b792c7": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " finding\u00a0\u00a0 the two minimum is doing delete meant\u00a0\ntwice which is a logarithmic operation\u00a0\u00a0 and then you insert back an element with the sum\u00a0\nof the frequencies that is also logarithmic. So,\u00a0\u00a0 every update is logarithmic. So, overall, you can\u00a0\nmove from k s"
+    },
+    "f3d8beac-db91-48c1-baec-7b9936e6bd47": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "quared to k log k. And of course,\u00a0\u00a0 then you have to also keep track of the labeling\u00a0\nand all that. But that is very easy to do once you\u00a0\u00a0 have got this choice fixed properly. \nSo, why is this a greedy algorithm,\u00a0\u00a0 is a greedy algorithm because we are\u00a0\nmak"
+    },
+    "5f02d0d5-f87f-4a4c-b69d-9d603ccbe9b8": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ing this choice locally, every point\u00a0\u00a0 when we have an alphabet with frequencies, we\u00a0\nare finding the two minimum ones combining them.\u00a0\u00a0 And we are never going to go back and combine\u00a0\nletters in any other way. So, those two will be\u00a0\u00a0 siblings forever. So, "
+    },
+    "5de96c0a-d44f-4a8d-b76f-3e6679f875ed": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "that is something\u00a0\nwhich we do not go back and do. So, it is a\u00a0\u00a0 very local choice, is a locally optimum choice\u00a0\nwhich we never revisit we never go back. \n\u00a0 So, it follows our classical paradigm that\u00a0\nwe have shown seen for greedy that is we\u00a0\u00a0 have a numbe"
+    },
+    "c05442a2-1bf9-4666-aef0-e1db74c917c2": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "r of choices and make one based on\u00a0\nsome local heuristic. And we stick with that.\u00a0\u00a0 So, this problem actually has an interesting\u00a0\nhistory. So, I will just conclude with that.\u00a0\u00a0 So, this idea about encoding thing\u00a0\noptimally is actually the subject\u00a0\u00a0 of a ve"
+    },
+    "69045302-4047-42fc-87cc-d255895fc66a": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ry interesting area called information\u00a0\ntheory which was invented by Claude Shannon around\u00a0\u00a0 end of the second world war it was intimately tied\u00a0\nto the rise of radio and telecommunications.\n\u00a0 Because at that time people was seriously\u00a0\nbeing becoming intere"
+    },
+    "6f859688-e930-41cf-855a-daed95c59277": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "sted in transmitting\u00a0\u00a0 messages over long distances and trying to\u00a0\nminimize the cost of sending these messages.\u00a0\u00a0 So, information theory does this kind of\u00a0\nanalysis of frequencies and so on. And it says\u00a0\u00a0 if you want to encode this kind of an alphabet\u00a0\nwit"
+    },
+    "bafef1e3-2f99-483a-8ef4-732dca95af7d": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "h these frequencies you must have an average\u00a0\u00a0 bit length of so much. So, it gives you a lower\u00a0\nbouncing you cannot do better than this.\n\u00a0 But information theory on its own is not\u00a0\nconstructive theory it does not tell you how\u00a0\u00a0 to achieve that thing. It mi"
+    },
+    "b6b91640-f476-49b1-a91f-7878438e078f": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ght say that you can\u00a0\ndo it in you can cannot in better than 2.23 bits\u00a0\u00a0 per letter or whatever bit it will not show you\u00a0\nhow to do it. So, constructing the optimum node\u00a0\u00a0 and knowing that the optimum code has a\u00a0\ncertain size are two different things.\u00a0\u00a0 So"
+    },
+    "749d784c-5fa8-4202-906d-6cce93332bb5": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": ", in fact Shannon worked on this problem along\u00a0\nwith another mathematician called Robert Fano.\n\u00a0 And they came up with recursive solution which\u00a0\nwas different from this which uses the kind of\u00a0\u00a0 partitioning of the alphabet. And they came\u00a0\nup with something"
+    },
+    "5293b786-108c-407f-9334-e1459d21d9ee": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " called Shannon-Fano code\u00a0\u00a0 so that these Shannon-Fano codes were\u00a0\nnot optimal I mean with respect to the\u00a0\u00a0 what could be achieve they do not always\u00a0\nproduce the smallest average bit length.\u00a0\u00a0 So, the person who invented Huffman coding,\u00a0\nDavid Huffman was "
+    },
+    "fd0bab78-fa37-45b0-8e93-23062d97e8d5": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "actually a graduate student\u00a0\u00a0 at MIT studying this topic under Fano.\nSo, he was a student in Robert Fano's class\u00a0\u00a0 and Robert Fano are assigned this as a term\u00a0\npaper. He said either you can write a paper\u00a0\u00a0 showing how to come up with the optimum code or\u00a0\ny"
+    },
+    "795965d7-0ca6-43f5-854f-91b8390c7332": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": "ou can write the final exam. So, the story goes\u00a0\u00a0 that Huffman tried and tried he was about to give\u00a0\nup. So, he had almost given up on this term paper\u00a0\u00a0 and he was all set to write study for the exam.\u00a0\nAnd then suddenly he came up with this idea\u00a0\u00a0 which we"
+    },
+    "e381ca21-ad86-406e-9ae1-4d7778cac31f": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " are now known as Huffman algorithm.\nSo, it was actually a kind of a graduate student\u00a0\u00a0 who came up with this idea after being told\u00a0\nby somebody who tried to prove it and could\u00a0\u00a0 not prove it. So, it is an interesting story\u00a0\nand hopefully inspirational for"
+    },
+    "a71cdd18-c257-4b0b-8359-422c73d91144": {
+        "content_id": 54,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Huffman Coding",
+        "week": 7,
+        "chunk": " all of us."
+    }
+}

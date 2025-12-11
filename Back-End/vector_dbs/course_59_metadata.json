@@ -1,0 +1,751 @@
+{
+    "d990258d-fbbc-4827-bd6f-111b389136b0": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "So as a final example of divide and conquer, we\u00a0\nwill look at a problem called quick select.\n\u00a0 So selection is the problem of\u00a0\nfinding a specific position in\u00a0\u00a0 a list. So in particular we want to find the\u00a0\nkth largest value in a sequence of length n.\u00a0\u00a0 So "
+    },
+    "69d22fb9-a0fb-4725-b148-2bf0daa3af93": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "of course one way to do this is to sort the\u00a0\nlist in descending order, and then the largest\u00a0\u00a0 value is the first one, the second largest value\u00a0\nis the second one and so on, so by just looking at\u00a0\u00a0 position k in the sorted list in descending\u00a0\norder we will "
+    },
+    "b3e40454-28a2-4f5e-afbc-a4b55e13b771": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "get the kth largest value.\n\u00a0 So since we know we can sort in n log n,\u00a0\nthis would mean that the kth largest value,\u00a0\u00a0 the selection problem of finding the\u00a0\nkth largest value also takes n log n.\u00a0\u00a0 But if we look at some special cases it perhaps\u00a0\nsuggests tha"
+    },
+    "33196039-6795-40d8-9770-447f7a590daa": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "t we could do better. For instance,\u00a0\u00a0 if we want k equal to 1 then we are just\u00a0\nlooking for the largest value in the list\u00a0\u00a0 and that is just the maximum. And we know\u00a0\nthat we can compute the maximum in a list\u00a0\u00a0 in a single scan so it only takes order\u00a0\nn ti"
+    },
+    "cc3be730-e987-459f-934e-47d84c11efe1": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "me, it does not take n log n time.\n\u00a0 Similarly, if k is equal to n, that is, we want\u00a0\nthe smallest value in the list, then we can just\u00a0\u00a0 compute the minimum in a single scan of order\u00a0\nn. So the question is can we do this for all k?\u00a0\u00a0 So if we fix a k, then"
+    },
+    "3556ab3c-25a0-4c5a-9410-a4c79cbba57f": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " of course in\u00a0\nthe first pass we can find the largest,\u00a0\u00a0 and then among the remaining in the second\u00a0\npass we can find the second largest. \n\u00a0 So we can make k passes and in order k times n\u00a0\ntime, we can always find the kth largest. Now, the\u00a0\u00a0 problem is tha"
+    },
+    "2eb89024-baa7-4a59-84fa-3fd95e4f012d": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "t as k becomes large, in particular,\u00a0\nif k is like n minus 1 or n by 2 for instance,\u00a0\u00a0 then this would become order n squared.\nSo in particular the median is the value in\u00a0\u00a0 the center of the list so if we sort the list then\u00a0\nthe median will be the value at"
+    },
+    "ca669161-2a8b-4db6-a910-e7d558de8d87": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " position n by 2.\u00a0\u00a0 So if we just use this naive thing here then\u00a0\nthe time it will take to find the median\u00a0\u00a0 is n by 2 passes on a list of length\u00a0\nn which will be order n squared.\n\u00a0 Now remember that one thing we had said before is\u00a0\nthat if we can actually"
+    },
+    "2d15b4e3-6bf4-4aae-bb7f-a6b94619e6de": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " find the median quickly in\u00a0\u00a0 order n time, then what we can do is we can take\u00a0\nthis list and then find the median as the pivot\u00a0\u00a0 and then create this lower list and this upper\u00a0\nlist which are roughly half because the median\u00a0\u00a0 will divide it into two parts"
+    },
+    "3e22b43b-01d9-4fd2-a97c-2281584e5fe1": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " which are half.\nAnd if the two are half and we recursively sort\u00a0\u00a0 them then we will get a recurrence like merge\u00a0\nsort. So quick sort will also become order n log\u00a0\u00a0 n. So that would be a side benefit of being able\u00a0\nto do the selection problem in order n ti"
+    },
+    "08ed05f2-6834-453b-ae0d-a9ea5a7edc87": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "me.\n\u00a0 So first, let us look at a divide and conquer\u00a0\nsolution which is similar to quick sort.\u00a0\u00a0 So remember that in quick sort we used a pivot\u00a0\nto partition the sequence that is given to us\u00a0\u00a0 into two sequences. The lower part, everything\u00a0\nthat is smaller "
+    },
+    "3f3eaa1a-968d-491c-82fc-1d7900965d1b": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "than or equal to the pivot,\u00a0\u00a0 and the upper part, everything\u00a0\nwhich is bigger than the pivot.\n\u00a0 So now we have this lower part. So remember\u00a0\nthe way that quick sort partitions is to put\u00a0\u00a0 the pivot in the middle and put the lower\u00a0\npart before and the upper"
+    },
+    "1909a3fa-d5d4-4442-b5a8-0b31459aa7a6": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " part after,\u00a0\u00a0 and we know that everything in the lower part\u00a0\nis smaller than or equal to p and everything\u00a0\u00a0 in the upper part say is bigger than p. So now\u00a0\nwe are looking for the kth largest element.\n\u00a0 So the point is that if this\u00a0\nparticular segment, if "
+    },
+    "0a43110d-cd0b-4136-b3ca-616917036ee2": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "this segment\u00a0\u00a0 is less than equal to k then the kth largest\u00a0\nelement actually sits in the lower part.\u00a0\u00a0 So we can look at the length of the lower part and\u00a0\ndetermine which of these three segments we were\u00a0\u00a0 going to find the position that we want.\nSo if k i"
+    },
+    "4ed9d5a0-ceb4-4b95-865a-333849a76db0": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "s, so let m be the length, so m\u00a0\u00a0 is the length of this lower segment. So this is\u00a0\nm. So if k is less than or equal to m then the\u00a0\u00a0 kth largest element of the whole sequence actually\u00a0\nlives in the lower part. So we can search there.\u00a0\u00a0 If k is equal to m pl"
+    },
+    "1a052f3a-09a0-4fb1-a548-e4d01a3b4bbf": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "us 1 then this must be\u00a0\nthe value that we want, so we can return the\u00a0\u00a0 pivot. And if k is greater than m plus 1\u00a0\nthen we know the answer lies in this part.\u00a0\u00a0 So this now gives us a recursive strategy.\nSo recursive strategy is that if k is smaller\u00a0\u00a0 than or"
+    },
+    "d9668622-ccfb-4b01-85ac-817c24e6924a": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " equal to m we just apply the selection\u00a0\nprocedure to just the lower part of our sequence\u00a0\u00a0 and look for the kth element there. If it\u00a0\nis m plus 1 then we just return the pivot,\u00a0\u00a0 we do not have to do any more work, we\u00a0\nhave found the element that we want."
+    },
+    "08d20830-b011-46ac-a838-8b548309958a": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "\n\u00a0 And finally if it is bigger than m plus 1 we must\u00a0\nselect the upper one but now we must change the\u00a0\u00a0 value we are looking for because we have this\u00a0\nlower set. So this is m, and we have this one\u00a0\u00a0 element which is the p. So we have to subtract,\u00a0\nso now w"
+    },
+    "e788671f-336e-4391-8ea8-7f4fcb578439": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "e are looking for the kth element overall,\u00a0\u00a0 but we are looking, from here onwards we\u00a0\nwant a value which is k minus m plus 1.\n\u00a0 So we must change our, the position that we are\u00a0\nlooking for from k to k minus m plus 1 because\u00a0\u00a0 we are now looking beyond the"
+    },
+    "83233008-b194-4a08-977e-2d464ae4737c": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " pivot. So this\u00a0\nbecomes now, a recursive way to divide and conquer\u00a0\u00a0 and compute the selected value that we want.\nSo this is something which, since it is derived\u00a0\u00a0 from quick sort, let us call it quick select.\u00a0\nSo very similar to quick sort, we can write "
+    },
+    "18e74ad6-3aea-448c-b893-1c9d043f1a21": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "this\u00a0\u00a0 quick select. So quick sort had a list and\u00a0\nit had a lower and upper bound l and r,\u00a0\u00a0 but we also now add a fourth parameter k, which\u00a0\nis the position that we are looking for. So we\u00a0\u00a0 are trying to find the kth largest parameter in\u00a0\nthe slice of thi"
+    },
+    "27196ce5-b670-4e11-9293-dbb525bf3e04": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "s list from l up to r minus 1.\n\u00a0 So the first thing is that if this k is kind\u00a0\nof observed then we will just quit. So if\u00a0\u00a0 k is smaller than 1, so our, our values\u00a0\nare from first largest. That is one, 1th\u00a0\u00a0 largest to nth largest. So if it is less than\u00a0\n1,"
+    },
+    "8dc351a8-0014-45bc-b05d-21f21acdf1c3": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " if I ask you for the zeroth largest thing\u00a0\u00a0 then you will just return none.\nSimilarly, if the k is larger than\u00a0\u00a0 the number of elements in my list, so r minus l\u00a0\nis going to be the number of elements in my list.\u00a0\u00a0 So if either of these two cases are there"
+    },
+    "8f9a2a31-7e1e-47d1-9b93-53cb7206dc11": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": ",\u00a0\nthen I will just return none as a kind of\u00a0\u00a0 answer saying that this query is not valid.\nOtherwise we do exactly the same partitioning\u00a0\u00a0 as we did for quick sort. So we set the\u00a0\nleftmost value in our slice to be the pivot,\u00a0\u00a0 and then we maintain these tw"
+    },
+    "841a145a-13c7-4ded-aef4-5ed928d2204b": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "o pointers if\u00a0\nyou remember, we maintain these two pointers\u00a0\u00a0 and then we slowly scan from left to and\u00a0\ngradually partition this into lower and upper.\n\u00a0 So that is what happens here in this loop.\u00a0\nAnd then once we have got that then we want\u00a0\u00a0 to exchange t"
+    },
+    "8faca4e1-6e16-434e-9e8a-357bdb72371c": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "he pivot with the last position\u00a0\nand lower and that is what happens here.\u00a0\u00a0 So this is exactly the same partitioning\u00a0\nstrategy as quick sort, nothing new here.\n\u00a0 Now, unlike quick sort where we are going to\u00a0\nexamine both halves and sort them recursively,\u00a0\u00a0"
+    },
+    "e37d0837-23ea-417b-96ff-07e91e50dc7c": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " here we are going to do this check. So\u00a0\nthe first thing is we compute the length\u00a0\u00a0 of the lower segment. So the\u00a0\nlength of the lower segment is,\u00a0\u00a0 the position lower is actually the first index\u00a0\noutside that. So it is like saying that if,\u00a0\u00a0 if it is n the"
+    },
+    "99ddf7f8-ef90-46bf-b38b-90969823779a": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": ", then it is n minus 1. So the lower\u00a0\nlength is the value lower, which is the position\u00a0\u00a0 marking the end of that segment minus 1.\nSo now if the value, the position k that we\u00a0\u00a0 are looking for is less than or equal to the\u00a0\nlower length then we will recursiv"
+    },
+    "8e71d982-a969-49bf-b60c-c0496303d451": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "ely quick\u00a0\u00a0 select on the lower part. So I will go from the\u00a0\nleft limit l to the upper limit lower and look\u00a0\u00a0 for the kth element. So that is this case.\nOtherwise, in the second case if, if the k I\u00a0\u00a0 am looking for is exactly equal to the length\u00a0\nof the lo"
+    },
+    "92864c6c-9daa-477b-8678-8eb57e485dbd": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "wer half plus 1, then I will directly\u00a0\u00a0 return the pivot, which is just the value at the\u00a0\nposition index lower. And finally if it is not\u00a0\u00a0 either of these two then I will run quick select\u00a0\non the right half from lower plus 1 to r, but I\u00a0\u00a0 have to change th"
+    },
+    "3bc2036b-c364-4780-8306-308649fc3b0a": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "e index from k to k minus m plus\u00a0\n1, where m is now for me, this lower length.\n\u00a0 So what we have done is we basically taken quick\u00a0\nsort, and we have taken the partition algorithm\u00a0\u00a0 exactly as in quick sort, and then after\u00a0\npartitioning, instead of sorting "
+    },
+    "95a83c84-1ffb-47ee-927d-76fe1f9ad410": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "the two halves\u00a0\u00a0 we are suitably choosing which part of the\u00a0\npartition to select. So either we select in\u00a0\u00a0 the lower part or in the upper part or\u00a0\nwe just directly return the pivot.\n\u00a0 So if you want to analyze this, then the\u00a0\nrecurrence is very similar to "
+    },
+    "c81897fa-95bc-4235-bbfd-4f69e735f65d": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "quick sort.\u00a0\u00a0 The only difference is we are not going to look\u00a0\nat both halves. So we are going to look at let,\u00a0\u00a0 let m be the length of the lower part. So we are\u00a0\neither going to look at the lower part or we are\u00a0\u00a0 going to look at the upper part, and in th"
+    },
+    "dafede8e-a124-4c57-910b-0669d19d4cc9": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "e\u00a0\nworst case we have to go with a larger one.\n\u00a0 So instead of saying T of m plus T of n minus\u00a0\nm plus 1, which is what we would do if we had\u00a0\u00a0 quick sort because we would have to solve both\u00a0\nproblems, here we are going to do the maximum,\u00a0\u00a0 one of the two,"
+    },
+    "bdedc1c9-6b97-4f11-954c-1de9ec541502": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " either the left half or the right\u00a0\nhalf, and in the worst case it will be the worst\u00a0\u00a0 one of the two so it will be the maximum. Plus\u00a0\nof course, there is this order n work which is\u00a0\u00a0 the partitioning part. So I have to go across\u00a0\nthis entire sequence in o"
+    },
+    "ab9e78b3-28d2-4172-8508-775680396b56": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "rder to partition.\n\u00a0 So there is order n work to partition even though\u00a0\nafter partitioning I do not have to do any work to\u00a0\u00a0 recombine unlike in merge sort. So of course, we\u00a0\nknow what happens which is that when our pivot is\u00a0\u00a0 an extreme value then either "
+    },
+    "452aa001-8bf6-483a-9f58-6798eecb3ef8": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "I will have an empty\u00a0\nlower part or an empty upper part. So m will be\u00a0\u00a0 either 0 or n minus 1, and I can engineer it so\u00a0\nthat it happens with every recursive call.\n\u00a0 So every recursive call this maximum\u00a0\nmight well be where m is 0, for example,\u00a0\u00a0 it will b"
+    },
+    "54b2a024-0ada-44f8-8aef-6401a95d071b": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "e T of n minus 1. So in the\u00a0\nworst case this quick select will also\u00a0\u00a0 have a recurrence which says T of n is T of\u00a0\nn minus 1 plus n, just like the worst case\u00a0\u00a0 for quick sort even though we are not doing\u00a0\nboth halves. We are doing only one half.\n\u00a0 In quick"
+    },
+    "2da85c6f-06ad-4831-a399-94ccfa3d6020": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " sort, the other half disappears because\u00a0\neven the worst case, sorting the empty half is\u00a0\u00a0 trivial whereas here we are only looking at\u00a0\none half and that one half is a big half.\u00a0\u00a0 So quick select is again n squared. So this divide\u00a0\nand conquer has only got"
+    },
+    "8883fc5d-f3e2-434d-81a2-9c1200595eb2": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " us our n squared thing,\u00a0\u00a0 and we know how to do n squared by brute force.\nWe can do n squared by just doing one scan for the\u00a0\u00a0 first element, another scan for the second\u00a0\nlargest element, another scan for the third\u00a0\u00a0 largest element, so it appears that th"
+    },
+    "5bcdc5e5-14fe-483d-ab4a-39167fc861d6": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "is quick\u00a0\nselect, even though it is a clever way to do this\u00a0\u00a0 is not really any better than the brute\u00a0\nforce way of doing n nested loops.\n\u00a0 But last time when we had looked\u00a0\nat this recurrence tree analysis,\u00a0\u00a0 what we had said was that if you can somehow\u00a0\n"
+    },
+    "79faae08-858b-45c2-8e38-971f74ac3f6d": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "find a pivot which is not necessarily the median\u00a0\u00a0 but it is some fixed fraction away from the thing.\u00a0\nSo for instance, if it is between one thirds and\u00a0\u00a0 two thirds. So if you arrange the values, if your\u00a0\npivot is guaranteed to be in the middle third.\n\u00a0 So"
+    },
+    "8a3d8d58-db34-4be2-b20e-ac213a9254eb": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " supposing my values are arranged in\u00a0\nascending order, I am not promising you the\u00a0\u00a0 pivot is in the middle but I am saying that\u00a0\nthe pivot is going to be somewhere in this\u00a0\u00a0 segment, between one third and two thirds. And\u00a0\nit can be one third, two thirds, i"
+    },
+    "e7a7ff29-fe10-44f7-8855-d9a866904263": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "t can be any\u00a0\u00a0 fraction. It could be one fifth and two fifth.\u00a0\nThis is also fine. For, four fifths, sorry.\n\u00a0 So for any fixed if I can knock off a\u00a0\nfixed fraction by choosing a good pivot,\u00a0\u00a0 then the claim is that quick sort will actually\u00a0\nbecome n log n. "
+    },
+    "0f003e86-72bf-49a5-b126-121f9750f596": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "So last time we saw for this one\u00a0\u00a0 third, two thirds. So supposing the\u00a0\npivot lies between the maximum value\u00a0\u00a0 by 3 and the maximum value times 2 by 3.\nSo if this is the case then the recurrence we\u00a0\u00a0 get is that we are guaranteed that the smaller of\u00a0\nthe t"
+    },
+    "187f80f8-6077-4940-83d3-e6bace060daf": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "wo partitions is at least one third in size\u00a0\u00a0 because the pivot is no more than one third\u00a0\naway, I mean at least one third away from the\u00a0\u00a0 boundaries. So we have the, the smaller of\u00a0\nthe two partitions is n by 3. So the worst\u00a0\u00a0 cases one is n by 3, the oth"
+    },
+    "44fa5b5b-2007-4cb8-a660-4b8a25f5a0fc": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "er is 2 n by 3, and\u00a0\nwe and if we solve this then we get n log n.\n\u00a0 So the question is whether we can somehow\u00a0\nmanufacture this for our case. So can we\u00a0\u00a0 find a good pivot of this form, a pivot which is\u00a0\nsomewhat guaranteed to give us a fixed fraction\u00a0\u00a0 of"
+    },
+    "eb04c331-3bd4-43d6-a285-cc765c105456": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " elements that will be pushed into one of the\u00a0\ntwo partitions, rather than this extreme case of\u00a0\u00a0 0, which we have when we take\u00a0\njust the position at the zeroth,\u00a0\u00a0 the value at the first position or the last\u00a0\nposition in the list, or any fixed position.\n\u00a0 "
+    },
+    "6153aa54-d7e7-4996-88c6-f1a6035d2bba": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "So here is a very clever idea which achieves\u00a0\nthis. So this is called the median of medians.\u00a0\u00a0 So what we will do is we will divide l into\u00a0\nblocks of five. So we will take our list\u00a0\u00a0 and then we will write the first five elements,\u00a0\nand then the next five e"
+    },
+    "2827b64f-ee56-4c44-8263-0c6f98b523df": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "lements. So we will just\u00a0\u00a0 block it off into blocks of five. So we\u00a0\nwill take the first block of five elements,\u00a0\u00a0 the second block of five elements and so on.\nNow for each block of five elements,\u00a0\u00a0 we can find the median by, if necessary by brute\u00a0\nforce. W"
+    },
+    "60300473-676d-4646-ad4f-671123253fdf": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "e can sort it and find the middle one or\u00a0\u00a0 we can just rearrange it by any standard sorting\u00a0\nalgorithm and find the value in the middle.\u00a0\u00a0 So for a block of five elements, it is a\u00a0\nconstant amount of work because the block size\u00a0\u00a0 is fixed to be five. It is"
+    },
+    "7a37e393-4541-4611-ac5d-d06eae42686c": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " a constant amount\u00a0\nof work to find the median of that block.\n\u00a0 So we can find the median of the first block, we\u00a0\ncan find the median on the second block and so on.\u00a0\u00a0 So we can find the median of each block. Now\u00a0\nof course, it could be that the final block"
+    },
+    "1fbf4bca-70de-4fc8-9586-4ae020a5f4a0": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "\u00a0\u00a0 has not got five, if it is not a multiple\u00a0\nof five. But as usual we will assume that\u00a0\u00a0 it is always going to be some kind of power\u00a0\nof five for the analysis to be simple.\n\u00a0 So in this way we have now taken this and we\u00a0\nhave picked out one element from t"
+    },
+    "4c184675-6784-4b1d-894d-41d85a3a1e4f": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "he first five,\u00a0\u00a0 the median, one element from the second\u00a0\nfive. So each block we have got the median.\u00a0\u00a0 So now we collect these medians. So\u00a0\nwe collect the medians. So we have,\u00a0\u00a0 just to remember, so we have some x 1 to\u00a0\nx 5, and then we have some y 1 to y"
+    },
+    "4626e4a3-be3b-4aa2-9363-54916cd95378": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " 5,\u00a0\u00a0 and then we have some z 1 to z 5, and so on.\nSo from here I will get some value\u00a0\u00a0 A 1, that is, the median of this thing. Then from\u00a0\nhere I will get a value B 1, which is the median\u00a0\u00a0 of this thing. From here, I will get a value C 1,\u00a0\nwhich is the me"
+    },
+    "78285755-ded7-4102-97e9-fe29598e651b": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "dian. So I will collect one value,\u00a0\u00a0 namely, the median from every block, and I will\u00a0\ncreate a new list, and this new list has the size\u00a0\u00a0 one fifth of the original list because I am\u00a0\nonly picking one in five from every block.\n\u00a0 And now what do I do? Well, "
+    },
+    "883e9aac-ce93-4cdc-8562-d09a94ccbade": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "I will recursively\u00a0\ndo the same thing for this list m. So I will\u00a0\u00a0 again divide this list of median block medians\u00a0\ninto groups of five and again find the median\u00a0\u00a0 of each of those blocks and pull it out. So that\u00a0\nis why this is called the median of medians"
+    },
+    "961c91f1-31f9-43ab-b6f9-ca3f697ed58a": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": ".\n\u00a0 So I find blocks, I take the median of each\u00a0\nblock, I collect it into a list, I make blocks,\u00a0\u00a0 I collect into list, I keep going until when\u00a0\nwell until the blocks that I have collected\u00a0\u00a0 amount to 5 or less and then I just take the\u00a0\nmedian at the end. "
+    },
+    "be90d0f7-c42c-40e9-91c5-db5d1b424e1f": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "So that is my base case.\n\u00a0 So here is the algorithm in, in python. So I take\u00a0\na list and I want to compute this median of block\u00a0\u00a0 medians. So if the list is smaller than 5, then I\u00a0\nwill just do some brute force. I will just sort it\u00a0\u00a0 and return the middle "
+    },
+    "9933c914-2087-4990-be08-e4fd124781d4": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "element. So I just take\u00a0\nthe length of the list and divide by 2 and that\u00a0\u00a0 should be roughly the middle element. It might\u00a0\nbe plus minus 1, it does not really matter.\n\u00a0 Otherwise, if it is bigger than 5, I will do\u00a0\nthis grouping into fives. So I will start"
+    },
+    "07dc3703-33e9-44af-bfbc-9542177ae798": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": ",\u00a0\u00a0 so capital M is going to be my collection of\u00a0\nmedian. So initially I have no medians to collect.\u00a0\u00a0 Now, what I will do is I will look at indices 0\u00a0\nto 4, then 5 to 9, and so on. So I will say let i\u00a0\u00a0 be 0, then let i be 5, then let i be 10, so I will\u00a0\n"
+    },
+    "5e24f8c2-021a-44de-84d6-687f31aa06d3": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "take the range 0 to length of l in steps of 5.\n\u00a0 And now I will take the slice from i to\u00a0\ni plus 5. So this is five elements, i,\u00a0\u00a0 i plus 1, i plus 2, i plus 3, i plus 4. So I take\u00a0\nthose five elements and store it into a new list.\u00a0\u00a0 I sort that list exact"
+    },
+    "672285de-837e-489a-ad2a-667274744f1f": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "ly as I did in base case,\u00a0\u00a0 and I take the median of that list and\u00a0\nappend it to this collection of medians\u00a0\u00a0 that I am going. So I am just taking the\u00a0\nfirst 5, finding the median putting it in.\n\u00a0 Now one thing to note is that if I know that\u00a0\nthere are 5 e"
+    },
+    "56c81fcf-e979-40fe-8593-458c64c3ad25": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "lements then the median is always\u00a0\u00a0 x 2 because x 0, x 1, x 2, x 3, x 4, so after\u00a0\nI sort it, I know that the second position,\u00a0\u00a0 the position index 2 is the median.\u00a0\nBut the problem is that I might have\u00a0\u00a0 at the end, an odd block which is not 5.\nSo if I ha"
+    },
+    "6f220502-416f-4b4b-934a-f298c6715c4a": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "ve an odd block which is not 5,\u00a0\u00a0 supposing it has only two elements, then if I\u00a0\nask for position 2 in a 2 element list it will\u00a0\u00a0 be outside and I will get an index error. So it\u00a0\nis always safer to just say that take for each\u00a0\u00a0 block that I construct, whic"
+    },
+    "49cee930-b1ca-49ff-9282-32027fbf63dc": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "h is typically\u00a0\n5 but the last block may be smaller than 5,\u00a0\u00a0 sort it and take the middle position by taking\u00a0\nthe length of that block divided by 2.\n\u00a0 So what we have done is basically we are\u00a0\nsequentially going block by block. We take\u00a0\u00a0 the first 5 elemen"
+    },
+    "3cc95688-248b-4e03-ac61-7737ff99bf1d": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "ts, put it in x, compute\u00a0\nthis, sort it, take the middle element,\u00a0\u00a0 and put it out into M, take the next block and\u00a0\nso on. And now, having constructed this M we just\u00a0\u00a0 recursively call our function on this list.\u00a0\nSo this will again divide by 5 and do it\u00a0\u00a0 "
+    },
+    "f36fcd89-f989-4db2-817d-753a8801a935": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "and keep doing it until the shrinking by 5\u00a0\nbrings us to a list which is smaller than 5,\u00a0\u00a0 and then the base case will exit. So this\u00a0\nis our median of median algorithms.\n\u00a0 So the goal of doing this was to guarantee somehow\u00a0\nthat the value that we pick out "
+    },
+    "2c03fbbd-daa0-4960-bd47-b547a5c9be4f": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "of this, so you\u00a0\u00a0 can check that this is not going to be the actual\u00a0\nmedian. But we do not want the actual median. What\u00a0\u00a0 we want is a pivot value which is guaranteed\u00a0\nto give us some fixed fraction of elements\u00a0\u00a0 in each of the partitions. That is all we n"
+    },
+    "f9e78cde-3d8a-463a-8f3e-604cd9a1b0e9": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "eed in\u00a0\norder for our quick select or quick sort recursion\u00a0\u00a0 to give us an n log n or order n thing.\nSo, so let us see why the median of medians\u00a0\u00a0 that we are constructing is a good value.\u00a0\nSo if we visualize the blocks, so this is\u00a0\u00a0 my block 1. So these a"
+    },
+    "cadee365-4b1d-418e-8375-dc38cb581dd6": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "re my first five elements.\u00a0\nSo each column in this is, so this is my entire,\u00a0\u00a0 from left to right, is my entire list, and I\u00a0\nhave been grouping it in groups of five.\n\u00a0 Now of course, each of these five is not sorted\u00a0\nbut let us pretend that it is sorted. S"
+    },
+    "645c820e-2569-47a1-9db3-0a4d0ce2193e": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "o let us\u00a0\u00a0 visualize it so that each of these blocks of\u00a0\nfive is internally sorted like we did here. So\u00a0\u00a0 we are looking at this value\u00a0\nthis x after it is sorted.\n\u00a0 So we keep this. So we are not actually doing\u00a0\nthis in the original list. We are just doing"
+    },
+    "9b8518e4-9de5-4a77-8e85-5384ec828318": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " it\u00a0\u00a0 block by block but let us see imagine that we\u00a0\nactually collected all the sorted blocks. Then\u00a0\u00a0 where would the median of each block lie? It will\u00a0\nlie in the middle of that thing. So these yellow\u00a0\u00a0 things are the medians of each of the blocks.\nAnd no"
+    },
+    "4c150d1c-1892-4085-bf8d-a82e28272681": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "w the yellow things are going to be finally\u00a0\u00a0 passed back to the median algorithm. So we are\u00a0\ngoing to get this blue thing which is roughly\u00a0\u00a0 the middle of that sequence as our final median of\u00a0\nmedians. So the question is what can we say about\u00a0\u00a0 how many e"
+    },
+    "9c09b56d-228e-45f2-9a41-9240908c7e80": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "lements are below or above that\u00a0\nblue one? So this is our question.\n\u00a0 So if you think about it, everything which is to\u00a0\nthe left of this, all these are our old medians,\u00a0\u00a0 these are all smaller than the blue ones. And\u00a0\nwithin each of those blocks everything"
+    },
+    "c5b61153-4889-4891-b5e7-916d2a7b57d1": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " which\u00a0\u00a0 is above is also smaller. So all these, these\u00a0\npositions which are marked in this brown color\u00a0\u00a0 are smaller than our median of medians.\u00a0\nAnd symmetrically if you drew it here,\u00a0\u00a0 everything in this section would be\u00a0\nlarger than our median of median"
+    },
+    "05bdb2a4-1d6f-4389-addb-572b9cd362c4": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "s.\n\u00a0 So you can see why. Because everything in this\u00a0\nrow, the same row is a median, is a block median\u00a0\u00a0 which is smaller. This is the median of the block\u00a0\nmedian. So this row is all the block medians and\u00a0\u00a0 these are all smaller than the blue element. And\u00a0\n"
+    },
+    "2df97b36-df53-4f29-accf-1df04b561bf0": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "within their corresponding blocks there are two\u00a0\u00a0 elements smaller than each of them because they\u00a0\nare the medians of their respective blocks.\n\u00a0 So how many brown elements are there?\u00a0\nHow many brown elements are there?\u00a0\u00a0 Well this is roughly half. So if I "
+    },
+    "eb612010-4f8c-4618-8c38-d5286e1aa7fc": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "had\u00a0\nlength of l, so this is roughly half,\u00a0\u00a0 on the left of the blue elements, and within\u00a0\nthat I am taking 3 by 5. Out of every 5,\u00a0\u00a0 I am taking 3. So I am taking 3 by 5.\u00a0\nSo this, the number of things in the\u00a0\u00a0 brown thing should be 3 by 5 times the lengt"
+    },
+    "2900f157-0ff8-44aa-ba59-4a1280305b00": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "h of l\u00a0\nby 2, so that is 3 by 10 times the length of l.\n\u00a0 So this is going to be the smaller part of the\u00a0\nthing. So at least 3 by 10 of the elements are\u00a0\u00a0 smaller than this median and at least 3 by 10\u00a0\nare larger than the median. So that is going to\u00a0\u00a0 say "
+    },
+    "33ab7068-647f-4b3e-89e1-238796af6f61": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "that the median lies between these values.\u00a0\nSo if you take the maximum value and I take\u00a0\u00a0 the things is going to be between 3 10,\u00a0\u00a0 so I am going to knock off at least\u00a0\n3 10th, this is what it means.\n\u00a0 So now this gives us a strategy\u00a0\nto get this block of "
+    },
+    "b8dfe323-b80c-4ad8-8938-d6a6228e09ea": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "medians. So\u00a0\u00a0 let me change that quick select and call it now\u00a0\nfast select. So fast select is like quick select,\u00a0\u00a0 except that instead of picking the first position\u00a0\nas the pivot, it calls this median of medians.\u00a0\u00a0 So you want to find the, the quick select"
+    },
+    "2636c0c2-29ac-40df-8c69-33cab94b7fc8": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " the kth\u00a0\nelement in, in capital L from the slice l to r,\u00a0\u00a0 instead of taking this, the position\u00a0\nl as your pivot you call this median\u00a0\u00a0 of medians algorithm on this slice.\nNow of course, this will give you a pivot\u00a0\u00a0 somewhere in this slice. So you have to"
+    },
+    "72aded2c-8e65-48f5-8522-4e8e44fdbcd8": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " find\u00a0\nthat position. So we will find the first i\u00a0\u00a0 in this range, which has the value of the\u00a0\npivot. And then we will just to make the rest\u00a0\u00a0 of the partitioning look similar, we will\u00a0\nmove that pivot to the left hand side.\n\u00a0 So what we are saying is\u00a0\ntha"
+    },
+    "b4e13d20-beac-4a3a-b20b-315859b3df73": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "t you give me the slice\u00a0\u00a0 L from l to r, I run median of medians on\u00a0\nthis, and I will get a pivot, and I will now\u00a0\u00a0 take this pivot and move it to the beginning\u00a0\nso that the rest of it can run as before.\u00a0\u00a0 So I move this pivot from wherever it is as found\u00a0"
+    },
+    "06637b12-b8c5-41ba-8219-c16b102b6205": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "\nby the median or median thing to the left hand\u00a0\u00a0 side and then I run everything as before.\nSo the partitioning is as before, and the\u00a0\u00a0 recursive calls are as before except that instead\u00a0\nof calling quick select, of course, I am calling\u00a0\u00a0 fast select. So th"
+    },
+    "3bc3f6d0-5f1c-4d8e-88ef-7286ef9f93a9": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "e only thing I have done is\u00a0\nI have changed the way I compute the pivot.\u00a0\u00a0 Instead of taking the leftmost element, I am\u00a0\nusing this median of medians and then doing it.\n\u00a0 So first of all how much time does it take to run\u00a0\nmedian of medians? Well that is ea"
+    },
+    "6d60f732-ba4a-4df1-a322-4340231e1489": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "sy. Median of\u00a0\u00a0 medians is basically taking the entire thing,\u00a0\ndoing a linear scan. So in order n time it is\u00a0\u00a0 reducing the problem to one fifth, and then\u00a0\nit is again reducing the problem to one fifth.\u00a0\u00a0 So this is one of our contracting series.\u00a0\nAnd so t"
+    },
+    "a965bf02-25e9-44c5-95f7-2f88d1a8445c": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "his whole thing is going to be\u00a0\u00a0 dominated by the time it takes at the root,\u00a0\nas we saw. So it is going to be order n.\n\u00a0 So the median of median finding this is actually\u00a0\norder n time. So finding the pivot is order\u00a0\u00a0 n time, and finding the partition is al"
+    },
+    "a83445c8-1d9c-46cb-920a-6a870b5d4d50": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "so\u00a0\norder n time because I do it in one scan.\n\u00a0 So overall as far as this fast select\u00a0\nis concerned, this part of it remains\u00a0\u00a0 order n. The processing time at each recursive\u00a0\ncall without the recursive call being counted\u00a0\u00a0 is order n. It is order n to find"
+    },
+    "6bc60ab0-c054-4df4-8a39-5a3fa0154301": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " the median\u00a0\nof block medians and another order n to do the\u00a0\u00a0 partitioning with respect to that median.\nAnd now what do we know? We know that like our\u00a0\u00a0 earlier example of quick sort with 2 by 3 and\u00a0\n1 by 3, here we know it is 3 by 10 and 7 by 10.\u00a0\u00a0 We kno"
+    },
+    "a118aacf-b690-47bf-bc87-82dac13d36d0": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "w that at least that many elements\u00a0\nhave been eliminated in this, in the,\u00a0\u00a0 or pushed into one of the two partitions.\nAnd since we have this, it is similar to our\u00a0\u00a0 earlier thing that we will just keep contracting.\u00a0\nThe maximum of this is strictly smaller."
+    },
+    "fed4610a-0f66-47e2-a142-db5e01e8f969": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "\u00a0\u00a0 So basically this recurrence of fast select is\u00a0\ngoing to be dominated by what happens at the root,\u00a0\u00a0 and I am going to get that fast select also runs\u00a0\nin linear time. So this is, it should be big\u00a0\u00a0 O of n. So, so t n is also big O of n.\nSo we have moved"
+    },
+    "9efb6344-1f16-4f65-b04f-5746ad084d37": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " from an n squared algorithm to\u00a0\u00a0 a big O of n algorithm by using this very clever\u00a0\nmedian of medians argument in order to find a\u00a0\u00a0 pivot, which is in a range which is guaranteed\u00a0\nto be between three, 3 10ths and 7 10ths of the\u00a0\u00a0 positions in the array.\nSo"
+    },
+    "02ba2bb1-b26a-4aa9-bc28-d3ed2c1ba841": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": ",\u00a0\u00a0 so we can of course use the same trick in\u00a0\nquick sort. So in quick sort also we can,\u00a0\u00a0 instead of taking the extreme element\u00a0\nor some fixed element as a pivot,\u00a0\u00a0 we could call median of medians, in order n\u00a0\ntime will get a good pivot, we will reduce\u00a0\u00a0 "
+    },
+    "b23dba95-15c9-4c83-9242-7f754b3b42e6": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "quick sort to taking quick sorting 3, 3 by 10\u00a0\nand 7 by 10, and it will become n log n.\n\u00a0 Now of course, there is a cost involved with\u00a0\nthis, so there are some constants and all that.\u00a0\u00a0 So when I say that this is going to be order n,\u00a0\nit is going to take s"
+    },
+    "205a2ab2-2cae-49ab-8028-3d52a858e71c": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "ome extra cost compared to\u00a0\u00a0 just doing a partitioning and we can basically\u00a0\nsee that in quick sort on an average, it will\u00a0\u00a0 be n log n even without doing this work.\nSo we typically do not use this x because this\u00a0\u00a0 overhead actually makes quick sort slower"
+    },
+    "cbfb7a61-0b5d-4b55-aed4-a9611e9e475c": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "\u00a0\nin the long run because in the cases where\u00a0\u00a0 it would run in n log n anyway by adding this\u00a0\noverhead of median of medians, we are actually\u00a0\u00a0 doing extra work. But it is useful to know that\u00a0\nquick sort can actually be made to run in n log\u00a0\u00a0 n time in the "
+    },
+    "86f90150-41e2-4b4e-b5f2-bd307b980a5c": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "worst case by applying this\u00a0\nmedian of medians as our pivot strategy.\n\u00a0 So to summarize, the median of block\u00a0\nmedians will help us to find a good pivot\u00a0\u00a0 in linear time. And now if we use this as our\u00a0\nstrategy to choose the pivot for our partitioning,\u00a0\u00a0 th"
+    },
+    "a0b206dd-1619-4990-beed-a6d0b83654f5": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "en this quick select actually\u00a0\nbecomes a linear time algorithm,\u00a0\u00a0 and quick sort becomes an n log n algorithm\u00a0\nin the worst case with this extra step.\n\u00a0 This also means that we can find the actual\u00a0\nmedian in linear time because in particular\u00a0\u00a0 this finds t"
+    },
+    "a3194211-6fe3-412c-af04-6e6c028a7c86": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "he kth largest number for any\u00a0\nk in linear time, and if I say k is n by 2\u00a0\u00a0 then I can actually find the middle element\u00a0\nin the sorted sequence in linear time. So\u00a0\u00a0 I can actually find the real median.\nSo even though the median of block medians\u00a0\u00a0 is not th"
+    },
+    "eaa2d5e6-a57a-4cda-9195-2d30d45209de": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "e real median, it is\u00a0\nsomewhere between 3 10s and 7 10s,\u00a0\u00a0 but still I will also be able to find\u00a0\nthe exact median by using quick select\u00a0\u00a0 with median of medians. So you can actually\u00a0\nwork it out that you can actually build in\u00a0\u00a0 that median of medians and "
+    },
+    "61d87abd-7195-40fb-a1e2-8a80af678691": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "make it a single\u00a0\nalgorithm which will find it but it is more\u00a0\u00a0 transparent to keep it as two separate things, as\u00a0\na median of block medians and then a quick select.\u00a0\u00a0 So you apply quick select with k equal to n by 2\u00a0\nand call median of medians for the piv"
+    },
+    "ef045440-bfbc-4118-a8e5-8d3ceddb5dc2": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "ot and you\u00a0\u00a0 will get the actual median in linear time.\nSo historically of course, quick sort is very\u00a0\u00a0 closely related to quick select, and in\u00a0\nfact Tony Hoare who invented quick sort\u00a0\u00a0 also described quick select in the same paper.\u00a0\nSo in 1962, the paper"
+    },
+    "9045a89b-172d-49d9-982e-3933e6036af2": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": " that talks about quick\u00a0\u00a0 sort also talks about how you can use it for\u00a0\nselection. So quick select was already known.\n\u00a0 And this clever algorithm which is\u00a0\ntherefore, median of medians was\u00a0\u00a0 came up over 10 years later in 1973, and\u00a0\nthis is again a bunch o"
+    },
+    "9bda8d68-ca86-4a2c-a181-3b321f979643": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "f heavy weights in\u00a0\u00a0 computer science. So Manuel Blum, Robert Floyd,\u00a0\nVaughn Pratt, Ron Rivest, and Robert Tarjan,\u00a0\u00a0 so each one of them on their own has made\u00a0\nseminal compute, contributions to various\u00a0\u00a0 aspects of computer science. And together\u00a0\nthe five "
+    },
+    "523da0ed-47f2-4723-85df-5895dfabd047": {
+        "content_id": 59,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Quick Select",
+        "week": 8,
+        "chunk": "of them came up with this very\u00a0\u00a0 clever idea of median of medians which makes\u00a0\nboth quick select and quick sort much faster."
+    }
+}

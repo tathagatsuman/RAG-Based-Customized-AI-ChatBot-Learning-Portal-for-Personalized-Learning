@@ -1,0 +1,135 @@
+{
+    "dd052faf-0d4d-4f8d-a8e4-c28c20511cd5": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "So, since we cannot construct this\u00a0\nlist of Aadhaar cards and SIM cards,\u00a0\u00a0 let us look at this efficiency in our running\u00a0\nsituation with respect to our GCD algorithms. \n\u00a0 So, this is our original GCD algorithm. The\u00a0\none which computed the list of common fa"
+    },
+    "6444e6d9-a214-48e9-bbda-3dd31d3d24e1": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "ctors,\u00a0\u00a0 and reported the last one. And what\u00a0\nwe observed was that this takes time\u00a0\u00a0 proportional to the minimum of the 2 numbers\u00a0\nbecause this for loop runs for that long. \n\u00a0 So, let us look at 2 GCD of 2 large numbers.\u00a0\nSo, let me take smaller numbers. S"
+    },
+    "48bc19f1-756a-4a57-98bc-2c51b9c7992f": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "o, let me\u00a0\u00a0 take two 7-digit numbers. So, let me so this is\u00a0\nnow GCD of 5678123, which is a 7-digit number,\u00a0\u00a0 and 8765423. So, let me first execute\u00a0\nthis so that this Python function is,\u00a0\u00a0 so now GCD, has been defined. So,\u00a0\nnow if I run this GCD on this nu"
+    },
+    "76fb9fc0-8bc1-43c1-a6e0-a2e20a72b208": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "mber,\u00a0\u00a0 then it reports an answer, reasonably fast as\u00a0\n1. So, it actually says that this is, now if I\u00a0\u00a0 suppose I increase the number of digits by 1. \nSo, supposing I make this two 8-digit numbers.\u00a0\u00a0 If I make these 2-into-8-digit\u00a0\nnumbers, and then I run "
+    },
+    "5b4551bb-1d0b-4f9b-949c-c8458ba5ac54": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "this GCD,\u00a0\u00a0 then you can see that it is really taking a long\u00a0\ntime, because now the minimum of 2 numbers is\u00a0\u00a0 now an 8-digit number, and if I take yet another\u00a0\ndigit, so supposing I make them 9-digit numbers,\u00a0\u00a0 right, then actually, if I start running this"
+    },
+    "af7b11a9-7a6d-4196-8aa7-c57fb8b95f95": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": ",\u00a0\nthis will run for an enormous amount of time,\u00a0\u00a0 I mean, so I can just keep talking and nothing\u00a0\nis going to happen. So, you can see that\u00a0\u00a0 having a kind of naive algorithm will seriously\u00a0\nlimit the efficacy of what you are doing. \n\u00a0 So, now, I just stop"
+    },
+    "abaacd23-3cb8-4829-92b5-a0ecf1e871de": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "ped that. So, now let me use\u00a0\ninstead, this first recursive algorithm that we\u00a0\u00a0 defined, which uses this minus a minus b format.\u00a0\nSo, let me use this, a minus b format on this.\u00a0\u00a0 And now let me go and try to re-evaluate\u00a0\nthis thing, which was taking a long"
+    },
+    "723dd99d-fff4-437a-950c-083d51cf064b": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": " time. So,\u00a0\u00a0 I take this 9-digit number. And now if I do a\u00a0\nminus b format, fairly fast, it gives me 1. So,\u00a0\u00a0 switching to this recursive algorithm, gives me a\u00a0\n1. But we already saw that this a minus b format\u00a0\u00a0 itself has problems because it will keep\u00a0\nsu"
+    },
+    "87ac1bdc-bac9-4c71-9356-2fd20825ced4": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "btracting and coming down very slowly. \n\u00a0 So, supposing I take something like 2 and\u00a0\na large number of 9s. So, this will take a\u00a0\u00a0 long time. But it will also explore some\u00a0\nother thing about Python, which is that\u00a0\u00a0 Python has something called a recursion li"
+    },
+    "4b43f053-16e8-4642-acad-b00c1f7adc32": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "mit. So,\u00a0\nthis is, every time you run a recursive function,\u00a0\u00a0 it has to remember the previous thing. \nSo, actually what this gives us is something\u00a0\u00a0 more serious, it gives us a recursion error. Now,\u00a0\nit is possible to fix this recursion limit and\u00a0\u00a0 make it"
+    },
+    "8a7490f0-d528-4ec2-9d45-cf6a96dc4292": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": " larger. But in this particular case,\u00a0\nif I want to make it large enough to do this,\u00a0\u00a0 it actually still does not work. So, but\u00a0\neven if I take a smaller thing, I mean,\u00a0\u00a0 this recursion limit is going to be a problem. \nBut now let us look at Euclid s algor"
+    },
+    "3030ef11-04c4-4db3-b7ce-5286af924d87": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "ithm. So,\u00a0\u00a0 Euclid s algorithm was the same\u00a0\nrecursive thing except I used\u00a0\u00a0 the remainder operation for subtracting, so I take\u00a0\nin the base case, I check whether b divides a,\u00a0\u00a0 if b divides a I return b, otherwise, I compute\u00a0\nthe GCD of b and a remainder "
+    },
+    "eb7dee77-cb00-46e4-b1f1-c5cc1abbdc51": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "b. So, let us now\u00a0\u00a0 use this as our operational definition. \nSo, first of all, we can go back and try\u00a0\u00a0 the first one that our earlier thing failed to\u00a0\ndo. And you can see that it does is very fast.\u00a0\u00a0 And I can probably add a lot more digits\u00a0\nto it. Let me"
+    },
+    "63771359-4f98-43c2-9378-9495f1d4a498": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": " see, I hope it will work.\u00a0\u00a0 So, you can see that our claim was that GCD,\u00a0\nEuclid GCD actually grows proportional to\u00a0\u00a0 number of digits. So, if I add 2 more digits,\u00a0\nit grows only as plus 2, not time 10. \n\u00a0 And in particular, if I do this one, which our\u00a0\ne"
+    },
+    "f9535a09-5b8f-44da-9fda-7a085644379e": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "arlier thing failed, because of the limit GCD,\u00a0\u00a0 the Euclid GCD, very quickly tells me that\u00a0\nthe GCD of 2 and a large odd number is 1. \n\u00a0 So, this is the real power of Euclid s\u00a0\nalgorithm. So, it actually gives you a very\u00a0\u00a0 efficient way to calculate GCD. "
+    },
+    "a34cc12b-f3ce-4926-bf8c-c974ecd745e3": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "And hopefully\u00a0\nthis gives you some feel for the dependencies\u00a0\u00a0 on some things which are proportional to\u00a0\nthe number value as a magnitude and the\u00a0\u00a0 number of digits in that value. So, Euclid\u00a0\nactually operates in number of digits. \n\u00a0 So, if I give you a lar"
+    },
+    "354070b0-d1a4-477d-9777-e9d0a6164a24": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "ge number of this is\u00a0\nbasically operating on the length of the string.\u00a0\u00a0 So, I can actually put much so Python, as\u00a0\nyou know, can take very large numbers. So,\u00a0\u00a0 I can take much larger numbers and hopefully\u00a0\nrun this. And Euclid s algorithm works. So,\u00a0\u00a0 it "
+    },
+    "a8bf34e8-0e48-4581-9f05-214fdc0987eb": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "can actually handle very large numbers because\u00a0\nit is actually it is like multiplying, I mean,\u00a0\u00a0 multiplying two very large numbers, if I add few\u00a0\nmore digits, it just takes a little bit more time.\u00a0\u00a0 Euclid s algorithm is like that. So, I hope you\u00a0\nget a f"
+    },
+    "ce651b89-cdb5-441e-88e3-b674d9135d42": {
+        "content_id": 12,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 04",
+        "week": 1,
+        "chunk": "eel for this from this running example."
+    }
+}

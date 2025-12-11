@@ -1,0 +1,821 @@
+{
+    "f4e4f579-0351-49ac-9555-4f821a5ab9b7": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "So, we saw one divide and conquer algorithm\u00a0\nthat was new, which was to count inversions,\u00a0\u00a0 which was a version of merge sort in which we\u00a0\nalso kept track of how many times we pulled\u00a0\u00a0 elements from the right hand side. Now, let\u00a0\nus look at a completely di"
+    },
+    "66f9232c-ae3a-4479-b894-a99aa6800956": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "fferent problem,\u00a0\u00a0 but one that we promised we would\u00a0\nsolve at the beginning of the course. So, if you remember one of the motivating\u00a0\nexamples for looking for efficient algorithms\u00a0\u00a0 was this video game. So, we said that\u00a0\nthere are several objects on the s"
+    },
+    "676fcb40-8f66-4029-99c9-e70a73d01e60": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "creen.\u00a0\u00a0 And perhaps one of the basic steps that the\u00a0\nvideo game has to perform every time there\u00a0\u00a0 is a change in the situation is to find\u00a0\nthe closest pair of objects on the screen. So, we said that this can be done by Brute force\u00a0\nby looking at every pai"
+    },
+    "6060953b-89c4-48cd-8291-2955ab31b2c1": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "r of objects on the screen,\u00a0\u00a0 computing the distance and then computing the\u00a0\nminimum amongst these, but this would take order\u00a0\u00a0 n square time and we promise that we would find an\u00a0\nalgorithm which does something better than this. So, what we are going to re"
+    },
+    "72d89cd4-674a-445b-a38d-86a19dc6d307": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "port now is this clever\u00a0\nalgorithm which is going to take n log n time.\u00a0\u00a0 And this clever algorithm is going to use\u00a0\u00a0 divide and conquer. So, let us set up this problem\u00a0\nmore formally than in this video game context. So, what we have are a collection\u00a0\nof p"
+    },
+    "3e8aaf9d-50b6-4b52-8bab-3a169b907007": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "oints and we want to find the\u00a0\u00a0 nearest or closest pair of points.\u00a0\nSo, what is a point? A point is just\u00a0\u00a0 a point in two dimensions. So, it has\u00a0\nan x coordinate and y coordinate. So,\u00a0\u00a0 every point p has an x part and a y part.\u00a0\nThis is just the normal poi"
+    },
+    "b21bc897-af26-43ad-a4f4-19258d2017ad": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "nt in 2D.\u00a0\u00a0 So, if I give you two points x1 and y1, x1, y2 and\u00a0\nx2, y2. So, you know that, by Pythagoras formula,\u00a0\u00a0 you know this distance. So, it is the square\u00a0\nroot of the length of the hypotenuse. So,\u00a0\u00a0 I mean, it is the length of the hypotenuse, is\u00a0\nth"
+    },
+    "4147c10e-6247-484d-b983-92d6223f8c07": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "e square root of the squares of the other side. So, this is what is called the Euclidean\u00a0\ndistance. So, we are just going to use\u00a0\u00a0 this distance to determine which pair\u00a0\nof points is closest to each other.\u00a0\u00a0 So, we are going to make one small assumption.\u00a0\n"
+    },
+    "206e07f4-f2fc-4693-8c9d-e28c0fe2efa4": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "So, we are going to assume that there are no\u00a0\u00a0 two points which have the same x coordinate.\u00a0\nIn the sequence of n points, there is x1 to\u00a0\u00a0 xn and y1 to yn. So, we have n x coordinates,\u00a0\nn y coordinates. We are going to assume that\u00a0\u00a0 no two points lie on th"
+    },
+    "533012b6-de58-4760-a1bb-a1547e11928f": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "e same vertical line,\u00a0\nno two points lie on the same horizontal line. Now, this may look like a serious\u00a0\nrestriction. But imagine that you\u00a0\u00a0 have such a situation that you have two\u00a0\npoints which lie on the same vertical line,\u00a0\u00a0 you just rotate the points b"
+    },
+    "9a2acb78-b4a3-45dd-a0a0-08a59b31fbfe": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "y a small degree. You\u00a0\njust rotate them by a little bit. Now, they are\u00a0\u00a0 no longer in the same vertical. So, it is just a\u00a0\nlittle bit of change of orientation. So, you just\u00a0\u00a0 perturb the points slightly by just rotating\u00a0\nthem. Their distances will not chan"
+    },
+    "1b543796-0864-4828-9489-52df4802b4cf": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ge. You can\u00a0\u00a0 check that for yourself. If you rotate points,\u00a0\nthe points relative to each other do not change. Their distance with respect to the x or y axis\u00a0\nmay change, but the distance relative to each\u00a0\u00a0 other does not change. If I just rotate something"
+    },
+    "fbf77bb2-4d0c-4ee0-a108-9d1f6fd69401": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": ",\u00a0\nthey all stay with the same relative distance. So,\u00a0\u00a0 I can assume that and solve it. Now, if you are\u00a0\nnot happy with that, then you can also take the\u00a0\u00a0 algorithm that we are going to look at and\u00a0\nyou can actually perturb it. The algorithm\u00a0\u00a0 can be made "
+    },
+    "2acda473-2d18-41b8-aba7-57350fbc6de3": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "more sophisticated to take care\u00a0\nof this, but it is convenient to assume that\u00a0\u00a0 these points actually have\u00a0\ndistinct x and y coordinates. So, as before, with every such problem,\u00a0\nwe said that in the video game case,\u00a0\u00a0 you can always do it by Brute force.\u00a0\n"
+    },
+    "8dd4f1e3-fade-43dc-bfe2-6a1de1107f07": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "You can take every pair of points pi,\u00a0\u00a0 pj and you can compute the distance\u00a0\nand then take the minimum of these.\u00a0\u00a0 But this, the problem is will take time n square.\u00a0\nIf there are n points, I have to compute distances\u00a0\u00a0 for n into n minus 1 by 2 pairs of po"
+    },
+    "193de264-104a-4afb-a351-1cde34897ae8": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ints.\u00a0\nAnd I want to do something better than that. So, let us see why this should at all\u00a0\nbe possible. I mean, why is it possible\u00a0\u00a0 to even imagine that there is something better\u00a0\nthan n square. So, let us look at the same problem\u00a0\u00a0 but in one dimension. "
+    },
+    "ce40f01b-4b80-4a39-9270-654a9a6c47fb": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "Now, in one dimension\u00a0\nalso the brute force algorithm. So, what is\u00a0\u00a0 one dimension mean? One dimension means that I do\u00a0\nnot have a y coordinate. I only have x coordinate.\u00a0\u00a0 So, everything is laying along a horizontal\u00a0\nline. And I have these points like thi"
+    },
+    "17d29bfc-a24b-47c8-984f-888dd88dbd56": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "s. And the distance between two points is just\u00a0\nthe difference between the two x values.\u00a0\u00a0 And because there could be one bigger\u00a0\none smaller, so remember, in the other\u00a0\u00a0 case, in the two dimensional case, we took\u00a0\nthe square, so we made it positive and th"
+    },
+    "62384ea0-faa9-4c9b-ac07-fca07cb5b590": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "en\u00a0\u00a0 took the square root, the positive square\u00a0\nroot, so the distance is always positive. Now here, if this was say minus 3 and this\u00a0\nwas minus 2, then you have to be a little\u00a0\u00a0 careful about how you measure the distance.\u00a0\nDistance should be plus 1 and not"
+    },
+    "d1ba7492-bf08-47f9-9abd-ed93ac4c6116": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " minus 1. So,\u00a0\u00a0 we will typically take the absolute value of the\u00a0\ndifference between the two points as a distance.\u00a0\u00a0 So, once again, the naive thing would\u00a0\nbe to just take this absolute value for\u00a0\u00a0 every pair of points. So, again,\u00a0\nyou have an n square alg"
+    },
+    "0095bb3d-7c31-43e6-8928-d1e0597e2acd": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "orithm.\u00a0\u00a0 If you do it even for one dimension,\u00a0\nthe brute force algorithm does not,\u00a0\u00a0 because it is one dimension, it does not\u00a0\nchange. It is still an n square algorithm. But we have a much cleverer\u00a0\nalgorithm for one dimension, which is\u00a0\u00a0 very simple. We "
+    },
+    "13c4df13-a332-410c-a677-4d40036aa23c": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "just sought the\u00a0\npoints. So, now if you sort the points,\u00a0\u00a0 so these are, if I am now looking\u00a0\nat points in sorted order,\u00a0\u00a0 then where are the neighbors of this point? Well,\u00a0\nit could be this point or it could be this point.\u00a0\u00a0 It is certainly not the point "
+    },
+    "801b8343-186e-4e3c-9ffa-983dfc968128": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "which is two steps\u00a0\naway, because no point which is two steps away\u00a0\u00a0 can be closer than some point which is\u00a0\none step away in the sorted sequence. So, the nearest points to any point\u00a0\np in the sorted sequence are its\u00a0\u00a0 neighbors before and after. So, then "
+    },
+    "8b09d79a-c6ee-4f3e-8011-756f22376616": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "all\u00a0\nI need to do is take the sorted sequence\u00a0\u00a0 and compare the gaps between the\u00a0\npoints. Nothing else matters.\u00a0\u00a0 But the number of gaps is n minus 1. I have\u00a0\nn points. So, I have a gap between the first\u00a0\u00a0 and second, second and third, and so on. So, I\u00a0\nca"
+    },
+    "b6a6c02e-dd6d-4c27-8d33-224758996609": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "n do one scan and an order n time I can scan\u00a0\u00a0 all the points to find the minimum separation\u00a0\nbetween adjacent points. So, therefore, the\u00a0\u00a0 problem has been reduced from n square to n log\u00a0\nn which is the time it takes to sort the points. So, this is our mo"
+    },
+    "2587ab88-c704-42a4-950d-3b4fae7928dd": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "tivation for\u00a0\nlooking for a better algorithm\u00a0\u00a0 n square in two dimensions. If I can\u00a0\ndo it in n log n in one dimension,\u00a0\u00a0 can I do something cleverer\u00a0\nthan n square in two dimensions.\u00a0\u00a0 So, since we are looking at divide and conquer,\u00a0\nit is logical that we"
+    },
+    "27e5db93-b90d-424a-bf3c-f36469094849": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " are going to somehow use\u00a0\u00a0 divide and conquer to do this. So, what does\u00a0\nit mean to divide these points? Well, remember\u00a0\u00a0 that our usual naive way of doing divide and\u00a0\nconquer is to divide the subset into two parts,\u00a0\u00a0 the first part and the second part. W"
+    },
+    "7040982f-954a-4ba3-9c5d-a9df693efc82": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "e take a\u00a0\nlist, we take the first half and the second half. So, here geometrically, what it means\u00a0\nis that we have a bunch of points.\u00a0\u00a0 So, we will somehow divide it. It does not\u00a0\nmatter whether we do it horizontally. But\u00a0\u00a0 just geometrically we will say, "
+    },
+    "fd9967fd-e92e-44ca-ba50-08ce796de38e": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "take everything to\u00a0\nthe left of the red line, take everything to the\u00a0\u00a0 right of the red like such that it is roughly\u00a0\nhalf on both sides. Then divide, we will say\u00a0\u00a0 recursively find the solution within each\u00a0\nhalf. So, I now know the shortest distance\u00a0\u00a0 to "
+    },
+    "73a633e9-0621-476f-9c93-fd6863a3669d": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "the left of the red line, I know the closest\u00a0\npair of points to the right of the red line. But the problem is that I could have some points\u00a0\u00a0 which are very close to the red line, which are in\u00a0\ndifferent halves. So, they might be very far away\u00a0\u00a0 from the c"
+    },
+    "c2bcfba7-64b9-42f3-befa-efa8d3dbba56": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "orresponding nearest points on their\u00a0\nside. But they are very close to each other,\u00a0\u00a0 but they are in the different sets, one is\u00a0\non the left set, one is on the right set. So, just like earlier, we had to count inversions\u00a0\nfrom between the left and the righ"
+    },
+    "2d88e617-2604-4877-acf1-f77d2643fcff": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "t set. Here we\u00a0\u00a0 also have to compare distances across this\u00a0\nboundary. Distances within one boundary,\u00a0\u00a0 within one of the two groups\u00a0\ngets done recursively,\u00a0\u00a0 but distances across the boundary is our\u00a0\nmerged step. So, we have to do the merging.\u00a0\u00a0 So, how d"
+    },
+    "3c501e21-b74d-4dce-92b5-784441228466": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "o we do that efficiently? So,\u00a0\nthat will be the crux of the problem. So, let us see how to do that. So, what\u00a0\nwe are going to do is we are going to\u00a0\u00a0 add some structure to the points that\u00a0\nwere given. So, we are given these n\u00a0\u00a0 points. So, this is the set "
+    },
+    "996d4e88-b591-4a56-9b88-7f5cacfd9035": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "of end\u00a0\npoints like the ones on the right,\u00a0\u00a0 which are kind of randomly scattered. So,\u00a0\nthese are something like 20 points are there. But now I am going to do two sorts.\u00a0\nSo, I am going to list out these points\u00a0\u00a0 in this direction. So, this will be 1, this"
+    },
+    "8da824c2-c467-43fc-8690-94d994db45f9": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "\u00a0\nwill be 2, this will be 3, this will be 4,\u00a0\u00a0 5, and so on. And I am also going to list\u00a0\nout the points in this direction. So,\u00a0\u00a0 this will be 1, this will be 2, this\u00a0\nwill be 3, this will be 4, and so on. So, this green list will be the Px list. So,\u00a0\nthis"
+    },
+    "76223168-0cbe-4142-a225-a2fd1274e59d": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " is a listing of the points in order of x\u00a0\u00a0 coordinate, and this is the listing of the points\u00a0\nin the order y coordinate. So, I am going to first\u00a0\u00a0 do this for the initial list of points. I am\u00a0\ngoing to first sort the initial list of points\u00a0\u00a0 by x and y. A"
+    },
+    "4d2c1f4b-4956-4bd7-bf7e-b39a1f99517d": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "nd then I am going to always apply\u00a0\nmy recursive algorithm assuming that the list of\u00a0\u00a0 points that I am given has this property that it\u00a0\nhas a x sorted component and a y sorted component.\u00a0\u00a0 I mean, notice that Px and Py, I am not dividing.\u00a0\nI am just prese"
+    },
+    "70309af1-78d7-4364-8692-7f2d81f491fb": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "nting to you P in two different\u00a0\u00a0 orders in the x order and the y order. So, Px has\u00a0\nall the points in P, Py has all the points in P. It is just that Px is sorted by x and\u00a0\nPy sorted by y. And as we go along,\u00a0\u00a0 we do not want to sort again and again. So, w"
+    },
+    "a3fe28af-24cf-43a8-a8f0-9b7a592be10d": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "e\u00a0\nhave to make sure that when we do this divide,\u00a0\u00a0 we can extract the sorted things for\u00a0\nthe two halves equally, I mean, easily.\u00a0\u00a0 So, this is the divide step.\u00a0\nI take a line such that I have\u00a0\u00a0 roughly half the points on\u00a0\nthe left. How do I know that? Wel"
+    },
+    "d7d66134-a32b-49c1-9792-85bde01a8549": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "l, I know that Px has the x\u00a0\ncoordinates in sorted order. So,\u00a0\u00a0 I can walk up halfway through Px. If I walk up\u00a0\nhalfway through Px, then at the middle of Px,\u00a0\u00a0 the median point of the list Px\u00a0\ntells me where to draw this line.\u00a0\u00a0 Everything beyond that is i"
+    },
+    "8e99a1c6-6687-4330-81da-881e22935ebf": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "n the right, everything\u00a0\nbefore that in the left. So, this splits it into\u00a0\u00a0 two parts. Let me call them Q and R. So,\u00a0\nthis was n points. These were both n by 2. So, now what we have to do is we have to\u00a0\ntake this Px, Py and divide each of these Q\u00a0\u00a0 into Qx"
+    },
+    "966f7214-385f-40d5-81ef-604c72cfe2f4": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": ", Qy and Rx, Ry, because\u00a0\nto continue this recursion\u00a0\u00a0 I need to solve problem with a given set of points\u00a0\nhaving an x sorted version and a y sorted version.\u00a0\u00a0 And I do not want to sort again. So, this n log\u00a0\nn I have done once. I do not want to do it agai"
+    },
+    "0bfbc8bc-2f45-415e-8678-cdeb322e182c": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "n.\u00a0\u00a0 So, how do I get these sets Qx, Qy. So, Qx is Q\u00a0\nsorted by x, Qy is Q sorted by y, and so on for R. So, the x sorting is easy, because\u00a0\nI just go from left to right\u00a0\u00a0 and I know where this red line was drawn.\u00a0\nSo, everything whose x coordinate is befo"
+    },
+    "000a65f9-230b-4497-8c5e-66d22ad59c10": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "re\u00a0\u00a0 the red line will be the first half of Px. And\u00a0\nthen everything which is after the red line will\u00a0\u00a0 be the second half of Px. So, splitting Px into\u00a0\nQx, and Rx is just a matter of splitting like in\u00a0\u00a0 merge sort, splitting Px into two halves,\u00a0\nthe first"
+    },
+    "af76bc69-3f70-4ff0-9e9d-1da6317240cd": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " half is Qx, second half is Rx. Now, the problem is that it\u00a0\nis not so easy to split y,\u00a0\u00a0 because I cannot split y this way.\u00a0\nBecause if I split the y this way,\u00a0\u00a0 then some of the points above R on the left,\u00a0\nsome of the points above R on the right,\u00a0\u00a0 simi"
+    },
+    "7c389e11-f05f-4a22-8153-de30994a9a8b": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "larly, some of the points below R on the\u00a0\nleft, some other points below R on the right.\u00a0\u00a0 So, I cannot just do the same thing for y. So,\u00a0\nfor y, I cannot just say that the first half\u00a0\u00a0 of Py is Qy and the second half is, it is not\u00a0\nthat way. So, I need to "
+    },
+    "51b2cc7d-fe8b-47d4-a548-5a19eee331c7": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "split y more cleverly. So, what I need to do is go through y from here\u00a0\nto there and decide for every point should it be\u00a0\u00a0 left or right. So, how do I know whether\u00a0\nit is left or right? It depends on the x\u00a0\u00a0 coordinate of that point. But what do I know?\u00a0\nI"
+    },
+    "5aa5703b-3a31-4d27-9071-3ac70e9ceb65": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " know that the red line divides the two. So,\u00a0\u00a0 for instance, when I am doing the split, I\u00a0\ncan either pick up the largest x value in Q\u00a0\u00a0 or the smallest x value in R and use that as my\u00a0\nboundary. So, let for example, xR be the smallest.\u00a0\u00a0 So, this is the o"
+    },
+    "917ae10b-4258-4df0-af0e-f4eea0d25e98": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ne. So, this is the smallest\u00a0\nthat is the left most point in the right set. So, now as I go up, what I do is I check this and\u00a0\nI say where it is with respect to this. It says,\u00a0\u00a0 it is bigger than that. So, then I\u00a0\nwill say, okay, then this will go to\u00a0\u00a0 Ry."
+    },
+    "4375b1d1-a943-4c2a-bd41-c78d1d6162c8": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " Similarly, this will go to Ry. Now, I\u00a0\ncome to this point, and I say where is it\u00a0\u00a0 with respect to that. It will say, its x value\u00a0\nis smaller than this xR, then this must go to\u00a0\u00a0 Qy, this must go to Qy. So, in one scan\u00a0\ngoing up by looking, so I am lookin"
+    },
+    "17bbf02f-4ee7-421f-aa2e-5e8c4f9da29e": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "g the\u00a0\u00a0 y coordinates are sorted. So, I am doing it in\u00a0\ny order. So, the output is coming in y order.\u00a0\u00a0 This is important. I do not have sort again. I\u00a0\nam getting the values. It is like an unmerge. So, in merge, we take two sorted\u00a0\nthings and produce a sor"
+    },
+    "77969a10-86c6-41bd-b932-5770d78d16f6": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ted thing.\u00a0\u00a0 Now, I am taking a sorted sequence and dividing it\u00a0\ninto two groups. But the two groups I am creating\u00a0\u00a0 are individually in sorted order, because I am\u00a0\nbuilding them up in the same sequence. So, Qy and\u00a0\u00a0 Ry are being constructed by scanning Py"
+    },
+    "b0d9103e-8cc8-4932-ab8c-e548a0e2edae": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " in sorted\u00a0\norder, so they are themselves in sorted order. So, if you accept this, then I just do this.\u00a0\nFor every P in Py that is in sequence if the\u00a0\u00a0 x coordinate of p is less than R, xR, I put it in\u00a0\nQy, if it is at least xR or more, I put it in Ry.\u00a0\u00a0 A"
+    },
+    "58fd867c-e5ba-4eba-9581-8a8eb2a22cbd": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "nd this happens in one scan. And in\u00a0\none scan, notice the point is at Qy\u00a0\u00a0 and these things are sorted. I do not have to\u00a0\nsort them again. Now, these are clearly sorted,\u00a0\u00a0 because they are the first and\u00a0\nsecond halves of a sorted list.\u00a0\u00a0 But these are bein"
+    },
+    "517bf2d4-a941-4ed2-acf6-015f08dcd412": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "g built up in sorted\u00a0\norder. So, they are also sorted. So, therefore, in one left to right scan, I have\u00a0\nsplit Px into Qx and Rx and in one bottom to top\u00a0\u00a0 scan I have cleverly split Py into Qy and Ry.\u00a0\nSo, I now have on this side, Qx and Qy and on\u00a0\u00a0 this "
+    },
+    "b8bc56e2-aa9f-4db9-a1b5-fc3b019c66e8": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "side I have Rx and Ry. So, now I can tell\u00a0\nthese guys to go and do their job recursively,\u00a0\u00a0 because they are the same\u00a0\nstructure as the original problem. And the key thing is that the whole,\u00a0\nthis whole splitting operation,\u00a0\u00a0 drawing the line and splitting"
+    },
+    "b9551645-ec1b-441b-ad8e-3d35bd0a303d": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " it into two parts\u00a0\nand making sure that each part is decomposed into\u00a0\u00a0 the x and y part, everything was done in\u00a0\nlinear time. This whole thing was done in\u00a0\u00a0 two or three scans. So, order n time is all\u00a0\nI did. This is crucial because we know that\u00a0\u00a0 if you "
+    },
+    "1ca772fa-465b-4c6d-93c0-faf1c0fcddd3": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "spend more than order n time and\u00a0\nbreaking up things, then your recurrence\u00a0\u00a0 is not going to work properly. So, in\u00a0\norder n time, I have done the dividing. So, now I want to do the actual recursive\u00a0\nalgorithm. So, what I want to do is compute\u00a0\u00a0 the closest"
+    },
+    "e624f7ef-5ee5-41fc-8567-ab7a38bb5179": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " pair for the original set which is\u00a0\ngiven to me with this decomposition Px, Py sorted\u00a0\u00a0 by x and sorted by y. It is not a decomposition,\u00a0\nbut two presentations. So, Px is all of P. Py is\u00a0\u00a0 all of P. But one is sorted by x, one is sorted\u00a0\nby y. So, then I "
+    },
+    "1e4867db-c717-4eaa-8a89-61351ede9e57": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "will recursively I will split it\u00a0\u00a0 so that I here have Qx, Qy and Rx, Ry. This is\u00a0\nwhat we just showed we can do it order n time.\u00a0\u00a0 And we will recursively compute the\u00a0\nclosest pair of both of these sets. So, now I know, for instance, maybe that\u00a0\nthis is t"
+    },
+    "db94750b-a203-497b-bb73-6b74383b72cd": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "he closest pair here and this is\u00a0\u00a0 the closest pair here. So, the problem is how\u00a0\nto combine these recursive solutions, because\u00a0\u00a0 in the process of doing this, there may\u00a0\nbe some closest pair across this boundary. So, let us look at just combining the solu"
+    },
+    "70f42098-544e-403f-ae45-8fe616f3dec1": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "tion\u00a0\nand that is really the clever and very tricky\u00a0\u00a0 part of this divide and conquer. So, remember that\u00a0\nwe have found recursively the smallest distance on\u00a0\u00a0 the right and the smallest distance on the left.\u00a0\nSo, the dQ is the smallest distance in the Q se"
+    },
+    "4e7b1cb0-44ca-4d1f-99fe-7953ea8e1bc9": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "t,\u00a0\u00a0 dR is the smallest distance in the R set.\u00a0\nSo, let me use delta, this Greek letter delta\u00a0\u00a0 to denote the smaller of these two. So, it is the\u00a0\nminimum of these two values. So, my goal is to\u00a0\u00a0 find out whether there is something which crosses\u00a0\nthis boun"
+    },
+    "21d37149-c47d-4d5f-af18-5ce044bd9296": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "dary, which is distance less than delta. I know that within each of these two halves, I\u00a0\nhave nothing which is closer than delta. Delta is\u00a0\u00a0 the smallest I see between the left and the right\u00a0\ncombined. So, what can we do with this delta?\u00a0\u00a0 So, what we can "
+    },
+    "8663d219-89fa-40d3-802b-343655946c48": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "do is we can focus our attention\u00a0\non this band which is within distance delta of\u00a0\u00a0 the separator. So, this distance here\u00a0\nis delta. So, I draw a line which is\u00a0\u00a0 delta to the left of the separator, and I draw a\u00a0\nline which is delta to the right of the separ"
+    },
+    "796836c5-527e-40c7-a211-45669ca16588": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ator.\u00a0\u00a0 So, this delta band, so it is delta\u00a0\nplus delta, so it is two delta wide. The claim is that if I want to look\u00a0\nfor these boundary crossing points,\u00a0\u00a0 if I want to look for a point here and a\u00a0\npoint here, then I should look only within\u00a0\u00a0 this band. W"
+    },
+    "12083fe2-f039-4180-89a9-ba1e1565bb0d": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "hy, because if I have a point which\u00a0\nis outside this band and it must cross this band\u00a0\u00a0 to go to some point other than there, it must\u00a0\nfirst cross the band. So, band is already delta\u00a0\u00a0 wide. Now, this is outside the band. So, it is\u00a0\nmore than delta. So, th"
+    },
+    "1c084a74-4060-482e-a216-1fada414a779": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "e distance to the other\u00a0\u00a0 side cannot be less than delta. So, anything which\u00a0\nis more than delta I am not interested in, because\u00a0\u00a0 I already have a delta solution here. So, no\u00a0\npair outside this band can be closer than delta. So, therefore, it is sufficien"
+    },
+    "613ec0b4-60ec-441a-88e6-1df1981f2e1d": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "t to focus\u00a0\non those points which lie inside the band.\u00a0\u00a0 But there is no reason, in principle,\u00a0\nwhy everything cannot lie inside the\u00a0\u00a0 band. All of these points could lie inside\u00a0\nthe band. I mean, I could have a different\u00a0\u00a0 pathological picture in which I "
+    },
+    "638ab5b8-1bca-403d-8d39-4bff61b508e6": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "have these\u00a0\nbands like this and everything is here.\u00a0\u00a0 This could be the picture of Q and R. So, in\u00a0\nprinciple, there is nothing to prevent this. So, why is it that comparing the band across this\u00a0\nband is going to be more efficient or somewhat\u00a0\u00a0 efficient a"
+    },
+    "ef6ae5c1-a732-411b-bf14-95b453d77a4f": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "s compared to just comparing everything\u00a0\nin Q with everything in R, because everything in Q\u00a0\u00a0 and R could actually lie inside this band. So,\u00a0\nwhat we will see is that this is not possible\u00a0\u00a0 and this is really remarkable. It says that in\u00a0\nthis band, there c"
+    },
+    "057bfca5-b0bd-4439-9ed6-581c89129f09": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "an only be very few points. So, now, I am focusing on the band. So, this is\u00a0\nthat band. I am only looking at points inside the\u00a0\u00a0 band. So, the left hand side is Q as before, the\u00a0\nright hand side is R as before. And now this is\u00a0\u00a0 my band. So, I have delta h"
+    },
+    "90f2f6bd-6e70-4467-9b05-3d20aa06deba": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ere, and I also have a\u00a0\ncorresponding delta on the other side. So, what I\u00a0\u00a0 have done is I have taken this band and I have\u00a0\nfurther subdivided it into these boxes of side\u00a0\u00a0 half delta. So, each box, this is delta, this is\u00a0\ndelta, delta, delta. So, I have t"
+    },
+    "7535ac7f-432c-4540-ab99-d8d4560a9550": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "aken each thing,\u00a0\u00a0 and I have divided it into these smaller squares\u00a0\nof half delta. So, this is just to visualize. So, I have just, so I have basically taken the\u00a0\nband in some sense and divided it into four\u00a0\u00a0 strips. So, it was two strips of delta. I have\u00a0"
+    },
+    "d4e19e0c-b82f-4720-a68e-d855ae091229": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "\nnow made it four strips of half delta and cut it\u00a0\u00a0 across in half delta squares. So, as we said, some\u00a0\nof the points from our old set lie inside this\u00a0\u00a0 band. So, they are lying here, for example. But\u00a0\nmany of the points are lying outside. And those\u00a0\u00a0 are "
+    },
+    "67c7b20e-cc83-4164-a8b1-9551f0ad4d24": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "those points I do not care about, because\u00a0\nthey cannot contribute to my best solution. Now, the first and the most\u00a0\ncrucial observation is that,\u00a0\u00a0 actually, these boxes cannot hold more than\u00a0\none point each. So, we were earlier asking\u00a0\u00a0 whether they can be"
+    },
+    "b26eb6c4-ba9d-469c-83d3-12438bd0d339": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " lots of points inside this\u00a0\nband, in fact, can all the points be there.\u00a0\u00a0 But the first observation is that you cannot\u00a0\nhave, so these points have to be somewhat\u00a0\u00a0 separated. Now, why is that? Because if you\u00a0\nlook at two points within a box, what is the\u00a0\u00a0"
+    },
+    "b5fe9d83-12d6-489e-8512-595a640e3514": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " furthest they can be. The furthest they can\u00a0\nbe is to be at opposite corners of the box. So, if they are at opposite corners of their\u00a0\nbox, then the distance that separates them\u00a0\u00a0 is the diagonal of the box. But remember\u00a0\nthat each box is entirely on one "
+    },
+    "f993ffcc-ac60-4eff-a4e0-35df52bb6aea": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "side,\u00a0\u00a0 either it is on the left or on the right. So,\u00a0\nthere are two points which are within one box,\u00a0\u00a0 they are either both in Q or they are both in\u00a0\nR. So, their distance has to be at least delta.\u00a0\u00a0 But this diagonal is actually smaller than delta.\u00a0\nIf w"
+    },
+    "3074e912-34ad-4787-a8b3-2c2327e91760": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "e just calculate the, use Pythagoras theorem,\u00a0\u00a0 this is delta divided by square root of 2.\u00a0\nSo, square root of 2 is more than 1, is 1.4.\u00a0\u00a0 So, this is 1 upon 1.4 times delta. So, this\u00a0\nis something which is smaller than delta. So, if there were two points "
+    },
+    "abcf28fa-5405-41e4-b8fc-c76f97bbed51": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "inside a\u00a0\nsquare, then they would be less than delta.\u00a0\u00a0 But we cannot have on either side of the separator\u00a0\nany two points which are closer than delta,\u00a0\u00a0 because delta is the closest possible\u00a0\ndistance for any two points on the same\u00a0\u00a0 side of the separator"
+    },
+    "0f502e25-7e19-43e0-9d26-9113ba65cab2": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": ". So, that means\u00a0\nthat these boxes all contain at most\u00a0\u00a0 one point each. So, now, we are looking\u00a0\nat points across these boundaries. So, supposing I have a point here,\u00a0\nand now I want to find a point\u00a0\u00a0 which is very close to this point but on the\u00a0\nother si"
+    },
+    "462f4bcb-a16e-49a4-a378-9e7da8ff200b": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "de. So, remember that this is delta.\u00a0\u00a0 So, perhaps this is just inside this side\u00a0\nand maybe this is just outside that side. So,\u00a0\u00a0 this is about the closest I can get while\u00a0\nbeing far away in terms of the boxes.\u00a0\u00a0 So, the point is that if I start in this\u00a0\nr"
+    },
+    "b245f394-5f3c-4ca5-8b7b-3296d14c81da": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ow, technically I cannot go more than\u00a0\u00a0 three rows above. I cannot even reach the\u00a0\nthird row, but this is just to be safe. Now, let us look at our points in the y direction.\u00a0\nSo, we have points which are sorted in this\u00a0\u00a0 direction. So, where do they lie. S"
+    },
+    "b0406ca6-e3e3-4232-b7a4-227f5837799d": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "o, I could\u00a0\nhave a point just above this first point. So,\u00a0\u00a0 let me write a 1 here. I could have a point\u00a0\nwhich is very close to this one point,\u00a0\u00a0 but it might be here. But then I cannot\u00a0\nhave anything else on that side. So,\u00a0\u00a0 another point which is still i"
+    },
+    "bb659ea4-bd70-4a16-848b-3ca55aed7a27": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "n the same row\u00a0\nmust be somewhere else. So, there may be three\u00a0\u00a0 other points which are bigger than 1 in the same\u00a0\nrow, but they must all lie in different boxes. So, now if I have a fifth point which is bigger\u00a0\nthan 1, a fifth point, the four points bigger"
+    },
+    "1a1a14d5-d277-4f16-b78a-f54f6fc1c451": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " than\u00a0\u00a0 1, then it must lie in the row above. So, I could\u00a0\nhave 5, 6, 7, 8. Now, if I have one more point,\u00a0\u00a0 it must lie one more row above. So, basically, the\u00a0\nworst case is that this point was actually here\u00a0\u00a0 and then I have 1, 2, 3, 4, 5, 6, 7, 8, 9,\u00a0\n1"
+    },
+    "1a424b02-4512-4d8f-8e28-9f59b3d19d73": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "0, 11, 12, 13, 14 and 15. So, I have to check\u00a0\u00a0 between 1 and 16. So, there is one point\u00a0\nwhich is 15 points away in the y direction,\u00a0\u00a0 but it must lie within this 4.4,\u00a0\n4 by 4 neighborhood of boxes. So, if I look at the box in which\u00a0\nthe point I am examin"
+    },
+    "c4b63404-2fda-44ef-bb9e-639b88d85ad8": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ing sits,\u00a0\u00a0 then any point which, so I am, remember, I am\u00a0\nalways doing this in ascending order. So, if this\u00a0\u00a0 point is close to a point which is smaller than\u00a0\nthis in the y direction, that point would have\u00a0\u00a0 found this as a neighbor. So, I am starting wit"
+    },
+    "426d05c6-9ce1-4715-a99c-fb039883ae23": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "h\u00a0\nthe smallest y and going upwards. So, therefore,\u00a0\u00a0 when I am looking upwards, I am saying that if I\u00a0\nwant to look for points which are within delta,\u00a0\u00a0 they cannot be more than outside this 4\u00a0\nby 4 box compared to where my point is. And in the 4 by 4 box"
+    },
+    "cad3f25f-8fd9-41ef-ad2a-5203e0e52690": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " there are 16\u00a0\nboxes, they can be at most 16 points.\u00a0\u00a0 So, therefore, I need to compare this one\u00a0\npoint against at more 15 other points.\u00a0\u00a0 It is a fixed number, it does not depend\u00a0\nhow many points there are to start with.\u00a0\u00a0 I cannot have more than 15 candi"
+    },
+    "5b7e73c3-ff91-4e09-b955-097f4d203e71": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "dates\u00a0\nfor any given point to compare. So, this\u00a0\u00a0 is the reason why now this comparison becomes\u00a0\nefficient, because I have to compare each point\u00a0\u00a0 with a constant number of points, not a number of\u00a0\npoints which is proportional to the total number. So, esse"
+    },
+    "03cb3342-d1c2-4965-b6b6-9e126cb4982b": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ntially, what I need to do is first\u00a0\ndetermine which points are inside this band\u00a0\u00a0 in sorted y order. So, I do the same trick as\u00a0\nwe did when we split the thing. So, remember,\u00a0\u00a0 when we split the thing, we looked at Py,\u00a0\nand we decided whether to put somet"
+    },
+    "5e3f8372-83fd-42a9-9d39-508b5f9d671c": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "hing in Qy\u00a0\u00a0 or in Sy, in Ry depending on the x\u00a0\ncoordinate. Now, what I can do is\u00a0\u00a0 I can go through Qy. I can do a kind of clever\u00a0\nmerge, basically. I go through Qy and Ry. I take\u00a0\u00a0 the smaller y coordinate. I check if\u00a0\nthe x coordinate lies in the band."
+    },
+    "908d8a60-90f0-471a-b577-1289ab117a53": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " What is the band? The band is the separator\u00a0\nplus minus delta. So, the x coordinate rise\u00a0\u00a0 in the separator plus minus delta x, then I will\u00a0\nput it into Sy. If it does not, I throw it away.\u00a0\u00a0 Then I will pick up the next smallest y coordinate\u00a0\nbetween Q a"
+    },
+    "4f3641e5-7fbe-4982-a49e-b44a055a7216": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "nd R. So, I am merging these two\u00a0\u00a0 and then I filter. So, I want x to lie between\u00a0\nthis. So, from Qy and Ry I can generate the set\u00a0\u00a0 Sy, which is all the points in sorted order\u00a0\nwhich lie inside this band of interest. And now once I have got the points ins"
+    },
+    "9ad3c08a-d3a0-47de-a4ea-ae7a84057794": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ide this\u00a0\nband of interest, I take the first point and\u00a0\u00a0 I compare it to the next 15 points, because\u00a0\nthose are the only ones which can lie within\u00a0\u00a0 delta of this. If none of them are there, then I\u00a0\ntake the second point and compare it to the next\u00a0\u00a0 15 poi"
+    },
+    "bf10f218-50f3-4ccf-9283-c2361512a843": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "nts. I will take the third point compare\u00a0\nit. So, for every point in Sy I am comparing\u00a0\u00a0 it to at most 15 more points. So, I am doing 15\u00a0\ntimes n work. So, basically it is order n work.\u00a0\u00a0 So, all these things now are again it is a linear\u00a0\nscan. It is some "
+    },
+    "616e1f16-d8ef-45f6-ab13-d29f1755284a": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "order n work to scan this. Now, this is a kind of very, I would say,\u00a0\nconservative thing. You can actually do a tighter\u00a0\u00a0 calculation than this. But this loose calculation\u00a0\nis very clearly correct that you do not ever find\u00a0\u00a0 a point which is more than 15 p"
+    },
+    "0bbad078-63e4-4741-aba0-ceb9c53f7567": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "oints away in the\u00a0\ny direction regardless of the coordinate. We are\u00a0\u00a0 not talking about, we are saying in the sequence\u00a0\nif I am looking at x1, then I only have to look up\u00a0\u00a0 to x16. If I am looking x3, I only have to look\u00a0\nup to x18, and so on. So, this is "
+    },
+    "4a768d9b-d914-4180-a40f-88c06a799eb2": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "what we do. So, it is a little tedious to write\u00a0\nthis whole thing in Python and fit\u00a0\u00a0 it on a slide. So, let me just write it\u00a0\nin pseudocode to explain what we did.\u00a0\u00a0 So, you are computing the closest pair of a set\u00a0\nP, but we assume that set P is given to "
+    },
+    "c65398a1-fb0a-4f98-88a1-8b093b41abf3": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "us in two\u00a0\u00a0 sorted lists. There are two sorted lists,\u00a0\neach of which has all the points in P,\u00a0\u00a0 but one is sorted by x coordinate,\u00a0\none is sorted by y coordinate. So, first of all, if it is a very small list,\u00a0\nif it is up to 3, I will just do it brute forc"
+    },
+    "91502d19-c017-494d-ba32-54bd7750be9e": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "e.\u00a0\u00a0 I will just compute every pair in that. So,\u00a0\nthere are three points. I will compare all the\u00a0\u00a0 three pair-wise distances 1 to\u00a0\n2, 2 to 3, 1 to 3, and report\u00a0\u00a0 the closest pair and the distance of that. So,\u00a0\nI will just do it by brute force. If it is fo"
+    },
+    "07bce044-b12f-4eec-aad7-d85210c5f33f": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ur\u00a0\u00a0 or more then it makes sense to divide, because\u00a0\nthen I will have halves which are at least two. So, I will construct as we said before\u00a0\nQx, Qy, Rx, Ry by finding the midpoint.\u00a0\u00a0 So, I would, remember that this is sorted. So, I\u00a0\ndo not have to sort aga"
+    },
+    "f479580b-90e5-4b05-ae6a-0fee15cf595a": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "in. So, I will walk up Px\u00a0\u00a0 halfway and call that Qx. The remaining\u00a0\npart I will put an Rx, I will remember the\u00a0\u00a0 extreme coordinate of Px and Rx and using\u00a0\nthat Qx and Rx extreme coordinate I will\u00a0\u00a0 walk up Py and split it as Qy and Ry by\u00a0\ndeciding which "
+    },
+    "cd04ca39-59d9-4017-bbd0-715a53a5d339": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "side each point goes to. Now, I will recursively find the solution for\u00a0\nthese two halves. So, it will report back to\u00a0\u00a0 me the nearest pair of points. So, q1 and q2 are\u00a0\nthe points, r1 and r2 are the points and dQ is the\u00a0\u00a0 distance between these two nearest"
+    },
+    "0364db1e-af8d-497c-bdf2-9a45b4522f7d": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " points in Q and\u00a0\ndR is the distance between nearest points there.\u00a0\u00a0 So, now, once I have this, remember that\u00a0\nimplicitly this delta, we needed the delta\u00a0\u00a0 only for the proof, we do not need it for the\u00a0\ncode. Delta is the minimum of this dQ and dR.\u00a0\u00a0 So, u"
+    },
+    "1102a71d-9401-4ab6-9913-1efa6a20e89f": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "sing that delta I will construct\u00a0\nthis Sy. I will look for all the points\u00a0\u00a0 whose x coordinate lies between the\u00a0\nseparator minus delta to separator plus delta\u00a0\u00a0 and put it into Sy in ascending\u00a0\norder in y coordinate. And now I will do this linear\u00a0\nscan, sc"
+    },
+    "f0a1e851-b51c-41ce-9212-42c466b8e661": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "an every point with the\u00a0\u00a0 next 15 points in order to find out the\u00a0\nsmallest separation within this band.\u00a0\u00a0 So, now I have three candidates. I have the\u00a0\nleft hand side candidate, which gave me dQ,\u00a0\u00a0 the right hand side candidate, which gives me\u00a0\ndR and this"
+    },
+    "1b864423-18b9-4a89-854f-5cf3678904aa": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": " band provides a third possibility\u00a0\u00a0 saying this is the smallest distance within this\u00a0\nband for points which could be on either side.\u00a0\u00a0 So, I take depending on which of them is\u00a0\nminimum, dQ, dR and dS these three distance,\u00a0\u00a0 whichever is minimum, I use tha"
+    },
+    "944caa34-e73f-47eb-aa00-e01bc55f6849": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "t as my answer. And\u00a0\nI say, okay, this is the pair of points overall\u00a0\u00a0 which has a minimum distance and here is\u00a0\nthe distance. So, this is my algorithm. So, if you want to analyze this, there is an\u00a0\ninitial step which is outside this function,\u00a0\u00a0 which is t"
+    },
+    "da0ed127-fe91-4b21-8706-cbded1acf52b": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "he sorting. So, initially, I\u00a0\nhave to do some n log n work to sort this.\u00a0\u00a0 But it will turn out the whole thing\u00a0\nas n log n, so it does not matter.\u00a0\u00a0 So, now I have a recursive\u00a0\nalgorithm and all this stuff\u00a0\u00a0 took On time. So, in order n time I was able to"
+    },
+    "3c109327-ad49-43d4-bce5-b881894df837": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "\u00a0\nsplit Px, Py into these four lists Qx, Rx and Qy,\u00a0\u00a0 Ry. Similarly, in the combined step, I was\u00a0\nable to combine this by constructing Sy in\u00a0\u00a0 linear time and doing a linear scan on S. So,\u00a0\nall the splitting and combining all the work of\u00a0\u00a0 generating the r"
+    },
+    "cbdb33ce-7d00-477d-a91a-a626ee0549e4": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "ecursive step and using the\u00a0\nsolution from the recursive step is order n. And, of course, now I have to do two times the\u00a0\nwork for the half. So, the recurrence is just\u00a0\u00a0 solve the problem for half the size of points\u00a0\ntwice, ones for the left, ones for the "
+    },
+    "f6773184-7ebe-4988-82e2-09c5bd4acf29": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "right,\u00a0\u00a0 and do this order n work to split and combine.\u00a0\nSo, this is exactly the recurrence for merge sort,\u00a0\u00a0 because we have a trivial case, where we will just\u00a0\ndo some constant amount of work in return. So,\u00a0\u00a0 therefore, this whole thing is n log n. So, t"
+    },
+    "77a96c61-fec8-4ef4-b993-14275c0c873b": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "his\u00a0\npart is n log n. And then we also have an extra,\u00a0\u00a0 initial step of sorting the P to start with,\u00a0\nbecause that does not come to a sorted. So, that\u00a0\u00a0 is an extra n log n, but so we do n log n twice,\u00a0\nis not a problem. So, we do it in n log n time. So, t"
+    },
+    "3aea3cdd-8b0b-452a-9772-0fec65bcfc11": {
+        "content_id": 56,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Closest Pair of Points",
+        "week": 8,
+        "chunk": "herefore, as promised\u00a0\nthat video game problem,\u00a0\u00a0 where we wanted to keep track of the nearest\u00a0\npair of objects on the screen dynamically,\u00a0\u00a0 can actually be solved in n log n time using\u00a0\nthis clever divide and conquer technique."
+    }
+}

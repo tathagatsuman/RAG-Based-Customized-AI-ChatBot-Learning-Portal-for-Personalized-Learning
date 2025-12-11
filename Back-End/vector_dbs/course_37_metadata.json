@@ -1,0 +1,569 @@
+{
+    "6996f361-a0ee-4c97-b3fa-522ef1a87142": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "So, we were looking at the Directed\u00a0\nAcyclic Graphs. And we said that DAGs\u00a0\u00a0 are useful for telling us about things\u00a0\nlike tasks and their dependencies.\u00a0\u00a0 And one of the fundamental problems that we wanted\u00a0\nto solve using a DAG was topological sorting.\n \n\u00a0 "
+    },
+    "5c85459d-3696-4585-815a-19f28d7ce33c": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "So, when we have a DAG, that is a directed\u00a0\ngraph without directed cycles, what we want\u00a0\u00a0 is to enumerate the vertices in an order which\u00a0\nrespects the order of the edges. So, we if you\u00a0\u00a0 think of these as tasks and dependencies, this\u00a0\nmeans that we execute"
+    },
+    "7b40be0e-9070-49d3-b6b3-961957626ad7": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": " the tasks in such a way that\u00a0\u00a0 every task that requires another task to be done\u00a0\nis done after that prerequisite is completed. So,\u00a0\u00a0 we are following the dependencies when\u00a0\nwe are executing. So, given such a set of\u00a0\u00a0 prerequisites in the form of a directe"
+    },
+    "fe6a61d4-1ea3-495f-aefd-7a4752904395": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "d acyclic\u00a0\ngraph, how do we find such a valid schedule?\u00a0\u00a0 So, this is like a feasible schedule.\n \nSo, here is a DAG on the right for example.\u00a0\u00a0 So, we would like to say in this DAG, for\u00a0\ninstance, that I cannot do, for example, task 3,\u00a0\u00a0 until I have d1 bo"
+    },
+    "6decd9a1-cb73-4fc7-8860-b31a8362b1d9": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "th task 0 and task 1. So, this\u00a0\nis a typical example of the kind of constraint\u00a0\u00a0 that we get. So, it should be clear that if these\u00a0\nconstraints are what are represented by the edges,\u00a0\u00a0 and if we have a cycle, then that means that we\u00a0\nneed something, say ta"
+    },
+    "0b76fff0-8e98-4e3a-a4d2-c8dcdff13dc1": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "sk 1 to be done before 2,\u00a0\u00a0 and 2 to be done before 3, and 3 to be done\u00a0\nbefore 4. And then when we complete the cycle,\u00a0\u00a0 we will find that 4 has to be done before 1. \nSo, if we have a cyclic dependency in these task,\u00a0\u00a0 then clearly there is no possible wa"
+    },
+    "552279f7-3fd3-45e9-896c-4f639064d8c3": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "y to enumerate\u00a0\nthem or execute them in this order, which respects\u00a0\u00a0 the dependencies. So therefore, a graph with\u00a0\ndirected cycles cannot be sorted topologically.\u00a0\u00a0 Now, what we are claiming is that if there are\u00a0\nno cycles, that is if I have a directed acy"
+    },
+    "73a24515-d668-48a8-a34a-52c29678fa05": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "clic\u00a0\u00a0 graph, then we can always sort it topologically,\u00a0\nwe can always enumerate it in a good order\u00a0\u00a0 such that whenever there is an edge i comma\u00a0\nj i appears before j in the enumeration.\n \n\u00a0 So, the strategy is straightforward. What do you\u00a0\nbegin with, we"
+    },
+    "4948d45e-3fb6-43a3-8c43-695698552179": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ll you have to begin with vertices\u00a0\u00a0 or tasks which have no dependencies, you have to\u00a0\nstart with something that you can start a fresh.\u00a0\u00a0 So, you begin vertices with no dependencies.\u00a0\nAnd then as dependencies are completed,\u00a0\u00a0 later tasks now become availab"
+    },
+    "7a160388-1ca2-4ebf-be4a-6a89e11d1bc2": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "le, because\u00a0\nall their dependencies are also empty. So,\u00a0\u00a0 in this way, we keep exhausting the dependencies\u00a0\nand finding new vertices to enumerate.\n\u00a0 So, we have to answer two questions to ensure\u00a0\nthat this is always possible. First of all, we\u00a0\u00a0 have to be "
+    },
+    "a284b6e6-0e54-40de-a7b0-4abbb5493166": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "able to start. So, given a DAG, there\u00a0\nmust be at least 1 vertex that we can enumerate,\u00a0\u00a0 which does not have an incoming\u00a0\ndependency. And secondly,\u00a0\u00a0 as we go along, we cannot get stuck. So,\u00a0\nevery time we finish executing some task,\u00a0\u00a0 we are left with th"
+    },
+    "416cec14-56f2-486c-b67c-4803fa2762c0": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "e remaining tasks. And now\u00a0\nwe must guarantee that in the remaining tasks,\u00a0\u00a0 they will again be at least 1 task which we can\u00a0\nexecute, which has no remaining dependencies.\n \n\u00a0 So, let us remember that in degree is what we\u00a0\nrefer to in a directed graph as t"
+    },
+    "457b419d-6a8e-4ba0-8579-ab75e963f193": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "he number of\u00a0\u00a0 edges coming into a vertex. So, a task which\u00a0\nhas no incoming dependencies has indegree 0.\u00a0\u00a0 So, our first task is to find something\u00a0\nthat we can enumerate at the beginning. So,\u00a0\u00a0 this will be a vertex which has no incoming\u00a0\nedges, or someth"
+    },
+    "8ae3f782-6b33-465b-bee3-37d5d83d5f04": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ing which has indegree 0.\n\u00a0 So, we claim that this is always possible.\u00a0\nThis is the first thing that we need to justify\u00a0\u00a0 to say that every DAG can be topologically\u00a0\nsorted, that there is always a starting point\u00a0\u00a0 for our topological enumeration. So, every"
+    },
+    "4c5ad45a-3719-4006-9c33-ba6b28cd0efb": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "\u00a0\nDAG must have a vertex with degree 0,\u00a0\u00a0 indegree 0. Now there could be\u00a0\nmore than 1. So, for instance,\u00a0\u00a0 here you can see that both 0 and 1 have this\u00a0\nproperty that there are no incoming edges. So,\u00a0\u00a0 it is not a unique 1, but there must be at\u00a0\nleast 1, t"
+    },
+    "74a0d505-9aa2-4382-81d3-250b7e88fd63": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "his is what we are claiming.\n\u00a0 So, why is this, well suppose there is none.\u00a0\nSuppose every vertex actually has an incoming\u00a0\u00a0 edge, then wherever we are in the DAG, we can go\u00a0\nbackwards through, through an incoming edge to\u00a0\u00a0 a previous vertex. So, we go bac"
+    },
+    "4583380a-24e9-4a9c-85de-94f3c4627f32": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "kwards, but by \nassumption, every vertex has at least 1 incoming\u00a0\u00a0 edge. So, from the vertex, we just went to the\u00a0\nsecond vertex also has an incoming edge, we go\u00a0\u00a0 backwards to a third vertex to a fourth vertex,\u00a0\nand so on. So, as we keep walking backwards"
+    },
+    "cb232f45-2ed8-455f-a6a0-284d5474a4f9": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": ",\u00a0\u00a0 we keep walking to new vertices. Now, there are\u00a0\nonly a fixed number of vertices n in my graph,\u00a0\u00a0 so after I make n moves, I must hit a\u00a0\nvertex that I have seen before because\u00a0\u00a0 I cannot see more than n distinct vertices.\nSo, if there is no vertex, whi"
+    },
+    "d3111fd1-1988-498d-985f-54f0d73b722b": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ch has in degree 0,\u00a0\u00a0 that is, I can always walk backwards from every\u00a0\nvertex to a previous vertex, then there must be\u00a0\u00a0 a cycle in the graph and so it is not right. So\u00a0\ntherefore, by the converse, if it is a DAG there\u00a0\u00a0 must be at least 1 such vertex whic"
+    },
+    "f8deea58-8094-4439-8098-ef2351f461c6": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "h is indegree\u00a0\n0 from where we can begin our enumeration.\u00a0\u00a0 So now we listed out right so\n \nSo, now we list it out,\u00a0\u00a0 so we list out this indegree thing.\u00a0\nSo, supposing we list out this one.\u00a0\u00a0 Then in principle this vertex has now been\u00a0\nenumerated, so all "
+    },
+    "4ef451a6-015a-42d0-b583-27aac54b9495": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "the dependencies that\u00a0\u00a0 it has have been satisfied, so we can delete\u00a0\nthese 3 edges. So, now what we are left with is\u00a0\u00a0 a smaller graph in which we have removed 1 vertex\u00a0\nand all the edges which came out of that vertex.\u00a0\u00a0 But since we had a DAG to begin wi"
+    },
+    "a6dd6c5e-79de-4352-adcd-2ce1e42f60a1": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "th, this\u00a0\nnew graph must also be acyclic because we\u00a0\u00a0 have only removed edges, we have not\u00a0\nadded any edges to create cycles.\n\u00a0 So, it is still a directed graph, it is\u00a0\nstill acyclic. So, this is again a DAG\u00a0\u00a0 and we just showed that in every DAG, there\u00a0\nm"
+    },
+    "68cadc8b-5766-4ac3-aeb7-0bba0687b482": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ust be some incoming indegree 0 vertex. So,\u00a0\u00a0 in the new DAG also, there will be something that\u00a0\nI can enumerate. So, in this case, for instance,\u00a0\u00a0 of course, we know that we can enumerate 0 because\u00a0\nit was already there. But we have also found,\u00a0\u00a0 for inst"
+    },
+    "b5fedb8b-f890-4ba6-ac99-033a9e2900d3": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ance, a new vertex here 4 that can\u00a0\nbe enumerated because 4 had only 1 incoming\u00a0\u00a0 constraint that was from 0\u00a0\nand 0 has been enumerated. \n\u00a0 So, in this sense, both are conditions that we\u00a0\nrequired for topological sorting are satisfied,\u00a0\u00a0 we can always star"
+    },
+    "7cab4b6d-d855-41d3-b580-abfe729228e3": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "t because there is always\u00a0\nan indegree 0 vertex, I can always continue\u00a0\u00a0 because once we remove a vertex, we still have\u00a0\na DAG, and therefore, by the first condition,\u00a0\u00a0 we will again have an indegree 0 vertex\u00a0\nand we can finish. So, this is the\u00a0\u00a0 algorithm"
+    },
+    "461411e5-46be-490c-acdd-e53d9f076d30": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": " for topologically sorting a DAG.\n \n\u00a0 So, to convert this to an algorithm, we have\u00a0\nto first find this indegree 0 vertex. So,\u00a0\u00a0 we have to scan our representation of the graph\u00a0\nand compute the indegrees of each of the vertices\u00a0\u00a0 in the graph. So, if we do "
+    },
+    "f8739f6c-b4aa-498c-9c1a-b746ecb5b712": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "that, by just looking\u00a0\nat, for instance, in the adjacency matrix,\u00a0\u00a0 we will look at the incoming edges, we will look\u00a0\nat each column and count the number of edges\u00a0\u00a0 pointing into a vertex i, if we are looking at\u00a0\nan adjacency list, we can do it by looking "
+    },
+    "e3829c3c-bd29-4829-aa28-ae431f432945": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "at all\u00a0\u00a0 the lists and looking for every second item in a\u00a0\npair, we can count the first item in the pair.\n\u00a0 So, if you see an edge u, v, then you will\u00a0\nincrement the degree of v. So however, we do it,\u00a0\u00a0 we can come up with this numbering, so this\u00a0\nred numb"
+    },
+    "3843a8dd-5916-468d-8763-923c9b5504bc": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ering, which tells us the indegree of\u00a0\u00a0 every vertex in this particular DAG, so 0 and\u00a0\n1 have indegree 0. And as we go down the DAG,\u00a0\u00a0 we find for instance, a vertex like 7, which has 4\u00a0\nincoming edges, and therefore it has degree 4.\n\u00a0 So now our algorithm"
+    },
+    "64b40c0c-aec5-4c56-994f-ee8c9b440566": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": " says pick any vertex which\u00a0\nhas indegree 0 eliminate it, and remove it from\u00a0\u00a0 the DAG. So in this case, let us start with 1,\u00a0\nso we start, we could choose this or this. So,\u00a0\u00a0 we happen to start with this, so we remove vertex\u00a0\n1. And now we have a new DAG,"
+    },
+    "efbb55d5-26f6-4fee-8cba-9fe17e929781": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": " and in this new DAG,\u00a0\u00a0 we have enumerated 1, so we can output this as\u00a0\nthe first element in our topologically sorted\u00a0\u00a0 sequence. But we also have to correspondingly\u00a0\nrecompute the degrees. So, this had degree 2,\u00a0\u00a0 but 1 of those 2 edges was coming\u00a0\nfrom t"
+    },
+    "0fa24fe3-2d04-4abd-8716-d1235efda382": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "he vertex we just enumerated.\n\u00a0 So, for every vertex, every edge, which is\u00a0\ncoming out of the vertex that we just enumerated,\u00a0\u00a0 we have to update the degrees, so we have to\u00a0\nupdate these, so we had edges like, like this.\u00a0\u00a0 So, if you go back, so we have we"
+    },
+    "d2efe5a8-effe-4ee0-b607-96328a09f6a3": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "\u00a0\nhad edges from 1 to 2 and 7. So now,\u00a0\u00a0 basically, we will replace\u00a0\nthis what used to be 4 by 3.\u00a0\u00a0 And what used to be 2 by 1, so this\u00a0\nis a situation after enumerating 1.\n\u00a0 So, we have been 2 things, we have enumerated\u00a0\n1. And we have updated the degrees"
+    },
+    "9996333f-7e79-481f-81ea-27883bc6678d": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": " of all the\u00a0\u00a0 vertices which 1 was pointing to. So now we\u00a0\nfind another one, namely 0, for example, and we\u00a0\u00a0 enumerate it. At this point, notice that there is\u00a0\nonly 1 vertex with indegree 0, that is the vertex\u00a0\u00a0 0 itself, there is no other vertex which can"
+    },
+    "fbc838c7-ec45-4445-b1b9-67455f741a46": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "\u00a0\nbe currently enumerated because everything has\u00a0\u00a0 some incoming edge. So, I enumerate 0. And now I\u00a0\nhave a graph in which I update the degrees. And\u00a0\u00a0 I get now these 3 vertices, all 3 of these now\u00a0\nare possible candidates for my next step.\n \n\u00a0 So, I can p"
+    },
+    "31a68716-ae7f-4d8b-ab1f-894bcc9f4427": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ick one of them. So maybe I picked the\u00a0\nmiddle one. And now again, I enumerate, update the\u00a0\u00a0 in degree, and now 3 was pointing into 5, so this\u00a0\nnow has degree 1. So, in this way, I can continue.\u00a0\u00a0 So, I choose for instance 2, and then maybe I\u00a0\nchoose, so i"
+    },
+    "0d71451a-c36d-46af-9514-a2140186b9b4": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "f I choose 2, then 5 becomes indegree\u00a0\u00a0 0s. So now I have a choice between 5 and 4.\nSo, then I choose 5. And then I can choose to,\u00a0\u00a0 I have to update the indegree of 6 to 0. So now\u00a0\nI can choose between 4 and six. So maybe I do 6.\u00a0\u00a0 So, I leave for 4 for v"
+    },
+    "617cd2c8-8f1a-49ee-a70f-a9f2052163c2": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ery late, even though\u00a0\nit was available much earlier to enumerate.\u00a0\u00a0 But now I have to enumerate 4 before 7 because\u00a0\n7 depends on 4. So, I do 4 and then 7.\n\u00a0 So, this now is my topologically sorted sequence,\u00a0\none topologically sorted sequence because\u00a0\u00a0 rem"
+    },
+    "72846cf8-279f-4ff0-8980-0b634e5ffb00": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ember, we made some choices. Initially,\u00a0\nwe could have done 0 or 1 and we chose 1,\u00a0\u00a0 at some point in between we had 2, 3 and 4, we\u00a0\ncould have chosen any of those and we chose 3.\u00a0\u00a0 So, there are many situations where we had more\u00a0\nthan 1 indegree 0 vertex "
+    },
+    "f0f42568-a362-4eee-ae2b-fc56c7838797": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "to choose and we picked\u00a0\u00a0 one of them. So, the topologically sorted\u00a0\nsequence is not unique. There are many of them,\u00a0\u00a0 but all of them have the property\u00a0\nthat if I is enumerated before j,\u00a0\u00a0 then if there is an edge from i to j,\u00a0\nthen i will be enumerated b"
+    },
+    "fb556313-1a1c-49ef-8755-fcde623b9e0a": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "efore j.\n \n\u00a0 So, let us look at an implementation\u00a0\nof this. So, we have to remember,\u00a0\u00a0 we have to compute the indegrees, then we have\u00a0\nto find the degree with vertex with indegree 0,\u00a0\u00a0 remove it and update indegrees and keep repeating\u00a0\nthis until all the v"
+    },
+    "967b7b66-3bb2-4a96-8fd8-4e002043e0c5": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ertices are listed. So,\u00a0\u00a0 this is a topological sort function, which\u00a0\ntakes an adjacency matrix as input.\n\u00a0 So here, initially, we as usual, we find\u00a0\nout using the NumPy shape attribute,\u00a0\u00a0 how many vertices there are, so the\u00a0\nnumber of rows and number of c"
+    },
+    "571ec06e-00b7-4b23-a58b-a5b538f5d2e7": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "olumns,\u00a0\u00a0 the adjacency matrix. So, now we want to keep\u00a0\ntrack of indegrees. And we want to keep track\u00a0\u00a0 of this list of vertices in the final topological\u00a0\nthing. So, we have an empty dictionary to\u00a0\u00a0 keep track of the industries. And we have an\u00a0\nempty list"
+    },
+    "7b5dae57-0707-48e0-8a7d-dc68977ece1a": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": " called topo sort list, which will\u00a0\u00a0 accumulate the vertices in the order\u00a0\nin which they are enumerated.\n\u00a0 So, the first thing that we have\u00a0\nto do is compute the indegrees.\u00a0\u00a0 So, computing the in degrees in an adjacency\u00a0\nmatrix requires me to scan all the "
+    },
+    "3ab865e6-3955-4957-8147-0d55b2049a4e": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "columns. So,\u00a0\u00a0 what I do is I pick each column for every column,\u00a0\nI initialize the indegree to 0, and then I walk\u00a0\u00a0 across that all the rows in that column. And\u00a0\nwherever I see an edge of the form r comma c,\u00a0\u00a0 I update the indegree by 1. So, I increment by"
+    },
+    "d797607b-7e7e-4c87-8e1d-8af32c8b75ed": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "\u00a0\n1. So, this whole thing is, is corresponds to\u00a0\u00a0 computing the indegrees. So, I have done that.\nSo, having computed the indegrees, now I can start\u00a0\u00a0 processing these vertices. So, what I have to do\u00a0\nis I have to find a vertex, which has n degrees\u00a0\u00a0 0. So,"
+    },
+    "a67ac66a-4cb1-4914-b999-685c074984c0": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": " here is one way to do it, you can do\u00a0\nit in an explicit loop or through this list\u00a0\u00a0 comprehension. So, you find all the k in 0 to the\u00a0\nnumber of vertices minus 1, such that in degree\u00a0\u00a0 of k is 0. So, this is the list of all k for\u00a0\nwhich in degrees 0. And "
+    },
+    "716d9daa-6269-4eef-bd73-5bfd21f95687": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "you take, in this case,\u00a0\u00a0 we, we said we had a choice. So, we had making now\u00a0\na choice to take the smallest of these vertices.\u00a0\u00a0 So, we take the minimum over this list.\nRemember that a DAG will always have such\u00a0\u00a0 a vertex, so this list will always be not e"
+    },
+    "dc55ef32-9ad8-41f3-864a-95ed247c8996": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "mpty.\u00a0\nSo, I find this list of vertices whose indegree\u00a0\u00a0 is currently 0, I picked the minimum 1 and call\u00a0\nit j. So, j is going to be my next vertex to be\u00a0\u00a0 enumerated. So, what I do is I\u00a0\nappend it to this list that I had\u00a0\u00a0 started creating. So, this is th"
+    },
+    "97a13440-d1e2-4dca-9440-86f41b8d7d20": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "e next vertex\u00a0\nin my enumeration. And now I have to go around\u00a0\u00a0 updating in degrees, so for every outgoing vertex\u00a0\u00a0 from j, so every outgoing vertex from j, so for\u00a0\nevery k in the columns, if, if I have an edge\u00a0\u00a0 in my adjacency matrix from j to k, then I "
+    },
+    "91a4f403-7408-406e-9630-55825abbd4eb": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "update\u00a0\nthe indegree of k to be the indegree minus 1.\n\u00a0 So, I am removing j from the thing. So,\u00a0\nthere is 1 less edge pointing into k. So,\u00a0\u00a0 this is the step of updating the indegrees.\u00a0\nAnd then I will keep doing this. Now I know\u00a0\u00a0 that in every such itera"
+    },
+    "b90b72ae-b874-4f04-8ddd-769829a0b26a": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "tion, I am going to\u00a0\ncome out with 1 more vertex. So effectively,\u00a0\u00a0 I have an loop, which runs as many times\u00a0\nas there are vertices in my graph.\n\u00a0 So, if you want to do an analysis, this says\u00a0\nthat this step of initializing the indegrees,\u00a0\u00a0 because it requ"
+    },
+    "205e8fd0-0278-4300-a75f-8cb76a20b41b": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ires me to walk down\u00a0\nevery column in my adjacency matrix,\u00a0\u00a0 this is order n squared. And then I have to run\u00a0\nthis loop n times, so I am doing for i in range\u00a0\u00a0 rows, which is 0 to n minus 1. And inside what am\u00a0\nI doing, I am doing the scan. So, I am doing "
+    },
+    "4f102314-901b-4fc7-b90d-a21df709a6fa": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "the\u00a0\u00a0 scan to find the next vertex to enumerate, which\u00a0\nis again a linear scan, I have to go through all\u00a0\u00a0 the vertices, find out if they are indegree\u00a0\n0, collect them and then take the minimum.\n\u00a0 And then finally, I have to do another order and\u00a0\nscan here"
+    },
+    "994ffd43-28d9-43a3-890c-2ad0ccb67304": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": ", because when I take a vertex out of my\u00a0\u00a0 graph, I have to update all its outgoing\u00a0\nneighbors to have 1 less degree. So essentially,\u00a0\u00a0 what matters is that I have an order an\u00a0\noutside loop and inside it, I am doing\u00a0\u00a0 various order and operations, so the w"
+    },
+    "1f5bc6db-f4a0-4691-a3c0-db1fa82a8148": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "hole\u00a0\nthing is going to become order n squared.\n\u00a0 So, I have ordered n squared right up front,\u00a0\nso this is n squared, and this is n times n\u00a0\u00a0 because I have an outer loop which is n\u00a0\nand I have these inner loops which are n.\u00a0\u00a0 So, we saw before with breadt"
+    },
+    "8d80cd6d-9d86-4ad6-9486-e7b5aee23064": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "h first search\u00a0\nand depth first search that may be the way\u00a0\u00a0 to get out of n squared is to use an adjacency\u00a0\nlist. So, let us see what happens if we use an\u00a0\u00a0 adjacency list instead for topological sort.\n \nSo, we have a similar algorithm now, but except we\u00a0"
+    },
+    "074b2201-2414-4454-acfa-3531dd6c035f": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "\u00a0 are using not the adjacency matrix representation\u00a0\nbut the adjacency list. So as before,\u00a0\u00a0 we will keep track of indegree and topological\u00a0\nsort, as dictionary and a list respectively.\u00a0\u00a0 And now we have to initialize, so here we can\u00a0\njust go through all t"
+    },
+    "f87976ac-0a71-4808-bd3c-634319bebe42": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "he vertices and initialize\u00a0\u00a0 an indegree to be 0. And now we want to compute\u00a0\nthe indegrees. So, what we will say is that if\u00a0\u00a0 I have like a list like this, so says 0 has an\u00a0\nedge to 1, 0 has an edge to 2, 1 has edge to 3,\u00a0\u00a0 2 has an edge to 4 and so on.\nI"
+    },
+    "5fe5a74b-8066-46dc-9e78-a6f8649c3b56": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": " will just scan each of these lists. And every\u00a0\u00a0 time I see an edge, I will update the indegree\u00a0\nof the target of the edge. So, for every vertex,\u00a0\u00a0 for every vertex that it is connected to every,\u00a0\nevery edge outgoing from there, I will take\u00a0\u00a0 the indegree "
+    },
+    "780c36db-6a24-4a16-b9ed-199d98f231e3": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "of that vertex and incremented. So,\u00a0\nthat is basically the way that this works. So,\u00a0\u00a0 this now becomes an indegree update,\u00a0\nwhich processes all the edges, and not\u00a0\u00a0 necessarily all the non edges, which is the big\u00a0\nadvantage of working with adjacency lists."
+    },
+    "f0923359-9ce2-48d2-9cef-6e18839803ae": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "\n\u00a0 Now, we have this other problem of keeping track\u00a0\nof the vertices which are to be enumerated because\u00a0\u00a0 last time we had to in the adjacency matrix\u00a0\nversion, we had to keep looking for this vertex\u00a0\u00a0 which has degree 0. So, here instead, what we\u00a0\nwill do "
+    },
+    "ad9d7bee-c6be-4f61-a424-39de15a619ab": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "is we will actually explicitly keep track\u00a0\u00a0 of these the way we do in breadth first search all\u00a0\nthe vertices which have to be enumerated which are\u00a0\u00a0 eligible to be enumerated, we will put them into\u00a0\na queue and we will pick them up one by one.\n\u00a0 So, we cre"
+    },
+    "97c75925-f637-4975-820b-aa833324c49d": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ate a queue call the 0-degree queue.\u00a0\nSo, this will hold all vertices which are having\u00a0\u00a0 indegree 0, but which have yet to be enumerated.\u00a0\nSo, the first thing we do is we go through all the\u00a0\u00a0 vertices, now we have to remember we have updated\u00a0\nthe indegrees"
+    },
+    "878e41ec-f541-4285-8539-fdd9e9175d51": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": ". So, we know the indegrees of all\u00a0\u00a0 the vertices. So, we go through all the vertices\u00a0\none more time after updating them. And every time\u00a0\u00a0 we see a vertex with i degrees, 0, we add it to\u00a0\nthe queue. So having added it to the queue, now,\u00a0\u00a0 what we have to d"
+    },
+    "c9ebfe80-f241-4ce0-b388-e4341e692d47": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "o is pick up the first\u00a0\nelement of the queue and enumerate it.\n\u00a0 So, while this queue is not empty, we delete\u00a0\nthe first element and enumerate it exactly\u00a0\u00a0 like we did in the previous case, except there, we\u00a0\nhave to explicitly scan and find this vertex her"
+    },
+    "c7aa8688-a29f-464d-a18a-32f48275c3d2": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "e,\u00a0\u00a0 it is available to us immediately at the\u00a0\nhead of the queue. And having enumerated it,\u00a0\u00a0 then we have to update the outdoing, the degrees\u00a0\nof the outgoing vertices. So that is again,\u00a0\u00a0 proportional to the degree of this vertex.\u00a0\nSo, for every k, which"
+    },
+    "f0388610-e4c4-43d8-bbcc-09dbc4ee23a0": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": " is in the list of j,\u00a0\u00a0 I will take indegree of k and reduce it by 1.\nAnd in this process, if I find that the indegree\u00a0\u00a0 of k becomes 0, then I put it in the queue. So,\u00a0\nevery time I find that indegree becomes 0 by\u00a0\u00a0 when, when it becomes 0 when I update i"
+    },
+    "0635de65-235d-4a03-9e02-a617841577dc": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "t, so when\u00a0\nI update the vertex is indegree at that point,\u00a0\u00a0 I check has it become 0, if it has become\u00a0\n0, now it is a candidate for enumeration,\u00a0\u00a0 put it into the queue. So, in this way, I have\u00a0\nnow eliminated the need to scan this thing for\u00a0\u00a0 0 degree th"
+    },
+    "d92286a1-03f7-4125-917e-166e5c345d47": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ings. And the updates that I am making\u00a0\nare also now across the list of edges, both the\u00a0\u00a0 indegree calculation and the indegree update.\nSo therefore, in this analysis, we see that\u00a0\u00a0 analyzing the indegree itself, initializing the\u00a0\nindegrees m plus n. Why i"
+    },
+    "f6176c61-58bd-4743-92d9-eaa7671993d2": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "s it m plus n because\u00a0\u00a0 I need to first spend order n time initializing\u00a0\nit to 0. So even if there are no edges,\u00a0\u00a0 I have to set this up. And then I do this\u00a0\nonce for every edge, for every edge in my\u00a0\u00a0 represented my adjacency list, I will increment\u00a0\nin de"
+    },
+    "9875aedd-d16a-479a-bcba-c45c9604cadd": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "gree once. So, this is order n plus n. \n\u00a0 Now, inside the loop, getting this vertex to\u00a0\nenumerate is free, because I just pick it out\u00a0\u00a0 of the queue. So, what is the complex part of\u00a0\nthe loop is updating the indegrees. But again,\u00a0\u00a0 I am doing it in the adj"
+    },
+    "a1a8c4e6-0928-4bf2-b4d4-33713d604107": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "acency list.\u00a0\nSo, when I take a vertex j enumerated,\u00a0\u00a0 I am looking at all its outgoing edges. So that\u00a0\nis proportional to degree of j. And across all\u00a0\u00a0 the vertices, we already saw this in breadth\u00a0\nfirst search, that means that I will do this,\u00a0\u00a0 I cannot "
+    },
+    "ae07deb1-029a-4ed0-9693-81c842085cc2": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "tell you how much 1 individual vertex\u00a0\nwill take. But overall, I know that it is going to\u00a0\u00a0 be proportional to the sum of the degrees because\u00a0\nit is going to be the sum of the number of edges,\u00a0\u00a0 which is going to be twice the degrees.\nSo therefore, the sum"
+    },
+    "90459bf1-20cd-44fb-80ae-bea207c967c9": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": " of the degrees which is\u00a0\u00a0 twice the number of edges, and so therefore, this\u00a0\nwhole thing is in this amortized sense going to be\u00a0\u00a0 order n. So therefore, by moving to adjacency list\u00a0\nrepresentation, just like we did for BFS and DFS.\u00a0\u00a0 In topological sort, "
+    },
+    "9cfef1de-8382-4d4f-b97e-419db758c3d2": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "also, we move from an n\u00a0\nsquared algorithm to an m plus n algorithm.\n \n\u00a0 So, to summarize, DAGs are a natural way\u00a0\nto represent dependencies. And what we\u00a0\u00a0 typically need to do with a DAG is\u00a0\nto come up with a feasible schedule,\u00a0\u00a0 and that is what topologi"
+    },
+    "1f0e9ef6-3432-4dd1-834e-001101dbca95": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "cal sort does. And\u00a0\nwe can justify the topological sort is always\u00a0\u00a0 possible by showing that every DAG will have a\u00a0\nvertex within degrees 0. And if we eliminate this\u00a0\u00a0 vertex, we are left with a DAG, so we can keep\u00a0\nrepeating this until the DAG becomes emp"
+    },
+    "705e4ca6-b2b2-4ce5-a1a2-d8f458259800": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "ty.\n\u00a0 So, with adjacency matrices, the naive\u00a0\nimplementation takes time n squared, but if we use\u00a0\u00a0 an adjacency list and maintain the skew for the\u00a0\n0-degree vertices, which have to be enumerated, we\u00a0\u00a0 can bring it down to order m plus n. And finally,\u00a0\nreme"
+    },
+    "8271ce7d-3c59-4b18-a18d-4edd5079bb75": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "mber that this is not a deterministic process,\u00a0\u00a0 because there may be multiple 0-degree vertices\u00a0\nat any given point. So, there may be more than one\u00a0\u00a0 feasible schedule. So, what we are doing is that\u00a0\nwe are using some strategy to choose amongst these\u00a0\u00a0 an"
+    },
+    "f976c61c-9aab-444f-8048-d5667768504c": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "d this gives us one of them. So, based on how\u00a0\nwe choose it, we might get different schedules.\n\u00a0 So, in our algorithm we will typically\u00a0\npick a uniform strategy like we pick\u00a0\u00a0 the minimum vertex to, to bring out. The\u00a0\nsecond algorithm, we actually put them"
+    },
+    "c5f34d49-ccca-44c0-b39d-6c97ed91ef54": {
+        "content_id": 37,
+        "course_name": "PDSA",
+        "title": "Topological Sorting",
+        "week": 4,
+        "chunk": "\u00a0\u00a0 out in the order in which they entered the\u00a0\nqueue. So, they actually got processed as \n\u00a0 they became 0 rather than in the,\u00a0\nby their vertex order, and so on."
+    }
+}

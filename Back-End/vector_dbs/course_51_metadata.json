@@ -1,0 +1,1283 @@
+{
+    "4dead893-3877-41a5-a0b7-08c7aee38ec0": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "So, we saw that if we have\u00a0\ndynamic data, data in which\u00a0\u00a0 values are being inserted and deleted and\u00a0\nwe want to maintain a sorted property so\u00a0\u00a0 that we can search efficiently in it, then\u00a0\nwe need to move from a linear structure to\u00a0\u00a0 a two dimensional struc"
+    },
+    "b15cda1b-5c3b-4c23-8cf6-b12b85688702": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ture and we came\u00a0\nup with this idea of search trees.\n \n\u00a0 So, in a search tree, if you\u00a0\nremember, at every node you have\u00a0\u00a0 values and all the values on the left are to the\u00a0\nsmaller than v and all the values on the right\u00a0\u00a0 are bigger than v. So, this tells u"
+    },
+    "2102cd6c-aa2a-41a3-aca5-7d1e48a08e2d": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "s how to search\u00a0\nfor a value. We look at the root node and we can\u00a0\u00a0 decide whether to go left or right. And remember\u00a0\nthat in a search tree there are no duplicates.\n\u00a0 So, with this we had this property that if\u00a0\nyou actually started navigating the tree you\u00a0"
+    },
+    "2f8c9bcb-803e-4342-8070-55396b6568d6": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "\u00a0 would always walk down a single path whether\u00a0\nyou want to find a value or insert a value\u00a0\u00a0 or delete a value. So, therefore all operations\u00a0\non a search tree are actually in the worst case\u00a0\u00a0 proportional to the height of the tree.\nBut the problem that we "
+    },
+    "ca971de4-0863-436d-84ec-1459d09b6873": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "saw was that you\u00a0\u00a0 could have an unbalanced tree, for example I\u00a0\ncould have a sequence where I start with an\u00a0\u00a0 extreme value on the top and I could have just a\u00a0\nlinear sequence going down one side of the tree.\u00a0\u00a0 So, this would have height which is proporti"
+    },
+    "3fbbaf81-8093-4e08-8d61-1b47f82cc7a5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "onal\u00a0\nto the number of nodes or to the size.\n\u00a0 So, what we would like to do is come up with a\u00a0\nway to have balanced trees which have logarithmic\u00a0\u00a0 height. So, if we have logarithmic height then\u00a0\nwe are guaranteed that these operations all take\u00a0\u00a0 only logar"
+    },
+    "e521b608-3221-4e39-b400-d14cc6315aa1": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ithmic time, and so over a sequence\u00a0\nof n such operations you will take n log n time,\u00a0\u00a0 which is similar to what you would do if you\u00a0\ndo n binary searches on a sorted array.\n\u00a0 So, even though the data is changing from time to\u00a0\ntime including the cost of in"
+    },
+    "bd629d9c-c9c0-4847-aac7-fde5839313b8": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "serting and deleting\u00a0\u00a0 items and the cost of searching for them using\u00a0\nthis find operation, everything takes log n time.\u00a0\u00a0 So, over n such operations if you could\u00a0\nbalance the tree you would do n log n work.\n \n\u00a0 So, our question today is how to balance\u00a0\nth"
+    },
+    "ff69b51b-4da8-46ec-b85f-ec5b19df76f0": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "e tree? So, we know that the tree might\u00a0\u00a0 be balanced to start with but as we\u00a0\nstart inserting and deleting items\u00a0\u00a0 then the balance will change. So, what we need to\u00a0\ndo is incrementally adjust the balance so that at\u00a0\u00a0 any point the tree does not become to"
+    },
+    "977bf59b-3237-4ac5-ba37-b0314b23c9b2": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "o unbalanced\u00a0\nbecause it will take a lot of work to reconstruct\u00a0\u00a0 the balance tree which becomes too unbalanced.\nSo, we want to incrementally keep the balance\u00a0\u00a0 so inductively as we go along\u00a0\nwe always have a balanced tree.\u00a0\u00a0 So, to get started on this we "
+    },
+    "a57529b3-d3bb-4aba-bb56-8534e3c6ba1c": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "not, first need\u00a0\nto agree on what we mean by balance right. So,\u00a0\u00a0 balance roughly means what we think of. So, if\u00a0\nyou take a balance in the conventional sense,\u00a0\u00a0 when you go to say the vegetable market the\u00a0\nperson has a balance. So, the balance means\u00a0\u00a0 tha"
+    },
+    "3ceb15c3-181c-4f75-a8fa-603bf52d7f6a": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "t what is on the two sides, the weights that\u00a0\nthe person puts and the vegetables on the other\u00a0\u00a0 side balance out, they are about the same.\nSo, in terms of a tree what you are saying is\u00a0\u00a0 that if I look at the tree and I look at\u00a0\nits left sub tree and the r"
+    },
+    "7d3ea3c2-203b-40e3-ad39-5467fabd38f9": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ight sub tree\u00a0\u00a0 then these two trees must be roughly the same\u00a0\nin some quantity, some quantitative measure.\u00a0\u00a0 So, we have two quantitative measures that\u00a0\nwe can define on trees as we have seen. So,\u00a0\u00a0 the first one is size. So, size is just a\u00a0\ntotal number "
+    },
+    "e37f2b0a-7817-45bd-8ca4-13557046f0a5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "of nodes. So, this is just a\u00a0\u00a0 total number of nodes. And height is this length\u00a0\nof the longest path from the root to a leaf.\n \n\u00a0 So, supposing we first try to define something\u00a0\non size. Now of course, a perfectly balanced\u00a0\u00a0 tree, now balancing is somethin"
+    },
+    "b2f610bd-aeb4-4e8c-92e7-9376f3b46490": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "g which\u00a0\nhas, has to happen everywhere. We do not\u00a0\u00a0 want the tree to be unbalanced anywhere.\u00a0\nSo, at every node we want the same number\u00a0\u00a0 of children on the left and on the right.\nNow, what happens now is if I have one node it is\u00a0\u00a0 fine. If I put something"
+    },
+    "e8b3830f-4a29-4638-94db-d3bc09c0936f": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " here I am forced to put\u00a0\nsomething here because I need them to be the same.\u00a0\u00a0 Now, if I put something here because this,\u00a0\nthis part must be balanced I must put something\u00a0\u00a0 there. And similarly, now because the must\u00a0\nbe balanced, I must put something there"
+    },
+    "4b1b4451-a099-4250-85c0-66979797be97": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": ".\n\u00a0 So, either I have a tree with only one node or\u00a0\nI have this tree with two levels complete or I\u00a0\u00a0 have a tree with three levels complete and so on.\u00a0\nSo, these are called complete binary trees. So,\u00a0\u00a0 you can think, remember in a heap we might have\u00a0\nhad a"
+    },
+    "fc2ebad3-d363-4e6c-9969-40bd86a7ac75": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " situation where we had only this much. So,\u00a0\u00a0 we did not have these two nodes.\nSo, heap builds up a tree in a kind\u00a0\u00a0 of complete fashion by doing it level\u00a0\nby level but it is allowed to have\u00a0\u00a0 some incomplete nodes on the last level. In a\u00a0\ncomplete binary "
+    },
+    "c98ed3aa-d4e5-4f48-bdc6-401963c10ad4": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "tree every level is full. So,\u00a0\u00a0 either you have one node or you have one plus\u00a0\ntwo nodes or one plus two plus four nodes. So,\u00a0\u00a0 every complete binary tree will have 2 to the\u00a0\npower k minus 1 nodes for some power of k,\u00a0\u00a0 to 2 to the power 0 minus 1 2.\nBut n"
+    },
+    "d5bd35fd-e838-49f4-841f-02494b1cf946": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ow if this is the only situation in\u00a0\u00a0 which you can meet this, it is obviously not\u00a0\nuseful because why, how do we guarantee that\u00a0\u00a0 over this period of sequences, and sequence of\u00a0\ndeletes and inserts that the number of nodes we\u00a0\u00a0 have has this nice property"
+    },
+    "3814eb70-8873-4239-98b5-da4fb7370aef": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": ". So, we cannot demand\u00a0\nthat the size must be equal at every node because\u00a0\u00a0 that is too restrictive. It only applies when\u00a0\nthe size of the tree is a particular value.\n \n\u00a0 So, we could relax it a little bit by saying\u00a0\nokay, we do not want it to be exactly e"
+    },
+    "608fa1ad-b5c3-4a5b-b2b3-e157e2869014": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "qual,\u00a0\u00a0 we just wanted to be within one, for example.\u00a0\nWe want roughly as many nodes on the left as\u00a0\u00a0 the right, and this will give us some better way\u00a0\nof doing it. But it turns out that maintaining\u00a0\u00a0 size on the left and the right is very difficult\u00a0\nto do"
+    },
+    "603942a3-46aa-4857-a7f8-37cca22a358d": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " in an incremental fashion. So, we will,\u00a0\u00a0 not although this is something which\u00a0\ncould work we will do something which is\u00a0\u00a0 different from this using height.\n \n\u00a0 So, remember what height is. So, height is\u00a0\nthe number of nodes on the longest path. So,\u00a0\u00a0 you"
+    },
+    "632d3eb7-02d6-45e2-9d6b-842b455e8181": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " start at the root and you walk down and you\u00a0\npick the longest path to, among all the leaves\u00a0\u00a0 that you have. You see how many nodes you visit.\u00a0\nSo, if your tree is empty then there is no root,\u00a0\u00a0 so the height is 0. If the tree has only a root\u00a0\nthen the he"
+    },
+    "b1965d32-8a43-4eb2-911f-12dafb4129a5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ight is 1 because the longest path,\u00a0\u00a0 the root is also a leaf, the longest\u00a0\npath consists of just that one node.\n\u00a0 In general, if I have a tree then if I want to\u00a0\nfind out its height so I will, inductively I will\u00a0\u00a0 have a height here and I will have a heig"
+    },
+    "9e939392-d4d4-41cb-add6-2a2eb448735b": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ht here.\u00a0\nSo, this is going to be 1 plus the maximum of\u00a0\u00a0 h 1 and h 2 because the longest path from\u00a0\nhere is either the path that follows the\u00a0\u00a0 longest path on the right or it is the path\u00a0\nthat follows the longest path on the left,\u00a0\u00a0 and in either case I a"
+    },
+    "9de84432-580d-4ea4-ab0d-2b216fbc7b1d": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "m taking that longest path\u00a0\nin my left or right sub tree and adding this one\u00a0\u00a0 node to it so it is 1 plus the maximum of the\u00a0\nheights of the left and right sub tree. So,\u00a0\u00a0 this is how you formally define the height. So,\u00a0\nwhat do we mean by a height balance"
+    },
+    "c3ec436f-a3dd-4f67-9507-1e230ee51ded": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "d tree?\n \n\u00a0 So, let us assume that there is\u00a0\nthis function in our python notation\u00a0\u00a0 called height which we can apply to a node\u00a0\nand it will return the value of the height.\u00a0\u00a0 So, what we really want is the height of\u00a0\nthe left sub tree, self-dot left dot hei"
+    },
+    "481189b0-72c4-4bb5-a2da-ab213d0bd451": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ght,\u00a0\u00a0 and the height of the right sub tree, self-dot\u00a0\nright dot height should not be more than 1 off.\u00a0\u00a0 So, they need not be equal but they cannot\u00a0\nbe more than 1 different from each other.\n\u00a0 So, they must be within 1. It does not\u00a0\nmatter whether self is,"
+    },
+    "7bb8044b-ad98-4b6b-8f29-8bebeb9a68a4": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " left is more or\u00a0\u00a0 right is more. Either of them could be more\u00a0\nbut the difference should not be more than 1.\u00a0\u00a0 So, it turns out that we can actually maintain\u00a0\nheight balanced trees. And height balanced trees\u00a0\u00a0 are also called AVL trees, and this is named\u00a0"
+    },
+    "67fe88ef-0128-46ad-b682-f88ff95867ea": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "\nafter the two people who first discovered it\u00a0\u00a0 so there is a Russian mathematician computer\u00a0\nscientist called Adelson Velskii, and there is\u00a0\u00a0 another one from the west called Landis. So, both\u00a0\nof them in some sense parallelly discovered this\u00a0\u00a0 class of tr"
+    },
+    "d38d722a-7f27-4841-9e42-c3651f50a8d7": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ees and how to manipulate\u00a0\nthem to maintain this height balance.\n\u00a0 So, these height balanced trees\u00a0\nare also called AVL trees.\u00a0\u00a0 There are other types of balanced trees\u00a0\nwhich you can use but we will not look at\u00a0\u00a0 them. We will only look at this particular"
+    },
+    "f05d34b6-a346-4ab9-8718-e07fa62e31e1": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "\u00a0\none to illustrate that it is possible.\n \n\u00a0 So, of course now we have chosen something\u00a0\nplausible. We said we have size and height,\u00a0\u00a0 and we kind of, without giving a proof we said\u00a0\nthat maintaining size balance is difficult.\u00a0\u00a0 So, we decided to opt for h"
+    },
+    "87a8b343-2ab1-47fd-9728-c292a798f977": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "eight balance. But\u00a0\u00a0 the whole purpose of this was to get this\u00a0\nlogarithmic height. So, how do we guarantee\u00a0\u00a0 that if we have a height balanced tree and we have\u00a0\nn nodes the height is proportional to log n.\n\u00a0 So, we first have to establish this mathematica"
+    },
+    "d57afe8f-b653-42a0-8ce6-0b4baadbfe23": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "l\u00a0\nfact otherwise there is no point in going for a\u00a0\u00a0 height balanced tree because it does not serve\u00a0\nour purpose of making everything logarithmic.\u00a0\u00a0 So, what we want to try and see is how bad\u00a0\ncan it be. So, bad in this sense means that\u00a0\u00a0 I would like heig"
+    },
+    "2249dec0-067b-48d4-bac1-a10f1c2fb662": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ht to be small with respect to\u00a0\nsize, which is the same as saying that I would\u00a0\u00a0 like size to be big with respect to height. I want\u00a0\nto size to grow as a function of height very fast.\u00a0\u00a0 So, what is the smallest size I can restrict\u00a0\na tree to if I give you "
+    },
+    "f9436def-3faf-4c30-9f5c-b8167f85d932": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "a given height?\n\u00a0 So, this is our, so what is the minimum\u00a0\nheight balanced tree of a given height? So,\u00a0\u00a0 if it is 0, we know it is the empty\u00a0\ntree. If it is 1 then we just have\u00a0\u00a0 this trivial tree consisting of a root node\u00a0\nbecause that is the only tree of"
+    },
+    "abd70447-578c-49af-bde1-ac8639579ffc": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " height 1.\u00a0\u00a0 If it is 22, it is easy to see it\u00a0\nis either this one or it is the one\u00a0\u00a0 symmetrically, which has a right child.\nI want height 2 so I have to have a child\u00a0\u00a0 of the root but I want to have the smallest\u00a0\nnumber of nodes with such a property so I"
+    },
+    "9ad104f0-fcb2-4838-9412-a955e93794f0": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " do\u00a0\u00a0 not put the other child. I could also put both\u00a0\nchildren but then I would get a larger tree. So,\u00a0\u00a0 the goal is to find the minimum size tree\u00a0\nthat is height balanced for a given height.\n\u00a0 So, by inspection is easy to see that for two\u00a0\nI can either pu"
+    },
+    "a2cb639c-6fd3-424a-9c7d-6ee77d4fc327": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "t a left child or a right child\u00a0\u00a0 and I will get a tree with just\u00a0\ntwo nodes which has height 2.\u00a0\u00a0 What about three nodes? Well for three nodes\u00a0\nfirst of all I need to construct a path of\u00a0\u00a0 length 3, that is the minimum that I need. Now,\u00a0\nonce I construct "
+    },
+    "b8a2fd19-bf9d-4cfb-9f02-0442c5c2cb21": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "a path of length 3 on one side\u00a0\u00a0 then remember that the two sides cannot differ by\u00a0\nmore than 1 so I am forced to construct a path of\u00a0\u00a0 length 2 on the other side. So, I am forced to\u00a0\nput something on the other side. But that can\u00a0\u00a0 be only one node because"
+    },
+    "21f14d25-1f89-4ba4-bc11-28b5d19c27c5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " I do not need to put,\u00a0\nas, I do not need to put more than necessary.\u00a0\u00a0 And because of the property that this part\u00a0\nis already height balance I do not need to\u00a0\u00a0 put a right child at the bottom and I do not\u00a0\nneed to put, of course, anything there.\n\u00a0 So, for"
+    },
+    "07d3e98a-87b2-40d1-bc85-9e28d72b0f5b": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " a height of 3 I can get away with\u00a0\nthe tree which has only four nodes. So,\u00a0\u00a0 basically if I have 0, no height, I get 0 nodes,\u00a0\nif I have 1 height I get one node, if I have 2\u00a0\u00a0 height I get two nodes, if I have 3 height I get\u00a0\nfour nodes. So, it does not s"
+    },
+    "1326c292-02b5-4fb7-9093-bcf529418518": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "eem as though we are\u00a0\u00a0 getting very far in terms of being, our goal is\u00a0\nto say that if I fix h then size must be large.\u00a0\u00a0 And it does not seem to be growing very fast. It\u00a0\nis growing very slowly, as a matter of fact.\n\u00a0 So, how would we actually proceed to "
+    },
+    "1fdb3362-f964-4cba-89ce-8a4bd7d5f2ad": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "the\u00a0\nnext level? If I want to find, now for 3,\u00a0\u00a0 we did it by, kind of inspection. By, by 4 it is\u00a0\nnot very clear. So, if I draw a tree of height 4,\u00a0\u00a0 I first have to construct a path of length 4,\u00a0\nand then I have to start balancing it all over\u00a0\u00a0 the place"
+    },
+    "b8a2202d-63b8-420a-a6df-aa104a563cf7": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": ". I need to make sure that this part\u00a0\nis balanced so I need to put something here,\u00a0\u00a0 then I need to make that this part is balanced\u00a0\nso I need to put something there and so on. So,\u00a0\u00a0 how do you systematically construct the next level\u00a0\ntree, which is small "
+    },
+    "614812bd-d636-4d36-b247-6719db1158ec": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "with respect to the height\u00a0\u00a0 1 more, height increasing by 1 more?\n \nSo, it turns out that this,\u00a0\u00a0 in fact is, I mean up to symmetry and all that, of\u00a0\ncourse, all these things remember, are symmetric.\u00a0\u00a0 I could have drawn this tree also by putting the\u00a0\nthin"
+    },
+    "e941915f-8318-4128-991c-cc37f670efff": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "g on the right-hand side for example. So,\u00a0\u00a0 there are many possible ways of drawing\u00a0\nthese trees. So, up to symmetry I claim\u00a0\u00a0 that this is the smallest tree you can draw\u00a0\nof height 4 which is height balanced.\n\u00a0 Now, if you look at it closely you will see "
+    },
+    "7975faa7-5bea-44f0-a906-8c60b48451bd": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "that\u00a0\non its left it has this tree. And on its right\u00a0\u00a0 it has this tree. And this is\u00a0\nnot really a coincidence because\u00a0\u00a0 if I want to increase the height by 1 then the\u00a0\nleft sub tree must have height minus 1. So,\u00a0\u00a0 I need, so if I want the overall height t"
+    },
+    "498ab987-1db5-4d3a-86a2-0ee4900307e4": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "o be 4, I\u00a0\nneed something on one side which has height 3.\n\u00a0 And I want the smallest possible\u00a0\ntree of size of height 3. So,\u00a0\u00a0 I already know how to do that.\u00a0\nI take the smallest possible\u00a0\u00a0 tree of height 3. I know it is height\u00a0\nbalance and I put it on the "
+    },
+    "859e9277-c55c-4923-863e-b9e00a79e75c": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "left-hand side.\u00a0\u00a0 Now, in order to keep this height balanced,\u00a0\nbecause I put 3, there I must put something\u00a0\u00a0 which is 2 on the other side, at least, because\u00a0\notherwise the difference will be more than 1. So,\u00a0\u00a0 I take the smallest possibility of height 2 an"
+    },
+    "6424360b-2c13-4eb0-b99d-7ba9aeaa6e74": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "d\u00a0\nput it there. So, this is the general strategy.\n\u00a0 If I want to build a tree of height h which\u00a0\nhas the smallest number of nodes possible,\u00a0\u00a0 I will first find the smallest tree of height\u00a0\nh minus 1 and stick it on the left sub tree\u00a0\u00a0 because that h minus"
+    },
+    "fbff3124-0eec-4507-98a8-3a9054690ea3": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " 1 plus this new, the\u00a0\nnew root gives me a height of h. Similarly,\u00a0\u00a0 I will take h minus 2 and stick it on the\u00a0\nhand side. Again, I want the smallest tree\u00a0\u00a0 of that size. So, if I if I keep incrementally\u00a0\nfinding the smallest tree of every size then\u00a0\u00a0 when"
+    },
+    "3b290a70-3b07-4aa5-ab31-f46828c57f32": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " I get to h I know the smallest trees of\u00a0\nthe smaller sizes. So, I can stick the correct\u00a0\u00a0 ones together to get myself a height balanced\u00a0\ntree which is smallest possible of size h.\n \n\u00a0 So, so this is our, I mean we argue that this is\u00a0\nthe smallest tree tha"
+    },
+    "4ffdb74a-eea9-46d1-af2b-ce94c241e3c4": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "t we can construct which is\u00a0\u00a0 height balanced and has a given height. So, our\u00a0\ngoal is to show that these trees are growing\u00a0\u00a0 fast. So, notice that up to here it looked\u00a0\nlike it was growing slowly because I had,\u00a0\u00a0 remember, one node here, two nodes here, f"
+    },
+    "894180d3-df7d-4d96-b601-8526daa41038": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "our\u00a0\nnodes here, but here suddenly I have got 1, 2,\u00a0\u00a0 3, 4, 5, 7 nodes here. So, there is some hope\u00a0\nthat things are actually growing faster than,\u00a0\u00a0 that the next level would be even faster because\u00a0\nremember, the next level will have this on the\u00a0\u00a0 left and"
+    },
+    "3d0f33f1-5514-4fc2-9663-ba1aa6efd9a9": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " this on the right. So, it will have\u00a0\nseven nodes on the left and it will have\u00a0\u00a0 four nodes on the right. So, overall this will\u00a0\nhave 7 plus 4 plus 1, it will have 12 nodes. \n\u00a0 So, there is some apparent increase in\u00a0\nthe growth. So, can we quantify this?\n "
+    },
+    "a95e5536-983d-4e26-bf05-3fdd9912c631": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "\n\u00a0 So, let us try to define this function. So,\u00a0\nthe capital S of h is the size of the smallest\u00a0\u00a0 tree we can draw which is height balanced and\u00a0\nhas h. This is what we want to calculate. How\u00a0\u00a0 big is or how small is S of h compared to h. So,\u00a0\nwe have seen t"
+    },
+    "40c39a4d-bccf-4c5e-981a-16b72977e2c5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "hat if the height is 0 then it is 0.\u00a0\u00a0 The size of the smallest tree with height 0\u00a0\nis 0, and for 1 it is 1, that we drew. Now,\u00a0\u00a0 our strategy tells us that the way we\u00a0\nconstruct the smallest tree of size,\u00a0\u00a0 of height h is to first take the smallest tree o"
+    },
+    "cd12cddd-111b-45ea-b667-74874797702a": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "f\u00a0\nthe lesser height, h minus 1, take another tree of\u00a0\u00a0 h minus 2 put on the other side.\u00a0\nSo, this, this node is balanced.\u00a0\u00a0 And then I have to account for the new root\u00a0\nthat I have put in, so I have to add a 1.\n\u00a0 So, that is what we said here. If I go her"
+    },
+    "e0687439-13bf-4610-acc1-7179a86355e2": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "e, this\u00a0\nis 2 plus 1 plus 1. So, I get 4. Here I get 4\u00a0\u00a0 plus 2 plus 1, so I get 7. And the next one as we\u00a0\nsaid will be 7 plus 4 plus 1 will give me 12. So,\u00a0\u00a0 this gives me this recurrence which says that S of\u00a0\nh is 1 plus S of h minus 1 plus S of h minus"
+    },
+    "888bb171-6ace-4bc3-89e8-f00ed71fafd5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " 2.\n\u00a0 So, how do we figure out how fast this grows?\u00a0\nWhy is this going to become a large number? Well\u00a0\u00a0 I am not going to show you why it grows\u00a0\nfast. I am just going to show you why it\u00a0\u00a0 should grow fast compared to something which\u00a0\nyou may have seen or y"
+    },
+    "732ee3c0-e7f3-477a-b737-4c0b67c43e0c": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ou can go and look up\u00a0\u00a0 very easily, which is the Fibonacci sequence.\nSo, if you remember the Fibonacci numbers, you\u00a0\u00a0 start with 0 and 1, and then you keep adding the\u00a0\nprevious 2. So, the next number is 1 plus 0 is 1,\u00a0\u00a0 the next number is 1 plus 1 is 2, t"
+    },
+    "477ff813-c8f5-4c21-b7d5-845cabbd64a1": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "hen 3, then\u00a0\n5, then 8, then 11, and so on, and these numbers\u00a0\u00a0 grow pretty fast. So, the recurrence for\u00a0\nthis is that the 0th Fibonacci number is 0,\u00a0\u00a0 the 1th Fibonacci number is 1, and\u00a0\nthe nth Fibonacci number is the sum\u00a0\u00a0 of the previous two.\nSo, if yo"
+    },
+    "3c770201-a4f0-499f-accb-294fddbae244": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "u look at this,\u00a0\u00a0 the big difference between our recurrence and\u00a0\nthe Fibonacci recurrence is that we are adding 1.\u00a0\u00a0 So, we are not just taking the previous\u00a0\ntwo values but we are adding 1 to it.\u00a0\u00a0 So, what this says is that S of n is definitely\u00a0\nbigger th"
+    },
+    "8d128ef8-ea6f-4ae9-b518-3a9d0fe97a62": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "an or equal to F of n. Initially it\u00a0\u00a0 is the same but after I get to 2 it is going to\u00a0\nbecome bigger because the second Fibonacci number,\u00a0\u00a0 if you notice, is 0 plus\u00a0\n1, whereas here I get 2.\n\u00a0 So, the size of this tree is growing at least\u00a0\nas fast as the F"
+    },
+    "db52c49c-870e-4a52-b0dd-a9861efe238e": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ibonacci numbers with respect\u00a0\u00a0 to the height. And now you have to go and find\u00a0\nout for yourself that the Fibonacci numbers\u00a0\u00a0 grow exponentially. So, the nth Fibonacci number\u00a0\nis actually exponential with respect to n. So,\u00a0\u00a0 given that the nth Fibonacci nu"
+    },
+    "8d62a3c8-8f3e-416c-9a57-4bbd96ad3131": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "mber is exponential\u00a0\nwith respect to n, the size of the h height tree\u00a0\u00a0 must also be exponential with respect to h.\n \nSo, this rests on the argument that Fibonacci\u00a0\u00a0 gives you an exponential growth and the\u00a0\nsize of this smallest tree of height h\u00a0\u00a0 is sitti"
+    },
+    "c595f6b4-4b6e-4d64-a773-f4b6e92ee001": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ng above the Fibonacci sequence because I\u00a0\nam actually adding 1 with respect to what I would\u00a0\u00a0 be computing if it was a Fibonacci sequence.\u00a0\nSo, with this argument we are now, we are now\u00a0\u00a0 showing that the size grows fast. And if the size\u00a0\nis exponential i"
+    },
+    "e0c849d3-990a-4f46-ad9b-3997d7ddf3f6": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "n h, if I turn it around then it\u00a0\u00a0 means that h is logarithmic in the size. So, if n\u00a0\nis the size then n will be exponential in h, so h\u00a0\u00a0 will be logarithmic in n, that is what we want.\nSo, this justifies mathematically why\u00a0\u00a0 height balanced trees are of i"
+    },
+    "42bfe3e4-8f59-4257-9d99-e53ef357cdd8": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "nterest\u00a0\nto us. If we can maintain height balance\u00a0\u00a0 then we can actually get logarithmic height trees.\u00a0\nAnd if we can get logarithmic high trees as we saw\u00a0\u00a0 all our operations on search trees\u00a0\nwill be proportional to log n.\n \n\u00a0 So, the difficulty is that\u00a0\n"
+    },
+    "66c5ef80-2371-4053-a627-2f0ab8c6fb54": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "this balance gets disturbed\u00a0\u00a0 when we change the tree. So, how much\u00a0\ndoes it get disturbed and what is the\u00a0\u00a0 measure of imbalance? So, from a natural\u00a0\nperspective supposing somebody holds up a balance,\u00a0\u00a0 as we said, with weights, and it is not\u00a0\nbalanced, t"
+    },
+    "af2c9b84-b49b-4b4c-9479-491ea75fbabe": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "hen it will tilt to one side.\u00a0\u00a0 So, let us try to quantify this slope.\nSo, let us say that the slope at a node is\u00a0\u00a0 the difference in the height between the left\u00a0\nand the right. The slope could be now positive\u00a0\u00a0 or negative because it is not the absolute\u00a0\n"
+    },
+    "8de5c2af-d139-4c46-aac8-41bd4c2861d7": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "value. It is saying take the left height\u00a0\u00a0 subtract the right height. If the left height is\u00a0\nmore you will get a positive value, if the right\u00a0\u00a0 height is more you will get a negative value.\n \nSo, our definition of height balance says that\u00a0\u00a0 these two quant"
+    },
+    "f0c79f0c-3c1c-4800-b36e-dd3ef05be53e": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ities cannot differ by more\u00a0\nthan 1. That means the, the slope can be 0\u00a0\u00a0 if they are both equal or it can be plus 1\u00a0\nor minus 1 depending on which one is more.\u00a0\u00a0 So, there are only three legal values allowed\u00a0\nfor the slope of a node in any balanced tree.\n"
+    },
+    "d29cd1f9-a885-4a2c-94e3-1ed4944ac037": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "\u00a0 Now, what happens when we insert or delete\u00a0\na value with respect to a balanced tree? So,\u00a0\u00a0 if we insert a value, so remember that I could\u00a0\nhave a tree which looks like this. And supposing\u00a0\u00a0 this has slope plus 1. So, the left hand side\u00a0\nis already more t"
+    },
+    "6710eb64-91ae-4041-b200-6a304f9085c5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "han the right hand side by 1.\u00a0\u00a0 And remember what insert does. It walks down\u00a0\nuntil it finds a leaf where it cannot locate\u00a0\u00a0 the thing and then it sticks a new value there.\nSo, it will now increase the height perhaps of the\u00a0\u00a0 longest path on the left by 1,"
+    },
+    "ce81355e-7967-4e29-ba1d-f156d70204f8": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " and so the slope\u00a0\nwill go from plus 1 to plus 2. And the same thing\u00a0\u00a0 could happen on the right hand side. Instead of\u00a0\nthis if it had been minus 1, it could have been\u00a0\u00a0 that I come here and add something and it becomes\u00a0\nminus 2. So, insert can clearly mak"
+    },
+    "56f3bb8b-e47e-4251-b381-120df835b0ed": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "e something go\u00a0\u00a0 from plus 1 to plus 2, or minus 1 to minus 2.\u00a0\nAnd delete can do the same thing in reverse.\n\u00a0 So, supposing this is already plus 1,\u00a0\nand then I delete a node here and this,\u00a0\u00a0 this three actually shrinks. Then the tree which\u00a0\nhad a plus 1 b"
+    },
+    "f0997025-f783-406a-ad21-3cc45ec241bd": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "alance becomes plus 2 because the\u00a0\u00a0 shortest side is shrunk. So, in general if we try\u00a0\nto arrest this imbalance as soon as it happens\u00a0\u00a0 then I claim that the only slopes\u00a0\nthat are of interest to us,\u00a0\u00a0 which are outside the balance range are\u00a0\nplus 2 minus 2"
+    },
+    "2b50bcfc-7de2-4bbc-bf26-d600ea50fcb1": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": ". It cannot be worse than that\u00a0\u00a0 because I have only deleted or inserted one node\u00a0\nat this point so the height has not changed.\n\u00a0 So, notice that that is all that happens if you\u00a0\ngo back and look at the search three things. It\u00a0\u00a0 either increases the length"
+    },
+    "c9a612d9-db39-449f-bd1f-2218710f20c1": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " of a path by 1 or it\u00a0\ndecreases by deleting the maximum, it deletes one,\u00a0\u00a0 one path by 1. So, how do we fix this balance?\n \nSo, the general way to fix this balance\u00a0\u00a0 is by moving things from one side to the other.\u00a0\nThere are too many things on the left, y"
+    },
+    "2b2dcb81-f2d3-44d4-8f46-d0519a3f4d97": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ou move\u00a0\u00a0 it to the right. There are too many things on the\u00a0\nright, you move it to the left but you have to do\u00a0\u00a0 it in a sensible way to respect the search tree\u00a0\nproperty. Remember, the search tree property says\u00a0\u00a0 that the root must be in between the value"
+    },
+    "b07a10e7-bbbd-4d54-b63a-553185e25cf1": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "s\u00a0\non the left and the values on the right.\n\u00a0 So, let us first look at the case where there is\u00a0\ntoo much on my right. So, the right has a height\u00a0\u00a0 of h plus 2, so this is where we have a slope of\u00a0\nminus 2 technically because the left minus the\u00a0\u00a0 right. The"
+    },
+    "05772d40-8986-4360-89d5-aa5adbc2854d": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " slope is minus 2. So, I have too many\u00a0\nnodes on the, I have too long a path on the,\u00a0\u00a0 on the right sub tree. So, I want to\u00a0\nbring things from here to here.\n \n\u00a0 So, in order to do that what I will do is I will\u00a0\nfirst expand this tree. So, notice that this "
+    },
+    "80ab8dff-b3a9-450d-a95a-e7f6bf6c5536": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "has\u00a0\u00a0 height of at least 2 because h plus 2, h can\u00a0\nbe at, at least, cannot be smaller than 0. So,\u00a0\u00a0 there are at least two things, so there is\u00a0\nat least one node, and then one more node.\u00a0\u00a0 There is at least two nodes on that path there.\nSo, I can fill up,"
+    },
+    "a2c1398c-458c-4a45-b52f-13ac8fbd31c8": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " pick out the root of this and\u00a0\u00a0 then split it into two parts. So, if I\u00a0\nexpand this, what I mean by expand is,\u00a0\u00a0 I focus on the root of this, the left, the\u00a0\nright child of the original node, which I will\u00a0\u00a0 denote with this diamond symbol to, so the diamon"
+    },
+    "c55bc668-b985-4e8c-b495-88f99b94dddf": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "d\u00a0\nsymbol is a different value from this dot symbol.\u00a0\u00a0 I do not know what they are but I know that\u00a0\nthe diamond is a bigger value than dot.\n\u00a0 So, what do we know? We know that everything\u00a0\nhere is smaller than the dot, everything here\u00a0\u00a0 is smaller than the "
+    },
+    "1b2b2b42-2b09-49ad-aa3f-6dd38d4cea63": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "diamond bigger than the dot,\u00a0\neverything in R is bigger than the diamond. So,\u00a0\u00a0 I have three different groups of values. So, \neverything in the leftmost tree is smaller than\u00a0\u00a0 everything, everything in the L tree is\u00a0\nbetween the dot and the diamond value,\u00a0"
+    },
+    "607d4e0b-d53a-47d7-bbc4-9c97638eea94": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "\u00a0 and everything in the R tree is bigger\u00a0\nthan both the dot and the diamond.\n\u00a0 Now, I want to transfer something from\u00a0\nhere to there, but I want to do it in\u00a0\u00a0 a kind of local way. I do not want to go down\u00a0\nand move things around. So, I want to do some\u00a0\u00a0 su"
+    },
+    "f7e15f20-b392-4d27-95f7-60aede365262": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "rgery at the top of the tree. So, the\u00a0\nsurgery at the top of the tree will \n\u00a0 mean that I am actually going to take\u00a0\nthis and kind of make it like this. So,\u00a0\u00a0 let me just draw it properly.\n \nSo, this is my rotation. So, I have taken this\u00a0\u00a0 and I promoted t"
+    },
+    "ec1eec71-70fe-4524-a11a-bcb4bf4bd584": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "his to the root. Instead of being\u00a0\nthe right child it now becomes the root. So, what\u00a0\u00a0 was the root now becomes a left child. So, that\u00a0\nis my rotation. But now I have to make sure that\u00a0\u00a0 all these other values are in the correct place\u00a0\nand I want to do a m"
+    },
+    "0945527b-4c82-4145-86ec-c410ac62db5f": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "inimum amount of work. So,\u00a0\u00a0 remember that this was to the left of everything\u00a0\nso it remains to the left of the black dot. This\u00a0\u00a0 was bigger than everything so it remains to the\u00a0\nof the diamond. And this was bigger than the black\u00a0\u00a0 dot, and smaller than th"
+    },
+    "6c48b4a6-ee1f-44ea-abc4-716cd48cd663": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "e diamond so now it is\u00a0\nsmaller than the diamond bigger than black dot.\n\u00a0 So, by just keeping track of the original property\u00a0\nof what these values had with respect to the nodes\u00a0\u00a0 above, you can figure out where to do this. And\u00a0\nas we will see that this rot"
+    },
+    "b3226314-d83d-4cde-8cb2-4540a674ff37": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ation actually is very\u00a0\u00a0 easy to implement because I just have to change\u00a0\nsome left-right pointers at the top of the tree.\u00a0\u00a0 I do not have to go deep into the tree to, so I\u00a0\nonly need to do a constant number of changes.\n\u00a0 So, this is a left rotation.\u00a0\nI ta"
+    },
+    "26d54b0b-5387-48bc-a006-3a6d1da513e2": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ke things from the right,\u00a0\u00a0 and I kind of, I kind of rotate the tree. But in\u00a0\nthe process some big chunk from the right actually\u00a0\u00a0 comes to the left. It is not just at the top, but\u00a0\nsome stuff from the right also comes to the left.\n\u00a0 And of course, what ha"
+    },
+    "8e82a71a-301b-48d2-9a86-c43fa0bd70cb": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ppens here, if\u00a0\nyou now look at the slopes carefully,\u00a0\u00a0 let us try to analyze what has happened. So, first\u00a0\nof all we said that there was a difference of 2.\u00a0\u00a0 So, let us assume that the\u00a0\nleft was h, then the right\u00a0\u00a0 must be 2 more, exactly 2 more because t"
+    },
+    "877cef43-b487-4646-b0b2-762dbd7ee769": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "hat is\u00a0\nthe only case you are interested in, so h plus 2.\u00a0\u00a0 If this is h plus 2 then something below\u00a0\nit, below this must be h plus 1.\n\u00a0 So, this says that either the left tree is\u00a0\nh plus 1, or the right tree is h plus 1 or\u00a0\u00a0 both. And because it is balanc"
+    },
+    "dfd9c61a-0c66-48d7-a6b1-68e35c541f77": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ed they must be at\u00a0\nleast h. So, it says either I could have h plus 1,\u00a0\u00a0 h plus 1, both are h plus 1 therefore the\u00a0\ndiamond is at h plus 2. Or I could have h and h\u00a0\u00a0 plus 1 so that the diamond is still at h plus 2\u00a0\nbut it is balanced so there is a differen"
+    },
+    "59f7b1a8-c3ab-483d-a2b5-d9401dfad9b6": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ce of 1\u00a0\u00a0 or it could be the other way.\nIt cannot both be h, but just for\u00a0\u00a0 conciseness I have written it like this\u00a0\nbut this, this plus this is not possible.\u00a0\u00a0 I cannot have, I cannot have a situation where I\u00a0\nhave this and this. So, that is not allowed.\n"
+    },
+    "29c1f5af-8f39-4438-8124-f38a75f74127": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "\u00a0 So, now when I move these things, of\u00a0\ncourse I am not destroying any nodes. So,\u00a0\u00a0 the nodes are still the same. So, this tree\u00a0\nis unchanged, so this remains of height h.\u00a0\u00a0 And these trees are also unchanged. So,\u00a0\nwhat is the worst that could happen? The\u00a0"
+    },
+    "e0e55ae7-889e-47f2-92f8-b996d0886b14": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "\u00a0 worst that could happen is that this\u00a0\nactually was h, and this was h plus 1.\u00a0\u00a0 Remember, either possibility was there.\nSo, if this is the case then this is at h plus 2.\u00a0\u00a0 And so this thing has actually gone to\u00a0\nsomething which has a bad slope. So, this i"
+    },
+    "236087e6-ab4b-40a7-b55e-7c9e32fe5c2f": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "s,\u00a0\u00a0 from here it is coming as h, so the difference\u00a0\nbetween the right and the left is actually plus 2.\u00a0\u00a0 So, it has gone from minus 2 to plus 2.\nOn the other hand, the good case is that this was\u00a0\u00a0 h and this was h plus 1. If this is the case then\u00a0\nboth of"
+    },
+    "aefacd52-1443-472d-b51c-996f75a42224": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " these are h. So, this is a tight h plus 1,\u00a0\u00a0 but this is also a tight h plus 1, so I\u00a0\nactually have a 0. So, I could have a 0,\u00a0\u00a0 and if now both are h plus 1, then I will\u00a0\nhave plus, I will have h plus 2 here,\u00a0\u00a0 and h plus 1. So, I could have any of these"
+    },
+    "38689126-22a2-4d79-90f1-7fd7125d0504": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": ". And\u00a0\nremember I have gone from minus 2 to plus 2.\n\u00a0 So, on its own a rotation need not fix the\u00a0\nimbalance. We will see that you can combine\u00a0\u00a0 rotations to fix imbalance. So, this is a left\u00a0\nrotation. I take things from my right sub tree\u00a0\u00a0 and move it to "
+    },
+    "f6fb3184-57e4-457f-bfc0-b3ddb45be2e8": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "the left because the right has too\u00a0\nmuch. I could do the same thing the other way.\n \n\u00a0 So, there is symmetric right rotation which takes\u00a0\nthings from the left and moves it to the right.\u00a0\u00a0 So, now my left is too, too tall, and I want to\u00a0\nmove things to the "
+    },
+    "7c359a5b-c11f-4ca6-9ff7-c3df5ea6ab61": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "right. So, again I expand the\u00a0\u00a0 left exactly as I had done before for the right.\u00a0\nSo, this is a completely symmetric operation. Now\u00a0\u00a0 I am going to take things from here to there. And\u00a0\nagain I observe that this is extreme left, this is\u00a0\u00a0 extreme right, and"
+    },
+    "033e9b93-9263-4cd2-b54a-77ce1b7076c9": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " this is in the middle.\n \nSo, after I move it by the same argument\u00a0\u00a0 what will happen is that this remains to the\u00a0\nleft of everything, and this remains to the right\u00a0\u00a0 of everything, and this will come now between\u00a0\nthese two nodes. So, it comes to the right"
+    },
+    "d794525e-1520-4be5-9498-d6b14e89d713": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " of\u00a0\u00a0 the diamond and to the left of the black dot.\nAnd by the same argument I started with a plus\u00a0\u00a0 2 slope, and in the extreme case I\u00a0\nmight end up with a minus 2 slope\u00a0\u00a0 because this could be h and this could be h\u00a0\nplus 1. So, this could be at height h "
+    },
+    "3eef3d52-665b-4f1e-826b-900976aec81d": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "plus 2.\u00a0\u00a0 Or I could get a zero slope or I could get a minus\u00a0\n1 slope. So, we have these two rotations. They\u00a0\u00a0 are symmetric operations, they are exactly the\u00a0\nsame except they go in opposite directions.\n  \n\u00a0 So, let us see how to implement it.\u00a0\nSo, this is"
+    },
+    "2c488e91-ef75-49e2-bb13-d66c11bf8a55": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " now the left rotation,\u00a0\u00a0 the first one that we saw. So, we want to take\u00a0\nthis and go there. So, we are going to rotate\u00a0\u00a0 at this point. So, this is my self. I am\u00a0\napplying the rotation at this node marked v.\u00a0\u00a0 So, what I am going to do is I am going to cr"
+    },
+    "a86f8b9e-bb53-4dd4-a3d7-a1756a76756c": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "eate\u00a0\na new node here, and I am going to copy v there,\u00a0\u00a0 and I am going to promote, so I am going to\u00a0\nbasically do some surgery on this tree.\n\u00a0 So, I am going to create a new left child. And\u00a0\nwhat am I going to put there? I am going to\u00a0\u00a0 put this value v. "
+    },
+    "949b12c2-5de0-4470-9e71-b6c376353b37": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "So, how did I get the value? I\u00a0\nfirst said what was the value that I started with,\u00a0\u00a0 so that value, this is a little bit like\u00a0\ninserting at the beginning of a linked list.\u00a0\u00a0 I am going to copy the value that I have one\u00a0\nposition down. And then I have to no"
+    },
+    "22120660-4125-422c-91d6-bbb365623db1": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "w take\u00a0\u00a0 these three trees and put them in the place.\nSo, I have a left tree, this is tl, I have a\u00a0\u00a0 right left tree, that is if I go right and\u00a0\nleft, and I have a right right tree. So,\u00a0\u00a0 I have these three trees. And of course I have\u00a0\na value there also w"
+    },
+    "6b04f5a1-a44b-43f2-8d02-b19a5cf84e9f": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "hich I have to preserve.\u00a0\u00a0 So, finally what I end up doing is I cannot change\u00a0\nmy current node. This is the basic principle. I\u00a0\u00a0 cannot change the node that self is pointing to.\u00a0\nSo, I have to copy whatever vr has into self.\n\u00a0 So, I am going to have self-d"
+    },
+    "cf2c8367-3d84-4b05-9451-545e299e5226": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ot value has to\u00a0\nbe the value of vr. And I have to set its left\u00a0\u00a0 and right correctly. Its right is going to\u00a0\nbe whatever it already was, which is the\u00a0\u00a0 right tree that the node was pointing to. The\u00a0\nleft is going to be what it already was, which is\u00a0\u00a0 this"
+    },
+    "d97aeebf-d4e9-4f1f-865a-e81b923abc03": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " one, this is the new node.\u00a0\nAnd the new node now has on its\u00a0\u00a0 right this tree trl which was already.\nSo, so I am just doing, now notice that this\u00a0\u00a0 is a top-level constant number of operations. I\u00a0\nam I am doing some five assignment statements,\u00a0\u00a0 then I am"
+    },
+    "80b634ae-e1e3-428f-b99e-24365a8c2df3": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " creating a node and I am doing\u00a0\nsome four more assignment statements. So,\u00a0\u00a0 it does not, it does not matter how big the tree\u00a0\nwas underneath. I am only doing some surgery at\u00a0\u00a0 this top level. I am only interested in exploring\u00a0\nthe top level of this tree a"
+    },
+    "0cbc065d-6c96-4862-8511-80a534b3b1b5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "nd making some local,\u00a0\u00a0 local choices. So, this is a constant overhead.\u00a0\nMaking a rotation at the root of a tree\u00a0\u00a0 takes a constant amount of time independent\u00a0\nof how big the trees actually is.\n\u00a0 And of course now you can obviously imagine that\u00a0\nthe right "
+    },
+    "087b54a1-b2b2-451c-b2e8-8917d3d18408": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "rotation is symmetric. So, I copy the\u00a0\u00a0 current value as v. Now, I take the value from my\u00a0\nleft and keep it as vl, and then I create a new\u00a0\u00a0 node to the right, so this is this new node, and\u00a0\nthen I populate it with my current root value. And\u00a0\u00a0 then I put t"
+    },
+    "e77f0db2-216e-47ef-ab7d-d06e3e831919": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "he right trees, I hang off the trees\u00a0\ncorrectly. So, I take this tree and I hang it off\u00a0\u00a0 the root, I take this tree and I hang it to the\u00a0\nleft of this, and I take this tree and I hang it\u00a0\u00a0 to the right of this. So, this is the rotation.\nSo, rotation is ve"
+    },
+    "08d4964f-5317-4f65-9d95-1563b4baa3fc": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ry easy to implement given our\u00a0\u00a0 existing python description of the tree as a\u00a0\nclass. So, that does not take any effort at all.\u00a0\u00a0 So, what we have seen is that you can take an,\u00a0\na tree with balanced plus 2 or minus 2 and we\u00a0\u00a0 can do some rotation and trans"
+    },
+    "0ca7a544-ced2-429d-ac62-78dec54b7d1d": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "fer the balance\u00a0\nto the other side. It may or may not fix it.\u00a0\u00a0 So, now we need to make sure that we fix\u00a0\nit. So, we now want to use this to actually,\u00a0\u00a0 so rotation so far is not itself a balancing\u00a0\noperation. It is a basic block for balancing.\u00a0\u00a0 So, let u"
+    },
+    "032ce30d-2fda-4a85-af80-6e48358a950a": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "s see how to rebalance.\n \nSo, remember that the only two situations\u00a0\u00a0 that we will ever rebalance are when the node is\u00a0\nplus 2 or minus 2 because we are rebalancing at\u00a0\u00a0 every point. We are never allowing the balance\u00a0\nto become worse than plus 2 or minus 2"
+    },
+    "609072c3-8281-4736-b154-dd541d28bacf": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": ". So,\u00a0\u00a0 it was previously plus 1 to minus 1 in that\u00a0\nrange, and we did one insert or delete and\u00a0\u00a0 something must have changed so it might have\u00a0\nbecome plus 2, might have become minus 2.\n\u00a0 So, let us look at the plus 2\u00a0\ncase. So, in the plus 2 case\u00a0\u00a0 the le"
+    },
+    "61c37faa-681a-4963-8d5a-98e88a7cd40d": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ft hand side is bigger than the hand\u00a0\nside. So, since it is plus 2, we must have\u00a0\u00a0 something here overall. If this is h\u00a0\nthis left-hand side must be h plus 2.\u00a0\u00a0 So, as before we have expanded this h\u00a0\nplus 2 with this diamond as the root node,\u00a0\u00a0 and now I a"
+    },
+    "a78700db-a351-4f99-b129-6716a13f0695": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "m going to look at the slope at\u00a0\nthis point. The slope at this point is plus 2,\u00a0\u00a0 that I know. What is the slope at the diamond?\nSo, the slope with the diamond now, can it be\u00a0\u00a0 something other than minus 1, 0, 1? Well we are\u00a0\ngoing to argue that it cannot "
+    },
+    "987e1a79-73e3-41b5-9e29-05a957b3883e": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "happen because we\u00a0\u00a0 are always going to ensure that, I mean we will\u00a0\nsee that this rebalancing happens in such a way\u00a0\u00a0 that when I am touching a node and trying to\u00a0\nrebalance it, we can assume that its sub trees\u00a0\u00a0 have been recursively rebalanced because r"
+    },
+    "db2fb055-9078-45a3-9c5f-c20216a2c3b2": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "emember\u00a0\nthat all our updates happen recursively.\n\u00a0 So, what we will see that every time we make an\u00a0\nupdate, we rebalance. So, at every point below\u00a0\u00a0 we have already rebalanced before coming here.\u00a0\nSo, that is what we have to keep track of. So,\u00a0\u00a0 we can as"
+    },
+    "47eb786c-e14e-4531-9f85-7bd278fa86d5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "sume that this tree, capital L, and\u00a0\nthe street capital R are already balanced.\n\u00a0 So, now we have to look at the slope,\u00a0\nas I said, of this diamond node.\u00a0\u00a0 So, what are the possibilities? It is going\u00a0\nto be either 0 or plus 1 or minus 1. So,\u00a0\u00a0 I am going t"
+    },
+    "b04cb993-a782-490b-b46e-3cfc1cffbbac": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "o consider first the case where\u00a0\nit is not minus 1. So, either 0 or plus 1.\u00a0\u00a0 If it is 0 or plus 1, remember that this whole\u00a0\nthing has to have h plus 2, so one of these two\u00a0\u00a0 things has to have h plus 1. And it cannot\u00a0\nbe only the right-hand side because "
+    },
+    "86537beb-8cdb-42f3-830a-8012d9765256": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "then the\u00a0\u00a0 slope will become minus 1. So, the left-hand\u00a0\nside must be h plus 1, it cannot be h.\n\u00a0 The right-hand side could be h or h plus 1. If it\u00a0\nis h I have 1, if it is h plus 1, I have 0. So,\u00a0\u00a0 this is a concrete picture that we have under\u00a0\nthe assump"
+    },
+    "751acc6c-1671-4a24-9b2e-88b9ca92cccd": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "tion that the root node, that black dot\u00a0\u00a0 has a slope plus 2, and the left child, the\u00a0\ndiamond node has either 0 or 1 as its slope.\u00a0\u00a0 So, now I want to rectify this using\u00a0\nthose rotations that we have just seen.\n\u00a0 So, it turns out that here a single rotati"
+    },
+    "26e4b69a-17df-4511-b259-5b1f4684336c": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "on\u00a0\nis enough. And what does that single rotation\u00a0\u00a0 do? Well I just rotate at the top. So,\u00a0\nI will basically, if I erase all this,\u00a0\u00a0 I am applying essentially a right rotation at\u00a0\nthis node. And that is exactly the rotation\u00a0\u00a0 that we saw earlier. We will t"
+    },
+    "af82060b-586b-4179-a727-1f3115d790c9": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ake the diamond\u00a0\nnode and we will hang that, this node off it,\u00a0\u00a0 and then this right tree will remain there, this R\u00a0\ntree will come here, and this L tree will be here\u00a0\u00a0 because that is the the relative values of L, R\u00a0\nand that original tree on the right ar"
+    },
+    "1623150e-45c1-4f2c-9146-773d60560b84": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "e like this.\u00a0\u00a0 So, this is what we get.\nSo, we get this tree here.\u00a0\u00a0 So, now, what we can see now is that the height\u00a0\nhere is positively h plus 1. The height here could\u00a0\u00a0 be h plus 1 if I only look for this, but it could\u00a0\nalso be h plus 2 because this is h"
+    },
+    "d4856c8f-06e8-4a4b-9bf4-5552383032c1": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " plus 1 plus 1.\u00a0\u00a0 But in the worst case it is h plus 2. It cannot\u00a0\nbe more than h plus 2. So, the slope of this node\u00a0\u00a0 now, this, this node which came from the left,\u00a0\nthis value that came from the left, it is either\u00a0\u00a0 0 or it is minus 1 because it is 1 les"
+    },
+    "b30f9cba-3e87-4356-b02e-9d50d844f34c": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "s on the\u00a0\nleft than on the right. But it is within range.\n\u00a0 So, all the nodes, you can see, are balanced\u00a0\nbecause everything below this is definitely\u00a0\u00a0 balanced. And this node is balanced because\u00a0\nit is either plus 1 or 0. Either the right,\u00a0\u00a0 this three na"
+    },
+    "b485c3f1-3894-4c38-85da-29020acb2943": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "med R is either h plus 1\u00a0\nminus h plus 1 or it is h minus h is 0.\u00a0\u00a0 So, if I have the, going back\u00a0\nif I have the diamond node\u00a0\u00a0 having a slope of 0 or 1, a single rotation\u00a0\nat the top fixes the problem for me.\u00a0\u00a0 Unfortunately, if it is a minus 1\u00a0\nit is a l"
+    },
+    "6cdd9811-3991-42be-853b-2f0cc2c77dea": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ittle bit more tricky.\n \n\u00a0 So, supposing the slope here is minus 1, then I\u00a0\nknow for sure that this must be the situation.\u00a0\u00a0 This has to be h plus 1 and this has to be\u00a0\nh because I need to get a height of h plus\u00a0\u00a0 2 at this point. The only way I can get a\u00a0"
+    },
+    "12fa0b6c-90ca-470d-a3d4-4830ba06d0e4": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "\nheight of h plus 2 at that point is to have\u00a0\u00a0 1 h plus 1 child, either left or right, and I\u00a0\nknow which one it is because the slope is minus 1.\u00a0\u00a0 So, since this is h plus 1, I will expand this\u00a0\ntree. I am going to expand this tree now.\n \n\u00a0 So, I am going "
+    },
+    "df8b0bbf-bb72-48b6-92ae-3acd8b2de5cb": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "to redraw this tree and say\u00a0\nthat under the, this thing there is a star\u00a0\u00a0 that is a third node which I have kind of\u00a0\npulled out. So, I am explicitly extracting\u00a0\u00a0 the root of that tree. And it has these two\u00a0\nsub trees which I am going to call X and Y.\u00a0\u00a0 So,"
+    },
+    "5bb52c8b-6bfe-4f84-8f27-8457d24ecf1c": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " this together, this whole thing before\u00a0\nwas what I had called R, the capital R. So,\u00a0\u00a0 this whole thing together was earlier this capital\u00a0\nR. So, I have taken this capital R and decomposed\u00a0\u00a0 it into the root and there is two sub trees.\nSo, this whole thing"
+    },
+    "a43e2782-507e-47f8-9e9a-a9901cf6622a": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " before was h plus 1.\u00a0\u00a0 So, so this should be h or h minus 1. So, at least\u00a0\none of them has to be h but the other one could\u00a0\u00a0 be h minus 1, but not both because if this whole\u00a0\nthing is h plus 1 then one of these two trees must\u00a0\u00a0 be of height h. So, now I t"
+    },
+    "9537fb65-f057-456a-b94a-d672bb69e129": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ake this thing and I\u00a0\nexpand it and I have rotated it at this point.\n \n\u00a0 So, I take this sorry and I rotate it here. So,\u00a0\noriginally my balance, the problem is here. But\u00a0\u00a0 I am not going to the root at all. I am doing it\u00a0\nat a lower level. So, I am first r"
+    },
+    "14e1d9f4-84a1-4a4f-968d-bb59237269d5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "otating the left\u00a0\u00a0 sub tree of the root. So, I rotate it this way.\u00a0\nSo, again, remember that this must be h minus 1.\u00a0\u00a0 It does not matter as we will see it will\u00a0\nwork out okay. So, now we have this situation.\u00a0\u00a0 So, in this situation I still am not promised"
+    },
+    "e7de1e4e-e186-401b-b12b-a5c21ed0f880": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "\u00a0\nsomething because I could have an h plus 1,\u00a0\u00a0 and so I could have an unbalanced\u00a0\nsituation because of h, sorry,\u00a0\u00a0 so this could be at h plus 1 and this could be\u00a0\nat h plus 2 and I know that this is at h.\n\u00a0 So, the situation here could still be bad in\u00a0\nth"
+    },
+    "3196926c-e5f8-491b-b8a6-f537406b9707": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "e sense that it could still be a situation\u00a0\u00a0 where I have a plus 2 at this point. I have not\u00a0\nchanged the imbalance at that point by doing this\u00a0\u00a0 rotation inside. But now I will do that previous\u00a0\nrotation. Actually now it turns out that I am in\u00a0\u00a0 this case"
+    },
+    "af0c183d-54f6-45f5-902f-80e075cd0116": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " with respect to the star node.\n \nSo, if I do one more right rotation,\u00a0\u00a0 then you can see that either everything\u00a0\nis h or I have h and h minus 1. So,\u00a0\u00a0 basically these two nodes are balanced because\u00a0\nthey have either 0 or plus 1 minus 1 slope,\u00a0\u00a0 and these "
+    },
+    "6a427ef2-3d46-45cf-9448-37d193e1ae9d": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "two nodes are at the same\u00a0\nheight so this node is balanced.\n\u00a0 So, in case I have one situation as single\u00a0\nrotation suffices, and other situation two\u00a0\u00a0 rotations suffice. So, the rotation on its\u00a0\nown, as I said, does not fix the balance. But\u00a0\u00a0 by combining "
+    },
+    "1fa3965d-99e8-46b8-9a1e-48670a5356bd": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "the rotations cleverly you can always\u00a0\nfix this thing in a constant number of operations.\u00a0\u00a0 Remember, each rotation took a few reassignments\u00a0\nof the nodes near the top of the trees.\n  \n\u00a0 So, this was for the plus 2 case, and\u00a0\nwe saw that everything is symm"
+    },
+    "fdcfa330-5d48-47df-a888-ad720a948e3f": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "etric. So,\u00a0\u00a0 here we did a right rotation and left rotation,\u00a0\nthere you do a left rotation, right rotation. So,\u00a0\u00a0 it is the same thing but you just do it\u00a0\nsymmetrically. So, if you can do plus 2,\u00a0\u00a0 you can do minus 2 by just applying the\u00a0\nrotations in the "
+    },
+    "bc6a214d-ad94-40cd-b470-c1c0f066a872": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "opposite directions.\n \n\u00a0 So, how does this all fit together?\u00a0\nWell we, we saw the code for rotate,\u00a0\u00a0 and what we described now is a procedure of how\u00a0\nto apply this rotate by looking at the slope.\u00a0\u00a0 So, if you combine it, I have not shown the\u00a0\ncode, if you "
+    },
+    "8f9b1ea4-fa0b-4e4a-aa65-6b124e295032": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "combine it, you can combine these\u00a0\u00a0 rotations judiciously so that when you have slope\u00a0\nplus 2 you can make it back to a normal slope,\u00a0\u00a0 and when you have slope minus 2 you can make,\u00a0\nby doing the rebalancing appropriately.\n\u00a0 So, we can assume that we can t"
+    },
+    "30af0395-1e3c-4f36-a1e9-cd838985d784": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ake those rotations\u00a0\nand stick them together in the correct sequence\u00a0\u00a0 to always take a node and rebalance it whenever\u00a0\nthe slope is outside the permitted range. So,\u00a0\u00a0 our goal therefore, is to keep it\u00a0\nalways within the permitted range. So,\u00a0\u00a0 what we have"
+    },
+    "549088df-43f8-4e55-b31c-d4719abb2888": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " to do is go back and check the\u00a0\ncode that we have that modifies the tree.\n\u00a0 So, what is the code that modifies a tree? Insert\u00a0\nand Delete. So, wherever we modify the tree that\u00a0\u00a0 sub tree must be rebalanced. So, if you remember\u00a0\nInsert, it said okay, if it"
+    },
+    "eccd05b0-4d5d-4ce3-b56d-ef39943ad9d3": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " is empty then I create\u00a0\u00a0 the value here which is not a problem because that\u00a0\nis a balanced tree because it has only one node.\u00a0\u00a0 And of course, if I find the value I am not making\u00a0\nany change. If I go to the left and I insert it,\u00a0\u00a0 then potentially I have "
+    },
+    "841d5e6f-3fdd-45f2-ace5-effdf60bd14d": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "to rebalance it.\nSo, after I insert on the left-hand side,\u00a0\u00a0 the left-hand side might change and therefore I\u00a0\nwill re, rebalance it. Now notice that this node,\u00a0\u00a0 so I am going here and I am saying\u00a0\nrebalance this thing, but the, the\u00a0\u00a0 Insert could have com"
+    },
+    "5598c8f6-6ab5-443a-a447-2360eaea5664": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "e to me from above. So, it\u00a0\nwill now, at the next level, ask to rebalance\u00a0\u00a0 this node. So, that is what I meant by saying\u00a0\nthat this rebalancing happens bottom up.\n\u00a0 So, when I change something to my left I ask my\u00a0\nleft to change itself, to rebalance itsel"
+    },
+    "95d7e020-81a1-4baa-9423-ae28273522cd": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "f. Now,\u00a0\u00a0 when I return the value back up, the parent who\u00a0\nhas delegated this Insert to me is going to ask\u00a0\u00a0 me to rebalance myself. So, I will get\u00a0\nrebalanced after my child is rebalanced\u00a0\u00a0 and therefore this rebalancing of assumption that\u00a0\nthe rebalancin"
+    },
+    "18fedc2f-f404-4817-8d2f-4327d3be6f2b": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "g is working bottom up is validated.\u00a0\u00a0 And the same thing holds, of course, when\u00a0\nyou do the right-hand side. If you insert\u00a0\u00a0 on the you do a right rebalance.\n \nAnd similarly, when you do a Delete,\u00a0\u00a0 there is the empty case which we do not have to\u00a0\nworry a"
+    },
+    "676f43a3-b9f0-4feb-a120-b94984d29bc3": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "bout, but if you delete on the left you do,\u00a0\u00a0 should be left, if you do delete on the left you\u00a0\nrebalance on the left, if you delete on the right,\u00a0\u00a0 you rebalance on the right. Now, notice\u00a0\nhere when you delete the maximum on your\u00a0\u00a0 left sub tree that will"
+    },
+    "aca577aa-0aad-4c2c-b0ee-6d87f762be61": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " in turn create its own\u00a0\nrebalancing. So, you do not have to separately\u00a0\u00a0 rebalance it. It is only when you kind of\u00a0\ndo it yourself that you have to do it.\n \n\u00a0 So, all this requires one extra step which\u00a0\nwe have kind of not looked at very carefully,\u00a0\u00a0 whic"
+    },
+    "8092e39f-8bff-470d-a172-393d751cf3ea": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "h is we need to determine the slope in two\u00a0\nsenses. First of all we need to check when we\u00a0\u00a0 rebalance whether we are in the range of plus\u00a0\n2 minus 2, otherwise nothing is to be done.\n\u00a0 And even when it is plus 2 or minus 2 remember,\u00a0\nwe have to look at the"
+    },
+    "5271aa87-314f-4ebf-bba5-1d6050bb5429": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " child and decide whether\u00a0\u00a0 its slope is plus, 0 plus 1 or minus 1. So, we\u00a0\nhave to repeatedly find the slope of a node,\u00a0\u00a0 and the slope of a node we said is determined by\u00a0\u00a0 computing the heights of the two\u00a0\nchildren and taking the difference.\n\u00a0 So, this i"
+    },
+    "238cc4b3-eaca-4303-8fc8-7d3d054cc361": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "s the Python code which expresses what\u00a0\nwe said at the beginning that the height of an\u00a0\u00a0 empty tree is 0, and the height of non empty\u00a0\ntree is 1 plus the height, maximum height of\u00a0\u00a0 its children. Notice that this also takes care of\u00a0\nthe leaf because the le"
+    },
+    "4f5443cd-d011-47fa-98e9-b72896e3aa0f": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "af will be 1 plus the two\u00a0\u00a0 children which are empty trees. So, it will be 1\u00a0\nplus the maximum of 0 and 0. So, the height of a\u00a0\u00a0 leaf will turn out to be 1 as we would expect.\nSo, the problem with this particular thing is that\u00a0\u00a0 in order to compute height "
+    },
+    "61aaca48-b9cc-4ea3-9e2c-4b87596ff756": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "we have to go\u00a0\ndown the whole tree because I have to look at\u00a0\u00a0 the left sub tree and the right sub tree and in\u00a0\nturn when I look at the root of the left sub tree\u00a0\u00a0 it will look at its left sub tree and right sub\u00a0\ntree. So, in fact every height computation "
+    },
+    "d8572dff-8b8e-4666-b23a-9230e274aa78": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "will\u00a0\u00a0 traverse all the nodes. It is not like Find or\u00a0\nInsert which says either go left or go right.\n\u00a0 All our search tree operations so far were clever\u00a0\nin the sense that they never went down both paths.\u00a0\u00a0 Either it said go down the left path or it\u00a0\nsaid "
+    },
+    "80aeae31-22f7-40b9-8d5d-94c2cd98f33f": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "go down the right path, but never both.\u00a0\u00a0 But this is now requiring me to go both ways so it\u00a0\nis going to be actually an order n operation.\n\u00a0 And this is going to kill me because even\u00a0\nthough the final product is something which is\u00a0\u00a0 balanced, if I am doin"
+    },
+    "a316112e-be57-4e80-b497-e4462f1d94fb": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "g order n work\u00a0\neach time in order to find the slope\u00a0\u00a0 and rebalance it then my rebalancing is\u00a0\nalready a linear operation. So, I am \n\u00a0 going to do n into n, n squared operations\u00a0\nat the minimum across my entire work. So,\u00a0\u00a0 we cannot afford to do this. So,"
+    },
+    "7c454a58-dc43-4e12-887f-0ff1e883e58f": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " we\u00a0\nmust do something more clever.\n \n\u00a0 So, the solution is to say that I do not need to\u00a0\ncompute the height because I can incrementally\u00a0\u00a0 update the height whenever I change things\u00a0\naround. So, what I do is I actually keep,\u00a0\u00a0 in addition to value, self-do"
+    },
+    "f9048bf7-4c07-4e31-9871-dc8681c83924": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "t\u00a0\nvalue, self-dot left, self-dot right,\u00a0\u00a0 I keep an extra field called self-dot height.\u00a0\nAnd self-dot height basically can be updated by\u00a0\u00a0 taking the maximum of the left and the right.\u00a0\nSo, so do not, it is, this is not definition\u00a0\u00a0 of height. The definit"
+    },
+    "fe70315c-4fa2-43fa-b0bb-c4e3b87e7f74": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ion of height is just\u00a0\nto return self-dot height. But whenever I\u00a0\u00a0 do an update this is what I need to do.\n \nSo, if you look at the update for instance,\u00a0\u00a0 so whenever I rebalance, and the heights\u00a0\nhave possibly changed I will update my height\u00a0\u00a0 and increme"
+    },
+    "bc32083b-a05f-412b-8131-39432db82ee9": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ntally and inductively I assume\u00a0\nthat my children have adjusted their heights.\u00a0\u00a0 So, their height field is correct. So, I can just\u00a0\nlook up the height that my left child reports,\u00a0\u00a0 and the height that my right child reports,\u00a0\nand add 1 to the maximum of th"
+    },
+    "442e459e-d9ec-41b5-b4af-70898ab5116f": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ese.\n\u00a0 I do not have to recursively go down because\u00a0\ninductively every node has maintained its\u00a0\u00a0 height in this local variable. So, by keeping a\u00a0\nlocal variable height I am able to keep track of\u00a0\u00a0 the height as we go along without recomputing\u00a0\nit wastefull"
+    },
+    "03374fd8-0e8b-4727-aa0d-66636d3c9160": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "y going up and down the tree. So,\u00a0\u00a0 this is the extra trick that you need in order to\u00a0\nmake the rebalancing work, is to keep the height\u00a0\u00a0 explicitly recorded as part of the node\u00a0\nalong with the value of the left child\u00a0\u00a0 and the right child. So, there is an"
+    },
+    "1d087c65-9698-4be4-b829-570723f6d3f6": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " extra,\u00a0\nlocal integer that you have to keep.\n  \n\u00a0 So, what we have seen is that these binary search\u00a0\ntrees which we introduced as a two-dimensional\u00a0\u00a0 data structure to keep track of sorted values\u00a0\nwhich are changing with Inserts and Deletes can\u00a0\u00a0 be kept "
+    },
+    "96646970-d2af-42e6-af29-93823b612afb": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "balanced by doing these local rotations.\u00a0\nSo, by combining these rotations judiciously and\u00a0\u00a0 by keeping track of the slope we can actually\u00a0\nkeep a height balanced tree, and we prove that\u00a0\u00a0 height balanced trees are good enough.\nA height balanced tree is we"
+    },
+    "9a0b1340-26df-4ae1-873d-60ce512cb546": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "aker than a size\u00a0\u00a0 balanced tree but it still has the property that\u00a0\nthe size overall is exponential in the height,\u00a0\u00a0 or the height is logarithmic in the size. So, this\u00a0\nguarantees that whenever I do Find, Search, or\u00a0\u00a0 Insert or Delete which walks down a s"
+    },
+    "4594103a-7519-4c0b-a20e-dae8cc9fbbab": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "ingle path in\u00a0\nthe tree that cost is never more than logarithmic\u00a0\u00a0 in the number of values that I am maintaining.\nSo, overall, I get this, over a sequence of n such\u00a0\u00a0 operations, no matter which of these operations it\u00a0\nis, it is not going to cross n log n."
+    },
+    "35ab0784-d3d7-4714-8422-20cc233ba2d5": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": " So, that is\u00a0\u00a0 the beauty of balanced search trees. These are not\u00a0\nthe only, so height balanced trees, I should again\u00a0\u00a0 remind you, are not the only way to keep balanced\u00a0\nsearch trees. There are many other types of\u00a0\u00a0 ways of keeping balanced search trees w"
+    },
+    "fffee6bb-0ca4-4fe8-87b7-bb6a6f7e27d8": {
+        "content_id": 51,
+        "course_name": "PDSA",
+        "title": "Balanced Search Trees",
+        "week": 7,
+        "chunk": "hich you\u00a0\ncan read about if you look at algorithms books.\u00a0\u00a0 But this is one of the simplest ones\u00a0\nto explain and you can see very readily\u00a0\u00a0 why it maintains the balance and why this\u00a0\nbalance gives you this logarithmic height."
+    }
+}

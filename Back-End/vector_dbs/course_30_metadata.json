@@ -1,0 +1,394 @@
+{
+    "8703741b-724d-45ff-8e51-6594b67a0101": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "Earlier, we ran some experiments on lists and\u00a0\narrays in the context of searching and sorting.\u00a0\u00a0 So, we tried to investigate, for instance,\u00a0\nwhether there was a real distinction between\u00a0\u00a0 the order n squared sorts, namely\u00a0\nselection sort and insertion sort"
+    },
+    "65185e23-eb6d-48a1-a372-48d12fe5dc38": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": ".\u00a0\u00a0 And we saw that selection sort behaves\u00a0\npretty much badly on any type of input,\u00a0\u00a0 whereas, insertion sort works well\u00a0\non sorted inputs and so on. \n\u00a0 Now, we have also added into this mix\u00a0\nthe problem of lists and arrays. So,\u00a0\u00a0 we have seen that there a"
+    },
+    "fe2c513d-0b42-4f5d-bd8f-a46ceee98b71": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "re two different\u00a0\nways you can represent sequences. And we were\u00a0\u00a0 trying to understand exactly what a Python list\u00a0\nmeans. Is it a list or an array, and we claimed,\u00a0\u00a0 actually, it is an array. So, let us see if we\u00a0\ncan validate this using some experiments. "
+    },
+    "047cb3a1-5edd-4d5d-a076-c616962326b2": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "\n\u00a0 So, we start with our setup as before, so\u00a0\nwe set this recursion limit to be 2 to the\u00a0\u00a0 power 31 minus 1, because this is needed in\u00a0\norder for quicksort and insertions are to work\u00a0\u00a0 properly when we use the recursive versions.\u00a0\nAnd then we as before, cr"
+    },
+    "6876945c-131d-444d-8443-b08ed6562d47": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "eate our timer class,\u00a0\u00a0 which we will use to actually run our\u00a0\nexperiments and time our behaviors. \n\u00a0 So, the first thing I want to check is\u00a0\nthis Python list. So, Python, we said,\u00a0\u00a0 is a list anomaly in a list, growing and shrinking\u00a0\na list should be a co"
+    },
+    "8e979a4c-b7e4-4e8c-8b07-33004ca10cb7": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "nstant time operation.\u00a0\u00a0 But we said that, Python actually has this array\u00a0\nimplementation, so it allocates an array at a time\u00a0\u00a0 and it keeps really, in some sense, a prefix of\u00a0\nthe array at your list with the right pointer, and\u00a0\u00a0 the right pointer keeps mo"
+    },
+    "a13e14b4-d88f-4d20-b324-e7ee918b18f1": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "ving by 1, and appending\u00a0\nis essentially a constant time operation. \n\u00a0 Except, when you overflow when you have to kind of\u00a0\ndouble the size, but that happens only once every\u00a0\u00a0 time it doubles, and so, amortized it is an order\u00a0\n1 operation. So, here is somet"
+    },
+    "9ddf2a6d-b54b-4b32-acdb-b929daf52602": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "hing which basically\u00a0\u00a0 tries to create a list of 10 to the 7, and it\u00a0\ndoes 10 to the 7 append. So, it starts with an\u00a0\u00a0 empty list. So, we start with an empty list and 10\u00a0\nto the 7 times, we append something to it. So, we\u00a0\u00a0 append i from i equal to 0 to 10 "
+    },
+    "346c9801-79c6-410a-a776-49335e18baea": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "to 7 minus 1. \nSo, if we run this, and we time it a 10 to the 7\u00a0\u00a0 is roughly one second of Python execution. And\u00a0\nas we would expect, since this is a constant time\u00a0\u00a0 operation takes one and a half seconds. So, this\u00a0\nvalidates the fact that append is O1, bu"
+    },
+    "bbea8299-ae9a-4595-871f-265cd3ae00c5": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "t it does\u00a0\u00a0 not validate the fact that this is not a list in\u00a0\nthe flexible sense. So, what is the corresponding\u00a0\u00a0 thing we can do? The corresponding thing we can\u00a0\ndo is to grow this list from the other end. \n\u00a0 Instead of appending, we can prefix. So, we\u00a0\nc"
+    },
+    "137b3df1-1f3f-42b6-b606-3cb2b9ca0100": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "an, Python has a function called insert,\u00a0\u00a0 which gives a position and a value. So, instead\u00a0\nof appending, which is to take the nth or the n\u00a0\u00a0 minus oneth position and add something at the end,\u00a0\nI am going to take the zeroth position and put it\u00a0\u00a0 before. So"
+    },
+    "8f570aa4-28c9-4fa3-8a05-a1535a2bb387": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": ", I am going to do l dot insert 0i. And\u00a0\njust because it is going to take a lot of time,\u00a0\u00a0 I am going to do it for a much smaller thing. \nSo I am going to do it for 10 to the power 5,\u00a0\u00a0 not 10 to the power 7, because if I did 10 to\u00a0\nthe power 7 will be sit"
+    },
+    "64602262-91af-4d7f-bfc7-8dc027254eda": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "ting here a long time.\u00a0\u00a0 So, let us run this for 10 to the power 5. I am\u00a0\ndoing 10 to the power 5 inserts, as opposed to 10\u00a0\u00a0 to the power 7 apprentices so it is 100 times\u00a0\nless work, and I end up taking two seconds.\u00a0\u00a0 So, this shows that a 100 times less "
+    },
+    "76c7cfbc-a2e7-489c-8aa7-60bb2e8a59ea": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "work\u00a0\ntakes about the same amount of time. \n\u00a0 And if you want to validate something\u00a0\nis actually quadratic, which is what\u00a0\u00a0 we claimed it. Every insert needs to push n\u00a0\ntime, so it is 1 plus 2 plus 3 to n minus 1,\u00a0\u00a0 it is a bit like selection sort. So, sup"
+    },
+    "662e8144-19e1-49ed-b349-dfb215ded24f": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "posing\u00a0\nI take this 10 to the power 5, that is\u00a0\u00a0 1 lakh and I make it 2 lakhs, I\u00a0\nmake it 20,000. So, I am doubling,\u00a0\u00a0 so what would you expect that if it is\u00a0\nn squared, if I double it is 2 squared,\u00a0\u00a0 so it will take me 4 times as much time. \nSo basically,"
+    },
+    "f05119b5-34e3-4fde-ad48-6a2608c18702": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": " if this is 2 to the power 4 it\u00a0\u00a0 should take me something like 10 seconds, so\u00a0\nwe can validate that. So, we can run this now.\u00a0\u00a0 So earlier, it was taking 2 to 2.5 seconds and now\u00a0\nit is taking a lot longer. And in fact, it takes\u00a0\u00a0 9.8 seconds. So, it take"
+    },
+    "02fa2444-f750-4e6b-b135-4ea291e3519f": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "s roughly 4, so 2.4 became\u00a0\n9.8. You can do it one more time, if you really\u00a0\u00a0 want to check, so I make it into 30,000. \nSo, if I started with 10,000, and I do 30,000 it\u00a0\u00a0 is 3 times, so 3 squared is 9. So, it should take\u00a0\nme 9 times 2, it should take me 18"
+    },
+    "5a8afcd4-91eb-44ca-9235-198de55ebbd8": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": " to 20 seconds.\u00a0\u00a0 It initially 2 seconds, I will now triple the\u00a0\ninput, so the time is going to take 3 times 3,\u00a0\u00a0 9 times. So, if I run this on an input of size\u00a0\n30,000. So, what am I doing? I am taking a Python\u00a0\u00a0 list, and instead of appending I am insert"
+    },
+    "75f8ea20-cf0b-4db8-b67f-2f5ed4b944cb": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "ing. \nSo, when I insert 10,000 times it took me 2\u00a0\u00a0 seconds. 20,000 times took me almost 10 seconds\u00a0\n30,000 times it is taking me 22 seconds, which is\u00a0\u00a0 something like 9 point something times 2.5. So,\u00a0\n9 into 2.5 would be 23 seconds. So, roughly,\u00a0\u00a0 it is g"
+    },
+    "caf727db-6845-4fab-9bc0-4edb7dd1997b": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "rowing. You can see, visibly that is\u00a0\ngrowing quadratically so this validates our\u00a0\u00a0 claim that Python lists are actually arrays, and\u00a0\nso insert are pushing things, delete, contracting,\u00a0\u00a0 expanding a list from middle is going to be\u00a0\nexpensive, adding at the"
+    },
+    "2d6ff850-f19e-4c35-b684-306077bc2826": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": " end is cheap.\n\u00a0 Now, let us run our searching things on lists\u00a0\nand arrays. So, we have this naive search,\u00a0\u00a0 which we wrote, which is just a scan of a list\u00a0\nand binary search, which is of using lists.\u00a0\u00a0 And we can do the same thing now with arrays.\u00a0\nSo, I "
+    },
+    "26af82c0-3fdc-4831-b524-21385e5fe7aa": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "am using now numpy array. So, as far as the\u00a0\u00a0 code goes, it does not really distinguish. But\u00a0\nthe fact that it is an array means that I cannot\u00a0\u00a0 shrink and grow, so I have to give the left end\u00a0\npoint and the right end point explicitly. \n\u00a0 So, the main diff"
+    },
+    "ac9331db-7e6c-4278-b0de-fba71426c909": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "erence between the naive search\u00a0\nand the array searches is I have to actually tell\u00a0\u00a0 you which segment I am searching, but otherwise,\u00a0\nit is the same function. So, you don't have to\u00a0\u00a0 worry too much you can see the code later on. But\u00a0\nthe point is that if "
+    },
+    "235a93ec-7ce8-4681-b325-c4ec387cff70": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "I now do a naive, and binary\u00a0\u00a0 search on a list of. So, what we have is we have\u00a0\na list of 10 to the power 5 elements, and we are\u00a0\u00a0 doing about from 10,000 searches on it.  \nAnd if we do 10,000 searches on that, so it's\u00a0\u00a0 sorry, 1,000 searches. So, this is"
+    },
+    "e6e6493d-9ddf-4366-9d5a-8fdfc93a44e4": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": " 10 to\u00a0\nthe power 7. So, what we find is that this\u00a0\u00a0 linear scan basically, is going to look at all the\u00a0\nelements, so I am going to do 10 to the power 4,\u00a0\u00a0 times 10 to the 5, 10 to the power 10 to the\u00a0\npower 8 work, which is roughly 10 seconds. So,\u00a0\u00a0 naive"
+    },
+    "5d07a78f-5f4e-4ec9-ba97-ea575d6ad019": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": " search takes 10 seconds, binary\u00a0\nsearch takes a fraction of a second. \n\u00a0 So, what happens when we do the same thing on\u00a0\narrays? So, again, I do the same thing. But\u00a0\u00a0 just because I know in advance it is going\u00a0\nto work badly, I have reduced the naive part,"
+    },
+    "992120ad-e3ee-4e6f-84bc-c03eb583eadf": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "\u00a0\u00a0 not the binary search. The binary search is still\u00a0\ndoing the same thing. I have 10 to the 5 elements,\u00a0\u00a0 and I'm doing 1,000 binary searches. But then\u00a0\nI think I have reduced it to from 10,000 binary\u00a0\u00a0 searches to 2,000 binary searches. And the\u00a0\nreason i"
+    },
+    "5811df71-9db5-4137-927d-0b6a26172454": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "s that it takes a long time. \n\u00a0 So, here I am using notice I am using a\u00a0\nnumpy array. So, I am instead of using a\u00a0\u00a0 list of that size, I am using a numpy array of\u00a0\nthat size, and it takes a lot longer. So, this\u00a0\u00a0 shows that actually Python lists are actual"
+    },
+    "866630a4-23f7-4d5e-b441-f0b1948f9bae": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "ly\u00a0\nquite optimized to behave almost like arrays,\u00a0\u00a0 but numpy arrays as we said are convenient. We\u00a0\nwill use them for graphs and other things where\u00a0\u00a0 it is convenient to set up these matrices. \nSo, therefore, here for insertion, not insertion,\u00a0\u00a0 naive sear"
+    },
+    "cdf48f35-081f-484e-bfec-19d526648635": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "ch of one-fifth. Instead of 10,000 I am\u00a0\ndoing 2,000. For one-fifth work it takes almost\u00a0\u00a0 double the time. Now, binary search behaves\u00a0\nas we would like. So binary search, which was\u00a0\u00a0 taking something like 0.8 seconds now is reduced\u00a0\nto something like 0.2 "
+    },
+    "0bb88d44-f83c-487f-b454-09d0e0f8234f": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "seconds. So binary search\u00a0\u00a0 has actually speeded up for a numpy array, but\u00a0\nit seems that this is the only one which works.\u00a0\u00a0 Because as we go down and look at other sorting,\u00a0\nwe will find that this does not help us much. \n\u00a0 So, let us look at selection so"
+    },
+    "788c5e12-f2e7-4d2d-8bc1-34efdbfcbef7": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "rt. This is\u00a0\nselection sort on a list and this is selection\u00a0\u00a0 sorting an array, again, it's very similar, except\u00a0\nthat I have to extract the size of the array using\u00a0\u00a0 the numpy shape function, as we\u00a0\nsaid. So, one of the things is that,\u00a0\u00a0 selection sort pe"
+    },
+    "c0f801ab-a1fa-49ca-8f15-a29d533f9dae": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "rforms pretty much the\u00a0\nsame on all lists. So, we take random lists\u00a0\u00a0 of size 10 to the power 4, ascending and\u00a0\ndescending, and we run them all, and all\u00a0\u00a0 of them will take roughly n squared time. \nSo, 10 to the power 4 will be 10 to the power 8,\u00a0\u00a0 so it w"
+    },
+    "7fb25738-f842-47b3-8449-a27e01c8f535": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "ill take something of the order\u00a0\nof a few seconds. More than 1 second,\u00a0\u00a0 roughly 10 seconds. So, you can say that random\u00a0\ntakes 5 seconds and all of them take about the\u00a0\u00a0 same amount. Because remember, the selections\u00a0\nare basically has you keep scanning, f"
+    },
+    "ad7be2d5-e430-4bbd-a71e-b6375c15670b": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "inding\u00a0\u00a0 the maximum bring it then finding the maximum\u00a0\nbring it and it does not really matter. \n\u00a0 Whereas, we saw that if I look at,\u00a0\u00a0 so let us see what it does on arrays. So, now an\u00a0\narray is just like we saw that this naive search\u00a0\u00a0 takes a lot longer."
+    },
+    "ba45638f-9793-4504-be5b-03e7c0886032": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": " Even though it is supposed to\u00a0\nbe just a linear scan, the fact that you are using\u00a0\u00a0 a numpy array seems to slow down things. So,\u00a0\neven selection sort actually slows down. So,\u00a0\u00a0 if I do the same thing in selection sort, as I did\u00a0\nbefore, then it takes abou"
+    },
+    "aa628836-b8c6-42e2-ab9d-17088077ad53": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "t 3 times a time. \n\u00a0 What we were seeing 5 seconds is now taking\u00a0\n16 seconds. So, this seems to suggest that\u00a0\u00a0 actually this numpy array implementation though\u00a0\nit gives you some bonus in terms of the array\u00a0\u00a0 operations it is not actually giving you\u00a0\nsome p"
+    },
+    "b8e7bab2-5a85-444d-8242-0523dfb3da42": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "erformance in terms of the indexing,\u00a0\u00a0 which you are primarily using for searching and\u00a0\nsorting. So, selection sort is actually slower\u00a0\u00a0 with arrays, you can verify that the same thing\u00a0\nactually happens for insertion sort also. So,\u00a0\u00a0 I will not in the inte"
+    },
+    "437622a1-14bb-4957-afe4-de9c9193be7b": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "rest of time, you can take\u00a0\nthis same thing and run it on insertion sort. \n\u00a0 So, what we will do is we will go ahead and look\u00a0\ndirectly at merge sort. Because merge sort is also\u00a0\u00a0 something interesting. So, this is my merge\u00a0\nsort on lists, and this is my m"
+    },
+    "a4bbd15f-aeb6-4df0-8d12-10e39c70dd31": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "erge sort on\u00a0\u00a0 arrays. Essentially the same thing except I have\u00a0\nto manipulate the indices differently when I use\u00a0\u00a0 arrays because listen, arrays, numpy arrays and\u00a0\nPython lists have slightly different syntax. \n\u00a0 So, now, what we did earlier was we\u00a0\ntook m"
+    },
+    "219e9425-c7b5-4d4b-b964-46b4224e9240": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "erge sort, and we ran it on\u00a0\u00a0 inputs of size 10 to the power 7. And if\u00a0\nyou run it on 10 to the power seven n log n\u00a0\u00a0 should be 10 to the power 8, so it should take\u00a0\nroughly 10 seconds to run is what we think.\u00a0\u00a0 So, indeed, it takes 9.5 seconds on a random"
+    },
+    "3ad95326-1aec-4a4d-9237-e5096f0e9f90": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "\u00a0\ninput, and it works slightly better on ascending\u00a0\u00a0 and descending order, so it takes 7 seconds on\u00a0\nascending. And how much time on descending? \n\u00a0 It should also takes a similar amount of time, I\u00a0\nthink 7.5. So, it is slightly better on ascending,\u00a0\u00a0 but r"
+    },
+    "020b95c8-f144-4559-ad95-e352b8975bca": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "oughly the same. But the point is, it is able\u00a0\nto do 10 to the power 7, which we cannot even hope\u00a0\u00a0 to do with insertion sort or selection sort.\u00a0\nBut if I do the same thing with arrays, again,\u00a0\u00a0 what we will find like in the, so the same\u00a0\nthing, I am just "
+    },
+    "560bc904-515a-49e7-b356-941f6d0c4520": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "using the A range function of\u00a0\u00a0 numpy to create a range of values rather\u00a0\nthan the range function for lists, and then\u00a0\u00a0 I am resetting it to some random numbers. \nSo, I want random integers, because it turns\u00a0\u00a0 out numpy as a float, random, which takes more"
+    },
+    "6c8f1db3-7d08-4afc-a42c-999226c56fcb": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "\u00a0\ntime. So now if I run this, merge sort on the\u00a0\u00a0 same size sequence, but as an array and not as a\u00a0\nPython list, a numpy array and not a Python list,\u00a0\u00a0 it actually takes appreciably more time. So, this\u00a0\nis learning that, theoretically, we saw that lists\u00a0\u00a0 "
+    },
+    "c9cb9b22-c1ba-4f38-95cc-283482d28f5f": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "have this flexible structure, arrays have random\u00a0\naccess, arrays should be better than lists,\u00a0\u00a0 but Python lists are not lists. \nPython lists are these kind of arrays\u00a0\u00a0 masquerading as lists, so we already saw in the\u00a0\nexperiment above, that insert was slow"
+    },
+    "a93b7ff2-9b77-4bc9-b8cf-ac3cd907a032": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": " compared\u00a0\u00a0 to append because of this asymmetry in the way\u00a0\nthat lists are handled. And notice here that,\u00a0\u00a0 merge sort on an array takes 10, 5\u00a0\ntimes as much time. This is something\u00a0\u00a0 earlier, we saw their selections sort took about\u00a0\n3 times is a much time"
+    },
+    "472c7d0e-fa63-4851-b2d7-031aa7ce9156": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": ". So, there is a certain\u00a0\u00a0 cost that numpy arrays impose on us, which comes\u00a0\nmaybe, I do not really have an explanation as to\u00a0\u00a0 why it happens, but and numpy has its own. \nIt is a layer built on top of with its own\u00a0\u00a0 advantages in terms of matrix operation"
+    },
+    "2dca1c57-1572-462c-a560-e7df50946331": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "s. But\u00a0\nthe cost you pay is that when you try to use them\u00a0\u00a0 in these things, where the only thing\u00a0\nthat matters to you is the indexing.\u00a0\u00a0 Then actually, Python lists seem to work better\u00a0\nthan numpy arrays. So, you can see now that\u00a0\u00a0 merge sort has taken 45"
+    },
+    "3bee3a30-c46e-4366-bf29-5ac4ee3d1c20": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": " seconds, so and it is\u00a0\ngoing to take again similarly, another. \n\u00a0 So, it is an order of 5 to 10 times slower\u00a0\nfor these things than it is for the list.\u00a0\u00a0 So, I hope this shows you that, first of all,\u00a0\nthere is a difference. So, you cannot just\u00a0\u00a0 take an a"
+    },
+    "1cd5881c-7799-442f-8435-5012d5242c66": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "lgorithm on a sequence and assert\u00a0\nsomething about it without knowing how the\u00a0\u00a0 sequence is implemented. Now, theoretically,\u00a0\narrays are better than lists. So, theoretically,\u00a0\u00a0 we should be able to analyze these on arrays and\u00a0\nlists saying that arrays or r"
+    },
+    "8838e044-69a5-4bcc-a750-5a628d9fb89e": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "andom access lists\u00a0\u00a0 are not random access, and so on. But then\u00a0\nwhat seems to be a list may not be a list,\u00a0\u00a0 and this is what we have seen. \nSo, a python list is not a list,\u00a0\u00a0 a numpy array is an array, but it seems to be\u00a0\nless friendly for these kinds of"
+    },
+    "db7ed8e1-0c63-458d-88fd-b541d3c6c6c1": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": " operations then\u00a0\u00a0 a Python list is. So, you have to be a bit\u00a0\ncareful about the data structures that you use,\u00a0\u00a0 for the context that you are using it. So, if\u00a0\nyou do not need to do any complex operations,\u00a0\u00a0 you are just maintaining a sequence of values,\u00a0\n"
+    },
+    "1a52addc-2c03-40f4-871b-9741a6bc64c7": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "go ahead, by all means and use a Python list. \n\u00a0 If you are going to take a two-dimensional\u00a0\nrepresentation, like in a graph and do some\u00a0\u00a0 operations on it, then it is a real nuisance. We\u00a0\nsaw that using that list comprehension and all\u00a0\u00a0 that setting up a "
+    },
+    "c1d0e331-0ce3-410a-b39c-4a5a7190fc36": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "two-dimensional Python\u00a0\narray is not the best of things. So,\u00a0\u00a0 then it is much more convenient to\u00a0\nwork with numpy arrays and then it\u00a0\u00a0 does not really cost you much because you are not\u00a0\ngoing to be sorting those graphs and so on. So,\u00a0\u00a0 just keep the data "
+    },
+    "8e29cb6e-6a13-458a-af5f-b766e384fa21": {
+        "content_id": 30,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Implementation)",
+        "week": 3,
+        "chunk": "structure in mind when you\u00a0\ndo the operations that you have. "
+    }
+}

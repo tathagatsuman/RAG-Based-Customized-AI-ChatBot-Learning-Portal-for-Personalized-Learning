@@ -1,0 +1,758 @@
+{
+    "362b3e43-ce10-444d-b248-b4f5c9ed04c0": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "So, for our next example of divide and\u00a0\nconquer, let us look at a very simple\u00a0\u00a0 problem that we learned in primary\u00a0\nschool, how to multiply two integers.\u00a0\u00a0 So, the way we multiply two integers\u00a0\nis to form these partial products.\u00a0\u00a0 So, when we have two mult"
+    },
+    "cb7a8524-68a6-4e1c-a2fb-0366cff46e8f": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "i-digit integers,\u00a0\nhere, we have two-digit integers.\u00a0\u00a0 We first take three, so we are multiplying\u00a0\nx by y. So, we take the unit's digit of y,\u00a0\u00a0 and create this product of the unit's\u00a0\ndigit of multiplied my all of all of x. Then we shift by 1 to account for"
+    },
+    "8e63a661-09dd-4b5a-a5e3-0f0a0369bdca": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " the 10 factor\u00a0\nand then we take the 10\u2019s digit, and again,\u00a0\u00a0 we multiply, so we form one more partial product.\u00a0\nAnd then, we add up these partial products. So,\u00a0\u00a0 we add up these partial products, and this gives\u00a0\nus the actual sum. So, we have to add these"
+    },
+    "c2b59d11-01b2-4ba9-a8af-620a4bde06bc": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": ". So,\u00a0\u00a0 depending on number of digits, we will have as\u00a0\nmany partial products, as there are digits in\u00a0\u00a0 the second operator in a second number in y, and\u00a0\nwe will have to add up that many partial products. Now, this is not specific to decimal\u00a0\nmultiplicatio"
+    },
+    "2d9d013c-e09d-4098-b2ca-9b7dc601ca9b": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "n that we have seen here in base 10,\u00a0\u00a0 the same thing would work, if we transform\u00a0\nthe same problem or any problem to binary.\u00a0\u00a0 So, for example, this is 12 in binary, so this\u00a0\nis 8421. So, the top number is 12 in binary,\u00a0\u00a0 and the bottom number is 13 in bi"
+    },
+    "5a56da8e-1030-4d1e-a631-bb9996fcd5eb": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "nary.\u00a0\nSo, if we multiply 12 by 13, in binary,\u00a0\u00a0 then one times this thing is 1100,\u00a0\n0 times this thing is all zeros.\u00a0\u00a0 And again, one-times that is 11001100. And\u00a0\nnow we have to add up these partial sums. So, the usual way, now you can see that\u00a0\nwe have a"
+    },
+    "c2644e0f-4918-450c-b24e-cd0b34bc263b": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " stack of partial sums to add,\u00a0\u00a0 partial products to add. So, we do not really\u00a0\nwant to do a kind of long addition this way. So,\u00a0\u00a0 the usual way is that we maintain this cumulative\u00a0\nsum. So, we will take these two and we will create\u00a0\u00a0 an intermediate sum w"
+    },
+    "caf4be8c-169f-4d0a-b51b-38f286e5a7ce": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "hich says 01100. Of\u00a0\ncourse, the leading 0 we do not have to keep. Then to this, we will add 1100 at this point and\u00a0\nwe will get 001, so I think, so we will add, yeah,\u00a0\u00a0 so this will come to the left, so 1100. And so,\u00a0\nwe will get 1111. So, in this way, we"
+    },
+    "e44d2e8e-af72-45c3-9023-26dee7c89b60": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " will just\u00a0\u00a0 keep adding these sums as we go along. So, we will\u00a0\nget this cumulative sum. So how long does it take? Well, each partial product requires me to, let us\u00a0\nassume that both the numbers have the same length,\u00a0\u00a0 so they are n bits. So, each partial"
+    },
+    "5ea6ddbb-6ac0-4a68-800d-8620909c8ad9": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " product\u00a0\nrequires me to process n bits to come up with\u00a0\u00a0 this number. So, that is an order n operation.\u00a0\nAnd then, I have to add two n-bit numbers,\u00a0\u00a0 so that is another order n operation. So, I\u00a0\ndo this n times, one for each partial sum.\u00a0\u00a0 And so, overall"
+    },
+    "e6d3de0e-e197-4a85-8eeb-c430307a62af": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": ", I get an n squared algorithm.\u00a0\nSo, this is our naive multiplication algorithm\u00a0\u00a0 the way we learnt it in school, and this\u00a0\nis a, this is an n squared algorithm. Now, the question is, is it possible to do any\u00a0\nbetter than this? Because after all, in genera"
+    },
+    "e9e6323a-63a1-4aac-9396-80617cd541ff": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "l,\u00a0\u00a0 we cannot do away with any of these intermediate\u00a0\nvalues. So, it seems logical that every row,\u00a0\u00a0 so here, of course, we get some zeros, but that\u00a0\nalso helps us to shift. If you are doing it in\u00a0\u00a0 binary, it looks like this row is not required,\u00a0\nbut wha"
+    },
+    "25c0ab2b-215a-40d7-bae1-bb5dd52a6204": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "t if it was there, we would have to add it\u00a0\u00a0 up. So, in the worst case, if everything on the\u00a0\nbottom was 1, every row would be required. So,\u00a0\u00a0 it does look like all these n-squared operations\u00a0\nare needed. We will get n partial products, and\u00a0\u00a0 we have to ad"
+    },
+    "bae7caf3-fc20-4b34-a869-3523fd8e7179": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "d them up two at a time, so we have\u00a0\nto end up doing n squared work or so it seems. So, for divide and conquer, we need\u00a0\nto divide something. So, usually,\u00a0\u00a0 we have been taking a list or a sequence\u00a0\nof values and dividing it into parts.\u00a0\u00a0 This is what we d"
+    },
+    "c625c5f1-1db1-4710-bbba-287a7e88aa2a": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "id for things like merge sort,\u00a0\nand we have also done that for other things. So,\u00a0\u00a0 even for counting inversions, we counted\u00a0\nthe first half and the second half,\u00a0\u00a0 and then we combined across them, and so\u00a0\non. So, even for counting pairs of points,\u00a0\u00a0 the cl"
+    },
+    "3afa8dd1-70eb-460c-989d-0e2ccc557c54": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "osest pair of points, we divided the\u00a0\npoints that those to the left of the separator,\u00a0\u00a0 the right is a separator and then we combine\u00a0\nthem. So, we need some way of splitting up. And what is the logical thing to split up here\u00a0\nn is the number of bits. So, t"
+    },
+    "48014983-e397-49e3-b345-fa0b5fe9a7ad": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "he logical way to\u00a0\u00a0 split is to take half the bits and do them\u00a0\nseparately and half the bits and do them\u00a0\u00a0 separately. So, this is what we are doing here.\u00a0\nSo, we are saying that if we take an n bit number,\u00a0\u00a0 it has bits the lowest bit the usually the lowe"
+    },
+    "41311065-4594-4ad4-be80-f4581971857e": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "st\u00a0\norder bit, that is the unit's bit is usually b0,\u00a0\u00a0 the highest bit, which in this case in\u00a0\npowers of 2 represents 2 to the n minus 1,\u00a0\u00a0 so this is bn minus 1. So, 0 to n minus 1 are\u00a0\nthe n bits, so we are going to split it halfway. So, we go from 0 to "
+    },
+    "5b595c83-ab6d-48c0-b34f-1a53ded4a284": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "n minus 2 by 1, n by 2 minus\u00a0\n1 and then from n by 2 to n minus 1. So, we will\u00a0\u00a0 call the upper part of, so let, we remember we\u00a0\nare multiplying x times y so we want to find the\u00a0\u00a0 product x times y, so we will split x this way.\u00a0\nSo, we will take the lower "
+    },
+    "5f29157c-bac1-45b1-999c-29ef5166686f": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "half of x and call it\u00a0\u00a0 x naught and we will take the upper half of x and\u00a0\ncall it x1. So, naught is the last half in terms\u00a0\u00a0 of the bits or the digits, and x1 is the first\u00a0\nhalf. And similarly, we have y naught and y1. So, now, what is the number actually"
+    },
+    "e1181634-c6a4-430c-8114-32fe321974ba": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "? The number\u00a0\nactually is, this plus this amount shifted by the\u00a0\u00a0 appropriate power of 2. So, I can think of x as\u00a0\nbeing x1 times 2 to the n by 2, so 2 to the n by 2\u00a0\u00a0 is just 1 with that many zeros, n by 2\u00a0\nzeros. So, if I now multiply x1 by that,\u00a0\u00a0 it ge"
+    },
+    "af273e91-d11e-4322-9ca1-a4b2c0d536fa": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ts shifted to the left, and then I am just\u00a0\nadding these two and getting an n bit number. So, I have 2 to the n by 2 times x1 plus x naught,\u00a0\nso this is x, and this whole thing is y. So,\u00a0\u00a0 x times y can be equivalently written in terms of\u00a0\nthese four small"
+    },
+    "437feff5-5dce-4e08-9a96-3432bcde13ed": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "er numbers, with an appropriate\u00a0\u00a0 multiplication to make the scaling\u00a0\ncorrect. But that multiplication is\u00a0\u00a0 not a real multiplication, since I do not have\u00a0\nto do any serious multiplication, this is just\u00a0\u00a0 bit shifting. So, if I was working in decimal,\u00a0\nthi"
+    },
+    "2a53a992-5656-4fcd-95ee-ea003a7d32a0": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "s is like multiplying by 10, and I multiply by\u00a0\u00a0 10, I do not have to do any real multiplications,\u00a0\njust I have to stick a 0 at the end,\u00a0\u00a0 so I just multiplying by an appropriate power of\u00a0\n2, which shifts it to the left by that many zeros. So, now, if we e"
+    },
+    "9ef73695-fd19-4eac-bd8b-9bbf8bf63a68": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "xpand this out then we will\u00a0\nget x1 times y1 times 2n by 2 to 2n by 2,\u00a0\u00a0 so I get x1 times, y1 times 2 to the n. On\u00a0\nthe right, I get x naught times y naught,\u00a0\u00a0 so x naught times y naught. And then\u00a0\nI have these two terms. So, I have x1\u00a0\u00a0 times y1 times 2 "
+    },
+    "874086fd-27ff-4a4b-b26f-25ded287d6ba": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "to n by 2, and I have x\u00a0\nnaught times, sorry, I have x1 times y naught\u00a0\u00a0 times 2 to the n by 2, and I have x\u00a0\nnaught times y1, times 2 to the n by 2. So, I have these two cross terms, which are\u00a0\nshifted by n by 2. So, I have the leading term,\u00a0\u00a0 x1, y1 one "
+    },
+    "fdebe24c-05df-4733-b89d-b811a7d2baab": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "which shifted by n bits and the two\u00a0\ncross terms were shifted by n by 2 bits and I have\u00a0\u00a0 the last term, the unit's term in some\u00a0\nsense, which is just x naught times y naught.\u00a0\u00a0 So, I multiply this way, I multiply this way.\u00a0\nAnd I multiply these two ways, "
+    },
+    "f5106ea4-b5c2-420f-9121-c46f203ad326": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "so this gets\u00a0\u00a0 shifted by 2 to the 0, this gets shifted by 2 to\u00a0\nthe n, and this gets shifted by 2 to the n by 2. So, in other words, I do four smaller\u00a0\nmultiplication. So, I do four multiplications, of\u00a0\u00a0 these split numbers, which have half the number of\u00a0"
+    },
+    "f6456291-c20e-4e4a-af6a-d66d92595d31": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "\nbits. So, in order to multiply two n bit numbers,\u00a0\u00a0 I am replacing it by the problem of multiplying\u00a0\nfour n by 2-bit numbers. So, four times I am doing\u00a0\u00a0 an n by 2-bit multiplication, and I am achieving\u00a0\nmy n bit multiplication through that. So, this is\u00a0\u00a0"
+    },
+    "bc134f4e-336c-440e-a0ad-21b85e32634f": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " a naive way of approaching this divide and conquer\u00a0\nthing. So, this corresponds to the combined step. So, the division step would be to actually extract\u00a0\nthese two sections by bit shifting. So, remember,\u00a0\u00a0 if I just shift right, I will n by 2 times I\u00a0\nwil"
+    },
+    "b08b26bb-5bdb-4442-8898-eb18974573ce": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "l get the upper half and the remaining part\u00a0\u00a0 will go off. And if I shift left, I will get rid\u00a0\nof the other thing, so that is how we get this.\u00a0\u00a0 So, it is like multiplication and division and\u00a0\nremainder. So, our recurrence now says that if\u00a0\u00a0 I have to mul"
+    },
+    "e2857d04-03bf-4b60-b809-db252b8c1668": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "tiply two 1-bit numbers is just\u00a0\na constant amount of work. So, t of 1 is 1. And if I have to multiply two n bit numbers,\u00a0\nthen I have to instead multiply four\u00a0\u00a0 n by 2-bit numbers, which is what I have done\u00a0\nhere, and I have to spend order n time. Now,\u00a0\u00a0 "
+    },
+    "ee06fde7-0c5f-4ab4-98ea-c4d13ef28519": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "one reason I have to spend order n time is\u00a0\nI have to do this addition. So, remember,\u00a0\u00a0 earlier when we did partial products, also, we\u00a0\nsaid that each addition of two n bit numbers will\u00a0\u00a0 take order n times. So, here we are adding two\u00a0\nn by 2-bit numbers, "
+    },
+    "dff0aefd-9ee8-405f-81cb-e6d2336b490b": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "but that is still order n. So, combining the partial product requires me to\u00a0\u00a0 add these order n bit numbers, so that is why the\u00a0\ncombination term actually requires order n work.\u00a0\u00a0 So, if we try to solve this recurrence, by the\u00a0\nusual way that we have been "
+    },
+    "567202c9-fb13-41b7-97c1-145f73a9d03c": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "solving so far,\u00a0\u00a0 what we will do is, we will take\u00a0\nthis T n by 2, and we will expand it. So, we will say that T n by 2 by\u00a0\nthe same recurrence is 4 times T\u00a0\u00a0 n by 4 plus n by 2. And then if I\u00a0\ngroup these terms, I get 4 squared,\u00a0\u00a0 and I get 4 times n by 2"
+    },
+    "a06824e8-d30d-4b85-a191-867f1d918140": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " is 2,\u00a0\nso I get 2n plus 1, so 2 plus 1n. If I do it one more time, then pattern becomes\u00a0\na little clearer. I get 4 cubed here, I get 4\u00a0\u00a0 squared, and again, I am expanding this, so I\u00a0\nget 4 squared times 4 cube times T n by 2 cube,\u00a0\u00a0 and then this 4 squar"
+    },
+    "2f737e8a-633e-4724-bd9d-1bea2912297c": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ed and 2 squared will\u00a0\nleave me with a power of will leave me with 4,\u00a0\u00a0 which I can write as 2-squared. So, I have 2 to\u00a0\nthe 0, 2 to the 1, 2 to the 2 after three steps. So, in general after k steps, I will have\u00a0\nk minus 1 here and I will have k here and\u00a0\u00a0"
+    },
+    "c4564e3b-ab61-4bf9-9146-1929099c4c71": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " I will have k here. So, as we know we want\u00a0\nto go until we hit 2 to the k is equal to n\u00a0\u00a0 which is basically k\u2019s log of n. So, at log\u00a0\nof n I have 4 to the power log n, I have T\u00a0\u00a0 n by 2 to the power log n, so this is just T\u00a0\nof 1. And then here I have th"
+    },
+    "d8432b07-0cc7-4f6c-99aa-c1942eaa9a79": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "is, telescoping\u00a0\u00a0 sum 2 to the power 0 plus 2 to the power 1 plus\u00a0\n2-squared up to 2 to the power log n minus 1. And this whole thing is actually going to\u00a0\nbe approximately n, because it is going to\u00a0\u00a0 be approximately 2 to the power log n minus 1.\u00a0\nSo, thi"
+    },
+    "777d7f18-57a9-4c6b-822b-7774022786e8": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "s is going to tell us that this thing,\u00a0\u00a0 we will look at this again a little later more\u00a0\ncarefully. But essentially, what we find is\u00a0\u00a0 that by doing this naive divide and conquer, we\u00a0\nhave not really progressed because we have got,\u00a0\u00a0 again, n-squared, whic"
+    },
+    "da9b3307-8640-49c3-9ba5-20c6191dc67e": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "h we had\u00a0\ngot even by our high school,\u00a0\u00a0 or primary school method of doing it,\u00a0\ndigit by digit and adding up the rows. So, by rewriting this, in this form, we got this\u00a0\nrecurrence T n is 4, T n by 2 plus n, and this was\u00a0\u00a0 order n-squared. So, it appears th"
+    },
+    "9cc45f7c-4267-4ce9-8177-3adca72ae52f": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "at divide and\u00a0\nconquer really has made no progress in terms of\u00a0\u00a0 improving the complexity of this multiplication\u00a0\nproblem. But it turns out that we just have to\u00a0\u00a0 be a little more careful about how we compute\u00a0\nthe terms that we need in our final answer. So"
+    },
+    "bb0b48c2-66df-4038-aff1-0356c6c2c859": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": ", this is an algorithm due to Karatsuba. So,\u00a0\nwhat Karatsuba said is, let us compute something\u00a0\u00a0 which is not directly required in my answer\u00a0\nabove. So, let us look at this sum, this product,\u00a0\u00a0 x1 minus x naught. So, remember that x is written\u00a0\nas the uppe"
+    },
+    "72669b61-ce72-4c60-bcad-0a57438ad85e": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "r half is x, and y is written as y1,\u00a0\u00a0 y naught. So, I am going to take the lower part\u00a0\nof x and subtract it from the upper part of x, x1\u00a0\u00a0 minus x naught and multiply it by the lower part\u00a0\nof y, y naught subtracted from the higher part. So, this looks lik"
+    },
+    "2edcef80-9b5b-4540-bae7-42c36d328c98": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "e a strange quantity to\u00a0\nmultiply. But the reason we are doing this\u00a0\u00a0 is because it yields some interesting terms in\u00a0\nits expansion. So, again, we get x1 times y1\u00a0\u00a0 then we get plus x naught times y naught,\u00a0\nbecause both two negatives cancel,\u00a0\u00a0 and I have "
+    },
+    "f82b1b1f-5be4-402e-b9ae-767eec2e5876": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "two negative terms, minus\u00a0\nx1 times sorry, x1 times this thing,\u00a0\u00a0 the two cross terms and minus x naught times.\u00a0\nSo, this is the multiplication of this thing. So, the point to note here is that the terms\u00a0\nthat we really need are hiding inside this.\u00a0\u00a0 So, n"
+    },
+    "a5e5a8d1-dd75-4bd1-b79c-6d04be010257": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ow, we have achieved this by multiplying two\u00a0\nn by 2-bit numbers. Because remember that x naught\u00a0\u00a0 and x1 were half the length. So, if I started off\u00a0\nwith n bits, these are all half the length, so\u00a0\u00a0 this is a n by 2-bit multiplication, just like as\u00a0\nwe wer"
+    },
+    "af609423-648a-4057-ae33-b17f070729a7": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "e doing in the earlier divide and conquer. Now, I want to compute these two\u00a0\nexplicitly, as we were doing before,\u00a0\u00a0 so x1, y1 and x naught, y naught. So, I have\u00a0\nnow done three multiplications, and now,\u00a0\u00a0 I need to extract this bit. But this bit is\u00a0\neasy t"
+    },
+    "c51b2857-1d00-4e52-9f59-43d88854a819": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "o extract now, because I can just take\u00a0\u00a0 the sum of these two and subtract this whole\u00a0\nthing. So, if I take the sum of these two and\u00a0\u00a0 subtract this whole thing, then what happens is in\u00a0\nthis in the subtraction, these two terms cancel,\u00a0\u00a0 and so I am left w"
+    },
+    "4ec0531b-ecf8-4c8b-9ead-690040d6fc53": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ith plus x1, y naught,\u00a0\nplus x naught, y1, which is what I need. So, in other words, this term I can get by just\u00a0\nsubtracting, cleverly adding and subtracting\u00a0\u00a0 cleverly the result of the three multiplications\u00a0\nI have done. So, the crucial thing is that in"
+    },
+    "56af1a7b-08b2-4d03-9bf6-7d98ff414538": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "stead\u00a0\u00a0 of doing four multiplications, which I did,\u00a0\nin the naive case, I have brought it down to\u00a0\u00a0 three multiplications. So, in order to multiply\u00a0\ntwo n-bit numbers, I now only have to do three\u00a0\u00a0 multiplications, or n by 2-bit numbers and then\u00a0\ndo some c"
+    },
+    "7ef1d252-e4ff-4103-a41d-fd412bb9bf8b": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "lever rearrangement to make it work. So, let us just look at the algorithm before\u00a0\nwe do the analysis. So, we are saying that,\u00a0\u00a0 let us just keep track of the number\u00a0\nof bits, so we are multiplying x and n,\u00a0\u00a0 x and y, which are two n-bit numbers.\u00a0\nSo, the "
+    },
+    "28336fec-3cf2-4b79-ab52-4614340d754b": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "parameters that our algorithm\u00a0\u00a0 takes are the two numbers and the number\u00a0\nof bits. So, if the number of bits is 1,\u00a0\u00a0 then we just return the product. So, this is\u00a0\njust a trivial case, this is the base case. Otherwise, we are going to split it, so we comput"
+    },
+    "b8e27b27-c0cd-4840-a646-6c7e15dc33d0": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "e\u00a0\nthe half the number of bits. And then the way we\u00a0\u00a0 split it, this is actually we say, as it is\u00a0\nbit shifting, but you should think about x1\u00a0\u00a0 as x divided by 2 to the m. So, I start\u00a0\nwith x and if I divide by 2 to the m,\u00a0\u00a0 all this part gets cancelled o"
+    },
+    "8b434fe6-aec2-45bc-add0-ae71d6bf098f": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ff. So, remember,\u00a0\nif you shift by divide by 10, what happens 22\u00a0\u00a0 by 10 goes to 2.2. And then if you drop the\u00a0\nfraction, it is 2 or 27 by 10 for example. If I take 273, 2734 divided by 10, I get 273\u00a0\nby 4.4. And if I drop this and divide by 10,\u00a0\u00a0 I get 27"
+    },
+    "a17a8630-d65d-4c62-9fbe-4eeb651ca6a1": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": ".3. And I drop this. So, I am just\u00a0\nshifting right and dropping the decimal point.\u00a0\u00a0 But it is actually dividing by that\u00a0\nappropriate power of 10. If I want to\u00a0\u00a0 take the top, remove two digits from my number,\u00a0\nthe rightmost two digits I divide by 10 squar"
+    },
+    "44d91baa-89b3-444b-b816-85e86dad9d49": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ed. So, if I want to remove m bits from my\u00a0\nnumber, I divide by 2 to the power m.\u00a0\u00a0 And the remainder, if after the division\u00a0\nis what I get as the lower bits. So,\u00a0\u00a0 x naught is x mod 2 to the power m, so that\u00a0\nis the remainder. So, this is division and\u00a0\u00a0 r"
+    },
+    "6c561970-0f2d-452b-ba5d-6468eed8b149": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "emainder. But really because I am doing\u00a0\nit with respect to this power of 2, it is\u00a0\u00a0 just a question of shifting bit, so this does not\u00a0\nreally cost anything. This is a simple operation.\u00a0\u00a0 I am not really doing an arithmetic\u00a0\ndivision is really bit shifting"
+    },
+    "e550c45a-4431-47ce-afac-93cb6f517075": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": ". And then finally, I need to create this\u00a0\nintermediate quantity, which I want to multiply,\u00a0\u00a0 so I will just set a to be the left-hand side of\u00a0\nthat and b to be the right-hand side of that. So,\u00a0\u00a0 I need to multiply x1 and y1,\u00a0\nI need to multiply x naught\u00a0\u00a0"
+    },
+    "5b4e878b-a0ef-4733-8051-30f6daa9fc13": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " and y naught and I need to multiply this\u00a0\nsubtraction x1 minus x0 by y1 minus y0.\u00a0\u00a0 So, now I have set up all the things that I need,\u00a0\nso now I do my 4 my 3 recursive multiplications. I multiply x1 byy1, so I will get this term. I\u00a0\nmultiply x naught by y "
+    },
+    "7100df93-9189-4d21-b280-362b093d78c6": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "naught, so I will get this\u00a0\u00a0 term. And then I multiply a by b, so I will get\u00a0\nthis term. So, these are the three terms that I\u00a0\u00a0 need, and I will call them P, Q and R. And how\u00a0\ndo I multiply them this is divide and conquer.\u00a0\u00a0 So, I pass the arguments to the"
+    },
+    "ca5d9418-d5dc-4f28-af22-2f2eb90ed25e": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " same algorithm is\u00a0\nrecursive, but with half the number of bits. So, I\u00a0\u00a0 am using m bits instead of m bits, but\u00a0\nremember n bits, remember m is n by 2. And now when I get the answer back, I know\u00a0\nthat the highest order term is p, the lowest\u00a0\u00a0 order term is"
+    },
+    "1106d511-067d-4841-82e0-6176bfb0fc40": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " q, and the intermediate term which\u00a0\nhas to be multiplied by 2 to the power n by 2\u00a0\u00a0 is given by this clever expression of Karatsuba.\u00a0\nIt is this p plus this q minus thisr. So,\u00a0\u00a0 I can compute that intermediate thing, which\u00a0\nshould be x1 y naught plus x na"
+    },
+    "e0a6f0ff-2c29-463b-b9d3-08ec1fedcb2f": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ught y1 by\u00a0\u00a0 just taking the sum of the two higher and\u00a0\nlower order products and subtracting the,\u00a0\u00a0 this complicated product,\u00a0\nseemingly complicated product. So, this is how Karatsuba\u2019s algorithm works. So,\u00a0\nwhat we have effectively achieved is that we hav"
+    },
+    "b15ed8b5-1297-49af-abb4-dc171ffeceab": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "e\u00a0\u00a0 taken this 4 and made it 3. So, the question is,\u00a0\nwhat does that buy us in terms of complexity. So, let us try to analyze Karatsuba\u2019s algorithm.\u00a0\nSo, what Karatsuba\u2019s algorithm says is, unlike our\u00a0\u00a0 naive thing, which had 4 T n by 2 plus n, we have\u00a0\n3 "
+    },
+    "68416f63-cec7-435a-b679-b1edb4151115": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "T n by 2 plus n. So, the base case as always is\u00a0\u00a0 when I have 1 bit is 1, but when I have n bits, it\u00a0\nis 3 times T of n by 2 plus n. So, we do our usual\u00a0\u00a0 expansion trick. So, I will expand this thing,\u00a0\nand what I get, is 3 times T n by 4 plus n by 2. And "
+    },
+    "9356e4f5-6ecd-457d-96c3-e1d79726cd81": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "if I rewrite this, I get from this 3 times\u00a0\nthis 3 I get 3 squared, I can rewrite 4 as\u00a0\u00a0 2-squared, and now I have a 3 times n by 2,\u00a0\nso I have a 3 by 2 and I have the original 1,\u00a0\u00a0 so 3 by 2 plus 1 times n. So, if I expand it once\u00a0\nmore, the pattern becom"
+    },
+    "5678d431-3258-48a1-9c9b-724596dc05f1": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "es a little clearer. So,\u00a0\u00a0 if I now replace this quantity, using n by 4, then\u00a0\nI will get n by 8, which I will write is n by 2,\u00a0\u00a0 3times t of n by 8, and n by 2-squared,\u00a0\nbecause that is what I passed. And, now, if I look at\u00a0\nthis, I have this 3-squared,\u00a0\u00a0"
+    },
+    "c9a58e41-4962-4afc-8f69-547cf1a0bff7": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " divided by 2-squared. So, I have this\u00a0\n3 into 3 squared, 3 cube coming here,\u00a0\u00a0 so this is 3 and this is 3. This goes\u00a0\nwith the number of times I have expanded.\u00a0\u00a0 And here I have this again, telescoping sum, but\u00a0\nnow the telescoping sum earlier it was 1, 2"
+    },
+    "757fc6ab-9628-4d12-9bcb-7bedf5ea34c3": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": ", 4, 8,\u00a0\u00a0 and so on, now it is 1, 3 by 2, 3 by 2-squared.\u00a0\nSo earlier, it was 1, 2, 2 squared, so that\u00a0\u00a0 telescoping sum has come to 3 by 2, because I am\u00a0\nonly creating three copies instead of four copies. So, if I keep doing this, after our usual\u00a0\nthing, "
+    },
+    "6d9f9209-728b-4dc7-9aad-53e20ed762e5": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "when we bring down this thing to 1,\u00a0\u00a0 I would have done this log n times, so\u00a0\nthen this 3 would have become log of n. So,\u00a0\u00a0 I have just written 2 here, but you\u00a0\ndo not have it is always 2. So, I have\u00a0\u00a0 3 to the power log n, and this has again\u00a0\nexpanded 3 b"
+    },
+    "a0164b7d-d435-44fe-a150-24aecf98b78d": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "y 2 to the power log n minus 1.\u00a0\u00a0 So, we have to know analyze this messy\u00a0\nexpression to find out what it means. So, first thing we can do is, we can kind of\u00a0\neliminate this thing because this is just 1.\u00a0\u00a0 And then we are just looking at this\u00a0\nexpression at"
+    },
+    "3e1be241-e46e-4d14-8a67-3d4423eafe8d": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " the bottom. Now, this\u00a0\u00a0 is a geometric series. So, form a plus ar\u00a0\nplus ar squared plus so it is where each term\u00a0\u00a0 is multiplied by a constant factor r with\u00a0\nrespect to this. So, in our case r is 3 by 2. And\u00a0\u00a0 in the geometric series formula is usually if"
+    },
+    "cdf8986b-be2e-45cc-a5b9-7cf3f1e269ea": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "\u00a0\nI have n terms in my formula, it is r to the n. One of the formulas is r to the n minus 1 divided\u00a0\nby r minus 1 times a. So, this is a formula so I\u00a0\u00a0 am just applying that formula. So, 3 by 2 is my\u00a0\nratio, so that is my r. So, 3 by 2 minus 1 is in\u00a0\u00a0 the "
+    },
+    "863c6d6e-4ed0-4e2b-88a5-78796c9b5ea3": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "denominator, and 3 by 2, to the number of\u00a0\nterms in my thing is in a numerator. So, now,\u00a0\u00a0 let us look at this term.\u00a0\nThis is a form 3 to the log n. So, in general, if I have a to the log\u00a0\nn, I claim it the same as n to the log n.\u00a0\u00a0 So, the reason for this"
+    },
+    "3667dbef-b35a-4277-8cd3-cc1fcfa549be": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " is, if I take a to\u00a0\nthe log n, and say that this is some values z.\u00a0\u00a0 If I take now log on both sides, I get log\u00a0\nof a to the log n is equal to log of z.\u00a0\u00a0 But remember that when I take logs\u00a0\nlike this, I can bring that down. So,\u00a0\u00a0 this is the same as sayi"
+    },
+    "7c00e499-4ea9-4e2a-ba17-5a5096695d62": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ng that log,\u00a0\nI can bring this exponent down. So,\u00a0\u00a0 I can say this is the same as log of\u00a0\nn times log of a is equal to log of z. And now, I can interchange the roles. So, I can,\u00a0\u00a0 instead of thinking of this as having been the\u00a0\nexponent, I can think of thi"
+    },
+    "6dc4a2a4-8fa4-418b-8d06-0b9f88b3d706": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "s as having been,\u00a0\u00a0 so I can think of this as log a times log n is\u00a0\nequal to log z I just interchange the order.\u00a0\u00a0 And this is the same as saying that log of n\u00a0\nto the power log a is equal to log z. Which is\u00a0\u00a0 just same as saying that the original z I was\u00a0"
+    },
+    "24e1a0a1-0be5-4c99-bada-63f5a9ef5b89": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "\ntrying to compute is also n to the power log n. So, if I have a to the power log n, I can\u00a0\ninterchange and say it is n to the power\u00a0\u00a0 log a. In general, if I wait to the power log\u00a0\nof anything, b, this will be equal to b to the\u00a0\u00a0 power log of a, and it do"
+    },
+    "033b99e3-59d0-431d-9dfc-f32e724b1c75": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "es not matter what the\u00a0\nbase is. This could be, in our case, base 2,\u00a0\u00a0 but it could be any base. So, this is true,\u00a0\nin general, a to the log b to the base c is\u00a0\u00a0 equal to b to the log a to the base c, because of\u00a0\nthis way that the logs interact with each o"
+    },
+    "17be1f69-a924-45d1-876e-f4346d863ba8": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ther. So, therefore, this 3 to the\u00a0\nlog n is just n to the log 3.\u00a0\u00a0 What about this thing? So, this thing\u00a0\nrequires a little bit of work. But basically,\u00a0\u00a0 the important thing is this and this stuff. This\u00a0\nis the only term that matters, everything else\u00a0\u00a0 is"
+    },
+    "ddeb23c3-b286-4b42-acaa-ce0b14e27b37": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " going to cancel out. So, n times 3 by 2 to\u00a0\nthe log n that is what we want to worry about. But now, if I use the expression above, it is I\u00a0\ncan interchange the n and the 3 by 2 and say this\u00a0\u00a0 is the same as n times n to the power log 3 by 2.\u00a0\nSo, I have j"
+    },
+    "b273288c-dc33-4437-903d-84e963e90415": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ust swapped these two using the thing\u00a0\u00a0 about it. I brought the n down and put the 3 by\u00a0\n2 in the exponent. But log, 3 by 2, log of x by y\u00a0\u00a0 is log x minus log y. This is how logs work.\u00a0\nSo, the log of division is the subtraction\u00a0\u00a0 of the logs. So, I get t"
+    },
+    "c9f8e947-ce7d-4cb8-bc8a-85fedd21a5d8": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "hat this is n times\u00a0\nand this numerator becomes log 3 minus log 2.\u00a0\u00a0 But what is n, n is just n to the power\u00a0\none, and what is log 2, log 2 is just 1. So, I went to the power 1, and this thing is just\u00a0\n1. So, I get n to power 1 times n to the power log\u00a0\u00a0 3"
+    },
+    "f028737a-50c2-4a79-ab3a-7de3b16d8f23": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " minus 1. So now, I have a multiplication of two\u00a0\nthings I just add it up. So, I get n to the power\u00a0\u00a0 1, plus log 3 minus 1, so again, I get n to the\u00a0\npower log 3. So, both, this term and this term\u00a0\u00a0 are actually giving me n to the power log\u00a0\n3, so this is"
+    },
+    "3b8c597e-488f-40d6-947a-85c40a27fa47": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " going to be my final answer. My final answer, is that, this T of n is\u00a0\nactually n to the power log 3. Earlier,\u00a0\u00a0 remember, that we were looking at n squared. So,\u00a0\nwhat is the difference between n to the power log\u00a0\u00a0 3 and n squared, where log 3 is actually"
+    },
+    "617bfe0b-f62c-4d36-89a7-9e5e2b59b82d": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " something\u00a0\nlike 1.59. It is of course a irrational number,\u00a0\u00a0 but if you round it off to two decimal digits,\u00a0\nit is 1.59, which is significantly less than 2. So, I have gone down from n squared to n to\u00a0\nthe power 1.59 by doing this clever Karatsuba,\u00a0\u00a0 divi"
+    },
+    "6766618f-4eca-4a6c-9534-687615cdc7af": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "de and conquer. So, if we do a naive\u00a0\ndivide and conquer, we got no benefit.\u00a0\u00a0 But then if we look at that naive divide and\u00a0\nconquer and we will look at the structure of\u00a0\u00a0 the terms that we need to reconstruct the\u00a0\nanswer, it turns out that we can replace\u00a0"
+    },
+    "ce888b1c-68b8-43a9-9b00-284023a3fda0": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "\u00a0 four multiplications by three multiplications and\u00a0\ndo some more clever combining to get the answer. So, this algorithm has an interesting story\u00a0\nbehind it. So, let us just look at that. So,\u00a0\u00a0 Andrei Kolmogorov. You may have heard the name\u00a0\nis one of the "
+    },
+    "2b82931e-eee0-47a0-bbc1-c3524e9c04dc": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "towering figures of 20th century\u00a0\u00a0 mathematics. He has contributed to numerous\u00a0\ndisciplines. Most areas have some influence\u00a0\u00a0 of Kolmogorov. So, Kolmogorov in the 1950s\u00a0\nconjectured that multiplication could not be done\u00a0\u00a0 in less than quadratic time. So,\u00a0\n"
+    },
+    "306077de-5768-4555-be1c-957c05da6585": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "this was a public conjecture of his. And in fact, he ran a seminar\u00a0\nin Moscow University in 1960,\u00a0\u00a0 where among other things, he stated this\u00a0\nconjecture. He said, this is a conjecture,\u00a0\u00a0 which I believe should be provable, but I do not\u00a0\nhave a proof of it,"
+    },
+    "520958fe-cc8b-4ad9-9f4e-5183b9e4ca4b": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " so he stated it as one of the\u00a0\u00a0 problems that could be addressed among the various\u00a0\nopen problems that he discussed in the seminar. So, there was a young student in the audience\u00a0\nour friend Karatsuba, Anatoly Karatsuba,\u00a0\u00a0 he was a 23 year-old student. So,"
+    },
+    "33486fe6-f364-4aa9-8001-6a208ba8a6fa": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " he was struck\u00a0\nby this claim that you cannot do multiplication\u00a0\u00a0 in less than n squared time.\u00a0\nAnd he thought about it,\u00a0\u00a0 and two weeks after Kolmogorov\u00a0\nmentioned it in this seminar. Remember that Karatsuba had not thought\u00a0\nabout this problem before unti"
+    },
+    "2ed423f3-c3c2-484e-a3e2-249d3783ab59": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "l he was\u00a0\u00a0 introduced to it by Kolmogorov. Two weeks\u00a0\nlater, he had come up with this clever idea\u00a0\u00a0 and he presented it to Kolmogorov, and\u00a0\nKolmogorov, of course, immediately realized\u00a0\u00a0 was correct. And then in the next seminar, he\u00a0\nannounced it, and then "
+    },
+    "70889a1d-1a86-4135-835c-aa11144ef2b8": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "that was the seminar. The seminar was just the announcement\u00a0\nthat this conjecture had been settled\u00a0\u00a0 in the opposite direction to what Kolmogorov\u00a0\nthought we could be. So, small aside on this,\u00a0\u00a0 is that Karatsuba actually used a slightly\u00a0\ndifferent formula"
+    },
+    "57696b37-7491-48b1-9ccb-db0cde17a816": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "tion from what we use. So,\u00a0\u00a0 instead of our formulation of this subtractions.\u00a0\nSo, remember, we use x1 minus x naught and x,\u00a0\u00a0 y1 minus y naught, he used x1 plus x naught\u00a0\nand y1 plus y, and this just changes the thing. So, in our case, what we did was\u00a0\nwe"
+    },
+    "b3f1f452-417e-4321-92bd-13620761d534": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " took the two terms x1, y1 plus\u00a0\u00a0 x naught y naught, and we subtracted that\u00a0\nr, so that we got the right thing. Now,\u00a0\u00a0 instead you take r and subtract that and the same\u00a0\nthing happens. These two things will cancel. And\u00a0\u00a0 because these are already positivel"
+    },
+    "8a46c302-9aa4-4960-9f7e-af91749da417": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "y occurring,\u00a0\nthese sub-side products are already positively\u00a0\u00a0 occurring, they will remain. So, you just reverse\u00a0\nthe order of the subtraction of the three terms. Instead of subtracting the complex term\u00a0\nfrom x1, y1 plus x naught y naught you do\u00a0\u00a0 it the o"
+    },
+    "45b5cfff-61a4-4771-af60-a44b13dd7985": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "ther way. So, what is the difference?\u00a0\nWell, the difference really is that this sum\u00a0\u00a0 is the sum of two n-bit numbers. And now, when\u00a0\nyou sum to n-bit numbers, as you realize, the\u00a0\u00a0 highest bit could generate a carry. And\u00a0\nif you have a carry in the highes"
+    },
+    "bd09cc90-e43f-4552-b0c1-032babc2f183": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "t bid,\u00a0\u00a0 then that n bit number plus n bit number\u00a0\ngenerates an n plus 1 bit number is a sum. So, technically, your recurrence does not\u00a0\ninvolve something which is half the size,\u00a0\u00a0 but something slightly more than\u00a0\nhalf the size it could involve.\u00a0\u00a0 So, ins"
+    },
+    "6f00fb87-f3c5-4a60-a5ec-0f2485be1681": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "tead of T n by 2 you are saying T n by\u00a0\n2 plus 1, and that becomes a little messy to\u00a0\u00a0 calculate. So, the analysis becomes rather messy\u00a0\nif you use Karatsuba\u2019s thing it still works,\u00a0\u00a0 but you have to be a little more sophisticated\u00a0\nabout the way you do the"
+    },
+    "fd209e29-0319-4763-90b5-f3b8835c4543": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": " counting. So, the person who actually came up with\u00a0\nthe simplification that we have used here\u00a0\u00a0 was done Donald Knuth, who\u00a0\nis again a towering figure of\u00a0\u00a0 computing, if not mathematics from the 20th\u00a0\ncentury and continues to be a towering figure.\u00a0\u00a0 So, D"
+    },
+    "14b062cc-92c4-4d42-9e61-ee3110c5b8e6": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "onald Knuth realized that you\u00a0\ncan actually subtract instead of add. Now, when you subtract you do not have\u00a0\na problem. If I subtract one n bit\u00a0\u00a0 number from another n bit number, it only\u00a0\nbecomes smaller, it cannot become bigger.\u00a0\u00a0 And then you can use, a"
+    },
+    "15297cd4-d35d-4992-8c6b-281730d8213a": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "s we saw the rearrangement\u00a0\nin the other way to still recover the missing\u00a0\u00a0 terms that you need for the final\u00a0\nsong. So, this is the history really of\u00a0\u00a0 Karatsuba\u2019s algorithm and the presentation\u00a0\nthat we have used in this lecture, which\u00a0\u00a0 is actually a re"
+    },
+    "8833c7cc-a0d4-4dc6-83f3-366146d58842": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "formulation due to Donald Knuth\u00a0\nto make the analysis go a little more smoothly. Now we have done this whole thing in binary\u00a0\njust to be simple about talking about bits. But\u00a0\u00a0 you can actually do this in any base. So,\u00a0\nif you do this in base 10, it is the "
+    },
+    "232b059e-a9c6-41dc-b4e3-2a1550300e22": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "same.\u00a0\u00a0 As long as you know how to multiply two digits\u00a0\nin one unit of time you can take a base 10 number\u00a0\u00a0 with n digits and divided it into two groups so n\u00a0\nby 2 digits and everything is precisely the same. You can do it in base 16,\u00a0\nyou can do it in bas"
+    },
+    "8c21d2ce-a1b7-437d-99a1-fa4ca3da56d0": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "e 4. So,\u00a0\u00a0 it really does not matter what base you\u00a0\nare working it. You are just saying,\u00a0\u00a0 take the digit sequence in that base and\u00a0\ndivide it by 2 and everything works. So,\u00a0\u00a0 that is Karatsuba\u2019s algorithm for integer\u00a0\nmultiplication, using divide and conq"
+    },
+    "9ac76651-588e-49a6-838a-98a3a395b0fa": {
+        "content_id": 57,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Integer Multiplication",
+        "week": 8,
+        "chunk": "uer."
+    }
+}

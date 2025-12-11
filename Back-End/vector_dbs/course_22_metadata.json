@@ -1,0 +1,492 @@
+{
+    "e1077bc6-5299-4538-97ec-bce588df03aa": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "So, the last sorting algorithm that we will\u00a0\nlook at for now is called quicksort.\n \n\u00a0 So, quicksort is interesting for\u00a0\nus, because it overcomes some of the\u00a0\u00a0 shortcomings that we have observed with\u00a0\nmerge sort. So, we saw two things which we\u00a0\u00a0 did not lik"
+    },
+    "ae0b519f-27be-456c-8c64-7e61c3b47779": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "e about merge sort. It was good that it\u00a0\ntook order n log n in the worst case, but it was\u00a0\u00a0 bad because the merge function actually forces\u00a0\nus to use extra space to show the merge list.\u00a0\u00a0 So, this creates an extra copy of all the space\u00a0\nthat we are using t"
+    },
+    "3c04a8c7-6924-477f-9791-a5d40fb982c9": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "o store the original list.\n\u00a0 And it also had this inherent recursion. We\u00a0\nwere forced to write a recursive function.\u00a0\u00a0 And the reason that recursion is bad is because\u00a0\nthere is a certain amount of the programming\u00a0\u00a0 language infrastructure for recursion req"
+    },
+    "63a4675c-36d6-4465-8c09-840f59226268": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "uires\u00a0\nyou to suspend the current computation,\u00a0\u00a0 make a call and then restore. So, there is a\u00a0\ncertain amount of, what you might call, paperwork\u00a0\u00a0 with recursive calls. And so recursive\u00a0\ncalls tend to be more expensive in that\u00a0\u00a0 sense. The function calls a"
+    },
+    "79d332c5-47bb-4163-ba22-b151c80bd2af": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "re expensive. \nAnd so you want to avoid them if you can for,\u00a0\u00a0 if you are interested in performance, although as\u00a0\nwe said, in some cases, the most natural functions\u00a0\u00a0 may be recursive. So, then you use recursion\u00a0\nas a tool to write correct algorithms. But\u00a0"
+    },
+    "203a8474-6f38-41bb-94d7-e9d4a3e10d7a": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "\u00a0 efficiency wise, it is useful to see if you\u00a0\ncan avoid recursion wherever possible.\n\u00a0 So, why does merging require us? I mean,\u00a0\nwhat is the cost of, cause of merging? So,\u00a0\u00a0 if you think about an example like this, so\u00a0\nthese left and right halves are alre"
+    },
+    "a3e375db-a2d3-4c00-b58b-78c69e63b1db": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "ady sorted.\u00a0\u00a0 But now, I cannot leave them as they are,\u00a0\nbecause I have to move things here. I have to\u00a0\u00a0 move the 1 and the 3 here. And in principle,\u00a0\nI have to move the 4 and the 5 there, so 5\u00a0\u00a0 and 6. So, that in some sense, unless I do these\u00a0\nshifting t"
+    },
+    "85eb8cb8-7b97-4642-b806-8f3fce77c2c0": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "hings across the two halves I will not\u00a0\u00a0 be able to assemble the full sorted list. \nI cannot just keep the sorted list on the\u00a0\u00a0 left and stick the sorted list on the right\u00a0\ntogether and make a full sorted list.\n\u00a0 So, the premise of quicksort is that what\u00a0\n"
+    },
+    "4684c87f-274b-4c64-9b1f-b4206c55b54e": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "if we could do this division better. So,\u00a0\u00a0 if we can do the division so that everything on\u00a0\nthe left is smaller than everything on the right,\u00a0\u00a0 then I can just stick them together. I\u00a0\nsort the left half. I sort the right \n\u00a0 half, but then the only work I n"
+    },
+    "4e9feef2-bb2c-4725-99a6-ed8c8a0a103b": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "eed to do is\u00a0\nto put them together kind of concatenate them.\u00a0\u00a0 I do not need to actually do any merging.\u00a0\nSo, this is the idea behind quicksort.\n \n\u00a0 So, let us think of how to do this. So, supposing\u00a0\nyou could calculate the median value. So, remember\u00a0\u00a0 tha"
+    },
+    "54814144-f415-422e-8b29-f107c1018285": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "t the median value is the one which divides\u00a0\nthe list into two parts where half the values are\u00a0\u00a0 smaller than m and half the values are bigger\u00a0\nthan m. Then what you can do is you can walk\u00a0\u00a0 through this list and every time you see a value\u00a0\nwhich is smalle"
+    },
+    "61135b9c-e832-48e9-984f-96e08e8a1bf2": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "r than or equal to the medium,\u00a0\u00a0 you pull it on the left hand side, every time it\u00a0\nis bigger than you move to the right hand side. \n\u00a0 So, you create two new partitions or two new\u00a0\nhalves. But now these halves are not by position,\u00a0\u00a0 but by value. So, those "
+    },
+    "e9a8d35d-8052-4801-8cf8-ce8a3205dd42": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "values which are smaller\u00a0\nthan the median, wherever they happen in the list\u00a0\u00a0 will come here, those values are\u00a0\nbigger than medium will go there.\n\u00a0 Now, because this is the median, these will\u00a0\nbe halves. I mean, the property of the median\u00a0\u00a0 is that it is a"
+    },
+    "64c1dcbe-e2d9-45b8-8d9b-82465b304071": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": " midpoint. So, you can expect, let\u00a0\nus assume there are no duplicates for simplicity.\u00a0\u00a0 Then it is very easy to see that exactly half\u00a0\nthe values will be on the left and half will\u00a0\u00a0 be in the right. So, then now, if I take the left\u00a0\nhand sorted and I take "
+    },
+    "97eb46ba-dc4c-4ea6-a48e-92158be90167": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "the right hand sorted, then\u00a0\u00a0 everything on the left is smaller than everything\u00a0\non the right and each of them individually is\u00a0\u00a0 in sorted order. So, the whole thing must be in\u00a0\nsorted order. I do not have to merge anymore.\n\u00a0 So, if I take a recurrence for"
+    },
+    "a907b64a-606d-4ca0-b5f6-51832a717ebf": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": " this,\u00a0\nbecause of the median property,\u00a0\u00a0 the two parts are roughly half. So, I\u00a0\nhave to sort two lists of size half. This\u00a0\u00a0 n cost I incur to create those halves. So, unlike\u00a0\nin the case of merge sort, where I just have to\u00a0\u00a0 find the midpoint and say you "
+    },
+    "bb5369db-947e-4c40-945f-4625864d0ff0": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "take everything\u00a0\nbefore this and I take everything after that,\u00a0\u00a0 I do not have to actually walk through the list\u00a0\nat that point. I just have to give the thing and\u00a0\u00a0 say you take this and I will take that. Here, one\u00a0\nhas to actually walk through the entire "
+    },
+    "6e6decea-b181-4781-980d-f37f3f225b1d": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "list and\u00a0\u00a0 decide which goes left, which goes right. For each\u00a0\nvalue, we have to calculate whether it is smaller\u00a0\u00a0 than the median or bigger than the median.\nSo, you take order n time to decompose the\u00a0\u00a0 problem into two parts. But then you do no work to\u00a0\nc"
+    },
+    "d20d8b8d-44f6-4910-839e-1bfbfe8a36b2": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "ombine them except to just concatenate. But it is\u00a0\u00a0 still this familiar recurrence. This is the same\u00a0\nrecurrence we had for merge sort. And we know that\u00a0\u00a0 if we got this recurrence, then we have an n log\u00a0\nn sorting algorithm. So, this would be wonderful\u00a0\u00a0 "
+    },
+    "01cd2fa3-c774-4e36-9663-39aa143759c7": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "if you could do this. If we could find the median\u00a0\nand then use the median to split the two lists,\u00a0\u00a0 the problem is how do we find the median.\n\u00a0 So, when we started our discussion of sorting, we\u00a0\nsaid that one of the advantages of sorting is that\u00a0\u00a0 it help"
+    },
+    "47e281d4-644a-4b57-a4be-5f8fa56a3de0": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "s us find the median. So, what we can do\u00a0\nis we can sort and pick the middle element as the\u00a0\u00a0 median. But the problem here is that what we are\u00a0\ntrying to do is sort. So, we cannot assume that\u00a0\u00a0 we sorted, find the median and then sort again\u00a0\nefficiently, b"
+    },
+    "93913207-d35c-4fdc-87a5-0ac44f32ebe9": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "ecause we have already had to do\u00a0\u00a0 a sort before this. So, there is no point in doing\u00a0\nit twice. So, if we find a median through sorting,\u00a0\u00a0 then it is not acceptable, because we are using\u00a0\nthe median for sorting. So, there is a kind of\u00a0\u00a0 circularity in thi"
+    },
+    "3ba11239-daed-4df5-a26d-9ed9471eb81a": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "s argument. So, we\u00a0\ncannot use the median independently\u00a0\u00a0 of unless we can find it independently\u00a0\nof sorting and that is hard to do.\n\u00a0 So, instead, what quicksort tries to do is to\u00a0\njust pick some value in L. It does not necessarily\u00a0\u00a0 mean it is the median"
+    },
+    "b991519b-6f26-4a5f-bf03-21d559af33a9": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": ". It just picks a value\u00a0\nwhich is traditionally called a pivot element.\u00a0\u00a0 And what you do is you do the same thing that we\u00a0\ndid for the median, except you do with respect to\u00a0\u00a0 the pivot. Everything that is smaller than the\u00a0\npivot, you move to one side, eve"
+    },
+    "902340f3-3b04-41ff-b675-9252f3795a0e": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "rything that is\u00a0\u00a0 bigger than the pivot you move to the other side.\u00a0\nSo, this is this algorithm called quicksort.\n \n\u00a0 So, it is due to famous computer scientists\u00a0\ncalled Tony Hoare, Antony Hoare C.A.R. the\u00a0\u00a0 A stands for Antony. So, it says choose a pivot\u00a0"
+    },
+    "9f2a5cc0-f45d-4840-ac07-f696aed1b4e8": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "\nelement. So, how do you choose a pivot element?\u00a0\u00a0 We will basically choose it based on its position.\u00a0\nYou do not know anything about the values in the\u00a0\u00a0 list. So, maybe we just pick the first element,\u00a0\nfor instance, as the pivot element. Then what you\u00a0\u00a0 d"
+    },
+    "dfdbd4b7-9de3-4240-80bc-80a918d57576": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "o is you partition the list into two parts, the\u00a0\nupper part and the lower part. The lower part has\u00a0\u00a0 everything which is smaller than the pivot. The\u00a0\nupper part has everything which is bigger than the\u00a0\u00a0 pivot. And now you move the pivot in between.\nSo, now"
+    },
+    "761913e5-1aa2-4511-8f81-5f26f26d0d1e": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": " you have everything smaller than the\u00a0\u00a0 pivot, then you have the pivot, and then you\u00a0\nhave everything bigger than the pivot. So,\u00a0\u00a0 now if you sort these parts, everything is with\u00a0\nrespect to each other in the correct place.\u00a0\u00a0 So, then you have to take thes"
+    },
+    "04c46277-0bfd-4a5d-9d94-1e0304fff870": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "e two parts which\u00a0\nare before and after the pivot and sort them\u00a0\u00a0 again. So, you, again you quicksort for that. So,\u00a0\nyou again break them up with a pivot to a smaller\u00a0\u00a0 half, bigger half and so on. But everything\u00a0\nin that will stay on the left, everything\u00a0"
+    },
+    "70f129e7-302f-4a44-9dcb-8e2209ef0859": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "\u00a0 here stay on the right. That is important.\nSo, let us look at this kind of at a high level.\u00a0\u00a0 So, supposing this is my input list. So, first,\u00a0\nI have to pick a pivot. So, the usual practice,\u00a0\u00a0 as I said, is to pick the first element is\u00a0\na pivot. So, let "
+    },
+    "5436ece8-5a11-4b7e-9c15-c2cf4d20a34d": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "us say 43 is our pivot.\u00a0\u00a0 Now, with respect to the pivot, I have to scan\u00a0\nthese elements from left to right and decide which\u00a0\u00a0 ones are smaller and which ones are bigger. And\u00a0\nfrom that, basically, identify the lower and the\u00a0\u00a0 upper partition. So, here, fo"
+    },
+    "953401d8-36b0-468c-a47e-41a7707ed3d1": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "r instance, the\u00a0\nblue ones, 32, 22, and 13 are the smaller ones,\u00a0\u00a0 and the green ones, 78, 63 and 57\u00a0\nand 91 are the bigger ones. So,\u00a0\u00a0 these are the lower and upper partition.\nSo, now, I will kind of rearrange these things so\u00a0\u00a0 that all the lower ones go "
+    },
+    "152aa485-c711-4a81-a6d1-aaa11d89a53c": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "to the left, the pivot\u00a0\ncomes to the middle and the higher ones go to the\u00a0\u00a0 right. So, this is the setup now. So, now what\u00a0\nI have to do is I have to recursively sort this\u00a0\u00a0 part, recursively sort that part, and I am done.\u00a0\nWhy am I done, because whatever "
+    },
+    "ec4d2404-4caa-42c0-ba27-206e3f8e7e3e": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "comes out of this,\u00a0\u00a0 in general, is going to, obviously, hopefully, be\u00a0\n32, 13, 22 and 32 is going to always lie to the\u00a0\u00a0 left of the pivot and everything that comes out\u00a0\nof this, which is hopefully going to be 57, 63,\u00a0\u00a0 78 and 91 will lie to the right of "
+    },
+    "27467a10-e582-48cb-ae1c-9f533a708166": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "the pivot.\nSo, I no longer have to do anything with these\u00a0\u00a0 two parts with respect to each other. I\u00a0\ncan separately solve the blue guys, I can\u00a0\u00a0 separately solve the green guys and just let them\u00a0\nbe wherever they are and they have done their job.\u00a0\u00a0 So, tha"
+    },
+    "43b0d059-bb8c-4b77-bb31-166e62d24d1c": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "t is the point of quicksort that you\u00a0\ndo not have to do a merge step afterwards,\u00a0\u00a0 so you can in some sense disjointly work\u00a0\non the blue things and disjointly work on\u00a0\u00a0 the green things and never have to ask\u00a0\nthem to talk to each other again. \n\u00a0 So, this i"
+    },
+    "e29c5c4c-0e88-43e8-9fd9-ee0b847b95e5": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "s a high level view. But in\u00a0\norder to actually implement it, we have to,\u00a0\u00a0 this step that we did going from here to here\u00a0\nis not obvious. It is one thing to go through\u00a0\u00a0 and flag each element as lower or upper, but how\u00a0\nare you going to rearrange them at t"
+    },
+    "c01d333f-e4f2-4d92-8d6a-af4fb8c8e25a": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "he same time\u00a0\u00a0 into this lower followed by pivot followed by the\u00a0\nupper. So, this is really the heart of quicksort,\u00a0\u00a0 this partitioning process, how do you partition\u00a0\nthe list into the correct sequence.\n \n\u00a0 So, here is one partitioning strategy. It is\u00a0\nnot"
+    },
+    "dbd8ec3c-6e02-4abc-82a2-e90db1f279fe": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": " the only one, but it is one which is easy\u00a0\u00a0 to remember. So, we will scan from left to right.\u00a0\nRemember, the leftmost thing is always the pivot.\u00a0\u00a0 So, what is left to be partitioned is\u00a0\neverything beyond the pivot from element\u00a0\u00a0 position one onwards. So, "
+    },
+    "4a375ed3-226a-444b-be82-06b181c52ec3": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "position 0 is\u00a0\nthe pivot. Position 1 onwards are the\u00a0\u00a0 things that need to be scanned. So, I will kind\u00a0\nof break it up into four parts is the pivot,\u00a0\u00a0 then after the pivot will be all the elements\u00a0\nwhich are known to be lower than the pivot,\u00a0\u00a0 after that w"
+    },
+    "a730276d-3bd4-4e04-aa91-0c48ddf1e7c6": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "ill be all those which are\u00a0\nknown to be upper, higher than the pivot,\u00a0\u00a0 and then there will be the part which I\u00a0\nhave yet to seek, the unclassified ones.\n\u00a0 So, I will be always looking at the next element\u00a0\nas the first unclassified element and I will\u00a0\u00a0 exa"
+    },
+    "b1e5fce8-4b08-4dbe-a123-d4a0214bf7bd": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "mine it. And now I have to decide how to adjust\u00a0\nthe lower and upper parts that I have already\u00a0\u00a0 found. So, the claim is that if the unclassified\u00a0\nelement is larger than the pivot, I can just move.\u00a0\u00a0 So, basically, let us try and draw a picture.\u00a0\nSo, this "
+    },
+    "b31b4bb7-0c3a-4e45-b3c1-29db129201fb": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "is my pivot. Then I will say that\u00a0\u00a0 this is my lower segment,\u00a0\u00a0 this is my maybe upper segment\u00a0\u00a0 and this is my unclassified. So, this is where\u00a0\nI am. Now, I will look at this element.\n\u00a0 So, I will look at this element and compare it\u00a0\nto the pivot. So, if "
+    },
+    "5d12b644-4bc4-40a3-ae67-cd47fef13ffb": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "it is bigger than the pivot,\u00a0\u00a0 then it is easy. Then I just\u00a0\nmove this blue line to here\u00a0\u00a0 and I have extended the upper thing and\u00a0\nI have got one less unclassified element.\u00a0\u00a0 If it is smaller than the pivot, then I\u00a0\nneed to put that element in the green t"
+    },
+    "e8be8e70-31c8-442b-a552-62e2af6f9d93": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "hing.\u00a0\u00a0 Now, naively, that would mean that I have to\u00a0\ntake all these values and shift them, because\u00a0\u00a0 I need to make one more space in the green thing.\u00a0\nBut actually, the clever thing to do is to just,\u00a0\u00a0 if I have this and I want to move it into the\u00a0\nupper"
+    },
+    "7159f8b0-8442-42d0-84df-b94d222d0c13": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": " thing, the clever thing to do is to just\u00a0\u00a0 exchange this value and this value.\n\u00a0 So, if it is less than or equal to the\u00a0\npivot, you exchange. So, you have the upper,\u00a0\u00a0 you have the lower and you have this boundary and\u00a0\nyou have this unclassified. So, I am"
+    },
+    "598230b6-9df8-4432-a2f1-ee5d66017901": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": " saying you\u00a0\u00a0 just take this value and you swap it with this\u00a0\nvalue. So, you are now taking a value which is\u00a0\u00a0 lower and adding it to the lower part and you are\u00a0\ntaking a value in the upper and moving it from the\u00a0\u00a0 beginning to the end. But the net result "
+    },
+    "327a77ad-5327-4181-90df-1bb55ebd502c": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "is that\u00a0\nyour boundary has basically shifted like this.\u00a0\u00a0 So, your upper thing has shifted from left to\u00a0\nright does not preserve the order. The first thing\u00a0\u00a0 has come to the end. And in the space that you\u00a0\nhave vacated, you have moved a smaller thing. So,\u00a0"
+    },
+    "281e93b5-98fd-492d-9f16-d0a51cda6d06": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "\u00a0 this is the strategy of this partition thing.\n \nSo, let us see how it works. So, you start with\u00a0\u00a0 this 43 this thing. So, now you first identify\u00a0\nthe pivot and you make a kind of marker of where\u00a0\u00a0 you are two segments end. So, we are using\u00a0\nthis Python c"
+    },
+    "a91b538c-2e7e-4065-9038-0d355a90d5e6": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "onvention where that marker is\u00a0\u00a0 one beyond. So, the blue and the\u00a0\ngreen at position one means that the\u00a0\u00a0 left and right things are empty right now, because\u00a0\nthey do not include the position of the marker.\n\u00a0 Now, I look at 32. So, 32 is a lower element. An"
+    },
+    "a40a34af-9f04-4a3a-b151-e99f4cf6004b": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "d\u00a0\nif I do that thing right now it does not make much\u00a0\u00a0 sense. But if you do that thing, you will end\u00a0\nup shifting. So, now it says the blue segment\u00a0\u00a0 is actually from here to here and the green\u00a0\nsegment is from here to here and 22 is my next\u00a0\u00a0 unclassifie"
+    },
+    "67d069d6-43d4-4a65-82dd-d4ec6e3b2d46": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "d element. So, now for 22, again, it\u00a0\nshifts. Now, for 78, because 78 is an upper thing,\u00a0\u00a0 the upper segment grows, for 63 the upper\u00a0\nsegment grows, for 57 the upper segment grows,\u00a0\u00a0 for 91 the upper segment grows. Now, this\u00a0\nis the case which illustrates "
+    },
+    "45089089-6e49-4bd4-89f6-13e488ff6a31": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "what happens\u00a0\u00a0 most clearly at this point.\nSo, now, 13 is smaller. So, I need to put 13 here.\u00a0\u00a0 So, what I am claiming is I will move the\u00a0\n78 here and I will move the 13 here and I\u00a0\u00a0 will move both of these pointers. That is what\u00a0\nI am going to do. So, I a"
+    },
+    "97553509-ce6a-4e9c-a988-5933c828ea3d": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "m going to basically,\u00a0\u00a0 so look at the previous picture.\u00a0\nSo, the previous picture,\u00a0\u00a0 the blue segment was ending below 78 and the green\u00a0\nsegment was ending below 13. Now, I will move 13\u00a0\u00a0 to the position of 78 and 78 to the position of\u00a0\n13 and move both t"
+    },
+    "9745bc03-d834-4d4e-9f91-dca0bef9ad3b": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "hose arrows to the right. \n\u00a0 So, this is now, at the end of\u00a0\nthis pass, I now have pivot,\u00a0\u00a0 lower and upper and nothing is unclassified,\u00a0\nbecause I have moved to the end of the list.\n\u00a0 Now, I have to move the pivot in between. So, I\u00a0\nwill use the same tric"
+    },
+    "0e07a85e-a135-4514-9af8-9a0eaf0107a2": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "k. So, to move the pivot in\u00a0\u00a0 between I ideally would have to shift the three\u00a0\nlower elements to the left and make a space,\u00a0\u00a0 but I could as well take the rightmost element in\u00a0\nthat 13 and swap it with the 43. So, I will just\u00a0\u00a0 swap the 13 and the 43 and n"
+    },
+    "337112f3-8744-4463-96d5-263010c651f6": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "ow I have the\u00a0\nlower elements to the left of the pivot and the\u00a0\u00a0 upper element to the right. So, this\u00a0\nis my partitioning strategy.\n \n\u00a0 So, with this strategy we can now\u00a0\nwrite this algorithm quite clearly. So,\u00a0\u00a0 I want to do quicksort. In general, I have "
+    },
+    "c48df5b0-8479-4c54-923b-b0302271d91a": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "to do\u00a0\nquicksort remember on different segments. So, I do\u00a0\u00a0 quicksort on the slice from l to r. If the slice\u00a0\nis trivial, that is it has at most one element,\u00a0\u00a0 then as usual, I return. Now, if this slice\u00a0\nis not trivial, then what I do is that I will\u00a0\u00a0 fix"
+    },
+    "00841c7a-4780-4f22-81ac-175f35e5447d": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": " the pivot to be the beginning of the slice\u00a0\nand I will fix initially, if you remember, the\u00a0\u00a0 lower and the upper segments were the positions\u00a0\nimmediately to the right of the pivot. So,\u00a0\u00a0 they were, if the pivot is at small l, then the\u00a0\nlower and the upper"
+    },
+    "64ca56bc-ea54-4104-ac86-67bbd6b1a34e": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": " things are at l plus 1.\n\u00a0 Now, I will scan through all the unclassified\u00a0\nthings. If the unclassified thing is bigger than\u00a0\u00a0 the pivot, I extend the upper segment. That\u00a0\nis what this is. Otherwise, I will exchange\u00a0\u00a0 the current position with the first uppe"
+    },
+    "304a5789-c0de-4d15-a564-27a1efedb124": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "r thing.\u00a0\nSo, remember, lower is pointing just to the right\u00a0\u00a0 of where the lower segment ends. So, this index\u00a0\nlower is actually the first upper position.\u00a0\u00a0 So, I will swap those, and then I will shift\u00a0\nboth the lower and the upper markers by 1.\u00a0\u00a0 So, this"
+    },
+    "4ec1d7e5-b0d2-4f90-b3c9-f07889472f4d": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": " is that partitioning step. Now, at the\u00a0\nend of this loop, I finished partitioning.\n\u00a0 Now, I will do this business about swapping the\u00a0\npivot and the last element in the lower partition\u00a0\u00a0 and then I will move the lower partition limit\u00a0\nby one because I have"
+    },
+    "24395ac3-d369-4fd9-a286-d4c9000fb68c": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": " kind of shifted the whole\u00a0\u00a0 thing down by one and now I call quicksort on the\u00a0\nleft half and I call quicksort on the right half.\u00a0\u00a0 Notice that here I am doing it up to\u00a0\nlower minus 1 and from lower plus 1,\u00a0\u00a0 so I am leaving out the position\u00a0\nwhere the piv"
+    },
+    "a1c03bd7-b9d3-48b4-8db9-cbaed7e4d928": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "ot is, because\u00a0\u00a0 I do not want to again, the pivot is already in\u00a0\nthe right place. So, I am doing everything to\u00a0\u00a0 the left of the pivot and everything to right\u00a0\nof the pivot. So that is this quicksort.\n  \n\u00a0 So, this is again, a divide and conquer thing,\u00a0\ne"
+    },
+    "cf8397a4-e995-45e0-8185-18bfa824fb2a": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "xcept is doing the division in a more clever way,\u00a0\u00a0 it is partitioning the list in a careful way based\u00a0\non the value. So, we are avoiding this merge step.\u00a0\u00a0 And this actually allows us to sort it in\u00a0\nplace. So, actually, you will see that that\u00a0\u00a0 code if yo"
+    },
+    "41bc7907-5058-4aaa-94f5-4438a4a88db1": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "u run it, you will find that the\u00a0\nlist actually gets updated in place.\n\u00a0 And we can also provide an iterative\u00a0\nimplementation, which I will discuss briefly\u00a0\u00a0 later, to avoid the cost of recursive calls. And\u00a0\nwe have given one partitioning strategy which\u00a0\u00a0 "
+    },
+    "f2e24718-f826-4dca-a686-358257341e59": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "basically starts from the left and kind of builds\u00a0\nboth these partitions as we go along from left\u00a0\u00a0 to right. Now, there are other strategies which\u00a0\nstart at the opposite end. So, I start with this\u00a0\u00a0 and I will have some kind of lower here and upper\u00a0\nhere "
+    },
+    "ae6da788-002f-4bfa-9bcf-2950c3a9e2eb": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "and I will grow them towards the middle. So,\u00a0\u00a0 this is also a strategy which has\u00a0\nbeen studied and implemented.\n\u00a0 So, there is more than one way to implement\u00a0\nquicksort. So, it is a question also,\u00a0\u00a0 but it is really, the partitioning algorithm is\u00a0\nusually "
+    },
+    "31daf23c-ab12-40f1-af47-11d7ac507763": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "the one where you make a mistake. So,\u00a0\u00a0 you have to be careful that you are\u00a0\ndoing the right thing in partitioning,\u00a0\u00a0 because after that the recursive call is very\u00a0\nstraightforward. So, now, in order to justify\u00a0\u00a0 this we actually have to analyze the comple"
+    },
+    "6c6ad0a8-2f8f-4926-9b45-a2f1126e6d91": {
+        "content_id": 22,
+        "course_name": "PDSA",
+        "title": "Quicksort",
+        "week": 3,
+        "chunk": "xity\u00a0\nand see if we have really done something which\u00a0\u00a0 improves on the shortcomings of merge sort\u00a0\nwithout sacrificing the advantages of merge sort."
+    }
+}

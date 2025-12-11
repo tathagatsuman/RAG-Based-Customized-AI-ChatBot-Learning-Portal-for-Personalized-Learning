@@ -1,0 +1,177 @@
+{
+    "23c8e500-e238-4ab6-9be7-d6ff0be62c0a": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "So, in this course, we are going to be\u00a0\nfocusing on efficiency. And one of the\u00a0\u00a0 things that is important in efficiency\u00a0\nis how long it takes code to run. So,\u00a0\u00a0 we will be doing mostly theoretical\u00a0\ncalculations, but it is sometimes useful\u00a0\u00a0 to do practical"
+    },
+    "ca54c2d2-3248-4d11-8d38-61bb3aa53081": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": " computations to understand how\u00a0\nlong Python actually takes to execute code. So,\u00a0\u00a0 let us look at a way of measuring how long a piece\u00a0\nof Python code takes to run in Python itself. \n\u00a0 So in general, the running time of code\u00a0\nwill vary from one language to "
+    },
+    "43ddc7d1-eb7b-4f6f-8924-8c1c0b2592a1": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "another.\u00a0\u00a0 So, one way of measuring these things is from\u00a0\noutside, you can take your operating system,\u00a0\u00a0 and you can call a function or call a program and\u00a0\nmeasure the time it takes for that program to run.\u00a0\u00a0 But this will not be useful if you want\u00a0\nto kno"
+    },
+    "976e7bd2-9564-4cb5-a342-1627512814c1": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "w how much part of the program. \n\u00a0 Suppose you want to know\u00a0\nhow much time each function\u00a0\u00a0 that you call inside the program takes, you\u00a0\nmight be sorting something in the middle of it,\u00a0\u00a0 how long did the sorting, so then you actually\u00a0\nneed to embed this tim"
+    },
+    "e83975d7-08e3-4f1c-b2d1-f05055f0c9df": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "ing into your program. So,\u00a0\u00a0 Python has a library called time, which gives\u00a0\nus some useful functions for doing this. \n\u00a0 So, one of them that we will use now is something\u00a0\ncalled the performance counter, which is invoked\u00a0\u00a0 by this function called perf time."
+    },
+    "9f3252e4-2271-4cf2-af58-642eb50f2537": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": " So, perf time\u00a0\ndoes not give us a useful value in itself. If\u00a0\u00a0 I call this function perf time, it will give\u00a0\nme some number; this number has no meaning in\u00a0\u00a0 itself. But if I call it twice, if I call it now\u00a0\nwhen I call it a little later, then I will get t"
+    },
+    "693ce474-3554-4d2f-a8dd-89c304703f6c": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "o\u00a0\u00a0 values whose difference is meaningful. \nSo, if I take two consecutive readings of\u00a0\u00a0 perf time, I will get a difference. So, this is\u00a0\nlike having a watch. So, if I have this watch,\u00a0\u00a0 but the watch is not showing correct time, so\u00a0\nmaybe it is showing tim"
+    },
+    "9565bab4-111d-49ed-8622-c472c84b91bb": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "e in a different time zone,\u00a0\u00a0 I have just travelled from some other\u00a0\ncountry and I have not reset my watch. \n\u00a0 So, if I look at the watch, and I\u00a0\nlook outside, they will be mismatched,\u00a0\u00a0 my watch may be showing 12 o'clock, it might be\u00a0\n6:30 outside. But if"
+    },
+    "93395e2a-34a1-4ffb-a2dd-8d4f02c79ac6": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": " I look at it, 12 o'clock,\u00a0\u00a0 and then I look at it five minutes later, and it\u00a0\nshows 12:05, I know that 5 minutes have elapsed\u00a0\u00a0 between the time I saw the watch the previous\u00a0\ntime, and that time I saw the watch now. \n\u00a0 So, the absolute value that the time"
+    },
+    "ffd865e1-ba53-4d0e-a8d5-106beb8ef20e": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": " is\u00a0\nshowing on my watch is not useful. But\u00a0\u00a0 the relative difference between the time I\u00a0\nread now, so if I want to do something after\u00a0\u00a0 10 minutes or 15 minutes, I can measure that\u00a0\nwith my watch, My watch is not set correctly. So,\u00a0\u00a0 perf time is like tha"
+    },
+    "e068ea65-b26d-480d-88e6-698113be07b5": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "t. So, perf time you would\u00a0\nthink of as a clock that is not set correctly. But\u00a0\u00a0 if you call it twice the difference will tell\u00a0\nyou the interval between the two calls.  \n\u00a0 And by default, this is in seconds. So,\u00a0\nhow would you use it? Well, typically,\u00a0\u00a0 yo"
+    },
+    "ddb48f24-298c-4c1d-9618-7bb75604d414": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "u will like any other library, you will import\u00a0\nit. And now you want to measure the time that a\u00a0\u00a0 certain piece of code takes. So, before you start\u00a0\nthis code, you call this perf counter function and\u00a0\u00a0 store the return value in a variable say let\u00a0\nus call "
+    },
+    "45df56d0-dee2-418c-aca3-466e5aff4d41": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "it start after your code, you store\u00a0\u00a0 it another variable, let us call it end. \nAnd finally, this is the meaningful thing,\u00a0\u00a0 you can compare the difference, you can\u00a0\ncompute the difference of n minus start.\u00a0\u00a0 And this will actually tell you how much time\u00a0\n"
+    },
+    "f464813d-0ab6-47c3-b09e-bdba2f3d9d4a": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "elapsed. So, this is the way in which you can use\u00a0\u00a0 a performance counter. So, we can now embed this\u00a0\ncall into a class and create a timer object. \n\u00a0 So, we want a timer object so that we\u00a0\ndo not have to explicitly call this\u00a0\u00a0 perf counter ourselves, but w"
+    },
+    "70a256a0-5f5c-40d4-8f58-c7e86e6c0980": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "e want to say start\u00a0\nthe timer stop the timer. So, this is like if you\u00a0\u00a0 have a phone or if you have something else you can\u00a0\nhave a stopwatch you can say start and stop. And\u00a0\u00a0 then you know how much time it is taken. \nSo, this is how we measure for instanc"
+    },
+    "a609759c-25a3-480b-a355-e51600898f8e": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "e\u00a0\u00a0 performances and athletics when the person starts,\u00a0\nyou start the timer when the person finishes,\u00a0\u00a0 you finish it press the timer, and you know how\u00a0\nmuch time so we want to create a timer class. So,\u00a0\u00a0 obviously, we have to import the time library\u00a0\nto d"
+    },
+    "e58ef4b0-2fc1-4a16-bea6-b4d2d643b7e4": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "o that. And we will keep track of two things\u00a0\u00a0 right when the timer started and how much time\u00a0\nI measured the last time when I stopped it. \n\u00a0 So, I will start and stop and I will have\u00a0\nto. I would like to store the thing. So,\u00a0\u00a0 when I start the clock, I re"
+    },
+    "737c61d9-c214-4e7c-801c-924d307e4546": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "member when I started\u00a0\nthe first call to perf meter when I finish, I am\u00a0\u00a0 not interested anymore in when I started when I\u00a0\nfinished I am interested in the time that elapsed.\u00a0\u00a0 So, I will store that. So, this is a simplistic\u00a0\nversion there is a more elabora"
+    },
+    "72c43208-b843-40c2-a641-b6c0e79d8d86": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "te version, which\u00a0\u00a0 we will look at when we look at the code, but\u00a0\ninitially let us just assume that when the timer\u00a0\u00a0 is created, we set both of these values to 0. Now,\u00a0\nthe functions that I need are start and stop. \n\u00a0 So, what will start do, so start will"
+    },
+    "89c91fa0-96c8-4594-94e7-ebd624e7ccfd": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": " start\u00a0\nthe timer? So, it will basically call this\u00a0\u00a0 performance counter in the time library and assign\u00a0\nit to my start time. So, now my timer is running\u00a0\u00a0 implicitly I have set the starting time. Now when\u00a0\nI say stop, I call this performance timer again,\u00a0"
+    },
+    "9f32ae23-32bb-41b2-8d80-7d2b1b44ac1e": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "\u00a0 it is not important to me what that value\u00a0\nis as such, I do not need to store it,\u00a0\u00a0 what I want is the difference between that and\u00a0\nthe time that I started and I will store that\u00a0\u00a0 in this elapsed time thing. \nSo, that when I call this function\u00a0\u00a0 elapsed,"
+    },
+    "b41e3de7-d7b5-43c7-be42-642c4d7d1133": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": " I will get the elapsed time right, so\u00a0\nthis gives us a timer class, I will show you\u00a0\u00a0 separately a more elaborate version of this and\u00a0\nhow to use this. And with this, we can actually\u00a0\u00a0 measure the time that Python\u00a0\ntakes to run and it will turn out\u00a0\u00a0 that"
+    },
+    "7f860a0d-0f52-419e-8044-df019ad4cf8c": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": " Python actually executes something like\u00a0\n10 to the power 7 operations in a second. \n\u00a0 This is considerably slower\u00a0\nthan languages like C++ and C,\u00a0\u00a0 which usually do ten to the eight or more, so it\u00a0\nis at least, so pythons is at least a factor of\u00a0\u00a0 10 slow"
+    },
+    "093a34dd-61f4-4d8d-859f-66e6dddc515c": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "er than other languages. It is sometimes\u00a0\nit matters sometimes it does not matter. But this\u00a0\u00a0 10 to the 7 is useful just to calibrate for\u00a0\nourselves, how long things are going to take\u00a0\u00a0 and to understand why things need to be done\u00a0\nmore efficiently in cert"
+    },
+    "4dc9a4e5-1bd9-4dff-9733-687dc51e705b": {
+        "content_id": 9,
+        "course_name": "PDSA",
+        "title": "Timing Our Code",
+        "week": 1,
+        "chunk": "ain cases."
+    }
+}

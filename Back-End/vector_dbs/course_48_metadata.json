@@ -1,0 +1,1045 @@
+{
+    "22aba545-84b2-4192-a86a-72cc8389dfdb": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "So, we are now going to look at heaps, which\nare a tree implementation of priority queues. So, remember that in a priority queue, our\ngoal was to maintain a collection of items. And each item has a priority. And there are two things that can happen to\nthis"
+    },
+    "73a4cb05-0f2c-4311-9249-66e2dd364520": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " collection. Either I can insert a new item with high priority\nor low priority, or I can process an item. So, I need to find the highest priority item\nand delete it from this collection. So, that is called delete max. And delete max need not be unique, the"
+    },
+    "44ae4d51-45aa-4f27-a8a2-147bb80340b6": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "re could\nbe duplicates. So, we are not demanding that these are all\ndistinct. So, if there are more than one high priority\nitem, you pick any one. So, what we said is that if we do it in a\nnaive sense, by maintaining this collection as a sequence, either a"
+    },
+    "e3c6eb83-5ce8-4b6e-96bc-6307dad76a2e": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "s a sorted sequence\nor as an unsorted sequence, one of these two operations will be linear. In a sorted sequence, inserting is hard, in\nunsorted sequence, finding the maximum is hard. So, in either case, if I do N operations,\nI end up with a quadratic cost"
+    },
+    "1bebf7f1-873c-4857-afc5-65866d59ddd3": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": ". So, we decided to move to 2-dimensions, and\nwe came up with this square grid idea, square root of N by square root of N grid. And then we said that the cost comes down\nfrom order N for the worst case to order root N for both. So, earlier, I had one opera"
+    },
+    "79f89e9e-2787-4f93-a21d-8dd83eca34e0": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "tion constant\nor one ordered N, now both become order root N, both insert and delete max become root\nN time. So, therefore, overall, the complexity comes\ndown from N squared to N root N. So, our goal is to improve this further. And that is why we are going"
+    },
+    "4740a00a-c773-4178-980f-6036b68fd836": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " to look at trees. So, what we are going to look at are binary\ntrees. So, we have seen trees in the context of graphs. So, tree is basically, if you remember, and\nacyclic connected graph. But normally, when we look at spanning trees,\nand so all the trees h"
+    },
+    "d74d0fd4-49e1-461c-aa56-fc09d8109fe6": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ave very different shapes, I could have trees, which look like this and\nso on. But a very useful way of thinking about trees\nis that you pick one of these nodes, so you pick this node, and you kind of hang it here. So, you make that the top, and then these"
+    },
+    "200b4b07-56d9-4dfb-a719-74ac73f012bd": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "\ntwo edges will be below it, and then say, this edge will be below that. And then from here, I will have three edges. So, this will be a different. I mean, it is literally like you take this\nand you hang it up. So, imagine like you have these edges are\npie"
+    },
+    "0511a126-fb06-44b4-bb8a-5d97a323aa22": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ces of string and each of these nodes is like a bead or something, then it will just\nfall into place. So, this is how you orient it, you route it. So, we are looking at trees which have a particular\nstructure, which are called binary trees. So, in a binary"
+    },
+    "ef1f12cd-cfe3-4709-a7df-a3d5603db7fe": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " tree, when you hold it up\nlike this, every node has at most two things below it. And these two things have a direction, there\nis a left and a right. So, this one, for instance, has only one thing\nbelow it, but that one thing is on its right. So, 37 is the"
+    },
+    "7db4a418-269d-4055-97e1-5c9b11099ecb": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " right child of 83, whereas 83\nis the left child of 72. And similarly, 14 is a left child of 44. So, this is what the child of a node is when\nI hang up this tree, the nodes that come immediately below it are the children. And in a binary tree, you have up "
+    },
+    "df7b4cc1-f5ff-4313-842f-7613288187d6": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "to two children. So, you could have one child as we see here. So, this is a one child case. And of course, we have all these nodes at\nthe bottom, which have no children. So, these which have no children are called\nleaves. And on the other direction, if I g"
+    },
+    "e5d1f65e-df7a-475d-bbe7-abb7bce88e66": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "o up, every\nnode is hanging from a unique node above it, there are no two, because it is a tree. Remember, the underlying thing, it is a tree. So, there is only one way to get to this node,\nI cannot come to it from another path. So, if I look at a node, it"
+    },
+    "8c16d735-b268-4bbc-bd0b-14af1bbd4ff5": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " is hanging from\nthe path which connects it back upwards. So, every node has a unique parent, the only\nnode which does not have a parent is the root because the root is the start of the whole\nthing. So, other than the root, every node has a\nunique parent. "
+    },
+    "76523ea4-0d86-4305-ba79-67aa0961114b": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "So, there are two quantities of interest in\nthis tree. The first quantity is of course, the total\nnumber of nodes in the tree. And this is what we usually call the size\nof the tree. So, the size of this tree is 1, 2, 3, 4, 5,\n6, 7, 8, 9. So, the size of th"
+    },
+    "e92ce895-ba8a-4566-882e-2d52cc4fc5f1": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "is tree is 9, because there\nare 9 nodes. And then the height is the number of levels. So, this is 1, 2, 3, 4, 5. So, the height of this tree is 5. You can think of the height in terms of number\nof levels, or you can think of height in terms of number of ed"
+    },
+    "08dfd9b6-3fac-4c46-a446-1f758dc0f989": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ges on this longest path. So, it is either 4 or 5, it is off by one\ndepending on whether you have measured it in terms of height in terms of the node level\nor in terms of the number of edges, but it is conventional any way like in everything\nelse, so numbe"
+    },
+    "cf55258b-65cc-4a07-a710-bc2f81704d89": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "r this is level 0. So, this is level 0, this level 1, this is\nlevel 2, level 3, and this is level 4, so that is how we will deal with this. So, heap is a binary tree with some additional\nconstraints. So, the first thing is that it does not have\nthis kind o"
+    },
+    "eb7e7f7d-2843-4535-9666-6eb3aeef6466": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "f wonky structure, so I cannot have things which are missing in the middle. So, binary tree is filled level by level from\nleft to right, and the value at each tree is at least as big as its children. So, for instance if I take a tree which has\nlike 83 and "
+    },
+    "c3ca5636-7984-4ef3-9e4e-64e502aa230c": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "then 76, and 44. So, this is a binary tree which is filled\nlevel by level, so the first level is full, the second level is full, and at the third\nlevel I have three nodes filled from the left, so I do not have this node so this node is\nmissing, it is not a"
+    },
+    "58d397f9-1fa9-45a1-a20a-eb872fce9f14": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "llowed to leave out this node then it is not filled from left to right. Similarly, if I do this and then if I add\nthis note, so it is now left to right and then add something here this is also not good. So, what the binary tree does is it has the\nheap does"
+    },
+    "680cb984-089e-4eb0-8f6d-0fa455ff800a": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " it has two such constraints, the first constraint is this structural constraint\nthat it is level by level from left to right, the second one is the value constraint which\nsays that at every node if I look at the value here it must be at least as big as th"
+    },
+    "976a8b1a-7210-427a-88ee-c8d3ca938b13": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "e values\nbelow it. So, 83 cannot have a value bigger than 83\nbelow it. Now, because of this it is easy to see that\nthe root must have the largest value because this level must have values bigger than the\nnext level. So, level 0 has level values which are b"
+    },
+    "61c76d96-32d5-40f9-8a09-43091d98f5d5": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "igger\nthan the two nodes at level 1, level 1 in turn must have values bigger than the nodes\nat level 2, so therefore 0 must be bigger than 2 also 2 is bigger than 3 so 0 is bigger\nthan 3, so by induction at any level J you can only go down in the value cha"
+    },
+    "77a97dc8-5e75-40b4-af76-a68a3bfee660": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "in. So, the root is always the biggest value in\nthis tree. So now, if we look at trees which are not\nheaps as we said there are two possible reasons, they are not heaps the first is that they\nare structurally wrong. So, why is this not allowed because ther"
+    },
+    "60021c8b-ca4d-4ad4-97bb-9625f6bf9617": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "e\nshould be a node here because we said that a binary tree should be filled from top to\nbottom left to right, so it is okay to have some gaps on the right-hand side of the tree\nbut it is not okay to have a gap in the middle of the tree. So, this is an exam"
+    },
+    "86d2a9b5-f6a9-4c38-b8ec-43b1bac148c5": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ple of a binary tree which\nis not a heap. This is also a binary tree there is not a\nheap for a structural reason that is because I did not finish this level, I left an incomplete\nnode at level, this is level 0, level 1, level 2. So, at level 2, I did not f"
+    },
+    "f70e8925-5d88-40f9-97d5-c85f0a0687c1": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "inish it. So, without putting the last node at level\n2, I have gone ahead and added nodes at level 3 this is not allowed. So, a binary tree to be a heap must have been\nfilled top to bottom left to right. So, the only incomplete level, so this is\nan incompl"
+    },
+    "821dd127-656d-46dd-ad51-58442011a7b2": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ete level right because there are more levels, more nodes that could have been\nat this level, the only incomplete level can be the last level, so that is one way to think\nabout. The other properties the max heap property\nthe one which says that every node "
+    },
+    "b950e980-aa69-438a-a93a-3f565437fd1f": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "must be bigger than a student. So, here is a tree which has no problem structurally. So, this is full, this is full, this is full,\nand this is my partial level. So, level 0 is full, it has one node, level\n2 is full, it has both the children and the first n"
+    },
+    "d3f7f140-e03e-46db-a85d-bbd7d7c86e03": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ode, and level 3 is full, level 2 is\nfull, because it has both the children have the level one node. But the problem is that this node has a value\nwhich is smaller than this node. So, 53 is smaller than 54. And this violates our condition that every\nnode m"
+    },
+    "a9256ca5-494e-403b-89aa-add907c6fd46": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ust have a value which is at least as big as its children. So, here it is the problem is not the structure\nbut the value. So, if I draw a binary tree, so remember in\na binary tree, every node can have 0, 1, or 2 children, but I must have the structural\npro"
+    },
+    "b8002fb5-495e-43ad-84eb-548b04f9babc": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "perty that all the levels up to the bottom level are complete, only the bottom level\ncan be incomplete. So, that is a structural property of a heap. So, the nodes are filled in a particular sequence,\nor the nodes are created, if you want to think in a part"
+    },
+    "2442b31d-f9b6-4574-aa1e-d727cb0b3999": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "icular sequence. And the values in the nodes must obey this\nlocal property. And this local property always guarantees\nthat the value at the top is the largest value. So, you can think of it as the top of the\nheap. The biggest guy in this collection. So, th"
+    },
+    "2a957878-7d1d-442e-b1bf-c9a009218141": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "is is a heap. Now the question is, what are we going to\ndo with it. So, we need to implement ideally our priority\nqueue. So, the values in our collection are the values\nin these nodes. So, each node is a value in our collection. And we need to be able to s"
+    },
+    "2d36b38c-9d1d-4eef-bdcf-40e00f6e9b69": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "upport the two\noperations that priority queues require. One is to insert an arbitrary item and one\nis to delete the maximum item. And of course, we need to maintain this heap\nstructure when we do it. So, there is a certain structural property\nthat needs to"
+    },
+    "46a7c1a5-71d0-435a-b0a3-bdaaae3b90bc": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " be maintained. So, let us suppose we have this heap. So, first we check it is a heap. So, it is a heap because the top level is\nfull, second level is full, next level is full. So, there are no gaps. So, structurally, there is no problem. And 83 is bigger "
+    },
+    "4db5dff7-88a3-4a66-81ac-8563107b00eb": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "than 74 and 72, 74 is bigger\nthan 54 and 27, and 72 is bigger than 44 and 31. Notice that the heap property is local, I\nonly have to look at these three nodes, I do not have to look at, I do not have to compare,\nfor instance, this node with this node, I kn"
+    },
+    "79157557-3a66-4936-9953-b23d039b48c5": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ow that 83 is bigger than 27. Because 27 is smaller than its parent, and\n74 will be smaller than 83. But I do not have to compare it. So, it is sufficient to look at these neighborhoods\nin order to get it right. So, this is my current heap. So, now I want "
+    },
+    "b94d6011-ee7f-4823-9579-9fb5ab67df9c": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "to take a new value and insert\nit. So, the first thing that is going to happen\nwhen I insert a value into this tree is I have to create a new node because obviously\nthat new node has to sit somewhere. So, where is it going to sit? Now, this is where the st"
+    },
+    "82d798bb-45de-4fc7-b985-eb620063a06b": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ructural property\nthe heap comes in, there is only one place that I can add, because the next node is fixed. Can I add it here? No, because it must go in the next level,\nso this level is full. So, it must create a new level. But in the new level, it must b"
+    },
+    "ac369bdd-ec51-4f22-9a91-41557397645e": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "e the leftmost\nthing. So, the only place that I can add in this\ntree is here, I have to add a node here. So, this is the place the tree will grow structurally,\nI have no choice. The structural change in the tree is determined\nby the number of nodes. If I h"
+    },
+    "0fd670ec-af63-496d-a828-450e99de898d": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ave, if I tell you this tree has in\nthis case, 8 nodes, now it has 7 and I want to put an 8th node, there is only one place\nthe 8th node can go. So, what I do is I put that 8th node there\nand I put this value 77. But now, the problem is that if I look, so\n"
+    },
+    "da0acd50-eaa0-4fb6-b7a9-855b3380be9e": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "the rest of the heap was a heap, but in the vicinity of the new note that I have added,\nthere is no guarantee that the heap property is satisfied. Everywhere else, I have not touched anything,\nthe rest of the tree is untouched. So, the rest of tree if it w"
+    },
+    "75d72833-aec1-4fbd-8733-a07e915632d3": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "as a heap is still\na heap. But here the question is, is this a heap? And it is not. So, I have to fix it. So, how do I fix it? Well, why is it not a heap because it can\nonly be because the new node, I have added is somehow bigger than its parent when it\nsh"
+    },
+    "c158f9d0-7602-4883-8f71-b20779091a07": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ould be smaller. So, since it is bigger than its parent, when\nit should be smaller, the obvious thing is to exchange it. So, what I do is I fix this property by exchanging\nit. So, I move it to the top and I move 54 down. But now, I still have a problem. Be"
+    },
+    "081cdffc-3898-40a0-b536-d598030dd4e5": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "cause every time I move a new element into\nthis position, the 77, which I added was never been, has never been reconciled with the rest\nof the tree. So, I reconciled with the 54. So, now I have to again, reconcile it with\nits parent. So, it is I see that i"
+    },
+    "a4888675-189d-4a4d-85d2-4d22c4980f28": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "t is still, unfortunately,\nnot in the right place with respect to 74. So, I swap again. And now, I look at its parent and I find,\nOkay, it is fine. So, 77 is smaller than 83. So, there is no problem. So, the question you might ask is, what about\nthis side?"
+    },
+    "8f5214cf-799b-454d-b507-440c2b9476d3": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " Because 77 has now come next to 27. So, why is it not the case that I have to\ncheck 77 versus 27? Why do I only look up? Well, remember that before this happened,\nI had 74, 27, and 77. So, I knew that, I know that this is already\nbigger than this. So, 74 "
+    },
+    "7bf035af-1dff-416f-8e78-911d3ab7bb04": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "is already bigger than 27. And the reason I moved this here is because\n77 is bigger than 74. So, I have 77, which is bigger than or equal\nto 74, which is I move it up. But this is already bigger than 27. So, therefore this is also already bigger\nthan 27. S"
+    },
+    "5b7f4a11-834f-4d0f-9179-df57b2d86fd8": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "o, when I move something up this heap, it\nwill automatically be bigger than the other side. So, I do not have to worry about what happened\non the other side, I only have to look at the path walking upwards because that is where\nI could have created a contr"
+    },
+    "d6d5b01f-6722-4367-b6e6-f514abfdc2c8": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "adiction by putting a big value below. So, I restored this property along the path\nto the root. So, let us do another one. So, supposing now I insert 44. So, 44 again, this was my prior to this, this\nwas my heap structure. So, the only place that the next "
+    },
+    "a659d0bc-a020-49ec-a046-90890e6cba20": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "node can\ngo is here, as a right child of the 74 node. So, that is where I put my 44. Now, I have to check again this heap property,\nso I look at its parent. And in this case, fortunately 44 happens to\nbe smaller than 74, so I can stop. So, I just insert it"
+    },
+    "4012456c-ffe1-4c5b-9183-85f97e1175e5": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " and I stop. We will do one more and then we will analyze\nthis. So, let us put 57. So, if I put 57 then it must now go below\nthe second node at the previous level, because now there is no more space here, the two children\nare taken up. But so, I just compl"
+    },
+    "da5a2f19-0d9b-44ea-b07e-b40256cb3ad0": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ete, so I am just going,\nas I keep adding I will be adding at this level from left to right. So, now I see that there is a problem again,\nso I will do this 57 and 27 I will swap. Now, I will look at this. And now I am done. So, this is the end of my insert"
+    },
+    "0cb00c1b-e44a-4a07-b9ce-955fcc855b68": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " 57, so this\nis our insert. I take it to the new position. That is the right most position in the bottom\nmost row or I start a new row in case the bottom most row was already full. And then I move it up the tree until everything\nalong the path that I am lo"
+    },
+    "ce9710df-63e6-4aeb-8480-c90af9e3087f": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "oking at, is correctly placed with respect to its children. So, how much time does it take? Well, I need to, every time I insert, of course,\nI have a fixed place to insert it, but I need to walk up the street. So, it is going to take in principle, I need\nt"
+    },
+    "919061c8-5859-46f5-a42f-447a08350281": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "o go all the way up. So, for instance, supposing I insert at this\npoint, a 99, then 99 will get exchanged with 57, it will get exchanged with 77, it will\nalso get exchanged 83. So, 83 will come down, so 99 will become the\nnew root. So, in worst case, I wil"
+    },
+    "b1397fc4-594d-4610-a8e8-886a34d6c9d5": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "l have to go all the\nway up. But remember that that is the height. That I have to keep walking up as many levels\nas there are. So, the time it is going to take me in terms\nof compare and exchange is going to be proportional to the height of the tree. So, w"
+    },
+    "2ed22267-07f3-4f89-a706-9fc23eb4db93": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "hat is the height of this tree? So, remember that we said that this is level\n0. So, at level 0, I have one node, which I will\nwrite as 2 to the 0. Now here, going from level 0 to level 1, I\nhave two children. So, I have twice as many nodes at level 1,\nas I"
+    },
+    "44f7db90-0c9d-4d0e-b877-818f9ccd2e22": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " have at level 2. And I go from here to here, I have two, so\neach node propagates two more children at the next level. So, at the first level, I have one node. At the second level, I have 1 times 1, second\nlevel, third level, I have 2 times 2, because each"
+    },
+    "47fe4e38-9ae2-40bd-8650-aa5dd1c660cd": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " of them gives 2, then I have 2 times\n2 times 2, and so on. So, in general, if I go down j steps, I have\n2 to the power j, so I have 1 at the first level 2 the power 0, 2 at the next level 2\nto the power 1, 4 at the next level 2 to the power 2, 8 at the ne"
+    },
+    "a427da0a-7e5b-40ec-bb6e-94f8105d2166": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "xt level 2 cubed, and\nso on. So, if I go down the number of slots, which\nare available at level j is 2 to the power j. So, if I have filled up k levels, if I have\nk levels like this, and I have filled it up, then I have 2 to the power 0 on the top, 2\nto th"
+    },
+    "414ec502-21d8-40fc-acfe-744c0706910c": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "e power 1 to the next level, and so on down to 2 to the power k minus 1 because my\nlevels are 0 to k minus 1, if I have k levels. So, I have 2 to the power 0 plus 2 to the\npower 1. So, you can think of this as the binary number\nwith k minus 1 bits. In bina"
+    },
+    "35369716-268f-4431-9213-ee71a8a98ab6": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ry, if I write on k minus 1 once, then\nit is 1 with k minus 1 0 is minus 1. So, this is 2 to the power k minus 1. So, 2 to the power 0 plus 2 to the power 1\nplus 2 squared plus 2 cubed plus sub 2, 2 to the power k minus 1 is the same as 2 to\nthe power k mi"
+    },
+    "dd8bee00-5295-4e15-b869-8ffd862274d4": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "nus 1. So, what we are saying is that if we fill\nup a tree up to k levels, then we have 2 to the power k nodes. So, conversely, if you go the other way, if\nI have N nodes, then the height is, so the size we are saying is 2 to the power height. So, this is "
+    },
+    "66d2c70c-0658-4e7e-b017-8f1250ddcee8": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "what this is telling us. The number of nodes in my tree grows exponentially\nas 2 to the power of the height. So, therefore the height is going to be the\nlog of the size, by the definition of log. So, if we have N nodes, then we have at most\nlog N plus 1 le"
+    },
+    "813e5bea-52bf-455a-9228-22008542dfda": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "vels. The plus 1 is because of this k minus 1 business. So, then this tells us therefore that the\ncomplexity of insert is log N, because if I am inserting into a heap, which already\nhas N nodes, the number of times I have to do this exchange moving up to f"
+    },
+    "5eab46da-a550-4b67-9638-8b07b1bda695": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ind its correct\nposition for the new value is at most log N, because that is the guaranteed upper bound\non the height of the tree. So, we have already achieved one of the two\nthings we wanted. So, remember that our goal was to reduce this\npriority queue op"
+    },
+    "ae57e3aa-f756-42b0-a904-ebf0cc22efb0": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "erations of insert and delete max, we want to reduce them further from square\nroot of N to log N. So, we have now shown that if I keep this\nclever kind of binary tree, which is filled up nicely with this local heap property, and\nwith this structural guaran"
+    },
+    "a4c9c6c9-810a-45ce-8e80-c8014ae779ea": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "tee, then I am guaranteed that the height is log N. So, insert is log N. So, what about delete max, that is the other\noption. So, we noticed that because of the heap property,\nas we said, by induction, everything at the level above is bigger than everythin"
+    },
+    "1bc2533d-4a0a-4cbc-8e2a-a962ac40b7d0": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "g of level\nbelow. So, by induction, the root has the largest\nvalue. So, the root has the largest value. And then when I want to delete max, there\nis only one thing to do, which is remember there could be more than 1, I could have had\nan 83 here also. So, t"
+    },
+    "adec6a67-0b63-4403-97cc-ec63c062fca2": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "here is nothing to stop that from happening. But I will take the value of the root and\nsay this is your maximum. So, the maximum value is at the root. So, I removed that and return that as the,\nremember delete max gives you back a value. It gives you back "
+    },
+    "7a811cdf-afe2-415c-921e-82a9451a801f": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "a value, and it removes\nthat value from the collection. So, they are two separate operations. So, giving back the value is very straightforward. It is like a sorted list. In a sorted list, we said that the maximum\nvalue is at one end so I just pull it out."
+    },
+    "0050c62a-e50a-46a8-bb29-c05f8453c92d": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " But if the list is sorted, just pulling it\nout remains leaves it in a sorted list. But here if I pull out the root of this tree,\nnow I have created a hole, and the structure is wrong because now I have N nodes, but I\nonly have N minus 1 values because thi"
+    },
+    "fe0886d8-06f9-4bbc-8e37-6504581b7928": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "s is not gone. That is not allowed. So, after we delete one value, the tree has\nto shrink here. So, this node has to go because this is how\nthe tree grows and shrinks, it grows, it shrinks at the other end. So, I remove value at the top of the tree,\nbut th"
+    },
+    "5fb759fb-3c25-4579-ae2c-bc5c236d0675": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "e node that disappears is the bottom of the tree. So, this is the problem. Now when I do that, I have another problem,\nwhich is that I have this lonely value 27, which was sitting inside a node, but that\nnode is gone. It is house has been destroyed. So, 27"
+    },
+    "8d7357f4-a185-420c-9986-fb72dcba9791": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " is homeless. But I have an empty home over here. So, the logical thing to do is to take the\nhomeless value and put it into the home that exists. So, I take this 27 and move it there. So, I removed the route as the delete max\nand returned it to you. And no"
+    },
+    "424aa756-85a9-400b-a54c-79f469921e31": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "w my job is to clean up the heap. So, when cleaning up the heap, I realized\nthat I have got the last element, the bottom most right most value in the heap without\na place to stay. But I have created a place because I removed\nthe root. So, I moved to the ro"
+    },
+    "2e9cd255-4255-463c-94f8-096edc4d7fdb": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ute. But now of course, the problem is that is\nnot the wrong place, 27 is not bigger than in general, it could be. But in this case, you can see that it is smaller\nthan its two children. So, I need to fix this problem. But unlike an insert when I was fixin"
+    },
+    "a6030e5f-3090-4013-88e5-bf3d96eed1a3": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "g it\nupwards, I am going to fix it downwards now. So, I have to look at both its children. So, I look at both its children. And I have to now do what, so it is smaller\nthan 77. It is smaller than 72. So, which one should I fix? So, I have two options. So, "
+    },
+    "c77a1122-99d3-4f65-b568-77c0b73dde85": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "either I can move this here, or I can\nmove this here. But notice that if I move 72 here, then this\nis a problem. If I move this smaller child up, even though\nit will fix the problem for 27, it will create a problem on the other side. Because 72 will be sma"
+    },
+    "8204e6aa-d0b2-42b1-9c6f-91932d70b63c": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ller than 77, which\nI do not want. So, therefore the obvious thing is I look\nat its two children. So, I look at both these children. And I move the bigger one up. So, this is how. So, when I am doing the insert, there is no\nchoice, I look at my value and m"
+    },
+    "7aec8636-6dae-4f57-a119-eb8d675789fd": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "y parents value there is only one parent. So, if it is smaller than my, if it is bigger\nthan my parent I exchange, if it is smaller, I stop. Here, I have two children to look at. And I could be wrong with respect to both\nof them. So, which one of them shou"
+    },
+    "ed1c7b9e-cd13-4e99-b0b4-98638de9a289": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ld I fix? Well, I fixed the one with the bigger one. And now as we argued, if I fix the bigger\none, the bigger one is going to be okay with the smaller one. So, if I move 77 here, this is going to be\nfine. Because I know that 77 was bigger than 72. That is"
+    },
+    "6388d42e-6f55-489a-ad51-2e3e995e8e81": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " why I moved it up. So, therefore I am not going to have any problem\non the other path. So, this is what I do. So, I take the 77 and I move 27. So, this is what I have done. Now I have still a problem. So, again, it might be smaller than its two\nchildren. "
+    },
+    "1ecdc189-6206-40bb-9c2d-f462a84e74a8": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "But I have to pick the bigger of the two,\nthere is no point to fixing it in 57. Because then 57 will be too small with respect\nto 74. So, I fix it with respect to 74, and then\nI come down one more step. Now, I have another problem here to fix. So, I fix it"
+    },
+    "b5234d98-3ee2-4723-a9b8-2f1280a0bccc": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " with respect to 54. And now I am done. Now, the main thing to realize is that I followed\none path. And the reason I only follow one path is at\nevery point when I have to flip, I choose the bigger of the two children, so I do not\nthe other path remains und"
+    },
+    "6b202a6e-efa1-4698-b0ff-dc7af22ebdbc": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "isturbed. So, if I went left, then this part is not\ntouched. And I went left, this part is not touched. When I went left, this part is not touched. So, whatever I bypass, the direction I go\nin, I am doing something, everything else remains undisturbed and "
+    },
+    "af4f271a-7a00-408c-bea8-eebf80fe5dbf": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "retains its heap property. So, I moved on only one path. So, an insert I was moving up one path. Here I am moving down one path. And by the same calculation as before, since\nI am moving down one path, I am working in time proportional to the height of the "
+    },
+    "4f8c06d3-4b99-440d-8958-39f6d5909eec": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "tree. And we argued that the height of the tree\nis logarithmic in the size. So, again, delete max will also be logarithmic\nin it. So, insert was algorithmic, delete is logarithmic. So, we are in good shape. Of course, the problem with this is that we\nmust "
+    },
+    "2433d279-8886-4af5-a3b9-cce86bfb0dbf": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "have a heap. So, how do we construct the heap? So, before we do that, let us see how we will\ndo all this manipulation. So, it would be a bit tedious if we had to\nconstruct a kind of a graph representation. Remember that we have adjacency matrices,\nadjacenc"
+    },
+    "bfad60d2-0d02-433b-8f99-a4b9c58c84b7": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "y lists or we can do various things to maintain this thing. But we do not want to maintain this tree in\nthis very complicated way. Because that would be a lot of cost, just\nthis thing of finding the parent and all that we do not want to incur that cost. So"
+    },
+    "e784b164-2a6f-4ebc-a145-527e424c10a8": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": ", it turns out that because of this heap\nstructure, there is a very simple way to maintain it. So, I numbered these vertices in order, so\nthis is the 0th vertex, this the first vertex, the second vertex. So, these values are in a particular sequence,\nif I "
+    },
+    "be631433-a3d4-4990-8d10-a0371b400694": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "follow the tree from top to bottom left to right. So, I will represent this, this particular\ntree as a sequence in this order. So, this order is not a value order it is\na position order. So, I will take this, if this is my heap with\nthese 10 values h0 to h"
+    },
+    "0cb77fa7-4047-43bd-910e-4aaa9b13015e": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "9, I will represent it as a list or an array with 10 positions\nwith the values h0 to h9 in that order. So, the root will be the first one, the children\nare the root will be second and third position and so on. So, the same sequence in which I can read\noff "
+    },
+    "c9d5f6e0-ac1d-41af-9e2c-5a749b889b83": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "the tree left to right top to bottom, I will keep it in my list. Now, I need to have this operation which will\nfix the heap. So, what do I need to fix the heap? I need to look at a value and find out which\nare the two children of that value, or I need to l"
+    },
+    "8ba2c122-3fdb-4d59-a65e-25af06f52e75": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ook at a value and find out which is the\nparent of that value. So, I need to be able to go up and down these\nedges. And say that if I am at index i, what are\nthe children of index i, if I am at index j, what is the parent of index j. So, a little bit of th"
+    },
+    "bdd23cd5-3a01-4332-bc74-e47d40356ff4": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ought will tell you\nthat this is the formula that if you are at index i, then the children are 2i plus 1 and\n2i plus 2. So, we can just verify by inspection if you\nwant to convince yourself. So, if this is i, so i is equal to 2, so 2i\nplus 1 will be 5, and"
+    },
+    "b6427954-05bf-4378-9773-dc627b4e39c2": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " 2i plus 2 will be 6. So, indeed, 5 and 6 are the two children. So, this just follows you can show this by\ninduction, but it is easy to compute for yourself, or even by inspection to guess this pattern. So, if I am at index i, then it is little\nbit like we"
+    },
+    "f4dec254-fa22-4eac-a852-4bf062df014f": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " talked about array access. To find the children, I just have to compute\nthe offset, I am at a particular place. So, where are my children? My children are that much further away, there\nare 2i plus 1 and 2i plus 2 to my right, and it is at a fixed position"
+    },
+    "0a0fb015-87d5-41c5-8f78-b3b5516f0c05": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": ". So, I then I can go and look it up. So, if I want to compare and fix that when\nI am doing the delete max, if I want to compare the value here, the value here, and the value\nhere, then I know exactly which indices I must look at. And as I go down, I can k"
+    },
+    "c8e97dd8-ae50-445e-93a4-d9d1c505b77c": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "eep doing that. So, the children of i are at 2i plus 1, 2i\nplus 2i. And if you invert this, then it turns out\nthat the parents of i are at i minus 1 with integer division by 2. So, if I invert this, for example, if I take\n9, then I take 9 minus 1, and I di"
+    },
+    "03d8c71b-3e99-42c6-9840-4dddbd08635d": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "vide by 2, and I get 4. And 10 would be the next vertex. 10 minus 1 divided by 2 will be 4.5, which\nwill again be 4. Because this is the integer division by the\ndouble slash, so 2i plus 1, 2i plus 2 takes you forwards and integer division, you subtract\n1 a"
+    },
+    "548ebbaa-34f1-40b2-be5a-80e42da22ac0": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "nd then integer divided by 2 takes you upwards. So, parent and child can be left child, right\nchild and parent can be calculated as indices within this list. So, I have a very simple indexed list representation,\nI do not have to go into so many complicated"
+    },
+    "2d63fad4-ff3f-4700-b0c9-657840b4a8f5": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " graph representations or like our linked list\nusing objects and pointers, and all that we do not have to any of that, we can just keep\nit as a simple sequence, and use the positions to record the children and the parents because\nof the structured way in w"
+    },
+    "0e13c591-6060-479a-ab34-603f02bcbfe6": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "hich we grow and shrink this list. So, this is how we represent our heap. But the problem that I was alluding to earlier\nis that we need a heap. So, initially, I am giving you this collection,\nor supposing I give you the collection as an arbitrary list. So"
+    },
+    "eb976e7c-ef98-4835-902f-f9448a892efb": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": ", how will you take this arbitrary list\nand put it in the right order. So, it is like a bit like saying that I want\nto sort before I do a binary search. So, am I going to spend a lot of time building\nthis heap and only then get the benefits of this log N t"
+    },
+    "eaaaa778-5998-428a-9bc2-06eb80266813": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ime. So, I have to make sure that I can build a\nheap quickly. Fortunately, there is a very simple way to\nbuild a heap. The simple way to build a heap is say, Okay,\nI have an empty tree, I have no heap, and then I insert the first element in my list. So, I "
+    },
+    "eae4f35b-a7d0-4334-9889-ef8a13504927": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "insert v0 into my empty heap, I will\nhave a root consisting of v0. In this, I will insert v1, so I will put a\nv1 here, and then I will possibly exchange it and I will get a new heap. Then in this, I will insert v2 here, so the\nvalues I am getting from my l"
+    },
+    "f18569ab-f86c-4e97-a9c8-203062459642": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ist are in some arbitrary value order. But each time I use the heap insert, so I\nhave already built up a heap with i minus 1 values, the ith value will be inserted like,\nso much like insertion sort, keeps an inserted, a sorted list and keeps growing it, I "
+    },
+    "4ccadc4d-d840-4629-860c-99e5b77586fc": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "will\nkeep a heap and I will keep growing it. Now, we know that each insert in the eventual\nthing is log n. So, I am doing n inserts of n elements. So, it is going to be n log n in the worst\ncase. Now, n log n is okay, because finally I am\ngoing to do n ins"
+    },
+    "11f1032b-288c-4a91-a3b6-5f198527506a": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "erts and n deletes. So, it is okay that n log n is what I am going\nto pay anyway. So, it is not going to add to my cost. So, this very naive heapify as it is called,\nbuilds a heap out of a given sequence by repeatedly inserting into an empty heap. So, I st"
+    },
+    "d2878288-7099-45a7-96bf-efef7bf8c637": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "art with an empty heap put the first\nelement in, put the second element in, put the third element in and overtime I get in\norder N log N time I get the heap that I want. Now, it turns out that there is a cleverer\nway to do this. So, let me think of this as"
+    },
+    "f2651af2-ac13-4bb7-896f-193052161ea1": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " a heap. So, I have, it is not a heap but let me think\nof it as a heap. So, this is what the values would look like\nif this was interpreted as a heap. So, at some point, some of these values the\nlast few values will be at the end. So, they are the leaves. "
+    },
+    "2997870d-4a55-49e9-8d5b-98ccda8e6fc4": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "How many leaves are there? Well, the number of nodes at each level doubles. So, it turns out that if I have a complete\ntree or of level k we saw earlier that it will be 2 to 0, 2 to the 1, 2 to the 2 and\nso on and this will be 2 to the k minus 1. And remem"
+    },
+    "c6f60522-8a89-4e78-be67-0777e9593dfe": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ber the whole thing adds up to 2\nto the k minus 1. So, this is 2 to the k, so this is half of\nthis. So, half of this is 2 to the k minus 1. So, in a complete binary tree of where everything\nhas been filled up to the kth level, half the nodes are leaves. An"
+    },
+    "ba42a5d1-ff57-4fde-b614-208a64b785e9": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "d the other way of thinking about it is\nif I take an index and I compute 2i plus 1, 2i plus 2 and it takes me beyond N. If 2i plus 1 goes outside the length of the\nlist then it must be a leaf because it has no left child, it has no right. So, what value wi"
+    },
+    "312c39c2-ec9d-42d2-9728-192208cc85c4": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ll take me out of the list\nthe midpoint, at the midpoint if I double it, it will take me to the end and if I add\n1, I will go outside. So, if I calculate the midpoint of the list\nthen the entire slice from the midpoint onwards is already a leaf node. Now, "
+    },
+    "93b5065f-ffbd-47d4-bb6b-4dc6528a7cb8": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "for a leaf node the heap property is\ntrivial because for a leaf node there is nothing to do. I have to say that a leaf node is bigger than\nboth its children but leaf nodes have no children. So, in some sense half your list that you\nstart with is already a "
+    },
+    "2be1aa32-3d29-4ad8-968d-7cea3bde9c22": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "heap, if you think about it locally, the bottom most level of\nyour heap. So, I construct this thing so this part is\nalways, the bottom most level is always in itself a heap, it is only a problem with the\nhigher levels. So, then what I can do is I can go to"
+    },
+    "9cb1eaf9-3f8b-4a33-8807-109f2286c9b7": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " the\nlevel above it. So, I have 2 leaves here l1 and l2. And I have some node here and then I asked\nOh, is this node correct? And if not, I fix this part. So, I will either exchange v with l1 this\nis exactly what we did when we were doing delete max, we we"
+    },
+    "b26a6f7d-5d32-461b-b89c-0ea155c8dd33": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "re taking a vertex and comparing\nit to its two children and deciding which one of them I should exchange if any. So, I can go up 1 level and fix the heap property\ndownwards for the second last level. So, I have the last level which is okay and\nthen I look "
+    },
+    "7375d18e-e0cf-4863-a2a2-1f8ec8372b76": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "at all the nodes which are 1 level up and I can look down at their children and\nexchange. So, I have to do one swap and then this heap\nwill now be okay up to the last two levels. Because the last level is already okay and\nnow, I have explicitly fixed the s"
+    },
+    "41a3ab87-843d-4cfb-83cc-c02aedc4bfb7": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "econd last level. So, now I have to go to the third last level,\nso the level above this. But now, when I fix something here it might\nrequire me to fix something again. So, I might need to do two steps because I\nmight need to exchange something at the third"
+    },
+    "e0fcba64-0281-45fe-8e97-badebce89593": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " last to the second last and then that might\nrequire me to move something to the leaf level. So, if I fix it for the third last level,\nI have one more work and then I do it. So, I walk upwards, so at the bottom most\nthing is fixed the next one requires one"
+    },
+    "7bff7b7e-6409-48ad-bd75-5e8e80600517": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " swap, the next one request two swaps and so on. And finally at the end, I will do it for the\nroot which will require log N swaps exactly like in a delete max. So, this is a different way of doing it bottom\nup. And what have we gained? Well, every time we "
+    },
+    "726e4e59-2b3e-4892-9052-3cae301071da": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "go up as we saw when we\ndid the leaf level, we have to do 0 work, they are all already satisfying the heap property. At the next level we have to do one swap and\nthe next level we have to do two swaps, next level we have to do three swaps, but just\nlike wh"
+    },
+    "59a68c8e-09a1-4d72-8f61-dd305337ae7a": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "en we go down, we are doubling when we go up, we are halving. So, though we have to do one extra step per\nnode, the number of nodes that we have to fix in the next level above is half the number\nof nodes that we had to fix here. And remember that overall, "
+    },
+    "4e8b7596-8e62-46d6-af25-fb3cf0443eb2": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "half the nodes\nare at the leaf. So, if this whole thing has n nodes, then\nI can kind of in a complete sense at least, I can assume that N by 2 nodes are leaves. So, the first level that I have to fix has\nonly N by 4 nodes. N by 2 nodes the last half this i"
+    },
+    "094bf677-d187-4eb9-bc87-b650a4b29bc3": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "s the slice\nfrom the midpoint onwards. The half of the leaf, half of the list is\nalready fixed. So, if I count, the second last level has\nN by 4 nodes, and I need to do one swap to fix it in the worst case, I may not need to\ndo any swap, but I need to comp"
+    },
+    "a8cee4ea-eb9c-4657-902f-c28ac6fbfb4e": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "are. So, some order one work I have to do, constant,\nand I have to check its two children and swap if needed, so I have some constant, n by 4\nwork. Now I go up, I have to do two steps, I have\nto do this thing twice, but I have to root for n by 8. If I go u"
+    },
+    "31cd9113-ff67-44ad-9d1c-ed04eadc04f3": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "p one more level, I have to do it\nfor three steps, but I have root for n by 16. So, therefore, you have this is not immediate,\nwhat is leading up to, but it is saying that you are halving the number of nodes, but at\neach step, you are increasing the amount"
+    },
+    "e695e5da-de51-4f74-9c6c-7601be43dd02": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " of work by one. And finally, for one node, you will do log\nn work. So, the root node you will do log n work. So, if you add up this complicated expression,\nso this is n by 4, which is the first level, plus say 2n by 8 to the second level, plus\n3n by 16, t"
+    },
+    "2e5dac1b-4f0a-4729-afde-e9091d389c5a": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "he next level would have been say 4n by 32, and so on. If you add this up until you reach log n. It turns out that this is only overall order\nn. So, as opposed to the naive heapify, the naive\nheapify said, think of your initial heap as empty and insert eac"
+    },
+    "24184b3f-39c2-4c4d-bcf8-526ca165d1d3": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "h element into it like\ninsertion sort, except you are doing a heap insert. Here, you are saying that kind of fix the\nheap bottom up. So, just pretend that the list you are given\nhas a heap, and now go backwards from the right to the left and fix the heap p"
+    },
+    "fd6d0c31-a8d2-4643-9394-2bb0cd3fe0ba": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "roperty\nby examining the children of every node. And in this process, you might have to move\nthings, but the number of things that you have to move far reduces as you go to the\nleft. So, this heapify turns out to be linear. So, you can do a heapify in line"
+    },
+    "71f2b777-612e-4e3e-9863-2b75f4eb5204": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ar term. So, what we have seen therefore is that if\nyou draw a heap like this, a max heap, then you can do insert in log N time, you can do\ndelete max and log N time. So, of course, over N operations, this means\nyou can do N log N time. And if you do that,"
+    },
+    "1e76420c-8dca-4d43-95eb-4ec22ff7efa7": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": " second heapify that we\nsaw, the one which does bottom up, starting from leaves and going up, you can build a\nheap also in order n time. So, order n times set up an and order log\nN time per operation is what heap gives you. So, this gives you a priority qu"
+    },
+    "cd907d38-04ea-422f-8d63-e2a4e6b9876e": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "eue implementation,\nwhich is N log N time over N operations. So, at the moment, it is not yet enough for\nus to fix our problem with Dijkstra algorithm and Prim's algorithm. But we have come really far, and we will see\nhow to take this and implement those t"
+    },
+    "cce5d299-55cb-4664-8826-5116f2fd5a66": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "hings. So, one of the things that we have mentioned\nis that in Dijkstra algorithm and Prim's algorithm, we are looking the opposite way, we are not\ntrying to delete the maximum but the minimum, we are trying to pick the smallest node to\nadd in terms of dis"
+    },
+    "6b6ccc72-6377-4347-aad1-b0cb18dea131": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "tance from the current tree or the current set of visited vertices. So, what we need is a min heap not a max heap. So, a min heap is just dual. So, now it says that this is smaller than\nor equal to, so every node is smaller than or equal to, rather than bi"
+    },
+    "cef3c5e3-dd37-4e6d-b15d-6e73f66b8fba": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "gger than or equal\nto. So, the inversion in the value so every node\nis smaller than its children. So, the smallest value is at the top. And the corresponding operation that you need\nis to delete the minimum rather than the maximum. That is what we need in "
+    },
+    "78c41d91-60a3-49e0-b55e-93eb97286db9": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "the Dijkstra algorithm. We need to delete the minimum rather than\nthe maximum. So, why is it that we cannot use a heap directly? The problem is that Dijkstra algorithm and\nPrim s Algorithm both have a property which we have not used, there is an operation "
+    },
+    "102c4262-bda6-4f34-ad28-5338a1d6c28c": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "on\na heap which we have to perform, which we have not done, which is sometimes when we\nvisit a vertex, we have to update the distances of all its neighbours. So, they will be sitting inside this heap. And those will not be inserts, but update. So, I might "
+    },
+    "d11922c3-fc11-4f44-91e9-35c363bd0e19": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "have to say take 47 and reduce\nit to 44. It has a new distance. So, Dijkstra s algorithm had discovered that\nthe shortest path to this unvisited vertex has now shrunk from 47 to 44. This one has shrunk from 61 to 32. And in this process, we might have to f"
+    },
+    "58e952df-60e6-479c-9f10-e3a13ad0f08f": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ix\nthe heap in a different way. So, in addition to this, delete, minimum,\nand insert, we also had this update, take a position in the heap and update it, and\nwe need to make sure that that can also be done efficiently before we can claim that\nheaps can sol"
+    },
+    "8404eb33-a040-4bd6-8515-f34f0b6d13ec": {
+        "content_id": 48,
+        "course_name": "PDSA",
+        "title": "Heaps",
+        "week": 6,
+        "chunk": "ve our problem with Dijkstra s algorithm and Prim s Algorithm complexity."
+    }
+}

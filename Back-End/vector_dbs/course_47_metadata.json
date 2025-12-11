@@ -1,0 +1,548 @@
+{
+    "340fc869-cf45-42ce-b4e5-d5cbed93bc47": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "So, union find is one data structure which arose\u00a0\u00a0 out of a need to optimize one of our graph\u00a0\nalgorithms, namely the minimum cost spanning tree.\u00a0\u00a0 The other algorithm which we need\u00a0\nto optimize in the graph thing is\u00a0\u00a0 Prim's algorithm and also Dijkstra al"
+    },
+    "783c4a65-3247-42b2-a1f4-69cec67df8ab": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "gorithm.\u00a0\nAnd there we had the problem that at every step\u00a0\u00a0 in the iteration, when we were trying to extend\u00a0\nthe shortest path, or grow the smallest tree,\u00a0\u00a0 we had to scan the vertices which are not been\u00a0\nadded and find the smallest one to add. \n\u00a0 So, this"
+    },
+    "e7d9e277-2aee-4404-902b-856a2e4b45de": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " operation turned out to be expensive, we\u00a0\nhad to go through a collection of items and find\u00a0\u00a0 the smallest one. And there was no easy way to do\u00a0\nthis, because those items were being reduced in\u00a0\u00a0 somewhat unpredictable way. So, we will not be\u00a0\nable to keep "
+    },
+    "12d63318-bd43-4cec-88ff-b7fa49034bf5": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "them in some meaningful sorted list.\u00a0\u00a0 So, we had to keep scanning all of them to\u00a0\nfind the minimum. And this was again giving\u00a0\u00a0 us an order n worst case per loop and giving us\u00a0\nN squared overall. So, now what we will look at\u00a0\u00a0 is a data structure to handl"
+    },
+    "c9e11d61-93f5-45ab-bbd0-0e0192df30b2": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "e that problem.\u00a0\nSo, abstractly, although it does not seem\u00a0\u00a0 to be immediately relevant, this is\u00a0\nwhat is called a priority queue.\n\u00a0 So, let us look at an independent motivation\u00a0\nfor priority queues. So, priorities happen all\u00a0\u00a0 over the place. So, for inst"
+    },
+    "ff163383-c236-4409-8077-4fdc9e0910bf": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ance, in computer\u00a0\nin an operating system, this is something which\u00a0\u00a0 is routinely done, which is that there are a\u00a0\nnumber of tasks which are running. But if there\u00a0\u00a0 is something very high priority, which comes\u00a0\nthen whatever, is running has to be suspended"
+    },
+    "99e49a7c-e163-459c-a65d-1568577a8f0c": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": ",\u00a0\u00a0 something else has to be taken in space. \nSo, this is done by something called a job\u00a0\u00a0 scheduler. So, a job scheduler keeps a list of\u00a0\ntasks which are running, and then it has to decide\u00a0\u00a0 at each unit when it is allowed to switch tasks,\u00a0\nwhich one to s"
+    },
+    "caf16640-0b6a-4f28-8ca2-3f1db38c62db": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "chedule next. So, a job scheduler\u00a0\u00a0 maintains his list of pending jobs. Jobs are yet\u00a0\nto be done, and each of them has a priority. \n\u00a0 So, the rule that you would typically\u00a0\nlike to guarantee because the priority is\u00a0\u00a0 supposed to indicate some preference to"
+    },
+    "c4278944-5cdb-44cb-875b-4fa4bc39851d": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " do\u00a0\nit first. So, when the processor is free,\u00a0\u00a0 the scheduler should pick out a job, which has\u00a0\nhighest priority and schedule it for some time.\u00a0\u00a0 So, the question is. How can you do this\u00a0\nefficiently? Because new jobs keep coming. \n\u00a0 This is not a static,"
+    },
+    "476bdfaa-3827-4cc1-b823-3e3fbe13e992": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " see, if it was a static\u00a0\nthing, then you can sort it, you can sort it\u00a0\u00a0 by priority once and for all, and then move\u00a0\nfrom highest priority to lowest priority.\u00a0\u00a0 But the problem is that this is a dynamic\u00a0\nthing. So, as people are using the computer,\u00a0\u00a0 they"
+    },
+    "57f6a7f1-12a5-41af-a2ab-42ad1d1f11e6": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " will start new tasks. And these new tasks\u00a0\nmight have higher priority than old tasks. \n\u00a0 So, new jobs may join the list at any time.\u00a0\nSo, the scheduler has to maintain this\u00a0\u00a0 growing and shrinking list, every time\u00a0\nit takes something out of the list,\u00a0\u00a0 it"
+    },
+    "4ed7840f-ace1-42de-918a-8d83688eb703": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " removes a job of high priority and executes\u00a0\nit something else may come which will disturb the\u00a0\u00a0 priority order of the remaining things. \nIt is a good analogy of this in a kind of\u00a0\u00a0 human context, is when you go to say a very\u00a0\ncrowded temple. So, there ar"
+    },
+    "7902f5ea-1469-4f26-89f1-fec3492519dd": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "e people who have\u00a0\u00a0 bought a ticket and they are standing in line. But\u00a0\nthen every now and then a few VIPs will come who\u00a0\u00a0 will come and disturb the queue. So, these are the\u00a0\nhigh priority people and whoever is managing this\u00a0\u00a0 process has to accommodate th"
+    },
+    "c3a8c755-9e50-4158-a66e-2893d8cbb55e": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ese people without\u00a0\nof course upsetting the other people too much. \n\u00a0 So, this is this priority. So, it is not\u00a0\nreally a queue, you are standing in line,\u00a0\u00a0 but your place in line could be taken\u00a0\nby somebody who works come in with some\u00a0\u00a0 influence some VIP "
+    },
+    "d991cc59-ea8a-4e33-99f0-27c4c1e1de2e": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "privileges. So, with\u00a0\npriority, they can overtake you. So,\u00a0\u00a0 that is why a queue normally is you will not stand\u00a0\nin a line, when your term comes, you get served,\u00a0\u00a0 in a priority queue you can get jumped. Somebody\u00a0\ncan come and bypass you because they have "
+    },
+    "ecb210ed-24c5-4da3-84c4-f7c9522e3102": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "higher\u00a0\u00a0 priority. And the question is, if this is the\u00a0\ndesired outcome, then how do you manage it.\n\u00a0 So, abstractly in a priority queue, we\u00a0\nhave to maintain a collection of items.\u00a0\u00a0 It is not a queue in the normal sense. So, we\u00a0\ncannot guarantee that, it"
+    },
+    "051ff0ac-49f6-4dda-8e17-9f7bddaea8d9": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " is a list or a sequence,\u00a0\u00a0 we have to maintain it in whatever\u00a0\nway we want. But the two operations\u00a0\u00a0 that we primarily have to support one is to of\u00a0\ncourse, extract the highest priority thing. \n\u00a0 So, we will call it delete max. So delete max\u00a0\nsays find th"
+    },
+    "4ae9e34c-a2d1-46a6-bffb-19da18496f7e": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "e maximum priority item in this set,\u00a0\u00a0 and pull it out. That is the one to process\u00a0\nnext. That is the next devotee who gets to\u00a0\u00a0 go and do darshan in the temple. This is the\u00a0\nnext job that gets scheduled on a processor. So,\u00a0\u00a0 now it is removed from this co"
+    },
+    "8a38a003-d2fa-4c8d-87bb-ff4ecc8f090a": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "llection. So\u00a0\nthat is the simplest thing that we can do. \n\u00a0 But this is dynamic. This is not a once and for\u00a0\nall thing. Otherwise, you could just sort it\u00a0\u00a0 and be done with it. So, there is also an insert\u00a0\noperation. So, periodically new people will come\u00a0\u00a0"
+    },
+    "6299bade-265d-4e26-92af-835481b381d9": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " for darshan and they will have their own priority.\u00a0\nSome of them would have some local official\u00a0\u00a0 vouching for them. Some of them will\u00a0\nbe coming from some, some international\u00a0\u00a0 dignitary some of them will just be aam janta. \nSo, then each person will hav"
+    },
+    "a1c0b350-0a50-4b6a-8ba9-6a54093a2707": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "e his own priority.\u00a0\u00a0 So, each job will have its own priority. So,\u00a0\nyou have an insert and you have delete max,\u00a0\u00a0 and you have to balance the two so that you\u00a0\ndo everything efficiently. That is the whole\u00a0\u00a0 problem that we are facing with Dijkstra\u00a0\nalgorith"
+    },
+    "d0324952-8bc0-4ac8-bfb2-96e7f09f7aad": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "m, that as the distances change,\u00a0\u00a0 how do we keep track of the shortest distance. \nSo, there is not maximum, but minimum,\u00a0\u00a0 but it is doable as you can see\u00a0\nit removing the smallest priority,\u00a0\u00a0 or removing the largest priority or just the same\u00a0\nproblem, yo"
+    },
+    "fcc3e3f9-e155-4b5f-887e-89439e455346": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "u are just reversing the comparison.\n\u00a0 So, this is what we want to implement. We want\u00a0\nto implement, delete max and insert and what we\u00a0\u00a0 were doing in Dijkstra algorithm, was naively\u00a0\nmaintaining just this array or list of vertices\u00a0\u00a0 with their current dis"
+    },
+    "9c0e5b83-c690-41fe-adc4-cf087b45e56f": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "tances. So, this was an\u00a0\nunsorted list. So, in an unsorted list, when we\u00a0\u00a0 discovered a new vertex, to which we have\u00a0\nfound a path, we can just update its thing. \n\u00a0 So, it constant time we can insert a vertex\u00a0\ninto this list. But when we want to delete max"
+    },
+    "16aae5f8-4911-4dc2-b44a-454dea375ebd": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": ",\u00a0\u00a0 we have to scan all the unvisited vertices to\u00a0\nfind the smallest one. So, remember, max and min\u00a0\u00a0 are dual. So, in this similar way if I want to\u00a0\nfind the maximum priority in a list, I have to\u00a0\u00a0 go through, the max algorithm, you have set the\u00a0\nfirst on"
+    },
+    "2070a4da-7adb-45c4-b18f-143decbd4762": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "e to be max and you keep updating. \n\u00a0 But there is if it is not sorted, you have no\u00a0\nguarantee where the max is, so you have to look\u00a0\u00a0 through the whole list. So, max is order n.\u00a0\nBut insert, you can just put it anywhere,\u00a0\u00a0 you can put it at end of the lis"
+    },
+    "351c69d1-4988-4245-bec4-a41fb52a3660": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "t, and you are\u00a0\ndone. So, insert is order one. So, of course,\u00a0\u00a0 if this is a static list, as we said, you could\u00a0\nbe clever and sorted once and for all. \n\u00a0 So, if you maintain a sorted list, then delete max\u00a0\nis easy, because the delete max is at the end. So"
+    },
+    "fbec2f94-1fe2-4f79-a4eb-8cba0146e4da": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": ",\u00a0\u00a0 remember, if you are using a Python list. We saw\u00a0\nthat Python lists you can delete at the end better\u00a0\u00a0 than deleting the beginning because they are\u00a0\narrays with an end pointer. So let us say we\u00a0\u00a0 keep it in ascending order then the last element\u00a0\nis my "
+    },
+    "074d1352-0831-4a02-8b41-21f2126a87ab": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "max, so I just pop it constant time. \n\u00a0 But if I insert it, now we go\u00a0\nback to our insertion sort,\u00a0\u00a0 you have to find the place to insert. So, you\u00a0\nmight have to shift a lot of elements. So,\u00a0\u00a0 you have to scan and find and shift. So, whether\u00a0\nyou are using"
+    },
+    "95e201f3-c8ad-4d55-85b5-b1a0e5b729cf": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " a random access or a list, you have\u00a0\u00a0 to spend order n time. So, you trade off one for\u00a0\nthe other. If it is unsorted, adding is easy,\u00a0\u00a0 but finding maximum is hard. If it is sorted,\u00a0\nfinding maximum is easy. But adding takes time.\u00a0\u00a0 So, this muralist tell"
+    },
+    "a189796b-c149-42ce-85fc-21bf923e82da": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "s us that with kind of one\u00a0\ndimensional implementation, in some sense as a\u00a0\u00a0 list or an array, we cannot avoid this. \nBecause these are the two extremes anything,\u00a0\u00a0 there is no other thing that you can do with\u00a0\na one dimensional list in some sense. So,\u00a0\u00a0 e"
+    },
+    "9f4d6344-0f8f-4e26-88e9-0de364e57129": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ither you can keep it sorted or unsorted. And\u00a0\none or the other will become expensive. So if I am\u00a0\u00a0 thinking in terms of n elements. So, in the temple\u00a0\nin the morning, the temple is empty n people come\u00a0\u00a0 and n people leave, by the end of the day. \nSo, I ha"
+    },
+    "34a19246-60b9-4355-addf-b158e8cc129c": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ve to process n inserts and n delete\u00a0\u00a0 maxes. In the worst case, I am going to end\u00a0\nup doing n squared time, because either the\u00a0\u00a0 insert is going to be order n time, or the\u00a0\ndelete is going to be order n time. So,\u00a0\u00a0 we want to do better than this. So, sinc"
+    },
+    "3da43726-815b-485d-8740-ce3accb45486": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "e we\u00a0\nhave exhausted the possibilities of doing this\u00a0\u00a0 in one dimension, using a list or an array, the\u00a0\nnatural option is to move to two dimensions. \n\u00a0 So, if we move to two dimensions, then we have\u00a0\nto remember this is why I said at the beginning\u00a0\u00a0 that t"
+    },
+    "d67eb3db-d03b-428b-b378-931efde0f24c": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "his is not necessarily a sequence, I am\u00a0\nnot claiming this sequence is a collection,\u00a0\u00a0 it is up to you to maintain this collection\u00a0\nin whatever way it is best for you to find\u00a0\u00a0 the maximum and deleted. \nSo, I am going to keep it as a\u00a0\u00a0 matrix in some sense"
+    },
+    "c102e538-03c6-44ee-a4a9-5314d97e083f": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": ", as a two dimensional grid.\u00a0\nSo, just for convenience, I am going to assume,\u00a0\u00a0 we will come back to this at the\u00a0\nend, I am going to assume that I know\u00a0\u00a0 totally how many things are going to come I\u00a0\nhave some estimate that I am going to do N\u00a0\u00a0 of these ope"
+    },
+    "1492d979-75f3-4252-a992-632d7da2c820": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "rations over a period of time. \nSo, given that N so in this case, let us say N\u00a0\u00a0 is 25, what I do is I keep a square, which\u00a0\nis root N by root N. So, in case N is 25,\u00a0\u00a0 this is five by five. So, I have a square\u00a0\nmatrix where I can keep track of these.\u00a0\u00a0 So"
+    },
+    "5e19854d-0f46-4d9d-a935-4d279fa4d825": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": ", remember these are all have to be identified\u00a0\nsomewhere. So, every person who is in the queue\u00a0\u00a0 or every job that is waiting to be processed\u00a0\nhas some identity and has some priority. \n\u00a0 So, I need to be able to pick out that\u00a0\nindividual element which has"
+    },
+    "c54c277c-f636-4698-b7d4-a64e2f5afde0": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " the highest\u00a0\u00a0 priority. So I need to store it somewhere.\u00a0\nSo, these are the values. So, in this case,\u00a0\u00a0 I am collapsing the two so the value is the\u00a0\npriority. So, 17 has a lower priority than 43,\u00a0\u00a0 for example. So, I am just using the values\u00a0\nthemselves a"
+    },
+    "06550761-c9dd-4b8f-b0eb-08402cb929b6": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "s the priorities in this thing. \n\u00a0 And the priorities need not be distinct.\u00a0\nSo, I think I am not very sure if there are\u00a0\u00a0 duplicates here, but there is no\u00a0\nreason why priority should be distinct.\u00a0\u00a0 So, there could be more than one highest\u00a0\npriority thing."
+    },
+    "a1b58645-a563-41e8-b420-9c41729c1d6a": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " And in that case,\u00a0\u00a0 delete max just says choose one. So, there is no\u00a0\nguarantee that the priorities are distinct. \n\u00a0 So, there is another pattern to this, which is\u00a0\nthat every row that I am storing increases in\u00a0\u00a0 priority from left to right. So, there is "
+    },
+    "ce50b266-0f75-4ea0-92d0-582b5df6cd7a": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "it looks\u00a0\nsort of random, but it is not completely random.\u00a0\u00a0 So, in the sorted array implementation, the\u00a0\nentire set was kept sorted. Now I am keeping these\u00a0\u00a0 sort of sorted segments of size root N. \nSo, the first row is sorted, second row sorted.\u00a0\u00a0 And yo"
+    },
+    "0304e631-aaf1-4d54-86bb-e9da89999336": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "u can see that they are of different\u00a0\nlengths. So, there is no particular\u00a0\u00a0 order to the lengths of these arrays. So, I\u00a0\nam not, filling up this thing necessarily,\u00a0\u00a0 and keeping it filled from top to bottom. So, but\u00a0\nin every row, it is filled from left to"
+    },
+    "461ec599-15d1-4284-9884-eac5c9af38df": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " right. So,\u00a0\u00a0 I will not put this 20 over here\u00a0\nand leave a gap in the middle, but\u00a0\u00a0 the rows are of different lengths. \nSo, each row is sorted, and I have square\u00a0\u00a0 root of N rows, and each row has square root of N\u00a0\nelement. So, this is my proposed two dim"
+    },
+    "7d0fffce-4e18-4966-aba7-a7e55ffca70e": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ensional\u00a0\u00a0 way of storing the list or the sequence of\u00a0\nvalues or the collection of values which are\u00a0\u00a0 yet to be processed. So, now given this, I have\u00a0\nto tell you how to do insert and delete max. \n\u00a0 So, it turns out that because these\u00a0\nrows can be of diffe"
+    },
+    "717fba58-7be4-4848-8a47-040333a86685": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "rent capacities,\u00a0\u00a0 in terms of how many elements are there, it is\u00a0\nbetter for me to keep track of that separately.\u00a0\u00a0 So, I will keep track of a separate column,\u00a0\nwhich tells me how many elements are\u00a0\u00a0 currently stored in each row of my matrix. \nSo, remembe"
+    },
+    "dbd21794-cc01-45ea-b0ee-5627963071ef": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "r, in this case is five by five,\u00a0\u00a0 so the maximum that can be stored in a matrix,\u00a0\nrow is five, but I could have fewer. So,\u00a0\u00a0 here there are five and five. But here there\u00a0\nare only three elements here there are four\u00a0\u00a0 elements here that are two elements. S"
+    },
+    "c9ee6e81-3392-4c43-bd7d-887af12508f4": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "o,\u00a0\nthat is what this red column is saying. \n\u00a0 So, I keep track of the size of each row. Now I\u00a0\nwant to insert. So, where would I insert? Well,\u00a0\u00a0 I will insert it in the first place that I\u00a0\ncan insert it. So, I just walked down this,\u00a0\u00a0 this matrix, and I t"
+    },
+    "0beb7665-3677-4299-b26b-26de0d28c11a": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ried to find the\u00a0\nfirst row in which there is space.\u00a0\u00a0 So, I insert, so I come down here, and I\u00a0\nwill find that the third row has space. \n\u00a0 So, whatever I want to insert, next we will go\u00a0\ninto the third row. And insert means in that row,\u00a0\u00a0 I have to mainta"
+    },
+    "6ab3a3d1-8f53-4540-8037-959798bbac5a": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "in this ascending order. So,\u00a0\ndepending on the value that I insert, its position\u00a0\u00a0 in this row will depend on what it is. \nSo, let us do a concrete example just to\u00a0\u00a0 illustrate so supposing we want to insert the\u00a0\nvalue 15. So, what we will do is we will fi"
+    },
+    "9fafecf9-3f5a-4528-8c08-f8e137cfd1a8": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "rst\u00a0\u00a0 look at the first row. So, how do we know that\u00a0\nit cannot fit, we do not have to scan the row,\u00a0\u00a0 we just have to look at the size, the size tells\u00a0\nus that this row is full. So, I do not have to\u00a0\u00a0 look at this row element by element I already\u00a0\nknow it"
+    },
+    "f633a5e3-f28a-4518-a832-7e0052c0af3e": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " is full. So, I move to the next row.\u00a0\u00a0 Again, the size tells us that this row is\u00a0\nfull. So, I move to the next row. But I am\u00a0\u00a0 just scanning the rows from top to bottom.\nSo, I now find that this row has space.\u00a0\u00a0 So, since this row has space, I will if I s"
+    },
+    "a4148694-401f-434e-9aa8-c26376b5af6f": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "tart\u00a0\ninserting from the left, I am guaranteed that\u00a0\u00a0 I will be able to accommodate 15. So, I\u00a0\ninsert from the left and I accommodated it.\u00a0\u00a0 So, now 15 is inside this grid in a place\u00a0\nwhich is appropriate given its value. \n\u00a0 It is in a row in ascending ord"
+    },
+    "74e1dcca-c748-4446-b6fe-968abf20cf1b": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "er in one of\u00a0\nthe rows. And the other thing now I have to\u00a0\u00a0 do is I have to update the size because this row\u00a0\nused to have three elements. That is what this\u00a0\u00a0 three is saying. But it no longer has three\u00a0\nelements. So, when I insert into that row,\u00a0\u00a0 I also "
+    },
+    "95b74ce7-d0a9-4d89-b013-7ab76b2d5098": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "have to update the size to be four. \nSo, this is my insert operation,\u00a0\u00a0 walk down looking at the size, try to find which\u00a0\nrow the first row from the top, which has space\u00a0\u00a0 then apply our usual insert the same insert\u00a0\nthat we use for insertion sort, insert "
+    },
+    "52ca4777-c5f9-4bbb-a2a8-e4e925741335": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "it\u00a0\u00a0 into the correct position and update the size.\u00a0\nSo, how much time does it take? Well, remember\u00a0\u00a0 that this is root N. And this is root N. \nSo, I am doing a scan from top to bottom.\u00a0\u00a0 Remember, I have assumed that I always have\u00a0\nspace. So, I have creat"
+    },
+    "d387dea4-dbfc-4abc-b02e-2bea91f5a8de": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ed a large N of square\u00a0\u00a0 that I have space for all the N things which\u00a0\ncould ever be there simultaneously. So,\u00a0\u00a0 there is always going to be at least one row\u00a0\nwhich has space, it might be the last row in\u00a0\u00a0 which case I will scan all the rows. \nSo, I will h"
+    },
+    "2cbb8565-49dc-490b-aaa9-9e9454015898": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ave to scan this entire column\u00a0\u00a0 in order to find the first row which has\u00a0\nspace. So, that is going to take me root\u00a0\u00a0 N time. Because I go from top to bottom in\u00a0\na list (())(13:52) to 10. And then having\u00a0\u00a0 found it as we remember from insertions or to\u00a0\nins"
+    },
+    "212e5cc3-b62a-4db0-b723-f80f007cbad6": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ert something in a row of size k, I will\u00a0\u00a0 spend order k time because I may have to walk the\u00a0\nentire list to find the place to put it in. \n\u00a0 So, this is also going to be order root N.\u00a0\nSo, I have ordered root N to find the row,\u00a0\u00a0 order root N to insert a t"
+    },
+    "fb6c2c52-121c-43d9-a3a4-8818afe44f17": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "otally is\u00a0\ngoing to take me order root N time. So,\u00a0\u00a0 this is my insert. Now, what about delete max?\nSo, delete max. It does not take an argument\u00a0\u00a0 it just says find a maximum limit and\u00a0\nreturn it. But what do we know. Now,\u00a0\u00a0 we have not used so far the fac"
+    },
+    "0b63e52a-56b3-4c5d-abd5-86be1110766e": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "t that these\u00a0\nrows are sorted in ascending order. So,\u00a0\u00a0 remember that when we were looking at a single\u00a0\nlist, we said the sorted list is good. Because\u00a0\u00a0 the maximum is always at one end of the list. \nWell here is not at one end of the list,\u00a0\u00a0 but it is at "
+    },
+    "88d0194e-b5c9-445c-9fe6-ec963abb0d79": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "one end of one of the rows. So we\u00a0\nknow for sure that for each row the maximum is\u00a0\u00a0 on the right most elements if I take the maximum\u00a0\nof those is going to give me the overall maximum.\u00a0\u00a0 So, the maximum in each row is a last element.\u00a0\nAnd what is the last e"
+    },
+    "99e8d326-3211-4c60-90a7-62b00a82958e": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "lement because remember\u00a0\u00a0 the position of the last element is different\u00a0\nin different rows, well this tells me. \n\u00a0 This tells me that the last element is the fifth\u00a0\nelement. This tells me the last and the fourth\u00a0\u00a0 element and so on. So, I can go and find t"
+    },
+    "634409e8-06ad-41b8-8d38-efbf6c10c9d2": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "he last\u00a0\nelement by looking at the size of the element\u00a0\u00a0 size of that row. So, I can quickly\u00a0\nfind out the last position in each\u00a0\u00a0 of the rows, which has a value. \nAnd now I have to take among these so\u00a0\u00a0 is the maximum of these maximums, the overall\u00a0\nmaxim"
+    },
+    "f80de494-e13c-48f3-8e74-9423995b76b3": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "um will have to be the maximum in its row,\u00a0\u00a0 it will be at the rightmost endpoint. And it\u00a0\nwill be the maximum among all the rightmost\u00a0\u00a0 endpoints. So, I will have to walk down this\u00a0\nlist of these five numbers. So, these are the\u00a0\u00a0 five numbers that now I h"
+    },
+    "2c3831a7-744f-4c90-8790-89bb48879467": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ave to walk down. \nSo, I have to walk down this list of five numbers\u00a0\u00a0 and find the maximum. So, I will do that. And\u00a0\nI find that the maximum amongst these is 67\u00a0\u00a0 currently it is not second row. So, I have to\u00a0\ndelete it. So, I will ever take this and pull"
+    },
+    "23802c88-9b97-4c2c-a2e6-7c9d89aafd60": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "\u00a0\u00a0 it out. So, I pull it out and then when I\u00a0\npull it out, I have to update this sides,\u00a0\u00a0 the size used to be five and now I have to\u00a0\nmake it 4. So, find the maximum by looking\u00a0\u00a0 at the rightmost elements and all the rows and\u00a0\nhaving found it remove it and"
+    },
+    "f13b2149-4a4a-4ae8-a9ab-5a6e061be5f4": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " update the size.\n\u00a0 So, how long does this take? Well again it takes\u00a0\norder root N time because this first step of\u00a0\u00a0 finding this maximum I need to construct this\u00a0\nlist of size root N and find a maximum minute\u00a0\u00a0 which is a root N operation.  \nBecause I hav"
+    },
+    "7cb9c245-75c8-4fe6-94cb-b7dae8326c4f": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "e to do one scan\u00a0\u00a0 and then in this case, having found it the delete\u00a0\nis a constant operation I just have to remove it\u00a0\u00a0 from the array I have to and removing it from\u00a0\nthe array also is technically I have to return\u00a0\u00a0 the value I do not have to remove it, I"
+    },
+    "eb9e6746-fde5-4132-aa49-355b565515c9": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " just have\u00a0\nto logically remove it by saying that the row is\u00a0\u00a0 one level shorter. So, do not look at the fifth\u00a0\nelement now look only up to the fourth element.\u00a0\u00a0 So, deletion of the element from the array is\u00a0\norder one but totally delete max root N. \n\u00a0 So,"
+    },
+    "8b38b88c-d46d-440f-bbf4-7c4f93767dc1": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " what we have now is that if we move from\u00a0\nthis one dimensional list of size N to a two\u00a0\u00a0 dimensional array of root N by root N, then we\u00a0\ntrade off the two, in that original thing one\u00a0\u00a0 was order one either insert was constant time and\u00a0\ndelete max was line"
+    },
+    "26e446cb-ca89-4e90-ad8d-ed7fce47888e": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ar time or insert was linear\u00a0\u00a0 time and delete max was constant time and that\u00a0\nwas giving me in the worst case N into N. \n\u00a0 Now instead I have made them both come close\u00a0\nto each other. So, I have pushed 1 2 square\u00a0\u00a0 root of N. But I brought down the other "
+    },
+    "1b133fe0-f9ef-4a3b-865b-0a269fdf033e": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "to\u00a0\nsquare root of N. So, both insert and delete\u00a0\u00a0 max are now square root of N. So, now if I\u00a0\ndo this N times I take an empty collection\u00a0\u00a0 and I insert into it N times and I remove from\u00a0\nit N times then I will do N root N work for\u00a0\u00a0 insertion, N root N wo"
+    },
+    "66c2dcd3-40ef-48b7-88d7-e446726078a8": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "rk for the deletion and\u00a0\nso, the total time is going to be N root N. \n\u00a0 So, I have come down from N squared to N\u00a0\nsquare root of N. So, this is a saving from\u00a0\u00a0 N to the power 2. I have come to N to the\u00a0\npower 3 by 2. So, this is certainly saving.\u00a0\u00a0 Now tur"
+    },
+    "a4068371-5f25-40ca-9f02-c48236d57f63": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "ns out that we can do much better than\u00a0\nthis, much better in the sense that in our\u00a0\u00a0 asymptotic complexity sense we can come down from\u00a0\nthe square root of N to logarithmic time. \n\u00a0 So, we need a slightly more sophisticated two\u00a0\ndimensional structure which "
+    },
+    "c30e8ea9-b4c8-4dc7-9c17-5e883af7de0d": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": "is a binary tree\u00a0\u00a0 and a specific type of binary tree which we will\u00a0\nsee which is called a heap. And this heap will\u00a0\u00a0 have so here I have this height is square root of\u00a0\nN this binary tree height will be logarithmic. \n\u00a0 So, that will be the way this N log N"
+    },
+    "763870f4-6dca-4ec1-9fcb-d7b4763fe264": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " comes\u00a0\nfrom and all our operations will turn out to be\u00a0\u00a0 proportional to the height of the tree. And as\u00a0\na result insert will become logarithmic delete\u00a0\u00a0 max will become logarithmic. So, over N such\u00a0\noperations instead of doing N times root of N,\u00a0\u00a0 I will"
+    },
+    "fbf059f4-23e0-4c46-8f36-5fff596f16f9": {
+        "content_id": 47,
+        "course_name": "PDSA",
+        "title": "Priority Queues",
+        "week": 6,
+        "chunk": " be doing N times log of N.\u00a0\nSo this is what we will see next."
+    }
+}

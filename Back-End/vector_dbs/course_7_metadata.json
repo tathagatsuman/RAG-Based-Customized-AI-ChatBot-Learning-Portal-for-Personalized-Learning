@@ -1,0 +1,520 @@
+{
+    "aece2c73-19f7-4200-9dd1-98788582b87a": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "So, continuing with our discussion of\u00a0\nslightly more exotic aspects of Python,\u00a0\u00a0 let us look at classes and objects. \n\u00a0 So, most often classes and objects arise in the\u00a0\ncontext of what are called abstract data types.\u00a0\u00a0 So, we have data types as we know, in"
+    },
+    "7939fd59-c6f9-44f1-b0fd-2a4227aee9db": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " Python,\u00a0\nwe have lists, we have dictionaries. And when\u00a0\u00a0 we have a data type, we have certain permitted\u00a0\noperations on these. For a list, for example,\u00a0\u00a0 you can append to it, or you can combine two\u00a0\nlists using plus you can concatenate them,\u00a0\u00a0 with a dict"
+    },
+    "4138f8b8-6beb-4ad7-9154-4b4ddee4fd3d": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ionary, you can create a new entry\u00a0\nwith the key, you can update it, and so on. \n\u00a0 You can get X, extract all the keys of a\u00a0\ndictionary, extract all the values and so on.\u00a0\u00a0 Now, sometimes we need to create our own data\u00a0\ntype. And this data type will typica"
+    },
+    "6e899fe1-7373-4390-b20e-6c1c116c0e2c": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "lly have\u00a0\u00a0 two parts; it will have some information\u00a0\nthat is stored in it. But there may also\u00a0\u00a0 be some discipline or some required way of\u00a0\ncontrolling access to this information. \n\u00a0 So, a typical example that most people use for\u00a0\nthis is a stack. So, what"
+    },
+    "6143e421-2949-4a7c-b86b-a2318b3e2750": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " is a stack? A stack is\u00a0\u00a0 what you think in English, it is just a pile of\u00a0\nthings come one on top of the other. Now, if I\u00a0\u00a0 have a stack of books, for example, in a table,\u00a0\nwhat can I do? I can add one more to the top of\u00a0\u00a0 the stack. So, this is what is ca"
+    },
+    "143c287a-8dfa-4377-b7b0-b76237b3223d": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "lled in stack\u00a0\nterminal, you push , or I can take the top most\u00a0\u00a0 book of the stack, and this is called a pop . \nNow, I cannot take out this book, until I take\u00a0\u00a0 out the box on top of it. Otherwise, things\u00a0\nwill fall down haphazardly. So, the idea of\u00a0\u00a0 a st"
+    },
+    "ba85c5cc-fdda-48dc-a7a1-f79c96f42dd7": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ack is that I have a sequence of values.\u00a0\nSo, x1, x2 up to say some xn, and when I push\u00a0\u00a0 I add a value on the end, and when I pop,\u00a0\nI can only take out the last value. Now I\u00a0\u00a0 may represent this information as a list. \nAnd if represented as a list, Python"
+    },
+    "4ea778a5-11a5-4c6b-a96a-ce2f1e6b9776": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " will allow\u00a0\u00a0 me to take out or update, say the second element\u00a0\nin this list. But as a stack, that is not allowed.\u00a0\u00a0 If I do not respect this last in first out thing\u00a0\nas it is called, then I cannot guarantee that the\u00a0\u00a0 information that I stored has whateve"
+    },
+    "e657927f-2a06-4f1b-854f-ff73217561ed": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "r property I\u00a0\nwould like to associate with it being a stack. \n\u00a0 So what we want to do is have an implementation\u00a0\nof a stack, a way of storing the information and\u00a0\u00a0 a way of implementing this push and pop. But this\u00a0\nimplementation should only be manipulated"
+    },
+    "80af1ecd-bffa-46c0-bab7-95be4a97ba4b": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " using\u00a0\u00a0 this public specification, I can only use pop and\u00a0\npush, I cannot start inserting into the stack or\u00a0\u00a0 extracting a value from the stack or updating a\u00a0\nvalue just because I know it is a list. So, so the\u00a0\u00a0 implementation should be private and you sh"
+    },
+    "28daaf33-e3ab-44b2-afb2-0fe977101a8f": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ould\u00a0\nonly use the publicly allowed functions on it. \n\u00a0 So, this is what an abstract data type essentially\u00a0\nmeans. So, one of the ways of implementing\u00a0\u00a0 abstract data types is to use this idea of a\u00a0\nclass. So, a class is a template, it tells you\u00a0\u00a0 an abstr"
+    },
+    "8cc866ee-de3b-4d4a-9f52-ca01c44a3b96": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "act description of this abstract\u00a0\ndata type in terms of how the data is stored,\u00a0\u00a0 and how the functions manipulate the stored\u00a0\ndata. And now you can make as many copies of\u00a0\u00a0 this function as of this template as you want.\u00a0\nAnd these are what are called obje"
+    },
+    "bcc3c2ca-bb4b-458d-ac63-8afd311c94b6": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "cts. \n\u00a0 So, I can describe what a stack should look\u00a0\nlike. And then I can create multiple stacks,\u00a0\u00a0 it is just like I can use multiple lists,\u00a0\nmultiple dictionaries, if I update one dictionary,\u00a0\u00a0 it does not change the other dictionary. So, when\u00a0\nI have bu"
+    },
+    "94d52e41-7ad5-47de-ae0a-626856817030": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ilt in data types in Python, I can create\u00a0\u00a0 as many of each as I want. Similarly, a class is\u00a0\nlike a user defined it, I want to define a stack.\u00a0\u00a0 And now I want having defined the stack, I\u00a0\nwant you to be able to create as many stacks\u00a0\u00a0 as you want those a"
+    },
+    "7f2b55f3-2fb5-42a6-9056-43f7ca1d61ec": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "re the objects. \nSo, let us look at a concrete example,\u00a0\u00a0 supposing we want to look at geometric points. So,\u00a0\ngeometric point, by geometric point just mean that\u00a0\u00a0 we normally you would have seen this, of course\u00a0\nin maths that you have this x y coordinate a"
+    },
+    "45886f50-3785-4591-93d2-bd69e6ee578b": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "nd I\u00a0\u00a0 take a point. So, how do I describe this point?\u00a0\nWell, it will have some x coordinate a and some\u00a0\u00a0 y coordinate B, which says that basically, I am\u00a0\na distance away from here on this direction. \n\u00a0 And I am b distance away from here in this\u00a0\ndirection"
+    },
+    "cbe6afdd-9eaa-45d2-8243-c5de42dd7390": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": ". So, the second thing tells me how I am.\u00a0\u00a0 The first thing tells me how much\u00a0\nto the right or left of the center.\u00a0\u00a0 So, this is my point. So, I want to now have a\u00a0\nway of storing these points and manipulating them.\u00a0\u00a0 What do I do manipulating I might want"
+    },
+    "781c7950-75ea-4438-9183-7aa2866e5d9a": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " to take\u00a0\nthis point and I may want to shift it there. \n\u00a0 I might want to shift it by some a plus delta\u00a0\nx and B plus delta y, I may want to shift it\u00a0\u00a0 to a new position where I tell you move it\u00a0\n2 steps, right and 4 steps up. So, these are\u00a0\u00a0 the kinds of "
+    },
+    "c12c5c30-fbbf-4d16-ac80-01e62dd9b823": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "manipulations that I might want to\u00a0\ndo. So, that is called for example translation.\u00a0\u00a0 So now, in Python, the way we will do\u00a0\nthis as we use this class definition. \n\u00a0 So, we say that I want to define a class point\u00a0\nand the first and most important thing you"
+    },
+    "7bab90d2-df72-4b18-ac14-5e24bc97aedb": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " need\u00a0\u00a0 to do is to create points, so for that we have\u00a0\nthis kind of special function, which is called\u00a0\u00a0 a constructor, which is always called init it with\u00a0\nunderscore and score on both sides. So, that it is\u00a0\u00a0 a special function is not just so this undersc"
+    },
+    "c2f97b4a-13dc-45d4-a51a-c45740a623d7": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ore\u00a0\nunderscore is part of the name of the function.\u00a0\u00a0 Now one of the things that we need to\u00a0\ndo is remember we have many points,\u00a0\u00a0 so each point has an identity. \nSo, it has to talk about\u00a0\u00a0 its internal values and the values of other\u00a0\npoints that it might"
+    },
+    "644592f2-a7bc-4f4f-a90c-552cdcab2c0b": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " encounter. So, there is this\u00a0\u00a0 parameter called self, which every function inside\u00a0\na class has, which is an identification of itself.\u00a0\u00a0 I mean, so every object has a notion of myself or\u00a0\nitself and other points. And now when we create\u00a0\u00a0 a point, we have t"
+    },
+    "b4815b0f-0811-401e-ae25-90e7b0d67de4": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "o provide its location.\u00a0\nSo, we provide two arguments a and b and\u00a0\u00a0 internally, it stores it as x and y. \nSo we have self, my copy of x, self my copy of y,\u00a0\u00a0 so self dot x self dot y, and I initialize them\u00a0\nto a and b and as in other functions in Python,\u00a0\u00a0"
+    },
+    "d883f05c-b90c-47f6-9cdb-28d2b8bc6ac7": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " if I provide some default values, I can create\u00a0\na point without providing a and b and then it\u00a0\u00a0 will be at the origin. So, this is the starting\u00a0\npoint of our class point, we have this constructor\u00a0\u00a0 called init which takes two parameters,\u00a0\nthe x coordinate"
+    },
+    "7fe57068-55d6-4244-bacc-f095b6ee3414": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " and the y coordinate\u00a0\u00a0 and initializes this point to have that\u00a0\nx coordinate and that y coordinate. \n\u00a0 So, as I decided this, discuss just now one\u00a0\nof the things you might want to do is to\u00a0\u00a0 take a point and shift it. So, we want to make\u00a0\ntake a point at "
+    },
+    "e1dcc52d-44de-460a-95cb-c85cad43cf45": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "x comma y, and shift it to x\u00a0\u00a0 plus delta x y plus delta y. So now, inside this\u00a0\npoint, this is now a public description. So, the\u00a0\u00a0 functionality of point permits you to\u00a0\ntranslate as it is called in geometry,\u00a0\u00a0 translate a point from here to there, transl"
+    },
+    "933846a7-73b4-4479-ae32-b15870f7ce26": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ate\u00a0\nmeans shift it by a certain quantity. \n\u00a0 So, I have a point already. So, I\u00a0\nalready have a self dot x self dot way,\u00a0\u00a0 and I want to shift it by delta x delta\u00a0\ny, remember that this parameter is always,\u00a0\u00a0 so I take self dot x and update it to self dot\u00a0"
+    },
+    "fcd8cdd8-6302-46e6-8be1-98544fff41d7": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "\nx plus delta y. So, remember, this notation,\u00a0\u00a0 i plus equal to 7 is a shortcut for i equal to\u00a0\ni plus 7. So, whenever you are updating the same\u00a0\u00a0 value on the right hand side, you can collapse\u00a0\nthis, this part into this plus equal to. \n\u00a0 So, this is just "
+    },
+    "5535244d-97f2-48f6-9d37-9cf991c9f2dc": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "a shortcut for saying self\u00a0\ndot x gets updated to self dot x plus delta x,\u00a0\u00a0 self dot y gets updated to self dot y plus\u00a0\ndelta y. So, this is my translation. \n\u00a0 Now, I might ask some other question,\u00a0\nwhich is, how far is this point a comma\u00a0\u00a0 b? How far is "
+    },
+    "549c4991-1551-4644-a0dd-595c94d8b565": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "it from the origin? If I draw a\u00a0\nstraight line from 00 to this how far is it?\u00a0\u00a0 So, by Pythagoras theorem, this is going to be\u00a0\na, this is going to be b, so I am going to get\u00a0\u00a0 square root of a squared plus b squared, because\u00a0\nthat that distance line is li"
+    },
+    "47d07743-283d-4e97-9fec-79063dc085e0": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ke the hypotenuse\u00a0\u00a0 of a right hand, right angle triangle. \nSo, d is given by the square root of self dot\u00a0\u00a0 x squared self dot y squared. And remember that\u00a0\nthis is a function in math. So, I take self dot\u00a0\u00a0 x self dot x, which is the x squared, self dot y\u00a0"
+    },
+    "1061451e-0330-4bde-8cf7-082bfafbbc2f": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "\ntimes self dot y, which is the y squared and apply\u00a0\u00a0 square root of it, and return that value d. So, so\u00a0\nfar, so good, we have defined kind of our class,\u00a0\u00a0 which can allow us to store two dimensional\u00a0\npoints and do a couple of things with it. \n\u00a0 One is to"
+    },
+    "e15c179d-f5cb-425d-b5fb-d06bb69e3a55": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " translate that point by a\u00a0\ncertain displacement and the second one\u00a0\u00a0 is to compute the distance from the origin.\u00a0\nSo now, what more can I do with this? \n\u00a0 So, I might, for various reasons, decided\u00a0\nto represent this point differently. So,\u00a0\u00a0 if I have a po"
+    },
+    "b6e72b90-b850-4952-bbcd-37b86d40df75": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "int, a comma b, an equivalent way to\u00a0\ndescribe it is to actually compute its distance.\u00a0\u00a0 Okay, and compute this angle that it makes\u00a0\nwith the x axis. So, this is what is called\u00a0\u00a0 polar coordinates. So, in polar coordinates,\u00a0\nnow notice that this is again u"
+    },
+    "f16efbaf-1f8d-4e83-831f-22615c85e070": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "nique,\u00a0\u00a0 because the angle fixes at what angle it\u00a0\nis an r tells me exactly where it is. \n\u00a0 So, if I know r and theta, it is not\u00a0\ndifficult to imagine that it fixes a\u00a0\u00a0 point uniquely. And this is equivalent\u00a0\nto giving the x and the y coordinate.\u00a0\u00a0 So, the"
+    },
+    "a80062fc-d391-4fec-b88f-55951f2cdf56": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "se two are obviously then interchangeable.\u00a0\nSo, we know that r is given by this x squared plus\u00a0\u00a0 y squared square root as we saw before, because it\u00a0\nis nothing more than the distance from the origin.\u00a0\u00a0 And if you know trigonometry, then this height\u00a0\ndivide"
+    },
+    "674f6b99-b829-46c1-8bce-dfb2966a2c28": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "d by the adjacent thing is tan of theta. \n\u00a0 So, this is the definition of the trigonometric\u00a0\nfunction tangent, the tangent is the opposite\u00a0\u00a0 against the adjacent. So, the inverse\u00a0\nof that ratio, tan inverse of y by x,\u00a0\u00a0 which is the theta for which this is"
+    },
+    "988a91b4-3739-4411-9677-61d97415cf40": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " the\u00a0\ntangent gives me the value of theta. So,\u00a0\u00a0 I can start with x, y, and I can compute r and\u00a0\ntheta. So, that is what is happening here now.\u00a0\u00a0 Now, the point that the thing that we are trying\u00a0\nto emphasize is that this is a different private\u00a0\u00a0 implement"
+    },
+    "276eaf34-f49b-4844-b6c6-ee3cba5c8529": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ation of the same public point. \nSo, as a user, you still create the point\u00a0\u00a0 giving this a comma b value, you have no\u00a0\nidea whether internally storing it as r comma\u00a0\u00a0 theta is storing it as a comma b. So,\u00a0\ninside the definition of this class,\u00a0\u00a0 now this in"
+    },
+    "a4924183-351f-4737-a66a-b4ee9aa7c3fe": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "it function takes the same values,\u00a0\nbut what it does is it instant instead of\u00a0\u00a0 initializing self dot x it initializes self dot\u00a0\nr, by using the square root of a squared plus\u00a0\u00a0 b squared, remember that this is math. \nSo, it is math dot square root. Similar"
+    },
+    "bf10cebf-6551-451c-bc03-df7b2db0fde7": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ly,\u00a0\u00a0 it initializes that theta to be the tan inverse,\u00a0\nwhich is in the math functions called a tan,\u00a0\u00a0 arc tangent sometimes, a tan of b by a. But there\u00a0\nis a problem because a could be 0. So, if a is 0,\u00a0\u00a0 then what we are saying is that we are somewhere\u00a0\n"
+    },
+    "294dd30e-6409-4e89-8139-8ffcf2af7c6b": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "on this y axis, because a is the displacement in\u00a0\u00a0 the x direction. So, if a is 0, we are on the\u00a0\ny axis. So, the angle is really 90 degrees,\u00a0\u00a0 which all these angles are actually\u00a0\nrepresented in radians. So, 90 degrees pi by 2,\u00a0\u00a0 so we will take it as pi "
+    },
+    "539eb2ce-2304-49c4-9669-6b2cff07a0f2": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "by 2. \nSo, if the a coordinate, that is the x\u00a0\u00a0 coordinate of the point I am trying to create\u00a0\nis along the y axis, then I will declare the\u00a0\u00a0 angle to be 90, otherwise I will take it\u00a0\nto be the tan inverse. So, at this point,\u00a0\u00a0 from a user's perspective th"
+    },
+    "ab6a6dad-eee5-4930-8afe-67f9de8c3e9b": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ey should not\u00a0\ncare whether it is r theta or x, y, because\u00a0\u00a0 the information is actually interchangeable.\u00a0\nSo, now let us look at the two functions that\u00a0\u00a0 we had defined, the two functions defined what\u00a0\ntranslate and this distance from the origin. \n\u00a0 So, d"
+    },
+    "5479b213-2d31-4bf8-ac3d-0f0849b601e7": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "istance from the origin is very easy\u00a0\nnow, because I am actually representing it\u00a0\u00a0 explicitly as this r quantity. So, if I am asked\u00a0\nthe diff, the distance from the origin of a point,\u00a0\u00a0 instead of having to compute this x squared\u00a0\nplus y squared and taking"
+    },
+    "46fdf9e3-b28c-4ece-ae78-091393d6dcef": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " the square root,\u00a0\u00a0 I can just return the current value of\u00a0\nself dot r. So, this becomes easier. \n\u00a0 So, this could be one justification, if\u00a0\nyou are going to often ask the distance,\u00a0\u00a0 then this representation makes that calculation\u00a0\neasier because you calc"
+    },
+    "5c60823d-95a6-475c-a4f2-e43a817bbed4": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ulate the self dot r once\u00a0\u00a0 and for all, every time the point changes, after\u00a0\nevery call to distance just report set value, you\u00a0\u00a0 never have to do this calculation again. So, that\u00a0\nthese are some of the reasons why you might choose\u00a0\u00a0 a different representa"
+    },
+    "c174a180-f608-4ce4-990e-29a22db18e77": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "tion, depending on how the\u00a0\nfunctions are going to be called the work that you\u00a0\u00a0 have to do down the line might improve. \nOn the other hand, now if I have to translate, I\u00a0\u00a0 have to do a lot of work. Because the translation,\u00a0\nremember is going to be still e"
+    },
+    "eac97fb2-fde4-4b51-9f82-4a1a9817bab7": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "xpressed in terms\u00a0\u00a0 of this x plus delta x and y plus delta y, but I\u00a0\ndo not have x and y. So, I have to go backwards,\u00a0\u00a0 I have to go from r theta to x, y. Now\u00a0\nagain, using trigonometry, if this is\u00a0\u00a0 x, and this is y, and this is theta. \nThen sin of theta"
+    },
+    "c62c02a5-c56e-4dd4-b68d-a6f95cffbe8c": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": ". And this is say the\u00a0\u00a0 hypotenuse, the sin of theta is this large, sin of\u00a0\ntheta is y by r, and cos of theta is x by r. So,\u00a0\u00a0 from this, you get the x is r cos theta and y is r\u00a0\nsin theta. So, you can translate backwards from r\u00a0\u00a0 to x, r theta to x comma "
+    },
+    "7621e554-dba9-4ae6-b72f-b4dc1d9faab2": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "y, then you can apply\u00a0\nthis transformation at the x y level and then\u00a0\u00a0 convert back so you have to do this conversion in\u00a0\nboth directions to go from r theta to x y, apply\u00a0\u00a0 this plus delta x plus delta y and go back. \nSo, this is what is happening here. So"
+    },
+    "d2b1119a-7bd8-41d1-9ce9-94e843c54cd0": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": ", you\u00a0\u00a0 compute a new value for x and y, given the current\u00a0\nvalues inside for r and theta. By applying cos\u00a0\u00a0 and sin, then you translate. But x and y are not\u00a0\nmy internal representation, I am just using it\u00a0\u00a0 as an intermediate thing. So, you have to conver"
+    },
+    "84125bfc-e3ad-4603-95c9-41d9b98eed03": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "t\u00a0\nback. So, this code is essentially the same code\u00a0\u00a0 that we had when we did the init. \nSo, the distance from the origin becomes simpler,\u00a0\u00a0 translation becomes more difficult. In the x,\u00a0\ny thing, the translation was easier. But this\u00a0\u00a0 is a margin required"
+    },
+    "c6f27fef-0b7f-4021-985d-62e21a450a7e": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " computing the square root.\u00a0\nSo, it is a trade-off, you have to decide which\u00a0\u00a0 is which. But the important thing is that from\u00a0\nthe user's perspective, nothing has changed,\u00a0\u00a0 you still create a point by providing the\u00a0\nx coordinate and the y coordinate. \n\u00a0 Y"
+    },
+    "7701b19b-da30-4895-909d-a2ff20769b26": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ou still provide the translation function by\u00a0\ngiving the x displacement in the y displacement,\u00a0\u00a0 you still ask for the distance, and get\u00a0\nit back as a distance from the origin.\u00a0\u00a0 So, the interface, as it is called, has\u00a0\nnot changed. So, what the user sees,"
+    },
+    "6d7751e1-e088-4bd4-8733-13e25dede11f": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "\u00a0\u00a0 as far as the class is concerned, has not\u00a0\nchanged. And this is the whole point of this\u00a0\u00a0 whole discipline of using classes\u00a0\nand objects that you can change\u00a0\u00a0 the internals of a class, but\u00a0\nprovide the same public face. \n\u00a0 So, the other person's code do"
+    },
+    "c3f854fc-8fd8-42ab-9144-0f9b9cb708c2": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "es not change. So\u00a0\nyou, you do not end up. So, this is something that\u00a0\u00a0 we do not want to do that. Because I change\u00a0\nmy code, somebody else's code stops working.\u00a0\u00a0 It might work better or worse, it might be more\u00a0\nefficient, less efficient, that is a differ"
+    },
+    "1cd4d204-9b04-4bdb-a56f-902eabaf7a0c": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ent\u00a0\u00a0 matter, but it should not give wrong answers.\u00a0\nSo, that is one of the things that we get. \n\u00a0 So, to wind up this discussion of classes this\u00a0\nlook at some special functions, so we already saw\u00a0\u00a0 one the constructor function has this underscore\u00a0\nundersc"
+    },
+    "ebc09e83-2192-4868-a378-07a9878f4053": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ore init. Another useful function is this\u00a0\u00a0 function called str, which converts an object\u00a0\nto a human readable form as a string. \n\u00a0 So, for instance, we have might want to\u00a0\ntake our point and write it out, if I want,\u00a0\u00a0 if I ask for the value of p, you\u00a0\nmig"
+    },
+    "70447698-762d-470a-8db8-71e2e255f88c": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ht want to see it in this form as a\u00a0\u00a0 string with open bracket, close bracket\u00a0\nand x comma y if separated by commas as\u00a0\u00a0 you would normally read it in a math notation,\u00a0\nright. But we have to do that explicitly. \n\u00a0 So, we will have to take define a string\u00a0\n"
+    },
+    "08be9ef2-27ba-4967-83c7-97d855913e8a": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "function, which will take self dot x self dot y,\u00a0\u00a0 convert them into strings, and then\u00a0\nusing the normal string operations,\u00a0\u00a0 take these special symbols, open bracket, comma,\u00a0\nclose bracket and put them around and in between,\u00a0\u00a0 so we are really assembling "
+    },
+    "89a0c7d2-bbb2-46d9-b178-bea5d6356302": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "a string by taking\u00a0\nthe open bracket, the string value of x, comma,\u00a0\u00a0 the string value of y, and close bracket. \nNow, we normally do not use this explicitly,\u00a0\u00a0 but it is always used implicitly by print,\u00a0\nwhenever we print a value of a variable, whenever\u00a0\u00a0 "
+    },
+    "6eb5d1f7-672c-4fe6-ad75-f93af98b35d9": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "I say print x, for any x, k, what happens is\u00a0\nthat this is actually converted to a string of x.\u00a0\u00a0 So, if I print a number, what happens is the\u00a0\nnumber is first converted to a string and then\u00a0\u00a0 print. So, print can only print strings in some\u00a0\nsense. So, a s"
+    },
+    "af774c0a-b891-41cf-8bcd-9cefbb6160ff": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "tring is called implicitly. \n\u00a0 So, the same thing happens here. So, if I want\u00a0\nto actually if I say print p, where p is a point,\u00a0\u00a0 so what will happen is that it will go through\u00a0\nthis process, and it will come out. So, that\u00a0\u00a0 is why the string is an import"
+    },
+    "36982d09-89fb-4dd0-97f6-329500345e0c": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "ant function. \nSimilarly, you can do functions which overload\u00a0\u00a0 operators, supposing I want to have\u00a0\nthe possibility of taking a point p,\u00a0\u00a0 and taking a point q and now defining a point p\u00a0\nplus q. So, what does p plus q do it will have\u00a0\u00a0 this plus this in "
+    },
+    "a2ca9ad6-3214-42e1-9468-0216db60a48f": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "the x axis and this plus this in\u00a0\nthe y axis. So, if I have, for example, 3 comma 4\u00a0\u00a0 as p, and I have 5 comma 7 as q, then I will\u00a0\nend up with a point which is 3 plus 5, 8,\u00a0\u00a0 and 4 plus 7, 11. This is what p plus q is.  \nSo, how do I define that? Well, I "
+    },
+    "9805f450-0bb3-4742-8098-62476f91cbf8": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "define it\u00a0\u00a0 using this function called add. So, now this is a\u00a0\nsituation where you see this no use of self. So,\u00a0\u00a0 I am a point self and I get another\u00a0\npoint p and I want to add myself to it,\u00a0\u00a0 or p to me. So, I take my x and I take\u00a0\nthe px that is the new "
+    },
+    "0c4c5ef0-8f66-4329-af5e-80dab6c7752e": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "x coordinate,\u00a0\u00a0 I take my y and I take the new y that is the\u00a0\nnew y coordinate. But now this is a different\u00a0\u00a0 point. This is not myself, this is not p. \nSo, I have to create a new point. So, I have\u00a0\u00a0 to construct a point out of this by passing this\u00a0\nnew x "
+    },
+    "5d510fbc-3b75-489b-a656-338f99baa722": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "and this new y value that I have calculated\u00a0\u00a0 to point which creates a new point, this class\u00a0\ncreates a new point and returns a new object. So,\u00a0\u00a0 when I say p plus q, p does not change\u00a0\nq does not change, I get back a new\u00a0\u00a0 point whose coordinates are the "
+    },
+    "b3074667-e9a7-4fe4-81f7-9211160a41a4": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "sum of the\u00a0\ncoordinates in each direction of p and q. \n\u00a0 So, just like add, you can also do multiply,\u00a0\nyou can also use, you can define how to compare\u00a0\u00a0 points. For instance, you might say that one point\u00a0\nis smaller than other point if it is smaller,\u00a0\u00a0 and"
+    },
+    "3b2134c4-e7d7-4e59-87e6-bb2b1780d6b0": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": " both the x and the y. So, you can use less\u00a0\nthan, greater than, greater than equal to,\u00a0\u00a0 so you can define all these functions. \nSo, then you can manipulate these user defined\u00a0\u00a0 objects, and put them into conditions and print\u00a0\nstatements and all that exac"
+    },
+    "820ff42d-41f9-45be-8caa-a9b4a4dbf57a": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "tly as you would\u00a0\u00a0 a built in type in Python. So, it gives\u00a0\nyou the flexibility of using your objects,\u00a0\u00a0 you can sort them for example, you\u00a0\ncan take points and sort them in\u00a0\u00a0 increasing order because you have a way of\u00a0\ndoing these comparisons directly on "
+    },
+    "45e47016-6c99-498f-b941-1c4f3206dfc0": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "points. \n\u00a0 So, you do not have to write a complicated\u00a0\nthing each time. You can just use a normal\u00a0\u00a0 notation that you use for sorry if this\u00a0\nis less than that exchange and so on. So,\u00a0\u00a0 it is very convenient to be able to work with\u00a0\nthese objects and classe"
+    },
+    "06bd9dea-1ad2-4571-a2bd-747ee6d45af2": {
+        "content_id": 7,
+        "course_name": "PDSA",
+        "title": "Classes and Objects",
+        "week": 1,
+        "chunk": "s directly."
+    }
+}

@@ -1,0 +1,499 @@
+{
+    "9f8250b5-ed77-4274-9429-0829e78d9db9": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "So, we saw that graphs are going to be\u00a0\u00a0 interesting objects to represent relations, and\u00a0\nwe have to do some computations on the graph.\u00a0\u00a0 So, in order to compute on a graph,\u00a0\nwe need to represent the graph.\n \n\u00a0 So, to work with the graph, we need to transf"
+    },
+    "afff3f6e-539a-4adb-a397-ee041f355466": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "orm\u00a0\nthis picture into something that we can manipulate\u00a0\u00a0 in an algorithm. So, we said, for instance, we\u00a0\nhave these vertices and edges, and then we have\u00a0\u00a0 paths and we have reachability. Now, if I look\u00a0\nat this as a picture as a human being, I can kind\u00a0\u00a0 "
+    },
+    "48535412-a4ea-4113-af81-120d56ff120a": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "of see that this thing is connected. Or maybe\u00a0\nif there are edges, I may not be able to see,\u00a0\u00a0 I may have to calculate that is connected.\nNow, if it is a much larger graph,\u00a0\u00a0 even visually, it may not be possible. And\u00a0\ncertainly, I cannot use this kind of "
+    },
+    "69a30913-f758-4b02-8a37-2f0d7386d0fd": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "visual\u00a0\u00a0 analogy to write an algorithm. So, the\u00a0\nalgorithm has to represent this graph in a more\u00a0\u00a0 kind of concrete way, and manipulate this\u00a0\nrepresentation in such a way that it can\u00a0\u00a0 solve these problems without relying on this\u00a0\nintuition of what the pic"
+    },
+    "a8d32c33-f46b-4042-926c-caddbda4c9e2": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ture looks like.\u00a0\u00a0 So, the picture is helpful for us. But\u00a0\nit is not helpful for an algorithm.\n \n\u00a0 So, we need to represent this graph in some simple\u00a0\nway that we can manipulate. So, the first thing\u00a0\u00a0 is we need to represent the sets of underlying\u00a0\nobjects"
+    },
+    "37893306-173a-46d4-84e2-50ee4c99396f": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": ". So, let us start with the vertices. So,\u00a0\u00a0 we saw that the vertices could be named in many\u00a0\ndifferent ways. So, in one of the early examples,\u00a0\u00a0 we saw names of teachers and courses, so each\u00a0\nvertex had a name of either a person or a course,\u00a0\u00a0 we also saw "
+    },
+    "4b983924-a92c-4a03-bf82-7199ee89a20e": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "another graph in which the\u00a0\nnames corresponded to friends in a group.\n\u00a0 So, we could have many different\u00a0\nways of representing the vertices.\u00a0\u00a0 So, we will choose typically a very simple\u00a0\nrepresentation, we will just say that we\u00a0\u00a0 have n vertices that we wi"
+    },
+    "9c052135-ef2e-47fc-bfc7-da7c5c184d4b": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ll label them 0,\u00a0\n1, 2 up to n minus 1. So, we will always\u00a0\u00a0 think of the vertex names as numbers between\u00a0\n0 and n minus 1, when there are n vertices.\u00a0\u00a0 So, essentially, we have to have some way of\u00a0\ntaking the original graph and mapping them.\n\u00a0 So, here, f"
+    },
+    "ed50aa72-7cb5-45ba-a42c-b015b76b9584": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "or instance, we have a graph,\u00a0\nwe will call them V0, V1 up to V9,\u00a0\u00a0 so I will replace this by 0 up to 9. So, now, if\u00a0\nI look at an edge, an edge now, because vertices\u00a0\u00a0 are all numbers between 0 and n minus 1, an\u00a0\nedge is also a pair of numbers I comma j b"
+    },
+    "eb463114-0073-441f-b7a1-39b808cc8493": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ut,\u00a0\u00a0 as we said before, we will not allow a reflexive\u00a0\nrelation in graph, so we will not allow an edge\u00a0\u00a0 to start at i and end at i. So, when we say that i\u00a0\ncomma j is an edge, i and j must both be between 0\u00a0\u00a0 and n minus 1 that is in the allowed range of"
+    },
+    "56a44421-c923-4b4a-9cf2-1ecf3faaf2d0": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "\u00a0\nvertices, but i should not be equal to j.\n\u00a0 So, with this representation, or this way of\u00a0\nrepresenting edges, and matrices, and vertices,\u00a0\u00a0 the most obvious way to represent the graph as\u00a0\na whole is to record which edges are present\u00a0\u00a0 and which edges are"
+    },
+    "81f3707e-a37e-490c-ab2f-a93028c6e0a2": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " absent in a table,\u00a0\nor a matrix called an adjacency matrix.\u00a0\u00a0 So, we have rows and columns, 0 to n minus\u00a0\n1, and we put an entry at i comma j. So,\u00a0\u00a0 I have a matrix that looks like this,\u00a0\nso I put an entry at row i and column j,\u00a0\u00a0 I put this to 1 if there"
+    },
+    "d1cb1c1a-5cc2-4ea7-8acb-b48c15757558": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " is an edge from i to\u00a0\nj. So, this is now a 0, 1 matrix. And the ones\u00a0\u00a0 represent those edges which are present in my\u00a0\ngraph everywhere else, they will be zeros.\n \n\u00a0 So, here, for instance, is how you would possibly\u00a0\ndo it in Python, if you use a NumPy arr"
+    },
+    "2cab8ab3-47b9-4649-9f1b-743966778952": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ay.\u00a0\u00a0 So, first of all, the actual graph could be\u00a0\nrepresented explicitly by a set of edges. So,\u00a0\u00a0 here, for instance, if I as I said if we replace\u00a0\nthis by 0, and this by 1, and this by 2 and so on,\u00a0\u00a0 we have an edge from 0 to 1, we have an edge\u00a0\nfrom 0 t"
+    },
+    "45646dfa-512e-47be-a944-bea232dfe21c": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "o 4, we also have an edge from 4 to 0,\u00a0\u00a0 which is a separate edge and so on.\nSo, the edge list here represents,\u00a0\u00a0 in a literal way, the arrows which are drawn in\u00a0\nthe graph there. But we want to translate this\u00a0\u00a0 into the 0, 1 matrix. So, what we do is we k"
+    },
+    "04487a4c-be02-433c-9f9d-e5369ca53199": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "now\u00a0\nthat we have 0 to 9 in this case, so we create a\u00a0\u00a0 10 by 10, matrix 0 to 9, 0 to 9, initialize it\u00a0\nto zeros. So, this is a NumPy initialisation,\u00a0\u00a0 which has give me a matrix of all zeros of size 10\u00a0\nby 10. And now, we scan through this list. So, for\u00a0\u00a0"
+    },
+    "a68ce0ad-25ef-4bcf-8cbf-b3c34dc83100": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " every i comma j pair, which we see in this list of\u00a0\nedges, we set the ij\u2019th entry of the matrix to 1,\u00a0\u00a0 so we already initialized to 0, so wherever we\u00a0\ndid not find an edge, it is implicitly 0.\n \n\u00a0 So, if we do this, then we get a matrix which\u00a0\nwe can vis"
+    },
+    "9f49a555-512f-4611-9227-75fd1125223b": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ualize like this. So, for instance,\u00a0\u00a0 here it says that 3 comma 4 is 1, which means that\u00a0\nin my graph, I should have an edge from 3 to 4,\u00a0\u00a0 or it says that 7 comma 6 is 0. So, if I look at 7\u00a0\nand 6, I should not find an edge between them. So,\u00a0\u00a0 the zeros r"
+    },
+    "501a4484-b39f-4e72-ae81-490e0f38c019": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "epresent edges which are not there.\u00a0\nThe ones represent edges which are there.\n \n\u00a0 So, if this is a undirected graph then remember\u00a0\nthat if i, j is an edge j, i will also be an\u00a0\u00a0 edge. So, if I take the same graph that I\u00a0\nhad before. And I removed the dire"
+    },
+    "4212989e-7926-4524-a5f7-918fc397ae4b": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ctions,\u00a0\u00a0 I get this undirected graph. Now, the matrix will\u00a0\nbe symmetric. So, if I see 0 comma 1, I must see\u00a0\u00a0 1 comma 0. So, if I take this diagonal here. If\u00a0\nI take any entry, which is above the diagonal,\u00a0\u00a0 then if I go the same distance below the diago"
+    },
+    "c3388236-6312-4e33-a187-8f4708563d56": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "nal,\u00a0\nI will find, so if I have 4 comma 7, I will have 7\u00a0\u00a0 comma 4. So, there is a kind of symmetry over this\u00a0\nmain diagonal. So, everything above and everything\u00a0\u00a0 below the main diagonal, there will be a\u00a0\nsymmetric either it is both one or both zeros.\n \n\u00a0"
+    },
+    "4f6f1817-0be8-4255-9b03-af8c762b7851": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " So now, we need to manipulate in terms of this\u00a0\nmatrix. So, earlier, when we had this picture,\u00a0\u00a0 if we wanted to go to the neighbour of a vertex,\u00a0\nif we want to extend a path, for instance,\u00a0\u00a0 then we just look at all the outgoing\u00a0\narrows and see which are"
+    },
+    "57469b26-4477-4e4f-b19b-1c4e29d05b6f": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " all the neighbour,\u00a0\u00a0 which are connected to outgoing arrows.\u00a0\nSo, in an adjacency matrix representation,\u00a0\u00a0 this corresponds to looking along a row.\nSo, basically what we have is, say the neighbour\u00a0\u00a0 of 6 are 3 and 5. This means that if I look at\u00a0\nthe rows"
+    },
+    "37935173-983d-4779-b329-6e2ed757bc8c": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " 6, in my matrix, if I look at all the\u00a0\u00a0 entries here, these are all entries of the form 6\u00a0\ncomma j. So, some of these 6 comma j pairs are in\u00a0\u00a0 my edge relation, some are not. So, it turns out\u00a0\nthat 6 comma 3 is there at 6 comma 5 is there.\u00a0\u00a0 So, here is a"
+    },
+    "27ad0339-1836-4196-b5f4-de6161333eb0": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " simple Python function,\u00a0\nwhich computes the neighbour of a given\u00a0\u00a0 vertex and returns it as a list.\nSo, it takes an adjacency matrix,\u00a0\u00a0 which is given and it takes i as this vertex\u00a0\nfor whom you want to find the neighbours.\u00a0\u00a0 So, what you do is you initia"
+    },
+    "b144e8cd-721b-429d-a0b1-ccf8e40b3f16": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "lize the list of\u00a0\nneighbours to be empty. Now, you need to find\u00a0\u00a0 out the size of this matrix. So, \nNumPy has this shape attribute,\u00a0\u00a0 which tells you the number of rows and columns.\nIn this case, remember, it is going to be a square\u00a0\u00a0 matrix, or rows and c"
+    },
+    "6b9fc3a1-b96c-4559-af39-99434eea1743": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "olumns are going to be\u00a0\nthe same, we need either of them, we will use\u00a0\u00a0 columns. So, because we are going to scan through\u00a0\nthe columns, so for every j in the range columns,\u00a0\u00a0 which is for every j from 0 to n minus 1. If\u00a0\nI see that the vertex i, that I am "
+    },
+    "be4064ef-6c04-47c2-b14e-f2ae77c4ba30": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "looking at,\u00a0\u00a0 has a neighbour j, then I append j to the list\u00a0\nof neighbours, and I return it. And so, if I run\u00a0\u00a0 this function on this particular example, if I\u00a0\nrun it on 7, for instance, if I start in row 7,\u00a0\u00a0 then I will pick up 4, I will pick up 5, and "
+    },
+    "239b4802-cfb2-47f2-89ef-51db44462cf4": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "I\u00a0\nwill pick up 8, so this should be 4, 5, and 8.\u00a0\u00a0 So, this is what the function\u00a0\nshould return on this graph.\n \n\u00a0 So, if I have a directed graph,\u00a0\nthe rows represent outgoing edges.\u00a0\u00a0 And these are not the same as the incoming edges,\u00a0\nbecause not every o"
+    },
+    "0fd311cc-d67c-4dbd-83a4-f481d1536468": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "utgoing edge has a matching\u00a0\u00a0 incoming edge. So, the columns represent\u00a0\nthe incoming edges. So, if I look at row 6,\u00a0\u00a0 then this entry represents an edge from 6 to 5.\u00a0\nIf I look at column six, this represent an entry\u00a0\u00a0 from 3 to 6, so from 3 there is an edg"
+    },
+    "6fd05f41-a1d6-4ced-8d8e-e98f3445a881": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "e in\u00a0\nto 6, and from 6, there is an edge out 5, and\u00a0\u00a0 there is no correspondence between these two in\u00a0\ngeneral, they could be but they need not be.\n \n\u00a0 So, the degree of a vertex, as you know is a\u00a0\nnumber of edges which are incident on it. So, if\u00a0\u00a0 I am ju"
+    },
+    "adda0085-e332-4fe9-9ffe-a7de62c36219": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "st looking at an undirected graph, then I\u00a0\nknow that if you look at this thing, for instance,\u00a0\u00a0 so the column 6. So, this has two ones, and this\u00a0\nhas two ones because if I have an edge from 6 to\u00a0\u00a0 3 and 6 to 5, I also have incoming edges from 3 to\u00a0\n6 and 3"
+    },
+    "8abe6d72-4a7e-4821-a5a8-97bbd2e5c645": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " to 5 because there are no directions. So,\u00a0\u00a0 I just need to see how many edges are connected\u00a0\nto 6 and I get the degree which is 2.\n \n\u00a0 But if I have not directed graph, this is no\u00a0\nlonger the same. So, I look at the outgoing\u00a0\u00a0 degree. So, it says that the"
+    },
+    "73152538-e8cc-4d73-ac8d-24b7cde4882e": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " out-degree of 6\u00a0\nis 1 and it says the in degree of 6 is 1. So,\u00a0\u00a0 there is one edge coming in and one is going out,\u00a0\nin general, these is not be the same. So, if you\u00a0\u00a0 look at, for instance, let us see an example.\nSupposing you look at\u00a0\u00a0 1 for example, ove"
+    },
+    "d8fe2930-85be-4db2-a06b-698fa681a810": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "rtake 0, it has two edges\u00a0\ngoing out, it has 0 to 1 and 0 to 4. So,\u00a0\u00a0 it has an out-degree of two, but if I look at\u00a0\nthe in-degree of here, oh it has 2 here also,\u00a0\u00a0 it has 4 to 0 and 2 to 0. So, this is not\u00a0\nanyway so you can have situations where\u00a0\u00a0 you ha"
+    },
+    "36251e15-7884-4e0f-bc0f-c466ae706254": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ve unequal numbers of edges coming in and\u00a0\nout. So, let me see if I can spot one here. So,\u00a0\u00a0 I think in this particular graph, they are more\u00a0\nor less all equal, but they need not be equal.\n \n\u00a0 So now, one of the questions that we asked was\u00a0\nreachability. S"
+    },
+    "7587d4e7-a57f-4f03-af13-f14ce3118831": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "o, we said given these edges,\u00a0\u00a0 we want to find out if there is a path\u00a0\nfrom one vertex to another vertex. So,\u00a0\u00a0 concretely, if we interpret these as airline\u00a0\u00a0 routes, we said that Delhi is city 0, Madurai\u00a0\nis city 9. Is there a route from 0 to 0 from 9?\u00a0\u00a0"
+    },
+    "3ed7f988-f5ac-4d18-bad2-86e6d77b0d72": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " So, the way we do this is a straightforward\u00a0\nexploration, we start at 9 and we say, Okay,\u00a0\u00a0 if we start at 9, certainly we can reach 9\u00a0\nfrom there because we have to do nothing.\n\u00a0 Then we look at all the places we can reach\u00a0\nfrom 9. So, where we can go fr"
+    },
+    "1373da78-1c29-4447-8199-c31d0e4a1696": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "om 9? Well,\u00a0\u00a0 if we look at the row of 9, it says that I\u00a0\ncan reach 8. So, if I start from 9, then I\u00a0\u00a0 can reach all its neighbours. In this case, it is\u00a0\n8. So, now I say that 8 is also reachable from 9.\u00a0\u00a0 Now, I see where all I can go from\u00a0\n8. So, 8 can g"
+    },
+    "8a42b5f5-5193-4576-86a0-6307855212e4": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "o to 5, 8 can go to 7,\u00a0\u00a0 of course, 8 can come back to 9.\nBut that is where I started. So,\u00a0\u00a0 that does not add any new information. So, I\u00a0\ncan now look at 5 and 7 and add them to my list,\u00a0\u00a0 9 is already there. But I have already, in some\u00a0\nsense, I know tha"
+    },
+    "8fc897c8-d824-4e1f-a29c-cea924b19f2d": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "t 9 is reachable, so there is no\u00a0\u00a0 point in marking it again. So, then I pick these\u00a0\nup in turn, so I pick 5 and 7, for instance.\u00a0\u00a0 And then I can extend my thing, saying that\u00a0\nfrom 5, I can reach, for instance, 3 and 6.\n\u00a0 And then from maybe 7, I can reac"
+    },
+    "aeb77aea-bca7-4aa2-b666-b548f80a8dd8": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "h 4, then from 4,\u00a0\nI can reach 0. And then I can stop in this case,\u00a0\u00a0 because my target was to meet 0. So, I may be\u00a0\nable to reach more things from 9, but I am not\u00a0\u00a0 interested in knowing whether I can reach 1 or 2.\u00a0\nSo, this is the type of calculation tha"
+    },
+    "5c4471e1-6481-4219-bf41-7abb09002880": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "t we want\u00a0\u00a0 to do with the graph, checking reachability.\n \nSo, abstractly, we mark the sources reachable. And\u00a0\u00a0 then we systematically mark neighbours, of marked\u00a0\nnodes. So, we say that 9 is reachable. So, what\u00a0\u00a0 are the neighbours of 9, 8, mark 8, what ar"
+    },
+    "67badc56-b426-4918-b4f4-934a17dece3f": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "e the\u00a0\nneighbours of 8, 5, and 7, mark them, and so on.\u00a0\u00a0 And we stop when the target is marked. But\u00a0\nthe main thing that we need to do is recognize\u00a0\u00a0 that we do not go back and get into a loop.\nSo, we do not want to go back and say that from 8,\u00a0\u00a0 we know "
+    },
+    "19ef554c-971e-4a9e-962f-323950bda7e8": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "that 9 is a neighbour. So, let us\u00a0\ngo back and explore what we can reach from 9\u00a0\u00a0 because we already started with 9. So, if we go\u00a0\nback from 9, then we will come back to 8, and then\u00a0\u00a0 8 will take us back to 9. And then we go round\u00a0\nand round in circles wit"
+    },
+    "d3a8ef23-6e0b-4703-90cc-b0da4c6796f0": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "hout making progress.\u00a0\u00a0 So, we need a systematic way of making\u00a0\nsure that we do not get into this loop.\n\u00a0 And as you should remember, there are two ways to\u00a0\ndo this, one is called breadth-first search, which\u00a0\u00a0 does it layer by layer, how many things can re"
+    },
+    "d8bc639d-7068-4112-a73d-431c000d0cb6": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ach\u00a0\nin one step two steps, three steps, and so on.\u00a0\u00a0 And then there is depth-first search, which keeps\u00a0\nfollowing a path until you get stuck, then it\u00a0\u00a0 comes back and takes an alternative path, and\u00a0\nso on. So, we will look at these in detail.\n \n\u00a0 So, what"
+    },
+    "ca557104-b9f1-4924-833a-e9862ccf1965": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " we are talking about now, right now is\u00a0\nrepresenting the matrix, representing the graph.\u00a0\u00a0 So, we want to make sure that the graph that we\u00a0\nare dealing with is not a picture but something\u00a0\u00a0 that our algorithm can manipulate. So, we came\u00a0\nup with this stra"
+    },
+    "c110c5b5-7950-4c49-9ad6-cf55d059d354": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ightforward representation,\u00a0\u00a0 which was this adjacency matrix,\u00a0\nwhich had zeros everywhere, except\u00a0\u00a0 where there are edges and these are ones.\nNow, as you can imagine, very often, they will be\u00a0\u00a0 mostly zeros and very few ones. So, we could\u00a0\nlook for a more"
+    },
+    "f47dc4ea-9f00-42c4-97fc-87d49aeb3ea5": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " compact representation. And this\u00a0\u00a0 is what is called an adjacency list. So, notice\u00a0\nthat if I have in an undirected graph, if I have\u00a0\u00a0 n vertices, then each of these can be connected\u00a0\nto n minus 1 others and then they are symmetric,\u00a0\u00a0 so we do not count t"
+    },
+    "27d5138f-6d4e-4a25-b101-d372becf3f56": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "hem. So, n into n minus 1 by\u00a0\n2 is the number of edges that I could have. So,\u00a0\u00a0 if I have n vertices, I have order n squared\u00a0\nedges possible, but very often I do not.\n\u00a0 Similarly, in a directed graph, that factor of\u00a0\ntwo goes away, we have at most n into n"
+    },
+    "b02b698c-e1b1-43dc-abdb-6b193ff9602e": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " minus 1\u00a0\u00a0 different edge. But in many realistic situations,\u00a0\nthe number of edges is not n squared is not order\u00a0\u00a0 of n squared, but it is closer to order of n.\u00a0\nSo, in such situations, most of my matrix will\u00a0\u00a0 be zeros. So, here, a better representation\u00a0\ni"
+    },
+    "cd583881-be2b-4b7b-986d-f421f30cd8b4": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "s what is called an adjacency list. That is,\u00a0\u00a0 for every vertex, I explicitly record instead\u00a0\nof that whole sequence of zeros and ones in\u00a0\u00a0 the matrix, I only record the ones, I only\u00a0\nrecord those vertices that are connected.\n\u00a0 So, here I say that 0, verte"
+    },
+    "d1a9633a-c40a-4992-92c8-a6d085c337fa": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "x 0 is connected to\u00a0\n1 and 4, I do not have to put the other zeros we\u00a0\u00a0 say is not connected to 2, is not connected\u00a0\nto 3, is not connected to 5, and so on.\u00a0\u00a0 So, this is the adjacency list\u00a0\nrepresentation. So, for every vertex,\u00a0\u00a0 it just gives you the lis"
+    },
+    "c81fa02a-dce7-4a09-ac2b-e74003dc3959": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "t. So, it says 8 is\u00a0\nconnected to 5, and to nine, we do not have to\u00a0\u00a0 say it is not connected to 7, is not connected\u00a0\nto 0, is not connected to 6, and so on.\n \n\u00a0 So, the simplest way to build up such a list\u00a0\nin Python is to use a dictionary. So, we use\u00a0\u00a0 t"
+    },
+    "0a2e3ee9-be39-49e8-bdc0-79f7219e32ed": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "he names of these vertices, in this\u00a0\ncase, 0 to n minus 1, 0 to 9 as the keys.\u00a0\u00a0 And then for every edge that is there\u00a0\nin my edge list, I just append it\u00a0\u00a0 to this. So, if I assume that the edges are\u00a0\ngiven an ascending order, then I will get these\u00a0\u00a0 adjac"
+    },
+    "d2a6c970-5e93-4319-8b25-9e61c8032ee6": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ency lists also in ascending order.\u00a0\nSo, very often convenient to assume\u00a0\u00a0 that the lists are enumerated the same\u00a0\nway that the columns are enumerated.\n\u00a0 So, if I have an edge from say, 8 to 5, and 8 to\u00a0\n9, then the adjacency list of 8 will be 5 comma 9,\u00a0\u00a0"
+    },
+    "29d9b0dc-23be-4ac2-8da1-dc451172bc08": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " it is not 9 comma 5. So, if I construct the\u00a0\nadjacency list for this graph, for instance,\u00a0\u00a0 it shows this dictionary. So, 0 is connected\u00a0\nto 1 and 4, 1 is connected to 2, and so on. So,\u00a0\u00a0 for example, 8 is connected to 5 and 9. So, this\u00a0\nis a more compact"
+    },
+    "443022d8-4a26-43f8-8dc4-31bec36491a8": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " representation in general,\u00a0\u00a0 especially if the number of edges is\u00a0\nsmall with respect to n square.\n \n\u00a0 So, one of the advantages that an\u00a0\nadjacency list requires less space.\u00a0\u00a0 Now, there are some disadvantages.\u00a0\nSo, if I want to check whether\u00a0\u00a0 i is conne"
+    },
+    "5aeac218-5e47-4d26-8a9a-5ff0a79c8c37": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "cted to j. Now, I want to check\u00a0\nwhether is connected to J in an adjacency\u00a0\u00a0 matrix, I just have to look at the ij\u2019th row. So,\u00a0\nsupposing I want to know whether 5 is connected to\u00a0\u00a0 7, then I just have to look at the entry 5\u00a0\ncomma 7 and say, yes, 5 is conn"
+    },
+    "48f18715-d53b-43cf-8da5-7efae9458b13": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ected to 7.\n\u00a0 On the other hand, if I want to check in the\u00a0\nadjacency list with a 5 is connected to 7,\u00a0\u00a0 I have to take this list and walk down the\u00a0\nentire list. So, this, in this case, it is\u00a0\u00a0 a small graph. So, it is a small list. But in\u00a0\ngeneral, you ca"
+    },
+    "6395d5d4-593e-45b2-8926-9485a92fae96": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "n imagine that takes more time\u00a0\u00a0 because you have to look at that entire list and\u00a0\ngo from one end to the other and find it.\n \n\u00a0 On the other hand, if I want to\u00a0\nadd together all the neighbours,\u00a0\u00a0 then it is more efficient use the list because\u00a0\nthe non-nei"
+    },
+    "e47470cb-bc35-40d8-847a-793b13933f00": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ghbours are absent. So, if I have a\u00a0\u00a0 small number of neighbours, I will pick them\u00a0\nup from the list, but I have a large number of\u00a0\u00a0 neighbours also I will need to anyway scan\u00a0\nthem. But in an adjacency matrix, there is\u00a0\u00a0 no way to find the neighbours exce"
+    },
+    "9db3665e-a240-4fa3-af9e-3c3615bdeb40": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "pt to scan\u00a0\nall these n minus 1 entries in the columns.\n\u00a0 So, even if I have only one neighbour, I will not\u00a0\nknow it without looking at all the entries. So,\u00a0\u00a0 in an adjacency matrix, finding all the neighbours\u00a0\nalways takes time proportional to the number "
+    },
+    "461214c9-dd20-4137-9565-26a541896a89": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "of\u00a0\u00a0 vertices, there is an adjacency list, it takes\u00a0\ntime proportional to the degree or more precisely\u00a0\u00a0 if you are doing a directed graph the out-degree.\u00a0\nSo, depending on what we are planning to do one\u00a0\u00a0 representation or the other can be more efficient."
+    },
+    "b993d0c4-acb2-414b-8f3b-8bb9042d3e5a": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "\u00a0\nVery often, we will see that adjacency list\u00a0\u00a0 is better than adjacency matrix for the\u00a0\nkinds of problems that we are looking at.\n \n\u00a0 So, to summarize, what we said is that we ca\u00a0\nnot just think of graphs as pictures, and then\u00a0\u00a0 try to compute on them bec"
+    },
+    "c2ac7191-a307-462e-9cd9-da089e4f39f4": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "ause this picture cannot\u00a0\nbe read by our algorithm. So, we need to represent\u00a0\u00a0 this graph in some concrete form. So, we have\u00a0\ntwo representations that we propose one is 0,\u00a0\u00a0 1 matrix, this adjacency matrix, where i, j\u00a0\nrepresents Aij represents the edge fr"
+    },
+    "c7f6f3e8-c31a-4176-b7be-e71be1dcdba2": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "om i to j,\u00a0\u00a0 so it is 1 if there is an edge, 0 if there is\u00a0\nno edge, so I canonically change my vertex names\u00a0\u00a0 from whatever they are to 0 to n minus 1.\nAnd then an adjacency list, think of it as\u00a0\u00a0 a dictionary, where the keys are 0 to n\u00a0\nminus 1. And each"
+    },
+    "cb133ad1-8d0b-4c2f-8b4c-eb912b6e7d1e": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " key is attached to a list\u00a0\u00a0 the list of vertices which are connected to\u00a0\nvertex. So, if I look up A, A square bracket\u00a0\u00a0 i in an adjacency list, it gives me a list\u00a0\nof values, precisely those neighbours. So,\u00a0\u00a0 if I want to scan this list, it is only\u00a0\npropo"
+    },
+    "446fd249-4175-45c7-9644-21f9b52d70b2": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": "rtional to the degree of that vertex. So,\u00a0\u00a0 with both of these, we can systematically explore\u00a0\nthe graph. So, we saw that we want to do the\u00a0\u00a0 reachability kind of analysis and we have to do\u00a0\nit, start into a graph and mark all the vertices\u00a0\u00a0 are reachable."
+    },
+    "5d9afd1e-dfd5-4b67-8f1f-59738efcc8e8": {
+        "content_id": 32,
+        "course_name": "PDSA",
+        "title": "Representing Graphs",
+        "week": 4,
+        "chunk": " So, we will now describe how to do\u00a0\nthese computations using these representations."
+    }
+}

@@ -1,0 +1,555 @@
+{
+    "5895c343-314e-4380-b528-b7df147d33ad": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "So, we talked about flexible lists, which can\u00a0\nexpand and contract, I mean, which are like a\u00a0\u00a0 train. So, they have this kind of linked\u00a0\nstructure. So, let us try and understand,\u00a0\u00a0 how we might actually program such a\u00a0\nlist. So, a list is now a sequence of"
+    },
+    "027fb3a4-525c-406a-beb9-cc1d47b2b24b": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "\u00a0\u00a0 nodes. Each node consists of a value, and\u00a0\nsomething that points the next node. \n\u00a0 And we argued that using this plumbing\u00a0\noperation, it is easy to insert and delete\u00a0\u00a0 locally. But in order to navigate to a\u00a0\nparticular point in the list, you will\u00a0\u00a0 have"
+    },
+    "bc17eb49-9332-40de-8c66-362144c8ef2b": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " to start from the head each time, so it is\u00a0\ngoing to take you some time to reach that point.\u00a0\u00a0 So, the typical way to represent these\u00a0\nis as collections of these nodes. So,\u00a0\u00a0 we need something which represents one node in the\u00a0\nlist, and then we will strin"
+    },
+    "2fb00ad4-4f52-4678-819f-23739c6cbbb5": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "g them together. \n\u00a0 So, we define a class node, and this\u00a0\nclass node will have two parts. So,\u00a0\u00a0 it will have one part which stores the value, so\u00a0\nlet us just call itself dot value. So, remember,\u00a0\u00a0 this object-oriented thing that we discussed\u00a0\nin the very f"
+    },
+    "39700450-43e3-41ac-8854-8396e0f8ed26": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "irst week. So, each object refers\u00a0\u00a0 to itself through this name, self. So, self dot\u00a0\nvalue is my value field, and self dot next is my\u00a0\u00a0 name for the next node in the list. \nSo, if there is no next node I will just use the\u00a0\u00a0 default Python value none. So, t"
+    },
+    "9f43ce5e-6ce4-4857-af50-eefbd4e1061c": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "his is the\u00a0\ninitialization. So, when I initialize a list,\u00a0\u00a0 I pass a value, I set the value\u00a0\nto that list. And initially,\u00a0\u00a0 this list has only one node, so the\u00a0\nnext is always going to be none.\u00a0\u00a0 So, one of the important things we have to\u00a0\ndeal with is thi"
+    },
+    "07d30d3d-a193-4c1e-a37e-4781d27a2899": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "s notion of an empty list.\u00a0\u00a0 So, when we write something like in normal\u00a0\nPython, if we want an empty list, we have\u00a0\u00a0 to write this. Because if we do not write this,\u00a0\nand later on we try to add something to it. \n\u00a0 Supposing I want to start with a list with\u00a0"
+    },
+    "cd365153-c992-49a4-9c68-8871cb97204d": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "\nthe value 0, and I write l dot append 0,\u00a0\u00a0 then Python will say, I do not know\u00a0\nwhy you are allowed to use append on l,\u00a0\u00a0 because you have not told me it is a\u00a0\nlist. So, we always need to initialize\u00a0\u00a0 value to an empty data structure, data\u00a0\ntype of that v"
+    },
+    "c1cefe37-15bd-4db7-86f3-6a4945df391c": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "alue in order to tell Python,\u00a0\u00a0 what is the legal operation allowed on that?\u00a0\nSo, this initialization is important. \n\u00a0 Now, the problem with Python is that there is\u00a0\nno way to tell it, other than to initialize it.\u00a0\u00a0 There is no way to say l is a list. So, "
+    },
+    "caa9e9bf-e65e-4a7d-aff6-49101da38594": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "other\u00a0\nprogramming languages, if you are familiar with\u00a0\u00a0 programming languages, like C or C plus plus\u00a0\nor Java, whenever you use a variable or a name,\u00a0\u00a0 you first have to tell the compiler which type\u00a0\nof value it is going to hold. So, you have to\u00a0\u00a0 say I a"
+    },
+    "3c2aa573-ca21-4ac6-aa5f-e08c5a8c987b": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "m using i and is going to be an int, I\u00a0\nam using l and it is going to be an array. \n\u00a0 So, this information is there independent of\u00a0\nthe value that you store, so there is a separate\u00a0\u00a0 piece of meta data, as it is called about\u00a0\nyour variables, which is known"
+    },
+    "f9911ad4-e6a4-4359-ba4d-5c6ae5f199cf": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " in advance.\u00a0\u00a0 Now in Python, we do not have that. So, we have\u00a0\nto be able to represent these empty lists. So,\u00a0\u00a0 in our context, think of a node as a box with two\u00a0\nparts. So, this is our value and this is our next.\u00a0\u00a0 So, we know that if it is a\u00a0\nsingleton,"
+    },
+    "f4a87f14-9ba3-4a37-b35b-724a34541ee6": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " the next is none. \n\u00a0 So, what we will use as a convention is that if\u00a0\nthe value is also none, then this is an empty\u00a0\u00a0 list. The only situation in which you could have\u00a0\na node, which has no value is when it is the first\u00a0\u00a0 node of an empty list. And if it i"
+    },
+    "9af8ae80-fa06-4f77-90ab-fc52a1fb412e": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "s the first\u00a0\nnode of an empty list, by definition, there are\u00a0\u00a0 no other nodes. So, this gives us this motivation\u00a0\nfor this function. So, this says, is the list I\u00a0\u00a0 am looking at empty or not. So, it says, if the\u00a0\nvalue is none, yes, it is empty return true"
+    },
+    "70fe02ad-663b-4da7-a88e-84fb58728faa": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": ". \n\u00a0 If the value is not none, then it cannot be\u00a0\nempty, return false. And if the value is none,\u00a0\u00a0 implicitly, the next must be none. We will never\u00a0\never check the next if the value is none because\u00a0\u00a0 we will believe it is an empty list. So, the\u00a0\nempty list"
+    },
+    "96feb8ad-4b8d-4e47-9a06-8789648979a1": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " is one where self dot value is none.\u00a0\u00a0 So, the way we would use this, remember,\u00a0\nis to just call this node class, as we\u00a0\u00a0 would call a function with an argument, which is\u00a0\noptional, because we have this default value. \n\u00a0 So, if we call node with no argume"
+    },
+    "2d0e2941-f372-4057-a3ed-f3db08df32ae": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "nt, we get an\u00a0\nempty list. The self dot V by default is set to\u00a0\u00a0 the value not none. On the other hand, if you call\u00a0\nit with a concrete argument like a 5, then we will\u00a0\u00a0 get a node containing this is in Python notation,\u00a0\nthis would lead the list 5, and thi"
+    },
+    "71fcfd18-889e-4286-81ba-984f64331be6": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "s would be the\u00a0\u00a0 empty list. So, this is what we are saying. \nSo, if I now for instance,\u00a0\u00a0 check it, then it will say that l1 is empty is\u00a0\ntrue and l2 two is empty is false, because l1,\u00a0\u00a0 if I look at it self dot values none, l2, if\u00a0\nI look at it self dot "
+    },
+    "d170ffa4-4097-4e4b-992c-3233b1bf8365": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "values, not none. So,\u00a0\u00a0 this is our basic building block. So, this is how\u00a0\nwe build up a list. Now we have to think about how\u00a0\u00a0 we will actually grow and shrink these lists. \nSo, in a list, there are many different ways\u00a0\u00a0 you could define the operations, b"
+    },
+    "939dc998-ca50-471d-a071-ac6f3cc80abd": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "ut the most\u00a0\nconventional thing to do with a list is to take\u00a0\u00a0 a list and either add at the end, which we call\u00a0\nappend or insert at the beginning. Now you can\u00a0\u00a0 modify it to same, I mean, you can apply the same\u00a0\nprinciple to insert anywhere in the middle a"
+    },
+    "981d3c99-04dc-444a-9a7a-df19f58d8a2a": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "lso,\u00a0\u00a0 but the two interesting cases are append and\u00a0\ninsert and they have different properties. \n\u00a0 Actually, append turns out to be much easier\u00a0\nthan insert, as we will see. So, typically,\u00a0\u00a0 what we have through this kind of thing is, say\u00a0\nl1 is pointing t"
+    },
+    "befcc2ea-8bba-4061-b208-cac27cb10a28": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "o the first node in the list,\u00a0\u00a0 the first node is pointing to the next\u00a0\nnode, and so on. So, what we want to say\u00a0\u00a0 is take the node point the list pointed\u00a0\nto by l1, and append a value V to it.\n\u00a0 So, we want to add a value at the end of the\u00a0\nlist. So, what"
+    },
+    "4ba94d3c-adcf-4591-9220-5eea87c7f6ed": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " are the possibilities? So, the\u00a0\u00a0 first possibility is that there is nothing in the\u00a0\nlist, the list is empty. So, if the list is empty,\u00a0\u00a0 then we basically take this list currently looks\u00a0\nlike none, none and we change it to the list\u00a0\u00a0 looks like V none. So"
+    },
+    "f97f07f9-93fb-4fab-b978-001002369407": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": ", we just update the value\u00a0\nfield to v, and we leave the next field unchanged\u00a0\u00a0 and we are done.\nNow,\u00a0\u00a0 if we are at the end of the list,\u00a0\u00a0 the last node will have some value, and it will\u00a0\nsay, there is no, there are no more nodes in this.\u00a0\u00a0 So, in this ca"
+    },
+    "84b83748-c370-4cf1-a37e-ab15bffaa836": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "se, what we do is, we create a\u00a0\nnew node. So, we call this node constructor,\u00a0\u00a0 as it is called. We create a new node, which will\u00a0\nbe the form V comma none because we need a node,\u00a0\u00a0 which has the value V that we're trying to\u00a0\nappend, and we set this to poin"
+    },
+    "63606ff3-dc7e-41cc-893d-d1daeae870ba": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "t there. \n\u00a0 So, self dot next, if self dot next is none,\u00a0\nwhich means, I am at the end of the list,\u00a0\u00a0 then instead of making it none, I make\u00a0\nit point to a new node that I create\u00a0\u00a0 now. I create a node with the value\u00a0\nV and I make this node point to that.\u00a0"
+    },
+    "e4382c3b-dbbc-4f97-a70d-5f4dbf83b90c": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "\u00a0 And if I am in the middle of the list. So,\u00a0\nsupposing I am here, and it says that there is,\u00a0\u00a0 there are some more nodes to my right then I just\u00a0\npostpone the work by saying that, appending to\u00a0\u00a0 this node is the same as appending to the next\u00a0\nnode, so I j"
+    },
+    "220b60c7-609c-4afa-b760-119fb9d8bf0a": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "ust say, append on the next node.\n\u00a0 So, if I say l dot append I am appending on\u00a0\nthe first node, the first node has an X node,\u00a0\u00a0 it will say, okay, append to the second node.\u00a0\nFinally, we'll keep walking down in this recursion\u00a0\u00a0 will end at the last node, "
+    },
+    "338398c4-787c-4624-b31c-54f52ce2988b": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "the last node will\u00a0\nsay, why have no next node, and then it will\u00a0\u00a0 create the node and append it. And there is this\u00a0\nbase case where the initial node itself was empty,\u00a0\u00a0 where I just update, I do not create a node,\u00a0\nI just change the value from none to v. "
+    },
+    "92215149-f91e-45ea-8216-b64f042cf778": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "\n\u00a0 So, this is a very straightforward recursive\u00a0\nimplementation of append. It has three cases.\u00a0\u00a0 Am I empty? Am I the last node or if I am not the\u00a0\nlast node then recursively call? So, in this case,\u00a0\u00a0 it is quite easy to think of how you would do\u00a0\nan itera"
+    },
+    "69fa300f-260a-4fc6-a913-7138df0b721e": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "tive implementation, essentially, you\u00a0\u00a0 do the same thing. I check it is empty. If it is\u00a0\nnot empty, I keep following this next pointer. \n\u00a0 I can create a loop, which says, I keep going to\u00a0\nnext, next, next until next is not then I know I\u00a0\u00a0 am at the last "
+    },
+    "6b972123-4952-4608-8c38-3fff61f82ff7": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "node and then I do the same thing.\u00a0\nSo instead of using recursion to go this way,\u00a0\u00a0 I can use a loop saying while the next pointer\u00a0\nis available, go to the next pointer. \n\u00a0 So, here is an iterative implementation.\u00a0\nSo, if it is empty, replace the value\u00a0\u00a0 f"
+    },
+    "5661fc4f-21c7-4d1d-861d-d92bdfa493ee": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "rom none to v, otherwise, we loop through this\u00a0\nnext until we find the last node. How do we\u00a0\u00a0 find the last node? Next is none. And then at that\u00a0\npoint in the same way as we did before, we append.\u00a0\u00a0 So, here is the thing. So, if it is empty, we do\u00a0\nthe sam"
+    },
+    "d44ef436-4de1-4685-a5b5-3dedff0ddc74": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "e thing. If it is empty, we just change\u00a0\u00a0 the value to V and return, otherwise, we have to\u00a0\nstart here and we have to keep walking down. \n\u00a0 So, we use a new name to do this walking, so\u00a0\nwe call it temp. So, we first point temp the\u00a0\u00a0 first thing. Then if te"
+    },
+    "2366b2c8-7513-46dc-9890-cd3805ced2b5": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "mp has a next, then we\u00a0\nwill move temp to the next, so temp will become\u00a0\u00a0 temp dot next. So, temp will keep moving from one\u00a0\nnode to the next, so long as the next is defined.\u00a0\u00a0 It will exit from this when it reaches the last\u00a0\nnode. So, when I have here and"
+    },
+    "6673465e-d6f0-47d1-8291-f038e59df2a6": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " I reached temp,\u00a0\u00a0 supposing this is the last node,\u00a0\nthen it will have no successor. \n\u00a0 So, when temp dot next is none this\u00a0\nwhile loop exit. So, now I know,\u00a0\u00a0 the temp is pointing to the last node in my\u00a0\nlist. At this point, I just create a new node V\u00a0\u00a0 a"
+    },
+    "d40ebeaf-8535-4a1e-ab8e-dad0ffa349da": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "s before and I make temp dot next point to\u00a0\nit and I am done. So, this is an iterative\u00a0\u00a0 version of that append. So, both of these\u00a0\nare very simple, because we do not have to\u00a0\u00a0 do anything except for in some sense go to the\u00a0\nend of the list and add somethi"
+    },
+    "5ebff7a3-3022-4df1-ad0c-e99a5b8e90ed": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "ng at the end.\n\u00a0 For the other operation, as I said is insert.\u00a0\nI want to insert not at the end of the list,\u00a0\u00a0 but at the beginning, so I call\u00a0\nthat append, I call this insert.\u00a0\u00a0 So, I have a value V, which I want to stick I want\u00a0\nto put this here. So, wha"
+    },
+    "bdc5b249-0729-4962-b47e-05f5f0bcb0d3": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "t is the logical thing to\u00a0\u00a0 do? The logical thing to do, is to say, that I\u00a0\nmade this head point there and V point here.\n\u00a0 Now, unfortunately, this is a\u00a0\nproblem. Because inside a function,\u00a0\u00a0 when I call an object, it is like calling a\u00a0\nfunction. If I call"
+    },
+    "620d8baf-7ece-4bfc-a418-915492759416": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " a function with the value\u00a0\u00a0 l which is like this, something which can change,\u00a0\nbut if I update it inside then it gets lost. So,\u00a0\u00a0 if I, it will get create, I will lose this list.\u00a0\nI cannot take the head and point it inside the\u00a0\u00a0 function change what is po"
+    },
+    "bd6263b6-2c84-47b9-bdda-985e67efad91": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "inting to it. \nIt is the same as if I pass an l to a list\u00a0\u00a0 processing function and I reassign l inside, then\u00a0\nthe l inside becomes different from the l outside,\u00a0\u00a0 so outside nothing changes. So, the same will\u00a0\nhappen here. If I go inside this thing and I\u00a0"
+    },
+    "657dd851-68dd-4d5c-92ee-1ffbf8686bd3": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "\u00a0 change where head is pointing to, then the old\u00a0\nhead will remain where it was and this whatever\u00a0\u00a0 changes I make will happen inside the function,\u00a0\nbut will not happen outside. So, this insert will\u00a0\u00a0 have no global effect. So, this is not allowed.\nSo, thi"
+    },
+    "3c1111c5-81ae-41c8-938c-db18ad50bd77": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "s would be the easiest solution. Just stick\u00a0\u00a0 a new node at the beginning and point to that\u00a0\ninstead of the first node it that, but that is\u00a0\u00a0 not a lot. So, now what do we do? So, what we\u00a0\ndo is, we have to do something which is kind of\u00a0\u00a0 not obvious initi"
+    },
+    "58c89b05-f0b2-48e1-abc9-053846cd1411": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "ally, which is, we have\u00a0\nto so, what is the status of this node? \n\u00a0 Remember that in a linked list, the physical\u00a0\nposition of a node makes no difference only the\u00a0\u00a0 logical position matters. So, what we want to do\u00a0\nis make this new value V logically come be"
+    },
+    "e150f6ed-d0de-4a85-be45-a8c67e3bcb4f": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "fore V0,\u00a0\u00a0 but we for us, the first value you\u00a0\npoint to is always in this node.\u00a0\u00a0 So, the first place I point to must\u00a0\ncontain V. So, I need to move this V here.\u00a0\u00a0 But if I move this V here, then where does\u00a0\nthe V0 go? Well, I have made space for it,\u00a0\u00a0 so "
+    },
+    "3cf8c833-18a7-4a51-a1ff-fe837fcbdcb2": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "I will move this V0 there. \nSo, what we can do instead is we can exchange\u00a0\u00a0 the positions of V and V0. So, I create a new\u00a0\nnode, I have a new node, which I want to add,\u00a0\u00a0 which has a value V, and I have a list with\u00a0\nsuch as V0, so I just swap the values. S"
+    },
+    "68fcba60-ab7e-4eca-aa82-5c51c2600c22": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "o,\u00a0\u00a0 the nodes are still where they are. So, my head\u00a0\nis now pointing to a new list, the same old list\u00a0\u00a0 rather, which starts with the new value V and then\u00a0\ngoes to V1 , and V0 is now sitting up there. \n\u00a0 But now I can do this plumbing, I can\u00a0\nmake V0, V p"
+    },
+    "cabb220d-2237-46f3-8b96-60732e0a00a4": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "oint V0 and V, so I can make\u00a0\u00a0 this point there and this point here.\u00a0\nSo, once I do that, then I am done.\u00a0\u00a0 So, this is how we insert at the beginning of\u00a0\nthe list. So, what we do is we swap the value\u00a0\u00a0 of what head is pointing to with the value we\u00a0\nwant t"
+    },
+    "4562dcd0-6a16-4c40-b262-38472ce33649": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "o exchange and then we do this update.\n\u00a0 So, here is some code for that. It is very\u00a0\nstraightforward it is not very complicated.\u00a0\u00a0 So again, if it is empty, inserting into an\u00a0\nempty list is equivalent to appending it to\u00a0\u00a0 an empty list. If I have an empty "
+    },
+    "44e7fecb-3714-4478-9a4f-a480b648330d": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "list, it is the\u00a0\nfirst and the last element of the new list. So,\u00a0\u00a0 I just update the value to V. Otherwise, I create\u00a0\na new node, which I am going to add to my list at\u00a0\u00a0 the beginning, but I cannot add it directly.\nSo, what I do is, I first exchange this v"
+    },
+    "54a4d395-773e-4c28-92ed-dcc2becacb09": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "alue\u00a0\u00a0 and the value of self. So, self, remember,\u00a0\nis pointing to the beginning of the list. So,\u00a0\u00a0 self is the zeroth value in my old list. So,\u00a0\nI exchange the value of the old list head and\u00a0\u00a0 the new node that I have created and then\u00a0\nI do the swapping of"
+    },
+    "91af0017-dd93-4ec4-b50b-3c3acf0e78df": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " links. So, I make the\u00a0\u00a0 new node point to the next of the old list,\u00a0\nand the new thing next point to the old. So,\u00a0\u00a0 I take self dot next and make it point to the\u00a0\nnew node, and I take new node dot next. \n\u00a0 So basically, I had this link, and I have this ne"
+    },
+    "473f3ac6-faea-40f6-a5fd-816d1a6c9f1e": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "w\u00a0\nnode here, so I am now going to change this. So,\u00a0\u00a0 I am going to say that, instead of pointing\u00a0\nhere, I am going to make this point there,\u00a0\u00a0 so that is the self dot next is equal to new\u00a0\nnode. And instead of having, I mean, right now,\u00a0\u00a0 this is not poin"
+    },
+    "4cfb3682-31ab-4433-8c20-60b6114ec08d": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "ting to anything, because it is\u00a0\na new node it was none, so I am going to make\u00a0\u00a0 that point here. So, I do this plumbing,\u00a0\nand I am done. So, this is my insert. \n\u00a0 What about delete? So, now delete is more\u00a0\ninteresting when you actually tell me what value\u00a0"
+    },
+    "81231e1f-9b3e-4e83-a7a1-42e83bbfa5bc": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "\u00a0 to delete. When I insert a value, it is I said\u00a0\nthat we will look at the case where the insertion\u00a0\u00a0 happens at a fixed place, either the beginning or\u00a0\nthe end. The end is append, the beginnings insert,\u00a0\u00a0 but deleting the first value of node is not\u00a0\ntypic"
+    },
+    "9016e333-d111-461a-828f-c6b733c5148a": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "ally, of a list is not typically what\u00a0\u00a0 we want. What want to say is, I give you a\u00a0\nvalue V, please delete it from the list. \n\u00a0 Now, deleting from a list can mean many things.\u00a0\nIt could mean, delete all the values or delete\u00a0\u00a0 the first value or delete the "
+    },
+    "511c0c84-c8be-4b28-92ed-cad7384fc2ac": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "last value or\u00a0\ndelete some value, so let us just for the sake of\u00a0\u00a0 concreteness, say that when we say delete a value\u00a0\nV, we mean, remove the first occurrence of V.\u00a0\u00a0 And in particular, if there is no V in the list,\u00a0\nthen it will just do nothing, right. So,"
+    },
+    "04065391-a91d-4ccd-9bcd-7ca4e299a37e": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " deleting\u00a0\u00a0 a V from a list that does not contain a V does\u00a0\nnot create an error it merely does nothing.\n\u00a0 So, what we have to do is we have to go through\u00a0\nthe list and look for the first V, and then we\u00a0\u00a0 have to delete it. Now, the problem is that, I\u00a0\ndo n"
+    },
+    "c0bc3ba6-6cd6-44c6-b3eb-b3628cce6b2f": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "ot know if you are seen, but old style people\u00a0\u00a0 demolishing a house they will, you find these\u00a0\npeople who are workers who are standing on a wall,\u00a0\u00a0 and they will have a hammer and they will\u00a0\nbe hammering the wall below them. And I have\u00a0\u00a0 always wondered ho"
+    },
+    "27bbe488-25fe-4ce6-99e6-8715ab7b7ad3": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "w they know when the wall\u00a0\nis going to be safe enough to stand on. \n\u00a0 And when they have to jump off and then\u00a0\nfinish the job standing, but it is kind\u00a0\u00a0 of easier to hammer down like this. So, in\u00a0\nthe same way, if you are sitting on the node,\u00a0\u00a0 which has a"
+    },
+    "deba3c6b-5a54-4a55-ac88-3a0222e1f500": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " V and you want to delete it, it is\u00a0\nkind of difficult. So, if you are sitting here\u00a0\u00a0 and you want to delete this V, this is not\u00a0\na good way to do. So, what you want to do\u00a0\u00a0 is actually sit here and look ahead and see\u00a0\nis the next node that I want to delet"
+    },
+    "2d63b24c-0fb3-4862-b3f8-29e6f23b1e2a": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "e. \n\u00a0 And the next node is the one that I\u00a0\nwant to delete then I will make myself\u00a0\u00a0 point to that node, so I can bypass it. So,\u00a0\nthis bypassing is basically just a way of\u00a0\u00a0 saying that my next pointer points to the node\u00a0\nwith V. Instead, I make it to point"
+    },
+    "4e8cf6ff-2ca9-45b2-8a5f-a88deab62ccb": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " to the node\u00a0\u00a0 after that. And how do I know that because the\u00a0\nnode with V tells me where the next node is. \n\u00a0 So, let us look at this code.\u00a0\nSo, this is the bypass. So,\u00a0\u00a0 what we say is, that I want to delete the\u00a0\nvalue V. So, if I, if the current value i"
+    },
+    "c9fc8746-fa91-4d0f-9401-98e32442d8f0": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "s V,\u00a0\u00a0 so this is a difficult case that we will come\u00a0\nto. So, the recursive case just says that,\u00a0\u00a0 if the next, if I am not deleting it here, then\u00a0\nI delete the V from the next point onwards. So,\u00a0\u00a0 but so the difficult cases really now that we are\u00a0\npointin"
+    },
+    "57967ac7-560c-4ed6-b50d-aa197bc736fb": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "g from the head to a node containing V,\u00a0\u00a0 and then V1, and then so on. \nSo, this is the thing where I want to delete\u00a0\u00a0 this note, we have the same problem as before\u00a0\nwith insert, which is I cannot make this head\u00a0\u00a0 point there directly, because I cannot\u00a0\nch"
+    },
+    "319cd9a9-0e34-4f9b-8b3a-f6d9548b8f28": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "ange the node that the head is pointing to.\u00a0\u00a0 So, it is exactly the same problem when we said\u00a0\nwhen you insert the beginning, we would like\u00a0\u00a0 to make the head point to the new node and then\u00a0\ncome down to the old node, but we cannot do that.\u00a0\u00a0 So, what did "
+    },
+    "0d3d281b-b3c5-4761-a424-63e15d4d7767": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "we do there? We exchanged.\nWe exchange the two values and then made this,\u00a0\u00a0 the new node actually the second node in the list\u00a0\nby making this, the zeroth node point to that. So,\u00a0\u00a0 we can do the same thing here. So, what we\u00a0\ndo is, instead of trying to dele"
+    },
+    "fca40a07-4ccd-453c-8c9a-161a5843bf0d": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "te this,\u00a0\u00a0 we move this V1 here, so logically, there\u00a0\nis no V anymore. And then we delete this.\u00a0\u00a0 So, that is what is happening here. \n\u00a0 So, we say that if I want to delete\u00a0\nthe value that I am pointing to,\u00a0\u00a0 then what I do is, I check. I mean, there may b"
+    },
+    "d3be94ae-d4fb-4420-9acc-2ad3a709c02c": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "e\u00a0\nno next note, maybe this is a singleton, in which\u00a0\u00a0 case, I just set it to none. But if I have a next\u00a0\nnode, then I copy the value from the next node\u00a0\u00a0 and now I bypass, so this is bypass. So, self dot\u00a0\nnext, my next is pointing to my next, next. \n\u00a0 So,"
+    },
+    "0bec9be5-400a-4cc9-b428-a39c3a67bf34": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " whatever the next node says is, the next is\u00a0\nthe node that is two steps down, is what I am\u00a0\u00a0 going to point to. So, this is a simple recursive\u00a0\nversion. So basically, it has now three cases.\u00a0\u00a0 Either the, I have reached the end of the list and\u00a0\nthere is n"
+    },
+    "a53d456c-7f60-4314-b074-4c49395b38b5": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "othing to delete. So, I have an empty\u00a0\u00a0 road list and nothing is there, I just get out.\u00a0\nOtherwise, if I have to delete the value here,\u00a0\u00a0 then I first deleted, so I just\u00a0\nchange this value to none. \n\u00a0 And now I check whether there was something after\u00a0\nme. "
+    },
+    "3ef2b0b1-3465-4d5f-b425-860827dddaf0": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "Because I cannot remember, if I cannot have\u00a0\u00a0 value none unless it is the empty list. So, if it\u00a0\nis not the empty list, I have to do some work. So,\u00a0\u00a0 in that case, what I have to do is, I have\u00a0\nto copy this value and then I have to bypass.\u00a0\u00a0 So, to draw it"
+    },
+    "29dcb310-e2e0-4141-9a80-85861348dcf1": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " again. \nSo, basically, if I have\u00a0\u00a0 let us say I have three nodes and this\u00a0\nis my V and this is V1 and this is V2,\u00a0\u00a0 then what I will do is, I will first set\u00a0\nthis to none, then I will copy V1 here,\u00a0\u00a0 and then I will say self dot next dot next\u00a0\nis this thi"
+    },
+    "fb199478-e6de-4d65-a8f6-90e3c4af51cb": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "s thing. So, I will say move this\u00a0\u00a0 to there, so that is the bypass. So, this is a\u00a0\nrecursive implementation. And as an exercise,\u00a0\u00a0 you can write an iterative version just to\u00a0\ncheck that you understand what is going. \n\u00a0 So, what we have seen, is that, by t"
+    },
+    "a888d514-ffd1-42ff-a0d5-f900e126857d": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "aking\u00a0\nthis class node, which contains a value and\u00a0\u00a0 a next pointer, and we can string it together\u00a0\nlike a train and make a flexible list. So,\u00a0\u00a0 programming a flexible list is not very\u00a0\ndifficult, we can make one of our own.\u00a0\u00a0 In this, because we start fro"
+    },
+    "bbceecda-b56e-4576-af51-93ad1a0ec0e3": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "m the beginning,\u00a0\nadding at the end of the list is quite easy,\u00a0\u00a0 because we do not, all the difficult part\u00a0\nhappens when we have some changes to make\u00a0\u00a0 at the node which head points to. \nSo, the node that is pointed to by the first name\u00a0\u00a0 of the list is th"
+    },
+    "76803e26-96c6-4240-b0eb-8e687bc73d6d": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "e one that is tricky to handle.\u00a0\nSo, append is easy, insert requires some care. And\u00a0\u00a0 when deleting basically what we do is, effectively\u00a0\nwe look one step ahead, and so we try to delete\u00a0\u00a0 the value at the next node by bypassing it. But\u00a0\nthen if we are doin"
+    },
+    "897f84ef-747e-4f6f-adaf-5caecf7b637d": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": "g it recursively it amounts\u00a0\u00a0 to then coming to the node and then deleting\u00a0\nit and then we have to do something else. \n\u00a0 If you are doing it iteratively you will\u00a0\nlook at the next node and then bypass.\u00a0\u00a0 So, this is what a flexible list looks like.\u00a0\nBut as"
+    },
+    "21622de4-3b5e-46c1-9276-29c1f0f38783": {
+        "content_id": 27,
+        "course_name": "PDSA",
+        "title": "Designing a Flexible List and Operations on the Same",
+        "week": 3,
+        "chunk": " we will see, actually the Python lists\u00a0\u00a0 as they are implemented in the language are\u00a0\nnot these flexible list. So, all this analysis\u00a0\u00a0 of what flexible lists do, does not really\u00a0\nhold for Python, because of that.  "
+    }
+}

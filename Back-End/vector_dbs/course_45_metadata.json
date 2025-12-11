@@ -1,0 +1,674 @@
+{
+    "8c6fe892-9c6c-4beb-987f-7575f9d81ccb": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "So, we have seen Prim s algorithm for the minimum\u00a0\ncost spanning tree which starts with a vertex\u00a0\u00a0 or with a minimum cost edge and grows the tree\u00a0\ngradually. The second strategy to build a minimum\u00a0\u00a0 cost spanning tree is the one due to Kruskal. \nSo, in Kru"
+    },
+    "47437552-d82f-4795-b35e-3e5c10671c31": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "skal's algorithm what we do is we start\u00a0\u00a0 with n components, so we think\u00a0\nof each vertex as an isolated\u00a0\u00a0 component and then we try to combine components\u00a0\nwith the shortest edge available to us. So,\u00a0\u00a0 we process the edges in ascending order and each\u00a0\ntime "
+    },
+    "8e8817a1-555c-450b-a41d-e6287dbf5af0": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "when we come across an edge we include it, in\u00a0\u00a0 other words it grows the tree by merging two\u00a0\ncomponents provided it does not create cycle.\n\u00a0 So, for instance if we have this graph, so\u00a0\nif we sort the edges then we start with the\u00a0\u00a0 smallest edge which is t"
+    },
+    "294a818c-2e98-49ed-9e0f-d1406b2aecf7": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "he edge 1 to 3, so this\u00a0\nis the smallest edge because it has weight 6.\u00a0\u00a0 So, when we add this edge we get a one\u00a0\ncomponent, initially we start with 5 components,\u00a0\u00a0 the four vertices, 0 to 4 when we add\u00a0\nthis edge it merges the components 1 and\u00a0\u00a0 3 and it g"
+    },
+    "9e7a9ed3-b3e7-492c-aa06-4d8ca5f51d99": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ives us now 4 components.\nNow the next smallest edge is this one,\u00a0\u00a0 so notice that unlike Prim s algorithm, so Prim\u00a0\ns algorithm would take this tree which we had\u00a0\u00a0 already started with and try to extend it in\u00a0\nsome direction so we are not doing that.\n\u00a0 So"
+    },
+    "8f58d09f-3f5e-45cb-bf04-0a3325f2a768": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": ", instead what we are doing is we are saying\u00a0\nwe will build up this tree in disjoint parts,\u00a0\u00a0 so as and when we can add a small edge we add\u00a0\nit. So, when we add 2, 4 we create yet another\u00a0\u00a0 component but there is no cycle yet, so it is\u00a0\nstill potentially a"
+    },
+    "18103b0f-59fe-476f-b922-610572989dcd": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " tree. So, now we have added 1,\u00a0\u00a0 3 and 2, 4, now we add 0, 1 which is also\u00a0\nthe next smallest edge, so we get to 10.\n\u00a0 And then finally we add, we try to add 0, 3\u00a0\nbecause 18 is the next smallest edge but if\u00a0\u00a0 I add 0, 3 then we get a cycle here\u00a0\nbecause "
+    },
+    "7b57423d-b243-4bef-8628-b5acff6227b1": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "we already added 1, 3 and 0,\u00a0\u00a0 1. So, we cannot add this edge so we skip it.\nSo, we go to the next biggest edge, next biggest\u00a0\u00a0 edge is 20 and then when we add that we are done\u00a0\nbecause now we have connected these 5 vertices\u00a0\u00a0 with 4 edges, so this is Krus"
+    },
+    "09f8a408-e9bb-4a78-a02c-1e8200eb182b": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "kal's algorithm so\u00a0\nthe idea is that instead of creating a tree from\u00a0\u00a0 scratch and growing it as a tree all the time you\u00a0\nuse the edges in a kind of greedy fashion anytime\u00a0\u00a0 you can use a small edge you draw it, throw it\u00a0\nin, if you cannot use an edge you "
+    },
+    "e48b5e82-9638-4a8a-95f5-bf20f87cff97": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "skip it.\n\u00a0 So, to start with we order the edges in\u00a0\nascending order because we want to start\u00a0\u00a0 with the smallest weight edge and grow\u00a0\nthis tree by combining components. So,\u00a0\u00a0 we have a set of tree edges that we have currently\u00a0\nused and initially this set "
+    },
+    "5c8180df-2cff-4252-9f02-8ee0ce52dc47": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "of tree edges is\u00a0\u00a0 empty so we do not have a tree to begin with.\nNow, we scan the edges from the first to the last\u00a0\u00a0 from 0 to m minus 1 and we try to add it to the\u00a0\ntree. So, if we try to add it to the set of tree\u00a0\u00a0 edges either it will create a new compo"
+    },
+    "f4ca4dbb-59f5-45a5-8f5e-50716f1f23ee": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "nent by\u00a0\ncombining two components or it will try to connect\u00a0\u00a0 two parts which are already in the same component.\u00a0\nSo, if it is going to create a loop we skip it,\u00a0\u00a0 loop or a cycle otherwise, we add it.\nSo, let us look at a more complicated graph,\u00a0\u00a0 it is l"
+    },
+    "061402fb-9376-43a6-bee1-242cb90a997a": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ittle easier to visualize. So, here are\u00a0\nall these edges. Now, we sort them, so when we\u00a0\u00a0 sort them we find that this is the smallest\u00a0\none because it has weight 5, then this is the\u00a0\u00a0 next smallest one because it is weight 6, then\u00a0\nwe have two at, at three "
+    },
+    "5f98c36b-801b-47b8-85fd-52dda58b013f": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "weight 10, so we have\u00a0\u00a0 these three edges all at weight 10, so we put\u00a0\nthem in some order so say 0, 1, 4, 5 and 4, 6,\u00a0\u00a0 so we are ordering them by the vertex number.\nThen we have this 18 weight edge which is 0,\u00a0\u00a0 2. And then finally we have this 20 and the"
+    },
+    "e384dbbe-bcdc-47a0-96b1-bcf56398ebef": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "n\u00a0\nthe 70. So, this is the order of edges that\u00a0\u00a0 we are going to process in ascending order of\u00a0\nweight. So, initially our tree is empty. So,\u00a0\u00a0 we can always add the smallest edge, so this\u00a0\nis what we saw with Prim s algorithm also that\u00a0\u00a0 we could always st"
+    },
+    "b8142904-4aa9-4477-86d8-69e021adc87d": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "art with the smallest edge\u00a0\nor we could start there with any vertex and\u00a0\u00a0 pick its smallest neighboring edge. \nSo, here we can always start with the\u00a0\u00a0 smallest edge because to begin with\u00a0\neverything is an isolated component,\u00a0\u00a0 so the first edge will merely"
+    },
+    "a84683ae-3182-4d65-8526-bc1f5deb18c0": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " merge two vertices\u00a0\ninto a single component with two vertices.\n\u00a0 So, after I do this, now I go to the next smallest\u00a0\nedge which is this one and notice that this is\u00a0\u00a0 going to create another component far away which\u00a0\nhas no problem, so we add that. Now, we"
+    },
+    "32513d83-5f6b-4402-9250-2a2830ee96d3": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " look at 0,\u00a0\u00a0 1 so that is this one. So, when we add 0, 1 again\u00a0\nit does not create any problem so we add it.\n\u00a0 Now, we look at 4, 5 this is our next one. So, 4,\u00a0\n5 is going to be this edge so again we can add it\u00a0\u00a0 without a problem. Now, we look at 1, 4 s"
+    },
+    "27f9df52-8fdb-4b26-ae58-0da7b5170f91": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "orry, we\u00a0\nlook at 4, 6. Now, if you look at 4, 6 the problem\u00a0\u00a0 is that we already have these two edges so 4, 6 if\u00a0\nwe add it is going to create a cycle so we have to\u00a0\u00a0 skip it. So, we skip over 4, 6 doing nothing.\nAnd now we look at the next one which is g"
+    },
+    "05608bcc-a406-42b7-ac01-215ac8df41d7": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "oing\u00a0\u00a0 to be 0, 2 because we move from 10 in the next\u00a0\nsmallest in the ascending order the next is 18.\u00a0\u00a0 Again we have a problem because we have already\u00a0\nadded these two edges, so we cannot add that edge,\u00a0\u00a0 so we will have to skip 0, 2 as well. So, we\u00a0\nhav"
+    },
+    "98f67254-697c-44e7-9213-de1f076d37c7": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "e skipped these two edges 4, 6 and 0, 2.\n\u00a0 Now, we find 1, 4 is our next possible edge\u00a0\nand adding that does not create a cycle so we\u00a0\u00a0 add it. And finally we have only one edge left\u00a0\nwhich is this 2, 3 the largest edge but that is\u00a0\u00a0 the only edge which co"
+    },
+    "c9cb3413-5db0-4fef-8ed7-4f0427091810": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "nnects to 3, so eventually\u00a0\nit makes sense it has to be in the spanning tree\u00a0\u00a0 so we add it and we are done. So, this\u00a0\nis how Kruskal s algorithm works.\n\u00a0 So, the correctness of Kruskal s algorithm\u00a0\nfollows from the same observation that we use\u00a0\u00a0 to justif"
+    },
+    "e82c2bba-f73f-48c0-8df1-c01ef413090b": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "y Prim s algorithm. So, remember\u00a0\nwe had this minimum separator lemma,\u00a0\u00a0 so we said that if you take the set of\u00a0\nvertices v and you partition it in any way as u\u00a0\u00a0 and w. Now, you take any edge which crosses this\u00a0\nof minimum cost, so this is the smallest ed"
+    },
+    "341c6e8d-27ab-4f6a-807a-38bfcfa49414": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ge\u00a0\u00a0 which crosses this boundary between u and w, then\u00a0\nthe minimum separator lemma said that no matter\u00a0\u00a0 what minimum cost spanning tree you construct this\u00a0\nparticular edge e must belong to that tree.\n\u00a0 And the argument that we said was if it was not\u00a0\nin "
+    },
+    "70c573a4-d1eb-4a33-ac7e-fe9022795188": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "the tree, then there must be some other way\u00a0\u00a0 which connects u to w and we could bypass that\u00a0\nand in fact instead make the tree go through\u00a0\u00a0 this and create a smaller tree, so this was the\u00a0\nlemma that we proved in the context of Prim s\u00a0\u00a0 algorithm. And now"
+    },
+    "9e05e955-bfc5-45bd-b7c7-03cbf2acf1d7": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " we can just use the same result\u00a0\nto claim that Kruskal s algorithm is correct.\n\u00a0 Notice that at any point the set of edges that we\u00a0\nhave create some components and these components\u00a0\u00a0 are disjoint. So, initially we have all vertices\u00a0\nseparately so these ar"
+    },
+    "44a779c4-61c9-4639-b74d-95aec5e23e8a": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "e the components. Now,\u00a0\u00a0 whenever I add an edge to my tree some of\u00a0\nthe components get merged but each component\u00a0\u00a0 is different from every other component, there\u00a0\nis no vertex which belongs to two components.\n\u00a0 So, now when we merge these two things if the"
+    },
+    "b871185c-e576-4ac2-8d52-320183b53687": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "y\u00a0\nare in the same cycle we discard the edge but\u00a0\u00a0 otherwise we have to combine them. So, what are\u00a0\nwe doing we are taking two different components\u00a0\u00a0 so we can think of the two components\u00a0\nas a partition, we can ignore the rest,\u00a0\u00a0 we can put them in one of"
+    },
+    "9452c12f-af2e-464a-bdb9-d8f6158578c2": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " the two partitions. \nSo, we have essentially, we are trying to add\u00a0\u00a0 u and v, so u is connected to some\u00a0\nthings, v is connected to some things\u00a0\u00a0 but we know that these two things are disjoint\u00a0\nbecause otherwise we would have a cycle when\u00a0\u00a0 we added this e"
+    },
+    "934f3ea0-d48e-4274-9410-dff04db0b735": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "dge. So, we are not getting a\u00a0\ncycle so we are allowed to add this edge.\n\u00a0 And of course, we have some other\u00a0\ncomponents sitting around somewhere\u00a0\u00a0 which are not connected to either of these. So,\u00a0\nwhat we can do is we can basically think of this\u00a0\u00a0 as some "
+    },
+    "1d42f47e-9665-4f01-bfe0-bb3853d23c82": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "kind of a partition saying this\u00a0\nis my capital U and this is my capital W.\u00a0\u00a0 And now clearly because all the edges which are\u00a0\nyet to be added are bigger than the edge that I\u00a0\u00a0 have now. So, this is the smallest edge which\u00a0\nconnects, if it were, if I had se"
+    },
+    "0e6499f7-daa2-40ea-9ba0-e46750d5f629": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "en a smaller\u00a0\u00a0 edge before I would have added it. \nSo, so far I have not seen any edge which\u00a0\u00a0 connects capital U to capital W and this is\u00a0\nthe smallest edge of that. So, therefore by\u00a0\u00a0 this minimum separator lemma this particular\u00a0\nedge must be there in th"
+    },
+    "fd6e86e0-85be-42c0-9101-86e2465b97a8": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "e spanning tree.\u00a0\u00a0 So, we are using essentially the same formal\u00a0\nargument as Prim s algorithm to justify that\u00a0\u00a0 every time Kruskal s algorithm adds an edge to the\u00a0\ntree that edge is a valid edge to be added. \n\u00a0 So, the implementation of Kruskal s algorithm"
+    },
+    "15b23bdc-b0b0-45db-a93d-18d56b5c74dc": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " is\u00a0\nreasonably straight forward, so what we have to\u00a0\u00a0 keep track of are the edges in my tree, so that is\u00a0\nthis tree edges and we have to now keep track of\u00a0\u00a0 two things we have to keep track of the vertices\u00a0\nand sort the edges in sorted order to process.\u00a0\u00a0"
+    },
+    "2308d09e-156f-4ce1-93c9-24815da4ab05": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " And we have to keep track of these\u00a0\ncomponents, so this is something which is\u00a0\u00a0 new compared to the other things\u00a0\nbecause we did not have to keep these\u00a0\u00a0 which group of vertices are connected to each\u00a0\nother in any of our earlier algorithms.\n\u00a0 So, the firs"
+    },
+    "6a771331-debf-4876-8f4e-c775b5b5252f": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "t thing we do is we sort the\u00a0\nedges. So, what we do is we take the edges,\u00a0\u00a0 the edges are all the form typically u comma\u00a0\nv comma distance or weight. So, what we will\u00a0\u00a0 do is we will represent them instead as d comma u\u00a0\ncomma v, so we put the weight in the"
+    },
+    "91b6adaf-0b65-4d22-9a76-824713162b39": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " front because\u00a0\u00a0 we want to sort by the weight. So, we create this\u00a0\nlist of edges by putting in d comma u comma v for\u00a0\u00a0 every edge v comma d in the list associated\u00a0\nwith u. So, we process the adjacency list\u00a0\u00a0 starting vertex by starting vertex and for ever"
+    },
+    "3638fff2-a571-4b7f-a80f-41586acaaf5d": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "y\u00a0\nvertex in that list we just throw it in.\n\u00a0 Now, having done this, we sort this and of\u00a0\ncourse this was just something which I had\u00a0\u00a0 used to check my code. So, we sort this and now\u00a0\nwe have the list of vertices in ascending order.\u00a0\u00a0 Now, we just process "
+    },
+    "8587022c-4f06-4b4a-b538-59e09d85d9df": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "them in that order. So, we\u00a0\ntake this d comma u comma v in this edge list\u00a0\u00a0 and we check whether the component of\u00a0\nu is the same as a component of v.\n\u00a0 Now, initially we said that every\u00a0\ncomponent must be a singleton,\u00a0\u00a0 so that we have done in this list. S"
+    },
+    "11468567-06c4-4afc-baa3-3fae313270c9": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "o, whenever,\u00a0\nwhile we are processing the adjacency list,\u00a0\u00a0 we are also assigning to every component,\u00a0\nevery vertex it is a name, so we are creating n\u00a0\u00a0 components 0 to n minus 1 by saying component i\u00a0\nis i. So, the vertex 0 belongs to component 0,\u00a0\u00a0 the v"
+    },
+    "749362b4-b73b-4d64-8d21-08ff94b1d6ed": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ertex. So, we are naming these components,\u00a0\nso the initial names are 0 to n minus 1.\u00a0\u00a0 So, each vertex belongs to a component\u00a0\nwhose name is the same as the vertex.\n\u00a0 Now, what happens when I merge 2 vertices?\u00a0\nSo, I have a vertex u and I have a vertex\u00a0\u00a0 v"
+    },
+    "a2c02655-e8aa-4d5b-bc00-83f329c9bd81": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " and these belong to some component, so\u00a0\nthis component over time has some name,\u00a0\u00a0 so this is some i and this is some j because they\u00a0\nwere originally the vertices, the components which\u00a0\u00a0 belong to vertex i and vertex j and as we merged\u00a0\nwe have to, so when"
+    },
+    "9ea5814a-a8d1-4eba-be20-e610ae98fef9": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " we merge two components we\u00a0\u00a0 keep one of them, the name of one of them.\nSo, if component 1 merges with component 7,\u00a0\u00a0 then we get a new component, now we\u00a0\ncall that new component either 1 or 7,\u00a0\u00a0 it does not matter but we do not have to create\u00a0\na new name"
+    },
+    "5e3e07ca-6886-4871-b68d-623d317eb27e": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " for it so either we rename all the 1 s\u00a0\u00a0 which were called 1 as 7 or all the 7's as 1,\u00a0\nso that is basically what is happening here.\n\u00a0 So, what we do is we remember the name of the\u00a0\ncomponent that we are at one end point of the\u00a0\u00a0 edge and for every other "
+    },
+    "f08c77c1-b0c1-41f9-9674-f44d38d23c9b": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "vertex which has\u00a0\nthat same component we change its component\u00a0\u00a0 to the other point. So, basically everything from\u00a0\nhere is now going to get called j instead of i,\u00a0\u00a0 so this is going to extend this component.\nSo, when I take two components and I merge them\u00a0"
+    },
+    "e1ac139a-a5ce-4033-a096-030b5a1655c9": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "\u00a0 if this is component i and this is component j\u00a0\neither I make everything in i and call it j or\u00a0\u00a0 I make everything in j and call it i. So, what\u00a0\nI am saying here is if the edge is going from\u00a0\u00a0 i to j I am going to convert everything in i\u00a0\nto j so that is"
+    },
+    "dd4c61d1-1c98-4758-94c4-7a2782f050dc": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " what this loop is doing. So,\u00a0\u00a0 it is saying that let c be the component of\u00a0\nthe starting vertex and for every other vertex\u00a0\u00a0 which has the same component name change\u00a0\nit to be that of the target vertex. \n\u00a0 The reason that we have to save this name is\u00a0\nbec"
+    },
+    "9a87bf90-bb02-4c3a-8327-b5faba7b72c8": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ause once we process u that name will change,\u00a0\u00a0 so that if there are vertices after you which\u00a0\nhave the same component as u then I will not\u00a0\u00a0 know what their component should be. So, that is\u00a0\nwhy I keep a copy this small c to remember the\u00a0\u00a0 component name "
+    },
+    "52ae19af-6c9f-4851-8681-65f596b4f650": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "of u before I changed it because\u00a0\nin the process of changing it u may change before\u00a0\u00a0 some of the other vertices in that component. \nSo, this is a very straightforward thing now\u00a0\u00a0 basically we process, see we initially we start\u00a0\nsort the edges by weight, w"
+    },
+    "93368f58-aa13-484d-a919-4b8842ab9855": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "e assign the component\u00a0\u00a0 of each vertex to be itself and\u00a0\nwe have an empty set of tree edges\u00a0\u00a0 and whenever we find an edge which spans two\u00a0\ncomponents, we add it to the tree and we relabel\u00a0\u00a0 the components associated with it.\nNow, technically if you look "
+    },
+    "af40f088-4384-4c9c-8abf-e064eef8e5d2": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "at this\u00a0\u00a0 initialization so one thing you will see is that\u00a0\nif I have an undirected graph if I have u v d,\u00a0\u00a0 I will also have v u d, so technically every edge\u00a0\nis going to come twice in this list of edges. \n\u00a0 But remember the first time I add an edge it wi"
+    },
+    "e719d703-b2b0-49a0-8364-d30c4352cdff": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ll\u00a0\nmerge the components, so if I see it again it will\u00a0\u00a0 just ignore it so it is not a real problem\u00a0\nif I keep the edges in both directions in an\u00a0\u00a0 undirected graph in the sorted list because the\u00a0\nfirst time it will get processed in whichever\u00a0\u00a0 direction I"
+    },
+    "6dbe0fb5-329d-42e2-99e8-186a9fbfa792": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " pick it up and when it comes in the\u00a0\nreverse direction I will just ignore it. \n\u00a0 So, this is how the algorithm works. So, the main\u00a0\nproblem with this algorithm is really this loop.\u00a0\u00a0 The problem is that I need to every time\u00a0\nI merge two components I need "
+    },
+    "14a92164-13af-4bb8-a78d-80171ec7fe44": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "to scan\u00a0\u00a0 through all the vertices to decide which one\u00a0\ns components change. So, we have to merge all\u00a0\u00a0 these vertices there is no way to avoid this\u00a0\nbecause although we know that u is joining v,\u00a0\u00a0 we do not know which other vertices are also\u00a0\nconnected to"
+    },
+    "ee0342ea-04e3-412d-a974-a1ddbf60c17a": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " u. So, we have to go through and\u00a0\u00a0 explicitly make all of those vertices which\u00a0\nare connected to u also connect to v.\n\u00a0 So, the first step which is sorting the\u00a0\u00a0 edges we know can be done in m log m time\u00a0\nif you use a efficient sorting algorithm.\u00a0\u00a0 Now, i"
+    },
+    "cc01c714-57b6-4b42-bee1-2e77370293af": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "t is a simple thing to observe\u00a0\nthat because m is at most n squared log m\u00a0\u00a0 is at most log of n squared but if you know how\u00a0\nlogs work this is the same as 2 times log of n,\u00a0\u00a0 so this is big O of log of n. So, log of m and\u00a0\nlog of n are really the same when"
+    },
+    "0ad1bd07-35ad-4b8a-8b34-f18ae90c6d4e": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " I take logs\u00a0\u00a0 the fact that m is n square does not matter.\nSo, I can also write m log m as m log n it does\u00a0\u00a0 not really matter and the reason it is useful\u00a0\nto write m log n is because later on we will\u00a0\u00a0 see that some of the complexity depends on\u00a0\nn and no"
+    },
+    "19640b59-e631-477f-939f-1b1d949be9e7": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "t m. So, sorting is m log m which we\u00a0\u00a0 can also think of as m log n if we wish.\nNow, this outer loop runs m times for every\u00a0\u00a0 edge in my sorted list I have to do something,\u00a0\nbut I do something only when the edge is going\u00a0\u00a0 to contribute to the tree. So, I "
+    },
+    "dd7104a1-afe0-4cf4-99b8-e336cf5c6b82": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "actually do this\u00a0\npart only n times or n minus 1 times because the\u00a0\u00a0 tree on my n vertices is going to have n\u00a0\nminus 1 edges. So, most of the times this\u00a0\u00a0 if condition is going to say the component of\u00a0\nu is equal to the component v and I am going\u00a0\u00a0 to just"
+    },
+    "70aec403-5a17-4595-b53c-65bda2c23dc5": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " skip over to the next edge. \nThe only time I have to do some work on\u00a0\u00a0 the edge is when it is actually a tree\u00a0\nedge and that happens n minus 1 times,\u00a0\u00a0 but what I have to do in those n minus\u00a0\n1 times is to update all the components\u00a0\u00a0 potentially which are"
+    },
+    "ac5a3807-586e-4f3a-8120-b3813e2d3ccf": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " there, it could be 1, it\u00a0\ncould be a lot but I have to scan all the vertices\u00a0\u00a0 and wherever I see a vertex whose component is\u00a0\nthe one getting merged I have to update it.\n\u00a0 So, this is an order n scan. So, n into n minus 1\u00a0\nsays inside this loop even thou"
+    },
+    "8d0af3fd-6d50-423c-be80-788305e965aa": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "gh the loop happens\u00a0\u00a0 m times there is actually an n squared amount\u00a0\nof work being done because n minus 1 times I am\u00a0\u00a0 doing a scan of n vertices. So, this gives us an\u00a0\noverall complexity of n squared. Now, n squared\u00a0\u00a0 is not something that we would like b"
+    },
+    "51265a0d-8eb0-48ff-ba35-7aef46bae5bb": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ut this is\u00a0\nthe same problem that we faced it is a different\u00a0\u00a0 problem in the sense that this is not due to the\u00a0\ndata structure that we were facing with Prim s\u00a0\u00a0 algorithm and with Dijkstra s algorithm. \nSo, there we were getting an n squared factor\u00a0\u00a0 beca"
+    },
+    "5b20fea0-bc3c-4eae-877e-c0c1a32116a9": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "use every time we had to scan all the vertices\u00a0\nto find the minimum one to be added next, and we\u00a0\u00a0 did not have a clever way to extract the minimum\u00a0\nif the vertices are not in any particular sorted\u00a0\u00a0 order. Here the problem is different, here our\u00a0\nproblem "
+    },
+    "dda3fb8c-d281-4db3-9acb-7460ca86ff8e": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "is that when we update a component we have\u00a0\u00a0 to scan all the component names and update all\u00a0\nthe ones which have the same component as the one\u00a0\u00a0 that is being merged and we have no clever way of\u00a0\nunderstanding which ones need to be merged now.\n\u00a0 So, the bo"
+    },
+    "0cab1317-8c81-4871-8b46-ed5a703a6175": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ttleneck is really in this naive\u00a0\nstrategy to label and merge components.\u00a0\u00a0 So, remember that these components actually\u00a0\nrepresent a partition of the vertices. So,\u00a0\u00a0 a partition of a set is if I take the set and\u00a0\nI actually break it up into disjoint subset"
+    },
+    "e4427a66-9239-4ba5-a2cd-100e24587167": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "s\u00a0\u00a0 such that the sum of all the subsets, the union of\u00a0\nall the subsets is the whole set and no two sets\u00a0\u00a0 in that partition will intersect with user,\u00a0\nso we have a collection of disjoint sets.\u00a0\u00a0 So, what we really need is some way\u00a0\nof maintaining this col"
+    },
+    "b2ef1679-d6de-492a-8bc3-957c3abc0f93": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "lection and\u00a0\u00a0 performing some operations on these.\nSo, what are the operations that we need\u00a0\u00a0 given one element of the whole set, we need\u00a0\nto find out which partition it lies in,\u00a0\u00a0 so this is this find of v, this is what we call\u00a0\ncomponent of w here. So, c"
+    },
+    "c4dbcf2b-3e46-4f06-9125-1fa4b3ea01bc": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "omponent is basically\u00a0\u00a0 telling us which is the current component in\u00a0\nwhich I will find this vertex. So, abstractly\u00a0\u00a0 it is a function called find, given a vertex it\u00a0\ntells me the component name or the set name in the\u00a0\u00a0 current partition that that vertex b"
+    },
+    "cc8824f2-1ca2-4200-a52b-57074093ad77": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "elongs to.\nAnd the more important thing which is really the\u00a0\u00a0 one which got us into trouble in terms of\u00a0\ncomplexity is this one. I need to take two\u00a0\u00a0 vertices, I know so I can use find to check this,\u00a0\nthis is the same as asking whether find of u\u00a0\u00a0 is equal"
+    },
+    "846f14e8-14e4-4c2d-adf8-2d77915cb761": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " to find of v. So, if I have the\u00a0\nfunction find I can check whether or not\u00a0\u00a0 two vertices belong to the same component by\u00a0\njust finding the name of their components.\n\u00a0 But if they are not the same then I need to merge\u00a0\nthem so I have to take the union of t"
+    },
+    "c413342d-e6b7-4eed-ba73-4c767247bb0c": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "hese two\u00a0\u00a0 partitions and make it a bigger partition so this\u00a0\nis the union operation the usual set theoretic\u00a0\u00a0 union operation. So, in the set theoretic union\u00a0\noperation I take two sets and I combine it into a\u00a0\u00a0 bigger set containing all the elements and s"
+    },
+    "d8c061bd-7b22-48f6-81f9-39adbdd4d5f7": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ince\u00a0\nit was a partition all these elements will come\u00a0\u00a0 together with no duplicates, so nothing is going\u00a0\nto get overwritten or something like that it is\u00a0\u00a0 going to be two disjoint sets merging and these\u00a0\ntwo will remain disjoint from everything else. \n\u00a0 S"
+    },
+    "c4b37384-9bf1-4dcc-ad22-b8bbf75d6846": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "o, the fact that I have a partition remains.\u00a0\nSo, I have this find operation and this\u00a0\u00a0 union operation and this is what I need to\u00a0\nperform efficiently in order to break this\u00a0\u00a0 complexity block here of doing an order n scan.\n\u00a0 So, we will see that there is"
+    },
+    "edabd1e2-0f87-4ecc-87cd-ae69aaafa011": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " an efficient\u00a0\nway to do what is called union find,\u00a0\u00a0 this is essentially a way of maintaining disjoint\u00a0\nsets which form a partition such that the union\u00a0\u00a0 and the find operation together give us something\u00a0\nwhich is logarithmic rather than order n so across"
+    },
+    "30f92a6c-239f-4a77-af59-2409705340c5": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "\u00a0\u00a0 operations. So, basically we want to make sure\u00a0\nthat the cost per operation is not order n. \n\u00a0 So, every union for us is technically\u00a0\ntaking order n time because each time\u00a0\u00a0 we need to take the union you have to scan\u00a0\nall the vertices, we would like it "
+    },
+    "c5c75acf-dbdf-4bbd-92cb-66c5163ae828": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "to take\u00a0\u00a0 logarithmic time. And if that is possible, if it\u00a0\ntakes log n time then if we do this we will get n\u00a0\u00a0 log n and that is what we really want. So, we will\u00a0\nsee later how to do this efficient union find. \n\u00a0 So, you can think of Kruskal s algorithm a"
+    },
+    "aaf72a69-4891-42a0-9556-e6f5857ad1d1": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "s\u00a0\na kind of bottom up algorithm for a maximum,\u00a0\u00a0 minimum cost spanning tree, you start with\u00a0\nall these broken bits and you try to glue them\u00a0\u00a0 together to form a tree. So, you start with these\u00a0\nn components and then every time you can connect\u00a0\u00a0 something b"
+    },
+    "37ecd4c6-95ea-4f9f-95e7-e2492e16b647": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "y a small edge you do so making sure\u00a0\nthat you never create a cycle in the process.\n\u00a0 The reason that this is correct is that whenever\u00a0\nwe find an edge that we can add using this bottom\u00a0\u00a0 up approach we are guaranteed at that point\u00a0\nthat it is the minimum "
+    },
+    "33bef288-36df-49cb-873d-4c0f438d64a9": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "edge connecting two\u00a0\u00a0 disjoint partitions of the vertex set.\u00a0\nSo, from the minimum separator lemma,\u00a0\u00a0 it will always be part of every minimum cost\u00a0\nplanning tree, so it is legal to add that edge.\n\u00a0 Now, this algorithm that we implemented\u00a0\nturns out to have"
+    },
+    "ddbd1cb1-f18a-4579-9b4e-ca9410ac0ce3": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " cost n squared because\u00a0\u00a0 of this component merging problem, every time we\u00a0\nneed to merge two components we said we have to\u00a0\u00a0 scan through all the vertices and update the\u00a0\ncomponent of every vertex because we cannot\u00a0\u00a0 directly say given a vertex u which ar"
+    },
+    "c8cb170b-02f7-4bc1-ae5d-1254c35526b6": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "e all\u00a0\nthe other vertices in the same component as u.\u00a0\u00a0 And we will see later how to come out of\u00a0\nthis n squared and make it m log n.\n\u00a0 Now, one thing to remember is that we have\u00a0\nnow two algorithms so you might ask yourself\u00a0\u00a0 does Kruskal s algorithm give"
+    },
+    "0920a2ea-ac2d-406a-ac3a-71b9f8d1597f": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": " the\u00a0\nsame answer as Prim s algorithm,\u00a0\u00a0 if not when do they not give the same. So, if\u00a0\nthe edge weights in our graph are all different,\u00a0\u00a0 then you can prove using this minimum separator\u00a0\nlemma among other things that the minimum cost\u00a0\u00a0 spanning tree is un"
+    },
+    "ec23c1f3-4412-4c1e-8bf8-2c0a99b73b98": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ique because the Kruskal s\u00a0\nalgorithm will pick up these things for example\u00a0\u00a0 if they are all different weights you take them in\u00a0\nsorted order, every edge that Kruskal s algorithm\u00a0\u00a0 adds has to be there in the tree, there is\u00a0\nno edge that Kruskal s algorit"
+    },
+    "8ac624a2-1c30-4fc3-af1f-32115f9648a6": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "hm adds that\u00a0\u00a0 cannot be there in the tree and there are\u00a0\nonly n minus 1 edges that you can add.\n\u00a0 So, there are n minus 1 must add edges according\u00a0\nto Kruskal, so there is only one possible tree.\u00a0\u00a0 And Prim s algorithm finds the correct tree\u00a0\nso it must f"
+    },
+    "5f41b9ec-5d19-4287-ab06-78e5e06fed0e": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ind the same tree. But if edge\u00a0\u00a0 weights repeat, then this is no longer true\u00a0\nbecause then it depends on the strategy because\u00a0\u00a0 in both Prim s algorithm and in Kruskal\u00a0\ns algorithm there is a step which says\u00a0\u00a0 extend the tree or in this case combine\u00a0\ncompo"
+    },
+    "76c1ed37-0d38-43e4-9d29-5ce0f2310605": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "nents using a minimum cost edge.\n\u00a0 If there are multiple edges which are currently\u00a0\nminimum, so in prims algorithm with a multiple\u00a0\u00a0 ways to grow the tree in different directions\u00a0\nbut each of them has the same weight or in\u00a0\u00a0 Kruskal s algorithm there are m"
+    },
+    "8c302035-e3f5-414a-9a56-fadfa8bbd01b": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ultiple components\u00a0\nwhich can be merged using the same weight edge,\u00a0\u00a0 we have a choice of which one to do and therefore\u00a0\nwe might actually construct different trees.\n\u00a0 So, if you want to think of an example here is a\u00a0\nvery simple example. So, supposing I c"
+    },
+    "df3a994d-e55a-4a01-818f-1a07cce96ade": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "onstruct a\u00a0\u00a0 tree, a triangle which has some equal weight. So,\u00a0\nsupposing I say the weight is 10, 10, 10; then you\u00a0\u00a0 can see that any two edges of this will form\u00a0\na minimum cost spanning tree I could find this\u00a0\u00a0 as a spanning tree I could find this as a sp"
+    },
+    "4ee16bb0-fa6a-4fb5-a6e6-b5e3e6a8d988": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "anning\u00a0\ntree and I could find this as a spanning tree. So,\u00a0\u00a0 depending on which I choose as my first\u00a0\nminimum edge to add and which I choose\u00a0\u00a0 as my second minimum image to add I could\u00a0\nconstruct three different spanning trees\u00a0\u00a0 on this triangular graph. \n"
+    },
+    "a94f0e64-b860-474f-89fc-4c88079aa815": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "So, it is not difficult to come\u00a0\u00a0 up with examples where the choice of the\u00a0\nminimum cost spanning tree is not the same\u00a0\u00a0 across iterations of the algorithm and therefore\u00a0\nKruskal s algorithm and Prim s algorithm may find\u00a0\u00a0 different spanning trees. But if "
+    },
+    "52421184-d640-41c1-b312-fac1cc3adcbf": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "they are\u00a0\nall distinct then the minimum separator\u00a0\u00a0 lemma will tell you there is only one. \nSo, thanks to these different choices there are\u00a0\u00a0 different spanning trees and in fact there are a\u00a0\nvery large number of minimum cost spanning trees.\u00a0\u00a0 So, what we "
+    },
+    "4a86e76a-03cc-4db2-86c0-5a8113973897": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "have shown is how to construct one, if\u00a0\nthe question is how to enumerate all the possible\u00a0\u00a0 minimum cost spanning trees, then that could be a\u00a0\nvery large number, so that could be an expensive\u00a0\u00a0 thing to calculate simply because we have to\u00a0\nenumerate a larg"
+    },
+    "06d2bcec-baaa-412c-a1f5-a47342bde911": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "e number of things and there\u00a0\u00a0 is no way to enumerate a large number of things\u00a0\nexcept to you know list them out one by one. \n\u00a0 But what we have is this kind of as in Dijkstra\u00a0\ns algorithm a greedy strategy, remember a greedy\u00a0\u00a0 strategy says here is someth"
+    },
+    "e057b1ef-c9a4-41c5-9c85-f8cb72caefb4": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "ing that I think\u00a0\nlooks good the minimum cost edge to add, let\u00a0\u00a0 me add it and proceed without going back and ever\u00a0\nchanging my mind. And this greedy strategy helps\u00a0\u00a0 you to find one good solution among these various\u00a0\ndifferent possible solutions that exis"
+    },
+    "54689924-0a0b-425a-82fd-43aa1186b93e": {
+        "content_id": 45,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees Kruskal's Algorithm",
+        "week": 5,
+        "chunk": "t. "
+    }
+}

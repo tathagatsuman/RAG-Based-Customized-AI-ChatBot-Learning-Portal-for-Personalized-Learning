@@ -1,0 +1,177 @@
+{
+    "54ae9a31-5491-4013-ab7e-fe9b6f01e764": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "So, as we discussed classes and objects, we\nlooked at this example of this point. So, let us see how it works here. So, here is the basic definition of point\nwith the x y coordinates. So, we have a class point. And this has this initialization, where\nit ta"
+    },
+    "03eb874a-0c07-4e29-aefc-c723d5c04591": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "kes the values a and b as the initial coordinates of the point. And then we have\nthis function translate, which shifts x by delta x and y by delta y. And we have this\nfunction odistance, which computes the Euclidean distance, as is called by Pythagoras for"
+    },
+    "4a09718f-91a7-426b-b8a5-25b8d40fe0de": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "mula,\nx squared plus y squared, whole square root. So, now I can create these points by using\nthis. So, I, but of course, I must, nothing has run, so I must first run the code there.\nSo, I run the code to create the point class. And now I run this and now "
+    },
+    "301755b8-a75c-44fe-a99b-43a71a210a7a": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "it has created\ntwo points for me called p and q at 3, 4 and 7, 10. Now at this point, if I try to print\nout something like p plus q, then it is going to say that there is no remember we said that\nyou have these ad functions and string functions. So, even i"
+    },
+    "0ba505f0-bc04-4017-a6ba-9fec24d6cc99": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "f I just try to print p, for instance,\nif I just try to print p, I will get some kind of useless output, which says that this\nis a point object. It does not tell me the coordinates or anything, it just tells me\nthat this is a point object is, the same thin"
+    },
+    "6908ae9c-973b-45cd-8b1f-4ed844f79eb4": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "g happens if you try to print for example, a\nlist or a dictionary sometimes without, you know getting the values out properly. So, for instance, if you try to print range\nof something, which is not a list, it will just say this is the range function? So, t"
+    },
+    "b2688432-661d-4b13-bff4-d06f964892c1": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "hat\nis the kind of useless output. But on the other hand, I can compute the distance. So\nnow, P is 3, 4. So, if you remember your Pythagoras theorem, then 3, 4, 5 is the right angled\ntriangle. So, the distance of this point 3, 4 is 5 from origin. So, if I "
+    },
+    "abb8c9bc-cdbd-437a-8f18-8cf555799758": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "compute the distance of p from the\norigin, it is 5. And if I compute the distance of Q from the origin, so notice that this\nkind of gives you this helpful hint as to what function to complete it, but let us not\nworry about that. So, in a Python notebook, I"
+    },
+    "5af9faa6-2808-405c-a854-9be54110e7d3": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": " can do this kind of thing, I can implicitly\ncall two things, and that will give me a pair. So, it says that P is that distance 5, q is\na distance 12.2 because that is 7 squared plus 10 squared, which is 184 square root,\nwhich is something like 12.2, sorry"
+    },
+    "b372031e-db8d-4238-81af-f527d7767421": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": ", 149 square root, which is something like. Now, if I ask what is p dot r, then it will\nsay that this is not defined, because there is no internal value called r. Then the next thing we did was we defined\nthis r theta form. So, now I have a new definition "
+    },
+    "1344c69c-e6f3-4a34-adac-6bd73c2bb5a7": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "of point in which I use this r theta forms.\nSo, remember that we convert x y to r by using the distance formula and we use this tan inverse\nto construct the angle and so on. So, now, if I take this definition and run it, remember\nin the Jupyter Notebook, t"
+    },
+    "ab92c195-ac6f-42e1-82bf-5f47b29527eb": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "he last thing that ran works, so this is now my new definition\nof point. So, now, if I take this and if I again execute\nthis, I get two new points, p and q, but these are now defined in terms of r and theta. So,\nagain, if I try to print p, I will still get"
+    },
+    "2276b070-41be-4d09-a1d1-c35e0a65936e": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": " some meaningless thing. If I try to compute\nthe distance, okay get the same distance, but this time is coming from r it is not coming\nfrom a calculation involving p dot x and p dot y. And I can check that I am using the new format\nby asking now what is P "
+    },
+    "ac7be04e-1c54-4a0a-944a-90a8a8f933c9": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "dot r and it tells me p dot r is 5.2. So, similarly, I can ask\nwhat is P dot theta? So, it tells me that, this mistake here, this should be self-supposed\nto be safe. This is what happens in Python if you forget the self in an object, then\nit does not and s"
+    },
+    "d3ef95ee-783c-49a2-9b06-a430009d09b1": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "o it takes theta as an arbitrary value. So, everywhere this should be self.\nSo, let me run this again. So, now I have updated so self dot r and self\ndot theta, which had forgotten the self part of it. So, now let me create these points\nagain, and I can pri"
+    },
+    "221486f8-5573-4ff5-a27c-ff80ac74d35b": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "nt the point. So, notice theta was not being used for the distance,\nthat is why old distance worked. Because I was just looking up r and getting it but now\nif I say what is pr and p dot theta, I get that P dot r is 5 and p dot theta is 0.972.\nBut remember "
+    },
+    "3f785f64-c909-421a-ab69-6add79ca9b2d": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "that this is not in degrees but in radians. So, just remember the unit. So\nthat is the two different formats. Now, we also said that you could have these\nspecial functions, string and add to convert. So, let us compile these things. So notice\nthat this thi"
+    },
+    "7a8f348e-d945-4590-8b75-48859e7da24a": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "ng which was obscured in the slide, so this is how we convert to a string,\nI take self dot x self dot y, convert each of them to a string, and then embedded inside\nthis open bracket comma and close bracket. So, I create a new string, it has an open\nbracket"
+    },
+    "3efb0fa6-91da-43cf-be4a-e552dd40c8f9": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": ", the string version of self dot x, comma, the string version of self dot y, close\nbracket. So, this is my output string that I create. And this is what str does. And add\nif you remember, take self dot x, a new point p p dot x adds them up and then creates"
+    },
+    "6f965c93-4044-4ff5-87de-73695ce60ca6": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": " a\nnew point. So, now let me replace this is my third definition\nof point is the, I have gone back to the x comma y definition but I have added this self\ndot str and self dot add. So, now let me go back up. So, this is again\nthe advantage of Jupiter note I"
+    },
+    "e1808c15-2c22-403a-8975-a3a999ea810c": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": " do not have to type anything again I can go back and reexecute\nit. So, now I reexecute this code. So, again, now it has created two points, but also a\nnew definition. And as proof that is a new definition I can now say, tell me what is\nthe value of p plus"
+    },
+    "26ac716b-bc37-4356-a882-8a1a01b3147e": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": " q? Now, this has two things; one is p plus q\nhas to be executed it has to give me a point, what is that point, it should have 3 plus\n7 as the x coordinate 10; 4 plus 10, 14 as the y coordinate and it should then separately,\nbecause print should convert it"
+    },
+    "418f652d-b206-42fb-af4f-a4bcc289eedc": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": " to a string it should not give me this kind of strange\noutput which says it is a point so and so hexadecimal, it should give me the values.\nSo, if I execute this, indeed, I get the output 10 comma 14. So, two things have happened,\nit has added and it is c"
+    },
+    "71a7ab8a-68d6-40f8-bdd5-043f81d39d49": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "onverted to a string. So, this is just to illustrate how this class\nand object definition work. And again, an illustration of what how in this notebook\nformat, you can keep updating the code very naturally and keep rerunning the code without\ntyping a lot o"
+    },
+    "55104791-8fa5-425a-9bd1-4706dc78c5f7": {
+        "content_id": 8,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 02",
+        "week": 1,
+        "chunk": "f stuff back and forth. So, it is very convenient for this kind of incremental\ncreation of code."
+    }
+}

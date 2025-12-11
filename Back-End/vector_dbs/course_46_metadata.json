@@ -1,0 +1,800 @@
+{
+    "ad603314-b659-4b08-8019-99c9034bc084": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "When we studied minimum cost spanning trees,\nwe saw two algorithms. The first one was Prims algorithm, which, like Dykstra s algorithm,\ntried to extend a tree by finding the shortest edge connected to the current tree. And the\nother was Kruskal s algorithm"
+    },
+    "8b997dc0-3b60-47d0-b3d4-493870270a13": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": ". So, in Kruskal s algorithm, we built up a\ntree bottom up. We started with disconnected nodes, and then we connected them by adding\nthe shortest edge possible. So, we begin by processing all the edges in ascending order,\nof course. So, we sort the edges, "
+    },
+    "1a37d724-7565-45b4-aa28-ebafc5103ba3": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "you pick up the smallest edge, and each time we pick\nup an edge, we see if the edge forms a cycle. So, we have a collection of components, which\nhave already been joined together by the edges. And if the new edge does not create a cycle\nwithin a component,"
+    },
+    "6a37d136-c439-48c2-900d-dd1207fd2fb2": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " we add it. And in the process, what happens is that the endpoints\nof the edge u and v belonged earlier to different components. Because if they were in the same\ncomponent, the component is connected, it would form a cycle. But having now connected\nthese t"
+    },
+    "77f9986c-f5cf-41f8-b0bc-09ece25e0dcd": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "wo components together, we must merge the components as we go along, so that we\ndo not add another edge within this component. So, the main difficulty that we saw with implementing\nKruskal s algorithm efficiently was precisely this task of keeping track of"
+    },
+    "c31e6520-6325-4e68-a278-84b36037c5c1": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " where the components\nwere at any given time. So, we know that in the beginning, it is all disjoint because\nit is a bottom up algorithm, everything is a singleton. But as we go along and edges\nare added, which edges are, which nodes are part of the same co"
+    },
+    "3ae9c53e-40f2-4120-bbb5-c84b586e8f65": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "mponent, which ones are\ndifferent components, this was the problem. So, abstractly, what we have is a collection\nof vertices, which are partitioned. So, this is a collection of disjoint sets, every vertex\nbelongs to one of the partitions. And no vertex bel"
+    },
+    "2f208349-5724-4c5f-a29a-17a52e89327f": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ongs to two partitions. So, the collection\nof partitions together gives us the full set. But each collection in that partition is in,\nis in, has an empty intersection with every other collection. And now given this partition,\nso, we have this kind of pictu"
+    },
+    "10829aa3-07b8-44b7-a90e-5ac6ab211886": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "re that we have a set. And it has now been divided like this, into\nthese disjoint partitions. And now I say, I give you a vertex u and I asked which partition\nit belongs to? So, that is, this expression, this function called find. So, find tells\nus which p"
+    },
+    "08e92d6a-c720-41b2-ad84-120f5427fc16": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "artition a given vertex belongs to. And similarly, now when I take say u belongs\nto this, and say v belongs to this, then after this edge has been added. So, I have now found\nan edge which connects u and v. Now, these two become the same partition.\nSo, I h"
+    },
+    "75ac447f-3c36-471a-8bca-9fdcc2dc338c": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ave to have a second operation, which says given two elements of the set of the\ncollection with the set I am dealing with, take their partitions and make them into a\nsingle partition. So, the union operation and the find operation and what we actually\nsaw "
+    },
+    "c284c959-47b8-4e47-8973-e2b35721a5f3": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "in Kruskal s algorithm was this, this union operation is what took us time. Because\nwe had to find all the other vertices which are in the same collection as u, same partition\nas u and convert them to the same partition as v. So, what we need is a data str"
+    },
+    "8f464ec1-6115-4179-96b6-804c63a23777": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ucture, which\ncan implement these operations. So, essentially we have a set, a set of elements which is\npartitioned into components. So, as we said, partition means that C1 union C2 union Ck\nis actually all of S. And each element, small s in S belongs to e"
+    },
+    "c53a801a-78b0-4450-b490-c72cde2e09d8": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "xactly one of the Cis or\nCjs. So, this is what it means to be a partition. And now, we need to first create the initial\npartition. So, the initial partition is going to be the\none where every element is on its own. So, you have a singleton partition contai"
+    },
+    "a9a065e1-b05e-441d-8aa3-8d8f03f0c8a9": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ning\njust s for every small s, in your set. And then we have these two operations as we said,\nfind and union. So, find tells us the name of the partition or the name of the component\nthat s belongs to. And union given two set elements, s and s prime tells "
+    },
+    "e13b1ff6-8b4f-4554-9ec9-a77abc8ac504": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "us, gives us\nback a single component for all the elements in the same component as s and s prime together. So, let us for simplicity assume that our\nelements are numbered 0 to n minus 1, this is what we typically do even for vertices\nwhen we deal with grap"
+    },
+    "1f3a273e-1465-43da-aee1-30bbaab80d6f": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "hs. We deal it, we will typically use 0 to n minus 1 as the names\nof our vertex set. So, we will set up a mechanism to keep track of the components and the easiest\nway is to have either a list or an array or a dictionary, where now because these are\n0 to n"
+    },
+    "46ddcd03-9115-4e34-9c9f-ca960f02db08": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " minus 1, I can interpret these as indices in the list or as keys in the dictionary or\nas positions in the array. So, if I look up the eighth element of component,\nit will tell me which component the element i belongs to. So, now what does make union\nfind "
+    },
+    "b96cd55d-713c-45b9-86d0-e250f0d4b8bb": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "do? Make union find basically creates names for the components, which are the same\nas the vertices. So, I have, I have elements 0 to n minus 1 and I also have components.\nSo, this is just for convenience, I do not want to create another set of names. So, t"
+    },
+    "ce458f5b-b069-426c-8e23-f70a14de4ceb": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "he\ncomponents are also called 0 to n minus 1. So, 0 goes to component 0, 1 goes to component\n1, and so on. Because I need a name for the set. The component containing 7, the component\ncontaining 6, so I need a name for that set. And those names are going t"
+    },
+    "fbb82c36-4157-4f42-b5d0-3bd285f7d152": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "o be just the same\n0 to n minus 1. So, component of the element, i will be the component i, that is what this\nis saying, component of the element i. So, this is the element, and this is the component\nnumber. This is how we set up our thing and make with\nth"
+    },
+    "4fe36933-f10b-4075-8be8-95705ee5d6dd": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "is make union find. So, we have this, say, dictionary component. And now when I want\nto find out which component vertex i belongs to or a set element i belongs to, I just query\nthis dictionary, I will look at probate with the index, or the key value i. And"
+    },
+    "f523f6a3-7838-4e2c-8edc-bbe2783ed5fd": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " the, what\nis stored in the dictionary is the component number. So, initially, it is i and it will\nchange as it goes along because of unions. So, let us see how union works. So union,\nas we saw is basically a sequential scan. So, you want to now take two e"
+    },
+    "3140d382-71ed-48fb-8dac-07b0ccf417f9": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "lements, i and\nj, and combine their components. So, over time, they have reached some component name.\nSo, if I look at component of i, it is some c old and c new because I am going to merge\nin this, I am assuming that I am going to put everything which is "
+    },
+    "cedfba07-4ac0-4ec3-88d0-710fd617f632": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "in component of i\ninto the same component as j. So, I am not going to change the names of\nthe component for the same component as j, I am going to change the name of the component\nfor things which belong to the component of i. So, let us say component of i"
+    },
+    "976b3334-5e5b-461d-b9ea-3b17a7497364": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " is old component\nc, and component of j is a new component c new. Now, I have to take every vertex, and\nthis is the part that is inefficient. I have no idea which other nodes have the same component\nas i. So, I have to take every other vertex. And\nif that "
+    },
+    "7411e1bb-5bfe-4e7a-b07e-41dd48a3475d": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "vertex has a component, which is the same as i, I will reset its component to be\nthe same as j. So, this is once linear scan, which is proportional to the size of the set,\nwhich I have to do every time I do a union. It does not really matter whether the co"
+    },
+    "3319741e-915e-4f64-b0d5-a83462dfc0a8": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "mponent\nof i was small or not. I have to look at every other vertex because I have no indirect information\nabout which other vertices have been merged with i, so far. So, what is the component of i contain? So,\nwith this, it is easy to see that this make u"
+    },
+    "dc715baa-5174-4f89-9037-82bf664714b9": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "nion find takes order n. Because I have to\ngo through and label the component number as i for every vertex i. So, this is just\na simple linear scan across all the elements in my set. Find just looks up a dictionary.\nSo, if we assume that this is a dictiona"
+    },
+    "31fb84c6-8c07-4cf1-a2a8-57969afbb767": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ry, or an array with a constant time lookup of\nthe ith element, then in constant time, or O, one time, I will find the component for\na given element i. But union as we can see, takes time proportional\nto the size of the set. Because I have to go through ev"
+    },
+    "767e652b-4b8b-4aff-8fd3-b27f1666766a": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ery element in the set and check\nif it has got to be merged or not. Whether or not it has to be merged, I have to check\nit. So, this is much like an adjacency matrix representation of a graph, in order to find\nthe neighbors of a vertex, you have to scan al"
+    },
+    "297b1813-8aa7-4d76-8e1a-7fe0b9939aab": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "l the columns whether or not this vertex\nhas few neighbors, or has many neighbors, you have to scan all the columns to find the\nneighbor. So, in the same sense, you have no idea how\nmany elements share a component with i, so you have to scan all of them. A"
+    },
+    "c7b2c1d2-c478-4e86-b4bf-d2f7c9601d03": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "nd wherever\nyou find something which shares a component with i, you have to move it to j. So, this\nmeans that one union operation takes order n time. So, if I give m union operations,\nthen it is going to take m times n time. So, this is going to be the bot"
+    },
+    "4b275ac6-faf3-4284-9ce6-bd6d161dc348": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "tleneck that we\nsaw. Because in Kruskal s algorithm, we have to\nadd n edges or n minus 1 edges to make a spanning tree. So, we do order n merges, and naively\nspeaking, if we do order n merges and each merge takes order n time, then I spent order\nn squared "
+    },
+    "c58f7772-938f-4848-9479-5947cfa0e6c9": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "time executing all of Kruskal s algorithm. And that is what we are trying\nto improve. So, how do we improve this? Well, what is\nthe bottleneck? So, the bottleneck is that we do not know, so if I am sitting here and\nif I have a component which contains i, I"
+    },
+    "80aa9f87-1c0d-4a44-9e9e-0196f65b26bc": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " do not know what are the other vertices in\nthis component. So, this whole component has some name c. So, I know that component of\ni, is C. The question is what other vertices have components c. So, which are the other\nvertices in the same component? So, n"
+    },
+    "1c885968-f2c6-47ba-8528-8d8a27ea5bde": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ow we keep track of an int, an dictionary\ngoing the other way. So, component tells us given a vertex, which component it belongs\nto. Members tells us given a component, which are the vertices which belong to it. So, members\nof c will be list, it will give "
+    },
+    "910bf4b9-b590-4949-85f4-fb89291adbb1": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "you a list of vertices. In general initially, for example,\nI will have members of, of the ith component will just be the list i. Because, initially\nevery component has only one vertex, but as it grows, it will be a longer list. And of course, now since thi"
+    },
+    "ec2e3ba8-93cc-4010-a361-c84667c98cf3": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "s is a list, I\ncan take its length. I can take the length of this members c, and I will know how many\nvertices belong to this component. But I do not want to actually spend time computing\nthe length each time. So, I will separately store this as size of c."
+    },
+    "2e1f8243-affb-4e8f-bc31-e9ac36166bce": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " So, I am keeping\ntrack of two new dictionaries. One is members of c, members of c says give me a component\nand give me the list of vertices belong to this component. Size of c says, how many vertices are there,\nwhich is just the length of that list. But I"
+    },
+    "ff7e53af-e160-4b85-981d-5f5bbd589a57": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " do not want to compute that list explicitly\neach time, so I will just keep track of it because it is easy to update as we will see.\nNow given this, let us see how to do our implementation. So, first we have to implement this make union\nfind initial step, "
+    },
+    "13edb981-d77f-4b13-b64d-5a3ba4564d59": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "where we create the singletons. So, we had this old step which we repeat,\nwhich is we for every vertex for every element i. I set the component of i to be the actual\ncomponent i itself. So, remember that we were using i for both 0 to n minus 1 to name both"
+    },
+    "b9d23c59-01e1-4d0d-8b7c-4c548add2ed8": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "\nthe elements and the components. So, the component of i is just a component i. On the other hand,\nwe have to now do the reverse map. So, we have to say what does component of i contain?\nWell members of i is the list containing i. And size of component i i"
+    },
+    "12a57ecf-3b14-4f85-8e2e-6f3882e52935": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "s 1. Because I have\nonly singleton's at all point. So, this is the initialization, very straightforward. What about find? Well, find does not update\nanything, find very looks up the component. So, it does not have to look at members or\nsize because it just"
+    },
+    "a7965aeb-8b51-4152-8480-a423f7c52480": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " needs inform, information in the dictionary component. So, as before\nfind of i just looks up component of i. Union is where we were having problems, so let us\nsee if we can make union a little more efficient. So, as before, we find out the names of the\nco"
+    },
+    "18f5430a-6d01-47ae-a19f-95ccb90e8876": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "mponents of the two vertices are two elements we are dealing with i and j. So, we are going to as before, assume that\nwe are moving everything in the component of i, to be in the component of j. So, we\ncall the component of i as c old and the component of "
+    },
+    "e41ad088-c835-43a6-882a-06b4785e2d59": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "j as c new. And this difference now is\nthat instead of going over everything, before we were doing this for loop over every element\nin our set, for every vertex in our set. So, we are going from 0 to n minus 1. But now\nI do not have to do it for every vert"
+    },
+    "1756cc6f-a317-4d72-ae39-af36872bab01": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ex, (())(12:30)I know which ones have to change. The ones that have to change are the ones\nthat are in the same component as i. So, I just have to look at the list members of c\nold and for every k members of c old, I will first of all change its component."
+    },
+    "9d9356e9-de42-4c41-8731-67947edd20d5": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " I will\nupdate its component from c old to c new. But now I have to keep track of these other\nthings as I go along. So, I have to take this c new component and append this new element\nto its list. So, a k is now being added as a new element in members of c"
+    },
+    "50b026dd-e561-456e-8bfa-37eabefc15bb": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " new. So, as I change the name of the component\nof k from c old to c new, I go to the members of C new and I add k to it. And when I add\nk to it, its size also changes. So, I also increment the size of c new by 1. So, these\nare two extra steps, which happe"
+    },
+    "3dbf3f4c-2862-4b87-9dbe-21b41a11b59a": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ned when I re label, when I move vertex from this component\nto that component I must add it to its list members and I must upgrade the size by 1.\nSo, this is simple enough. So, the question is what have we gained? Because\nwhat we have gained really is this"
+    },
+    "bf12c144-c2ed-4421-9f5b-aefe9693893d": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " step. Compared to our earlier implementation, this is still\norder n and this is still order one. So, the question is what have we gained in union?\nSo, the point is that by going over members of c old we can get away with only working\nwith this many elemen"
+    },
+    "8136c887-12cd-4fc1-8735-74dd6611e9be": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ts rather than this many elements. So, when I re label instead of looking\nat order n elements, I am looking at order of the size of the component. So, this is similar to our graph theoretic\nthings where we say that when we look at the neighbors of a vertex"
+    },
+    "7de13d54-cf41-456e-aa80-1aece14e1e1b": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": ", we are interested in\nthe degree of the vertex, the actual edges rather than all the neighbors which are not\n(())(14:14). So, in the same spirit, we are only interested in those elements which belong\nto this component. We are not interested in scanning al"
+    },
+    "30b5984c-192a-4097-a071-dfc2e8a326ee": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "l the components, so we are explicitly\nkeeping that in this members list. So, the question is so, this is fine, we are\nusing members here. But why are we keeping track of the size? Because there is no apparent\nreason in this whole thing except that we have"
+    },
+    "0fc35be3-bc38-4d7d-beda-6cb901757d56": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " to update it correctly and all that.\nNowhere are we using size in this union operation. We are just updating it. We are updating it\nfor sure, but we are not using the fact that the size is available to us. So the way we\nwill use size as follows. We will a"
+    },
+    "b3903efd-fab2-4331-85f4-e1d08de59561": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "lways choose whether to, so we remember\nwe have a choice. We can either go from i to j or j to I, which component gets relabeled\nas which component. Do I make everything in come opponent of i point to j or make everything\nand component of j point to i. So,"
+    },
+    "c465addd-66cb-487c-bea9-f715a37a3f9e": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " that is where size will play a role. So, size will\nsay that we only always merge the smaller component into the bigger component. So, we have basically two components. So,\nif i belongs to c and j belongs to c prime, I have to decide whether to make everyt"
+    },
+    "8be32c2b-da49-4975-a35f-e509f36e166c": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "hing\nin c the same as c primer, or everything in c prime. So, the final component that survives\nis going to be c or c prime? So, the rule is that the larger component will survive.\nSo, if c is smaller than c prime, I will rename, re label everything reliab"
+    },
+    "16a1d9dc-cb96-468b-9ce0-f11a9200c933": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "le everything inside\nc to be c prime. And if c prime happens to be smaller than\nc, I will do the opposite. So, that is the crucial decision that size gives us. So, a\npriori does, does not seem to be so helpful. Remember, our problem was that when we were\nd"
+    },
+    "77235cfe-526c-4b65-a7a8-e422b02e4f37": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "oing this as range of n, blindly, we were spending order n time on every merge. But\nnow we are spending something proportional to the size of the smaller set. But the size\nof the smaller set could still be almost half. It could be half plus a little bit, h"
+    },
+    "cc272e69-4456-4835-a3ff-40774af54f33": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "alf minus\na little bit. So, in the worst case, a single merge operation could still be order n. Because\nit could be taken by two steps. So, we have not really guaranteed that an individual merge\noperation is less expensive now, up to an order constant fact"
+    },
+    "e0902e3d-9fa3-4f91-957a-1e491264c6ff": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "or. Of course, it will\nbe half as expensive, but half is not good enough. It is a constant factor, we want something\nwhich is a little more strong than half. So, it turns out that this we cannot deny,\nI mean, it could be that an individual merge will cost "
+    },
+    "f8a4d41e-7504-4e2f-a802-4d1574b880a1": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "half n time. But it will not happen\nfrequently. So, we have to do our accounting a little carefully. So, we are not going to\nchange the implementation. This is our final implementation. But we are going to argue\nthat this is good enough, when we have this "
+    },
+    "54f08815-585f-49e2-ab3a-36cbfb9b3d49": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "rule, of always merging the smaller component\nto the larger component, we are actually going to get a sizable improvement. So, why does this happen? Well, basically,\nif I take a vertex i and I track what happens to i. So, initially, its component is i. The"
+    },
+    "810bd982-e8e2-4e99-b894-c0ca707614a1": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "\nfirst time it is forced to change its component, it changes its component from some c to c\nprime. Then from c prime to c double prime. But what I have guaranteed now is that when\nI take i and I look at the component it belongs to and Now supposing this is"
+    },
+    "10a2e47f-af63-46eb-b342-eec989afb1b5": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " the other component,\nwhich has j and I now merge this. Then i moves from c to c prime, but c prime\nwas at least as big as c. Because c prime was a bigger component. So, if c had some\nk elements, then c prime has more than k elements. So, totally now, the "
+    },
+    "fce28009-2290-49b6-8977-c1b1522ba0ac": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "component of i has gone\nfrom k to something bigger than 2k. So, the size of the component of i doubles every time\nit is labeled. So basically, each time I re label the component of i, I move it to a set,\nwhich is twice as big as it was before, at least twi"
+    },
+    "e77f0729-776f-4f20-9cad-3f08b935269d": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ce as big, could we could be even\nbigger. Now the other point to note is that when I\ndo a merge, how many different elements change their component from the initial state. So,\ninitially, remember, I have 0 to n minus 1, as components, 0 to n minus 1. Now a"
+    },
+    "da3bb917-a07d-498d-a455-68c44c288de4": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "t some\npoint, I do a merge. So, maybe I take i and j. So, I take these, and then they will both\ngo say to j. So, at this point, I have touched i and j. So, I have changed their component\nstructure. In the case of one I have changed the component name and t"
+    },
+    "29e792c2-ac2b-4a0f-8608-bab2ef085975": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "he other one, I have\nchanged it to be in a component, which has new elements. Now the question is, after m such things,\nafter m union operations, how many elements have had their component touched in this way,\neither it has moved, or something has come int"
+    },
+    "25223db9-7ed9-4663-9023-9626ebd19ec7": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "o it? Well, you can see that, if I take\ntwo elements, then I had touched two. The next merge could, next union could take two\nother elements and touch two. So, I could do 2 plus 2 plus 2, which is 2. The first\nmerge, first union merges these two, next unio"
+    },
+    "53589b7f-6e9f-4ac9-8222-06f570fc862e": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "n merges these two. But I cannot do any more than that, I claim.\nBecause if I do not take two new elements, then I must be taking some set which has already\nbeen touched and one more element. So, at most, I can touch 2m elements. So, this means\nthat at mos"
+    },
+    "d9220217-78dd-42b5-bace-f29b7f887d6e": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "t 2m elements have had their component updated since the beginning. But if at most\n2m elements have had their components updated, the worst that can happen is that all of them\nare merged into a single component. I cannot have a larger component than that.\n"
+    },
+    "fb78253e-88a1-4db8-b9e2-60fc153e8ae9": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "So, the largest component of any vertex in my set is at most 2 times m. So, many of them\nwill still have singletons, this is what we are saying. So, after m union find, m union\noperations, the largest set in my partition cannot be bigger than 2m. So, we ha"
+    },
+    "77421b56-e5e2-4f02-90f7-58302b425658": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ve now\nthese two facts. The fact is that each time I change the partition of i, it moves to a\nset, which is twice as big. But it cannot go beyond a certain size because\nacross m operations, it can only grow up to 2m. So, combining this, we see that the siz"
+    },
+    "95856937-5e97-472d-9c4c-407978ee8d40": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "e\nof a component will grow from 1 to 2 to 4 to 8, but it has to stop before 2m. Because\nit cannot get beyond 2m, because 2m is the largest set I could possibly have, after m\nunion operations. So, that means is doubling can happen at most log m times. That "
+    },
+    "90280aa9-7b7d-4f4c-ad29-3803c51524c7": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "means if I pick a vertex, and I examine\nhow many times it changes its component, it can be at most log m times. So, a single vertex\ncannot change its component more than log m times. So, this is what gives us now a better\nbound for union find. Because it s"
+    },
+    "46c23e18-6538-4d33-9a9a-7fc0564ecc23": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ays that basically over m updates.\nFirst of all, we know that at most, 2m elements are relabeled. And each of them is relabeled\nat most log m times. So, the remember our relabeling operation is now optimal, I never\nlook at a vertex to re label unless I nee"
+    },
+    "5c1cdd47-8c11-4bec-916f-3ad08a0aa919": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "d to. Because I am looking only at members of\nc. So, every time I did decide whether to re label a vertex or not, I am going to re\nlabel it, I never look at a vertex and, and do not re label it. So, if I only need to know how many reliable\noperations are t"
+    },
+    "dc8608e1-2693-4ad7-9eb2-8e92857235e9": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "here, because I never look at vertices, or try to do anything with vertices\nin union when I am not relabeling them. But I know that a, there are at most 2m of them,\nbecause that is the limit of how many vertices ever get relabeled. And each one of them get"
+    },
+    "47a7a6d3-b4d0-44ed-88c5-a19dac7c3f7d": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "s\ndone at most log m times. So, if I add it up, it is like, again, it is a similar analysis.\nBut in a more complicated setting. When we said that, when you do breadth first\nsearch or depth first search using an adjacency list, then as we process all the ve"
+    },
+    "0fedd414-500a-4245-9e24-fc2a966263a8": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "rtices,\nwe do the sum of the degrees. So, an individual vertex might add a lot of neighbors to the\nqueue in breadth first search but others will add less. And totally the number of neighbors\nI have to look at is going to be the sum of the degrees and there"
+    },
+    "2170c70f-a442-4d21-9f37-789d834621d6": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "fore it gets bounded\nby the total number of edges. Similarly, here, we are saying that the total\nnumber of operations of relabeling across all the M union operations is going to be\nm times log m. Because 2m, order of m times log m, let us say. Because 2m v"
+    },
+    "f51ea244-d160-49bc-a22b-618d8e07921b": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ertices are\ngoing to get elements are going to have the labels change, and no element is going to\nbe touched more than log m times. So, therefore, over m union operations, I will not do more\nthan m times log m work, in terms of changing component numbers. "
+    },
+    "ccfa4f2b-0daf-406b-a516-8ece96f7b557": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "So, this is where we have saved. So, instead\nof going to m times n, we have come to m times log n. So, this means that if I have, since\nI am assuming that there are m of them, I can take m times log m. And I can say what\nis the cost of one of them? I divid"
+    },
+    "cb7fda0c-6411-4657-9dc9-f481de722640": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "e it by m. So, on an average, in a sense, each of\nthem is only taking logarithmic time. So, it is not that any one of them is actually\ntaking logarithmic time for sure. Because I know that sometimes I have to merge\na large component. But then many of the t"
+    },
+    "15c9421a-6ada-4e7c-bee0-e918d1ad4511": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "imes I will be merging very small components. And\nif I add it up, so this is again, this notion that we saw with, as I said, with BFS and\nDFS, when we were dealing with adjacency lists, that we count the cost across the entire operation\nand say the total s"
+    },
+    "5c1ea425-049a-4b4d-8a3e-c2936023340d": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "um of the operation can only be so much. Even though individual, individual\noperations can be more. So, this is, this notion of amortized, what\nyou gain in one place, you will lose in another place. But overall, it will all work out.\nSo, the amortized comp"
+    },
+    "627b0d6c-de01-4041-b539-c31d3fa23083": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "lexity of one union operation is log m. Even though individual\nunion operations could be more expensive, totally m log m is the cost of m such operations. So, how does this affect Kruskal s algorithm?\nSo, this is where we started looking at these operation"
+    },
+    "276e413e-dc8c-4126-8718-a16389b6cde7": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "s, because this was the context in\nwhich we needed it. So, remember that, in Kruskal s algorithm, we start by sorting the\nedges. So, we take the edges, there are m of them, and we sort them in ascending order.\nAfter this, we have to start this business of "
+    },
+    "a13d2b8e-fecd-4449-8e81-13441793e30a": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "creating the tree. So, we have to keep\ntrack of these components. So, we first do a make union find, which will\ntake order n time for our n vertices. So, this is going to be ordered n time. Now, when\nI check whether a vertex needs to be added or not, I nee"
+    },
+    "93c08007-b941-43af-bbf3-026731bbcc90": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "d to look up the component name\nof the two endpoints. But this is order 1 time because I just have to look up my component\n(())(24:27). And now this is the step which was bothering us. So, earlier this was taking\norder n time when we did it naively. But no"
+    },
+    "0339c859-8b25-468c-9e2b-e3864a395ed7": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "w we know in this amortize sense is\ngoing to take log m time. So, how many union operations are we going to actually perform?\nWell, because they are constructing a spanning tree on n vertices and a spanning tree on\nn vertices remember will have n minus 1 e"
+    },
+    "2c00a14f-4acd-498c-8d10-9024db108a52": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "dges exactly. We are going to do exactly n minus\n1 union operation. So, we can think of it as the order n union operations. So, we saw\nearlier that if we do order m, if you do m operations is m log n. So, here it is n operation, so it is n log\nn. So, the t"
+    },
+    "1173de96-8f83-4a20-978b-557eb27d147c": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "otal cost of all these union operations across each addition that we actually perform,\nremember that if find u turns out to be find v we just throw away the edge, so we do not\ndo anything. So, only when find u is not equal to find v, when they are in two d"
+    },
+    "9ab340d6-8cad-4a3c-a579-4fb97517f75e": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ifferent\ncomponents, we have to do a merge. But now what we are saying is that this merge, will\nactually happen overall, the overall cost of these merges, they will be n of them will\nbe n log n. So, this is the amortized cost over all of\nthe union operatio"
+    },
+    "65422a38-ea18-4f4d-92e8-8cd47108a247": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ns. So, now, if we go back to the first step, this is another expensive\nstep. This takes m log m time using an optimal sorting algorithm. So, we have, we have seen\nthat, things like merge sort, for instance, are m log m. And a naive algorithm like insertio"
+    },
+    "4652d1d9-7ddb-4258-8cfd-d2a9baf66752": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "n\nsort of selection sort could be n squared. But you cannot beat m log m, we said without\ngiving a proof saying that that is a lower bound. So, we need to spend m log m time to sort.\nSo, we need m log m time to sort and n log n time to do the unions. Now, "
+    },
+    "6846ddaf-beb6-4fcf-8db7-0a2e207c98ef": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "this is kind\nof bit awkward to have log m here and log n there. But notice that m is at most n squared.\nSo, if I take logs on both sides, I will say log m is less than equal to 2 of log n. So,\nthis is how logs work. So, log of m is actually big O of log of"
+    },
+    "d8a2afc6-51bc-418f-98b2-0fe0dd86c75b": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " n, it is some constant times\nlog of n. So, I can say that m log m is the same as\nm log n. So, now I have the same thing on both sides. Now, I am in good shape, I have\nn log n and I have m log n. So, I can now combine them and claim that\nthe overall time o"
+    },
+    "58a43dbb-2826-44be-a6be-ac62ee365623": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "f Kruskal s algorithm is m plus n times log n. So, remember that this\nreally is the size of of G. So, we are really saying that in terms of the size of G, it\nis N log N. I mean, if you think of capital N as the size of G, it is within capital N\nlog N. And "
+    },
+    "14294741-231b-47b6-8d92-d4c0ad210112": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "this is probably the best that one could\nhope to do given that you have to do sorting and all that. So, this is how this union find\nalgorithm actually helps us bring Kruskal s algorithm down from n squared to something\nlike n log n. So, what we have seen i"
+    },
+    "9f819bc7-23de-4e4d-afc5-99f42205cfb1": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "s that if we use this\ntwo way mapping, so component is the obvious thing. It tells us given an element which\ncomponent it belongs to. But if we keep the reverse mapping, given a component, which\nare the elements which belong to it, then we can relabeled th"
+    },
+    "2d4c339f-5702-46d0-8ecb-43394f26e044": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ese components efficiently\nby also keeping track of the size, always merge a smaller component into a bigger component. And if we just follow this rule of merging\nsmaller components into bigger components and keep track of the components using this\nmember "
+    },
+    "48cc6e06-5dba-4ff6-8ef5-19a8fdb2bcd5": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "array, then or member dictionary, then we can guarantee that across m operations,\nthe amortized complexity of each union operation is log m. So, m log m is the total cost of\nall the unions, find remains constant time because it is just looking up a diction"
+    },
+    "efeb9183-fbd2-4a0b-9539-4e90fa01acd6": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ary\nvalue. And make union find remains linear time because\nI have to actually reset the component to a singleton for everybody. So, this is a very\ndirect and easy way of doing union find, there is a slightly more complicated way where instead\nof keeping th"
+    },
+    "992670bc-50cf-40a4-9d51-85053f788924": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "is members of k as a list of vertices, you can keep it as a tree. And if\nwe keep it as a tree, then it turns out that union operation becomes very simple. So, basically,\nI will have members of i. So, this will be some tree. And I will have members of say\nj"
+    },
+    "142f0d51-9757-4c95-bf59-9db1faabedfd": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": " and this will be some other tree. And the rule is that if you belong to the\nsame tree or the same component, so the union operation will just either connect this tree\nthat way, or connect this tree this way, so it will just take the root of one tree and\np"
+    },
+    "91fca6dd-2c46-4378-9c50-8bea083efba9": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ut it as a child of the root of the other tree. So, the union operation is very simple,\nI just stick one tree under the other tree. But now find means, I am sitting here and\nI must go up to the root, the root vertex will tell me which component I am in. So"
+    },
+    "a83d1fd3-01ed-4c13-91a4-32c8cf0d4399": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": ", we have to be careful that these components,\nthese trees do not become very tall. And there is a clever way of keeping them not only from\ngrowing very tall, but actually flattening them. There is something called path compression\nthat you can do. And if "
+    },
+    "cec2fcf9-2574-4b34-9bfd-976fe34c09f5": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "you do this path compression, eventually your tree will look like this,\nwhere everything so if I have a component and I have all the other vertices which belong\nto the component will be only one step below. So, it will only take me one lookup in order\nto t"
+    },
+    "190ef33d-82b8-4633-88ed-d8b6bdef9ad0": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "ell you what component is. So, it will have an amortized complexity of almost constant\ntime. So, both union and find become so union is constant and find is almost constant. So,\nthis is really the ultimate implementation that you could have for this where "
+    },
+    "adc8523b-5620-453a-a533-a972b5e1b5b9": {
+        "content_id": 46,
+        "course_name": "PDSA",
+        "title": "Union Find Data Structure",
+        "week": 6,
+        "chunk": "you can\nkeep track of this and then each operation is a unit cost. But we will not go into that\nnow. But you can look it up. It is a very interesting optimization of this union find\ndata structure."
+    }
+}

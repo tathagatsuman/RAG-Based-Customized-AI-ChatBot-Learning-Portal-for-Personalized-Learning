@@ -1,0 +1,590 @@
+{
+    "f29458c7-7315-4b1b-8786-349b761cd8cc": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "So, to wrap up this introductory week of the\u00a0\ncourse, let us look at an example to illustrate\u00a0\u00a0 why we are interested in efficiency\u00a0\nand why we are interested in both\u00a0\u00a0 algorithms and data structures? What is the kind\u00a0\nof benefit that we hope to get out of"
+    },
+    "9a30795c-6fb1-49da-a573-6f3e01cfdf67": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " this?\n\u00a0 So, let us look at a kind of real-world problem\u00a0\nthat you might imagine. So, as you probably know,\u00a0\u00a0 when you go to get a SIM card, you have to give\u00a0\nyour Aadhaar details. So, every SIM card needs to\u00a0\u00a0 be linked to an Aadhaar card. Now, if you hav"
+    },
+    "2bc38d38-c986-4ca0-885a-a4d32dd81520": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "e\u00a0\nan unscrupulous dealer, handing out SIM cards,\u00a0\u00a0 it could well be that they are putting fake\u00a0\nAadhaar details just to sell you the card. \n\u00a0 So, the government would like to check that the\u00a0\nAadhaar details on each SIM card actually match\u00a0\u00a0 with what the "
+    },
+    "eca1c6d5-93a9-4a76-92ae-c2138b01785b": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "Aadhaar number says.\u00a0\nSo, A the Aadhaar number must exist\u00a0\u00a0 and whatever details are there about the person\u00a0\nwho holds the SIM card must match what the Aadhaar\u00a0\u00a0 number says about that same person. So, this is\u00a0\nthe problem, every SIM card needs to be linke"
+    },
+    "c7f82eb8-655c-481b-8dcf-d16df30617b2": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "d\u00a0\u00a0 to a valid Aadhaar card. And we want to validate\u00a0\nthat the Aadhaar numbers which have been, so let\u00a0\u00a0 us assume that every SIM card has been actually\u00a0\nprovided with some Aadhaar details, we want to\u00a0\u00a0 now check whether the Aadhaar details in all\u00a0\nthese S"
+    },
+    "dd3db916-ba0c-44ee-87fc-40cf9f64c953": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "IM cards are actually correct or not. \n\u00a0 So, this is something that we saw a\u00a0\nlong time ago in computational thinking.\u00a0\u00a0 This is basically a simple nested loop,\u00a0\nfor every SIM card, we need to check\u00a0\u00a0 whether its Aadhaar details are valid or not.\u00a0\nSo, the "
+    },
+    "5d7a55de-1a04-46a5-aba5-75e6acd5487b": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "only way sensible way to do this is\u00a0\u00a0 to go through all the Aadhaar cards and look\u00a0\nfor a match. So, we take each SIM card. And\u00a0\u00a0 then for that SIM card, we run through all\u00a0\nthe Aadhaar cards till we find a match. \n\u00a0 And we find a match saying that this Aa"
+    },
+    "4f235cb9-393c-4bb2-a44b-5ab39a778785": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "dhaar\u00a0\nnumber is Aadhaar number which is mentioned in\u00a0\u00a0 this card, then we will check that the\u00a0\ndetails match. Of course, if there is\u00a0\u00a0 no valid Aadhaar number for the card, that is\u00a0\nalso a mismatch. So, at the end of this, either\u00a0\u00a0 this card will match or"
+    },
+    "2c988707-02fe-4cae-b1b6-b6b82357bd4a": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " it will not match. \nSo, I can separately now take this and create a\u00a0\u00a0 list of all the SIM cards which are problematic.\u00a0\nBut fundamentally, I have to run this nested loop,\u00a0\u00a0 which compares every SIM card against\u00a0\nevery Aadhaar card. So, the question is,\u00a0\u00a0 "
+    },
+    "460fe10f-378d-4b1f-946b-c90e95d86313": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "how long will this take? So, supposing\u00a0\nthere are M SIM cards and N Aadhaar cards,\u00a0\u00a0 then it is easy to see that the outer loop will\u00a0\nrun M times. And each time the outer loop runs,\u00a0\u00a0 the inner loop will run in general N times\u00a0\nif I go through all the Aadh"
+    },
+    "9ec39479-81b3-48fc-9bd4-d6f19bc95fa6": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "aar cards. \n\u00a0 So, let us assume that all the SIM\u00a0\ncards have invalid Aadhaar numbers,\u00a0\u00a0 then I will have to scan through all the Aadhaar\u00a0\ncards to discover this. So, in the worst case,\u00a0\u00a0 I will end up with M times N. So, this is a\u00a0\nkind of complexity of th"
+    },
+    "6a9d4ff4-edf7-4668-9577-68fb1cc2e5df": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "is naive solution.\u00a0\u00a0 So, what in practice are M and N? This is why we\u00a0\nare looking at this example to get an idea about\u00a0\u00a0 what happens in the real world when we deal with\u00a0\ndata. Because data is what we are going to deal\u00a0\u00a0 with a lot in machine learning. An"
+    },
+    "54b85b0b-0059-4a57-b6f8-51cd1e53790c": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "d these kinds of\u00a0\nscales are typically what we have to deal with not\u00a0\u00a0 the toy examples that we construct by hand. \nSo, here we have Aadhaar cards and SIM cards. So,\u00a0\u00a0 how many Aadhaar cards and how\u00a0\nmany SIM cards are there in India.\u00a0\u00a0 So, by now almost e"
+    },
+    "7dc48848-fbce-42b2-bcd2-366d8bdce32b": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "verybody in India has Aadhaar\u00a0\ncard. And as you know the number of people in\u00a0\u00a0 India is more than 1 billion, which is 100 crores,\u00a0\nwhich is in scientific notation 10 to the power 9.\u00a0\u00a0 So, at the least there are 10 to the power\u00a0\n9 Aadhaar cards, it might su"
+    },
+    "75a5c57e-ad61-4d15-a9c5-83620fc32b7f": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "rprise you to\u00a0\u00a0 know that there are as many SIM cards. It is not\u00a0\ntrue, of course that everybody has a SIM card. \n\u00a0 Babies do not have SIM cards, small children\u00a0\nmay have Aadhaar numbers, but they will not\u00a0\u00a0 have SIM cards. But many people have more than\u00a0\n"
+    },
+    "03596621-3954-4942-91b6-ad0e7189ed83": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "one SIM card. So, it all kind of balances out.\u00a0\u00a0 And if you actually count the number of SIM cards,\u00a0\nwhich are there in the country, it is roughly\u00a0\u00a0 equal to the number of people in the country. So,\u00a0\nboth M and N are actually of this order 1 billion,\u00a0\u00a0 10 "
+    },
+    "2b4e5cb2-5a1d-4178-bbdd-0b10c14c1a54": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "to the power 9. So, that is the\u00a0\nproblem that we are dealing. \n\u00a0 So, let us assume that, for simplicity, that\u00a0\nthey are actually equal to, they are actually\u00a0\u00a0 bigger than this, but let us assume they are just\u00a0\nexactly 1 billion. So, there are exactly 1 bil"
+    },
+    "55ef3130-b31f-4321-9df4-742870fbd6ac": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "lion\u00a0\u00a0 Aadhaar cards exactly 1 billion SIM cards. So,\u00a0\nnow let us do the math. So, the nested loop,\u00a0\u00a0 if you remember, runs M times N times, so 10 to\u00a0\nthe N times 10 to the 9 multiplied by 10 to the 9,\u00a0\u00a0 this is M times N, and this gives us 10 to the 18.\u00a0\n"
+    },
+    "e6ee0b3b-d8d7-48db-8c8a-a99cd40d6737": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "So, I have this naive search through a nested loop\u00a0\u00a0 is going to execute 10 to the 18 times. \nSo, we have already calculated that using the\u00a0\u00a0 timer and all that, that Python actually can\u00a0\nrun about 10 to the 7 operations in a second.\u00a0\u00a0 So, even if we assum"
+    },
+    "d4724a31-7365-44cd-8908-4730a975ca2e": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "e that every time, we\u00a0\nrun this loop all this checking happens in\u00a0\u00a0 some unit operations, this is a very simple\u00a0\nthing that we have to do here. Even if there\u00a0\u00a0 is just a basic step here. We have to do\u00a0\nthis step 10 to the 18 times, and each of\u00a0\u00a0 this thing"
+    },
+    "4aed2685-ab22-4303-a0b0-09e824358c4b": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " is going to take one operation. \nSo, 10 to the 7 operations per second means that\u00a0\u00a0 I am going to use 10 to the 11 seconds. This is\u00a0\njust 10 to the 18, divided by the number I can\u00a0\u00a0 do in 1 second, which is 10 to the 11. So, 10\u00a0\nto the 11 seconds, is my e"
+    },
+    "119ec923-67a5-4bb3-b03d-cde1d4fb55ea": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "stimate for how long,\u00a0\u00a0 it is a very conservative estimate for how\u00a0\nlong this code is going to take to run.\u00a0\u00a0 So, what is 10 to the 11 seconds. So, 60 seconds,\u00a0\nmake a minute. So, if I divide 10 to the 11 by 60,\u00a0\u00a0 I get something like this, I get something"
+    },
+    "139c864a-f44a-4bfe-8082-9d446fee2a65": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "\u00a0\nlike 1.67 times 10 to the 9 minutes. So,\u00a0\u00a0 this is still a little abstract to understand. \nSo, 60 minutes makes an hour, so if I divided 60\u00a0\u00a0 again and I get something like 2.8 into 10 to the\u00a0\n7, so 2.8 into 10 to the 7 is 28 into 10 to the 6,\u00a0\u00a0 so 10 to"
+    },
+    "96289aba-2fd0-4feb-99fb-0a1fc64505f8": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " the 6 is 1 million.\u00a0\nSo, this is 28 million hours.\u00a0\u00a0 Still not very clear. So, let me divide by\u00a0\n24 to get days. So, if I divide 2.8 times\u00a0\u00a0 10 to the 7 by 24, I get the total number of\u00a0\ndays, so I get more than a million days. \n\u00a0 So, what is a million da"
+    },
+    "16dba691-f780-4e50-9066-376e7727a7fa": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "ys? Well, let us take a\u00a0\nyear to be 365 days. So, if I divide this by 365,\u00a0\u00a0 I get 3200 years. Now, this is something we can\u00a0\nunderstand. So, 3200 years is a long time, it is\u00a0\u00a0 probably going to be much beyond the lifetime of\u00a0\nthe planet as we are currentl"
+    },
+    "ef4af843-6467-4fa6-97a1-e0d3576eea53": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "y running it. And we\u00a0\u00a0 certainly cannot wait so long to validate whether\u00a0\nevery SIM card has a valid Aadhaar number. \n\u00a0 So, this is just to illustrate that, if you just\u00a0\ntake a problem at face value and address it at\u00a0\u00a0 the way it is presented to you withou"
+    },
+    "3ea66268-4bb2-43b3-b053-58ac3ba40a07": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "t doing\u00a0\nany thinking, you might well end up with a\u00a0\u00a0 problem that is unsolvable, simply because it\u00a0\nis physically not possible to solve that problem\u00a0\u00a0 given the resources and constraints that you\u00a0\nhave. So, we need a different way to do this. So,\u00a0\u00a0 how do"
+    },
+    "fbf40d23-184d-4053-9984-3106667dc105": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " we solve this problem? \nSo, clearly, this cannot be the only\u00a0\u00a0 way to solve this. Otherwise, there is no\u00a0\npoint in associating Aadhaar numbers with\u00a0\u00a0 SIM cards because nobody is ever going to be\u00a0\nable to check that they are valid or not. \n\u00a0 So, let us swi"
+    },
+    "97f5f84b-85bc-443c-a0d8-751b0f1bf076": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "tch to a different problem. So,\u00a0\nsupposing I want you to guess my birthday.\u00a0\u00a0 And the way it works is that you are allowed to\u00a0\nmake a guess. And I will either say yes, you got\u00a0\u00a0 it. Or I will tell you no, it is wrong, because my\u00a0\nbirthday is earlier than t"
+    },
+    "078a4478-7d4c-4eaa-b4f8-9b3f23331f33": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "he day you presume. And\u00a0\u00a0 or it is later. So, this is just a date. \nSo, I am just asking for a date like September\u00a0\u00a0 7 or October 24th. I am not asking you to\u00a0\nguess the year at this point, just the date\u00a0\u00a0 within the year. So, there are 365 or if you count"
+    },
+    "3775fc15-9841-44a6-9379-a9c29dc1b405": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "\u00a0\nleap years 366 possibilities, I want you to figure\u00a0\u00a0 out which one of them is my birthday. So, let\u00a0\nus suppose that my birthday is 12th of April.\u00a0\u00a0 So, you might ask questions for instance, you\u00a0\nmight ask, is it the 12th of September? \n\u00a0 And I would say "
+    },
+    "f41c414f-e898-4120-965b-2623aef56875": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "no, it is not my\u00a0\nbirthday is earlier than that,\u00a0\u00a0 then you would logically ask a date. I mean, after\u00a0\nI tell you it is before September 12. Presumably,\u00a0\u00a0 you will not ask me a date like November 15.\u00a0\nBecause you know, it is before September 12. So,\u00a0\u00a0 you "
+    },
+    "a7f98768-5bf6-4c30-9d63-ff0b5926fd7e": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "might ask me something at the beginning of the\u00a0\nyear. So, you say is it February 23rd? I say no,\u00a0\u00a0 it is not February 23rd in fact it is later. \nSo, now what have you done? You know, it is\u00a0\u00a0 between February 24th. Because it is not February\u00a0\n23rd. And it i"
+    },
+    "41b3e048-bd9f-4f20-93a1-96426548b681": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "s latest between February 24th\u00a0\u00a0 and September 11th. So, you will have something\u00a0\nin that range. So, maybe you might ask July 2nd.\u00a0\u00a0 Now, I will say no, it is not July 2 it\u00a0\nis earlier. So, now you know it is between\u00a0\u00a0 February 24 and July 1st. So, our que"
+    },
+    "ed227a73-9f10-4ecd-9ef7-526e890454ba": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "stion is,\u00a0\nthere a systematic way to ask these questions?\u00a0\u00a0 What is the best sequence of questions to\u00a0\nask in order to guess my birthday? This\u00a0\u00a0 is the rule that I can say yes. Or I can\u00a0\nsay it is before or I can say is after.\n\u00a0 So, as we saw, what we are "
+    },
+    "bf178b7f-6626-4364-b636-0b54cc64e4e1": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "doing is we are\u00a0\nactually taking an interval of possibilities\u00a0\u00a0 and narrowing it down. So, initially, I have all\u00a0\n365 days after I asked one question, the interval\u00a0\u00a0 narrows. So, the best way to narrow it is to take\u00a0\na question in the midpoint. So, if I ta"
+    },
+    "47d47ba5-e708-4f93-a6cb-2688887f1e65": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "ke the\u00a0\u00a0 midpoint, then the next time I am going to look\u00a0\nat half the interval. Now see, September 12. If\u00a0\u00a0 it had been after September 12, I would have got\u00a0\nlucky because I would have narrowed it down to\u00a0\u00a0 the last three and a half months of the year. \nBu"
+    },
+    "9c3e5f25-5ebf-4d0b-a6fe-5319963c1205": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "t because it was not after but before and still\u00a0\u00a0 left with 8 and a half months, which is not\u00a0\ngreat. So, instead of having this imbalance\u00a0\u00a0 with 8 and a half and 3 and a half, it will\u00a0\nbe better to have something in the midpoint\u00a0\u00a0 so that whichever way th"
+    },
+    "da5687bc-88d8-4fa3-853e-894c9333ddad": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "e answer goes, I am\u00a0\nguaranteed that I am making an equal amount\u00a0\u00a0 of progress. The midpoint is best. \nSo, if I take the middle month,\u00a0\u00a0 end of June or beginning of July, so let us say\u00a0\nI take June 30th. So, the answer is still the\u00a0\u00a0 same. I am still askin"
+    },
+    "3d0becff-5f61-4ac5-93f8-10da4ca97a7b": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "g questions about 12th\u00a0\nof April. So, if you ask me June 30th. No,\u00a0\u00a0 I will say it is earlier. Now, you have range\u00a0\nfrom January 1st to June 29th. So, January,\u00a0\u00a0 February, March, April, May, June. So, at the 3\u00a0\nmonths point so, you will ask say March 31st."
+    },
+    "a134d4c8-4db4-4711-8d82-d53294c9b2d7": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "\n\u00a0 So, now that you say March 31st, I will say it\u00a0\nlater. Now, you have narrowed it down to from 6\u00a0\u00a0 months to 3 months. So, it is now in April, May or\u00a0\nJune between April 1st and June 29th. So, now you\u00a0\u00a0 take the midpoint in that the middle month is May.\u00a0"
+    },
+    "4f6f0f1d-6673-4764-a7a4-f642bded02d2": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "\nSo, you take the midpoint say 15th of May. So,\u00a0\u00a0 you will say is it May 15th? And I will say no,\u00a0\nit is earlier. So, now my range is between April 1\u00a0\u00a0 and May 14. \nSo, this is like 45 days roughly.\u00a0\u00a0 I have cut it down from 12 months to 6 months\u00a0\nto 3 mon"
+    },
+    "751398ff-c562-4ca3-8b5d-489599966c65": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "ths to one and a half months 45 days,\u00a0\u00a0 so 45 days, so, about 22 days is the midpoint. So,\u00a0\nI may task 22 days from April 1st, so, I may say\u00a0\u00a0 April 22nd. Now, if you ask April 22nd I say it is\u00a0\nearlier, so, now, my range has come to April 1 to\u00a0\u00a0 21 becaus"
+    },
+    "f3dbc8db-5ca5-4651-a53c-6196271e00e6": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "e it is before April 22 and it is after\u00a0\nMarch 31. So, this is a 21-day range, so I might\u00a0\u00a0 ask 10 to 11 days into this range. So, I maybe\u00a0\nI will ask April 11th. So, now, it says later,\u00a0\u00a0 so now it is April 12 to 21 this is my range. \nSo, I take the midpo"
+    },
+    "9796fa7b-9c7e-4f42-904a-77267cf0c12e": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "int of this.\u00a0\u00a0 So, I may say 16th, it is the 16th or 17th\u00a0\nI mean the midpoint sometimes could be\u00a0\u00a0 one of two values, so I ask 16th, is\u00a0\nearlier, so, now it is between 12 and 15th,\u00a0\u00a0 it is definitely after 11th before 16th. So,\u00a0\n12, 13, 14, 15. So, I may "
+    },
+    "bbd5c68f-f1a5-4db2-ba5b-3d916be18180": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "be ask 13. And this\u00a0\u00a0 is earlier, so now I know it is after 11. \nAnd it is less than 13. So, I have no choice.\u00a0\u00a0 I mean, unless I have been lying, and I am\u00a0\nnot born at all this year, I have narrowed\u00a0\u00a0 it down to an interval of 1. So, it must be\u00a0\nApril 12t"
+    },
+    "38b578a9-1428-470f-a114-c4598badd326": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "h. So, I have come down this list\u00a0\u00a0 and answered your question. And in this\u00a0\nparticular case in 8 questions. \n\u00a0 So, how does this work in general? Well,\u00a0\nthe interval shrinks, so initially,\u00a0\u00a0 we are looking at 365 days, then we look at half\u00a0\nof that, becau"
+    },
+    "88794d88-6718-4974-93f4-54ee25553c18": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "se one number gets knocked off. So,\u00a0\u00a0 364 divided by 2, so 182 days, then 182, one\u00a0\nnumber gets knocked off, I have 90 or 91. So,\u00a0\u00a0 in the worst case, I will have 91, and so\u00a0\non. So, 91 becomes 45, 45 becomes 22. \n\u00a0 So, each time I am subtracting 1 and\u00a0\nha"
+    },
+    "50c128ba-8294-4cf7-931e-b88415ae9982": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "lving and getting roughly that number,\u00a0\u00a0 if it is not even I am taking the\u00a0\nbigger of the 2, so 22 becomes 21,\u00a0\u00a0 because it is not that day. So, I have 10 on\u00a0\none side, 11 on the other side. So, 11 is the\u00a0\u00a0 bigger of the 2. So, the worst case I might get\u00a0\n"
+    },
+    "6fbcb174-fc1e-4f94-a786-f8a9748d099f": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "11, 11 one will go so I will get 5 and 5.\n\u00a0 Similarly, 5 will go so, I will get 2 and\u00a0\n2. And then when I ask an interval of 2,\u00a0\u00a0 then I will basically be asking the midpoint\u00a0\nand either I will get it right or it will be\u00a0\u00a0 bigger or smaller than the number"
+    },
+    "dcc26a3d-4dee-4a25-ad5d-26cbe7a50e29": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " I ask. So, I\u00a0\nwill finally end up with 1, so you can count 1,\u00a0\u00a0 2, 3, 4, 5, 6, 7, 8, 9 in general, here, I\u00a0\nasked 8 questions and got to this interval.\u00a0\u00a0 So, certainly it is under 10 questions.\nSo, this is the guessing the birthday thing. So,\u00a0\u00a0 what is th"
+    },
+    "c0c7a4aa-29de-41cd-a992-f99a2db3250d": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "e property that we are using, we\u00a0\nare using the property that I can say earlier\u00a0\u00a0 or later. So, the birth dates are arranged in a\u00a0\nsequence. And I am asking you about a particular\u00a0\u00a0 date. And I know whether to go backwards or\u00a0\nforwards. So, this order is i"
+    },
+    "34c30468-a872-45d7-a3a5-9a4c37cc84b6": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "mportant. I have\u00a0\u00a0 got a sequence of dates. And I am asking you\u00a0\nand you can use the same principle to look for,\u00a0\u00a0 say, you know, words in the dictionary or\u00a0\nwhatever we are quite used to this. \n\u00a0 So, when you have a sorted sequence, searching\u00a0\nfor somethi"
+    },
+    "02ab262c-e6d5-4a6b-aee9-ca0d6a245aaa": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "ng and going backwards and forwards,\u00a0\u00a0 you would not find a page number in a book. It is\u00a0\nvery easy, supposing somebody says open this book\u00a0\u00a0 to page 784, you will first open it at random,\u00a0\nand you will see whether the page you have opened\u00a0\u00a0 is before 784 "
+    },
+    "b7cfca46-02f2-4324-9a60-febb61889f10": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "or after 784. And then you will go\u00a0\nforwards or backwards and you will quickly arrive\u00a0\u00a0 at the page that you need, you will not flip\u00a0\nthrough the book one page at a time to reach\u00a0\u00a0 784. Now, how do we apply this to our earlier\u00a0\nproblem of SIM cards and Aad"
+    },
+    "aeedcbe6-d0aa-4755-903d-2e9d895c3c5f": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "haar cards? \n\u00a0 So, let us assume that this Aadhaar database is\u00a0\nactually sorted. So, we can talk about Aadhaar\u00a0\u00a0 numbers and go backwards and forwards. If I\u00a0\nlook for Aadhaar number, I can say whether\u00a0\u00a0 the Aadhaar number I am looking for is before\u00a0\nor aft"
+    },
+    "4aa77f16-15ee-4989-8acf-a3a64fe45dd0": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "er the current one I am searching for it,\u00a0\u00a0 so I can probe this Aadhaar list just\u00a0\nlike a probe this birthday list, I can say\u00a0\u00a0 look at the middle number in my Aadhaar list and\u00a0\nthen decide whether the number I am looking for is\u00a0\u00a0 before or after, that is "
+    },
+    "7cd96016-1b05-418c-a87f-9ec9b3f2ebcf": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "more or less what\u00a0\nwe did in the birthday, I asked you a date\u00a0\u00a0 in the middle of the year. And I am told with\u00a0\nthis before or after by you. So in this case,\u00a0\u00a0 by looking at the Aadhaar number I can tell if\u00a0\nI look at the middle Aadhaar number in my list,\u00a0\u00a0"
+    },
+    "96e28b34-43e3-4c6b-926f-384883f4db76": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " I know whether the Aadhaar number\u00a0\nI have is smaller or bigger. \n\u00a0 So, I can use the same halving strategy that we\u00a0\ndid for guessing the birthday in order to keep\u00a0\u00a0 halving the interval to search for the Aadhaar\u00a0\ncard. So, in other words for each SIM card"
+    },
+    "1765aa23-cf45-4038-8748-e5c6f87ece3a": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "\u00a0\u00a0 S I use this halving strategy to find the Aadhaar\u00a0\ncard matching it. Now in the birthday case,\u00a0\u00a0 I always found the birthday\u00a0\nbecause that birthday existed. \n\u00a0 Now, in the Aadhaar case, there is a situation\u00a0\nwhere the Aadhaar card may not exist. So,\u00a0\u00a0 w"
+    },
+    "a611d4d7-0c13-497d-9e1e-8d6a21680a96": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "hat will happen is you will\u00a0\ncome down to an interval of 1\u00a0\u00a0 and that one card you only have one number left to\u00a0\nlook at and that is not the number that you have,\u00a0\u00a0 then you will say it does not exist. Because if\u00a0\nit were there, it should be this number, b"
+    },
+    "09a15d84-a2ce-4844-b5d1-d8f6e0b2cc70": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "ut I\u00a0\u00a0 have because I have narrowed down this interval\u00a0\ndown to one number, either this number is the\u00a0\u00a0 one I am looking for, or there is no such number\u00a0\nin this list. That is something I can say. \n\u00a0 So, we will look at this more formally. But that\u00a0\nis ess"
+    },
+    "c0c12083-c6f7-418d-8891-e300ff3ab6b7": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "entially the idea that I keep halving it.\u00a0\u00a0 And when I finally come down to this interval\u00a0\nof one, either I found it or it does not exist.\u00a0\u00a0 So, how long does this this probing\u00a0\ntake? How long does this take? \n\u00a0 Well, if I halve many times, then I am divid"
+    },
+    "9d049a83-4183-49f5-99d1-a06d4de48f37": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "ing by\u00a0\n2. So, if I halve 10, times, if I start with an x,\u00a0\u00a0 and I divide by 2 and then divide by 2, and so\u00a0\non, then if I divide 10 times, then I divide by\u00a0\u00a0 2 to the 10. And 2 to the 10, is roughly\u00a0\n1000, 2 to the 10 precisely is 1024. So,\u00a0\u00a0 if I halve s"
+    },
+    "99a28d8d-d916-4765-b97b-721f9420ec56": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "omething 10 times I\u00a0\nreduce it to 1000th of its size. \n\u00a0 So, therefore, after 10 queries, remember\u00a0\nmy Aadhaar interval, there are 10 to the 9\u00a0\u00a0 possible Aadhaar cards from the smallest one to\u00a0\nthe biggest one, if I have now halve this thing,\u00a0\u00a0 10 times, I"
+    },
+    "6209824a-eb8b-4e00-acd9-8ebd33824665": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " have brought this down by a factor\u00a0\nof 1000 to an interval of size 10 to the power 6.\u00a0\u00a0 Now, I keep halving. So, this halving applies\u00a0\nat every step, so this 10 to the 6 after 10 more\u00a0\u00a0 queries will come down to 10 to the 3. \nSo, I am now have come from 1"
+    },
+    "af3fde5f-70c3-4c91-8fe0-2c0ba78d931c": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " billion to\u00a0\u00a0 1 million after 10 queries. From 1 million I\u00a0\nhave now a range of 1000 after 10 more queries,\u00a0\u00a0 and now 1000 range in 10 more queries, I will\u00a0\nnarrow down to one because 1000 by 1000 is 1. So,\u00a0\u00a0 after 10 queries, I had 1 million after\u00a0\n20 que"
+    },
+    "ab80619d-d7da-44c7-a74e-f0676f94a9b6": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "ries, I had 1000 after 30 queries,\u00a0\u00a0 I have narrowed down to a single card either this\u00a0\nis the Aadhaar card I want to check all this is\u00a0\u00a0 not the Aadhaar card, there is no Aadhaar card\u00a0\nof my SIM card in this. So, in 30 queries, I have\u00a0\u00a0 completed the sear"
+    },
+    "192f4edc-e53b-4c30-aae1-1ebd5be867c9": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "ch for each SIM card. \nSo, therefore overall, there are 10 to the\u00a0\u00a0 9 SIM cards and each of them I might spend\u00a0\n30 steps looking for the thing. And then let\u00a0\u00a0 us assume that you do some basic operations.\u00a0\nSo, this is my estimated work. So, earlier,\u00a0\u00a0 if fo"
+    },
+    "da236808-b96a-472d-b4cd-12f10eef3798": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "r each SIM card, I had to scan through 10 to\u00a0\nthe 9, so it is 10 to 9 times 10 to the 9, I have\u00a0\u00a0 converted that second 10 to the 9 work, instead of\u00a0\nscanning through the entire list by probing this\u00a0\u00a0 sorted Aadhaar list, I brought it down to 30. \nSo, reme"
+    },
+    "0a6d4cf8-85db-4e88-953d-e3c5e3765fc8": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "mber that this is going to take\u00a0\u00a0 100 seconds, because 10 to the 7 is what I can do.\u00a0\nSo, 100 times 30 is the number I am looking at.\u00a0\u00a0 So, I have 3000 seconds. If I divide 3000 by\u00a0\n60, then I get 50. So, therefore, this process\u00a0\u00a0 is going to take me somet"
+    },
+    "90d25693-2b1e-476e-bc43-ea3c4c489b2b": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "hing relate off the\u00a0\norder of 50 minutes. Now, when it was not sorted,\u00a0\u00a0 we had something which would take 3200 years. \nAnd by just the simple\u00a0\u00a0 fact that we have arranged the Aadhaar cards\u00a0\nin a nice way, we are able to use this birthday\u00a0\u00a0 probing, halvin"
+    },
+    "5372b731-36f7-45f8-860f-438dc7cc43ce": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "g the interval and bring it down\u00a0\nby enormous number of amount of time from 30 to\u00a0\u00a0 100 years to 50 minutes. So, 50 minutes is not\u00a0\nfast, but at least you can start this thing\u00a0\u00a0 and go and have lunch and come back and\u00a0\nit will get done. So, it is something"
+    },
+    "bdc0f66a-18d9-43ac-9578-58372e28ecb8": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "\u00a0\u00a0 which will happen in an hour's work. \nSo, it is something that you can start off and\u00a0\u00a0 go and finish and come back. So, it is\u00a0\nnot, and of course, this is in Python,\u00a0\u00a0 if we do it in another language, it will\u00a0\nactually happen in less than a minute.\u00a0\u00a0 So"
+    },
+    "89597985-4469-46f6-8a48-4504584f8569": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": ", we have taken something which is wildly\u00a0\ninfeasible and made it extremely efficient.\n\u00a0 So, of course, there is a step which we have to\u00a0\ndo, which is to sort the Aadhaar cards. Because\u00a0\u00a0 every time somebody creates a new Aadhaar\u00a0\ncard, this list will it i"
+    },
+    "2eafd73e-67a5-4fc4-a15b-784cf25dd73d": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "s not a onetime\u00a0\u00a0 operation. So, this Aadhaar card list has to\u00a0\nperiodically be resorted because new Aadhaar\u00a0\u00a0 cards keep getting added to this list. So,\u00a0\nwe need an efficient way to sort the Aadhaar\u00a0\u00a0 cards which we are not discussing now. \nSo, assuming t"
+    },
+    "601571fd-df5e-49dc-b3e5-7776db76d3cb": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "hat this Aadhaar card sorting\u00a0\u00a0 does not take 3000 years, if it took 3000 years to\u00a0\nsort the Aadhaar cards, then we are anyway doomed.\u00a0\u00a0 But assuming we can also sort the Aadhaar\u00a0\ncards in some reasonable amount of time.\u00a0\u00a0 Then we can apply this halving tr"
+    },
+    "ddd3ca70-971f-4fcc-906d-820a9482c0b5": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "ick to\u00a0\nsolve this problem in 50 minutes. \n\u00a0 So, the main purpose of this\u00a0\nstory is to show you that\u00a0\u00a0 we were able to achieve this efficiency by\u00a0\nassuming something about how the data is arranged.\u00a0\u00a0 So, we had to first put the data into\u00a0\nthis sorted form "
+    },
+    "611bd178-ac48-4dc3-af78-28b259ac06a3": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "and only then we could\u00a0\u00a0 apply this halving strategy to get to our\u00a0\nanswer. So, both were required I could not,\u00a0\u00a0 so when we did GCD for example, and we\u00a0\ncame up with Euclid s algorithm, we did not\u00a0\u00a0 exploit anything about how the numbers were given\u00a0\nto us"
+    },
+    "a0feb152-519c-434e-a5d1-397e98fe6d98": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " M and N is given to us, but we exploited\u00a0\u00a0 some number theoretic properties of the remainder\u00a0\nin order to convert it to a simpler problem. \n\u00a0 So, that was an algorithm which did not represent\u00a0\ndepend on how the data was presented to us.\u00a0\u00a0 Here, we are act"
+    },
+    "246e0458-2ff6-4d35-939f-129849cfd3f7": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "ually changing the way the data is\u00a0\npresented to us we are assuming that the Aadhaar\u00a0\u00a0 cards are sorted and if the Aadhaar are sorted\u00a0\nthen we can do this efficiently. So, the moral\u00a0\u00a0 of the story is that both are important. \nSo, this is why this course is"
+    },
+    "f0e243b0-2c7d-4982-8adf-bc3921463453": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " called\u00a0\u00a0 data structures and algorithms. So, it is\u00a0\nimportant sometimes how the data is organized.\u00a0\u00a0 So, in the very least thing we have the\u00a0\norganization in this case, so, it is not a\u00a0\u00a0 structure as such, but it is just saying that the\u00a0\narrangement is in"
+    },
+    "8d353a32-b77a-4071-88a7-867f52037886": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": " a particular way. We will also\u00a0\u00a0 see examples where the format in which the data is\u00a0\npresented makes it easier to look up things. \n\u00a0 So, those are data structures. So,\u00a0\nif you have good data structures,\u00a0\u00a0 then you can think of cleverer algorithms.\u00a0\nSo, bo"
+    },
+    "c4484e32-5ca8-41d7-b686-35059710d2aa": {
+        "content_id": 11,
+        "course_name": "PDSA",
+        "title": "Why Efficiency Matters",
+        "week": 1,
+        "chunk": "th data structures and algorithms are\u00a0\u00a0 important. And it can make a problem which is\u00a0\nimmensely useful to solve and bring it down\u00a0\u00a0 from something which is wildly impractical\u00a0\nto something which is highly efficient."
+    }
+}

@@ -1,0 +1,268 @@
+{
+    "ba733d0c-fb7c-46cc-9e4f-37b5d89de51a": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "So, we have seen a lot of searching and sorting\nalgorithms abstractly. So, let us try and understand in a more concrete\nsetting how the claims that we made about the complexity actually work. So, so here are some experiments that we will\nrun. So, we will s"
+    },
+    "cad0c3b2-8943-46b3-a8f6-cf4f0ce9dca9": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "tart remember, in the beginning,\nwe talked about this timer class, which will be used to measure time. So, this is just the same class. So, it is called timer error. So, remember, it allows us to start a timer\nand to stop a timer. So, that is basically, we"
+    },
+    "6b91e507-9f10-4179-b18a-ea31a33e97c3": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": " will use this to\nshow in physical time, how much time execution takes. So, the first thing that we were looking at\nwas searching a list. So, we had two strategies, so we had this\nnaive search. So, naive search basically, was one thing,\nwhich just scan thr"
+    },
+    "ffe381af-ba2e-4e37-aa0b-a218bc01a117": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "ough the entire list. And whenever it found the item, it would return\ntrue otherwise, it would eventually come out from the list saying that the item is not\nthere and return false. So, the worst case is when the item is missing. And then we had binary sear"
+    },
+    "1a8a0970-3e07-4192-b3a3-bea88988c294": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "ch, which would\nbasically divide the interval into two and search either the first half of the second\nhalf if we did not find. So, let us just check that these two implementations\nare correct by looking at some trivial example. So, we just set up a list he"
+    },
+    "f867dc31-69d7-4165-9619-40ff62089367": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "re, which is the\nlist of all the even numbers from 0 to 50. So, now, I searched then for all the numbers\nfrom 0 to 50. So, it should say that all the even numbers\nare found and all the odd numbers are not found, which is indeed the case. So for 0, naive se"
+    },
+    "ea85ece6-d179-461c-8abb-df5e7fae6dee": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "arch; so the first line\nis naive search. Second line is binary search. So 0, 2, 4, 6, 8 are true 1, 3, 5, 7 are false. So, this is just to convince myself that I\nhave not made any silly mistake in writing those two functions. So, now what I really want to "
+    },
+    "57d8cd51-822a-40d2-a3ff-4f10aff87448": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "do is compare\nthe performance of these two algorithms. So, one way to compare it is to run it on\nlarge inputs, and also to run it multiple times. So, just for the interests of making sure\nthat this does not take too long, I am going to run 10 to the power "
+    },
+    "fc574b5a-2456-4998-9d5b-176a98597cab": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "4 Worst case searches\nin a list of size 10 to the power 5. So, what is the worst case search, it is going\nto be a search, which is not going to work. So here, I am going to take 10 to the power\nof 5. So, I am taking notice here 10 to the power\n5, I am taki"
+    },
+    "0a8fd9a0-8685-42d8-b26c-a87be975a1a9": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "ng all the even numbers between 0 and 10 to the power 5. So, this is actually half of 10 to the power\n5. And then I am going to take a bunch of odd\nnumbers 1000 odd numbers from 3000 to 13000. And I am going to search for them in this\nlist. And for every s"
+    },
+    "ddc11a1e-ed60-4c5e-966f-74360b255c63": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "earch thing, I am going to\nstart a timer, then search and then stop it and then print the timer. So first, I will do it for naive search. And then I will do it for binary search. So, let us run this thing. So, it takes some amount of time. The naive search"
+    },
+    "6ebee783-da49-4750-9c31-18a61fd47888": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": " for this takes 10.6 seconds. And binary search takes less than one second. So, there is a factor of 10 speed up, it should\npossibly be more dramatic than this. But at least it is clear that binary search\nis much better than naive search. And so we will co"
+    },
+    "a2e3603b-5af5-44d7-bdb6-9ae5f5b3b6e5": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "me back to this issue about\nwhy binary search is not as good as it seems, compared to naive search, but naive, which\nis certainly worse. So, next thing we looked at was some naive\nsorting algorithms. So, the first naive sorting algorithm was\nselection sort"
+    },
+    "d3cbf3b4-c412-4cd9-a089-feb202b9e162": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "s. So, this is an implementation of selections\nor so remember, in selection sort, say we are doing it in ascending order, we take the\nwe find the minimum element and move it to the beginning. So, we assume that we have sorted up to position\ni minus 1, we t"
+    },
+    "ec6463b5-7377-4e01-b16e-222ed8459c7e": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "ake the value at i onwards find the minimum and put it at position i. So, this is selection sort. So, this scanning and finding the minimum\nis not going to change whether or not that suffix of the list or sequence is sorted on. So, whether it is in random "
+    },
+    "829c8bc7-4a14-4cbf-b82b-0d2bb5fedeb8": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "order, or ascending\norder or so on does not matter. So, let us set up an experiment with that. So, what we do is we take 5000 elements, and\nwe create 5000 random elements. So, we start with a random library of Python\nand what this says is, it creates for i"
+    },
+    "414f522d-e569-4741-bc3d-50968ce26acd": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": " in range 5000. So, it creates 5000 random elements between\n0 and 10 to the power 5, so I am basically creating a random list of size 5000. And then I am creating an ascending list of\n5000, which is 0 to 4999. And then I am creating a descending list of\n50"
+    },
+    "b39fcd58-204c-46b8-a6e7-35a12a037fc8": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "00, which is 4999 to 0. So, I create these three lists, and I put\neach of them in a dictionary called input lists with the key random ascending and descending. And now what I do is I put this whole thing\nin the loop. So, I have this timer which I create, a"
+    },
+    "dfaeb9fc-5cee-459b-89af-0b56d47b8d8b": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "nd\nthen for each of these random ascending descending, I first make a copy of the list, I do not\nwant to change it remember that these are in place sort. So, I just take a slice. And then I started the timer, run the selection\nsort on this list that I am p"
+    },
+    "a9692a3c-1f15-4c6d-a856-d0720d1c02b2": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "assing it, stop it and print it. So, if I run this, then you will see that\nI have chosen numbers to run this fast. So, each of them takes about a second, but\nthey take the same amount of time, this is the important thing. So, if it is random or ascending o"
+    },
+    "63c5e1f3-f200-445f-88a2-1992c0ba20de": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "r descending,\nit does not matter, they all take roughly as you can see, 1.2 seconds or so. Now, here is Insertion Sort, which was another\nnaive sort that we looked at. And in insertion sort, we said that the performance\nactually should vary according to wh"
+    },
+    "182985b0-3d36-4dad-ad4e-ba78d03a7835": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "ether it is ascending or not. So, if we run insertion sort on the same thing,\nwe would expect that it will work better on the sorted arrays than on the unsorted arrays. So indeed, if I, if I run insertion sort on\nthe same random elements, on the random ele"
+    },
+    "0da832a3-99cc-48b5-9405-cbe903cc4fbe": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "ments, it actually takes a little longer than selections\nsort, there it took 1.2 seconds here is taking 2 seconds. But on ascending order, it takes a fraction\nof a second, because an ascending order, the insert operation is trivial. In any descending order"
+    },
+    "42c078a5-7f63-4e25-a603-98ff4ed9827e": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": ", it is taking something\nlike 5 seconds, so it is actually much worse, because in descending order, essentially whenever\nwe are taking the minimum element, we have to insert it all the way to the back, because\neach element that we see is smaller than every"
+    },
+    "f0cac233-e8b4-4038-b897-130d05cd4547": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "thing before it. So, we have to the maximum number of inserts. What about a recursive Insertion Sort? So, a recursive Insertion Sort. Now will, if we run it on the same inputs,\nwe first see something interesting, which is that we will get an error, which i"
+    },
+    "a6088d0b-5fbb-4dae-a3f5-2d4daeed7a25": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "s because\nof something called the recursion depth. So, you may have seen this before in the Python\ncourse. But Python by default has a very small tolerance\nfor recursion, because it is worried that you are out of control. So typically, the recursion depth "
+    },
+    "bab318f9-0757-4b67-8034-e9333cec3b2e": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "is. So, you can have about 1000 nested calls,\nwhich is not enough for Insertion Sort sorting, say an ascending or descending order list\nwhere it has to keep doing something for, say 5000 elements. So, one way to fix that is to set this thing\ncalled the rec"
+    },
+    "d470a5c7-4ba4-4b65-aa29-2d69f6bcb6bc": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "ursion limit. And it turns out that the largest value you\nare allowed to set in Python is this number 2 to the power 31 minus 1. So, you can do this thing of setting the recursion\nlimit by importing this system library and calling it with this number. So, "
+    },
+    "08bac7e9-2650-43df-868b-75edb9f7412f": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "once we do this, then we can run our Insertion\nSort as before. And now I am running it on even smaller lists. So there, initially I was running into on\na 5000 size list. Now I am running it on a 2000 size list, which\nis only 40 percent. If you remember ins"
+    },
+    "cc197280-4c08-4598-9d55-ae1f1e7c5e05": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "ertion sort on the iterative\nversion took 2 seconds. Now here on something which is much smaller,\nit is taking 12 seconds. And there, if you remember, the insertion\nsort on the sorted version took really a very small amount like 1 10000th of a second. And "
+    },
+    "b12a12d2-135e-469a-9852-9e1a72178406": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "here it is taking almost 1/10 of a second. So, what this is saying is that, although\nthey are equivalent as algorithms, the recursion basically makes the whole thing much slower. Because every time we have to call and return\nfrom a function, there is an ex"
+    },
+    "c754b804-c067-4e09-8200-fcc88d652c34": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "tra cost involved. So, our basic counting is not working as well\nwhen we have to deal with these function calls. And finally, we have merge sort, so we have\nthis merge function. And then we have merge sort, which calls this\nmerge function. And we said that"
+    },
+    "25e029c7-0825-40d2-a7ee-0ab4d5460333": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": " merge sort is an order n\nlog insert, so it should work much better on even large inputs. So again, we can run it on a trivial thing. So, we just take sorting the even numbers\nfrom 0 to 1000, followed by the odd numbers from 0. So, we construct a list whic"
+    },
+    "15a31931-2153-4ca4-80a6-e6c06142390e": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "h is 0, 2, 4 followed\nby 1, 3, 5, 7. And we sorted and indeed Merge Sort produces\na sorted output, but our real interest is in the performance. So, supposing now we take a seriously large\narray which we have not tried at all with insertion sort and selecti"
+    },
+    "92708f7e-4d32-48e8-ac5a-d1bd8eff9349": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "on sort, if you\ntry it, you will find it takes forever, but 10 to the power 6, remember, if I do n log\nn and 10 to the power 6, log n of 10 to the power 3 is about 10. So, n log n on 10 to power 6 is going to be\nmore than 10 to the power 7. And we said tha"
+    },
+    "99693d8b-a8ee-493a-8d35-685bbf5e1996": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "t 10 to the power 7 is what\nwe would expect in 1 second. So, n log n should take between 1 second and\n10 seconds is what we would estimate. So, if we run this again on our three types\nof inputs, random ascending and descending, but this time the numbers ar"
+    },
+    "43c04bcb-bce0-4919-a244-eb2054016ede": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": "e 10 to the power\n6 and not those 5000 which we are doing with Insertion Sort, then you will find that indeed,\nthe random one takes a little less than 10 seconds and the ascending and descending will\ntake about half the time. So, this shows that merge sort"
+    },
+    "c302ed42-a593-4d5e-b358-0e1ad90a9f76": {
+        "content_id": 21,
+        "course_name": "PDSA",
+        "title": "Implementation of Searching and Sorting Algorithms",
+        "week": 2,
+        "chunk": " is indeed,\nsignificantly faster than the naive swords working in n log n time."
+    }
+}

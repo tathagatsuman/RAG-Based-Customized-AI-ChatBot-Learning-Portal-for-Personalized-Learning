@@ -1,0 +1,793 @@
+{
+    "8ea2fd63-bf04-4458-b55d-1c2ec620bd6a": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "So, we have seen three examples involving\nstrings, which were somewhat similar. We started with the longest common sub word, then we\nmoved to the longest common sub sequence. And then finally we expanded that to the edit\ndistance. And in an all cases, the "
+    },
+    "96eceac7-d363-4ec1-b72a-78b4fdbbd2d6": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "recurrences looked similar. And now let us look at a problem\nwhere the recurrence is somewhat different; so this is a problem related to matrix multiplication. So, how do you multiply two matrices? Well,\nif you have a matrix A and matrix B, and you want to"
+    },
+    "63de82e4-d97a-47bd-adf6-f7a96f54f903": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " multiply them and produce a new matrix;\nlet us call it A times B. So, now if I look at the entry in the ith row and the jth column\nin the new matrix; I have to take the ith row in j. The jth column in B; so the ith\nrow in A, the jth column in B; and then "
+    },
+    "8fa26ab9-2c47-4511-8a6f-6199184a2a44": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "multiply these element by element. So, I have to take\nthe first element here. So, I have to run k through these, k runs\nthrough these indices from 0 to n minus 1; and I take A i, 0, B 0, j. That is my first\nterm; so that is this times this. Then I go to th"
+    },
+    "7592cf47-6ce1-41f4-b480-51db3a4460ad": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "e next one, I get A i, 1 times B 1, j;\nso this is this one and this one. So, in this way I keep walking down this row and walking\ndown this column; I pair up the elements multiply them as pairs, and then add them up. So, I do this plus this, and so that is"
+    },
+    "a07c7ad0-8bb7-45e7-b7b6-c148e31da000": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " the\nsummation. So, is the summation of A i, k into B k, j; for k ranging from 0 to n minus\n1. So, this is how you multiply two matrices. So, in order to do this, that row the ith\nrow here and the jth column must have the same length; otherwise, you can no"
+    },
+    "712ad95f-ee29-4488-abc1-11b25724d329": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "t pair them\nup. So, if I look at the number of columns, so this is an m row and n column matrix; and\nthis is an n row, this is whatever p arrow q row p column matrix. Then the size of the number of columns here\nmust be equal to the number of rows here; so "
+    },
+    "72485f32-a378-483b-959d-0d23e6153d7c": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "n must be equal to q. So, must have the\nsame number of columns in A and in B, so that I can multiply them and how much time does\nit take? A times B is an m cross p matrix finally; because, I am going to get entries\nof the form i comma j, where i a row in A"
+    },
+    "9332af0b-b168-4097-b0d1-7311788eca5d": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": ", and j is a column and B. So, computing each\nentry takes order n time, because we have to run through the summation. So, each entry\nin AB takes this much time, and how many entries are there? There are m times p entries. It has m rows\nand p columns. And t"
+    },
+    "07e5d844-3c34-4af7-b964-d527c0b3fdd7": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "herefore the overall cost is going to be m times p times n, which I\nwill write as m times n times p. So, there are m times p entries and each takes order\nn time. So, this is the cost of doing one matrix multiplication using the standard definition\nof matri"
+    },
+    "26630742-33ad-463b-aac4-b61efaa4791c": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "x multiplication. So, we are not going to try and work with; we are not trying to\nimprove matrix multiplication itself. We are looking at a problem where we have\nto multiply a sequence of matrices. So, supposing we have to multiply three matrices, A times\n"
+    },
+    "28514773-7ecf-471d-af52-8b493fbe6775": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "B times C. Now, we can only multiply two at a time. So, either we can first multiply A\ntimes B, and then multiply the result by C; or we can first multiply B times C, and then\nmultiply the result by A. So, the order left to right is important,\nbut what is "
+    },
+    "1daabd61-492e-43c5-9be8-17d32cf05f0e": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "not important is the sequence in which we do this pairing up. So that is\nwhat is known as associativity. So, we know from arithmetic the 6 plus 5 plus 2; it does\nnot matter whether I do 11 plus 2, or I do 6 plus 7. So, whether I do the 5 plus 2 first,\nor 6"
+    },
+    "8fae590f-686c-4e10-84ad-5c4ff2613160": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " plus 5 first; it does not matter, so that is associativity. I could either put\nthe bracket like this, or I can put the bracket like this; and both will give us the same\nresult. Assuming I can only add two numbers at a time,\nI can add up anyway; and I will"
+    },
+    "aca5837b-6368-4ad6-9d55-107080c13341": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " get the same answer, so matrix multiplications associative.\nSo, the sequence in which we pair up and evaluate this long chain of matrix multiplication operations\ndoes not really matter in terms of the answer that we get. But it does matter in terms of\nhow"
+    },
+    "4ec65dea-d62d-48ce-ab87-2bc4cd20c8d7": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " much time it takes. Now the how much time it takes for an individual\nmultiplication we know. If we take an m times n matrix and multiply it by an n cross p matrix;\nso will take m and p. But these matrices sizes should grow and shrink in the sequence as\nwe"
+    },
+    "93a90708-f8d3-45c5-b3f1-72e59987f496": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " will see. So, supposing we have these 3x matrices; we\nhave this one matrix, which is kind of just one row and it has 100 columns. And this has\ngot 100 rows and 1 column; and this is again a single row one 100 column. So, this is what\nit means, 1 cross 100"
+    },
+    "c82c2e15-0f70-4268-afad-a60a629bc1b4": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " means 1 row 100 columns; 100 Cross 1 means 100 rows 1 column. So, it\nis just a single row, a single column and a single row; and now I want to multiply A\ntimes B times C; so I can do it in these two ways as we have seen. So, let us see what happens if I d"
+    },
+    "4db29e98-7d17-4445-8bc7-5c068832f430": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "o the second\nfirst; so if I do A times the product B times C. So, when I multiply B times C, what am\nI going to get? I am going to get this is m, this is my n and this is p. So, I am going\nto get an m times p matrix; I am going to get 100 by 100 matrix. So"
+    },
+    "68a0a988-1188-48e1-93a6-1e882e2636f2": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": ", BC the product\nof B and C is 100 by 100. How much time did it take? It takes m times n times p; takes 100 times\n1 times 100; so this takes 10,000 steps to compute. Now, I have this 100 by 100 matrix,\nand here I have a 1 by 100 matrix. So, the final answe"
+    },
+    "153c2663-3303-4f50-9696-841cce17b971": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "r now is going to be 1 into 100\nA times B times C. So, A times B times C is going to be 1 into 100; how much time is it\ngoing to take? I had a 1 by 100 here, and 100 by 100 here;\nso it is 1 into 100 into 100, so it is again 10,000. So, therefore computing "
+    },
+    "965cd6b7-2296-489a-906f-c8b1b3ab0e8f": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "this product\nby first doing B times C, and then doing a into that product takes 10,000 plus 10,000\nsteps. If I do it the other way, then things are very interesting. First of all, this matrix\nwhich is 1 row times 1 column, is actually just going to give me"
+    },
+    "03f22350-c4b7-4b47-b422-17300a6288fa": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " one entry. This row times is column in this product gives\nme one. So, I actually end up with a 1 by 1 matrix. And how much it takes? It takes\ntime to multiply 1 row into 1 column of length 100; so it just takes 100 steps. And now I\ntake this 1 by 1 and I "
+    },
+    "e2f47aac-f1bc-4f2f-a705-3b65773f609d": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "multiply it by this; I am going to get a 1 by 100. But how much\ntime is this going to take? Well each of the strings is just one trivial,\n1 by 1 is just one value. It is going to be one value one row value, times one column\nvalue. So, I am basically going "
+    },
+    "7b2a8003-2f4e-4b23-b25b-3a442820707b": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "to take another 100 steps, 1 into 1 into 100. So, 1 into 100\ninto 1 is 100; 1 into 1 into 1 is 100 and two, so I get 100 plus 100 200. So, therefore,\nby choosing a better order A times B first and then multiply by C; rather than the worst\norder A into B ti"
+    },
+    "4df3f1fc-d36e-4e0c-a4bf-15b88d7df91d": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "mes C. I have made an enormous saving in terms of\nhow much time it takes to multiply. So, the multiplication again I am trying to emphasize\nthe multiplication of the matrices itself. I am not doing anything clever, I am just\nusing the basic definition of m"
+    },
+    "290f5c69-4496-40fb-921b-e2aeb9237ef0": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "atrix multiplication; I am just finding a good order in which to\nevaluate a long sequence of multiplications. So, the general problems and this was for\nthree A B and C; but the general problem is I will be given n such matrices. So, and we\njust to make eve"
+    },
+    "9b75d65a-3186-4e89-a9a8-2e0b234ec03e": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "rything easier for our programming, will as usual assume that the numbering is\n0 to n minus 1. So, we have matrix0, matrix1, matrix2 each of them has a dimension r0 times\nc0, r1 times; so each has a number of rows and columns. Now, in order for this whole\n"
+    },
+    "fae022f5-f301-4804-be5e-69a7292e50a8": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "thing to work these dimensions must match. So, the columns of this matrix must match\nthe rows of the next matrix; that is what this says. So, the columns of the first matrix\nmust match the number of rows in the next matrix, as we multiply them. So, at any "
+    },
+    "27264738-63a8-4172-831c-0056bc4ec500": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "point\nif I look at rj, the jth matrix rows, it must be equal to the number of columns and j minus\n1. So, rj must be equal to cj minus 1. And since the cj minus 1 must make sense, j minus\n1 carry should be at least 0, so j should be at least 1. So, J lies b"
+    },
+    "46639b88-82d8-4842-88e6-dfdb4914eba3": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "etween 0 and it goes up to n minus\n1; so j is strictly between 0 and n. And if we do that then we are guaranteed, because\nas we incrementally so one way to evaluate a matrix is always to go left to right. So,\nI can do M0 times M1; so this is the natural wa"
+    },
+    "e1e48aac-2807-4299-9068-f5202aa73925": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "y if I just did not think about, I will\njust bracket it to the left. So, I will first compute M0 times M1, then I will take that\nand multiply it by M2. But at every point, the number of rows that\nI generate the number of columns that I generate will be com"
+    },
+    "fde189fb-26d4-43de-bd3c-20f41b797dca": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "patible with the next number of\nrows; so this matrix product will always exist. But our goal is of course to find the best\nway to do this. So, what we want to do is find this kind of bracketing. So, it is amounts\nto basically saying how do i parenthesize t"
+    },
+    "d4390fc3-9725-405c-b249-695c527ddc6f": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "he expression, how do I choose which pairs\nto do first, then which pair to next and so on. So that, overall I minimize the total\namount of cost I spent doing this standard matrix multiplication. So let us look at the inductive structure\nof this. So, rememb"
+    },
+    "0d93e61b-2a3b-41db-a7eb-5e0cd1f285f7": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "er we can only multiply two matrices at a time. So, our final answer\nis a single matrix, so that single matrix must have been got by multiplying two matrices.\nBut because I am multiplying this whole thing left to right; the last two matrices are multiplied"
+    },
+    "59dd0879-614a-4d8e-9bd0-a469f25c7f05": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": ",\nso I had M0 M1 up to Mn. And the last matrix that I multiplied must have been of the form\nwhere I have basically taken some up to some k minus 1 and k. So, I have taken the product from k to n,\nand I have taken the product from 0 to k minus 1. In our ear"
+    },
+    "d1b4eba7-6e5a-4268-9220-58e9bbba1bb8": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "lier case for instance, we had\nA BC, and we have AB C. So, in both cases I can think of this as a trivial product,\nwhere I just have one. But if I had three for example if I had four at ABCD; then I\ncould for example do AB times CD first, or I can do ABC t"
+    },
+    "76370f27-a69e-4aae-af4e-dd93e8669a8c": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "imes D. So, of course, ABC itself would require me\nto break it up; but at the last step, what I am doing is I am taking two sub orders.\nSo, two segments of the 0 to m n minus 1 and I'm multiplying the result. So, I have 0 to\nk minus 1 on one side, and I ha"
+    },
+    "65149a2c-3b18-48d5-810e-9f13537e5ffa": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ve k to n minus 1 on the other side for some k. That I am\nnot telling you which k it is, but I know that it must be of this form. So, if I now look at the dimensions of this;\nthen the left matrix after all this multiplication, will have the same number of "
+    },
+    "bbe7e080-213c-485a-85ad-5e0aba2d7379": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "rows as M0 and\nthe same number of columns as k minus 1. So, the first one will be r0 times Ck minus 1.\nThe second product, this one will have the same number of rows as this one that is rk,\nand the same number of columns as this one which is Cn minus 1. An"
+    },
+    "36e7ed14-4d78-43b2-b36e-f05bbb3334a8": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "d because of this compatibility thing that\nwe had assumed, the number of rows here and the number of columns here must be the same.\nSo, rk must be equal to Ck minus 1, otherwise we could not have done this multiplication\nto begin with; so that is a constra"
+    },
+    "a4ab163f-415e-4e41-b02d-8b3411680f6a": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "int that is assumed. So, the cost we will now think\nof as the cost of doing it from the beginning to the end. So, the cost C 0 comma n minus 1 corresponds\nto how much time it takes, or how many steps it takes to compute the entire sequence products\nfrom 0 "
+    },
+    "1669192d-9540-4a71-ae33-d6c09051c052": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "to n minus 1. So, what we can see from this is that this breaks up into sub cost.\nSo first of all, there is this final step; the final step involves multiplying these\ntwo matrices. But I know the cost of that matrix, because\nI have not given, I have told y"
+    },
+    "966c7e48-87d4-4e9a-a982-ea379cb3550e": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ou what the costs are. So, I have told you the rows and\nthe columns in these two matrices. So, it is the number of rows in the first matrix\ntimes the number of columns in the first matrix, which is also the number of rows in the second\nmatrix times the num"
+    },
+    "c8117599-06c8-4289-ada8-887fa6217ae3": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ber of columns in second matrix. So, r0 times rk times C n minus 1; so this\nis a specific cost I get for the final multiplication. And then inductively I have incurred a cost\nin getting to this stage at all. So, I must have done something from 0 to k minus"
+    },
+    "f4e0f910-9e9f-4f6d-bc77-5fd0c601b46f": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " 1 to\nget this matrix. And similarly, I must have done something from k to n minus one to get\nthis matrix. So, these were the inductive problems that\nsolved. So, my total cost is going to be the sum of these three values, is going to be\nthe cost of buildin"
+    },
+    "e08cbcc9-da4d-43a3-a0e3-6f0cd21b2ddc": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "g up the first factor the left factor; the cost of building up the second\nfactor plus the cost of combining these two factors and the final multiplication. So this\nis the only one that I know explicitly; the other two have to inductively compute. So, of co"
+    },
+    "b31240ac-6b28-420d-9b8f-4cc3f98ab12e": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "urse, the choice of k is what determines\nhow efficient it is going to be; so which k should we choose, point here is we do not\nknow which k to choose. So this is like, even in an edit distance problem, we do not know\nwhether we want to substitute, delete, "
+    },
+    "c4c7e43a-e9ca-4649-81d5-ff90ff676486": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "or insert. So, similarly here we do not know\nwhether we should choose k equal to 0 k equal to 1; we can choose any k. So, what we have to do is basically evaluate\nthe possibilities for all sources of k, and then take the minimum; because remember again\nwe "
+    },
+    "db0d7980-f773-45ef-9450-c9def4ee7a6a": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "want the minimum costs for this matrix multiplication. So, what do the subproblems\nlook like? So if you look at this case, the subproblem consisted of starting from 0 and\ngoing to some intermediate point. And then starting from that intermediate point\nplus"
+    },
+    "df8e8d5f-cff2-4967-8f89-461fe37740e3": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " one and going to the end; but, in turn, these problems will again decompose. So, if\nI take for instance, this first part if I just take the first factor; then this in turn\nwill have decomposed into something in between. So, there will be some j in between"
+    },
+    "5c67275a-286d-4cba-8ff9-0cba107aa80a": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": ", such\nthat is 0 to j minus 1, and j to k minus 1. So, I could have a segment, which I have to\nmultiply in order to determine its cost, which starts from somewhere in the middle and goes\nto somewhere in the middle. So, in general the problem starts from so"
+    },
+    "d23736e2-c816-4b39-8e6a-4ebe242da091": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "me j and goes to\nsome k. So, we will look at a generic subproblem of the form Mj Mj plus 1 up to Mk; and for\nthat we will write the cost as C j, k. So, C j, k is the cost of multiplying Mj Mj plus\nwith Mk. And this will now be by our calculation we\nsaid we"
+    },
+    "82d9e8f8-08bc-47ff-95a1-fc162d43e103": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " do not know how to split it; but we have to split it at some l between j and k.\nSo, we find some l which is between j and k, and we look at the cost of doing j to l\nminus 1. And the costs of doing from l to k, and plus the cost of multiplying Cj times\nrl "
+    },
+    "bbb0b238-2acb-4ef2-b453-1e75c4b55f9e": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "times rc Ck. So, remember that rl is equal to Cl minus 1. The number of columns in the last element\nin the first factor is equal to the number of rows in the first element in the second\nfactor. So, this times this times this is the final multiplication and"
+    },
+    "774c7965-0bec-415c-9fb9-46691c51d6d9": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " then these two\nare inductive things. So, possibly I should have written the round bracket here so you\ncan just ignore it, for now I will fix it; so this is the inductive definition of our\ncost. Now, what is the base case? The base case is when I actually "
+    },
+    "9936e974-2789-46cb-b2a5-252234a83d90": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "have to just have\nm. So, remember that one of the cases that we\nhad for instance was A times B times C. So, if in this case, what we had was we are multiplying\na single matrix by a product of a chain of matrices. So, the base cases when the sequence\nconsis"
+    },
+    "9032f2cf-3788-4935-8f40-500a85aa5752": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ts of only one matrix; but when the sequence consists of only one matrix there\nis no multiplication to be done. So, if I look at j comma j as my interval, then the\ncost is actually 0; so I can use that as the base case for this definition. So, we have thes"
+    },
+    "68fba9e2-8af0-4a6d-b1a5-1aa96f932217": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "e subproblems as we said,\nwhich start from i and go up to j, and i and j can be between 0 and n minus 1. So, we will\nnaturally have a square matrix representing all the possible costs that we need to compute\nusing our inductive definition. But there is ano"
+    },
+    "2d90c268-9d0e-415a-a6dd-bd6a0e50fb00": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ther constraint on these costs, which\nis that? I know that the second index j cannot be smaller than the first index. So, i comma\ni is the smallest I can start with; I can not do i comma i minus 1. It does not make sense to start from a position,\nand multi"
+    },
+    "bea13a6a-5ec0-4638-bd5f-a77e89d3ae85": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ply by a matrix before it; because I always do matrix multiplication left to\nright. So, matrix multiplication is associative, but it is not commutative; commutative means\nthat AB is equal to BA. So, for matrix multiplication, this is not the case, I cannot"
+    },
+    "bb9c23b7-0fda-4da5-9aef-8fdee1b1f3c3": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": ". First of all,\nit may not be possible, because if I look at AB the compatibility of the column and\nthe row will be there; and for BA, it may not be there, but supposing they are square\nmatrices. So, supposing this is some n times n and this\nis also n time"
+    },
+    "1eeb65a1-3da7-4696-8366-7bbf80d3fb42": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "s n. So, I can actually multiply both AB and BA; in general the product A B\nis not going to be equal to the product BA. So, I am not allowed to, to flip the order.\nI have to go from left to right. So that means, in any sequence I must go from I and stop\nat"
+    },
+    "d63f5fd8-2f3c-49d6-baf3-1944e8299dee": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " a position to the right; so j is always bigger than I. So, what this means is that in this matrix,\nI must only look at cases where j is bigger than i. So here for instance, we look at this\nentry; so let us look at this entry, we mean let us assume that th"
+    },
+    "00a31f7a-47f7-435f-856f-1878f666d391": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "is is 1 and this is 1.\nSo, if I look at this entry, then this corresponds to i equal to 0, sorry i equal to 1; so this\nis i, and this is j. So, row 0 and column, row 1 and column 0;\nand this is not allowed. So, everything in this blue zone corresponds to j"
+    },
+    "94a5a709-7502-4b71-8a31-189ddf3c4b0c": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " which is smaller\nthan I; so the first entry of interest is where i is actually equal to j. And after\nthat is i is smaller than j, but below that is not a allowed. So, I only have to compute\nvalues above this so called main diagonal; so this is the diagona"
+    },
+    "c88cc873-6d26-4559-bb97-9471303c01ac": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "l of the matrix and\nthis is the main diagonal. So, we only need to compute values on the\nmain diagonal and above. The other thing is that our matrix product says that C i, j depends\non this C i to k minus 1 and C k to j. Remember I have i up to j and I am "
+    },
+    "c93aa489-6dd0-43db-8c35-6e43cf052316": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "splitting it at\nsome k, k minus 1; so there is some value of k between i and j where it splits. And\nif I try to look at what that means, it means that I am looking for a value in the same\nrow to the left, and in the same column, but below. So concretely, i"
+    },
+    "35153b83-1cee-42f3-8c9f-a6466c36621c": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "f I take this as i and j this\nyellow squared is i, j; so I have i here and I have j here. If I take this as my concrete\nsquare, then the first value is to take k is equal to i itself. So, if I, sorry, if\nI take k is equal to i plus 1, then k minus 1 is equ"
+    },
+    "98523287-dac0-4ab3-af60-922986c4e214": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "al to i. So, the first factor goes\nfrom i to i; so that is this one, this is the cost C i, I; and here, now this is the\nfactor i plus 1, j. So, I have to look at this cost, the cost\nof this plus the cost of this; plus the product that arises by taking thos"
+    },
+    "82c4a71f-7676-4ca5-9002-c38338c1e1dd": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "e as my immediate\nthings, that is 1 factor. The other one is I move it by 1, so I now allow a chain of\ni, i plus 1; and here i started i plus 2 onwards, so I get this and this. And the third one\nis this one. So, in this particular case, if this is my posit"
+    },
+    "62e1f3af-770a-430b-8425-86bcf3544624": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ion for i and j; then I\nhave this pair, then this pair and then this pair. So, I have to look at all of these. So, what this means is that therefore I need\nto know the values on my left and below. And this you can see is proportional to the position\nwhere "
+    },
+    "3e201d3d-7b7e-422e-82c4-39382e29ef68": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "I am; so unlike our LCS or LCW matrix, where I always looked at only the three entries.\nSo, wherever I was in the matrix in LCS or LCW or an edit distance, I only looked at\nmy immediate neighborhood; that I only looked at the right to the bottom and diagon"
+    },
+    "bae8d1a1-37aa-48c9-85fc-6bf7a758dc2a": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ally\nto bottom at right; so it did not matter how where I was. Whereas, here depending if I am here for instance,\nI will need all these values; so depending on what the position is, I might need order\nn values to compute. So, this is the difference between"
+    },
+    "13bee0e3-097e-430e-8a10-aaea916fbb9d": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " this computation and the earlier computations,\nwhich is that the number of subproblems that I have to consider to evaluate a given position\nis not constant. It is not fixed, it depends on where I am,\nI mean in general it could be as bad as order n. So, wh"
+    },
+    "d5acc01a-be10-4fb4-b355-ff2ce2684a55": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "at are the base cases? We saw that\nthe base case is when i is equal to i or i is equal to j rather. So, we said that when\nI am only looking at a singleton matrix, there is no cost involved; so I can fill up this\nbase case to begin with. Now, that I filled "
+    },
+    "84fba539-c746-4117-9c9a-5264837c54c1": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "up the base case, then what can I fill? If I take a value here for instance, I can\nnot fill it, because I have to look here and here, I can not even fill a value here. I\ncan fill this value, but I can not fill this value, even if I fill this value; because"
+    },
+    "087dd074-d13d-460a-93d7-e197be47daf9": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "\nif I have filled this value, and I tried to fill up this value, I still have a missing\nvalue here. So, I cannot go row by row and I cannot go column by column; I have to look\nat it diagonally. So, what I have to do is I have to then after filling this, I "
+    },
+    "2dedbe3f-81cc-4fde-9080-3cc7373c4fc5": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "have\nto fill the next; because for a diagonal entries, the next diagonal above the main diagonal. For every position I do have something to\nhis left and below; so this I have it is left and below. So, for every one of these I know\nboth the items in the sam"
+    },
+    "e4e5363a-7a0c-4926-bd07-aa8cfce05e9e": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "e row and the same column to the left and below; so I can fill\nup this, hen I can fill up the next diagonal. So, if I take a typical entry in the next\ndiagonal, again I have all the things to its left and below. So, I can fill up this entries diagonal by\nd"
+    },
+    "eb9eb003-c339-41fe-926e-8d6ea0e1e73f": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "iagonal. And in each case when I come to an entry on that diagonal, everything that\nis to the left or below has already been filled by an earlier diagonal. So, that is what I\nneed for dynamic programming to work that when I need a value I need a subproblem"
+    },
+    "5301a5d2-54f9-4354-8081-28d2dfb3b246": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "s answer.\nI am not going to reevaluate it using recursion, or the inductive definition; I am going to\nassume it is already been calculated. So, by doing a diagonal by diagonal I make\nsure that whenever I reach a problem, all the subproblems have already be"
+    },
+    "74ae40d6-13a3-4bf6-997d-dd2a52b47702": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "en calculated.\nSo, this now becomes a little more tricky to program as we will see; so in this way\nyou fill up this thing. And eventually, what are we going to get? We are going to say that\nthis is the value that we want. This is the cost that we incur whe"
+    },
+    "4daa9fec-56d7-49ff-8646-e2e77460270c": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "n we break\nup the entire segment from 0; so this is i is equal to 0 to j is equal to n minus 1.\nSo, if I take the entire sequence or the chain from M0 to m minus m minus, n minus 1; that\nis the cost 0 to n minus 1. How much cost does it take for me to do t"
+    },
+    "e1bb8be1-1aaa-4682-8e32-2738bd4c7d92": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "hat. So, this top\nright corner value is going to be the answer; just like for this edit distance, the top\nleft corner value, the 0 comma 0 value is the one I want. So as I said, this is a little more tedious\nto program; so let us just go through the code a"
+    },
+    "3aa47aa4-8d8b-4efa-9ba1-d28d5869df22": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " little bit more carefully. So, first\nof all, here we need some non trivial input; earlier we had two strings for example, so\nI could just pass it. Now, here I need this sequence of rows and columns. So let us assume\nthat I get as input a matrix of length "
+    },
+    "8dd2e5be-9f9a-437c-95a3-2a51b21330dd": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "n, where each entries of form r, i, c, i. So, I have r0, c0, and then r1, c1; so these\nare the dimensions of the n matrices up to r n minus 1, c n minus 1. So, this is my input;\nI get a dimension matrix consisting of pairs of entries r, i, c, i. So, if I a"
+    },
+    "700ee03b-4985-4829-91cd-d22f26a59c88": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "m using numpy,\nthen I can extract the number of entries by using the shape function. So, the shape function\nwill give me a for a one dimensional matrix, it will give me something of the form n comma\n0, or n comma blank like this. So, I need to use this 0th"
+    },
+    "4623e08a-0956-4b43-9af7-b4faaa8e15ac": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " thing to get out\nn. So, basically I can extract the number of entries, and then using that I can set\nup as usual an empty matrix to store my answer. So, C is my cost matrix, so I set up an n\nby n cost matrix with value 0. So, the first thing I do is I of "
+    },
+    "483b6c2a-babf-4420-9e43-abe2db0bb62c": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "course, is already 0; but\njust to emphasize I said the base case. So, for all entries from 0 to n minus 1, I\nsaid C i, i equals to 0; so strictly this is not necessary because I already have the\n0s here. But this is just to emphasize that the base case is "
+    },
+    "9ffb656d-d458-407a-8759-8ea8f47d80ab": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "being handle. Now, I have\nto do this diagonal, so this diagonal is what I wanted to mention to you carefully; so let\nus look at a specific example. So, say that we have, say 5 by 5 matrix. So\nthese are now 0,1,2,3,4 and 0,1,2,3,4; so I have already done th"
+    },
+    "7fdfa027-5e7f-4687-8d8b-0abd68fba44c": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "is, so this is done.\nSo, this is my main diagonal which is i is equal to j; so now I need to enumerate these\npairs. So, what is the property that all these pairs share? You can look at this here it\nis 0 comma 1, this is the first one; the second one is 1 c"
+    },
+    "50a730fc-e2d7-4c4b-81ba-6253839bf4c0": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "omma 2, the third one is 2 comma\n3, the fourth one is 3 comma 4. So, the property that (wall) shared is that\nj minus i is equal to 1. Now, if I go to this one for instance, then it will be 0 comma\n2, 1 comma 3, and 2 comma 4; so now the difference is going"
+    },
+    "681fec4e-8b7d-4576-9eae-464d4c3c672d": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " to be j minus i is equal to 2. So,\nthe difference will go from 0 on the main diagonal, in the main diagonal difference\nmeans j and i is 0; because i is equal to j. Next one, it is i is equal to, j is equal\nto i plus 1, next one is j is equal i plus 2. And"
+    },
+    "943c07ba-b5a9-4b21-9b30-adda472815c3": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " finally when we come here, when i is 0,\nj is n minus 1; the difference goes from 0 to n minus 1, as I go diagonal by diagonal,\nbut the 0 case has already been handled. So, I will take my differences to run from 1 to\nn minus 1. Now, if I run my difference "
+    },
+    "d7d07952-37b9-45f7-ab1b-7d5bd4bc26b3": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "from n 1 to n minus 1, then I have to figure out\nwhat is my range for the rows. So, the rows always start at 0, but you can calculate that\nthe last row that I get. If the difference is 0, then I go up to n\nminus 1, the difference is 1, then I go to n minus"
+    },
+    "ce5ab73a-abce-4603-b846-8d4c233ae561": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " 2 and so on; so I go to n minus the\ndifference. So, this is telling me how to generate the the i part of this; so I need\nto get generate the i part. Once I generate the i part, the j is easy, the J is just i\nplus difference; because j minus i is constant."
+    },
+    "07186924-6c03-4fa8-8d39-36bf93fafba6": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " So, I am generating all the i-j pairs systematically\nby fixing the difference. And then for each value of the difference and fixing all the\nvalid i s; and for each i get the j by just adding the difference; so that is what this\npart is doing. So, it is sa"
+    },
+    "c13e57e2-280f-4541-b971-124eec4c5ae5": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ying that let the difference run\nfrom 1 to n minus 1, let i run from 0 to n minus the difference my n minus 1 minus difference\nactually. So, and then let j be equal to i plus; and then, then I take this minimum of\nthose quantities. So, one way to take the "
+    },
+    "4f768976-ee42-44ba-bf0b-19e441ef0a30": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "minimum is to initialize the value to something\nlarge and then take the minimum. But instance, I do not want to speculate as\nto what the large value is; I first initialize it to a concretely the first value. I say\nthe first value is going to be if I split "
+    },
+    "d2864171-5637-4482-9bef-78f20889d6fa": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "i as i, i plus 1 up to j; in this smallest\nvalue is when I split it this way. So, I take C i, the cost of i to i, the cost of i plus\n1 to j both of these should be known; because they are already below and to my left. And then I take the concrete cost of t"
+    },
+    "1e9f4c67-68cc-4090-a9a3-f8a2b470e6b8": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "his\nmultiplication as rows of i, the rows of i plus 1, and the columns of j. So, this is\nthe concrete cost; so this is the first term in my minimum sequence. So, I use that to\ninitialize my cost; the cost of i, j is at least this much. And then I arrange o"
+    },
+    "b38b0b26-38c4-43af-b91f-80fefb79daeb": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ver all\nthe possibilities and I keep taking the minimum of the current cost; and the cost I get for\nthe new value of k. So, the rest of it is straightforward, so\nthis part is kind of straightforward; this part is a little bit non trivial, because\nfor minim"
+    },
+    "ca6b7144-c0f4-4dfc-9e4e-4341d65abe21": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "um it is not like maximum. For maximum, you could always take a negative number or\n0; because you know that you are not going to generate negative numbers in this kind\nof a cost calculation. But for minimum, you have to take a large number; so either you\nc"
+    },
+    "8dbae7f5-590e-41bc-b215-e1818faf1a6e": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "an postulate a large number which is more. So one, for example value for that you can\ntake for the large number is the product of all the rows and the columns; you know that\nit is m into n into p. So, if I just take the product of all the arrays in the C i"
+    },
+    "17e019e8-8e69-43c6-b11a-d6906e34b302": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " is\ncertainly that is an upper bound on any cost. But it is simpler to actually take concretely\nand every time you take the minimum, take the first value getting the minimum of any\nleast. You can take the first value as your starting value for the minimum,"
+    },
+    "4551a778-7259-4b62-b02a-0bd63459003a": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": " and then take\nthe minimum with respect to that; so that always works. So, that is what we are doing here. But the\nmain new thing is this part how to enumerate the diagonals. So, in this case the diagonals\nare the main diagonals, so the difference is const"
+    },
+    "4eab426f-7ae3-46b1-9a34-e885e8d7b575": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ant. So, you just have to check that\nconstant difference and then enumerate the correct values of i. And for each j, you just\nget it by taking I plus difference. So this works, and you will actually get that answer\nfor example. For the example, we looked a"
+    },
+    "28f6256f-7476-4113-938b-20de432fca92": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "t the beginning\nthat 1 into 100 and 100 into 1, you will get the answer 200. So, what is the cost of this\nwhole thing? Obviously, we are filling up a table of size n squared; so that is what\nthe amount of work we have to do. But, now remember that unlike i"
+    },
+    "b0ad62a8-d059-40ad-b2ee-427bb6394f2d": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "n edit distance or in\nany of the earlier problems we looked, at each entry is not a constant amount of work;\neach entry could involve looking at a number of. So, we have this for loop inside for filling\nup an entry, which we did not have earlier. So, each "
+    },
+    "8af17b08-87b3-4f74-8dd0-87da6ebba634": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "entry in the worst case takes order\nn work; so this whole thing now is actually order n cube. So, that is why this is an interesting\nproblem to look at, because unlike the earlier cases where the dependency is very local. And it only depends on your immedi"
+    },
+    "1300beee-653c-451a-b064-6c0d58b1ed86": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "ate neighbors\ncompared to what value you are trying to put into the table. Here the dependency actually\nrequires you to evaluate linear number of combinations, and then take the minimum. So,\ntherefore, you get an extra factor in your complexity, which come"
+    },
+    "f543f0f4-dd98-47eb-ab79-8091f1e615a1": {
+        "content_id": 65,
+        "course_name": "PDSA",
+        "title": "Matrix Multiplication",
+        "week": 9,
+        "chunk": "s from the cost of filling\nthe entries in your table."
+    }
+}

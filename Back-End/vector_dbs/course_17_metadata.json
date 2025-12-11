@@ -1,0 +1,429 @@
+{
+    "f7e6c8e1-a615-4b88-90b5-f93732079cde": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "So, binary search is a success story for\u00a0\nus because it works in log in time. But\u00a0\u00a0 to apply binary search, we first have\u00a0\nto have the list sorted. So, now we\u00a0\u00a0 will look at this problem of sorting a list.\nSorting a list not only allows us to do binary\u00a0\u00a0 s"
+    },
+    "dddb828e-9549-4942-bd1f-a4c618663cec": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "earch, it allows us to do a number of things\u00a0\nbetter. For instance, sometimes we want to find\u00a0\u00a0 the median value, we want to find that value such\u00a0\nthat half the values in the list are bigger and\u00a0\u00a0 half are smaller. So, if I have managed to sort\u00a0\nthe list, "
+    },
+    "7f4399d4-ab20-4447-a893-6d10a02ec8c8": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "the median will automatically be the\u00a0\u00a0 middle value. So, by just probing the middle value\u00a0\nin the list, I know that this is the median. \n\u00a0 Another possible problem is to find out\u00a0\nwhether this list has got unique values or\u00a0\u00a0 whether there are duplicates, l"
+    },
+    "3961e50d-9011-4034-aa3e-15eb494029d3": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ike are there two\u00a0\nSIM cards, which have been registered with the\u00a0\u00a0 same Aadhaar number. Now if I can sort the thing\u00a0\nby Aadhaar number, then if I find duplicates,\u00a0\u00a0 they must be next to each other because all the\u00a0\nvalues are sorted, two identical values w"
+    },
+    "e2489500-c5eb-491a-b4f1-49480706771c": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ill\u00a0\u00a0 appear adjacent in the sorted list. \nSo, if I go through the sorted list,\u00a0\u00a0 and if I find, if I do not find any value, which\u00a0\nis the same as the previous of the next value,\u00a0\u00a0 I know that all the values are unique. If I,\u00a0\nif there are duplicates, I wi"
+    },
+    "b20c34bd-5588-4c8d-8c36-dddf140fe1bb": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ll find them. And\u00a0\u00a0 more general than this duplicate problem\u00a0\nis if there are multiple values and many\u00a0\u00a0 things like for example, these are marks in\u00a0\nan exam or something, if I sought my marks,\u00a0\u00a0 and I want to know how many students got 44, and\u00a0\nonly stude"
+    },
+    "a76fa826-b5fc-46ab-ac80-7a7097260b87": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "nts got 72, and how many silver 99. \n\u00a0 In this sorted list, all the blocks will come\u00a0\ntogether all the 40 fours will come as a block\u00a0\u00a0 all the 99 will come as a block and so on so I\u00a0\ncan build a frequency table. So, sorting is a\u00a0\u00a0 general first step, which"
+    },
+    "94f33780-f5ac-4b6f-af0e-5b78e9e473e8": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " makes many subsequent\u00a0\nsteps easier to solve. So, it is a very important\u00a0\u00a0 and very fundamental question in computing, how\u00a0\nto sort a list efficiently and effectively. \n\u00a0 So, that is the question we are going to address\u00a0\nin the remaining lectures in this "
+    },
+    "becf8b82-0ce9-4709-8a48-0492ac0a799e": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "week. How do\u00a0\u00a0 we sort a list and what is the complexity of\u00a0\nsorting each of these different ways of sorting.\u00a0\u00a0 So, we are going to start with two very intuitive\u00a0\nways of sorting, which you would typically do when\u00a0\u00a0 you are asked to do something by hand. \n"
+    },
+    "f17f803e-08d2-40b4-a754-1698ed51c7c9": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "So, let us look at a very practical problem,\u00a0\u00a0 which you may be asked to do by hand, supposing\u00a0\nare the teaching assistant for a course,\u00a0\u00a0 and the instructor has graded the exams. So the\u00a0\ninstructor is graded the exams. But of course,\u00a0\u00a0 the exams are grade"
+    },
+    "ed5896cf-500a-4e71-9a2f-9f9ea84e455f": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "d in the order in which\u00a0\nthey got, came to the instructed could be\u00a0\u00a0 in roll number order; it could be the order\u00a0\nin which the person physically handed in the\u00a0\u00a0 exam paper as they left the hall. \nSo, there is no particular logic to or\u00a0\u00a0 correlation between"
+    },
+    "efbebafa-37db-4a90-91a1-9cf505d344fe": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " the order in which the exams\u00a0\nare and the marks that the students have. So,\u00a0\u00a0 now what the instructor would like to do is assign\u00a0\ngrades. So, you need to sort the papers. So, you\u00a0\u00a0 need to get the papers in ascending or descending\u00a0\norder. So, let us say y"
+    },
+    "ac496857-9815-47cc-80cf-3c976c7afd13": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ou want the highest from\u00a0\u00a0 the top, so let us say descending order. \nSo, now, as the TA it is your job to do this. So,\u00a0\u00a0 you are given this huge stack\u00a0\nof exam papers in areas to\u00a0\u00a0 sort it in descending order with the highest\u00a0\nmarks on the top. So, how wou"
+    },
+    "1daab55a-93be-411a-8ee9-949f8bfee68a": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ld you go about it?\u00a0\u00a0 So, here is one natural strategy, which we\u00a0\ndo use quite often, when we are looking at\u00a0\u00a0 quantities like this and trying to establish\u00a0\nthis, we will scan the entire list. \n\u00a0 And then as we are going along, we all know how\u00a0\nto keep tra"
+    },
+    "20a55399-1e6b-43ab-b0ae-8419bdefa155": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ck of the maximum and the minimum\u00a0\u00a0 in a list, you keep the first value as your\u00a0\nhypothetical minimum or maximum every time you\u00a0\u00a0 see a smaller or larger number, you will update\u00a0\nthe minimum or the maximum as the case may be. \n\u00a0 So, by doing one scan of th"
+    },
+    "c8356cc4-1ecf-4ed3-b4b8-d3861f232210": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "e list, you can find\u00a0\nthe maximum value. Let us assume for simplicity\u00a0\u00a0 that all these values are distinct, there\u00a0\nis only one mark, one paper with each mark,\u00a0\u00a0 it does not really matter, because if you\u00a0\nfind it again, you will find it again. So,\u00a0\u00a0 it is n"
+    },
+    "4ca0839a-c9cf-4f8f-87cf-338fd50c41e1": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ot a problem. But let us assume that there\u00a0\nis only one, one paper for each value of mark. \n\u00a0 So, you find the maximum and then what\u00a0\nyou do, you take it and you move it aside,\u00a0\u00a0 or you find the minimum and you move it aside\u00a0\ndepending on which so your pro"
+    },
+    "2cfdd775-20f4-4266-9dda-5032cffdcffa": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "blem here is\u00a0\u00a0 you are trying to find the final list in\u00a0\norder. So, it is better to put the first\u00a0\u00a0 the minimum at the bottom. So, you have this whole\u00a0\npile of papers. So, you find the minimum one,\u00a0\u00a0 and then you move it from here to the bottom. \nNow you d"
+    },
+    "0af15d5e-f825-4f4e-88eb-235e660c3151": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "o the same thing again. So, you take that\u00a0\u00a0 pile. And then you again, find the minimum and put\u00a0\nit on top of the first paper, you want to find the\u00a0\u00a0 minimum put on top the second paper. So, in this\u00a0\nway in the second list is growing from minimum\u00a0\u00a0 to maxim"
+    },
+    "bdb6e6b6-8c7d-45b2-bd0e-848a47a6312d": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "um, because you are finding the minimum\u00a0\nat each time and then appending it to this list.\u00a0\u00a0 So, this is a simple strategy where eventually\u00a0\nthe second pile is going to be in order from\u00a0\u00a0 bottom to top from minimum to maximum, which\u00a0\nis what your instructor"
+    },
+    "a9f0d181-8e09-4c2f-8d20-8ee74def8d15": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " asked you to do. \n\u00a0 So, let us say that this is the hypothetically,\u00a0\nthis is our top and this is our bottom.\u00a0\u00a0 So, it is easier to do left to right. So, this\u00a0\nis my initial set of marks, six marks sorted like\u00a0\u00a0 this. So, the first, the lowest mark is sorr"
+    },
+    "f9c4b70e-b648-4caf-9ff4-6b2e71822177": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "y.\u00a0\nI think they should take it. Yes, bottom to top,\u00a0\u00a0 the lowest mark is 74 and the highest mark is\u00a0\n6, I say the top most paper is 64 mark. \n\u00a0 So, first I scan through this whole thing\u00a0\nand I find the minimum. And the minimum\u00a0\u00a0 in this case is 21. So, I "
+    },
+    "a8fa4d04-44c5-4bdd-9298-c444f6311d1c": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "take this\u00a0\n21 out, and I move it to a new list.\u00a0\u00a0 Now I have five papers remaining. So,\u00a0\nagain, I look through the whole thing,\u00a0\u00a0 and I find the second minimum, the minimum\u00a0\namount, what remains and that is this 32.\u00a0\u00a0 So, 32 is my next candidate. \nSo, I wi"
+    },
+    "ed70d983-9082-4857-810a-f7fd22cc7be7": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ll take this 32 and move it aside,\u00a0\u00a0 then I will find this 55 and move it aside and\u00a0\nso on. So, 55 then 64 then 74 and then 89. So,\u00a0\u00a0 this is the algorithm in work. So now at this,\u00a0\nagain, this is my top, and this is my bottom. \n\u00a0 So, this is called select"
+    },
+    "29ca6a96-cca4-4644-a4f5-b6a95184cfca": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ion sort, because\u00a0\nwe select the next item in sorted order and\u00a0\u00a0 move it into the correct place, move it into\u00a0\nthe correct business cases, just append it,\u00a0\u00a0 we do not have to do any work on the second pile,\u00a0\nthe second pile is growing naturally in sorted\u00a0\u00a0"
+    },
+    "db93febc-2b3b-4210-b37d-d9788927a2d5": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " order. We are just adding it to that. \nNow, for many reasons, we would like to\u00a0\u00a0 avoid using a second list. So, we would like to\u00a0\nideally use the space that we have in the list.\u00a0\u00a0 So, supposing we have a large list, we do not want\u00a0\nto duplicate it. So, we"
+    },
+    "9eeba34d-6815-40ca-821e-bb9551734255": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " want to make this same\u00a0\u00a0 algorithm work within the same list that we have.\u00a0\nSo, a strategy for that is that you take the list\u00a0\u00a0 and now you go through it. \nAnd so you take this list, and you go through it.\u00a0\u00a0 And perhaps you find the minimum here. So, what"
+    },
+    "75f7427f-944d-468b-9ece-07089c305682": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "\u00a0\nyou now do is you move this to the beginning, and\u00a0\u00a0 you move this here, so we just exchange the values\u00a0\nhere and now the minimum as the first position.\u00a0\u00a0 Now I go through this whole list, and maybe I\u00a0\nwill find the second minimum at this position. \n\u00a0 So,"
+    },
+    "35f84c5c-dacb-48e6-8c1e-1e6402be0bb9": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " now I move the second minimum here and\u00a0\nmove this year. So, this makes it possible\u00a0\u00a0 for me to do this strategy without creating a new\u00a0\nlist. Because remember, in the previous example\u00a0\u00a0 as I move things, I cross them out, so they\u00a0\nwere no longer there. So"
+    },
+    "ae50c343-b995-4f82-8a12-b49f631a9d4c": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": ", here the crossing out\u00a0\u00a0 in this thing corresponds to saying that\u00a0\nthey are moved into position and now their\u00a0\u00a0 position has been taken by someplace and\u00a0\nnot value, which I have not seen before. \n\u00a0 So, eventually this list will be rearranged.\u00a0\nIf I keep m"
+    },
+    "ee662478-11c7-43fe-83f8-8a0b7fc11ae2": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "oving the minimum to the beginning\u00a0\u00a0 of each segment, I will rearrange\u00a0\nit in ascending order. So, here is a\u00a0\u00a0 Python implementation of this selection\u00a0\nsort. So, what you do is you first\u00a0\u00a0 compute the length of the list. So, if\u00a0\nthe list has is empty, if t"
+    },
+    "b20b097d-70b9-47ae-9a2c-e855bc409028": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "he length is\u00a0\u00a0 0, and is less than one, then I just return the\u00a0\nlist as it is, I do not have to do any work. \n\u00a0 Now otherwise, I am going to build up\u00a0\nthis segment, so at any given point,\u00a0\u00a0 I am going to be looking at some\u00a0\nindex i so I am looking at L of "
+    },
+    "222ef4cd-3fbc-4643-b56a-50f664ff12c4": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "i\u00a0\u00a0 and I am going to scan from here\u00a0\nonwards and look for the minimum\u00a0\u00a0 and then move it to L of i. So, I am not going to\u00a0\ntouch the part on the left. So, basically 0 to i\u00a0\u00a0 minus 1, this part is already sorted. \nSo, we are going to assume\u00a0\u00a0 that the slic"
+    },
+    "d00b1628-d2e7-4123-ac65-f92f46572725": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "e or the prefix of the list up to i\u00a0\nminus 1 index is sorted. So, when I am at 0 this\u00a0\u00a0 means that nothing is sorted because there is no\u00a0\ni minus 1. So, now, in order to find the minimum,\u00a0\u00a0 I use our usual algorithm, I assume that\u00a0\nthe current position is "
+    },
+    "5137e55c-3348-46f3-97c0-0a9cc762dba9": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "my minimum and I\u00a0\u00a0 keep looking at all the values from the next\u00a0\nposition onwards, and if I find a value which\u00a0\u00a0 is smaller than the minimum that I assumed, then\u00a0\nI replace my minimum position from i to j. \n\u00a0 So, this just computes j as the minimum, I mean"
+    },
+    "1300b3bc-0d02-4f90-bc21-78708d2973c6": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": ",\u00a0\nit scans through all j and keeps updating mpos,\u00a0\u00a0 to be the minimum position, the value with\u00a0\nposition with a minimum value from i onwards.\u00a0\u00a0 Once you have done this scan, now what you want\u00a0\nto do is swap that thing, so that is what just,\u00a0\u00a0 swap that to"
+    },
+    "964e36ad-25d3-4c81-a4f6-a8e0420f187a": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " the current beginning. \nSo, we take a L of i, which was where we\u00a0\u00a0 started the scan, and exchange it with\u00a0\nthe minimum position. Now if L of i was\u00a0\u00a0 already the minimum position, it just gets\u00a0\nexchanged with itself, which is no use.\u00a0\u00a0 But if we did find a"
+    },
+    "cf066eed-db45-48ea-a682-c79bfe93b73b": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " smaller one further to the\u00a0\nright, then we would bring it here. So, what have\u00a0\u00a0 we achieved? We have achieved that now I have\u00a0\nmoved this boundary from i, i minus 1 to i. \n\u00a0 So, earlier before I did this pass, 0 to i\u00a0\nminus 1 was sorted. Now I found the c"
+    },
+    "9c019feb-7b97-41ae-a68b-56ee59876275": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "orrect\u00a0\u00a0 thing to put in position i so that 0 to i is\u00a0\nsorted and I keep doing this from for i going\u00a0\u00a0 from 0 to n minus 1. So, eventually, every time\u00a0\nI move, one more extension of the sorted segment\u00a0\u00a0 happens and the whole thing becomes sorted. \nSo, it i"
+    },
+    "8f68797a-0e0e-4720-9380-00108aca85c9": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "s important to kind of think of these\u00a0\u00a0 algorithms in this way because unless you\u00a0\ndo this, it is not going to be possible to\u00a0\u00a0 really convince yourself you have handled\u00a0\nit properly. So, these are what are called\u00a0\u00a0 invariance. \nSo, this is\u00a0\u00a0 what is calle"
+    },
+    "4b0c6bce-e0da-47a6-acb4-ce3d41be3034": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "d an invariant. So,\u00a0\nat the beginning of the loop,\u00a0\u00a0 the invariant that I have is up to I sorted, that\u00a0\nis 0 to i minus 1 in terms of indices and what the\u00a0\u00a0 loop does is it extends the invariant to one more\u00a0\nstep. So, earlier I had L colon I was sorted now"
+    },
+    "e07d4d96-c8ce-48e7-9ec6-db026a460067": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": ",\u00a0\u00a0 L column i plus 1 is sorted and then you have\u00a0\nto just verify that what happens here is a\u00a0\u00a0 valid calculation to ensure that we go make this\u00a0\nprogress from L 0 to i to L 0 to i plus 1. \n\u00a0 So, the correction, correctness of the algorithm\u00a0\nfollows from t"
+    },
+    "e2ef87f8-1e28-4609-923e-c3802cc2453e": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "he invariant but correctness is an\u00a0\u00a0 important step that we should we should never\u00a0\nignore, because it is totally pointless to have\u00a0\u00a0 an efficient algorithm which is wrong. So,\u00a0\nultimately, when you design an algorithm,\u00a0\u00a0 the first thing you have to make s"
+    },
+    "35b87756-687a-4e0b-a098-ac1f993cecec": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ure\u00a0\nis doing the job that is supposed to do,\u00a0\u00a0 then you can worry about its complexity. \nSo, establishing correctness is cannot be\u00a0\u00a0 dismissed, you must show that you are always\u00a0\ngoing to work. So, here I claim that these\u00a0\u00a0 comments you have written, you "
+    },
+    "0f362cb2-0a36-435c-b3ed-36c08c60667a": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "have to will,\u00a0\nso I have kind of informally convinced you,\u00a0\u00a0 but you have to kind of formulate convince\u00a0\nyourself that this invariant holds the beginning,\u00a0\u00a0 each iteration will actually update the invariant\u00a0\nas I claim and therefore, at the end of the loop"
+    },
+    "562f082b-0767-4c1e-8bdc-02b998354b99": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": ",\u00a0\u00a0 the invariant will establish the property I want,\u00a0\nwhich is the entire slice from 0 to n minus one is\u00a0\u00a0 actually sorted. So, that is the first thing. \nNext, we have to worry about the efficiency. So,\u00a0\u00a0 how long does it take? Well, here, we can use\u00a0\nthi"
+    },
+    "10926c25-645e-44b0-85b5-c937f2a32f29": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "s, because there is no recursion and all\u00a0\u00a0 that we can just look at the loop structure.\u00a0\nSo, we can see that there is an outer loop\u00a0\u00a0 which works, which takes n steps and inside\u00a0\nthis outer loop we have this inner loop. \n\u00a0 And how much time does this inner"
+    },
+    "7a8cd7d4-6610-4af6-85bf-d9c8612863fb": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " loop take when\u00a0\nit goes from i to n minus 1. So, it is going to\u00a0\u00a0 take n minus i steps to find this minimum. So,\u00a0\ntherefore, for each of the outer iterations, I am\u00a0\u00a0 going to take n minus i steps, and i is going to\u00a0\nkeep changing. So, I am going to take i"
+    },
+    "4b0324d0-f491-4652-83aa-febee2f35c9e": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "nitially,\u00a0\u00a0 I am going to take go through on any elements\u00a0\nto find the minimum, absolute minimum and bring\u00a0\u00a0 it to the first position, then I am going to go\u00a0\nthrough n minus 1 elements, find the minimum,\u00a0\u00a0 bring it to the second position, and so on. \nSo, t"
+    },
+    "45da2276-bed2-4bc5-896c-ff45962580ae": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "he total time algorithm is going to take is\u00a0\u00a0 n plus n minus 1 plus up to 1. So, you\u00a0\nshould probably know what this adds up\u00a0\u00a0 to. But in case you do not, here is a simple\u00a0\nway to do it. So, have n plus n minus 1 plus\u00a0\u00a0 2 plus 1. So, what does this add up "
+    },
+    "5cc0f5ab-5c9d-47a4-9b9d-3243f26a7e91": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "to? So,\u00a0\nthis is a trick which is attributed to Gauss\u00a0\u00a0 as a school child. So, he said, let me write it in\u00a0\nreverse the same sum, let me write it again. \n\u00a0 So, I have just written it out from right to left.\u00a0\nBut now if I add it, column by column, then this"
+    },
+    "5a667cc0-9168-4c53-aae7-9e5d9eb9892b": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "\u00a0\u00a0 column adds up n plus 1, this column adds up to\u00a0\nn plus 1. So, every column adds up to n plus 1.\u00a0\u00a0 And how many columns are there? Clearly, there\u00a0\nare n because n to 1. So, there are n columns,\u00a0\u00a0 each of it adds up to n plus 1. \nBut the total sum is n i"
+    },
+    "59fed781-a090-40f8-a622-ae153621390a": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "nto n plus 1,\u00a0\u00a0 but that is 2 times this because I have added\u00a0\nthe list once forwards and ones backwards. So,\u00a0\u00a0 this is 2 times the total amount. So therefore,\u00a0\nmy total is going to be n into n plus 1 by 2.\u00a0\u00a0 So, if you do not remember this formula,\u00a0\nthis "
+    },
+    "2506e3fd-ff12-45d7-a30e-62ac6cffca3f": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "is one easy way to reconstruct it. \n\u00a0 So, T of n, if n if it is a summation from 1 to n\u00a0\nis just n into n plus 1 by 2, it is the number of\u00a0\u00a0 elements times the number of elements plus 1 by 2.\u00a0\nAnd as we have seen, this is big O of n squared.\u00a0\u00a0 So, all we n"
+    },
+    "d7ee38a4-81ce-4af1-98f9-b9501d7cb1d2": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "eed is the highest term. So, this\u00a0\nis n squared by 2 plus n by 2. So basically,\u00a0\u00a0 in our asymptotic, order of magnitude way of doing\u00a0\nthings, we throw away this, we throw away this and\u00a0\u00a0 we say this is order of n squared. So, selection\u00a0\nsort is actually an"
+    },
+    "5afb9914-6349-445b-8bfd-c181cbf69fe2": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " order n squared algorithm. \n\u00a0 So, it is an intuitive algorithm to sort a list\u00a0\nbecause we do it all the time actually, when we\u00a0\u00a0 do it with small values, when we are asked to\u00a0\nfind them. Whenever somebody gives you a kind of\u00a0\u00a0 set of things and asks you t"
+    },
+    "7f470547-c5c2-46d4-bc52-8ef563ba982b": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "o arrange it, this is\u00a0\nvery often the kind of thing that you might want\u00a0\u00a0 to do. So, we just repeatedly find the minimum or\u00a0\nthe maximum and append it to the sorted list. \n\u00a0 Now, one of the features of this algorithm is that\u00a0\nnot only is the worst case big"
+    },
+    "582ef3bc-8c75-4d7d-bea0-bb20d675f8fb": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": " O n squared, but\u00a0\u00a0 actually every case is big O n squared and that\u00a0\nis because if you look at this loop, so this loop\u00a0\u00a0 will scan the entries from i plus 1 to n\u00a0\nregardless of what the status of those entries is,\u00a0\u00a0 it is not really influenced by whether t"
+    },
+    "1e54a086-3479-4435-8f75-9c841da750f4": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "hose\u00a0\nentries are already in sorted order or not,\u00a0\u00a0 it is just going to scan every one of\u00a0\nthem and try to update the minimum. \n\u00a0 So, it has no performance improvement\u00a0\non whether this list was already sorted,\u00a0\u00a0 not sorted in a particular order, it is as g"
+    },
+    "d083b69d-3513-4298-bceb-b7b2a74610f5": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "ood\u00a0\nor as bad whether you had a completely random\u00a0\u00a0 order or whether you had some nice order\u00a0\nto start with. So, this is actually some\u00a0\u00a0 case where the worst case is really every case.\u00a0\nSo, selection sort is really big O of n squared in\u00a0\u00a0 every case, so t"
+    },
+    "bb6d3e83-a12e-4d12-bc0e-252b741b9467": {
+        "content_id": 17,
+        "course_name": "PDSA",
+        "title": "Selection Sort",
+        "week": 2,
+        "chunk": "here is no advantage, even if the\u00a0\nlist is arranged carefully before sorting."
+    }
+}

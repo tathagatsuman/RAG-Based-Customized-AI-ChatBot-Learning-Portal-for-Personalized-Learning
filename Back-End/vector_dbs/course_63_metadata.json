@@ -1,0 +1,716 @@
+{
+    "cfc252b3-f26d-4d8e-823b-2c90a4500aa8": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "So, we have seen the concept of memoization and\u00a0\ndynamic programming in the context of Fibonacci\u00a0\u00a0 which is a kind of very artificial example. So,\u00a0\nlet us look at a more interesting example. So,\u00a0\u00a0 this problem is called grid paths.\nSo, supposing we have th"
+    },
+    "d2007e7a-3999-48c5-a9fa-3dc16dd3a74d": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ese roads which\u00a0\u00a0 are arranged in a rectangular grid, so this\u00a0\nis often called a manhattan grid because the\u00a0\u00a0 city of manhattan has roads like this. And let us\u00a0\nassume that these roads are one way, so the roads\u00a0\u00a0 are one way, so you can either go right or "
+    },
+    "4edfa570-ea98-4e56-a153-282c82a4cc5a": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "you can\u00a0\ngo up you cannot go left, you cannot go down. Now,\u00a0\u00a0 we start at the beginning and we want to reach\u00a0\nsomething at the top right this is our target.\n\u00a0 So, the question is if I start at 0, 0\u00a0\nwhich is the left bottom corner and I have\u00a0\u00a0 to travel 1,"
+    },
+    "50eb13d5-74a2-4893-8306-498ffa18b2a1": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " 2, 3 up to m sideways and up\u00a0\nto n upwards. So, I will reach in general\u00a0\u00a0 a corner which is labeled m comma n. So, the\u00a0\nquestion is how many different ways are there of\u00a0\u00a0 going, I could go this way, I could go this way,\u00a0\nso each time if I follow a differe"
+    },
+    "b5db710e-49fd-471b-b019-3dc48b1c4135": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "nt segment of\u00a0\u00a0 road it is a different path. So, the question is\u00a0\nhow many such paths are there so these are called\u00a0\u00a0 grid paths because this is a grid of roads and it\u00a0\nis a very standard problem in combinatorics.\n\u00a0 So, for example this blue line is one su"
+    },
+    "0b5aace5-d3ee-497a-b0c0-01ba4a9f0271": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ch path\u00a0\nit only goes up or right and it takes us from 0,\u00a0\u00a0 0 in this concrete case where m is 5 and n is\u00a0\n10, it takes us from 0, 0 to 5 comma 10. Here\u00a0\u00a0 is another path the red path it goes further\u00a0\nto the right before it starts going up but it\u00a0\u00a0 also ne"
+    },
+    "144348e6-3f38-47a8-abf3-d49767795349": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ver moves left or down, it always goes\u00a0\nright and up and here is the third yellow path,\u00a0\u00a0 so there are obviously many different paths so\u00a0\nthe question is how many such paths are there,\u00a0\u00a0 this is what we want to count. So, our goal\u00a0\nis to count how many suc"
+    },
+    "1c848943-37c4-4377-bbf8-9f5a4d56ca8c": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "h paths are there. \n\u00a0 So, there is a very standard and very elegant\u00a0\nway of analyzing this mathematically. So,\u00a0\u00a0 what you see is that it does not\u00a0\nmatter how I do it, I have to move\u00a0\u00a0 15 times to go from where I move means\u00a0\ngo from one corner to the next c"
+    },
+    "c287069f-5c4a-47e6-84ab-37c041677b10": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "orner,\u00a0\u00a0 I have to follow 15 steps to go from 0, 0\u00a0\nto 5, 10 because I have to go 5 times to the\u00a0\u00a0 right and 10 times up, I have to go up this entire\u00a0\nsegment and I have to go right this entire thing,\u00a0\u00a0 the only way I can go right is to take\u00a0\none segment f"
+    },
+    "ca057a86-a61d-4fd3-a17f-8e37fee02415": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "rom this road to the this\u00a0\u00a0 corner to the next corner, so I have to do that\u00a0\n5 times, and I have to do 10 times going up.\n\u00a0 But notice that no matter how I do it\u00a0\nbecause I never go down and I never go left,\u00a0\u00a0 I keep making progress. So, if I go 3 times an"
+    },
+    "8b8d40a1-08d6-4d99-b8e6-5a499bcf53b0": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "d\u00a0\nthen 4 times up those 3 times have been done so\u00a0\u00a0 I only need to 2 more to the right I only need\u00a0\nto do 6 more up. So, no matter which way I re or\u00a0\u00a0 organize the path if you count the number of\u00a0\nrights and ups in the blue path, the yellow path,\u00a0\u00a0 the re"
+    },
+    "f3fc87d5-6be5-4372-9873-cf47284427d8": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "d path they are all the same.\nSo, there are always 15 moves and in these\u00a0\u00a0 15 moves there are always 5 right moves and 10\u00a0\nup moves. So, if I tell you where all I took the\u00a0\u00a0 right turn so if I said that I made the right turn\u00a0\nat 1, 2, 3, 5 and 8, then it m"
+    },
+    "f96027da-93d6-4b0e-9d96-5faa368cbbbf": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "eans that positions\u00a0\u00a0 4, 6, this is 9; 7, 8, 10, 11, 12, 13, 14, 15\u00a0\nat all these other numbers I must have gone up,\u00a0\u00a0 so I have these 15 slots, in these 15 slots I\u00a0\ncan either go right or I can go up and there\u00a0\u00a0 are only 5 where I can go right. So, I pick"
+    },
+    "183c539f-21ca-425e-acca-384ef7c3792c": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "\u00a0\nthose 5 the remaining 10 slots must be up.\n\u00a0 So, how many ways can I pick those 5 positions\u00a0\nwhere I turn right that is the question,\u00a0\u00a0 each time I make a right turn that defines a path\u00a0\nbecause the remaining ups are fixed. So, if I know\u00a0\u00a0 where I turned"
+    },
+    "b20ad95f-6625-4a29-902f-32f81f2db052": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " right that determines the path,\u00a0\nthe number of different ways of turning right\u00a0\u00a0 tell me the total number.\nSo, this is just\u00a0\u00a0 this notation of choosing out of the 15 possible\u00a0\npositions which I have choosing 5 of them to turn\u00a0\u00a0 right so this is a famous f"
+    },
+    "908d3f67-8dd9-4089-a2f2-a30c03729fa2": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "actorial example. So,\u00a0\nncr is n factorial divided by r factorial times\u00a0\u00a0 n minus r factorial, so this is the formula so\u00a0\nit turns out you can explicitly evaluate it for\u00a0\u00a0 this number 5 comma 10 and you will get 3003.\nNow, notice that I have said that we fi"
+    },
+    "157a91a1-24c1-4384-8353-aebc8136c740": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "xed the\u00a0\u00a0 rights, we could also fix the ups, so\u00a0\nthere are 15 positions it is symmetric,\u00a0\u00a0 if I tell you where all I went up then you know\u00a0\nin the remaining 5 positions I went right. So,\u00a0\u00a0 either I can fix the 5 rights or the 10\u00a0\nups and in fact this is a "
+    },
+    "2e60d72f-c41a-4f24-88f7-70caa2105283": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "general thing in\u00a0\u00a0 this combinations and permutations you know that\u00a0\nn choose r is the same as n choose n minus r.\n\u00a0 So, if you are choosing 3 things out of 7, it is\u00a0\nthe same as choosing 4 things out of 7 because\u00a0\u00a0 every time I choose 4 things I\u00a0\nhave imp"
+    },
+    "e71a9b4f-e213-4a2a-81ca-afa0e7c15072": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "licitly chosen 3 things,\u00a0\u00a0 every time I choose 3 things have implicitly\u00a0\nchosen the other 4, so the two are symmetric,\u00a0\u00a0 so I can also think of this as 15\u00a0\nchoose 10 by fixing the 10 up moves. So,\u00a0\u00a0 this is a neat combinatorial solution to this\u00a0\nproblem. S"
+    },
+    "cad17095-e18e-48e4-8123-b7828e1a26da": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "o, why are we interested in this?\n\u00a0 Well, what if the world is not as easy as it\u00a0\nis, so we all know in every city that we live\u00a0\u00a0 that there is always a problem at some place or\u00a0\nthe other and the road is being dug up, it could\u00a0\u00a0 be dug up because there is"
+    },
+    "d96b0f40-c0a5-491e-a5d0-c2ce0682b717": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " a problem with the\u00a0\nsewerage line or somebody is laying some cables or\u00a0\u00a0 just that the road has been damaged by rain. \nSo, let us assume that there is this one\u00a0\u00a0 intersection which is currently dug up we are\u00a0\nnot allowed to go through this intersection,\u00a0\u00a0"
+    },
+    "66c9e880-f5a6-427f-b6d3-36f4c57ad05d": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " so this intersection concretely is at 2\u00a0\ncomma 4. So, now the question is if I am\u00a0\u00a0 not allowed to go through 2 comma 4 now how\u00a0\nmany ways are there of going through this.\n\u00a0 So, let us see what happens. Well, we have\u00a0\nthis blue path, this blue path unfort"
+    },
+    "9d9521c8-9b83-4466-81b9-73c27aaa6794": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "unately\u00a0\u00a0 was going through 2 comma 4 so this is\u00a0\nnot a path that we could take anymore.\u00a0\u00a0 This red path avoids 2 comma 4 so this\u00a0\nis fine, but the yellow path also went\u00a0\u00a0 through 2 comma 4 so the yellow path must also\u00a0\nbe skipped. So, what we have to do i"
+    },
+    "d9c693ba-b86e-4f03-a6fd-08923d296d9a": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "s we have to\u00a0\u00a0 make sure that when we are counting we do not\u00a0\ncount paths that pass through 2 comma 4.\n\u00a0 So, we have to discard every path\u00a0\nthat passes through 2 comma 4.\u00a0\u00a0 So, we can apply a similar combinatorial reasoning\u00a0\nfor this, we can say how do you"
+    },
+    "0e68d8d8-972d-4c5d-a676-a1903eec604c": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " get a path that\u00a0\u00a0 goes through 2 comma 4. Well, it must go from here\u00a0\nto 2 comma 4 and then must go from here to there,\u00a0\u00a0 so I want to count the number of I know the total\u00a0\nnumber of paths 3003 I want to count the number of\u00a0\u00a0 paths which I want to throw o"
+    },
+    "949bd254-f7f5-45c8-a541-6d416bf20934": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ut, saying that they\u00a0\npass through 2 comma 4..Well, how do I do that?\n\u00a0 Well, I count the number of paths which go\u00a0\nfrom 0 to 2 comma 4 and then from 2 comma 4\u00a0\u00a0 to my destination because I know that every path\u00a0\nthat I am interested in will be a combinatio"
+    },
+    "e8604943-9e51-4b65-9679-809003a2e079": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "n of\u00a0\u00a0 a path of the first type and a path of the\u00a0\nsecond type. So, if I go from 0 to here I am\u00a0\u00a0 basically solving the old grid path problem\u00a0\nfor this smaller grid, so this smaller grid\u00a0\u00a0 has got 2 rights and 4 ups.\nSo, for this I have 2 plus 4,\u00a0\u00a0 6 possi"
+    },
+    "5b43d9f1-e200-4321-96fd-49989553b191": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ble moves of which I have to choose 2 and\u00a0\nI get 15 paths so there are 15 ways of going from\u00a0\u00a0 here to 2 comma 4 and this smaller grid has 3\u00a0\nrights and 6 ups because I have already finished\u00a0\u00a0 the rest that is a smaller grid. So, here I have\u00a0\n9 choose 3, 3"
+    },
+    "16c04e7a-abd6-4327-a4d6-043b6b607e99": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " right, 6 ups, 9 choose 3 and if\u00a0\u00a0 you calculate it turns out to be 84.\nSo, now any path which passes through 2\u00a0\u00a0 comma 4 is this one of these plus one of\u00a0\nthese, but any combination is possible\u00a0\u00a0 so to get the total number I should multiply, I\u00a0\nshould say"
+    },
+    "3e919389-2239-4fe7-b7e4-cc2e4b1694e6": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " for every one of those 15 paths there\u00a0\u00a0 are 84 matching paths on the other side and each\u00a0\none of these combinations is a different path. \n\u00a0 So, I have totally 15 times 84, 1260 paths which\u00a0\nactually pass through this forbidden intersection.\u00a0\u00a0 Now, totally"
+    },
+    "bb96e84c-da98-4b60-86a8-5b8a8adce02a": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " I have 3003 paths, so if I subtract\u00a0\n1260 I get that there are 1743 paths left, so so\u00a0\u00a0 far so good so our counting strategy using these\u00a0\ncombinations has worked for the path, the perfect\u00a0\u00a0 situation where the grids do not have any holes\u00a0\nand its work for"
+    },
+    "d14a1f57-c58c-4ec3-b470-bdafeb97e6bf": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " this one blocked intersection\u00a0\u00a0 case. So, of course the natural question what\u00a0\nhappens if there are 2 blocked intersections?\n\u00a0 So, now I have a block at 2 comma 4\u00a0\nand at 4 comma 4 now what happens?\u00a0\u00a0 So, the earlier red path which was not passing\u00a0\nthroug"
+    },
+    "46f8dbbd-45a0-42f1-be51-88e316040050": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "h 2 comma 4 now gets discarded because it is\u00a0\u00a0 passing through 4 comma 4 so obviously more paths\u00a0\nwill get discarded because now I have two possible\u00a0\u00a0 reasons why I should discard them,\u00a0\neither they pass through 2 comma 4\u00a0\u00a0 or they pass through 4 comma 4.\n"
+    },
+    "b2e08137-e5e8-4067-b3a6-fb7f271e92bd": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "But what about that yellow path? So,\u00a0\u00a0 that yellow path pass through both 2 comma 4 and 4\u00a0\ncomma 4 that means if I discard it if I count the\u00a0\u00a0 number of paths which pass through 2 comma 4 throw\u00a0\nthem out and then I separately count the number\u00a0\u00a0 of paths wh"
+    },
+    "5ffee381-3fae-490d-b200-59434940a91e": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ich pass through 4 comma 4 and throw\u00a0\nthem out this yellow path has been counted twice,\u00a0\u00a0 so I have thrown it out twice. So, then you have\u00a0\nto go back and you have to add back all the paths\u00a0\u00a0 which actually pass through both the things. \nAgain you can do t"
+    },
+    "db464ef0-9133-4bbf-a404-0629cc4197e6": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "hat, you can do that by again\u00a0\u00a0 saying how many ways are there to go from 0 to\u00a0\n2 comma 4, 2 comma 4 to, so how many paths pass\u00a0\u00a0 through both of these? You can count it exactly as\u00a0\nwe did before you have to multiply now 3 numbers.\u00a0\u00a0 How many ways are goin"
+    },
+    "6bc3a2d8-6f26-4d10-8a2f-f5e95398ff13": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "g from here to there,\u00a0\nhow many ways here to there, how many ways\u00a0\u00a0 from here to there and multiply them. And\u00a0\nthen you have to add this number back. \n\u00a0 So, this is a general counting principle\u00a0\ncalled inclusion and exclusion.\u00a0\u00a0 In some of these Venn diagr"
+    },
+    "55e98d91-257c-4fa0-b32f-0287dbd8067d": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "am problems also you\u00a0\nhave the same thing in a different guys. So, you\u00a0\u00a0 will say that you know there are so many people\u00a0\nstudy physics, so many people study chemistry, so\u00a0\u00a0 many people study biology and then so many people\u00a0\nstudy two of the subjects now i"
+    },
+    "8c5560b3-6322-4500-9f5a-f1b9541aead4": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "f you count the\u00a0\u00a0 people who study two of the subjects implicitly\u00a0\nit also counts people who study all three.\n\u00a0 So, if you add this up it will have an over\u00a0\ncounting so then you have to subtract the people\u00a0\u00a0 who study all three, so you have to include,\u00a0\nex"
+    },
+    "dc05e80b-8702-4c13-b725-e8eaf3d72d09": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "clude at every level. So, this can be done\u00a0\u00a0 but it becomes really tedious if I have now if I\u00a0\nput 5 holes, then you are going to have a really\u00a0\u00a0 tough time evaluating this using this kind of\u00a0\narithmetic approach. So, what can we do instead?\u00a0\u00a0 So, can we a"
+    },
+    "d5293721-db69-4565-aa02-d49226b48f80": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "pply some kind of inductive\u00a0\nstructure to this problem and solve it.\n\u00a0 So, let us look at the problem. The problem in\u00a0\ngeneral is to know if I am at trying to reach\u00a0\u00a0 so remember even for solving the whole problem I\u00a0\nneeded to know how many ways I can reac"
+    },
+    "408b9b49-db38-4aa4-9ddf-3eb6dfa6bb56": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "h 2 by 4 or\u00a0\u00a0 2 comma 4. So, in general I have a target i comma\u00a0\nj which may not be the ultimate target may not be\u00a0\u00a0 m comma n the top right target. But I want to know\u00a0\nhow many ways can I get from 0, 0 to i comma j.\n\u00a0 So, the inductive structure comes fro"
+    },
+    "74d49b90-b107-4c08-9ac8-beb0c77395bb": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "m the\u00a0\nfact that we have constrained our moves to\u00a0\u00a0 be right and left so how can I reach i comma\u00a0\nj well I could move up from the previous row\u00a0\u00a0 so I can be in the same, I can be it in in\u00a0\nthe sorry in the previous yeah in the same\u00a0\u00a0 row I can be in the pr"
+    },
+    "f641ae07-d324-4526-977c-2d0880c1adf6": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "evious column, I can go\u00a0\nfrom so this should be move right I guess.\n\u00a0 And I can also move up from the previous row,\u00a0\u00a0 so again just I will fix this but so this is the\u00a0\nprevious column and this is the previous row.\u00a0\u00a0 But the point is there are exactly two\u00a0\n"
+    },
+    "e30e684c-c086-4416-a9b2-22656f5dc81a": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "neighboring corners from where I could\u00a0\u00a0 have reached here in the last step. I could\u00a0\neither come up from one row below or I would\u00a0\u00a0 have come right from one column on the left. So,\u00a0\nhow many ways are there of reaching this? \n\u00a0 Well, I must either come her"
+    },
+    "d970c0bb-4d9f-4113-a9cf-96c1fd572204": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "e and then extend it\u00a0\nby one path or I must come here and extend it by\u00a0\u00a0 one path. So, if I know how many ways there are\u00a0\nof reaching this place and I know how many ways\u00a0\u00a0 there are reaching this place, then I know\u00a0\nhow many ways are reaching i comma j bec"
+    },
+    "aef22d87-3f9b-4eee-b56c-bb56ebbd9b7a": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ause\u00a0\u00a0 every path which reaches my left neighbor by\u00a0\nadding exactly that one edge there is no choice\u00a0\u00a0 anymore I have to take that one edge to reach i\u00a0\ncomma j. Similarly, every no path that reaches\u00a0\u00a0 the neighbor below I can add one edge. \nSo, in this way"
+    },
+    "99d4ed51-5837-4b67-86e3-3d18bec75cd6": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " you can say that every path\u00a0\u00a0 to these neighbors extends to unique path and so\u00a0\nthe recurrence tells us that the number of paths p\u00a0\u00a0 i j reaching i j is just the sum p i minus 1\u00a0\nj plus this p i j minus 1. The number of paths\u00a0\u00a0 reaching my left neighbor a"
+    },
+    "125b9c61-0a23-4166-93c4-02f32dd0e694": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "nd the below neighbor,\u00a0\nif I just add it up I get the answer. So, we have\u00a0\u00a0 to always when we have an inductive definition\u00a0\nwe have to realize that this keeps going down,\u00a0\u00a0 so at some point we have to tell it to stop. \nSo, we will tell it to stop so in par"
+    },
+    "fc4c8536-bad1-423a-9bd2-29c7aaa2958e": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ticular\u00a0\u00a0 if we are just counting the number of paths\u00a0\nfrom the starting point to the starting point,\u00a0\u00a0 there is I do not move at all but it\u00a0\nis not saying that there is no path,\u00a0\u00a0 not moving at all is the same as saying there\u00a0\nis only one way to stay ther"
+    },
+    "d2011df0-5ae4-438a-8bfb-ee619a7a9cc9": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "e so p 0, 0 the\u00a0\u00a0 number of paths from 0, 0 to 0, 0 without doing\u00a0\nanything is 1. So, this is important otherwise\u00a0\u00a0 you will not get started in counting anything.\nNow, if I look at some boundary conditions. So, if\u00a0\u00a0 I look at this bottom row then I cannot "
+    },
+    "ed6507eb-29d9-4cac-a018-cfffd350bef7": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "come from\u00a0\nbelow, if I look at the left column I cannot come\u00a0\u00a0 from the left. So, if I am in the bottom row then\u00a0\nmy y coordinate is 0, so if the y coordinate is 0\u00a0\u00a0 then I can only come from the left so it is the\u00a0\nsame as the number of things reaching the"
+    },
+    "387f6847-61c6-4d44-bbb2-02aa16ada355": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " left.\n\u00a0 And similarly if the x coordinate is 0 then I am\u00a0\nin the left column I cannot come from the left\u00a0\u00a0 so I can only come from below. So, maybe this\u00a0\nis actually yeah, so this is actually correct\u00a0\u00a0 if I do not think about it rows and columns as x\u00a0\nand"
+    },
+    "f9441c88-d643-48d7-9491-5ff911539c63": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " y coordinate. So, this is saying that at the\u00a0\u00a0 previous x coordinate and this is the previous\u00a0\ny coordinate so that will resolve that.\n\u00a0 So, anyway so that is our recursion now. So,\u00a0\nrecursion says that p of i j is p of i minus 1\u00a0\u00a0 j plus p of i j minus 1"
+    },
+    "22b24ff6-db14-4330-815e-2085600629bb": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " and in particular p of\u00a0\n0, 0 is 1 and if I am in the base case where I\u00a0\u00a0 in the in the border case where both of\u00a0\nthese are not defined, then the one that\u00a0\u00a0 is not defined I will just treat it as 0,\u00a0\nthere are no paths coming from that side.\n\u00a0 Now, the qu"
+    },
+    "05d96026-4b5b-414a-a444-32ab8086e851": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "estion is why does this help? Well,\u00a0\nthe reason this helps is that what do I do at\u00a0\u00a0 a hole? Well, for a hole I say that no matter\u00a0\nwhat I can do to come so if I have a hole here,\u00a0\u00a0 it also has 2 neighbors below and, but the\u00a0\nproblem with the hole is I can"
+    },
+    "34a05072-0f89-4374-8068-31aa4503b9cb": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "not reach it,\u00a0\u00a0 so regardless of the fact that this might be some\u00a0\nK and this might be some L, there may be some K\u00a0\u00a0 ways to reach to the left of the hole and some L\u00a0\nways to reach below the hole this is not K plus\u00a0\u00a0 L but this is just the number 0. \nSo, t"
+    },
+    "0a549734-c632-4f58-982c-ee656224ff29": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "his is just 0 it is not K plus,\u00a0\u00a0 normally it will be K plus L the number of ways\u00a0\nto reach that thing will be how many ways I\u00a0\u00a0 can come to the left, how many ways I can come\u00a0\nbelow but it is not, it is just K plus L is 0.\u00a0\u00a0 So, this is the clever thing n"
+    },
+    "92333ce5-2cb4-4687-9265-2a6b5face512": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ow, so we can\u00a0\nnow wherever we see a hole in our grid we can\u00a0\u00a0 predefine the number of paths\u00a0\nreaching that point to be 0\u00a0\u00a0 and then we can apply this induction and it will\u00a0\nwork. So, let us look at this more carefully.\n\u00a0 So, first let us look at this prob"
+    },
+    "9e2c8901-9175-49d2-bfc9-6f45c9ee6578": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "lem that we had\u00a0\nbefore of memoization and dynamic programming. So,\u00a0\u00a0 if we use this in a trivial way then of course\u00a0\nwe will be computing the same problem again and\u00a0\u00a0 again. So, for instance look at P 5, 10. So, P\u00a0\n5, 10 requires us to compute the values "
+    },
+    "8dfc7d3d-bda4-4218-897e-59a727b7505e": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "at P 4,\u00a0\u00a0 10 and P 5, 9 but now both of these in turn,\u00a0\nso this will require us to compute these two\u00a0\u00a0 and this will require us to compute these two. So,\u00a0\nboth of them will require this value at P 4, 9.\n\u00a0 So, if I do a naive recursion P 4, 9 will be\u00a0\nevalu"
+    },
+    "26f6ba2c-2db6-4a8f-817b-8b1f95512f1f": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ated twice, so I do not want to do that\u00a0\u00a0 so therefore I will use either memoization\u00a0\nor I will use dynamic programming which is\u00a0\u00a0 just saying that I will find a suitable order in\u00a0\nwhich to compute p i j so that whenever I come to\u00a0\u00a0 an intersection i comma"
+    },
+    "0fbb2e2a-2deb-45ec-80d1-45f1ff6282f6": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " j the values that\u00a0\nit depends on have already been computed.\n\u00a0 And to find the suitable\u00a0\norder we need to identify this\u00a0\u00a0 DAG structure we said what is the dependency so it\u00a0\nis very clear, the dependency just says so these\u00a0\u00a0 are all these arrows which are"
+    },
+    "39e0e6ad-a41e-4877-883b-48d6915f9981": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " coming together.\u00a0\nSo, it is saying that each problem at a given i,\u00a0\u00a0 j depends on the problem to its left and the\u00a0\nproblem below, so that is the DAG structure.\n\u00a0 So, now with this DAG structure\u00a0\nwe realize that this is the only\u00a0\u00a0 node which does not have "
+    },
+    "7273620b-a580-40d0-a3ee-299324cd3c60": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "any\u00a0\nincoming edges. So, any kind of\u00a0\u00a0 pre computation that dynamic programming\u00a0\ndoes is going to start from here. Remember\u00a0\u00a0 dynamic programming you will take this DAG of\u00a0\nvalues and it will evaluate them in topological\u00a0\u00a0 order so that whenever you come t"
+    },
+    "69b1f8c4-0f15-4b4e-9184-8afd692499bc": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "o a node whose\u00a0\nvalue needs to be computed the values that you\u00a0\u00a0 need in that inductive definition are already\u00a0\ncomputed because they are lower in the DAG.\n\u00a0 So, we start at this value so we remember that\u00a0\nP of 0, 0 is 1, so we start with 1 and now for\u00a0\u00a0 i"
+    },
+    "ab32fea8-e8b3-437a-af3e-7c3a38efa8e6": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "nstance we could do this row by row. So, remember\u00a0\nthat on the row we said that because there is\u00a0\u00a0 nothing coming from below the value at any node is\u00a0\njust the number of things coming from the left.\n\u00a0 So, since I started with one it is very clear\u00a0\nif I am "
+    },
+    "87b325c6-6e7d-4bb6-8711-bc5d3391272e": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "going this way there is only one way to\u00a0\u00a0 go that is all it saying, if I am going right\u00a0\nthere is only one way to reach that because I\u00a0\u00a0 cannot go up and come down because that is not\u00a0\nallowed. So, I can only go to the right. Now,\u00a0\u00a0 I have computed the bot"
+    },
+    "e07b8081-3b3d-4877-8b3c-8255b01aad4e": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "tom row now I can look\u00a0\nat this value. So, what is this value?\n\u00a0 This value is the value from the left which it\u00a0\ndoes not exist plus the value from below so this\u00a0\u00a0 value is going to be 1. Similarly, what is the\u00a0\nvalue here? It is the value from the left th"
+    },
+    "ce489cd5-18f5-457a-a8a0-b317f96c5b2e": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "e\u00a0\u00a0 value from below, so this value is going to be 2,\u00a0\nhere it is 2 plus 1 is going to be 3. Why is this\u00a0\u00a0 3? Well, you can think about why it is 3, I can\u00a0\ncome like this or I can go right and turn there or\u00a0\u00a0 I can go all the way right and come up, so that"
+    },
+    "e6c96e81-6032-400f-a1de-279780a1678e": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "\u00a0\nis why there are 3 ways of reaching there.\n\u00a0 So, similarly this is going to be 4, this is going\u00a0\nto be 5, this is going to be 6. So, once I have\u00a0\u00a0 computed the bottom row I have enough information\u00a0\nto compute the next row from left to right. So,\u00a0\u00a0 I can "
+    },
+    "0cbdb33f-fe01-4f51-aae5-04cf4825cf6e": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "now say 1, 2, 3, 4, 5, 6.\nNow, the same way I can say this is\u00a0\u00a0 1, this is 3, this is 5 and so on, so I can\u00a0\ncompute this row also as 1 3, so not yeah so,\u00a0\u00a0 so 1, 3, 6, 10, 15 and 21. So, I keep doing this\u00a0\nuntil I hit my row with the holes. So, when I\u00a0\u00a0 h"
+    },
+    "9305d11d-edab-44f8-9849-8c6782583e15": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "it the roll with the holes I will have 1 here,\u00a0\nI will have 5 here but here I will not get 15\u00a0\u00a0 because it is a hole and if there is\u00a0\na hole then the answer is always 0.\n\u00a0 Similarly, here I will not get whatever I get\u00a0\nfor this value plus this I will just "
+    },
+    "2d136a62-8927-4345-912a-dae1d388f5fb": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "get a hole,\u00a0\u00a0 so this is what I get in this row. So, I pre\u00a0\ncompute these two as 0 then inductively I get this\u00a0\u00a0 5 by combining 1 and 4 but this 0 is just I mean\u00a0\nit is a fact I mean I cannot help it. But now when\u00a0\u00a0 I come here I combine 0 plus 20 and I ge"
+    },
+    "d84ab9b5-ee58-46d5-bca2-77b78af03cbb": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "t 20.\nAgain, this 0 is given to me and again when I come\u00a0\u00a0 here I get this 56 by combining the 0 and 56.\u00a0\nSo, the grid holes just get arbitrarily fixed\u00a0\u00a0 to 0 because I have just declared that you cannot\u00a0\npass through there, so there cannot be any paths\u00a0\u00a0 "
+    },
+    "14f297a7-3bf5-4a22-b092-ba7a45ff0747": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "reaching there. But once you fix that 0 then\u00a0\neverything else gets fixed along with it.\n\u00a0 So, now I can continue, so I can compute the\u00a0\nnext row. So, again now this is saying that\u00a0\u00a0 the only way to reach here is from the\u00a0\nleft because I cannot come from be"
+    },
+    "f573d5fe-737b-443a-bec9-9f56baa06d01": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "low,\u00a0\u00a0 so it is 6 plus 0. Similarly, the only way to\u00a0\nreach here is to come from the left because I\u00a0\u00a0 cannot come from below so it is on 26 plus\u00a0\n0. So, I keep doing this and eventually if I\u00a0\u00a0 walk all the way up row by row I find out that\u00a0\nactually with t"
+    },
+    "7ca9c515-5746-4f79-9cae-36a4ef85f469": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "hese two holes remember with the\u00a0\u00a0 one hole we had computed by combinatorially we\u00a0\nhad computed some 1743 or something like that.\n\u00a0 Now, we have fewer obviously because two holes\u00a0\nare there but the number of paths is exactly 1358.\u00a0\u00a0 So, this was done row b"
+    },
+    "48fc1d46-3768-47b5-8940-333c0e5aa9b5": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "y row. Now, there is\u00a0\nanything which respects the topological order\u00a0\u00a0 is fine, so you can also do it differently\u00a0\nso you can do it column by column. \n\u00a0 So, you can start here and you can say ok I know\u00a0\nthis value because it comes from the left and\u00a0\u00a0 below "
+    },
+    "fa8165b8-935a-4770-a502-cae6a8673975": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "and I know the below value but I do not\u00a0\nknow the value on the left. So, I can fill up\u00a0\u00a0 this entire column as 1, in some sense we are just\u00a0\nsaying that there is only one way to walk up this.\u00a0\u00a0 And now symmetric to what we did before\u00a0\nI can fill up the sec"
+    },
+    "80fbc7ab-de68-4730-8e63-1b127c103342": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ond column.\n\u00a0 And then when I come to the third column\u00a0\nagain I will put 0s and obviously since\u00a0\u00a0 they are going to give a same answer all\u00a0\nthe other entries are going to be the same\u00a0\u00a0 is just that I am filling up the entries now\u00a0\nthis way. But even this i"
+    },
+    "ea2e6608-eec7-484b-92af-0d0eef440c66": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "s not the only way.\n\u00a0 So, let me look at this, now which values can I at\u00a0\nthis point which values can I solve? I can solve\u00a0\u00a0 this value and I can solve this value also because\u00a0\nwe could do a row by row and column by column\u00a0\u00a0 so what if I solve both these v"
+    },
+    "7a45cb5e-5f7f-4200-b710-df80355795df": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "alues? Now which\u00a0\nvalues can I solve? Obviously I can solve this one\u00a0\u00a0 and I can solve this one but I can also solve this\u00a0\none because it has both the incoming values.\n\u00a0 So, I can actually do it in this order diagonally,\u00a0\nso I can fill up now 1 2 1 then I "
+    },
+    "f97baf69-52cc-4408-bbde-a82e7c99e613": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "can fill up\u00a0\u00a0 1 3 3 1 and so on and get the same thing. So,\u00a0\nthere are many different ways in which dynamic\u00a0\u00a0 programming can fill up this grid of these sub\u00a0\nproblems, any order which is compatible with\u00a0\u00a0 the sub problem DAG the dependencies is fine.\nSo, n"
+    },
+    "6200a958-a9a8-4543-8aff-e3b47c4cc419": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ormally we choose a simple order it is kind\u00a0\u00a0 of easier to say if you know like if you are\u00a0\ndoing row by row or column by column is just\u00a0\u00a0 a simple nested loop for every row for every\u00a0\ncolumn do something. If it is this diagonal\u00a0\u00a0 order you have to be a li"
+    },
+    "551b60be-861e-480b-8e14-e3877e28e334": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ttle more careful to\u00a0\nenumerate all the elements in the diagonal.\n\u00a0 So, one way of thinking of the diagonal is all\u00a0\nvalues where the sum is the same, so this is\u00a0\u00a0 for example this is 0 comma 3, this is 1 comma\u00a0\n2, this is 2 comma 1 and this is 3 comma 0. S"
+    },
+    "2a3592cf-f0cc-4846-9aa0-72d349e85a17": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "o,\u00a0\u00a0 basically along the diagonal all\u00a0\nthe entries are actually of the\u00a0\u00a0 have the same sum, i comma, i plus j is the same\u00a0\nthat is how you identify things on the diagonal.\u00a0\u00a0 So, that is how dynamic programming works on this\u00a0\nparticular problem of grid path"
+    },
+    "d3831ac4-49e7-4261-8f1c-606b99bf1d34": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "s. Now one other\u00a0\u00a0 question that we might ask is there a difference\u00a0\nbetween dynamic programming and memoization.\n\u00a0 So, let us look at this particular situation\u00a0\nso supposing I have a scenario where my\u00a0\u00a0 block intersections actually form this kind of a\u00a0\nba"
+    },
+    "d79d71d1-9090-4055-9c8f-67d2cd855662": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "rrier, so there is a barrier right inside the\u00a0\u00a0 boundary so the only way to go from the bottom to\u00a0\nthe top if I go inside this I get stuck because\u00a0\u00a0 there is no way to move right or out up and get\u00a0\nout of this, so I have to stay along the left\u00a0\u00a0 border and"
+    },
+    "ffb031c7-164e-4822-a738-f80182389e7d": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " go this way, so there is one path going\u00a0\nthat way and there is one path going this way.\n\u00a0 So, intuitively you can see that there are only\u00a0\ntwo ways to reach now because I am forced to go\u00a0\u00a0 either along the left column and then go right or\u00a0\nI am forced to "
+    },
+    "ecac83d0-c5ce-474c-8189-431f3679b8a0": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "go along the bottom row and then go\u00a0\u00a0 up. So, if I did dynamic programming what would\u00a0\nyou do you would start from here and you compute\u00a0\u00a0 all these values and then you will hit these 0s,\u00a0\nafter a lot of calculation you will hit 0s and\u00a0\u00a0 then you will repla"
+    },
+    "b5e42559-2172-4a9f-b2e0-8a4a89583a17": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "ce the sums with the 0s.\nBut if I do memoization I will start from here\u00a0\u00a0 and this memoization will say ok\u00a0\ngive me this value and this value\u00a0\u00a0 and then this value will say give me that value\u00a0\nand this is 0. So, there is no recursive call,\u00a0\u00a0 so memoization"
+    },
+    "fa3f9cda-a29d-4111-bd7e-f61c8e48d988": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " will only compute values along\u00a0\nthe boundary, it will only explore these problems\u00a0\u00a0 because those are the only values which will arise\u00a0\nas recursive calls, the other values will return\u00a0\u00a0 automatically saying it is 0. So, memoization\u00a0\nwill never explore th"
+    },
+    "8cf49a90-604a-4a54-bacd-598c5fe9f62e": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "is entire shaded region\u00a0\u00a0 is never going to be called recursively if you\u00a0\nstart and do not call unnecessary things.\n\u00a0 So, therefore in this particular case the number\u00a0\nof entries you actually compute is going to be\u00a0\u00a0 proportional to m plus n because I left"
+    },
+    "e267610c-8fdd-4f08-94ae-542a9f917bf0": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " these\u00a0\nall these boundaries so I will have 2 m plus\u00a0\u00a0 n may be so maybe this more accurately this\u00a0\nshould be order m plus n. Whereas, if I do\u00a0\u00a0 dynamic programming I am going to actually fill\u00a0\nup m times n, this is the size of the table.\n\u00a0 So, that way dy"
+    },
+    "dad14798-8882-4701-a9bc-92771a160946": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "namic programming does not really\u00a0\u00a0 care about whether a sub problem is going to be\u00a0\nused or not it just computes it and goes ahead\u00a0\u00a0 whereas memoization will only evaluate those\u00a0\nproblems which actually arise in the computation.\u00a0\u00a0 Now, usually there is no"
+    },
+    "5f763006-7ce6-41e8-9191-9917ae9e1240": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "t much of a difference\u00a0\nbut here you can see there is a kind of\u00a0\u00a0 quadratic difference, it is a linear thing\u00a0\nfor memoization it is a quadratic thing for\u00a0\u00a0 the dynamic programming.\nSo, but even in this such a case even\u00a0\u00a0 though there is a potential wastefu"
+    },
+    "7386f815-d22c-44cd-94a4-7b4b3030ab4a": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "lness of doing\u00a0\ndynamic programming; the problem with memoization\u00a0\u00a0 is that the only way to use memoization is\u00a0\ncombining with the recursive solution. So, dynamic\u00a0\u00a0 programming does two things, one is it exploits\u00a0\nthe inductive DAG structure to decide the "
+    },
+    "3ab6b509-996d-41a9-aa84-7f6b6ab4c4aa": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "order\u00a0\u00a0 but then after that it eliminates all recursive\u00a0\ncalls. So, the entire table can be filled up\u00a0\u00a0 just as a nested loop. So, that saving actually\u00a0\noverrides this cost of having extra entries. \n\u00a0 So, usually you will find the dynamic programming\u00a0\neven"
+    },
+    "30860eb6-ca1f-472e-a448-c4103345b7ed": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": " with some wasteful computations like in this\u00a0\u00a0 case will still perform better than memoization\u00a0\nbecause the space saving is not, is more than\u00a0\u00a0 compensated of by the cost of recursion. So,\u00a0\ndynamic programming does not incur that cost,\u00a0\u00a0 so the calling an"
+    },
+    "97afbc4e-6440-4dfe-a9ed-cdf538e9ea8b": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "d returning from a recursive\u00a0\nfunction makes memoization more expensive. But\u00a0\u00a0 there could be situations where the number of sub\u00a0\nproblems is really huge and you cannot anticipate\u00a0\u00a0 which all you need to fill up in which\u00a0\ncase memoization is a better strat"
+    },
+    "915c845f-c8fd-48ca-a746-86c754ccb452": {
+        "content_id": 63,
+        "course_name": "PDSA",
+        "title": "Grid Paths",
+        "week": 9,
+        "chunk": "egy."
+    }
+}

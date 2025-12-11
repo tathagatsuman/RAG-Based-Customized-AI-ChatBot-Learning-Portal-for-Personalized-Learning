@@ -1,0 +1,247 @@
+{
+    "884186f9-3998-4c7a-8b5a-9294e9e48825": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "So, having looked at shortest path\u00a0\nproblems with weighted graphs,\u00a0\u00a0 we now look at a different problem,\u00a0\nwhich is a Minimum Cost Spanning Tree.\u00a0\u00a0 So, minimum cost spanning tree is something\u00a0\nthat comes into play when we want to\u00a0\u00a0 analyze a graph, and see,"
+    },
+    "1dba320b-764b-43da-b4e6-c7e7f36431b7": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " how to\u00a0\nrecover a connected part of it. \n\u00a0 So, for example, you could have a district where\u00a0\nroads have been damaged by a cyclone and you want\u00a0\u00a0 to restore the roads. And your first priority\u00a0\nis to make sure that you can go from everywhere\u00a0\u00a0 to everywhere"
+    },
+    "060f4e7d-80db-44b1-a5c3-26c127d27e40": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": ". So, you want to make sure that the\u00a0\nroads that are restored, connect all the vertices,\u00a0\u00a0 so, you could have some roads which are not\u00a0\nrestored, but you want to choose the roads\u00a0\u00a0 to restore which makes sure that after you\u00a0\nhave restored these roads, ever"
+    },
+    "225a6860-9477-45c3-bc62-7fc1d8cf9f04": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "y town in that\u00a0\u00a0 district is reachable from every other town. \nSo, which set of roads should you restore first?\u00a0\u00a0 And similar situation could appear\u00a0\nin telecom. So, you have some fiber\u00a0\u00a0 optic network or some other kind of network,\u00a0\nwhich serves a bunch o"
+    },
+    "74e95753-8e49-4de5-965b-502d7bcff027": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "f customers. And now,\u00a0\u00a0 you may want to provide some kind of guarantee\u00a0\nto the customers that their service will not\u00a0\u00a0 get disrupted, even if there is some kind of\u00a0\nroad digging along some of these roads. So,\u00a0\u00a0 these cables are all laid along the road. \nSo"
+    },
+    "c852c7f7-0d07-496d-ad2c-cde58b184c66": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": ", what you do is you lay a second set of cables,\u00a0\u00a0 which is on the opposite side of the road,\u00a0\nfor example, so that you make sure that if\u00a0\u00a0 one set is done, the other set is not done.\u00a0\nNow, of course, you could duplicate all the\u00a0\u00a0 cables on all the roads, "
+    },
+    "0869f5b9-b6bb-456c-8630-d8b8478b601d": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "but is there a smaller\u00a0\nset of cables that you can duplicate, so that\u00a0\u00a0 if you lay these cables, still everybody will be\u00a0\nconnected even if the original cables get cut. \n\u00a0 So, this is a problem that is called a spanning\u00a0\ntree. So, you want to take a graph,"
+    },
+    "332a2309-f8c7-4375-b3c1-fcbc66cc0fb1": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " which has a\u00a0\u00a0 certain number of edges. They could be roads in\u00a0\nthe network or they could be these telecom fiber\u00a0\u00a0 connections, and you want to retain a minimal\u00a0\nset of edges so that the graph remains connected.\u00a0\u00a0 So, a minimally connected graph is a\u00a0\ntree"
+    },
+    "c38250e3-094c-4085-82c8-e14258c96a46": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": ". So, a tree is something which\u00a0\u00a0 on n vertices is n minus 1 edges. \nSo, if you add an edge to a tree, you get a loop.\u00a0\u00a0 And if you remove an edge from a tree you get\u00a0\na disconnected graph. So, we want a tree, which\u00a0\u00a0 is a sort of smallest possible connect"
+    },
+    "9a8e57c6-f18c-4abe-b6cb-cc97dfb6706e": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "ed graph\u00a0\non n vertices, and we wanted to cover all the\u00a0\u00a0 vertices in the graph that we have. So, it spans\u00a0\nthat graph, so it is called a spanning tree. \n\u00a0 Now, in general, you could have more than one\u00a0\nspanning tree. So here for instance, the red\u00a0\u00a0 graph "
+    },
+    "78f634a6-8550-4728-9582-1d8efac84e81": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "that we have drawn is a spanning tree it\u00a0\nconnects 0, 1, 3, 4, 2. So, it leaves out these\u00a0\u00a0 two edges and still it connects everything, so\u00a0\nthis is one spanning tree. We could also have\u00a0\u00a0 a spanning tree with these four edges 03, 31, 12\u00a0\nand 24, which leav"
+    },
+    "693f811a-7641-484a-bd37-3e513c25c03e": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "es out two different edges.\n\u00a0 So, when we are doing some practical\u00a0\nproblems, like the one we discussed\u00a0\u00a0 about relaying roads, or restoring or placing\u00a0\nduplicate fiber optic cables, there is also\u00a0\u00a0 a cost associated with either relaying that\u00a0\nroad or main"
+    },
+    "43de23e4-fc6b-43ef-a622-6f146c97065c": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "taining a cable of that point. So,\u00a0\u00a0 it is interesting to look at the spanning tree\u00a0\nproblem in the context of a weighted graph. \n\u00a0 So, we do not have just an underlying graph, we\u00a0\nhave a weighted graph. And now we have a criterion\u00a0\u00a0 to choose between the "
+    },
+    "6d56be82-20fd-40de-adbc-c64c79cdebc3": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "different spanning trees.\u00a0\nSo, we said that, we could have multiple spanning\u00a0\u00a0 trees. But now, we can say that one spanning tree\u00a0\nis better than another spanning tree, if it costs\u00a0\u00a0 less. So, this is a natural interpretation, where\u00a0\nfor instance, if I want"
+    },
+    "a59967c6-1b08-4dc0-8968-26674dfc2357": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " to restore the roads as\u00a0\u00a0 fast as possible, and as cheaply as possible. \nI would like to restore a spanning tree of roads,\u00a0\u00a0 which costs the minimum and which takes\u00a0\nleast time to do. Same way, if I have\u00a0\u00a0 to maintain redundant links to my customers\u00a0\nfrom"
+    },
+    "3c3322d2-3c99-483b-aea6-d9b9ba58859d": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " a point of view of a service provider,\u00a0\u00a0 they want to spend as little as possible for\u00a0\nthis extra service that they are providing. \n\u00a0 So, we are looking at these different possible\u00a0\nspanning trees, and we are assessing their\u00a0\u00a0 value based on their weight."
+    },
+    "bcf0207b-e540-464a-881c-1d9968fa7a48": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " And what is the\u00a0\nweight? Is just the sum of the costs of all\u00a0\u00a0 the edges that form that tree. So, just like\u00a0\nwe saw for a path, the weight of a path is the\u00a0\u00a0 sum of the weights along the path, here we have a\u00a0\ntree, so these are all the edges that we need."
+    },
+    "81aa5eb2-7e22-4f5a-b5df-d385df486dc0": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " \n\u00a0 Now, what tree gives us the\u00a0\ntotal cost which is minimum?\u00a0\u00a0 And this is what we call a minimum cost\u00a0\nspanning tree. So here for instance,\u00a0\u00a0 we have this weighted graph when\u00a0\nwe construct one spanning tree,\u00a0\u00a0 the red one, then this will have its weight "
+    },
+    "e14f93db-73b2-47de-8f11-8f7ae2d6f752": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "which\u00a0\nis 18 plus 70 plus 6 plus 20 which is 114. \n\u00a0 But this is as we saw, not the only spanning tree,\u00a0\nso we could also consider another spanning tree\u00a0\u00a0 which has 10 plus 6 plus 20 plus 8, and we get\u00a0\na drastic reduction in the cost from 114 to 44.\u00a0\u00a0 So,"
+    },
+    "cbd2545b-3044-412b-84a5-6d9cc8a96d7e": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " our goal is now to give given such a graph\u00a0\nto identify the minimum cost spanning tree. \n\u00a0 So, it is useful to remind ourselves of some\u00a0\nbasic things about tree. So, first of all, a tree,\u00a0\u00a0 as we said, is the smallest connected graph that\u00a0\nconnection that"
+    },
+    "88454909-b38f-41ad-a7cc-d94d8b92cf44": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " you can draw on a graph. So,\u00a0\u00a0 if you have n vertices, then a tree on those\u00a0\nn vertices will have exactly n minus 1 edges.\u00a0\u00a0 So, one way of thinking about this is\u00a0\nthat, if you have a connected graph\u00a0\u00a0 then everything is in one component.\n\u00a0 Now, a tree is"
+    },
+    "995d4823-5a3f-4173-b982-f9ee6a5e10b9": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " connected and acyclic, which means\u00a0\nthat, between any two vertices, there is no cycle,\u00a0\u00a0 so there is only one way to go from one vertex\u00a0\nto another. So, if you take a graph like this a\u00a0\u00a0 tree and you cut it, at some point, it must\u00a0\nfall apart into two com"
+    },
+    "08aa527d-21db-446d-a1b6-c13ff6003907": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "ponents. Because if\u00a0\u00a0 it does not fall apart in two components,\u00a0\nit means there is a way to go around. \n\u00a0 So, basically, if I have this and if I cut\u00a0\nthis vertex here, and I find that I can still\u00a0\u00a0 go from here to here, then originally there\u00a0\nmust have bee"
+    },
+    "27b60f05-3aba-4f18-9790-ba972f957932": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "n a cycle. So, therefore, if I\u00a0\u00a0 delete an edge from a tree, I will add from\u00a0\none component I will go to two components.\u00a0\u00a0 Now, each of these is connected. \nNow again, there they are also trees.\u00a0\u00a0 If I cut thing I will go one more time and I have\u00a0\nn vertic"
+    },
+    "e8125aab-67f3-49ca-95bd-f8d16afba70e": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "es originally. So, I have one component,\u00a0\u00a0 if I cut one vertex, I have two components, if\u00a0\nI do this n minus 1 times I have n components,\u00a0\u00a0 but n components means I have n isolated\u00a0\nvertices, no more edges, so I must have\u00a0\u00a0 started with n minus 1 edges. So"
+    },
+    "d67f47d0-0d2b-405c-a920-c5725fd36d9e": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": ", this is one\u00a0\nargument saying that if we delete n minus 1\u00a0\u00a0 edges we will come to singleton vertices, so,\u00a0\nthe original tree had only n minus 1 edges. \n\u00a0 Conversely, if I take a tree and add an edge,\u00a0\nit must create a cycle for the same reason we\u00a0\u00a0 said b"
+    },
+    "1722c559-36fd-4c65-ac8c-9743b81d5938": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "efore because you could already go from\u00a0\nanywhere to anywhere. Now, if you add an edge,\u00a0\u00a0 you are adding another way to go. So,\u00a0\ntherefore, the new edge plus the old path,\u00a0\u00a0 so I have already a way to go from i to j and\u00a0\nnow I have added an edge directly f"
+    },
+    "20122698-6e34-4f28-9a3e-c1ed980a9784": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "rom i to j\u00a0\u00a0 together this must form a cycle. So, adding\u00a0\nan edge to a tree will form a cycle. \n\u00a0 So, the third property is that if I take any two\u00a0\nelements into vertices in a tree, then there will\u00a0\u00a0 be only one path between them. And they will\u00a0\nbe exactly"
+    },
+    "3b6d8676-3944-474f-82fb-b9c804b7932d": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " one because they are connected,\u00a0\u00a0 but there will be only one. Because if there\u00a0\nwere two then you can see like this, you can\u00a0\u00a0 go two different ways, then there must be some\u00a0\nplace where these paths diverged and join. So,\u00a0\u00a0 it could be at i and j or some "
+    },
+    "20a1585c-fb2f-472f-96f1-ca0ca4435369": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "intermediate point,\u00a0\nso there must be a cycle somewhere in the graph.\u00a0\u00a0 So, if you add multiple paths between two\u00a0\nvertices, you cannot be having a tree. \n\u00a0 So, any of these facts, basically, any two of\u00a0\nthese tell you that something is a tree. So,\u00a0\u00a0 if it"
+    },
+    "78d6846e-50bd-4b94-b86a-a6aed43de228": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " is connected an acyclic then it must be\u00a0\na tree, if it is connected and it has n minus 1\u00a0\u00a0 edges, it must be a tree, if it is acyclic and\u00a0\nit has n minus 1 edges it must be a tree. So,\u00a0\u00a0 all of these basically any two of these tell you\u00a0\nthat you have a tr"
+    },
+    "ee8062de-95ea-4c90-82a0-e76b566aa817": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "ee and I imply the third.\n\u00a0 So, why do we need this? Well, we actually\u00a0\nuse these facts when we are building spanning\u00a0\u00a0 tree. So, we will have two strategies to build\u00a0\nspanning tree. So, one will basically start with\u00a0\u00a0 a small edge and try to grow a tree b"
+    },
+    "1d00ed3f-df9d-4312-ae6f-a482fccffbab": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "y adding\u00a0\nsmaller edges. So, this will be similar to our\u00a0\u00a0 shortest path kind of strategy, where we try\u00a0\nto add edges as minimally as possible. \n\u00a0 And the other one we will basically try to create\u00a0\na small graph, which is not a tree but in between\u00a0\u00a0 I may "
+    },
+    "7a292c4e-e437-496c-a6f4-6763ac430e74": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": "not have yet a tree. So, I might have\u00a0\ncomponents, but I will try to avoid cycles,\u00a0\u00a0 but I will pick up, since I know I want the\u00a0\nsmallest possible spanning tree I will pick up\u00a0\u00a0 the edges in ascending order of cost. And\u00a0\nif I can add it to my tree, I will"
+    },
+    "87566f61-9d36-420d-a945-57b3d259b541": {
+        "content_id": 43,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees",
+        "week": 5,
+        "chunk": " add it\u00a0\u00a0 if I cannot add it, I will throw it away. So,\u00a0\nthe first algorithm is called Prim\u2019s algorithm\u00a0\u00a0 and the second one is called Kruskal\u2019s\u00a0\nalgorithm, and we will study both of them."
+    }
+}

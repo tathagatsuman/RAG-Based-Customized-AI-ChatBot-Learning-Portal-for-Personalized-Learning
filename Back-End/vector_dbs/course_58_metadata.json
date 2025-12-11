@@ -1,0 +1,541 @@
+{
+    "50250fab-e8f5-469b-8032-49aee36ff347": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "We have seen three concrete examples of\u00a0\ndivide and conquer algorithms. We saw the\u00a0\u00a0 problem of counting inversions, then we saw the\u00a0\nproblem of finding the closest pair of points.\u00a0\u00a0 And then we looked at integer multiplication,\u00a0\nwhich Karatsuba s algorith"
+    },
+    "f48331fe-4d17-46e4-80ce-3440fa63e76d": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "m. \n\u00a0 So, let us look at a more general\u00a0\nproperty of how to solve or analyze these\u00a0\u00a0 divide and conquer problems. So, remember that\u00a0\na divide and conquer solution requires us to\u00a0\u00a0 break up the problem into disjoint sub parts.\u00a0\nSo, we break it up into small"
+    },
+    "2987348a-d9e9-419b-92f1-a03a946bd2c5": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "er subproblems,\u00a0\u00a0 which do not interact with each other, solve them\u00a0\nrecursively, and then we combine the sub parts.\n\u00a0 So, what we then have is that the complexity of\u00a0\nthe original problem which had an input size n,\u00a0\u00a0 will now be a recurrence because\u00a0\nit w"
+    },
+    "19800594-5cb5-4884-a960-9bd4b046a9c8": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ill depend on the complexity\u00a0\u00a0 of smaller subproblems, which we\u00a0\nget from dividing up the problem,\u00a0\u00a0 and then the cost of splitting it and\u00a0\ncombining it which will be an extra cost.\u00a0\u00a0 So, right at the beginning, without calling\u00a0\nit divide and conquer, we s"
+    },
+    "38849c4e-0fc8-440d-9c91-b00ab0d01c00": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "aw this at work\u00a0\u00a0 when we looked at searching and sorting,\u00a0\nnamely binary search and merge sort. \n\u00a0 So, for binary search, what we said was that\u00a0\neach successive iteration halves the interval\u00a0\u00a0 to search. So, to search an interval of size\u00a0\nn, we look at th"
+    },
+    "e4e53e7b-6897-4967-9031-c4237838df05": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "e midpoint, and then we search\u00a0\u00a0 either the left half of the right half, so we get\u00a0\nT of n requires me to search half the interval,\u00a0\u00a0 and I need to examine that midpoint. So, assuming\u00a0\nthat it is an array and I can get the midpoint by\u00a0\u00a0 just some index cal"
+    },
+    "31da9084-bcd7-44f9-935e-dfe01e63ba63": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "culation, in constant time,\u00a0\nI can do that comparison and decide which half\u00a0\u00a0 to search. And if I expand this out, then I\u00a0\nget log n. So, this was binary search. \n\u00a0 And for merge sort, remember, that we\u00a0\nhad to recursively sort the two halves,\u00a0\u00a0 and then w"
+    },
+    "038c452a-fee6-405e-b848-09b2153fbcdd": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "e merge them using a linear time merge\u00a0\noperation. So, it was two times T n by 2 plus n,\u00a0\u00a0 and again, by just some expansion, we\u00a0\nget order n log n. So, both of these were\u00a0\u00a0 relatively easy to solve by this naive\u00a0\nmethod of just repeatedly substituting\u00a0\u00a0 a"
+    },
+    "87bd5e95-f1d1-4764-92d6-f5c266bbfc4b": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "nd finding a pattern and kind of replacing\u00a0\nthe whole expression by something which\u00a0\u00a0 encompass the whole calculation. \nNow, when we looked at integer multiplication,\u00a0\u00a0 this problem became a little messy because these\u00a0\nterms became a little more complicate"
+    },
+    "058ee601-5749-4c4d-b02d-880f32ca6311": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "d. So, for\u00a0\u00a0 the Naive divide and conquer, we had four times\u00a0\nT n by 2, so notice that we have here 2 and 2,\u00a0\u00a0 so that in some sense helps us manage the thing\u00a0\na little better, but here we have 4 and 2 and\u00a0\u00a0 3 and 2 for Karatsuba s algorithm. And then we\u00a0\n"
+    },
+    "ecf2c932-5b04-49ab-9531-921fccf66031": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ended up with completely different analyses.\n\u00a0 So, we ended up saying that the naive\u00a0\nalgorithm will take us back to n squared.\u00a0\u00a0 And Karatsuba s algorithm actually gives us is\u00a0\nvery strange quantity, which is n to the power\u00a0\u00a0 log 3, n to the 1.59. So, the"
+    },
+    "ff7a4d9d-86aa-4190-9f1e-d8d97f6029ac": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": " question now we are\u00a0\ngoing to look at is, whether there is some uniform\u00a0\u00a0 way to get from this recurrence to this asymptotic\u00a0\nvalue. Is there a way to kind of easily calculate\u00a0\u00a0 what the answer should be without having\u00a0\nto actually go brute force through "
+    },
+    "bc6bbd77-ef51-4a7d-860d-e9d09b2aa21f": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "that\u00a0\u00a0 long expansion and making sure we combine the\u00a0\nterms cleverly and recognize the pattern.\n\u00a0 So, for this, we will use a representation\u00a0\nof our divide and conquer solution using\u00a0\u00a0 something called a recursion tree. So,\u00a0\na recursion tree is just a root"
+    },
+    "920b6e4d-4c77-45ac-b2f4-aa94a624f9b7": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ed tree,\u00a0\u00a0 it is a tree in the sense that we have been\u00a0\nlooking at binary trees and so on, but this\u00a0\u00a0 will be not binary, it will have many children\u00a0\nfor each node, so it will be a rooted tree.\n\u00a0 And the property that we have is when we are doing\u00a0\ndivide a"
+    },
+    "913dbdf7-92c6-4fa6-a99f-180309efd77b": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "nd conquer, we are creating subproblems.\u00a0\u00a0 So, the problem at the top creates, say two sub\u00a0\nproblems, and each of those creates two more sub\u00a0\u00a0 problems until we reach at the bottom at the leaf\u00a0\nlevel a sub problem which is trivial of size 1.\u00a0\u00a0 So, each nod"
+    },
+    "9135f199-b43d-468b-98b5-7c3db7edf426": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "e in this tree will represent\u00a0\none sub problem. So, each recursive sub\u00a0\u00a0 problem it appears in the tree, and it is\u00a0\na child of the problem that created it.\n\u00a0 Now, we are going to kind of add-up the cost of\u00a0\nthe algorithm by associating the cost with each\u00a0\u00a0"
+    },
+    "501e598f-0cc6-4e08-93bc-3dcf26400d2d": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": " of the subproblems. And what is the cost we are\u00a0\ngoing to associate? We are going to associate\u00a0\u00a0 the cost that we spend in that sub problem without\u00a0\ncounting the recursive call, because the recursive\u00a0\u00a0 call will be added up in the notes below it. \nSo, we "
+    },
+    "592f6215-d6c5-46c1-972e-8016706240fe": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "are not going to count the cost\u00a0\u00a0 of making the recursive call, but the cost of\u00a0\ndoing the splitting and combining, so that is\u00a0\u00a0 really the cost we record with each note. So, how\u00a0\nmuch time does it take us to split the problem\u00a0\u00a0 and how much time does it t"
+    },
+    "7d0fbe68-447f-424e-a1ea-d2e5fd7f1f3e": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ake us to combine the\u00a0\nanswers assuming that the recursive problem has\u00a0\u00a0 been solved. So, this is the value of each node,\u00a0\nit is the cost excluding the recursive calls.\n\u00a0 So, concretely, if we have an input of size\u00a0\nn, we will have to spend some function o"
+    },
+    "43de7cdf-da78-47c0-a210-99a9e334a40a": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "f n\u00a0\u00a0 on non-recursive work. Usually, we have seen\u00a0\nthat this is normally order n like we have to\u00a0\u00a0 for example, in quicksort, we have to partition\u00a0\nit into lower and upper that is also divide and\u00a0\u00a0 conquer or in in any or we have to merge in merge\u00a0\nsort t"
+    },
+    "535a44a9-262e-4860-9a34-56189838519a": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "hat is the combination is order n. In rare\u00a0\u00a0 cases, like in binary search, this work is order\u00a0\n1, we just have to find the midpoint. So, that is\u00a0\u00a0 one of the case. So, f n is some function of n.\nNow, having done that, we split it up into some\u00a0\u00a0 number of r"
+    },
+    "484ba0cf-31ff-4ca1-99ae-07957a936b32": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ecursive calls. So, in Karatsuba\u00a0\ns algorithm, we made three recursive calls.\u00a0\u00a0 In the Naive multiplication algorithm made four\u00a0\nrecursive calls. In merge sort and binary search,\u00a0\u00a0 we make two recursive calls. So, this\u00a0\nnumber of recursive calls is on some"
+    },
+    "7457f951-4512-46f7-8acf-4a2bed882028": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "\u00a0\u00a0 smaller part of the input, which is some fraction\u00a0\nof the input. So, this is some n by c. \n\u00a0 Now usually, we have been seeing that these two\u00a0\nthings are correlated, because in binary search,\u00a0\u00a0 for example, we made in merge sort we made\u00a0\ntwo recursive ca"
+    },
+    "78a15c47-cef9-4792-a6f3-9c7db02fbed6": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "lls, so r is equal to 2,\u00a0\u00a0 and c was equal to 2 because we did it\u00a0\nfrom size n by 2, so this is merge sort.\u00a0\u00a0 But in binary search, r is equal to 1, and\u00a0\nc is equal to 2. We make one recursive call\u00a0\u00a0 on half the length. And in Karatsuba\u00a0\ns thing for exampl"
+    },
+    "aadfc809-c9ac-4779-b64d-5a5751c01bb7": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "e, r is equal to 3,\u00a0\u00a0 and c is equal to 2. We make three\u00a0\nrecursive calls to the multiplication,\u00a0\u00a0 each of them on a number of half the\u00a0\nlength. So, these two parameters r and c,\u00a0\u00a0 are independent, in some sense. \nThe number of times, number of subproblems"
+    },
+    "d3e1e734-e9a1-41c4-af5a-a317b3e0050f": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": " we\u00a0\u00a0 have to solve, and the size of each sub problem.\u00a0\nBecause the subproblems are not really directly\u00a0\u00a0 it is not like we are overlapping. So, in sorting\u00a0\nor something, it makes it look strange, how can we\u00a0\u00a0 take half the array and sorted three times bec"
+    },
+    "98e17c96-5084-465d-ad63-fefdd75181be": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ause\u00a0\nthere are only two halves. But we solve that in\u00a0\u00a0 multiplication, we are actually multiplying three\u00a0\ndifferent quantities of half the size, they are\u00a0\u00a0 not directly contributing to the answer, the\u00a0\nanswer is some clever combination of these. So,\u00a0\u00a0 tha"
+    },
+    "fdef6ec9-9efb-40ec-b7a6-c0c4782bd3b9": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "t is why we can have more subproblems\u00a0\nthan there are the size of the parts.\n\u00a0 So, if we do this, obviously, the recurrence\u00a0\nthat we get is that to solve a problem of size\u00a0\u00a0 n, we have to break it up into size of problems\u00a0\nof size n by c. And how many of t"
+    },
+    "c4be6d90-9fcf-4116-a34b-57ebf3c29f2b": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "hem? Well, r of\u00a0\u00a0 them because that is our assumption. And then,\u00a0\nwe are spending this is the non-recursive part,\u00a0\u00a0 we are spending f of n time in doing the\u00a0\nsplitting and combining. So, if assuming\u00a0\u00a0 that this gets solved, then the cost that this\u00a0\nnode ha"
+    },
+    "41683883-71f9-4554-9a32-dc6964fbbe87": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "s to incur on its own is f of n.\n\u00a0 So, if we now try to draw this\u00a0\nrecursion tree that we set for\u00a0\u00a0 where each node represents a sub problem at the\u00a0\nroot of the tree, we have the original problem.\u00a0\u00a0 And the original problem to break it up, takes\u00a0\nf of n wo"
+    },
+    "59afecac-f05c-4148-a22d-82f9eb716a52": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "rk, so we will label it with f of n as\u00a0\u00a0 the cost of this thing. And then this will have\u00a0\nr children, so the root will have r children,\u00a0\u00a0 because I am splitting it up, and each of them\u00a0\nwill represent the cost of doing the problem\u00a0\u00a0 on input size n by c. A"
+    },
+    "973ed99c-f027-4a49-93eb-ab02ea267960": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "nd finally, at\u00a0\nthe bottom, we will have the leave. \n\u00a0 So, if we go down d steps, then the size\u00a0\nof the sub problem has been divided by\u00a0\u00a0 C, d times, so I have come down to a n by C to\u00a0\nthe d, so the cost of that level is going to be\u00a0\u00a0 f of n by C to the d"
+    },
+    "9cac8261-d2d4-4a7c-8340-04b712dd8a44": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": ". And just to make things\u00a0\nwork nicely, we are going to assume that this\u00a0\u00a0 goes down to 1. So, eventually, C to the d will\u00a0\nbecome n, so C is actually some power of n,\u00a0\u00a0 so n is actually some power of C.\nSo here is a pictorial representation\u00a0\u00a0 of this tree"
+    },
+    "7072d319-c7f7-4357-b269-5c0d5be6c3ee": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": ". So, this glorious tree has our root\u00a0\nwith labeled f n. Then at level 1, we have r nodes\u00a0\u00a0 and each of them has the cost associated with 1 by\u00a0\nC of the original input. Now, if I go to level 2,\u00a0\u00a0 I have each of these r nodes splits into r\u00a0\nnodes again, so "
+    },
+    "56b90d34-9637-49e2-b927-ab2b41333b88": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "I have r square node. So,\u00a0\u00a0 each r node splits into this set of r square, r\u00a0\nnodes, so that r into our r square nodes and all\u00a0\u00a0 and each of them has a complexity of n by C,\u00a0\nagain, divided by C. So, n by C square. \n\u00a0 And, finally, when I reach the base\u00a0\nof"
+    },
+    "76c0344f-de62-4b31-b041-98f09591f251": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": " the tree, when I come down to 1,\u00a0\u00a0 so let capital L be the number of levels in this\u00a0\ntree. At the bottom, I have r to the power L,\u00a0\u00a0 because each time I have been increasing the\u00a0\nnumber by a factor of r, so our r square r cubed,\u00a0\u00a0 so r to the power L node"
+    },
+    "1af55aeb-185c-4df8-ba2b-4da8b10f77c2": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "s, and each\u00a0\nof them will have this cost. \n\u00a0 So, this is the picture that you should have\u00a0\nin mind about this recursion tree. And what we\u00a0\u00a0 are going to say is that the cost, this T of n,\u00a0\nthat we are trying to calculate is actually just\u00a0\u00a0 you just have to"
+    },
+    "21d0956d-e2eb-4968-8970-45168a98bcc9": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": " add up all these things. So, how\u00a0\ndo, we will see what it means. So, we just add up\u00a0\u00a0 all of these things. So, this is the contribution\u00a0\nof each subproblem to the overall cost.\n\u00a0 So, the leaves correspond to the base case.\u00a0\nSo, this is T of 1, so T of 1 i"
+    },
+    "16a63167-a7e1-4c70-8312-e6ec3e2a8083": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "s some constant.\u00a0\u00a0 So, it could be 5, it could be 1, it could\u00a0\nbe 10. But it does not really matter because\u00a0\u00a0 we are doing asymptotic complexity. So, we can\u00a0\njust assume that that constant will get absorbed\u00a0\u00a0 in our big O notation. So, we will always\u00a0\nassu"
+    },
+    "b8159ccc-1240-4add-b88b-924c5dfd55a5": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "me that the base case T of 1 is 1. \n\u00a0 Now, we could actually have a base case,\u00a0\nwhich is not 1, we might stop the thing at\u00a0\u00a0 some smaller thing. For example, supposing we\u00a0\nare trying to sort something, we might actually\u00a0\u00a0 at some brute force ways sort thre"
+    },
+    "5f26c522-8d72-4571-a2f9-36fb4e8fb96b": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "e elements. So,\u00a0\nwe might actually stop short of 1, but in general,\u00a0\u00a0 we will go down to 1. So, the base case is n equal\u00a0\nto 1 and the cost of n equal to 1 is typically 1.\u00a0\u00a0 So that is an safe assumption.\nSo, remember, that the ith level\u00a0\u00a0 has r to the i n"
+    },
+    "0c8802c4-5088-4c21-90ca-f745f7600db3": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "odes, each with value\u00a0\nf, and by C to the i, that is the,\u00a0\u00a0 this is the size of the input at that stage. And f\u00a0\nof that is the amount of non-recursive work we do\u00a0\u00a0 per node and we have our to the i nodes, because\u00a0\nthat is how many times a tree has split.\n\u00a0"
+    },
+    "b51b937d-9b5a-4ac1-9ced-59d16d457b56": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": " So, overall, since we assumed that the original\u00a0\nn was a power of C, and we are dividing it into\u00a0\u00a0 n by C, n by C, n by C after log to the base\u00a0\nC of n splits, we have come down to size 1,\u00a0\u00a0 so we have reached the leaf where we\u00a0\nhave this case of the base"
+    },
+    "2d49d06b-23b8-4e78-9513-4f38390cb1fd": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": " case. So,\u00a0\u00a0 the capital L, which is the number of levels\u00a0\nin our tree is just log n to the base C. \n\u00a0 So, now, if we want to add up, as we\u00a0\nsaid, we wanted to add up all these nodes,\u00a0\u00a0 so we have to add, if we added up level by\u00a0\nlevel, then we start from "
+    },
+    "b89ff4cb-519c-4772-bafa-dfb4a0849399": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "the zeroth level,\u00a0\u00a0 which is the root down to the leaf level,\u00a0\nwhich is the last level. At each level,\u00a0\u00a0 this is what we said, we have r to the i nodes,\u00a0\nand each of them has value f of n by C to the i,\u00a0\u00a0 so we just multiply that so r to the i times\u00a0\nf of "
+    },
+    "38752cb6-86f6-4e0d-94f5-51a6214f46fa": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "n by C to the i and add this up for all\u00a0\u00a0 i from 0 to L. So, this is the total cost T of n\u00a0\nexpressed in this level by level framework. \n\u00a0 So, in particular, the number of\u00a0\nleaves is r to the L. So, r to the L,\u00a0\u00a0 so remember that L is log C to the base n, "
+    },
+    "e380d26c-c8d0-4885-8ff1-1867fc2d968a": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "so r\u00a0\nto the L times f of 1 because that is where the\u00a0\u00a0 n has become 1. So, f of 1 we remember is\u00a0\nalways 1, and r to the L is just r to the\u00a0\u00a0 log C of n because that is what we have for\u00a0\ncapital L, that is the height of this tree,\u00a0\u00a0 which has got C branch"
+    },
+    "aa25c5ce-acba-4d54-a6bd-9f374953619b": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ing. But remember\u00a0\nearlier observation that a to the log\u00a0\u00a0 C is the same as C to the log a for\u00a0\nany base. So, if I have r to the log\u00a0\u00a0 n is the same as n to the log r to the base C.\nSo, I this is what we have we have log C log n\u00a0\u00a0 levels, the last level ha"
+    },
+    "39faf160-c4cc-430a-90ab-75ea4ee8ce34": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "s n to the log r and\u00a0\nthe total cost is this level by level cost. So,\u00a0\u00a0 what we are going to do is, we are going\u00a0\nto think of this as a series. So, this is a\u00a0\u00a0 cost of levels 0 plus the cost of level 1 plus\u00a0\nthe cost level 2, plus the cost of level L. So,\u00a0"
+    },
+    "1e726b29-0c33-497e-b888-b307236b75d9": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "\u00a0 question is, what is happening to this\u00a0\ncost, as we go from left to right?\n\u00a0 So, there are three cases that normally\u00a0\narise in a divide and conquer scenario.\u00a0\u00a0 The first case is that every term is a constant\u00a0\nfactor smaller than the previous term. Now, t"
+    },
+    "ad720d0c-3cb9-41be-b390-1044c606a616": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "his\u00a0\u00a0 is what happens in binary search, we start with\u00a0\nthe full thing, the next level only examines half,\u00a0\u00a0 the next level only examines half of that. \nIn such a case, what happens is, that the root\u00a0\u00a0 dominates the cost. So, the root dominates the\u00a0\ncost me"
+    },
+    "dca4f0e4-5c3a-4bf7-9ddf-6cb2aa5edd71": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ans the whole thing is basically f of n.\u00a0\u00a0 Now, if the terms are equal, that\u00a0\nis, the sum of the costs at level,\u00a0\u00a0 i plus 1 is equal to the cost of the parent\u00a0\nof that thing, then what happens is that the\u00a0\u00a0 cost across all the levels is the same. So,\u00a0\nthe "
+    },
+    "df0fc943-597f-4a82-901e-3d81b8d48019": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "cost, the total cost across level 0 is\u00a0\u00a0 the same as a total cost across level 1 is\u00a0\nthe same as total costs across level L.\n\u00a0 So, the total cost is always going to add\u00a0\nup to f of n. So, we just take f of n times\u00a0\u00a0 a number of levels. Now, the number of l"
+    },
+    "3b4b9d73-2d3b-4d00-b089-b0ccf99c9c8f": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "evels\u00a0\nwe said was log C of n, but if you are doing\u00a0\u00a0 asymptotic complexity, log C log 2 are all the\u00a0\nsame. So, I can just get f of n times log n.\u00a0\u00a0 So, if I have all terms in the sequence\u00a0\nhave are of roughly equal size, then I get\u00a0\u00a0 the cost of one node "
+    },
+    "ab2ffd9a-2add-4f62-a172-0a1820d7aa58": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "times the\u00a0\nnumber of levels, which is log n. \n\u00a0 And, finally, if the thing is actually exploding,\u00a0\nand this is what is happening and certainly it is\u00a0\u00a0 happening in the naive multiplication that we\u00a0\ndid. Because we said, I go from n to 4 times\u00a0\u00a0 n by 2. So,"
+    },
+    "842b6c4a-cfb9-4bd1-a644-b8536dd548e8": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": " if I look at the number of problems\u00a0\nand solving I am solving 4 into n by 2 so I am\u00a0\u00a0 really solving double the number of problems in\u00a0\nterms of bits. Even in Karatsuba I am doing 3\u00a0\u00a0 times n by 2 so that is more than n, so the number\u00a0\nof subproblems is ac"
+    },
+    "2b2331a9-2d75-4076-bb4d-70a65a8fd6a4": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "tually exploding as I go down\u00a0\u00a0 and it is kind of growing exponentially. \nAnd in such cases, it turns out that it is\u00a0\u00a0 the leaf some which dominate. So, when it is\u00a0\nshrinking, it is the root sum which dominates\u00a0\u00a0 when it is increasing it is the leaf sum th"
+    },
+    "39878796-ed37-43b9-bb7d-82ac9e667381": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "at\u00a0\ndominates. And the leaf, remember is this\u00a0\u00a0 month. So, in such cases, I get n to the log\u00a0\nr and this is what we got for Karatsuba. So,\u00a0\u00a0 let us at some examples to understand. \nSo, let us look at merge sort. So, in merge sort,\u00a0\u00a0 I have n, this is the r"
+    },
+    "ce337d91-eaec-4db9-b42e-53bad8beff3b": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ecursion tree, I have an\u00a0\nn by 2. So, n by 2 plus n is n by 2s n, n by 4\u00a0\u00a0 plus n by 4 is n by 2. So, this is a situation\u00a0\nwhere the series is equal, in the sense that,\u00a0\u00a0 the total contribution at each level is adding up\u00a0\nto n. So therefore, I get n times "
+    },
+    "6adc3241-1ed8-4cbe-bf6e-baf315e8c21c": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "log n, just by\u00a0\u00a0 applying that analysis that we did previously.\nNow, we saw quick sort in the worst case gives us\u00a0\u00a0 n squared, but what if we had a kind of clever\u00a0\nquick sort? So, remember, in quick sort,\u00a0\u00a0 I have n elements, so if I had sorted it, then it"
+    },
+    "8c57add4-91e1-4264-bc34-039bd28dc28c": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "\u00a0\nwould be in ascending order. So, what if I pick a\u00a0\u00a0 pivot, which is always somewhere inside the center\u00a0\nsegment. So, let us say that it is between n by 3,\u00a0\u00a0 and 2n by 3. So, the pivot is always here.\nHow we get that as a separate story,\u00a0\u00a0 but let us assu"
+    },
+    "58a705bb-aaef-4733-a5d3-6e6b99deef50": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "me that we had a magical way of\u00a0\npicking a pivot, whose value was always between\u00a0\u00a0 the one-third value and the two-thirds value.\u00a0\nIt is never in the smallest one-third of the\u00a0\u00a0 list it is never in the highest one-third of the\u00a0\nlist. So, then in the worst c"
+    },
+    "ce9abcfc-6409-448f-b7b9-8d46ad13702a": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ase, it will split\u00a0\u00a0 this as 1 by 3 and 2 by 3.\nSo, the worst-case recurrence,\u00a0\u00a0 if I have this clever pivot is T of n is T of n by\u00a0\n3 plus 2 times T of n by 3. Because I have to now\u00a0\u00a0 solve the other thing twice. So,\u00a0\nsorry, this will be 2n by 3 I think.\u00a0"
+    },
+    "bd59842c-cf16-44a9-8f93-8b22274323c7": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "\u00a0 So, this is now something different from what\u00a0\nwe saw before because in our earlier thing we\u00a0\u00a0 said you have to do n by c, n by c, n by c, n\u00a0\nby c and we have to unequal split. So, here is\u00a0\u00a0 the recurrence. So, I have one node which has\u00a0\nn by 3, and the "
+    },
+    "ccf7076d-6207-4b71-8a0b-88f236fb6801": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "other node which is 2n by 3.\n\u00a0 So, what will happen is that the right hand side\u00a0\nwill go deeper, and the left hand side will run\u00a0\u00a0 out of elements faster, because this if I go down\u00a0\nthis path, then it is dividing by 3 every point.\u00a0\u00a0 And if I go down, this "
+    },
+    "d8111516-c2a7-4b60-b8be-ed8747685c05": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "path it is multiplying\u00a0\nby two-thirds. So, the right hand most path\u00a0\u00a0 in this tree is going to be longer than the left\u00a0\nhand most, so I will have holes In the tree. \n\u00a0 So, it actually does not matter. In that recursion\u00a0\ntree analysis you could have holes, "
+    },
+    "0a8e0a55-75a3-4d56-9b32-c02acace9623": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "what he really\u00a0\u00a0 interested in is the depth, the longest path.\u00a0\nSo, the longest path is going to be now what\u00a0\u00a0 happens in this two-thirds thing. So, it is going\u00a0\nto be I am dividing by two-thirds, multiple times,\u00a0\u00a0 and I will get end up saying that I have "
+    },
+    "11c6e87c-74bb-44d7-8bef-215bc2936c83": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "log to\u00a0\nthe base 3 by 2 of n, which is just log of n. \n\u00a0 Now, again, if you look at each level,\u00a0\nn by 3 plus 2n by 3 is equal to n,\u00a0\u00a0 this whole thing is going to be equal to n\u00a0\nand so on. So, actually, if you add it up,\u00a0\u00a0 this is an equal series, so we ge"
+    },
+    "c8b06b95-182d-4bec-b314-9306a10e95b8": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "t n log n. So,\u00a0\nwhat it says is that if you are able to actually\u00a0\u00a0 ensure that quick sort gives you\u00a0\npartitions, which are at a fixed percentage,\u00a0\u00a0 it could be one-third, one-forth, whatever you\u00a0\nwill actually end up with an n log n algorithm.\u00a0\u00a0 Problem wi"
+    },
+    "068dd9ab-5ca8-467a-bb6a-5ec97c4c59b7": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "th n squared is because you have this\u00a0\nalgorithm which gives you 1 and n minus 1. So,\u00a0\u00a0 if you have a pivot, which is very\u00a0\nbad, then you get n squared. \n\u00a0 What about Karatsuba? We will, the first naive\u00a0\nmultiplication says I take four subproblems of\u00a0\u00a0 siz"
+    },
+    "abd11c98-7bb8-4dd1-82d9-4733e3f3a0eb": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "e n by 2 and I keep expanding them. Now, this\u00a0\nis again an exploding situation now, because I\u00a0\u00a0 am going from something which adds up to n to\u00a0\nsomething which adds up to 2n. So, in this case,\u00a0\u00a0 I have to look at the base. And so, the basis n\u00a0\nto the log, r"
+    },
+    "7fb76cd1-69b1-4c02-a337-d471a05c8e7e": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "emember, I have to do n to the log\u00a0\u00a0 r. So, r is 4 so I have to the log 4, but\u00a0\nlog of 4 is 2, so I get n squared. \n\u00a0 So, in other words, that n squared that we derived\u00a0\nby manually calculating you actually get by just\u00a0\u00a0 plugging in 4 in this n to the log "
+    },
+    "f06774b5-5e3d-411e-8fc4-7120a3aad51f": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "r. And for\u00a0\nKaratsuba we manually calculated, but we got n\u00a0\u00a0 to the log 3, we get n to log 3 here also because\u00a0\nnow r is 3, so this is n to the log r with r as 3.\u00a0\u00a0 So, these are just examples to show that now if\u00a0\nyou have this recursion tree idea, and you"
+    },
+    "27afe0d0-7da4-448d-8016-931652d4fe5c": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": " ow,\u00a0\u00a0 you can kind of look at your recurrence and decide\u00a0\nwhether it is increasing or decreasing or stable,\u00a0\u00a0 then you can directly read off the answer to\u00a0\nthe recurrence, without having to manually\u00a0\u00a0 expand and calculate it, as we did before. \nSo, there "
+    },
+    "19fde775-1bba-48e3-99df-c0808ae7717d": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "are other versions of this calculation,\u00a0\u00a0 which are sometimes called the master theorem\u00a0\nfor recursion, but it is useful to have this\u00a0\u00a0 at the back of your mind. You can always\u00a0\nvalidate it by working it out for yourself.\u00a0\u00a0 But if it is very clear to you h"
+    },
+    "c1811e56-9d9d-43ed-9f15-157bfd74f899": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": "ow it is going to\u00a0\nwork by looking at the recurrence, you can just\u00a0\u00a0 write off the recurrence the asymptotic complexity\u00a0\nwithout having to do the calculation.\n\u00a0 So, to conclude, I would just like to thank\u00a0\nJeff Erickson for publishing this wonderful\u00a0\u00a0 book"
+    },
+    "df12b508-a344-4ba4-900f-1191f5e69a02": {
+        "content_id": 58,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Recursion Trees",
+        "week": 8,
+        "chunk": " in which these pictures are there\u00a0\nwhich I could borrow. Thank you."
+    }
+}

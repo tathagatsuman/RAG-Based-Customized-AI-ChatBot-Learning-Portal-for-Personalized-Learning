@@ -1,0 +1,758 @@
+{
+    "edbdde99-66b8-458f-90ef-46702ee3c11d": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "We have seen a number of algorithms for string\u00a0\nmatching. So, we saw initially the brute force\u00a0\u00a0 thing then we saw the Boyer Moore algorithm, then\u00a0\nwe saw the Raven Karp algorithm which transformed\u00a0\u00a0 it into a numeric calculation. Then we saw the\u00a0\nKnuth Mo"
+    },
+    "d23afcb2-b43b-43e6-a792-6c89e8b537a3": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "rris Pratt algorithm which built an\u00a0\u00a0 automaton of prefixes and did it in\u00a0\na single pass of the of the text.\n\u00a0 In all of these, we were looking for a\u00a0\nfixed query; a query was a fixed string\u00a0\u00a0 against a fixed piece of text. So, we have a\u00a0\npattern which con"
+    },
+    "760d7da4-104c-4bf7-b016-2044ddc74028": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "sists of 1 word or kind of\u00a0\u00a0 set of a sequence of words, and we are looking\u00a0\nfor a match of this pattern against the text.\u00a0\u00a0 Now, what if we want to look for a real\u00a0\npattern that is something which can be\u00a0\u00a0 matched in more than 1 way. \nSo, instead of looki"
+    },
+    "3bab6585-a3b6-444d-b251-aa8bb0a8abb3": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ng for\u00a0\u00a0 a fixed pattern, we want to look for,\u00a0\nlet me call it a flexible pattern.\u00a0\u00a0 So, for example, supposing you are looking for a\u00a0\nname, which is spelled differently by different\u00a0\u00a0 people. So, let us say you are looking for the\u00a0\nname Srivatsan and you "
+    },
+    "846214b4-d5f9-4075-ba96-f37d8f99212e": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "are not sure whether the\u00a0\u00a0 name is spelt with a t or with a th. \nNow, you could of course,\u00a0\u00a0 give 2 sequential queries, you can first look\u00a0\nfor Srivatsan with a t alone and then look for\u00a0\u00a0 Srivathsan with a t and an h. But it would be nice\u00a0\nif you could ex"
+    },
+    "aff05aec-831d-4da5-885a-1c6108572f27": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "press your query as saying look for\u00a0\u00a0 either a copy of this. So, that is a more flexible\u00a0\nsearch than looking for a fixed string. \n\u00a0 Or you might have some idea about the beginning\u00a0\nand the end, but not something in between. So,\u00a0\u00a0 for instance, this very o"
+    },
+    "eecd4599-4a69-41c4-9f7e-a08c1307a81e": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ften happens when we are\u00a0\nlooking for the names of files for instance, on\u00a0\u00a0 our computer, we want a PDF file, so we know that\u00a0\nthe extension is PDF and you might remember that\u00a0\u00a0 you started off the word by saying lecture. \nSo, you are looking for a PDF fil"
+    },
+    "b38aa6c7-2f7f-411d-a08e-72c1feb344df": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "e whose name\u00a0\u00a0 starts with lecture, and whose name ends with PDF,\u00a0\nbut you do not remember what happens in between.\u00a0\u00a0 So, here is an example supposing we want to look\u00a0\nfor a word that starts with the letters sub and it\u00a0\u00a0 ends with tion. So, this should mat"
+    },
+    "13ffe0fd-9a44-4411-8885-66345d944873": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ch a text which\u00a0\nhas say substitution because this starts with sub\u00a0\u00a0 and ends with tion, but also subtraction because\u00a0\nthis also starts with sub ends with tion. \n\u00a0 So, this is a different type of pattern.\u00a0\nSo, the first type of pattern we were\u00a0\u00a0 looking fo"
+    },
+    "b0d3bbae-9b77-42f0-9380-344101a62731": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "r is this or that either we want\u00a0\nSrivatsan with an h or without an h, here,\u00a0\u00a0 we are saying we know something happens at the\u00a0\nbeginning and later something happens and I do not\u00a0\u00a0 want to describe what happens in between. \nSo, what happens in between is ki"
+    },
+    "23b240ee-bb3c-4423-b610-e4aeb1010871": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "nd of\u00a0\u00a0 left flexible and finally, you might say that\u00a0\nI am not very sure how many copies that are of\u00a0\u00a0 this there is 1 or more copy of it. So, if I am\u00a0\nlooking for 1 or more copy of na, it would match\u00a0\u00a0 it does not match pancreas because\u00a0\nthere is no na t"
+    },
+    "577d5976-d8b3-4048-951e-fb264aae4807": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "hat is only an,\u00a0\u00a0 but it does match banana because there\u00a0\nare 2 copies. So, this is repetition. \n\u00a0 So, we now have this more elaborate notion of\u00a0\npattern that we want to describe. So, how would\u00a0\u00a0 you go about phrasing your question? So, you want\u00a0\nto take a"
+    },
+    "534919dc-1c42-4db0-aa00-7756c2fd861f": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " piece of text and you want to tell this\u00a0\u00a0 algorithm that is searching for it, please find\u00a0\nme sub followed by something followed by tion,\u00a0\u00a0 how do you phrase that? So, we need a\u00a0\nway of describing these patterns. \n\u00a0 So, remember that we are always working"
+    },
+    "ffa289ad-9f72-401f-8a7d-b5c3a4b4b6cf": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " within\u00a0\nthe context of a fixed set of symbols and is\u00a0\u00a0 usually a finite set of symbols. So, normally\u00a0\nthe symbols that we can type for instance,\u00a0\u00a0 and we said that we will refer to this as an\u00a0\nalphabet and we will denote it by this Greek\u00a0\u00a0 letter sigma. S"
+    },
+    "5780f833-b56c-4cd2-981a-9b8a26a39b52": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "o, all our patterns are with\u00a0\nrespect to specifying in advanced set of symbols\u00a0\u00a0 from which the patterns can be built. \nSo, we can say that the letters are a, b,\u00a0\u00a0 c or whatever, but they are a finite set of\u00a0\nletters. So, sigma denotes its finite set of\u00a0\u00a0 "
+    },
+    "94739642-5c5c-444a-820d-690ee397534e": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "letters, which are there in the text and which\u00a0\nare there in the patterns we want to build.\u00a0\u00a0 So, when we describe a pattern, then a pattern\u00a0\ncan be thought of as something which matches a set\u00a0\u00a0 of words. So, for instance, the word Sub dot dot\u00a0\ndot tion ma"
+    },
+    "af864172-ff45-4818-b124-05e63f485c50": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "tches words subtractions substitution\u00a0\u00a0 and so on. So, I can describe in terms of this\u00a0\npattern, which all words it matches, so a pattern\u00a0\u00a0 matches a set of words over this alphabet.\nSo, now what we will do is we will describe\u00a0\u00a0 simultaneously how to build"
+    },
+    "3aa1a268-e3b4-41a6-977f-01c7cc46fbb2": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " a pattern and how\u00a0\nto associate with that pattern, the set of words\u00a0\u00a0 that match that pattern. So, this will give us a\u00a0\nclear understanding of what each pattern means.\u00a0\u00a0 A pattern the meaning of a pattern is the set of\u00a0\nwords that it is intended to match."
+    },
+    "a8beb2ca-f84f-4e7e-9c49-ce17ae4290d8": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " So, the first\u00a0\u00a0 and simplest pattern is just a single letter. \nSo, if I take a single letter a then it matches\u00a0\u00a0 the word consisting of that single letter. So, a\u00a0\nmatches a, b matches b, and so on. So, in general,\u00a0\u00a0 a pattern matches a set. So, here the s"
+    },
+    "ecdeadff-6693-4964-9dd7-9cffe6d1c0f7": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "et\u00a0\nis just called 1 word, which is letter a.\u00a0\u00a0 Now, a more elaborate pattern is like\u00a0\nSrivathsan with an h or without an h. So,\u00a0\u00a0 if we have 1 pattern Srivatsan without an\u00a0\nh, and 1 pattern Srivathsan with an h. \n\u00a0 So the first Srivatsan matches a certain"
+    },
+    "8fc4bda0-34eb-4d94-a4a0-3295e469ec44": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " set of\u00a0\nthings, the second Srivathsan matches a certain\u00a0\u00a0 other set of things. So, Srivathsan plus so\u00a0\nSrivathsan with an h plus Srivatsan without an h,\u00a0\u00a0 will match the documents with match this or that.\u00a0\nSo, that is the union. So, if I have a pattern p\u00a0"
+    },
+    "204a7825-9c3e-41da-bd03-b8a21454a1a4": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "\u00a0 which matches some set, and I have had\u00a0\ndifferent pattern q, it matches some set,\u00a0\u00a0 then the way I express this union in\u00a0\nthe world of patterns is right plus. \n\u00a0 So, if I combine two patterns with a plus, it\u00a0\nmeans it matches the set of either pattern. S"
+    },
+    "2ffbc731-e835-4b1b-98e9-b34d00ae0037": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "o,\u00a0\u00a0 either it matches a pattern, which with\u00a0\na word which matches the pattern p or it\u00a0\u00a0 matches a word which matches pattern q, so\u00a0\nit matches overall, is SP union Sq. Then we\u00a0\u00a0 had that substitution kind of example. \nSo, we had words, which start with so"
+    },
+    "beaff6c3-2e26-4adf-b9d2-72477aff5306": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "mething\u00a0\u00a0 and end with something. So, the way we build\u00a0\nthat is to say that we first have a pattern\u00a0\u00a0 for the initial part, and then we have a pattern\u00a0\nfor the later part and then we combine these two,\u00a0\u00a0 exactly as we do in strings, we can catenae\u00a0\nit. We "
+    },
+    "cb32e08f-9da2-44e4-a9e3-d572d4954afa": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "have this string concatenated with\u00a0\u00a0 that string to form a longer string. \nSo, we have this pattern concatenate with\u00a0\u00a0 that pattern to form a longer pattern and it will\u00a0\nmatch anything whose first part matches p second,\u00a0\u00a0 match matches q. So, if I have p, "
+    },
+    "af39be24-544b-400c-b72b-1daf9def4cc0": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "which\u00a0\nmatches a set, and q with matches set,\u00a0\u00a0 and I take a pattern of the form p followed by\u00a0\nq, I concatenate the patterns, then it will match\u00a0\u00a0 the set of words which decompose into the first\u00a0\npart being from Sp and the second part be Sq. \n\u00a0 So, it wil"
+    },
+    "c050d309-9b31-4e5c-bebc-919c31af0a6b": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "l match a concatenated word where I can\u00a0\nsplit the word so that the first part matches p\u00a0\u00a0 and the second part matches q. Any word which\u00a0\ncan be split that way matches the pattern p, q.\u00a0\u00a0 And finally, we are that banana example. So, we\u00a0\nsaid we can take a "
+    },
+    "d9bf221d-7f20-4e5f-9c62-6627a8b0606c": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "pattern and we can repeat it.\u00a0\u00a0 So, if I write p plus, it means I have\u00a0\n1 or more copies of the pattern. \n\u00a0 So, if I have 1 or more copies of the pattern, I\u00a0\nknow how to match 1 copy of the pattern, because\u00a0\u00a0 p can be assumed to already know what p matches"
+    },
+    "ea5fcfaa-0687-4605-8f95-96a693260a96": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": ".\u00a0\nSo, p plus will match any sequence of words,\u00a0\u00a0 where each of those words matches p.\u00a0\nNow, p plus is 1 or more. Usually,\u00a0\u00a0 in this theory of these patterns, you write\u00a0\np star, so p star matches 0 or more. \n\u00a0 So, what does it mean to match 0? It means it\u00a0"
+    },
+    "67244c57-6d8d-40ee-9680-ffb8d2aa832f": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "\nmatches the empty string we will talk about a\u00a0\u00a0 little later, but there is a technicality. So,\u00a0\np star is the usual notation. So, p star matches\u00a0\u00a0 0 or more occurrences of the pattern. So, there is\u00a0\n0 occurrence of the pattern, then it is empty. So,\u00a0\u00a0 it "
+    },
+    "28564f0b-8f2c-4441-b803-70843f8093a5": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "is matched by the empty string, which\u00a0\ndoes not have any occurrence of anything. \n\u00a0 But if it is p plus, it must have\u00a0\nat least 1 copy of the pattern.\u00a0\u00a0 So, with this syntax, which might be a little\u00a0\nbit overwhelming. So, what we had is we had\u00a0\u00a0 a and then"
+    },
+    "d7c14935-b2c4-4a85-beb8-cb85895a8c6e": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " we had this choice, either p or q, we\u00a0\nhad this p followed by q, and we had this p plus\u00a0\u00a0 and p star, we did not repeat repetition. \nSo, we can now look at some examples just to\u00a0\u00a0 understand better what this does. So, if I look at\u00a0\nthe pattern, a plus b, "
+    },
+    "7e5e1e1a-7e57-49ed-9df7-803c864e53f6": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "then it must match the set\u00a0\u00a0 consisting of the words a and b and that is\u00a0\nbecause we know that each individual letter\u00a0\u00a0 matches the set consisting of that letter alone as\u00a0\na single word. So, b matches the set b, a matches\u00a0\u00a0 the set a and now I have to take"
+    },
+    "d831802a-e34e-4733-b0ea-48807d86445a": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " the union. \nSo, I take a union b, and I get the set consisting\u00a0\u00a0 of 2 words a and b. So, obviously, if I do it\u00a0\nfor 2 different letters c and d, c plus d will\u00a0\u00a0 now match the set c comma d, because c on its own\u00a0\nmatches a set c, d on its own matches set d"
+    },
+    "1dd71270-09e4-4545-9966-ee6bfefdcb50": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": ". \n\u00a0 Now, let us look at that sequencing\u00a0\nconcatenation. So, now if I take this pattern\u00a0\u00a0 and follow it with this pattern, so I take\u00a0\na plus b, followed by c plus d, then it will\u00a0\u00a0 match anything which I can decompose so that\u00a0\nthe first part comes from the"
+    },
+    "bf06e5da-70a6-4e11-96d1-b5df07df709a": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " first pattern\u00a0\u00a0 and the second comes from the second pattern. \nSo, the first card can be a or b and the second\u00a0\u00a0 part can be c, or the first card part can be a or\u00a0\nb and second part can be d. So, if I look at, on\u00a0\u00a0 this side, I have a or b, and on the sid"
+    },
+    "519603c5-956f-442f-937a-6e1cdad881b6": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "e I have\u00a0\nc or d and I look at all the words I can build\u00a0\u00a0 by combining this so I can do a, c, I can do b,\u00a0\nc, I can do a, d, I can do b, d. So, these are all\u00a0\u00a0 the words I can build a c, a d, b c and b d . \nSo, each 1 of these can be split so that the\u00a0\u00a0 f"
+    },
+    "08d232f2-a633-4f6b-928d-b7fa7ad3ec00": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "irst half satisfies p, a plus b in the\u00a0\nsecond half satisfies q, c plus d. So,\u00a0\u00a0 this is how we build up patterns build up larger\u00a0\nand larger sets of words that they can match.\u00a0\u00a0 So, now if I take this pattern, and now I\u00a0\napply this plus to it, then it wil"
+    },
+    "2b514208-1403-43d4-91b3-23e5a0039afc": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "l match now,\u00a0\u00a0 actually an infinite set of words, because\u00a0\nremember that I can match any word which\u00a0\u00a0 decomposes into parts which match this. \nSo, remember that the words I had were a c,\u00a0\u00a0 b c, a d and b d. So, if I take a c followed by a\u00a0\nc, the first a c"
+    },
+    "2d272c0d-0b40-412f-aafb-20b940d87d35": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " matches the pattern, the second\u00a0\u00a0 a c matches the pattern. So, ac ac matches this\u00a0\nrepeated pattern. Similarly, a c, b c matches,\u00a0\u00a0 similarly b c, a c matches, but also a c, a c, a\u00a0\nc matches because I can have 1 or more repetition.\u00a0\u00a0 So, I can have 3 rep"
+    },
+    "7632c7f8-d0cc-485c-a14a-d486795a9cb9": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "etition, I could have 7\u00a0\nrepetition. So, there is no limit to this. So,\u00a0\u00a0 once I put a plus, I blow up the set that matches\u00a0\ntypically into an infinite set, I have an infinite\u00a0\u00a0 set of words, which matches the pattern. \nSo, when I start with this single le"
+    },
+    "f0aa660e-2bb4-4e02-8a50-7636da3ca0d6": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "tters,\u00a0\u00a0 I only have single letters, when I have plus, I\u00a0\nonly take 2 sets, which are finite, the union will\u00a0\u00a0 be finite, if I take 2 sets, which are finite,\u00a0\nand I concatenate them from every so I have a\u00a0\u00a0 cross product in some sense, if you remember this"
+    },
+    "76a3f4f6-d719-4f3d-b88c-e789e17044fb": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "\u00a0\ncross product notation. So, I have everything\u00a0\u00a0 from 1 set, combined with everything from the\u00a0\nother set. So, the number of things so here,\u00a0\u00a0 for instance, I had 2 words and 2 words. \nSo, add 2 times 2 is equal to 4 words. So, that\u00a0\u00a0 is why this has 4 wo"
+    },
+    "15ebfce9-f93d-42d6-ac72-11209a08c1fe": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "rds, because is a cross b. So,\u00a0\nas long as I am working with plus and dot, I can\u00a0\u00a0 only build finite sets of words, which match my\u00a0\npattern, but the moment I do this repetition, then\u00a0\u00a0 I go outside this finite set, and I can now talk\u00a0\nabout an infinite set"
+    },
+    "b177173d-1a95-490c-99ad-d63c629a3bb9": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " of words which matches. \n\u00a0 So, this can be now extended with some shortcuts.\u00a0\nSo, for instance, supposing I want to match an\u00a0\u00a0 a followed by b like we had earlier, the string\u00a0\nsub followed by tion in between. So, what comes\u00a0\u00a0 in between here is any symbol"
+    },
+    "d1c3bb18-4a89-45f7-a4f5-55defccd6c07": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " from sigma. So, if I\u00a0\nassume that sigma consists of k letters, a1 to ak,\u00a0\u00a0 then a1 plus a2 sells either a1 or a2 we saw that,\u00a0\na plus b is either a or b the word letter a. So,\u00a0\u00a0 plus a3 will be either a, a1 or a2 over a3. \nSo, if I write this expression, "
+    },
+    "bafabbf1-0496-431a-aa16-3597856c9621": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "a1 plus a2\u00a0\u00a0 plus plus plus ak so if I take the plus and\u00a0\ncombine all the letters, it says that I can,\u00a0\u00a0 it will match any 1 symbol from sigma. So, the\u00a0\nexpression, if I take all the letters in sigma,\u00a0\u00a0 and I just combine them into 1 expression\u00a0\nwith plus "
+    },
+    "34277c41-3ea8-4a77-ad79-ee89ea959546": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "a1 plus a2 plus a3 plus a4 up to ak,\u00a0\u00a0 then that expression matches 1 letter, but\u00a0\nthat 1 letter can be any letter in sigma. \n\u00a0 So, I will use the word the letters, the symbol\u00a0\nsigma itself to symbolize that expression,\u00a0\u00a0 because it occurs so frequently. S"
+    },
+    "4d768cc0-cfac-48e8-a52e-a48dc8f170dc": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "o, it occurs\u00a0\nso frequently that we frequently want to say\u00a0\u00a0 any letter. So, for any letter, we will use the\u00a0\nshortcut into writing a1 plus a2 plus a3 plus ak,\u00a0\u00a0 we will just write the word sigma. So, now what\u00a0\nwe want is an a followed by 1 or more repetit"
+    },
+    "e3036f14-469b-40c2-ae01-8e0eb996078d": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ions\u00a0\u00a0 of any letter followed by b. So, this is the same\u00a0\nas writing a followed by a1 plus a2 plus ak. \n\u00a0 Remember that it is finite, so a1 plus\u00a0\na2 plus a3 plus ak is a finite expression\u00a0\u00a0 plus b. So, this whole thing I am just\u00a0\ncollapsing as a sigma. The"
+    },
+    "b1d70a54-88a0-4a22-81ce-b61e881532fe": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "re is a shortcut.\u00a0\u00a0 It is just an abbreviation. So, this is\u00a0\none way so this is saying an a followed by\u00a0\u00a0 any number of letters 1 or more I do not care\u00a0\nwhat they are ending with b. And of course,\u00a0\u00a0 if I do not insist that there must be 1 or more\u00a0\nand this"
+    },
+    "762f8e16-8732-459a-941f-94e56f6ea3b0": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " is why the 0 or more becomes important,\u00a0\u00a0 I can replace this plus by a star. \nSo, a sigma star b says 0 or more,\u00a0\u00a0 I have an a at the beginning of my pattern, I have\u00a0\na b at the end of my pattern, I have something in\u00a0\u00a0 between there may be nothing in betw"
+    },
+    "0202627b-ad01-496b-bb30-dbd9bf0ab903": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "een also, it\u00a0\ncould just be a, b. So, if I say a sigma plus b,\u00a0\u00a0 then I do not match the word a b, a b does not\u00a0\nhave anything between a and b. So, that will not\u00a0\u00a0 match. So, this does not match whereas this does\u00a0\nmatch here. So, sigma star is sometimes ne"
+    },
+    "2b7d203c-1b06-4409-af5c-ec79e3a67cb2": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "eded, if\u00a0\u00a0 we want to express the fact that I have may have\u00a0\nsomething and I may not have something also. \n\u00a0 So, let us go back to that earlier example looking\u00a0\nfor Srivatsan or Srivathsan. Now, supposing\u00a0\u00a0 I do not care where it occurs in my text, then I\u00a0"
+    },
+    "2e996705-0242-477f-a19c-e853a1ae5f1c": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "\nwill say that Srivatsan can be preceded by 0 or\u00a0\u00a0 more letters from alphabet followed by 0 or more\u00a0\nletters from alphabet, I just want to see in the\u00a0\u00a0 middle the sequence s followed by r followed by\u00a0\nremember that if I give you a word, it is like\u00a0\u00a0 that p"
+    },
+    "2a719f58-ea72-49de-9c23-cb30fbfb94ed": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "attern a followed by b, p dot q dot r,\u00a0\na dot b dot c dot d looks for a, b, c, d. \n\u00a0 So, Srivatsan these letters in that order will\u00a0\nmatch exactly the sequence Srivathsan. So this is\u00a0\u00a0 1 possibility or I want to find any letters which\u00a0\nsurround the word Sr"
+    },
+    "e468bbbe-04cd-4bc8-95d1-8e8ad2dea6df": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ivathsan with an h and I will\u00a0\u00a0 not either of these so I use the plus. So, this\u00a0\nwould be the long winded way of writing this. \n\u00a0 Now, this matching anywhere in my text, that\u00a0\nis putting a sigma star before and after,\u00a0\u00a0 is so common that this is the defaul"
+    },
+    "233715c9-3b96-492a-ab11-bdbf5d3163e8": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "t when we\u00a0\nactually use these expressions, these patterns\u00a0\u00a0 in searching when we use it in a library, like we\u00a0\ndo have it in Python, as I will mention shortly,\u00a0\u00a0 then it actually matches anywhere. It is\u00a0\nlike when we do a string match. When we do\u00a0\u00a0 a strin"
+    },
+    "befc1467-49c7-4429-95e8-1243562b1e08": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "g match, we are saying look for\u00a0\nthis string anywhere in my pattern. \n\u00a0 Sometimes we say I want all the positions,\u00a0\nsometimes I just want to know whether it is\u00a0\u00a0 there or not. So, the default is actually\u00a0\nanywhere. So, I we can drop the sigma\u00a0\u00a0 stars and w"
+    },
+    "03ef5608-171c-4c79-8b77-d31bc33d6231": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "rite that earlier pattern is just\u00a0\nSrivatsan without an h plus Srivathsan with an h\u00a0\u00a0 and this pattern will match these 2 words,\u00a0\neither of these 2 words anywhere in my text. \n\u00a0 But now you obviously see that\u00a0\nthis is a redundant thing,\u00a0\u00a0 because there is "
+    },
+    "64346598-5cb4-488a-89ae-2bd7b3481a68": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "a lot of this, which\u00a0\nis the same except for this letter h\u00a0\u00a0 Srivatsan and Srivathsan are the same. So,\u00a0\nit would be good to say that I have a much\u00a0\u00a0 smaller difference between the two. It is not\u00a0\nSrivatsan or Srivathsan, it is shrivat but with\u00a0\u00a0 an h or w"
+    },
+    "48009fa5-185c-4ba7-ae14-8d29c6f58682": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ithout an h followed by san. \nSo, how do you write that without an h?\u00a0\u00a0 So, without an h means there is nothing there.\u00a0\nSo, we need a way of denoting nothing there\u00a0\u00a0 and that we use this special symbol this\u00a0\nGreek epsilon, which stands for the empty\u00a0\u00a0 patt"
+    },
+    "c7cee565-83b8-40bc-8e00-90121422b690": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ern. So, the empty pattern matches the empty\u00a0\nstring, as you would expect, that is no letters.\u00a0\u00a0 So, now we have a pattern which says, start with\u00a0\nsrivat then either have an h or do not have an h\u00a0\u00a0 do not have anything, and then finish with san.\nSo, now th"
+    },
+    "be07a9bf-10b5-4f7d-813c-b2ad3d1dedc5": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "is becomes a more compact pattern,\u00a0\u00a0 which specifies the distinction between these\u00a0\n2 spellings. So, there are many different ways\u00a0\u00a0 to write the same pattern and depending on how\u00a0\nclever you are, you can compress the pattern.\u00a0\u00a0 But remember that when you "
+    },
+    "0f4857f3-89d3-4ee0-8174-b7f9d12e8bb1": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "write more and more\u00a0\ncompressed patterns, you need to be able to decode\u00a0\u00a0 also what this pattern stands for. So, writing\u00a0\nthese patterns, and then understanding whether\u00a0\u00a0 the patterns actually express what you think\u00a0\nthey are expressing are two different t"
+    },
+    "a7a7b2aa-82df-4d0e-884c-126fbdf28af4": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "hings.\n\u00a0 So, we have now moved to this assumption that\u00a0\nwhen I write a pattern p, it matches anywhere. So,\u00a0\u00a0 if it matches anywhere, sometimes I am\u00a0\nreally interested whether it matches the\u00a0\u00a0 beginning or the end. For example, if I am\u00a0\nlooking for PDF file"
+    },
+    "f81f0567-debf-43f8-a8fe-ce59816fed0a": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "s on my computer and if\u00a0\u00a0 I am looking at a listing of all the files,\u00a0\nI would like the PDF to be at the end. \n\u00a0 Similarly, if I am looking for all files,\u00a0\nwhich are lecture something or the other,\u00a0\u00a0 I would like the word lecture to be in the\u00a0\nbeginning. S"
+    },
+    "0edeb9e2-e435-46dd-bb53-272a8812039d": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "o, sometimes I need to specify\u00a0\u00a0 this anchoring the pattern is the beginning\u00a0\npattern is the. So, if I want to write,\u00a0\u00a0 so this is now an extension of this pattern\u00a0\nnotation. So this, the notation varies from,\u00a0\u00a0 one system to the other, but\u00a0\nthese are quit"
+    },
+    "2dd78911-5274-492b-85df-1b4cdbc5dbd6": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "e conventional. \n\u00a0 So, you write this symbol, which it is on your\u00a0\nkeyboard, you will find this up arrow symbol,\u00a0\u00a0 which is sometimes used for exponentiation,\u00a0\nsometimes write 7 to the power 6 like this.\u00a0\u00a0 So, it is one of the shift shifted symbols above\u00a0\n"
+    },
+    "f24ef8dc-c220-4423-81fb-ada5c672956d": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "one of the numeric keys normally 6. So, if I write\u00a0\u00a0 this before my pattern, then it usually means\u00a0\nthat I am looking for this pattern anchored to the\u00a0\u00a0 beginning of my string. So, I am only looking for\u00a0\np if it occurs at the beginning of the text. \n\u00a0 And "
+    },
+    "43e2e9bb-d4f8-40a0-a934-7e8bb3c36bfc": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "symmetrically, if I want to find p at the end\u00a0\nof my text, then I use the special symbol dollar\u00a0\u00a0 to indicate that p must terminate. So, if we look\u00a0\nat an example, for instance, and if I look at\u00a0\u00a0 this pattern, it is saying b with\u00a0\na beginning anchor match"
+    },
+    "55837695-b700-4cf8-9c90-94aa30657996": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "es banana,\u00a0\u00a0 because banana starts with ba.\u00a0\nSimilarly, na with an end anchor matches\u00a0\u00a0 this. Whereas if I asked for instance, if I\u00a0\nsaid an dollar, then do it matches a string,\u00a0\u00a0 it does not match at the end of the string. \nSo, an dollar would not match b"
+    },
+    "f38a9ba3-3acc-4e01-9bdc-8031d66880dc": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "anana.\u00a0\u00a0 So, if I want the entire string to\u00a0\nmatch a pattern, then I could write\u00a0\u00a0 that it must the match must begin and\u00a0\nend. Now, this might seem strange to you,\u00a0\u00a0 because it might look like you are actually asking\u00a0\nfor the pattern to be the string itsel"
+    },
+    "e1cb4061-438b-4d21-866c-8b5a4757cfc0": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "f. So, what\u00a0\u00a0 does it matter. But if you look at if you remember\u00a0\nmy example that I want files, who start with\u00a0\u00a0 file names, rather we start\u00a0\nwith lecture and end with PDF.\u00a0\u00a0 So, my pattern will be something\u00a0\nlike I start with lecture\u00a0\u00a0 then I have my sigm"
+    },
+    "2f4d98b5-3f04-4885-88dc-90c1cdc7b47a": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "a star let us say\u00a0\nand I end with PDF, and then dollar. \n\u00a0 So, this is a typical example where you know what\u00a0\nthe beginning is know what the ending is, you want\u00a0\u00a0 the beginning to be at the beginning, you want\u00a0\nthe ending to be at the ending, you do not kn"
+    },
+    "292b9954-af48-4ff3-9ad3-81ca428f9963": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ow\u00a0\u00a0 what is in between. So, this is an important case\u00a0\nwhere you actually want to specify both ends. So,\u00a0\u00a0 for example, if I look at ba na dollar, this\u00a0\non its own does not match banana because this\u00a0\u00a0 matches the beginning. This matches the end,\u00a0\nbut ba n"
+    },
+    "8ce1fcd2-7d01-4399-a072-ee0e836eedf2": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "a on its own does not match banana. \n\u00a0 Because if I stopped with ba na, then it does not\u00a0\nmatch the dollar, it matches without the dollar,\u00a0\u00a0 you would get it. But with the dollar, you do\u00a0\nnot get it. But if I put ba and I allow multiple,\u00a0\u00a0 1 or more occurr"
+    },
+    "6f7bc4f9-2338-4b27-b339-3a22fc39035a": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ences of na, then\u00a0\nna na matches na plus. So, na na\u00a0\u00a0 matches na plus dollar. So, this matches\u00a0\nthere. So, this works and therefore,\u00a0\u00a0 this complicated pattern actually\u00a0\nmatches banana from beginning to end.\n\u00a0 So, what is the kind of rational behind this\u00a0\n"
+    },
+    "cdd7e02d-b05c-49b2-8a9e-c89d1a92e1a9": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "particular notation for patterns, where did these\u00a0\u00a0 plus and this concatenation and the star and all\u00a0\ncome from? So, let us go back to this Knuth Morris\u00a0\u00a0 Pratt algorithm. So, while we were explaining\u00a0\nthat Knuth Morris Pratt algorithm, we introduced\u00a0\u00a0 thi"
+    },
+    "9d4c36e4-8f43-4ccc-a635-0cf642ec21f4": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "s notion of a finite state automaton. \nBecause a kind of a special graph, where each\u00a0\u00a0 node represented a prefix of the pattern that we\u00a0\nwere trying to find, and when we read a letter,\u00a0\u00a0 we would take an edge label by the letter\u00a0\nwhich will take us from th"
+    },
+    "dfa0b768-fb5d-47f0-a34a-4000a56bf86c": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "e currently matched,\u00a0\u00a0 longest match prefix to the next longest match\u00a0\nprefix based on the letter we have done. \n\u00a0 And of course, if I am going the right\u00a0\ndirection, each letter would progress. So,\u00a0\u00a0 the prefix will become longer and longer and\u00a0\nonce we fi"
+    },
+    "539316e9-35b9-4d32-adfc-e958f41c3c56": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "nish reading the entire word that is\u00a0\u00a0 the prefix that we have read is the entire word\u00a0\nthen we will say we have found the pattern. So,\u00a0\u00a0 we will accept this word otherwise, we will\u00a0\ngo backwards we will read the wrong letter\u00a0\u00a0 and then the prefix we have "
+    },
+    "c7de4d16-260b-4c6c-b51b-b0866f603967": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "matched\u00a0\nmay go back to a shorter prefix. \n\u00a0 So, this is how we process. So, we had this\u00a0\nfinite state automaton, but it had this kind of a\u00a0\u00a0 structure. So, ideally, we are going forwards. So,\u00a0\nwe have the first letter like whatever, banana,\u00a0\u00a0 but then we "
+    },
+    "dee22a0d-70cf-43ae-8b99-db98466d9a48": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "might come back at some point and\u00a0\nfinally, when we reach the end, we say okay,\u00a0\u00a0 so it has a kind of a linear structure. \nNow, we could have these automata having\u00a0\u00a0 branches, there would be more than one way of\u00a0\nprocessing and reaching a terminating thing"
+    },
+    "12936cfa-6b9f-4518-b56b-af53ea857dec": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": ". So,\u00a0\u00a0 the automaton that we had built for this Knuth,\u00a0\nMorris Pratt explanation has a linear structure,\u00a0\u00a0 a single path, which takes us to the finish line,\u00a0\nand everything which deviates from that takes us\u00a0\u00a0 back along the path to an earlier prefix. \nOn "
+    },
+    "106b8b54-4884-4806-badc-c19a8ad1d370": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "the other hand, if you take those graphs,\u00a0\u00a0 you can actually accept on many paths, so you\u00a0\ncould have a more general graph, which starts\u00a0\u00a0 at one place, and then it allows you depending\u00a0\non the word to take different paths, so very\u00a0\u00a0 much like when we are "
+    },
+    "9d163f0b-355e-4cc1-9e41-87c3e489044f": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "doing things like suffix,\u00a0\ntrees or something like that, or no tries. \n\u00a0 So, that is like, I start at the top, it is\u00a0\nlike an automaton, I started the root node,\u00a0\u00a0 and I, my letters follow a path and then if I\u00a0\nreach the leaf, I accept it. So, we can think"
+    },
+    "1552d4be-dee0-4491-9319-cc9bde0cc810": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "\u00a0\u00a0 of that as one version of an automaton. So, an\u00a0\nautomaton could generally have multiple paths\u00a0\u00a0 and therefore accept multiple words, not\u00a0\njust that one prefix I am looking for. \n\u00a0 So, if I look at what kinds of so each automaton\u00a0\nnow, instead of accepti"
+    },
+    "f89d5146-619d-451c-9e43-4191e720a0d9": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ng 1 word can accept a set\u00a0\u00a0 of words. So, what are these sets of words? They\u00a0\ncan be formally described mathematically as a\u00a0\u00a0 particular type of set called a regular set.\u00a0\nAnd the reason that we are looking at these\u00a0\u00a0 patterns is that patterns also descri"
+    },
+    "24945b3a-e1ed-484b-8073-2ac0653831cb": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "be sets of\u00a0\nwords, so each pattern matches a set of words. \n\u00a0 So with each pattern, I can associate a set. So,\u00a0\nwe have 2 different ways of describing sets of\u00a0\u00a0 word, we have automata, which describe these\u00a0\nregular sets and then we have patterns where\u00a0\u00a0 ea"
+    },
+    "ac90c5e7-321d-4b71-b4fc-64ef0084e451": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ch pattern represents the set of words which\u00a0\nmatch that pattern, and it turns out that this\u00a0\u00a0 particular syntax that we have used the particular\u00a0\nexpressions that we have used for our patterns,\u00a0\u00a0 are precisely capturing the same sets\u00a0\nthat these automata "
+    },
+    "e4eb345d-75b5-4b29-bbce-589f6bdb8bb5": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "can capture. \n\u00a0 So, these automata are well studied. So, they\u00a0\nare a very fundamental idea and computing which\u00a0\u00a0 go much beyond string matching, and we do not have\u00a0\nunfortunately, this is not the course to study it,\u00a0\u00a0 but hopefully, you will study it somew"
+    },
+    "61dc71f8-3a34-41bb-9a3d-6bb209b1419c": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "here.\u00a0\nSo, this idea of automata is very important\u00a0\u00a0 in order to capture properties of words\u00a0\nand strings and various other things. \n\u00a0 For instance, when we use a compilers, a compiler\u00a0\nwhich reads your program and decides whether there\u00a0\u00a0 is a syntax error"
+    },
+    "44f33627-11f3-4ef9-a0fe-87a98599f6b7": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " is implicitly using a kind of\u00a0\nautomaton to process your text of your program\u00a0\u00a0 could decide whether it is syntactically correct\u00a0\nor not. So, automata are used quite widely. So,\u00a0\u00a0 we have seen 1 limited use of it, in string\u00a0\nmatching, and now we are seein"
+    },
+    "4ab85d9a-60d8-4999-a2cf-74bef33eed61": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "g a kind of\u00a0\u00a0 reverse use of it in generating patterns. \nSo, the patterns that we can describe using that\u00a0\u00a0 plus and concatenation and star and so on, are\u00a0\nprecisely those that can be described automata.\u00a0\u00a0 As since the automata correspond\u00a0\nto what we call "
+    },
+    "38babaa4-1728-4df7-9aa3-78058cc92db4": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "regular sets,\u00a0\u00a0 these patterns these expressions that we\u00a0\nare writing, are called regular expressions.\u00a0\u00a0 So, that is where terminology comes from. So\u00a0\nthese regular expressions correspond to the\u00a0\u00a0 so called regular sets, regular sets of\u00a0\nwords accepted by "
+    },
+    "61309724-9c0f-43ce-b658-c1421b9f85ef": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "finite state automaton. \n\u00a0 So, formally, what that means is that if you\u00a0\ngive me an automaton any kind of a graph,\u00a0\u00a0 which accepts a set of words, I can actually\u00a0\nc0onstruct a pattern using the limited\u00a0\u00a0 operators that we described for plus for choice\u00a0\nand"
+    },
+    "835d091b-2d8d-4fb0-a87f-2f08a90448a4": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " dot for sequencing and that iteration with a\u00a0\u00a0 superscript star or plus, I can describe a pattern\u00a0\nwhich captures exactly which matches exactly the\u00a0\u00a0 words which the automaton describes. \nAnd conversely, if you give me a pattern,\u00a0\u00a0 I can construct an auto"
+    },
+    "c1047f45-04dc-4977-802c-5112aeebf675": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "maton for it. So, earlier\u00a0\nwe saw that if you give me a word, I can construct\u00a0\u00a0 that prefix automaton. But you can do it in a more\u00a0\ngeneral setting, if I want the all the all the\u00a0\u00a0 words which match a pattern, I can actually build\u00a0\nit. And then once you ca"
+    },
+    "5135a6d8-2748-4c66-8484-983c5e222835": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "n build this automaton,\u00a0\u00a0 you can actually do pattern matching for\u00a0\nthese patterns exactly as we did string\u00a0\u00a0 matching in the Knuth Morris Pratt thing. \nSo, what did we do in Knuth Morris Pratt we\u00a0\u00a0 built this prefix automaton, and then we ran our\u00a0\nword th"
+    },
+    "63c663db-621f-498e-a7fa-4beec1e06e4a": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "rough this prefix automaton in one pass.\u00a0\u00a0 So, we got this linear pass, where\u00a0\nwe (())(26:03) at backtrack because\u00a0\u00a0 your automaton would cleverly keep track of\u00a0\nthe longest prefix which has matched. \n\u00a0 Now, you can do the same thing in general, for\u00a0\nthis "
+    },
+    "95903ce4-1ac5-41c2-bfcf-d107168f3f5d": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "language of patterns for every pattern that\u00a0\u00a0 we can write, using these regular expressions,\u00a0\nyou can construct a corresponding automaton,\u00a0\u00a0 which will process your string in one pass and\u00a0\ntell you whether the string that you have got\u00a0\u00a0 is matches your pat"
+    },
+    "8c2d6fed-8ed8-4fd0-a5f1-57c4a19a2cf7": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "tern or does\u00a0\nnot match your pattern. \n\u00a0 So, we will not be able to get into the mechanics\u00a0\nof how that works, because that requires us to\u00a0\u00a0 understand automaton much more deeply than what\u00a0\nwe have done in this very limited introduction in\u00a0\u00a0 this week's ma"
+    },
+    "77c0452f-5851-4e1e-a4d1-162955e7576c": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "terial. So, you can go and look it\u00a0\nup and try to figure it out for yourself. But from\u00a0\u00a0 a practical point of view, what you need to know\u00a0\nis that this kind of regular expression matching\u00a0\u00a0 is available in many programming\u00a0\nlanguages, including in Python. "
+    },
+    "8a52ce7d-e8fe-4ead-acc0-599a86d23206": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "\n\u00a0 So, look up the Python library for\u00a0\nmatching regular expressions and\u00a0\u00a0 the syntax that we described here is a\u00a0\nvery minimal syntax. So, Python has an\u00a0\u00a0 all programming languages to support these\u00a0\nregular expressions have an even more\u00a0\u00a0 expressive syntax"
+    },
+    "bdb49a48-b361-47c4-abf1-4cf9785078ca": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": " for it. So, you can describe\u00a0\nthe syntax in more compact ways. So, basically,\u00a0\u00a0 the patterns and more just like we wrote,\u00a0\nfor example, that sigma is a shortcut. \n\u00a0 There are other shortcuts which you can use.\u00a0\nAnd this is very useful when you are trying\u00a0"
+    },
+    "60387031-deed-4d5f-b8d7-2856622d3730": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "\u00a0 to look for a process text and look for\u00a0\ninteresting patterns and find them. So,\u00a0\u00a0 do get familiar with the pattern matching syntax\u00a0\nof regular expressions in the Python library\u00a0\u00a0 and try to make use of it whenever you are\u00a0\ndoing some non-trivial text pr"
+    },
+    "7ccb6893-6642-43d8-91db-a929b35bea1b": {
+        "content_id": 72,
+        "course_name": "PDSA",
+        "title": "String Matching-Regular Expressions",
+        "week": 10,
+        "chunk": "ocessing,\u00a0\u00a0 because it greatly increases the power of the kind\u00a0\nof text processing that you can do.  "
+    }
+}

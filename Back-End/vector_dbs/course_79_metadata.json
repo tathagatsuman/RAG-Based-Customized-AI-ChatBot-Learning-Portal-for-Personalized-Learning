@@ -1,0 +1,492 @@
+{
+    "b608aeb8-0aeb-4796-92d0-7fab472791d9": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "So as a final lecture\u00a0\u00a0 on difficult problems, we will look at these\u00a0\ntwo classes of problems called P and NP. \n\u00a0 So, last time we said that when a problem is\u00a0\nintractable it may admit something which we call a\u00a0\u00a0 checking algorithm. So, a checking algorith"
+    },
+    "1dc56ce9-1697-44f1-a665-e822ca4c5dd0": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "m would\u00a0\nat least allow us to validate that the solution\u00a0\u00a0 is correct, we may not be able to generate the\u00a0\nsolution efficiently but if we take an input x\u00a0\u00a0 instance and a claimed solution S for it, then\u00a0\nwe can validate whether that solution S is truly\u00a0\u00a0 a"
+    },
+    "95f1be1d-17cf-4e7e-b8ba-3323b10438aa": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " solution or not. So, if this happens, then we\u00a0\nsay that something has a checking algorithm. \n\u00a0 So, the class NP is the class of problems\u00a0\nfor which this check can be done efficiently.\u00a0\u00a0 So, I have a checking algorithm which verifies\u00a0\na solution in polynom"
+    },
+    "ccb3784e-b186-4e37-b832-e1aff2dc4757": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ial time in the size of the\u00a0\u00a0 instance that means that the solution that I am\u00a0\npresented must also be small because otherwise,\u00a0\u00a0 I will not be able to validate it. So,\u00a0\nif I give you an input i; the solution\u00a0\u00a0 that I need to check must be polynomial\u00a0\ni, it"
+    },
+    "2e100ee2-9033-4b65-ae04-7665a4172901": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " cannot be a gigantic thing. \n\u00a0 For instance, it cannot be that to validate\u00a0\nthat something is the shortest path you give\u00a0\u00a0 me all the paths and say you please check\u00a0\nthat this is minimum amongst these because\u00a0\u00a0 that would not be feasible in polynomial tim"
+    },
+    "56fa0fcb-82d7-4d57-9a5e-50c7ba4be5fe": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "e\u00a0\nbecause the certificate itself is too large.\u00a0\u00a0 So, all the problems that we have been looking at\u00a0\nwhich seem to be intractable factorization. \n\u00a0 Factorization remember I asked you to find\u00a0\ntwo prime numbers which multiply to n;\u00a0\u00a0 you give me p and q the"
+    },
+    "4138578e-a0a1-4620-8534-620ffde31f85": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "se are small compared to\u00a0\nthe input n because their factors of n they will\u00a0\u00a0 be smaller than n, I have to multiply\u00a0\nwhich is efficient and I can find out.\u00a0\u00a0 Satisfiability you give me an assignment of the n\u00a0\nvariables, I just have to plug in and check. \n\u00a0 "
+    },
+    "2d64cc34-0f6d-4f46-9679-321997c46a45": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "Traveling salesman, vertex cover independent set\u00a0\nif you give me the checking version with a budget\u00a0\u00a0 or with a bound on the k I can check,\u00a0\nso all of these problems are in NP.\u00a0\u00a0 And as we said when we take these optimization\u00a0\nproblems like finding the sho"
+    },
+    "427534b6-e961-4952-9556-8c6f98c25827": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "rtest\u00a0\u00a0 travelling salesman tour or finding the maximum\u00a0\nindependent set of the minimum vertex cover\u00a0\u00a0 and we converted it to the budget\u00a0\nversion which is a checkable problem. \n\u00a0 We can actually think of it as doing a logarithmic\u00a0\nnumber of checks, so, it "
+    },
+    "1335f6cb-10ba-448a-b4ab-8f016eed79ba": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "is still checkable even\u00a0\u00a0 in the optimization version, if we just add a log\u00a0\nstep. So, and that is okay for us, so why is this\u00a0\u00a0 class called NP? Well it has a historical reason,\u00a0\nso NP comes from non-deterministic polynomial\u00a0\u00a0 time. So, this is a mouthful"
+    },
+    "73149220-1d93-4a17-88c5-125717edb117": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": ", so non-deterministic\u00a0\npolynomial time, so we have been saying earlier\u00a0\u00a0 that polynomial time for us means efficient. \nSo, non-deterministic polynomial time is something\u00a0\u00a0 which is beyond the scope of this course but\u00a0\nessentially of this non-determinism a"
+    },
+    "314a6f3e-861b-4c3d-b5cf-2876d2a88546": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "mounts to\u00a0\u00a0 saying that the solution that I want to check\u00a0\neither I can assume that somebody produces it\u00a0\u00a0 or I randomly guess it. So, non-determinism\u00a0\ncorresponds to some kind of educated guess,\u00a0\u00a0 so you can imagine that by magic you guess\u00a0\na correct solu"
+    },
+    "d30c6fa7-bfe1-4bce-91e2-eae8e7b578c3": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "tion and then you can validate\u00a0\u00a0 your correct guess in polynomial time. \nSo, from a formal background mathematical\u00a0\u00a0 background this comes from an area\u00a0\nof called computability theory\u00a0\u00a0 and these non-deterministic solutions come from a\u00a0\nthing called a non-"
+    },
+    "899b72fe-4ab2-4d60-8a91-3ace2323dce8": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "deterministic Turing machine.\u00a0\u00a0 So, if you want to go back and read about this\u00a0\nyou can find it in the book but for us the class\u00a0\u00a0 NP is going to be defined in the simple way\u00a0\nwhere there is an efficient way to validate a\u00a0\u00a0 certificate for the problem. So,"
+    },
+    "6e711366-1873-40ee-91cc-1c2f793d173c": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " it is just in\u00a0\nterms of existence of checking algorithms. \n\u00a0 So, P on the other hand is something that we have\u00a0\nbeen dealing with, so P is the class of problems\u00a0\u00a0 for which we have so called efficient solutions,\u00a0\nnamely those for which we have a determini"
+    },
+    "280fcab4-77c6-492d-beb3-c92d31df5ccb": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "stic,\u00a0\u00a0 we have a guaranteed solution that\u00a0\nworks in polynomial time of the input\u00a0\u00a0 in terms of worst case complexity. \nSo, of course, if I can solve the problem\u00a0\u00a0 from start to finish if I can generate\u00a0\nthe solid solution in polynomial time,\u00a0\u00a0 it is as go"
+    },
+    "7187cc76-ba49-4a5a-b3a4-bd81ef43aa43": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "od as saying I can check it in\u00a0\npolynomial time because if you give me a\u00a0\u00a0 solution which you claim is correct, in order to\u00a0\ncheck it I will solve the problem which I can do\u00a0\u00a0 in polynomial time and check if my solution is\u00a0\nequal to your solution. So, I do"
+    },
+    "772b3441-3cbd-4b33-9762-7e1646282cde": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " not even have\u00a0\u00a0 to check your solution, I have to see whether\u00a0\nI can generate the same solution or not. \n\u00a0 So, P is clearly included in NP, so\u00a0\nif you want to think of it in sets\u00a0\u00a0 the problems which can be solved in NP include\u00a0\nthe problems that can be c"
+    },
+    "fe1ac6de-ed53-45c4-b21f-563825f82b29": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "alled solved P.\u00a0\u00a0 So, every problem in P is also an NP; the question\u00a0\nis are there things which are not in P but which\u00a0\u00a0 are in NP? So, this is the question which asks\u00a0\nwhether the set P is actually equal to say NP.\n\u00a0 As every algorithm which has\u00a0\nan effic"
+    },
+    "80c95922-0dd2-46f9-a8ae-2f20bedc74cd": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ient checking solution\u00a0\u00a0 also have an efficient generation and\u00a0\nintuitively like we saw from the teacher example\u00a0\u00a0 it should not be the case, it is intuitively\u00a0\nharder to factorize a large number into two\u00a0\u00a0 primes than it is to multiply those two\u00a0\nnumbers "
+    },
+    "d54b703c-b578-4bc0-abce-d57ca8239b64": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "to validate whether it actually\u00a0\u00a0 gives you the original number. So, we believe\u00a0\nthat checking is easier than generation and\u00a0\u00a0 this is the question of P versus NP because NP\u00a0\nis something for which we do not know how to\u00a0\u00a0 generate but we can check P someth"
+    },
+    "93ca8f95-ec13-4d8d-96a5-7bae14871418": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ing for\u00a0\nwhich we can both generate and check. \n\u00a0 So, the general belief is that p is not equal to\u00a0\nNP because intuitively one reason that this is\u00a0\u00a0 the case and is there a more formal reason. Well,\u00a0\none more formal reason is that all these problems\u00a0\u00a0 whic"
+    },
+    "b732a56e-3414-4fba-97e7-5e9a3331aa09": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "h we have been talking about actually\u00a0\nare in NP and they are not known to be in P,\u00a0\u00a0 so factorization, satisfiability traveling\u00a0\nsalesman all these things. Moreover, they are all\u00a0\u00a0 and this is very surprising, we saw that vertex\u00a0\ncover and independent set"
+    },
+    "539646ff-f928-4df3-b468-3d99691d718d": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " which are very similar\u00a0\u00a0 stated problems can be reduced to each other. \nSo, they are inter reducible, so one is hard,\u00a0\u00a0 the other is hard but it turns out that all of\u00a0\nthese problems are actually inter-reducible.\u00a0\u00a0 So, let us look at some examples of this"
+    },
+    "60d16743-559f-41d0-a249-0103e4d70e91": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " and the\u00a0\nfact that they are all inter reducible we remember\u00a0\u00a0 said if one is hard other is hard, alternatively;\u00a0\none is easy all are easy because we can transfer\u00a0\u00a0 the solutions from one to so another.\nSo, let us look at Boolean satisfiability,\u00a0\u00a0 right re"
+    },
+    "10292562-6d29-434f-b2f1-e3c0511d3dc6": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "membered Boolean satisfiability; we had\u00a0\nx1 x2 x3 and then we said that the clause will\u00a0\u00a0 consist of a disjunction of these literals; a\u00a0\nliteral is either an x or a not x and a formula\u00a0\u00a0 will have a conjunction of clauses. Now if we\u00a0\nconstrain the size of "
+    },
+    "a58d1c70-effb-4059-9af4-4a41ed336796": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "these clauses, so we say\u00a0\u00a0 that each clause can have at most three literals\u00a0\nthen we get something called three SAT, SAT for\u00a0\u00a0 satisfiability and 3 for 3 for the number 3. \nSo, each clause is at most three literals,\u00a0\u00a0 so it turns out that 3-SAT is itself a"
+    },
+    "b0385327-9d74-43f4-b8b7-59b9cbb9c267": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "s hard as\u00a0\nsatisfiability, so we can reduce 3-SAT to SAT or\u00a0\u00a0 rather SAT to 3-SAT. Remember the reduction\u00a0\nsays if I can reduce A to B; if A is hard,\u00a0\u00a0 B is hard; if B is easy, A is easy. So, we\u00a0\nreduce SAT to 3-SAT, how do we do this? Well,\u00a0\u00a0 we do it by "
+    },
+    "fdbd8777-44fd-4b94-9c17-6a066b3c88dd": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "example. \nSo, supposing we have a literal\u00a0\u00a0 clause which has 5 literals, what I want to do\u00a0\nis make sure it has at most 3 literals but in\u00a0\u00a0 such a way that satisfiability is not affected.\u00a0\nSo, what I will do is I will break this up into\u00a0\u00a0 smaller clauses a"
+    },
+    "a9c7b317-baae-476c-bd42-8788ee6a4f2e": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "nd combine them so the solution\u00a0\ndoes not change. So, I can say add a literal A\u00a0\u00a0 and split it here, so remember this is an OR.\nSo, it says one of these things must be true,\u00a0\u00a0 so what I am saying is either the left hand\u00a0\nside is true or the right hand side"
+    },
+    "2f5f9743-1df4-4b00-b7ca-bbbfc7948d6d": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " is true. So,\u00a0\u00a0 I am adding a new literal A, so if A is true,\u00a0\nthen I can ignore these two but since not A\u00a0\u00a0 is true one of these three must be true right.\u00a0\nSo, if A is true, then the right hand side of my\u00a0\u00a0 original clause must produce the witness. \nIf A "
+    },
+    "f2c19e7c-04a7-4a45-957b-4eaed89890e6": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "is false then, if A is false, then\u00a0\u00a0 all of these are irrelevant but because\u00a0\nA is false one of these must be true.\u00a0\u00a0 So therefore, my original clause said that\u00a0\none of those five must be true and the same\u00a0\u00a0 is true after splitting it with A; either the\u00a0\nl"
+    },
+    "d06ad118-fc29-42d0-88cc-dcff1023390a": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "eft or the right must be true I mean to make\u00a0\u00a0 both the left so I have an AND here. So, make the\u00a0\nboth the left and the right true I need only one\u00a0\u00a0 of them to be true because by then setting A\u00a0\nappropriately I can make both sides true. \n\u00a0 So, I can keep d"
+    },
+    "67855d2d-760d-48fc-b869-7d2a6bfba60f": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "oing the splitting, so I can\u00a0\ntake A and split it here as we said, now we\u00a0\u00a0 had this clause which has four things; so I can\u00a0\nagain take this and split it here with a B and now\u00a0\u00a0 I get three 3-3-3, so by repeatedly introducing\u00a0\nthese extra variables I can s"
+    },
+    "f0237136-b931-4757-b082-9462c909cf29": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "plit the original\u00a0\u00a0 thing down to clauses which are of size 3.\nAnd the point is that the new formula is\u00a0\u00a0 satisfiable exactly when the old formula is\u00a0\nsatisfiable, so it is a reduction in that\u00a0\u00a0 sense that every solution to SAT translates to\u00a0\na solution fo"
+    },
+    "071996c3-ae62-492c-b33b-36f608ca5499": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "r this and every solution to 3-SAT\u00a0\u00a0 translates back to solution to SAT. So if both\u00a0\nare either both are hard or both are easy. \n\u00a0 Now I want to look at this other problem which\u00a0\nis very different independent set and I want\u00a0\u00a0 to claim that 3-SAT and indepe"
+    },
+    "ac5d10b0-3f0b-4505-b371-cc8f1937518f": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ndent\u00a0\nSAT are in some sense related. So,\u00a0\u00a0 3-SAT can be reduced to independent set. If I\u00a0\ncan solve independent sat I can solve 3-SAT. \n\u00a0 So, I have let again a concrete thing so I\u00a0\nhave a formula of 3-SAT. So, I have three\u00a0\u00a0 literals per clause at most, "
+    },
+    "d7947163-1496-4b86-bf5d-054d9ac3b4e6": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "so some of them have\u00a0\nless than 3, so I have 2. So, for each of these\u00a0\u00a0 I create this triangle, I create a graph\u00a0\nwhich contains one node per literal and\u00a0\u00a0 I connect it in triangle. So, I have these\u00a0\nfour clauses, so I have these four triangles.\u00a0\u00a0 So now, "
+    },
+    "93288cbc-4e56-4d9d-8f0e-f1d45c3f66e4": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "in addition to that I connect these\u00a0\nedges between a literal and its negation\u00a0\u00a0 if it appears anywhere. So, Y is connected to this\u00a0\nnaught Y, it is also connected to that naught Y,\u00a0\u00a0 so there is a Y here it is connected to this\u00a0\nnaught Y, it is also connec"
+    },
+    "98a8e1ae-6e1b-48af-a795-7547940754ce": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ted to that not y. \n\u00a0 Similarly, this X here is connected to this\u00a0\nnot x and to that not X, so if I look at this\u00a0\u00a0 x here it is connected here and it is connected\u00a0\nthere. So, there is an edge within each clause\u00a0\u00a0 between the variables in the clause\u00a0\nand th"
+    },
+    "17fe8a43-eef4-48fc-b82f-b2fa446a7f2c": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ere are edges across clauses\u00a0\u00a0 connecting every literal to its\u00a0\nnegation in any other clause. \n\u00a0 So now, if I have an independent set right, it can\u00a0\nonly choose one of these because if I pick the top\u00a0\u00a0 vertex in the triangle I cannot pick either of\u00a0\nthe bo"
+    },
+    "2edc44be-8253-4889-9049-29627762f98f": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ttom two because there will be an edge\u00a0\u00a0 and similarly. So, I can pick none but\u00a0\nI can pick at most one. So, if I have,\u00a0\u00a0 if I am able to pick one per clause, then if\u00a0\nI have four clauses, then I will actually have\u00a0\u00a0 four elements in my independent set. \nN"
+    },
+    "e0dffd7e-791a-4e20-b184-028550edb334": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ow once I pick this\u00a0\u00a0 then because of the edges I cannot\u00a0\npick this and I cannot pick this.\u00a0\u00a0 So, it constrains across clauses how I can pick\u00a0\nliterals. So, I have these constraints which tell\u00a0\u00a0 me that if I pick Y, so I can think of picking Y\u00a0\nas the same"
+    },
+    "44b57861-8617-461a-897e-6b1843c5c1e2": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " as setting Y to be true. So, it says\u00a0\u00a0 that if I set y to be true then in this clause\u00a0\nY is not true anymore and this clause Y is not\u00a0\u00a0 true anymore, so I must pick something else. \nSo, if I pick this y here, then perhaps I must\u00a0\u00a0 pick this X here and if "
+    },
+    "892d9dc4-9088-49ba-9c33-e9b99326d5fc": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "I pick this X\u00a0\nhere, now I am stuck because I have a\u00a0\u00a0 naught X there and I have a naught Y there and\u00a0\nboth of them are not pickable, so I am stuck,\u00a0\u00a0 so actually I should probably pick this naught X\u00a0\nin which case I cannot pick this so then I must\u00a0\u00a0 pick "
+    },
+    "e42ed949-7df5-4233-ab4d-1a2d816036d4": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "this Z and then I see that I am ok because\u00a0\nif I pick the Z I do not pick this and so on.\n\u00a0 So, I have actually got something hopefully which\u00a0\nworks, so I have picked this Y, so I am done. So,\u00a0\u00a0 the question is whether I can find an\u00a0\nindependent set which "
+    },
+    "077e5f61-f14c-44e4-8525-bd215f4cabc7": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "picks one node at least\u00a0\u00a0 in every it can cannot pick more than one,\u00a0\ncan pick exactly one node in every clause\u00a0\u00a0 then it means that I can set every one of these to\u00a0\nbe true. So, 3-SAT reduces to independent set.\n\u00a0 So we have these the various reductions r"
+    },
+    "b2ec858b-33db-46e6-9290-2acae81d2f5e": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ight, so\u00a0\nsat reduces to 3-SAT, 3-SAT reduces to independent\u00a0\u00a0 set, we saw last time that independent\u00a0\nset and vertex cover are inter reducible\u00a0\u00a0 and notice that by combining these things I\u00a0\ncan actually do a dual reduction, I can first\u00a0\u00a0 convert my sat pr"
+    },
+    "0c5311ba-6858-474b-a74e-13a7ec06e41a": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "oblem to 3-SAT, take that 3-SAT\u00a0\nand convert into independent set. So, if I can\u00a0\u00a0 solve independent set I can also solve sat or if\u00a0\nI can solve vertex cover, I can also solve sat.\n\u00a0 So ,this reduction by this combination of\u00a0\nefficient transformations is ef"
+    },
+    "4a38d217-9f01-445a-89e6-e7f7f73e8dc2": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ficient,\u00a0\u00a0 so this reduction is transitive, so\u00a0\nI can go from set to vertex cover,\u00a0\u00a0 sat to vertex cover and it turns out that many of\u00a0\nthese other problems we have looked at in passing,\u00a0\u00a0 so travelling salesman we have mentioned\u00a0\nlast time finding an shor"
+    },
+    "11c438ee-75d7-4352-815c-d99c33320b96": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "t tour.\n\u00a0 When we looked at linear programming we said that\u00a0\nif we constrain the solutions to have integer\u00a0\u00a0 solutions it becomes intractable, so that is also\u00a0\nsomething which falls into this category and all\u00a0\u00a0 of these problems it turns out are if you tak"
+    },
+    "f4c16025-de34-4ebe-9b0c-215d98bab9b1": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "e\u00a0\ntheir checking versions become equally hard. \n\u00a0 So, there is a theorem due to Cook and\u00a0\nLevin which says that every problem in\u00a0\u00a0 NP can be reduced to SAT, so SAT was that\u00a0\nfirst problem we started with which was at\u00a0\u00a0 Boolean satisfiability so every prob"
+    },
+    "a1b2373e-73a1-459f-a4da-48d721e29649": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "lem in\u00a0\nNP you can actually transform it into SAT,\u00a0\u00a0 so if you can solve SAT you can solve all of\u00a0\nthem, or all of them are hard because SAT is hard;\u00a0\u00a0 that is the other way of thinking about it. So,\u00a0\nif you can solve SAT, you can do everything. \n\u00a0 So we d"
+    },
+    "efa04d3b-4557-43e7-804b-071848468f56": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "o not have to worry about how it\u00a0\nis proved but it is to do with the way we\u00a0\u00a0 characterize the original version of NP we said\u00a0\nin terms of non-deterministic turing machines.\u00a0\u00a0 So, this theorem translates into a definition;\u00a0\nit says that SAT is complete for"
+    },
+    "49bde990-b93c-4f8b-b99e-727ecbb69641": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " NP,\u00a0\u00a0 so what is complete for NP mean? It means that\u00a0\nfirst of all it is an NP which we know it is\u00a0\u00a0 because it has a checking algorithm. \nAnd every problem in NP reduces to it,\u00a0\u00a0 so it is in some sense representative\u00a0\nall the problems in NP, if you can\u00a0\u00a0"
+    },
+    "1dd1274f-c1ce-46d6-875a-1f077ec91b09": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " solve it you can solve everything and\u00a0\nbecause of this inter reducibility\u00a0\u00a0 3-SAT is also NP complete. Because now everything\u00a0\nreduces sat and through sat everything reduces to\u00a0\u00a0 3-SAT because I can go from sat to 3 set. So\u00a0\nby transitivity everything red"
+    },
+    "c6388bf5-de18-42b4-9871-e297282db4ea": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "uces to 3-SAT;\u00a0\u00a0 3-SAT is clearly in NP because I can check\u00a0\nit, so 3-SAT is also NP complete. \n\u00a0 So, in general, I take if I want to show that b\u00a0\nis NP complete, I take an A which is NP complete\u00a0\u00a0 and I see if I can find a reduction from A to\u00a0\nB because I"
+    },
+    "2b157468-3713-488d-a790-676e878b0d0c": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " know that everything reduces to A\u00a0\u00a0 by fact that A is NP complete.\u00a0\nSo, I must show that b is in NP\u00a0\u00a0 and everything there is some other NP\u00a0\ncomplete problem it reduces to this. \n\u00a0 So, that is how for example 3-SAT became NP\u00a0\ncomplete, it is NP because I "
+    },
+    "62177458-a2c0-4dc8-9279-42ff27ade24e": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "have a checking\u00a0\u00a0 algorithm for 3-SAT similar to sat I just said\u00a0\nvalidate that the assignment of true-false is\u00a0\u00a0 correct and sat is the known NP complete problem\u00a0\nthrough the Cook-Levin theorem, so that is the\u00a0\u00a0 only starting point, we need one. And after"
+    },
+    "e429d58e-a981-4c66-9572-78ad9ce07895": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " you\u00a0\ndo one you can use reductions to get the rest. \n\u00a0 So, this is the status of what we know right, so\u00a0\nthere are these interactable problems and a large\u00a0\u00a0 number of these intractable problems are inter\u00a0\nreducible and have efficient checking algorithm.\u00a0\u00a0"
+    },
+    "16f5d163-58cf-4813-b1c6-eebe4e003abc": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": " So, these are all these NP problems which are\u00a0\nactually in this class called NP complete,\u00a0\u00a0 so they are in NP and every other problem in NP is\u00a0\nas hard as them, they are all inter reducible. \n\u00a0 So, again we go back to our question is\u00a0\nP the same as NP or "
+    },
+    "16dd2378-ea47-4445-ae8d-c679c2ea1faa": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "not? Well, there is\u00a0\u00a0 a good reason to believe it is not because\u00a0\nthis class of NP complete problems contains\u00a0\u00a0 many practical problems which you encounter\u00a0\nin daily life. So, if you find an optimal\u00a0\u00a0 way of scheduling given some constraints\u00a0\nor if you wan"
+    },
+    "e52a4d0e-e807-4d62-af0c-60cbb80cc6c6": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "t to find bin packing. \n\u00a0 So, bin packing is a problem of furniture\u00a0\nmoving, so if you are trying to rent a truck\u00a0\u00a0 to move your sofa and this thing and you\u00a0\nhave constraints on how they can be put in;\u00a0\u00a0 what is the optimum number of truck loads that\u00a0\nyou "
+    },
+    "d291a12e-41bc-46bd-9fcf-d4244da56009": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "need to get your furniture across? So,\u00a0\u00a0 finding that is again in general exponential\u00a0\nand it is reduces to all these problems. \n\u00a0 We already saw this optimal tours, the\u00a0\ntraveling salesman problem. Now all of these\u00a0\u00a0 have immense commercial importance so "
+    },
+    "34e2befc-3471-4876-8a3d-4a4c014e1f0d": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "people\u00a0\nhave been trying to optimize these much before\u00a0\u00a0 we had actual computers and programs, so\u00a0\nthese are problems which if one is in P all\u00a0\u00a0 of them are and many smart people have been\u00a0\nlooking at these problems for centuries.\n\u00a0 So, these have been pro"
+    },
+    "340bd8bb-04a9-47e0-ae5e-348cb6003689": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "blems of interest to\u00a0\nmathematicians and to businessmen and to various\u00a0\u00a0 things for 100 of years and if you have not found\u00a0\nan efficient algorithm yet there is reason to\u00a0\u00a0 believe that there is not one. And if there is\u00a0\nnot one for any of these, then all o"
+    },
+    "ab3ba1b0-a01f-41d1-881b-ea7d804656a2": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "f them are\u00a0\u00a0 in the same boat, so therefore we have kind of\u00a0\nempirical evidence that NP is different from B\u00a0\u00a0 but we have yet not been able to prove this. \nAnd this is actually a price it is one of the\u00a0\u00a0 problems which is celebrated open in mathematics,\u00a0\nt"
+    },
+    "c75885d6-8c52-4e88-a9c4-19fc6b4282cb": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "he question is whether P is not equal to NP\u00a0\u00a0 or not? And its currently carries a1 million\u00a0\ndollar price, so this is one of the big unsolved\u00a0\u00a0 problems, probably the big unsolved problem in\u00a0\ncomputing, many people are working on it. It has\u00a0\u00a0 been the Cook-"
+    },
+    "1024c318-00e8-46ee-88c5-115656958b14": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "Levin theorem is approximately\u00a0\n50 years old, 1971, 40 years old. \n\u00a0 So, for the last 40 years even after\u00a0\nformulating the problem and understanding\u00a0\u00a0 NP completeness we are no closer in some sense\u00a0\nto understanding whether this is true or not.\u00a0\u00a0 We strong"
+    },
+    "4391b56a-b407-4059-83be-e0e691dc9f8e": {
+        "content_id": 79,
+        "course_name": "PDSA",
+        "title": "Intractability  P and NP",
+        "week": 11,
+        "chunk": "ly believe it is true; P is not\u00a0\nequal to NP but we cannot prove it."
+    }
+}

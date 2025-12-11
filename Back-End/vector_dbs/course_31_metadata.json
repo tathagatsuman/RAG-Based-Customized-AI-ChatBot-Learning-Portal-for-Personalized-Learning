@@ -1,0 +1,716 @@
+{
+    "af866496-5335-424b-b72d-099b1f336ba7": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "So, having seen functions on arrays and\u00a0\nlists, let us move to graphs, which are very\u00a0\u00a0 interesting objects to study in computing.\n \nSo, we know that a graph is a useful way to\u00a0\u00a0 visualize a relation. So, let us imagine this\u00a0\nrelation. So, we are talking a"
+    },
+    "b5778d2c-d536-40f1-be8f-5a6d90d7f327": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "bout a class in\u00a0\u00a0 which you have or an institution which you have\u00a0\nteachers and courses. And you have some allocation\u00a0\u00a0 of courses to teachers. So, you have two types of\u00a0\nobjects, you have teachers who are people and you\u00a0\u00a0 have courses which are to be taug"
+    },
+    "8ca928f6-ec0f-4f95-8873-f8a80d7146e3": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ht. And you\u00a0\ncan describe this allocation as a relation.\n\u00a0 So, you can say, A the allocation is a\u00a0\nsubset of T cross C, it is a binary relation,\u00a0\u00a0 which consists of pairs or the form T comma C,\u00a0\nwhere T is a teacher, and C is a course. So, there\u00a0\u00a0 are many"
+    },
+    "30a1956c-605b-4bec-bbbe-050036e32ba5": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " possible pairs T cross C. And we are not\u00a0\ntaking all of them, but some of them, so it is a\u00a0\u00a0 binary relation. And what we see on the right is a\u00a0\nrepresentation of this as a graph. So, right now,\u00a0\u00a0 it is very clear that we have these nodes.\nSo, we have one"
+    },
+    "e2766d73-5f72-42c1-90ad-3a7d7421575a": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " node for every object of\u00a0\u00a0 interest. In this case, we have two different\u00a0\ntypes of objects. But in the graph, we do not\u00a0\u00a0 mean we label them maybe, but we represent\u00a0\nthem in the same way as black dots. So,\u00a0\u00a0 on the left-hand side, we have the teachers\u00a0\non"
+    },
+    "0d470c02-8b0a-43e5-b200-4afbba6f1aa9": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " the right-hand side, we have the courses.\u00a0\u00a0 And then we draw these edges, these arrows from\u00a0\na teacher to a course. So, there is a direction\u00a0\u00a0 to this edge and this arrow indicates that this\u00a0\nteacher is going to be teaching that course.\n\u00a0 And of course, t"
+    },
+    "36db6099-e89f-4bde-841d-e211db09efeb": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "here could be situations where\u00a0\ntwo different teachers teach the same course.\u00a0\u00a0 So, this could happen, you could also have a\u00a0\nsituation where the same teacher is teaching\u00a0\u00a0 two different courses, which is not captured\u00a0\nin this particular example. But of co"
+    },
+    "37b2c245-939f-4b7e-8f8c-79f425c641b1": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "urse,\u00a0\u00a0 you could have that somebody is teaching\u00a0\nboth biology and history, for instance.\n \n\u00a0 Here is another typical relationship that we\u00a0\ndescribe using graph. So, supposing you have a\u00a0\u00a0 group of people, and some of them are friends with\u00a0\nothers, then th"
+    },
+    "67f01e6e-4227-442b-bdf3-b3f58c5fa20f": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "e notion of being a friend, again,\u00a0\u00a0 describes certain pairs, so some pairs of people\u00a0\nare friends, and some pairs are not friends.\u00a0\u00a0 So, those who are friends, you connect by an\u00a0\nedge. And now, we can assume that friendship\u00a0\u00a0 is a symmetric relation. So, "
+    },
+    "d7d6ca13-c2ae-4e6a-bcec-f91d2fc61b71": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "if I am somebody is\u00a0\nfriend, then that person is also my friend.\n\u00a0 So, therefore, if p is a friend of q,\u00a0\nthen q should be a friend of p. So,\u00a0\u00a0 then we have a graph like this, where now\u00a0\ntechnically speaking, we have arrows representing\u00a0\u00a0 pairs in both dir"
+    },
+    "379bb174-2a0c-419f-ba32-4f799388c32e": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ections. So, we have an arrow\u00a0\nfrom P to Q, saying that Q is a friend of P,\u00a0\u00a0 and we have an arrow from Q to P, saying\u00a0\nthat P is a friend of Q. And because we\u00a0\u00a0 have arrows always in both directions, we just\u00a0\nignore them and draw only a single edge.\n \n\u00a0 S"
+    },
+    "0edb6be4-53c3-44cf-8011-cc736d82e211": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "o, formally, a graph is a set of vertices, those\u00a0\nare the black dots. So, they are called vertices,\u00a0\u00a0 or sometimes they are called nodes. And\u00a0\nwe take them and connect them using edges.\u00a0\u00a0 So, this edge technically is a binary relation,\u00a0\nit says some pairs "
+    },
+    "747e4c53-ef53-4a2b-a264-3bdacdf872a4": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "of vertices, so there is a\u00a0\u00a0 whole, all the pairs of vertices are V cross V,\u00a0\nsome pairs of vertices are connected by edges.\u00a0\u00a0 And usually, we have the constraint that a vertex\u00a0\nis not connected to itself. so that is usually\u00a0\u00a0 one of the constraints that w"
+    },
+    "bb8f4fe4-2ad0-4f5f-8578-1b829fe975ed": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "e have.\u00a0\nSo, we usually assume that this is\u00a0\u00a0 in the relational terminology IRREFLEXIVE.\n \n\u00a0 So, this graph can have typically will be\u00a0\ndirected. So, I will have edges from, say, P to Q,\u00a0\u00a0 and I need not have for every such edge, an edge\u00a0\nback from Q to P."
+    },
+    "db3e01fa-905d-40ed-aec3-5f667b9d0bd9": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " So, a very particular example of\u00a0\u00a0 a directed graph was the thing with teachers and\u00a0\ncourses, because the edges all point from teachers\u00a0\u00a0 to courses, it does not make sense in such an\u00a0\ninterpretation to think of an edge starting at\u00a0\u00a0 a course because a co"
+    },
+    "06542b0c-e55d-43de-8fca-8ca3a109408d": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "urse cannot teach something\u00a0\nelse. So, these edges represent who teaches what,\u00a0\u00a0 so the left-hand, left-hand side has to be a\u00a0\nwho the right-hand side has to be a what.\n \n\u00a0 On the other hand, the friendship graph that\u00a0\nwe constructed, as we said, is symmet"
+    },
+    "c499575d-6133-497f-bdba-72a4446a37a1": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ric. So,\u00a0\u00a0 we have edges between two pairs in both directions\u00a0\nor not at all, we never have a situation where P\u00a0\u00a0 is a friend of Q, but Q is not a friend of P. And\u00a0\nin such situations, we will just ignore the edges,\u00a0\u00a0 and just draw these with these lines c"
+    },
+    "246bb2c6-faaa-41af-82d1-6f78fff78401": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "onnecting\u00a0\nthe vertices. So, basically an undirected graph is\u00a0\u00a0 a graph in which all the edges are symmetric.\nSo, we can effectively think so we will think\u00a0\u00a0 still represented by edge in both\u00a0\ndirections because we can traverse\u00a0\u00a0 this edge in both directio"
+    },
+    "2ba06624-86e1-4d26-964f-dc7448f665c7": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ns. So, if you\u00a0\nwant, you can think of these as roads.\u00a0\u00a0 So, if these are two locations served by a road,\u00a0\nif you have a directed road, then you can only\u00a0\u00a0 go from one direction from one to the other, you\u00a0\ncannot come back on that road. Whereas if you have"
+    },
+    "0ff3ccf1-7b0d-4174-8468-adf4e2462253": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "\u00a0\u00a0 a bi-directional road, then it is an undirected\u00a0\nroad, you can go in either direction.\n \n\u00a0 So, one of the key things that we are interested\u00a0\nin graphs are sequences of edges, which take us\u00a0\u00a0 from one node to another node and this is what\u00a0\nis called a pa"
+    },
+    "24a98f35-a723-4a7f-82f4-2e0daa9be5a7": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "th. So, here we see two paths,\u00a0\u00a0 we see this red path which takes us from the\u00a0\nnode representing Priya to the node representing\u00a0\u00a0 Radhika. And the other one is a blue path which\u00a0\nalso connects Priya to Radhika but through a\u00a0\u00a0 different sequence of intermed"
+    },
+    "6525bd5b-925b-4a0c-9afa-131e382f9f78": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "iate nodes.\nSo, these could represent, for instance,\u00a0\u00a0 routes by which some information\u00a0\nthat Priya wants to convey or in\u00a0\u00a0 some object, supposing Priya wants to send\u00a0\nsomething which is precious not to be sent\u00a0\u00a0 by courier or post by hand to Radhika, then"
+    },
+    "eb8dabd4-641a-4bbe-a83f-478e62b26032": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " Priya\u00a0\nhas to find some of her friends who can, in turn,\u00a0\u00a0 find their friends and so on, who finally will\u00a0\nbe able to find someone who knows Radhika can\u00a0\u00a0 pass it on. And here we see that there are\u00a0\nat least two different ways to do this.\n\u00a0 So, normally, "
+    },
+    "e2f66c3e-fb20-4ac7-897e-5f8c044fd7e9": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "when we are\u00a0\ntalking about paths in a graph,\u00a0\u00a0 a path does not visit a vertex twice.\u00a0\nSo, here, for instance, we have this red\u00a0\u00a0 path here or red sequence of edges, which\u00a0\ncertainly could be seen as a sequence where\u00a0\u00a0 every consecutive thing is part of the"
+    },
+    "f1815da3-4fa7-44ef-bbf1-c58f371c7400": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " edge\u00a0\nrelation. So, we start for instance here.\n\u00a0 So, we start here, and we go from Kumar to Feroze.\u00a0\nAnd then Feroze to Colin, then Colin to Aziz,\u00a0\u00a0 then Aziz to Priya, then we come back to Feroze.\u00a0\nAnd then we come here. So, this is technically\u00a0\u00a0 a sequ"
+    },
+    "725b9f71-d819-4a26-909a-61a5d25ac550": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ence of edges, each of which extends the\u00a0\nprevious sequence by a valid point, but we are\u00a0\u00a0 not going to call this apart, when we encounter\u00a0\nsuch things, we will usually call it a walk.\n \n\u00a0 So, paths in directed graphs, obviously have to\u00a0\nrespect the arrows"
+    },
+    "5a50bcab-1869-41df-936e-68b7cebdee85": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": ". So, if I have, for instance,\u00a0\u00a0 an airline route, so this is a typical thing that\u00a0\nwhen sees in real life and graphs, you see these\u00a0\u00a0 route maps of trains or planes, and they describe\u00a0\nwhich pairs of cities are connected by flights.\u00a0\u00a0 So, let us assume th"
+    },
+    "93317849-90b3-44fa-b4d0-810a411b1302": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "at these are some flights\u00a0\nfor an airline operating in India and say that V0\u00a0\u00a0 represents Delhi and V9 represents Madurai,\u00a0\nthen what we want to know is whether we can\u00a0\u00a0 take flights within this airline and travel\u00a0\nfrom Madurai to Delhi, which means, Can I"
+    },
+    "3cafbc26-e441-4bf5-a182-41d5585132e8": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " take a\u00a0\u00a0 sequence of edges starting at V9, and reach V0.\nAnd here, for instance, there is this red sequence\u00a0\u00a0 of edges that you can see the ones that have\u00a0\nbeen drawn here, so this red sequence of edges\u00a0\u00a0 does represent one way of taking flights, a long\u00a0\n"
+    },
+    "823b69d1-4140-41be-90f1-1783a615245b": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "sequence of flights, in this case, 1, 2, 3, 4,\u00a0\u00a0 5 flights to get from Madurai to Delhi.\n \nSo, if this happens, then we say that\u00a0\u00a0 the target is reachable, so it could\u00a0\nhappen that things are reachable,\u00a0\u00a0 it could happen that things are not reachable. So,\u00a0"
+    },
+    "ad741482-e201-487b-8efd-042ca40a4e63": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "\nif they are reachable, then one of the questions\u00a0\u00a0 that we might ask is among all the different\u00a0\nways of reaching what is the shortest way.\u00a0\u00a0 Other thing you might ask is, where\u00a0\nall can I reach? So, there are many\u00a0\u00a0 different questions depending on the c"
+    },
+    "b87cccce-5a15-4903-bc8c-8498fcd12d6c": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ontext\u00a0\nthat you might ask about reachability.\n\u00a0 And of course, one of the things that you might\u00a0\nwant to know is this graph is connected? Are all\u00a0\u00a0 the vertices reachable from each other? Or do you\u00a0\nget stuck somewhere? So, if we look at this graph,\u00a0\u00a0 for"
+    },
+    "5aee356c-0d74-4d4a-9a41-5ddc8f341b05": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " instance, if you take this edge from V4\u00a0\nto V3, and you put it in only one direction,\u00a0\u00a0 then I claim that you can still reach\u00a0\nfrom everywhere to everywhere because\u00a0\u00a0 earlier, you could go directly from V3 to V4.\nBut now, you can still do the same thing b"
+    },
+    "b77484c1-254e-44fe-b04f-fd6be2233272": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "y going\u00a0\u00a0 around. So, if you want the what is now missing is\u00a0\nthe ability to go from V3 to V4, because I removed\u00a0\u00a0 this edge red, so this edge is gone. But now, I\u00a0\ncan still go from V3 to V6, V6 to V5, V5 to V7,\u00a0\u00a0 and V7 to V4. So, the ability to go from V"
+    },
+    "d709c282-70bc-4922-85a0-ec2870f71c6a": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "3 to\u00a0\nV4 has not changed, it has become a little more\u00a0\u00a0 tedious, but it is not impossible. So, this graph,\u00a0\nif it was connected earlier, remains connected,\u00a0\u00a0 even though we have removed one edge.\nOn the other hand, supposing we take this edge\u00a0\u00a0 between V4 "
+    },
+    "6b0504ae-c055-4884-83c4-9023d5173b33": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "and V0 and we make it in a single\u00a0\ndirection. So, earlier, I could come from V0\u00a0\u00a0 to V4. Now, if I remove this, the question\u00a0\nis, can I come? Well, if I start at V4,\u00a0\u00a0 I can go to V1, from V1 I can go to V2, from v2 I\u00a0\ncan go back to V0, but I can go nowhe"
+    },
+    "50231cfb-e4f0-45c9-b9c3-22ba7289f9b1": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "re else. So,\u00a0\u00a0 if I am now in this upper triangle of V0, V1, and\u00a0\nV2, I stuck there, I cannot come to the lower part\u00a0\u00a0 of the graph. So, now the graph is not connected\u00a0\nanymore. So, the question that we want to ask is,\u00a0\u00a0 is the graph that is presented to u"
+    },
+    "5625be7d-9b9e-4e04-9c92-70b39d75c922": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "s connected\u00a0\nor not? And this can have many implications.\n \n\u00a0 So, reachability is not the only kind of question\u00a0\nthat we are interested in graphs there are many\u00a0\u00a0 other kinds of things which can be modelled\u00a0\nand solved as graphs. So, for instance, here\u00a0\u00a0 i"
+    },
+    "4cdcc993-54de-444a-9de5-26a6e77604cd": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "s a problem which superficially does not seem to\u00a0\nrequire graphs, which is to colour a map properly.\u00a0\u00a0 So, when we colour a map properly, we want to\u00a0\nneighbouring states or to neighbouring countries,\u00a0\u00a0 which share a border to have different colours.\nSo, on"
+    },
+    "45feb05b-c85a-4bb3-9571-74198b778700": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "e of the questions that you can ask is how\u00a0\u00a0 many colours do we need. So, to transfer this to\u00a0\na graph problem, what we do is we first create a\u00a0\u00a0 vertex for every state that needs to be coloured.\u00a0\nAnd now we want to express this constraint that\u00a0\u00a0 neighbour"
+    },
+    "ddb6645f-cc56-4cbc-8b57-2f5758e4dd56": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ing states should have different colours.\u00a0\nSo, we have to capture this neighbouring relation.\u00a0\u00a0 So, we do that by connecting them together.\u00a0\nSo, we attach an edge between every pair of\u00a0\u00a0 states, which shares a border.\nSo, now we have a graph. And now what "
+    },
+    "ea04aa6b-026b-4813-910b-939c6da49c42": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "is\u00a0\u00a0 our constraint, our constraint is we must assign a\u00a0\ncolour to every one of these black dots such that\u00a0\u00a0 if two black dots are connected by an\u00a0\nedge, they must have different colours.\u00a0\u00a0 So, we must assign colours to nodes so that\u00a0\nthe endpoints of an a"
+    },
+    "3298403d-50d4-4b51-9883-8310a4a88c7b": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ge have different colours,\u00a0\u00a0 you cannot have a green on one side and the\u00a0\ngreen on the other side, because that would\u00a0\u00a0 mean two neighbouring states have the same colour.\u00a0\nSo, this is called the map colouring problem.\n\u00a0 But notice that by coming up with th"
+    },
+    "6a3090ab-82bd-48c3-a440-0836d27832db": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "is graph\u00a0\nrepresentation, we have abstracted the problem\u00a0\u00a0 so that we are now no longer worried about the\u00a0\nshapes of the states, the sizes of the states, the\u00a0\u00a0 kind of orientation of the boundary, how much of\u00a0\na boundary do they share? All we are intereste"
+    },
+    "fb0e1f45-9d00-48b9-9bca-0e9ea88ce945": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "d\u00a0\u00a0 in is this picture, which is, what are the\u00a0\nunderlying states and how are they connected?\n\u00a0 And once we have this, it does not even need\u00a0\nto respect that true physical geography. So,\u00a0\u00a0 I can take some of these nodes and move them\u00a0\naside, I can make the"
+    },
+    "f77ba41c-cb06-450e-80d9-82fefa702c92": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " graph look different\u00a0\u00a0 superficially, without changing the underlying\u00a0\nnature that is relevant to the problem namely,\u00a0\u00a0 which points are neighbours\u00a0\nof which other points.\n \n\u00a0 So, this is called the graph colouring problem.\u00a0\nSo, we are given a graph and w"
+    },
+    "6275d218-29ed-4200-8886-f5d167aac9a9": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "e are given a set\u00a0\u00a0 of colours. And what we want to do is assign\u00a0\na colour to every vertex such that no pair of\u00a0\u00a0 adjacent vertices, there is no vertices which are\u00a0\nconnected by an edge have the same colour. So,\u00a0\u00a0 this is what is saying, if u, v are edges "
+    },
+    "5fc4ad6e-1a43-4d5f-84b7-6ad30f870c4c": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "in a,\u00a0\nif u, v is an edge, then the colour assigned to\u00a0\u00a0 u should not be the colour assigned to v.\nSo, the question that we were asking in that\u00a0\u00a0 map colouring problem is, what is the\u00a0\nsmallest set of colours that we need?\u00a0\u00a0 So, there is a very famous theo"
+    },
+    "64fed5ab-064a-4516-862f-df90fb4888fc": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "rem in graph\u00a0\ntheory, which says that if you have what is called\u00a0\u00a0 a planar graph, so planar graph is something\u00a0\nwhich you can draw without any crossing edges. So,\u00a0\u00a0 if you go back to the graph that we had before,\u00a0\nyou will notice that in this thing, there"
+    },
+    "8f0d6960-5e71-4be5-8165-41050e11c389": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " are no,\u00a0\u00a0 so here we have an edge, which is crossing.\nBut actually, you can take this edge,\u00a0\u00a0 and you can drop it, and you can instead draw\u00a0\nthe same edge. So, remember, we said that we can\u00a0\u00a0 modify this graph, so long as we do not change\u00a0\nanything, which"
+    },
+    "241b22a9-acc4-4511-b3f8-741d55c702c5": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " is intrinsic to the graph.\u00a0\u00a0 So, we can take that edge and move it\u00a0\nto the outside of the graph. Edges do\u00a0\u00a0 not have to be straight lines, they are just\u00a0\nsomething which connects vertices together.\n\u00a0 And now, I claim that we have the same graph\u00a0\nin which "
+    },
+    "7c487a98-ac09-45cf-80d2-7b4135880341": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "no two edges cross on the paper.\u00a0\u00a0 So, if you can draw a graph like this,\u00a0\nthis is what is called a planar graph.\u00a0\u00a0 And it is not difficult to see that if you draw a\u00a0\nmap a physical map of countries or states, and you\u00a0\u00a0 take the graph that we constructed b"
+    },
+    "02cf35c8-d066-4305-aa60-dbf5cb61c5c7": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ased on the\u00a0\nborders, it is going to be a planar graph. And it\u00a0\u00a0 turns out that for planar graphs, graphs which can\u00a0\nbe drawn without having edges crossing each other,\u00a0\u00a0 you can colour such graphs, always with four\u00a0\ncolours. If it is not planar, this is no"
+    },
+    "2b8c71a6-93b3-4886-a24e-913eb0c42721": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "t true.\n\u00a0 And then it becomes a computationally interesting\u00a0\nquestion to ask, what is the minimum number of\u00a0\u00a0 colours? And it is one of these problems for\u00a0\nwhich there is no efficient algorithm known?\u00a0\u00a0 So, you might ask, where do we need to apply\u00a0\nthis? B"
+    },
+    "71a5f55b-f36d-4f83-935f-0bfabbc5e3f4": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ecause colouring seems to be derived\u00a0\u00a0 from this map question. And for the map question,\u00a0\nwe know the answer is 4 because it is planar.\n\u00a0 So, why do we need to worry about non-planar\u00a0\ngraphs? So, the thing is, there are many other\u00a0\u00a0 questions which can be "
+    },
+    "6bd52e4f-6cb0-44a5-b6bb-d74384c78667": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "reduced to graph colouring.\u00a0\nSo, here is one. So, supposing you are running a\u00a0\u00a0 school or a college, and you need to allocate\u00a0\nclassrooms, for the classes that are running.\u00a0\u00a0 So, you have a timetable. So, in this\u00a0\ntimetable, this is kind of the time\u00a0\u00a0 is s"
+    },
+    "47aca351-27ce-4a2d-b2f4-9a5e4345814d": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "hown from left to right.\nSo, at the beginning of the day,\u00a0\u00a0 you have a math class before the math class ends\u00a0\nand English class starts before the English class\u00a0\u00a0 ends, History and Science start, but notice that\u00a0\nScience starts after Maths ends. So, the sci"
+    },
+    "46eb9a3c-e848-4a43-bdff-eebfa9139744": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ence\u00a0\u00a0 class does not overlap with a math class. So, now\u00a0\nwe have four different classes which run during\u00a0\u00a0 the day. But History and Science both run after\u00a0\nMaths, so they both do not overlap with Maths.\n\u00a0 The question that we want to answer now in this\u00a0\np"
+    },
+    "49778741-017c-4a85-b4be-99e028610222": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "articular scenario is how many classrooms will\u00a0\u00a0 we need so that no two classes are scheduled in\u00a0\nthe same room at the same time. So, obviously,\u00a0\u00a0 if we allocate one classroom per class, there\u00a0\nis no problem. So, we could have four classrooms\u00a0\u00a0 for these f"
+    },
+    "4bbe63b9-2492-471d-9e24-992f0b7fedb2": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "our classes. So, we could have an\u00a0\norange classroom for the Maths class and a green\u00a0\u00a0 classroom for the History class and so on.\nSo, clearly, if we have as many classrooms as\u00a0\u00a0 there are classes, there is no question but in\u00a0\nalmost any institution, the num"
+    },
+    "bfb6f7fa-039b-4619-9586-c7ba323bbeb4": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ber of classes\u00a0\u00a0 or courses which are taught will obviously\u00a0\nexceed the number of rooms that are available.\u00a0\u00a0 So, one of the questions that\u00a0\nis interesting is to ask,\u00a0\u00a0 can we manage with the rooms that we have,\u00a0\nso what is the minimum number of rooms that"
+    },
+    "dacae2e5-d940-4c80-b391-fe195d97c938": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "\u00a0\u00a0 we need in order to schedule the classes the\u00a0\nway we have done and not have this overlap.\n\u00a0 So, in this case, we can think of this edge\u00a0\nrelation. So, the classes that have to be taught\u00a0\u00a0 at the vertices, the edge relation represents\u00a0\ntwo classes which "
+    },
+    "3a071590-70d9-49d6-a634-676b9ec9f07e": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "overlap, and therefore,\u00a0\u00a0 they must fall into different classrooms, because\u00a0\nthey cannot share a classroom. The classrooms\u00a0\u00a0 themselves are the colours. So, now if two edges\u00a0\nor two classes are connected by an edge, then they\u00a0\u00a0 cannot be assigned the same "
+    },
+    "5b6c7ce9-ac7f-4250-917d-c7cda66dd8b8": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "classroom.\nSo, if classrooms are colours,\u00a0\u00a0 they cannot be assigned the same colour.\u00a0\nSo, the edges here represent this overlap,\u00a0\u00a0 so that we mentioned above, so these edges, so for\u00a0\nnotice that there is no overlap between these two\u00a0\u00a0 pairs. So, there is n"
+    },
+    "cd369dc3-cb53-4c25-8d7e-a836dea22849": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "o edge here. And there\u00a0\nis no edge here because Maths ends before\u00a0\u00a0 History and Science both start, but History\u00a0\nand Science overlap with each other.\n\u00a0 Now, as for our colouring algorithm, we are\u00a0\nallowed to use the same colour for this note as\u00a0\u00a0 either th"
+    },
+    "0151097b-a888-4e34-b20d-5ebb069fb619": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "is node or this node because they are not\u00a0\nconnected. So, one possible way of reducing the\u00a0\u00a0 number of classrooms here is to reuse the green\u00a0\nclassroom for Maths that we are going to later\u00a0\u00a0 use History. We could also equivalently reuse the\u00a0\ngrey classroom"
+    },
+    "8605bac3-b7a2-4aee-841c-79094e385bc5": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " that we use for Science. So, this\u00a0\u00a0 is a situation where we can make do with three\u00a0\ncolours, even though we have four classes.\n\u00a0 And of course, if you have a more complicated\u00a0\ntrade you, then it is a more interesting\u00a0\u00a0 question to ask how many minimum cla"
+    },
+    "8a9cdd97-3a17-458d-b6d1-f333be4bd568": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ssrooms\u00a0\nyou need to have in order to fit that schedule,\u00a0\u00a0 or you have to change the schedule to adapt\u00a0\nto the number of classes because of course,\u00a0\u00a0 you cannot change the number of rooms very easily.\u00a0\nSo, you can change the schedule. So, you might\u00a0\u00a0 have "
+    },
+    "74398445-121c-4d38-b411-a11757fb211b": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "to change the schedule in order to make it\u00a0\nfit within the infrastructure that you have.\n \n\u00a0 So, let us look at another problem. So, here is a\u00a0\nproblem, which is to do with security cameras. So,\u00a0\u00a0 as you know, security cameras are placed in\u00a0\nsuch a way tha"
+    },
+    "8be4c0ea-aabc-4dea-8f0d-2d1a20405011": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "t they capture as much of the\u00a0\u00a0 surroundings as they can and you want to\u00a0\nminimize the number of security cameras.\u00a0\u00a0 So, supposing you are in a hotel and the hotel\u00a0\nhas corridors, you would ideally place your\u00a0\u00a0 cameras at intersections of corridors, let us"
+    },
+    "901496e3-8227-41f3-a249-ddbc4cfe1f2e": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "\u00a0\nassume that the camera can rotate around and\u00a0\u00a0 see all the corridors which meet at a point.\nSo, a camera can monitor all the corridors. So, if\u00a0\u00a0 supposing you have a lift here, and then after you\u00a0\ncome out of the lift you have say corridors which\u00a0\u00a0 look "
+    },
+    "f6c23134-999f-47c6-aeed-b72eea6224ec": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "like this, then if you place a camera at\u00a0\nthis point it can see all these three corridors. \n\u00a0 So, this is the kind of placement that\u00a0\nwe want. So, what is the minimum number\u00a0\u00a0 of cameras that you need, if you know the\u00a0\nlayout of the corridors in your hotel"
+    },
+    "87c9e1ed-2b04-406f-9ef4-6a0b7015dd54": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": ".\n \n\u00a0 So, here we would like to represent the floor\u00a0\nplan as a graph. So, the intersections now\u00a0\u00a0 become the meeting points of these corridors.\u00a0\nSo, the actual intersections of your corridors\u00a0\u00a0 become the vertices. And now from each vertex, we\u00a0\nsaid that i"
+    },
+    "0875fdd1-e4a2-455d-9af6-6ef198932c9c": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "f we put a camera here, for instance,\u00a0\u00a0 it can monitor all these three, all these\u00a0\nfour corridors. So, the edge represents\u00a0\u00a0 a corridor, which is incident at an intersection,\u00a0\nand this edge says that there is a corridor,\u00a0\u00a0 which goes from intersection V2\u00a0\n"
+    },
+    "a29d7cd9-2d8b-4036-af3a-73dd0a47d386": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "to intersection V3. And now the\u00a0\u00a0 question is, where should we put our cameras?\n \nSo, this says, we must choose some vertices. So,\u00a0\u00a0 supposing I choose V2, then V2 covers all of\u00a0\nthese. But I want to monitor every corridor\u00a0\u00a0 in my hotel. So, from V2, I can"
+    },
+    "087628f9-c59e-4db3-a610-e4f5dfb2e25b": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "not monitor this\u00a0\nparticular corridor. So, I need to add one more\u00a0\u00a0 camera. So, I could put like V0 or at V1. So,\u00a0\nlet me put it V1. So, if I now place my cameras\u00a0\u00a0 at V2 and V1, then every corridor on this map is\u00a0\nmonitored. So, this is what is called a v"
+    },
+    "961c670b-49d6-444f-ba2c-893ce1b68488": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ertex\u00a0\u00a0 cover, it is a set of vertices, such that\u00a0\nevery edge has one endpoint in the set.\n\u00a0 So, either one end or the other end of\u00a0\nthe edge must be in the set. So, every\u00a0\u00a0 endpoint every corridor is monitored by\u00a0\none of these cameras. And the question\u00a0\u00a0 "
+    },
+    "678b49a1-5f8c-4add-9878-5870a13dfbc7": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "here computationally is again, of course, I\u00a0\ncan put a camera everywhere. And then I will\u00a0\u00a0 obviously cover all the corridors. But what is the\u00a0\nsmallest number of intersections that I need to\u00a0\u00a0 place cameras at or in other words, what is the\u00a0\nsmallest vert"
+    },
+    "2bfd780d-a77f-47f9-9f08-7b82c95ecb7a": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ex cover that I can achieve?\n \n\u00a0 A related problem is what is called an independent\u00a0\nset. So, here, let us look at this scenario.\u00a0\u00a0 So, we have a kind of Fine Arts Academy, which\u00a0\ncan put up various cultural programs including\u00a0\u00a0 some group dances. Now, in "
+    },
+    "85ff2fa0-320c-432d-becf-2ef64c7f8cb2": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "a group dance,\u00a0\nof course, a number of people are involved.\u00a0\u00a0 And it could be that some dancers are trained\u00a0\nto dance and more than one group dance.\u00a0\u00a0 So, suppose that this academy wants to put up a\u00a0\ncultural program, each dance requires the person\u00a0\u00a0 perfo"
+    },
+    "d2187c83-b568-4e73-9813-69f0120e6978": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "rming to wear some elaborate costume.\nSo, it is not feasible for a dancer to take\u00a0\u00a0 part in two dances in the same evening because\u00a0\nhe or she will have to change their costume\u00a0\u00a0 and that will be very problematic. So, now,\u00a0\nyou want to know, given the perfo"
+    },
+    "a38f005b-5344-4ed0-ac5b-4427a46fbe80": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "rmers who are\u00a0\u00a0 available and the dances that are available, what\u00a0\nis the maximum number of dances you can schedule\u00a0\u00a0 in this program, so that you never have to take\u00a0\na dance from one dance, and have them change\u00a0\u00a0 their costume and take part in another dan"
+    },
+    "c65e60bc-b01e-42b4-b180-c003434f8061": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ce.\nSo, in this case, again, you can represent each\u00a0\u00a0 of the dances as a vertex. And you can say\u00a0\nthat two dancers are connected if they need\u00a0\u00a0 one person to participate in both, so if\u00a0\nthey have a common member in that group,\u00a0\u00a0 then they are connected. So"
+    },
+    "c85d3037-b32f-4b44-90e0-8a7a71dfb5b1": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": ", here it says that V3\u00a0\nand V7 for instance, somebody will is required,\u00a0\u00a0 who will participate in both of them. Similarly,\u00a0\nsay V5 and V6, but there is no connection between\u00a0\u00a0 V6 and V8. So, anybody who takes part in V6 is\u00a0\nguaranteed not to be part of V8 "
+    },
+    "a0b82b59-4fb3-4813-8bf4-187535f5c624": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "and so on. So, in\u00a0\u00a0 this case, we want to find out what is the maximum\u00a0\nnumber of dances we can simultaneously schedule\u00a0\u00a0 on a day so that there is no such overlap.\n \nSo, here is one such allocation, supposing we\u00a0\u00a0 choose V4, then we cannot schedule these\u00a0"
+    },
+    "5b76e24c-ee6c-4804-81c7-bc0210cec825": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "\ndances because they have some overlap.\u00a0\u00a0 On the other hand, there is no overlap with\u00a0\nV7, so we can take V7, so V7 will rule out V6,\u00a0\u00a0 but it does not rule out V5. And if we have done\u00a0\nV4, V5, and V7, we still have the possibility of\u00a0\u00a0 V2 because V2 is no"
+    },
+    "17dcb60a-6160-4223-815e-4fb794697095": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "t connected to any of these.\nSo, these vertices, now unlike our previous\u00a0\u00a0 situation, where the vertices are trying\u00a0\nto cover all the edges, here, we are saying\u00a0\u00a0 these vertices should be mutually disjoint from\u00a0\neach other, no two vertices that we choose,\u00a0"
+    },
+    "02d38376-18df-46f4-9e30-0d4b4d7390e1": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "\u00a0 no two dances that we choose must be connected\u00a0\nbecause they should not share a participant.\n\u00a0 So, in this case, we have found four such\u00a0\nand this is called an independent set. So,\u00a0\u00a0 we want the largest number of dances earlier,\u00a0\nwe wanted the smallest n"
+    },
+    "93772754-8def-41ce-a7f4-bcbba3379870": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "umber of cameras. So,\u00a0\u00a0 that was the smallest vertex cover. Here, we want\u00a0\nthe largest number of dances that we can choose\u00a0\u00a0 simultaneously in a day is program. So,\u00a0\nthis is the maximum independent set.\n \n\u00a0 Finally, let us look at a very important problem,"
+    },
+    "9059d01d-d987-4494-9f5b-09342566c277": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "\u00a0\nwhich is called Matching. And suppose we have\u00a0\u00a0 a class project we are going to assign. And we\u00a0\nallow groups of two students to do this project\u00a0\u00a0 together. But we know that for two students\u00a0\nto do this together, they must be friends,\u00a0\u00a0 if they do not get"
+    },
+    "0497ebf9-48ff-40d6-8dc7-1ee9a86653ff": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " along with each other,\u00a0\nthere is no point assigning them to a group.\n\u00a0 So, we have a graph like the one on\u00a0\nthe right describing the friends.\u00a0\u00a0 So, it says that V2 is a friend of V4, but\u00a0\nfor instance, V2 is not a friend of V3,\u00a0\u00a0 because there is no edge "
+    },
+    "179b8029-2aca-4561-9642-af21253de8fd": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "there. What we want to\u00a0\nknow is how many groups can be formed from this,\u00a0\u00a0 so that we only pick pairs, which are friends.\u00a0\nSo, we want to find a good allocation.\u00a0\u00a0 So, this is a subset. So, the allocation that\u00a0\nwe pick will be a subset of the edges.\n\u00a0 And "
+    },
+    "c48a3ad7-65dd-4fb6-959a-0ec807ee1407": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "once we pick this subset, those will form the\u00a0\ngroups and if we have any person who is not paired\u00a0\u00a0 up with another person, that person will have to\u00a0\nwork on their own. So, maybe this is a complicated\u00a0\u00a0 project. And we would ideally like most people to\u00a0\nwo"
+    },
+    "1e8005ba-d009-4e4e-86c7-05c0f052b106": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "rk in groups, we want to find the largest such.\u00a0\u00a0 So here, for instance, is what is called a\u00a0\nmaximal matching. So, I have paired up these two,\u00a0\u00a0 I have paired up these two, I cannot pair\u00a0\nup now 5 with anybody because the only\u00a0\u00a0 thing five can be paired u"
+    },
+    "2d4dbad9-5d80-43d1-a5aa-916af25271c6": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "p with this 4 who is\u00a0\nalready part of another pair and same with 3,\u00a0\u00a0 3 can only be paired up with 1 and 4.\nSo, this matching is maximal in the sense\u00a0\u00a0 that I cannot add any more edges and make it\u00a0\na larger matching from what I have right now.\u00a0\u00a0 But it tur"
+    },
+    "05fc70f5-553c-46a0-ae6f-340b56f81210": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ns out that this is not a maximum\u00a0\nmatching the sense that this says we can form\u00a0\u00a0 two groups of two and then two people are\u00a0\nleft alone, but maybe in the six people we\u00a0\u00a0 can form three groups of two so that everybody\u00a0\nhas a pair and yes, indeed it is poss"
+    },
+    "2ce2f3d7-b997-4d22-8a97-a3041372bbcc": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ible.\n \n\u00a0 So, we can pair up 5 to 4, 3 to 1, and 0 to 2 as\u00a0\nwe see here. Now everybody is assigned a pair and\u00a0\u00a0 now everybody is covered. So, in this particular\u00a0\ncase is quite easy to say that if you have an even\u00a0\u00a0 number of vertices and you have half as m"
+    },
+    "b32fb5dc-c1d2-4f95-bfac-c8a7b06007b9": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "any edges\u00a0\nin the matching that everybody is covered. So,\u00a0\u00a0 in general, this could be a question which is\u00a0\nif I give you such a graph, and I asked you to\u00a0\u00a0 match up pairs with this constraint, then what is\u00a0\nthe largest matching that you can construct.\n \n\u00a0 "
+    },
+    "1162a9a4-9571-4abe-8bf7-0397b386b807": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "So, to summarize, graphs are very interesting\u00a0\nbecause they express relationships, many flexible\u00a0\u00a0 types of relationships in a very concise way.\u00a0\nGraphs can be directed as we saw or undirected.\u00a0\u00a0 So, when an undirected graph really every edge\u00a0\nhas a matchi"
+    },
+    "b1223ed4-65eb-4e6a-9c4a-bf377eabae94": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "ng edge in the reverse direction,\u00a0\u00a0 so we can think of it as a single edge which\u00a0\nhas two directions associated with it. One\u00a0\u00a0 of the most fundamental questions that we\u00a0\nneed to ask about graphs is reachability.\n\u00a0 Can I get from one node to another node by"
+    },
+    "179f9dda-c750-4286-b6e3-0a737163a651": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": " a\u00a0\npath which is a sequence of connected edges?\u00a0\u00a0 But there are a wide range of other problems\u00a0\nalso, which are not directly called connected\u00a0\u00a0 to reachability which are also interesting. So,\u00a0\nwe saw graph colouring, we saw vertex cover, we\u00a0\u00a0 saw the inde"
+    },
+    "d977b00c-f8ef-48b6-88ef-dd50c55d9eca": {
+        "content_id": 31,
+        "course_name": "PDSA",
+        "title": "Introduction to Graphs",
+        "week": 4,
+        "chunk": "pendent set problem, we saw matching.\u00a0\nSo, these are all a variety of problems, which are\u00a0\u00a0 interesting computation problems on\u00a0\ngraphs and which have a number of\u00a0\u00a0 practical implications. So, we will\u00a0\nstudy some of these as we go along."
+    }
+}

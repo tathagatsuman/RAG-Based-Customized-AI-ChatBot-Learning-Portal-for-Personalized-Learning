@@ -1,0 +1,1052 @@
+{
+    "92b3e337-d011-4bdf-a943-67c89db9e410": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "So, we have seen that heaps are binary trees\u00a0\nwhich help us maintain a priority queue.\n\u00a0 So, let us look at another problem where we can\u00a0\nuse trees. The problem where we have dynamic data\u00a0\u00a0 which we want to keep sorted. So, remember that\u00a0\nsorting is a very"
+    },
+    "ab58d20d-0552-4e7a-950d-c7db15ed9040": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " important step for us because\u00a0\u00a0 once we sought some information, it is very\u00a0\neasy to search it we can use binary search,\u00a0\u00a0 but the problem typically is that\u00a0\nthe data that we are trying to search\u00a0\u00a0 changes dynamically. So, the example that we gave\u00a0\nright "
+    },
+    "fcd10723-5157-4c95-adca-1c600ac16a64": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "at the beginning to motivate all this was\u00a0\u00a0 this question about SIM cards and Adhar cards.\nBut neither of these are static people are buying\u00a0\u00a0 SIM cards every day and people are getting new\u00a0\npeople are born and acquiring Adhar cards every\u00a0\u00a0 day. So, the li"
+    },
+    "7ad8c4db-6b5a-42f6-bde3-6bb56a661e8a": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "st of Adhar cards keeps changing.\u00a0\nAnd the list of SIM cards keep changing. And\u00a0\u00a0 of course, some SIM cards die also because\u00a0\nthey get decommissioned for various reasons\u00a0\u00a0 and people die. So, their Adhar cards are no\u00a0\nlonger important to keep in the databa"
+    },
+    "22e343e2-af8f-40d1-bc37-49b70403dd2d": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "se.\n\u00a0 So, we have periodically inserted items and\u00a0\ndeleted items from this information that we\u00a0\u00a0 are trying to keep sorted. And the problem is\u00a0\nif we try to naively keep it sorted by just\u00a0\u00a0 inserting and deleting in that sorted sequence,\u00a0\nthen each of thes"
+    },
+    "6361f5a1-5124-4dee-b788-bb0cdb84595c": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "e inserts and deletes will take\u00a0\u00a0 linear time because we saw that you have to\u00a0\ndepending on which representation you use,\u00a0\u00a0 either you spend order and time searching for\u00a0\nthe value to delete or you spend order and\u00a0\u00a0 time compressing or expanding the space."
+    },
+    "56cb1317-8251-4a45-8ead-265968e9a0dd": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "\nSo, whichever way insert and delete in a sorted\u00a0\u00a0 list cannot be done in less than linear time. So,\u00a0\nthis is a problem then if you have dynamic data\u00a0\u00a0 which needs to be kept sorted for you to search\u00a0\nefficiently you need a better data structure\u00a0\u00a0 and what"
+    },
+    "43cf7c66-ec5c-4ada-a9cf-8c7ae4643fb3": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " we will see is that the best way to do\u00a0\nit is to move to two dimensions. So, just like\u00a0\u00a0 we argued that if you keep a priority\u00a0\nqueue as a sorted or an unsorted list\u00a0\u00a0 you will end up with this quadratic cost.\nSo, same way if you try to do this dynamicall"
+    },
+    "0deb7a75-3b03-43a9-81b0-03e12a3059e0": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "y\u00a0\u00a0 sorted data with a linear representation\u00a0\nyou cannot avoid this order and cost of\u00a0\u00a0 maintaining the sorted property. So, we\u00a0\nwill move to a two dimensional tree a\u00a0\u00a0 binary tree that we saw with the heap but\u00a0\nwith a slightly different structure.\n\u00a0 So, w"
+    },
+    "9a3ed3bf-6352-4cf5-b635-7901c75a8289": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "hat we are going to use is now called\u00a0\na binary search tree. So, like in a heap,\u00a0\u00a0 every node will have a value and it is a binary\u00a0\ntree so a node can have at most two children and\u00a0\u00a0 you could have situations like this where there\u00a0\nis no left child. So, yo"
+    },
+    "8130965a-390e-477d-9802-29d6d8b2b934": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "u could have only a right\u00a0\u00a0 child so whether it is a left child or a right\u00a0\nchild is important. Now in a heap the property\u00a0\u00a0 that we had was a local property with respect to\u00a0\nthe values of the parent and its two children.\n\u00a0 So, either in a min heap you mus"
+    },
+    "d98cc7e4-ed44-412b-b3b3-e8f339891c1d": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "t be smaller than\u00a0\nyour children or in a max heap you must be bigger\u00a0\u00a0 than your children. But there is no for instance\u00a0\nproperty in a heap about the relative values of\u00a0\u00a0 a left and a right child. So, if I take a heap\u00a0\nand I exchange the two children of th"
+    },
+    "803f1968-e81e-4cad-a692-91750ade4093": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "e root,\u00a0\u00a0 it is still a heap because the properties\u00a0\nonly talk about above and below it does not\u00a0\u00a0 talk about left and right a binary search\u00a0\ntree talks about left and right also.\n\u00a0 So, in a binary search tree everything which is to\u00a0\nthe left of a node mus"
+    },
+    "1bf152cb-cf54-402a-8a27-7f24e42e6982": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "t be smaller in value. So,\u00a0\u00a0 remember the values are all stored in the node.\u00a0\nSo, all the values which are stored to the left\u00a0\u00a0 sub-tree of a node must be smaller. So,\u00a0\neverything that is to the left of five\u00a0\u00a0 must be smaller than 5. So, in this case is\u00a0\n1"
+    },
+    "15657c7d-b9e5-4be4-be79-b083ca01d060": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " 2 and 4 are all the values to the left. So,\u00a0\u00a0 all of these must be smaller. Now this\u00a0\nis a property which occurs uniformly.\n\u00a0 So, it is not only a property of the root\u00a0\nnode. So, similarly, if I look at this node,\u00a0\u00a0 then all the values that lie to the lef"
+    },
+    "9e562b73-c29e-446e-ae53-44c0c81f623c": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "t of it\u00a0\nmust be smaller. Now notice that there may be a\u00a0\u00a0 node like this where there is nothing to the left.\u00a0\nSo, the only two nodes in this tree actually which\u00a0\u00a0 have things to the left are 5 and 2. So, 5 has\u00a0\neverything below it and 2 again has everythi"
+    },
+    "052d705c-9934-4074-a13c-98d4466b3012": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ng\u00a0\u00a0 below. So, this is the left side so logically the\u00a0\nright side will be all the values that are bigger.\u00a0\u00a0 So, the right side will have so with\u00a0\nrespect to 5 everything here is bigger.\n\u00a0 And now with respect to 8, this is\u00a0\nbigger but also with respect to"
+    },
+    "a89c62ca-9bde-4909-9fc1-53e27ec07b6c": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " 2,\u00a0\u00a0 4 is bigger. So, at every node we have the\u00a0\nproperty that all the values on the left are\u00a0\u00a0 smaller all the values in the right are bigger.\u00a0\nAnd this is what is called a binary search tree.\u00a0\u00a0 Now another important property\u00a0\nto make this whole thing wo"
+    },
+    "bb3b8b18-134e-4bcf-b622-6c93e66d0261": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "rk\u00a0\u00a0 is that we never keep two copies of a value.\nSo, in a binary search tree, either a value is\u00a0\u00a0 there or it is not there we do not keep multiple\u00a0\nvalues. So, in a sorted list in general,\u00a0\u00a0 we allow duplicates to happen, but we are\u00a0\nalways keeping now th"
+    },
+    "57e5ff59-64f7-45ae-b732-e6e68937b393": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "e sequence of the,\u00a0\u00a0 these values that we want to maintain in\u00a0\nthis so called sorted order, we are keeping\u00a0\u00a0 them without duplicates. So, that is one of the\u00a0\nconstraints. So, this is a binary search tree.\n\u00a0 So, now we need to describe\u00a0\nthis binary search t"
+    },
+    "ba168c11-a344-41ef-ac93-a99791aa34c7": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ree\u00a0\u00a0 in programming notation. And unfortunately, it\u00a0\nis not as straightforward as we saw with the heap\u00a0\u00a0 where we had a very clear structure, at the\u00a0\nheap, we had a root and then its children. So,\u00a0\u00a0 we had this level by level structure. And\u00a0\nwe have said "
+    },
+    "78fffe84-fe63-4980-9a7c-394c08681cca": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "that we could always guarantee\u00a0\u00a0 that you do not have. So, this kind of a hole\u00a0\nis not allowed in a heap. I must put a left\u00a0\u00a0 child before a right child. And therefore, you can\u00a0\nguarantee that the nodes can be enumerated, from\u00a0\u00a0 top to bottom left to right"
+    },
+    "1213647b-91be-4b22-849d-533dcca9a5f1": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " in a fixed order.\nAnd then given the index, I can find its position.\u00a0\u00a0 But here, there is no ambiguity because it\u00a0\nis 0 1 2 3 4 5. Now in a heap, this is 5.\u00a0\u00a0 But here, I do not know whether 5 is a left child\u00a0\nor the right child. So, I must, unfortunately"
+    },
+    "702391e3-1072-4c43-a820-4e13f2967b84": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": ",\u00a0\u00a0 keep an explicit representation of this tree.\u00a0\nSo, this is similar to what we did when we did\u00a0\u00a0 this flexible list the linked listed, we had a\u00a0\nnode, and then we said this node had a value,\u00a0\u00a0 and it would have something which points to the\u00a0\nnext node. "
+    },
+    "cbece0ba-991b-40f4-b687-43ff045754b4": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "So, we had then a collection of these\u00a0\u00a0 nodes, each pointing to the next node, and you\u00a0\nstring them together, and you get a list.\n\u00a0 So, similarly, we will keep these tree nodes\u00a0\nas a collection of nodes, each pointing to its\u00a0\u00a0 children. So, this is the kin"
+    },
+    "b0119c59-0c80-48fc-ad42-ffd45d7b6303": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "d of structure that\u00a0\nwe will have. So, we will have this structure for\u00a0\u00a0 the root node, and each node will have now three\u00a0\nparts. So, in a linked list, we had two parts,\u00a0\u00a0 so we had a value, and then we had a pointer to\u00a0\nthe next node, and then we had a va"
+    },
+    "10dc4947-688e-4f2d-a71c-55aba326e8bf": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "lue, then a\u00a0\u00a0 pointer to the next node, and so on. Because there\u00a0\nis only one direction, it is a linear structure.\u00a0\u00a0 Now, this is a non-linear structure. So, it\u00a0\nis a kind of two dimensional structure.\n\u00a0 So, we have not one value, but two values,\u00a0\nthe left"
+    },
+    "c2764272-e81f-49e8-bbf3-a76d51c3d811": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " child and the right child. So,\u00a0\u00a0 we have a value, a left child and a right child.\u00a0\nSo, the left child obviously points to the left\u00a0\u00a0 the node with containing the next value, so\u00a0\n5 the left child is 2, so the left child of\u00a0\u00a0 5 points to the node whose valu"
+    },
+    "f8d9fa38-3828-47bc-830b-4f78e2229d4b": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "e is 2. Likewise,\u00a0\nright child points to the node whose value is 8.\u00a0\u00a0 Now 8 has no left child. So, we for now in just in\u00a0\nthis representation, we will have to find a way to\u00a0\u00a0 write it in Python, but in this representation,\u00a0\nwe are, I am just using a dash t"
+    },
+    "92c11536-ffdf-400d-8191-c5f9a19787bb": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "o indicate that\u00a0\u00a0 there is empty value. There is nothing there.\nSo, there is no left child. And it points to a\u00a0\u00a0 node 9 which has neither left hand or right child.\u00a0\nSo, remember, this is a leaf node, a leaf node is\u00a0\u00a0 one which is the bottom of the tree, it"
+    },
+    "f00e4cf9-9722-4167-ac07-e65a19c60d0b": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " has no\u00a0\nchildren. So, it has nothing on its left nothing\u00a0\u00a0 on its right. So, similarly now this 2 has 1 and\u00a0\n4. So, it points to 1 on his left, 4 on its right,\u00a0\u00a0 both of which are leaf nodes. So, this is the\u00a0\npictorial representation of how we would like "
+    },
+    "912d554c-0e1a-4a9c-857c-b4c71f75dae3": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "to\u00a0\u00a0 describe this thing in Python.\nNow before we actually get to the Python\u00a0\u00a0 representation, I am going to make a slight\u00a0\ncomplication of this, what will look like a\u00a0\u00a0 complication. But what I am going to do is I am\u00a0\ngoing to say that, I do not want to k"
+    },
+    "a6fdadd1-ab87-4579-857d-b19b09326b48": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "eep these\u00a0\u00a0 kinds of empty pointers in the middle of a tree,\u00a0\nI do not want this kind of thing in the middle of\u00a0\u00a0 a tree. So, I am going to actually create a extra\u00a0\nlayer of empty nodes at the bottom of the tree.\n\u00a0 So, I am going to add this frontier, with"
+    },
+    "242afa3d-90ce-4cd5-9b8a-d400665b61c0": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " empty\u00a0\nnodes, where every field is this blank value. So,\u00a0\u00a0 it will have no value, no left no, right. And\u00a0\nall these so called leaves will point to such\u00a0\u00a0 empty nodes. So, this will actually point to\u00a0\none empty node, this will actually point to an\u00a0\u00a0 empty "
+    },
+    "aa7a5c14-9ea0-41d0-ad3a-a1d72d5e2d94": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "node. So, everywhere, I will append\u00a0\none extra empty node, wherever currently,\u00a0\u00a0 I do not have a pointer. And in particular, I\u00a0\nif I have an empty node right at the top.\n\u00a0 So, this is just like our empty list, if you\u00a0\nremember, our empty list had no value "
+    },
+    "461add9c-5378-4a6d-b05b-4dffe61f1226": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "and no next\u00a0\u00a0 value was none. Next was none. So, in the same\u00a0\nway, here, if the value is none, and the left is\u00a0\u00a0 none, and the right is none, then it is empty.\n(Refer Slide Time: 08:33)\n\u00a0 So, this is how it will look if we draw this as\u00a0\na picture. So, wher"
+    },
+    "b6004f47-11d2-450d-913e-6c737185ba9e": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ever earlier we had a leaf,\u00a0\u00a0 I now create this empty node with all three\u00a0\nvalues empty, and make it point to that. So,\u00a0\u00a0 I create this kind of, so these are all these\u00a0\nfrontier nodes. So, at the bottom of my tree, now,\u00a0\u00a0 I have this layer of empty nodes, "
+    },
+    "67d10ab4-51b0-48c7-9c98-e4391666ba3e": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "kind of hanging\u00a0\noff the, the real leaves in some sense. So,\u00a0\u00a0 why are we doing this? Well, it is just that it\u00a0\nis kind of easier to figure out whether we are at\u00a0\u00a0 a leaf or not by using this so it is easier\u00a0\nto write. It is so the most natural way.\n\u00a0 So, "
+    },
+    "7f5d73f6-7709-4f8a-b69e-b63687f51f45": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "we saw already when we did lists that\u00a0\nthis is a kind of inductive structure. So,\u00a0\u00a0 I have this node and I have the rest of the list.\u00a0\nSo, many things that we did in a list in insert,\u00a0\u00a0 delete one most naturally written inductively.\u00a0\nEither I process it he"
+    },
+    "e5ee4198-c05c-48be-846f-4e114136b4c4": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "re, or I push the\u00a0\u00a0 processing to the rest of the list. \nNow in a tree, it is even more important\u00a0\u00a0 to do that because I have to do it on the\u00a0\nleft or the right now the binary search tree\u00a0\u00a0 will tell me whether to go left or right as we\u00a0\nwill see now, but "
+    },
+    "5cbab821-3a16-4974-8056-d1d5190af09a": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "recursion is the best way to\u00a0\u00a0 do it. And in order for the recursion to stop\u00a0\nproperly at the leaves, it is useful to have\u00a0\u00a0 this this is not the only way to do this,\u00a0\nbut this is one convenient way to do it.\n\u00a0 So, now that is the picture. So, as\u00a0\nwe saw i"
+    },
+    "a8b8a05c-fd83-42d6-bf2d-9352cd5d55cc": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "n in the linked list thing,\u00a0\u00a0 we have to create these nodes by using a class.\u00a0\nSo, we have a class tree. And when we create a\u00a0\u00a0 node in the constructor we have three values. Now\u00a0\nwe have the value, self dot value, self dot left,\u00a0\u00a0 self dot right. So, when "
+    },
+    "9b303257-420c-45bb-9f95-65b031915b41": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "I initially create\u00a0\na node in the tree, it is going to be\u00a0\u00a0 like a leaf node. So, it may have a value,\u00a0\nbut it will have no left no right.\n\u00a0 So, this is the way that it works now. So, if\u00a0\nso we are going to use first of all this Python\u00a0\u00a0 value none, which "
+    },
+    "21e3b9c9-bcfd-4757-bc9b-d93499bde380": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "represents no\u00a0\nvalue for this arbitrary empty value,\u00a0\u00a0 hyphen, which we had been writing in the picture.\u00a0\nSo, if there is a leaf node, then it should point\u00a0\u00a0 we said to two empty trees. So, this is now what\u00a0\na leaf node looks like. It is not a single node."
+    },
+    "48495c2e-4da5-4723-b9ae-5a5688ec657c": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "\u00a0\u00a0 So, if I have an initial value, which is passed\u00a0\nto this tree constructor, if there is a value,\u00a0\u00a0 then I must set the left and the right to\u00a0\nbe an empty tree, which I get by calling\u00a0\u00a0 the tree constructor with no value.\nAnd what do I get when I call a t"
+    },
+    "4f96e5fb-7eb8-4edd-b08a-e4e5ec4abdcd": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ree\u00a0\u00a0 consecrator with no value, I get self dot value\u00a0\nnone self dot left none self dot right none. So,\u00a0\u00a0 that is this case. So, if I create an empty node,\u00a0\nthen everything is none. If I create a leaf node,\u00a0\u00a0 then I put a value and I recursively, create\u00a0\nt"
+    },
+    "c77d74bd-73d9-4ef0-aecd-bebbafa00d83": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "wo empty nodes below this and point to them.\u00a0\u00a0 So, that is the constructor. So, this is reflected\u00a0\nnow in these two functions. So, what does is empty\u00a0\u00a0 say? Well is empty says that my value is none.\nSo, if the value is none that I do not even\u00a0\u00a0 have to loo"
+    },
+    "31b88d63-2f70-4987-af73-cf1516b5afa1": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "k at the rest. The only\u00a0\nsituation where the node value is none\u00a0\u00a0 is when I have an empty node. But if I have a\u00a0\nleaf node, then it must be the case that the\u00a0\u00a0 value is not none. And the left and the right are\u00a0\nempty. Now technically speaking, is empty wil"
+    },
+    "e251a037-9e5a-4ca8-9f5c-cfba342dabfc": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "l not\u00a0\u00a0 be the same as none, because is empty will require\u00a0\na node. So, I actually do not need to do this,\u00a0\u00a0 I can just say that if the left is empty, and\u00a0\nthe right is empty, then this is a leaf node,\u00a0\u00a0 because then the value must be something.\nBut just t"
+    },
+    "1d0a744f-1e16-4e37-89c6-299f2ded7f50": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "o be explicit, let us say that the\u00a0\u00a0 value is not none, left is empty, right is empty.\u00a0\nSo, this is our basic building blocks. So, this\u00a0\u00a0 gives us this building block that we were seeing\u00a0\nearlier, which had a value, a left and a right.\u00a0\u00a0 Now we are going t"
+    },
+    "b74582cb-3731-4f81-bd3d-28af83bd6bc3": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "o use this building\u00a0\nblock to write these functions, which\u00a0\u00a0 will allow us to navigate the tree\u00a0\nand do interesting things with it.\n\u00a0 So, the first thing that we\u00a0\nwill do before we do anything\u00a0\u00a0 interesting with the tree is to just examine\u00a0\nit. So, we want"
+    },
+    "a1b8a1e4-ce1d-4346-8e63-ed90b8ccf9be": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " to see what are all the values\u00a0\u00a0 in the tree. So, we need a representation\u00a0\nof the tree. So, we need to list out the\u00a0\u00a0 values which are present in the tree.\u00a0\nNow, this tree is supposed to represent\u00a0\u00a0 somehow dynamically sorted data. So, it would\u00a0\nbe nice "
+    },
+    "2c1992ba-8da5-4ede-bf3e-077d531f7c06": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "if we could get the output of this\u00a0\u00a0 representation in this sorted thing rather\u00a0\nthan for example, in a heap enumerating it\u00a0\u00a0 left to right from top to bottom because that\u00a0\nwould not be in some very meaningful order.\n\u00a0 So, what does it mean to enumerate in"
+    },
+    "437f5446-be21-4556-a364-3172a6b031f7": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " sorted\u00a0\norder? Well, I should enumerate before the\u00a0\u00a0 root remember that I have the root and then\u00a0\nI have these two trees hanging off it. So,\u00a0\u00a0 everything here is less than V, everything here is\u00a0\nbigger than V. So, I should enumerate this first,\u00a0\u00a0 this sec"
+    },
+    "b6f0c6ba-3085-4016-ba4d-e20dc66ac359": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ond and this third. So, I should list\u00a0\nout so I want to create a list of values,\u00a0\u00a0 which represents all the values in my\u00a0\ntree, so I should first list out this thing\u00a0\u00a0 then insert this value and\u00a0\nthen list out this thing.\n\u00a0 So that is what this code is say"
+    },
+    "5eb774dc-c270-4361-9288-1fcd3667dab3": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ing here\u00a0\nit is saying that if the tree is empty,\u00a0\u00a0 then return the empty list otherwise recursively\u00a0\napply this is called in order traversal because as\u00a0\u00a0 you can imagine, in order means sorted order.\u00a0\nSo, in order means do the left first then the\u00a0\u00a0 root t"
+    },
+    "07c8ddd5-2bbc-4b06-9294-6d6f13fc53e8": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "hen the right. So, take self in order. So,\u00a0\nthat will produce a list from all my left children\u00a0\u00a0 all the trees all the values below the left\u00a0\nchild, then pick up the value here a singleton\u00a0\u00a0 and then recursively pick up the value on the\u00a0\nright and put it a"
+    },
+    "e87ac758-72c7-4b8a-8f46-b210ed6bb5b4": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ll together to be a list.\n\u00a0 So, in particular, now, we can\u00a0\ntake this list and remember\u00a0\u00a0 in this class definition if you\u00a0\ndefine this underscore underscore str.\u00a0\u00a0 This function will be called whenever you call\u00a0\nthe print function. So, the print function w"
+    },
+    "94c7a268-1089-470b-80d8-3aff4e90d5be": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ill\u00a0\u00a0 just return this list it will just return\u00a0\nthe string version of this list created by\u00a0\u00a0 applying in order to the current object. So, this\u00a0\nis the kind of byproduct of having this thing.\n\u00a0 So, let us see how it works. So, supposing this\u00a0\nis my tree. S"
+    },
+    "57a5b9eb-4466-402f-bc48-ba31e0cb7b7e": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "o, it says if I want to print this\u00a0\u00a0 I must first print this. So, if I want to print\u00a0\nthis, or list this I must first list this and this\u00a0\u00a0 as if I have to first list this I have to first\u00a0\nlist its left child, its left child is empty. So,\u00a0\u00a0 there this left."
+    },
+    "5be3f418-8b78-4b5c-bd5f-286189b1f0fb": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "in order, so I will get an empty\u00a0\nlist from here and I will get an empty list from\u00a0\u00a0 here. So, I will initially get empty plus 1 plus\u00a0\nempty. So, this will produce the list 1 here.\n\u00a0 Similarly, if I come here now, this will produce\u00a0\na list 4. So, if I come"
+    },
+    "1e064da1-c691-433a-8274-328eb94eb4b6": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " here it will be 1 plus 2,\u00a0\u00a0 plus 4. That is what this is saying you take\u00a0\nthe list from the left, add the list containing\u00a0\u00a0 the current value and take the list coming\u00a0\nfrom the right. So, therefore I get 1 2 4.\u00a0\u00a0 Similarly, here, you will see that this wi"
+    },
+    "7e60a594-455c-4fcb-8764-788e01b05e0f": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ll give\u00a0\u00a0 me a 9. So, this will give me empty\u00a0\nplus 8 plus 9. So, this will give me 8\u00a0\u00a0 comma 9. And finally, this is going to\u00a0\ngive me 1 2 4 plus 5, plus 8 comma 9.\n\u00a0 So, this is going to give me 1 2 4 5 8 9. So,\u00a0\nthat is how this recursive thing will pro"
+    },
+    "3b575951-f953-4300-b9c9-7b0982a65d98": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ceed.\u00a0\u00a0 But abstractly, it is easy to imagine, you, you\u00a0\nshould always think about recursive functions in\u00a0\u00a0 terms of some kind of delegation, you should\u00a0\nnot think deeply about how it is being done.\u00a0\u00a0 But just imagine by magic that somebody has\u00a0\nproduced t"
+    },
+    "30722456-d1d1-4163-8125-8def37fefd73": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "he correct answer for the left and\u00a0\u00a0 somebody else's produce the correct answer from\u00a0\nthe right, then how do you put it together.\n\u00a0 And because it is well founded that in the\u00a0\nbase case, you will get the correct value.\u00a0\u00a0 automatically. If you combine the v"
+    },
+    "bcfebdc2-9e89-4b79-8ec5-41e63ccb134a": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "alues\u00a0\nthat come from the left and right correctly,\u00a0\u00a0 you will pass the correct value up. So,\u00a0\nthat is how you should think about it. So,\u00a0\u00a0 you should not think about the mechanics of how\u00a0\nI described it. Now, you should just assume that,\u00a0\u00a0 the values on m"
+    },
+    "a0ea87ae-d6b3-4767-b3cd-5915356a6359": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "y left that are coming, so\u00a0\nyou should just be at the top level. You say,\u00a0\u00a0 assuming the thing works correctly, on the\u00a0\nleft, the left is going to produce 1 2 4.\n\u00a0 Assuming it works correctly, on the\u00a0\nright, the right is going to produce 8, 9.\u00a0\u00a0 So, what s"
+    },
+    "ce3d7933-0403-4d5a-b8ad-3c4b05fedcea": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "hould I do to produce the correct\u00a0\noutput now, and that is to put 5 in between\u00a0\u00a0 these two. So, that is this step. So, that is how\u00a0\nin order traversal works. Now, there are other\u00a0\u00a0 contexts in which you might want a different\u00a0\ntraversal. So, you could enum"
+    },
+    "a9e8374b-5640-45f1-bf78-b00026e57b41": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "erate this in,\u00a0\u00a0 in different ways. You can, there is this\u00a0\nnode, left tree and the right tree.\n\u00a0 So, there are three, three things to be listed\u00a0\nout. So, the in order traversal, is do two first,\u00a0\u00a0 then one, then three. First do the left, then\u00a0\ndo this the"
+    },
+    "5448b8cd-2023-4c24-8efb-f159e7554108": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "n to the right. So, this is in order.\u00a0\u00a0 Now you could sometimes do the left, then the\u00a0\nright and then at the end, put out this thing. So,\u00a0\u00a0 this is called post order. So, post order refers\u00a0\nto the fact that the current node is listed last.\u00a0\u00a0 And symmetrica"
+    },
+    "ef7beb9e-8743-42f2-91da-90593ed60579": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "lly, I could do the current node\u00a0\nfirst, and then do the left then do the right.\n\u00a0 And these are called pre\u00a0\norders. So, these are three.\u00a0\u00a0 So, in terms of the code, it just means,\u00a0\nyou know, shuffling this return statement,\u00a0\u00a0 the plus gets reordered, I do"
+    },
+    "b3a52537-6225-4eeb-8e22-391c50bbb01e": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " self dot value, I\u00a0\nput it at the beginning or the middle or the end,\u00a0\u00a0 I will get pre order, in order, post order. And\u00a0\nthey have different connotations. You will not\u00a0\u00a0 because of this left, right thing, you will\u00a0\nusually not put 3 before 2, you could hav"
+    },
+    "4a4dc02b-fcc6-438e-b95d-1865fd5ebe63": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "e 6,\u00a0\u00a0 three more orderings, in which 3 comes before\u00a0\n2. But those are usually not interesting.\n\u00a0 So, now that we know how to list out the values\u00a0\nin a tree, what is our basic goal, our basic goal,\u00a0\u00a0 having sorted the sequence was to find a value.\u00a0\nSo, how"
+    },
+    "985ee687-5f77-4d72-8376-128ed3a25730": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " do I find a value in a search tree? Well,\u00a0\u00a0 I started the route, I check if that is the\u00a0\nvalue that I am looking for. But if it is not,\u00a0\u00a0 the value tells me what to do? If\u00a0\nthe value is smaller than the route,\u00a0\u00a0 I must look on the left. If the value is bi"
+    },
+    "3ecc5982-3b1b-464b-9fee-6afb433e9751": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "gger\u00a0\nthan the route, I must look on the right.\n\u00a0 So, this is exactly what we do with binary search.\u00a0\nSo, replace the midpoint in binary search by the\u00a0\u00a0 root of the search tree, the root of the search\u00a0\ntree functions, so at every point, the root of\u00a0\u00a0 the t"
+    },
+    "79f0d352-c1b7-483d-b2b6-469f6eabcf73": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ree, you are looking at functions like the\u00a0\nmidpoint of the binary search that you were doing\u00a0\u00a0 earlier, and it tells you whether to go left\u00a0\nor to go right. So again, if we try this here,\u00a0\u00a0 and we say search for say, 9, then I will come\u00a0\nhere and I will l"
+    },
+    "b20de7f6-371e-4349-b0d8-38ad54234cff": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ook for 9, and it will say no,\u00a0\u00a0 no, I must go right then I look for 9 here it\u00a0\nwill say no, no, I must go right and I find it.\n\u00a0 As before, supposing I say, I want to look\u00a0\nfor 3. So, then I will say look for 3,\u00a0\u00a0 then it will say smaller look for 3. It\u00a0\n"
+    },
+    "7b79c730-d563-4d6b-a09a-b1244901240a": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "will say it is bigger. I will come to 4\u00a0\u00a0 and it is smaller. So, I will look below 4\u00a0\nand I will find nothing. And I will say no.\u00a0\u00a0 So, one of the properties that we\u00a0\nsaid about binary search is that\u00a0\u00a0 in logarithmic time, it will also find out\u00a0\nthat the v"
+    },
+    "0745b0f0-553c-4282-8f68-18a838725264": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "alue is not there. So, here also,\u00a0\u00a0 by just navigating down this one path of the tree,\u00a0\nI am able to tell you the 3 is not there. I do not\u00a0\u00a0 even look at the right hand side in this case. So,\u00a0\nin that sense is very similar to binary search.\n\u00a0 Except of cou"
+    },
+    "a1022bd0-f9be-407d-a3e8-4ad6b961bcb8": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "rse we will have to guarantee\u00a0\nthat the complexity works out. Which,\u00a0\u00a0 you will come to later on. So, the code is\u00a0\nvery simple, it says, if the tree is empty,\u00a0\u00a0 that is I have fallen off the tree in some sense\u00a0\nit is the same in binary search as my interva"
+    },
+    "64b29acc-a1fe-4a65-b9d5-d9498058b039": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "l is\u00a0\u00a0 shrunk to the empty list. If the tree is empty,\u00a0\nthen I have not found it. So, this is false. So,\u00a0\u00a0 now this is why it is useful to have that frontier\u00a0\nbecause if I go from the leaf, I can still take a\u00a0\u00a0 step, If I did not have this frontier I will\u00a0"
+    },
+    "4a4073b2-71ae-4f2d-93dc-301191143b1c": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "\nhave to check whether my left child exists\u00a0\u00a0 whether my right child existence and so on.\nIf since I have the frontier, I can wait till\u00a0\u00a0 I fall into the frontier and check it I am\u00a0\nthere by saying, am I in an empty node? So,\u00a0\u00a0 that is why the frontier is "
+    },
+    "5b31cd94-1f0f-433e-9bb6-ec8beb01000d": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "useful. So, I can\u00a0\ncheck that if I have reached the frontier,\u00a0\u00a0 if the current node I am searching for is actually\u00a0\nempty, then I am done. Otherwise, if the current\u00a0\u00a0 value is the correct value, I return true. And if\u00a0\nit is not, then I search left or right"
+    },
+    "802f3e36-5cb7-492f-b225-6777b062a196": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": ", depending\u00a0\u00a0 on how the value stands with respect to self\u00a0\ndot value. So, this is very straightforward.\n\u00a0 So, where is the largest node in a tree, in such a\u00a0\nsearch tree? Well, the largest node will be on the\u00a0\u00a0 right, and the smallest node will be on the "
+    },
+    "f051d406-42dc-4cbb-b92a-e825bcb10c10": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "left\u00a0\nin general. And how far right how far left? Well,\u00a0\u00a0 I must keep going left. As long as I can keep\u00a0\ngoing left, I am going to a smaller thing.\u00a0\u00a0 The moment I cannot go left anymore, I have\u00a0\nreached the smallest thing that left most node\u00a0\u00a0 could have c"
+    },
+    "85048043-acb5-44eb-9f68-97473855a2ea": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "hildren, but those will be bigger.\nAnd we will see an example in a minute in the\u00a0\u00a0 same (())(21:26). So, let us look at this tree\u00a0\nfor example. So, if I go left, and then left,\u00a0\u00a0 I cannot go left again. Because there is no\u00a0\nleft here. I can still go right."
+    },
+    "204e2cdd-5354-47b8-b252-cfb5bd8292bc": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " But anything\u00a0\u00a0 to the right of this node in this direction is\u00a0\ngoing to be bigger, so I must not go there. So,\u00a0\u00a0 the leftmost node is actually 1. And 1 is indeed\u00a0\nby inspection. You can check the smallest node.\u00a0\u00a0 Same thing, I start here I go, right I go "
+    },
+    "9a73aa3c-efc6-427e-9b65-679351eb2284": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "right.\u00a0\nAnd I stopped when I cannot go right anymore.\n\u00a0 So, the largest node is 9 because after that,\u00a0\nI can still go to left, but that left does not\u00a0\u00a0 give me anything. So, the minimum value just says\u00a0\nif the left is empty, then I am at the minimum,\u00a0\u00a0 oth"
+    },
+    "6849a5f7-6367-4c28-a9ba-1df1626cffc9": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "erwise recursively find so this should be\u00a0\nminimum. Otherwise recursively, find the minimum\u00a0\u00a0 value on my left. And similarly, the maximum\u00a0\nvalue says if the right is empty, then I found\u00a0\u00a0 it. Otherwise recursively go to the right and\u00a0\ncontinue searching f"
+    },
+    "c3908794-3942-4317-852c-bec74217b51d": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "or the maximum value below it.\u00a0\u00a0 So, the minimum and the maximum value\u00a0\nwe can find in this easy way.\n\u00a0 So, now let us try to insert a value. So, how\u00a0\ndo you insert a value? Well, essentially, the\u00a0\u00a0 position where you have to insert is determined\u00a0\nby what "
+    },
+    "8ea7f80a-98f9-40ef-b4bd-deea50929a16": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "values are already there. So, the best\u00a0\u00a0 way to find the position to insert a value is\u00a0\nto actually try to locate the value v. Because\u00a0\u00a0 if I follow the current values, it will take me\u00a0\nleft, right, left, right. It is the same actually\u00a0\u00a0 in binary search. "
+    },
+    "7cb20336-fbbe-4c43-809a-ff6cb550a7d9": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "In binary search if you wanted\u00a0\nto know where to insert a value that is not there,\u00a0\u00a0 you would find it and you will find the interval\u00a0\nof two elements between which it should go. \n\u00a0 So, this exactly the same thing that happens so\u00a0\nyou try to find it, and t"
+    },
+    "6686474f-7929-4dda-91a8-a91a74bbc9a7": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "hen insert where the find\u00a0\u00a0 fields. So, for example, supposing I have this\u00a0\ntree, and I want to insert 21. So, to insert 21,\u00a0\u00a0 I first try to see whether I can find 21. So,\u00a0\nI look. So, I start with 21, and it says no 21\u00a0\u00a0 must be to the left, 21 must be t"
+    },
+    "e7633ccf-2127-42ff-ba1d-518476164551": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "o the left, 21\u00a0\nmust be to the right. And now I find that at 28.\u00a0\u00a0 I run out of things to look at. So, I basically\u00a0\nlocate the place where 21 has to be inserted.\n\u00a0 And now with respect to this node, what\u00a0\ncan I do, I have to basically put it\u00a0\u00a0 somewhere be"
+    },
+    "11b53823-35db-4078-8cda-3b28779c9cd3": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "low this. And since 21 is smaller\u00a0\nthan 28, the only way to insert it is to add a\u00a0\u00a0 new node to the left and call it 21. So, whenever\u00a0\nI insert of course, I have to create a node. So,\u00a0\u00a0 in the heap, if you remember, insert was fixed by\u00a0\nthe structure of th"
+    },
+    "c41a3c6f-d0be-40c2-89bc-56f2d8d14b30": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "e heap, the heap had only one\u00a0\u00a0 fixed structure. So, I knew exactly where to put\u00a0\nthe node, then I had to fix the heap property.\n\u00a0 Here, I have to put the insert where it is\u00a0\nconsistent with all the other values. So,\u00a0\u00a0 I have to first navigate the tree to "
+    },
+    "88abc2ba-2e26-4e8c-b77f-7882deef2e27": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "find\u00a0\nout where it should be and put it there. So,\u00a0\u00a0 for instance, similarly if I do 65, so now\u00a0\n65 will say it must come to the right of 52.\u00a0\u00a0 And now when I come to 74, it\u00a0\nsays it must be to the left of 74,\u00a0\u00a0 but there is no node there. So, therefore\u00a0\ni"
+    },
+    "57be5e43-fd1d-4921-887f-9d232ec03d1b": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "t goes here. So, I create this note here.\u00a0\u00a0 And remember that we do not have duplicates.\nSo, if I try to insert a value that is already\u00a0\u00a0 there, like 91, then I will first search for\u00a0\nit, and I actually find it and since I found it,\u00a0\u00a0 nothing happens, the "
+    },
+    "4ebe3111-d4cc-4b95-860f-db121dcfb2b3": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "tree does not change. So, the\u00a0\ninsert has no effect, it does not throw an error,\u00a0\u00a0 but it does not do anything. So, that is what\u00a0\nthis code is saying. So, here at the base case,\u00a0\u00a0 if I have nothing in my tree if my trees empty,\u00a0\nthen I will create a single"
+    },
+    "7b049a8d-184e-4792-b7fe-523675e40306": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ton leaf by setting the\u00a0\u00a0 value to the new node new value that I want, and\u00a0\nreplacing the none and none by two empty trees.\n\u00a0 So, this goes from this node which looked\u00a0\nlike this, to a node which looks like this.\u00a0\u00a0 So, remember that this is what is happeni"
+    },
+    "005b3d7d-07f3-4de3-b71a-cbcf9f591754": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ng.\u00a0\nSo, whenever I promote a node to a leaf,\u00a0\u00a0 I have to create its children which are empty. If\u00a0\nI actually find the value, I do nothing I return.\u00a0\u00a0 And now the rest is very simple. If the value\u00a0\nthat I want to insert is smaller than my current\u00a0\u00a0 positio"
+    },
+    "24a82655-1ba7-460d-9e4f-aa42f498f494": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "n, I try to insert it on my left. If\u00a0\nit is bigger, I try to insert on the right,\u00a0\u00a0 so this is very straightforward. So, this is\u00a0\nthe reason why it is so important to make these\u00a0\u00a0 things recursive and come to this base case.\nSo, basically, what this is say"
+    },
+    "32a3e4a4-cc52-4e96-a158-2b0908e9f27e": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ing is that when\u00a0\u00a0 I come here, and I want to insert\u00a0\nsomething, I am at an empty node.\u00a0\u00a0 And I will replace it by this, so I will put a\u00a0\nV here and I will create two more children.\n\u00a0 What about deleting a value? So, deleting a value\u00a0\nis obviously more pro"
+    },
+    "45e2b9d9-4609-48e0-b778-b7b4f926c00f": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "blematic, because it is not\u00a0\u00a0 going to just attach itself, it is going to create\u00a0\na hole somewhere in my tree. So, if V is, so the\u00a0\u00a0 first of all, you have to decide what it means to\u00a0\ndelete a value. So, it means that if the value V\u00a0\u00a0 is there delete it, i"
+    },
+    "c6a46e0d-1781-4c9a-9d5c-3d72eb9d73e6": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "f there is no V, then forget\u00a0\nit. So, first, we have to find it. If we do not\u00a0\u00a0 find it, it is fine. So, this is the first thing\u00a0\nsaying that if and the process of finding.\n\u00a0 So, implicitly, all our things behave by\u00a0\nnavigating down the tree. So, in the pr"
+    },
+    "4967ba45-6baf-45e6-ad27-833d5d3c570a": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ocess\u00a0\u00a0 of finding V, if I do not find it, if I reach the\u00a0\nempty tree, that is I reach a leaf node, and I\u00a0\u00a0 try to go off the leaf into the frontier, then I\u00a0\njust returned in this case quietly doing nothing.\u00a0\u00a0 Now, the easy cases are the recursive cases, i"
+    },
+    "0785190d-8649-495c-8978-1c917aeb7170": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "f\u00a0\nthis is not the node to delete, if this is not\u00a0\u00a0 the node to delete, then I must delete to my left,\u00a0\nso I just recursively call delete on my left.\n\u00a0 Similarly, if it is bigger, I call it on\u00a0\nthe right. So, the interesting case that\u00a0\u00a0 have to handle here"
+    },
+    "caad963b-6ddb-495b-b908-c4778561cecf": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": ", so if you remember\u00a0\nthe in the insert, if I found the value,\u00a0\u00a0 nothing had to be done here, if I find the value,\u00a0\nsomething has to be done, if I do not find,\u00a0\u00a0 then it is easy. It is just recursion,\u00a0\nI go left or I go right. If I find it,\u00a0\u00a0 now I have to"
+    },
+    "dbfabd4e-1eba-4477-8ab5-ec7044ad44ea": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " do something. So, the easy\u00a0\ncase is that this is actually a leaf node.\u00a0\u00a0 So, if it is actually a leaf node I have to do\u00a0\nthe reverse of what I did before, so earlier,\u00a0\u00a0 I created a leaf node, now I have this\u00a0\nleaf node, which I want to delete.\n\u00a0 So, what "
+    },
+    "67c9fb07-a09e-4700-890f-b1253e0c00ac": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "I have to do is I got the replace this\u00a0\nby an empty node. So, I have to delete this,\u00a0\u00a0 delete this and replace it by this, that is\u00a0\nwhat this make empty does. So, if I have the\u00a0\u00a0 current value is V, and it is a leaf node, then\u00a0\nI just make the current node"
+    },
+    "f35bbc9c-313f-4ad1-b7b3-452e899f0827": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " into an empty node,\u00a0\u00a0 and it will be legitimately an empty\u00a0\nchild of the parent. If it has only one,\u00a0\u00a0 so if this is my node, and I have no left. So,\u00a0\nI have something like this, I have nothing on my\u00a0\u00a0 left, then what I can do is I can just push this\u00a0\nwho"
+    },
+    "961b03e3-b2a1-4de5-8778-f21a3d0d25a6": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "le thing up there, so that we will see.\n\u00a0 So, I will copy my right sub-tree here, I\u00a0\nwill just promote the entire right sub tree.\u00a0\u00a0 Symmetrically, if the right is empty, I will copy\u00a0\nthe entire left sub-tree. So, these are again,\u00a0\u00a0 easy cases. The difficul"
+    },
+    "f60a9ba1-0202-4aed-9514-7b39b403895c": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "t cases that have\u00a0\nsomething on both sides. So, I have a value v,\u00a0\u00a0 and I have something hanging off here. And I\u00a0\nhave something hanging off here. And of course,\u00a0\u00a0 this is coming from somewhere from the top, so it\u00a0\nis hanging in the middle of the tree some"
+    },
+    "43586527-f302-41a4-80ed-8f0c2364433e": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "where.\n\u00a0 So, this is like our delete max problem that we\u00a0\nhad with the heap. So, I delete this value. So,\u00a0\u00a0 it goes out. What should I put there? So, this\u00a0\nis one solution is to take the biggest value here\u00a0\u00a0 and put it here. Now remember that, if I have sa"
+    },
+    "c9ee530f-a2c6-4056-8c72-690c8e0f6df6": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "y\u00a0\u00a0 V1 to Vk here, and I have some V prime\u00a0\n1 to V prime l here and I had this V,\u00a0\u00a0 then I know that V1 to Vk are all smaller\u00a0\nthan V. And this is bigger than all,\u00a0\u00a0 I mean smaller than all V1 prime to VL prime.\nSo, everything on the left was smaller than "
+    },
+    "3e8a2f02-86b1-41f6-b7ad-08929a99695a": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "V,\u00a0\u00a0 and everything on the right is bigger than V. So,\u00a0\nlogically, I should take the biggest thing here\u00a0\u00a0 and move it here. So, it will be still bigger\u00a0\nthan everything on the left. And it will still\u00a0\u00a0 remain smaller than everything on the right.\u00a0\nSo, I mu"
+    },
+    "c569ed61-e3ab-4b17-84d5-71ab6efe8269": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "st find the maximum value here.\u00a0\u00a0 And move it there and then delete that from that\u00a0\ntree. So, this is what it is saying. It is saying\u00a0\u00a0 replace self dot value by the maximum\u00a0\nvalue on my left and then delete\u00a0\u00a0 on my left the maximum value because I know\u00a0\ni"
+    },
+    "3ec09eb8-027f-4c65-816e-b3380f4c4735": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "t is there because I just copied it.\n\u00a0 So, it must be there. So, go and delete it and\u00a0\nthere is only one copy of it. So, delete that\u00a0\u00a0 copy. Now it looks like you are postponing\u00a0\nthe problem by creating one more delete,\u00a0\u00a0 this delete generating one more de"
+    },
+    "2e5b8122-c991-4234-a4c1-0d4a120acca7": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "lete.\u00a0\nSo, how is it going to work? Well,\u00a0\u00a0 notice that the maximum value has this property.\u00a0\nSo, it goes right right right and then finally\u00a0\u00a0 either it has no children or it has only left\u00a0\nchild. So, the deleting the maximum value\u00a0\u00a0 will come into this ca"
+    },
+    "0bc950c3-21d1-4f60-8466-e3e3efb8e4f7": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "se, we will come to the\u00a0\nsimple case where I just have to promote it.\n\u00a0 So, I will not again have to go and look for\u00a0\none more maximum value below that and continue\u00a0\u00a0 this process. So, deleting the maximum which is\u00a0\nhappening here is actually going to conv"
+    },
+    "ac741a07-205d-44c1-93ff-b86a1215eebd": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "erge in,\u00a0\u00a0 in the easy case where once I find that\u00a0\nmaximum value, I just have to take its\u00a0\u00a0 left child in particular, because it will have no\u00a0\nright children, take its left child and put it up.\u00a0\u00a0 So, that is what this code does. So, we will come\u00a0\nback and"
+    },
+    "49688a7e-dc70-49fa-9112-48c1b2e40c8f": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " look at those two pieces of code that we\u00a0\u00a0 have missed out. But let us do examples\u00a0\njust to understand what is happening.\n\u00a0 So, the first easy case is I delete a leaf. So, I\u00a0\nlook for 65. So, I walked down here and I find 65.\u00a0\u00a0 But 65 is a leaf. So, I am "
+    },
+    "88ae202a-c0e5-4a6f-a783-5ff9ef12a85c": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "in this case,\u00a0\nis leaf so I just make it the empty thing,\u00a0\u00a0 and I effectively delete it from the tree.\u00a0\nSo, now 74 is pointing to an empty node.\n\u00a0 Now I want to delete 74, for example. So, I come\u00a0\ndown to 74. And now I am in the case where it has\u00a0\u00a0 no left"
+    },
+    "83a00970-0fac-48c1-a10e-78239c3d77df": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " child. So, I will just promote\u00a0\nthis tree, meaning I will just copy\u00a0\u00a0 91. And its entire thing up one level.\nSo, what this will mean is I will just move\u00a0\u00a0 that whole thing up to the next level. So, this is\u00a0\nthe easy case. So, there will be a symmetric thi"
+    },
+    "7a890fa2-4acb-4ccb-8d8b-e928d13ef370": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ng\u00a0\u00a0 if you do it when there is no right child. But\u00a0\nlet us not worry about that. Let us go directly\u00a0\u00a0 to the complicated case. So, let us suppose we\u00a0\nwant to delete 37, which is sitting in the middle\u00a0\u00a0 of the tree. So, I come down to 37 and I find\u00a0\nthat i"
+    },
+    "9f012cb6-37e8-44a9-b8b5-3d89bcfbef11": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "t does not satisfy the leaf case it does\u00a0\u00a0 not satisfy the left is empty does not satisfy\u00a0\nthe right is empty. So, I have to do this.\n\u00a0 So, first, I have to find the maximum value in the\u00a0\nleft tree. So, I have to start here and go right\u00a0\u00a0 as far as I can. "
+    },
+    "f4d7b5d6-b660-402c-bbf7-7a712734e5aa": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "And I stop at 28, because that\u00a0\nis the right most value I can get. So, 28 is the\u00a0\u00a0 value, which is the maximum in my left sub-tree.\u00a0\nNow I have to take that value and copy it here.\u00a0\u00a0 So, I have to take this 28 and\u00a0\ncopy it. So, I do that next.\n\u00a0 And then I"
+    },
+    "31940dcf-4357-49ab-bfb6-a7d44238a7f4": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " have to go into this left sub-tree\u00a0\nand delete this 28. So, that is what is happening\u00a0\u00a0 here. So, I come down to 28. And now I find that\u00a0\nI am in this situation where the right is empty.\u00a0\u00a0 So, right is empty means I just promote\u00a0\nthis 21. And anything tha"
+    },
+    "6a62afd7-ea2d-41f0-8aed-9b1c6341dc31": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "t is below it,\u00a0\u00a0 that whole structure, I promoted one level\u00a0\nup. So, I get this. So, this is how the\u00a0\u00a0 delete works. There are three cases the leaf\u00a0\ncase, one of the children is empty case.\n\u00a0 And the non-trivial case where I have to find\u00a0\nthe maximum now t"
+    },
+    "ac73af40-4899-4121-b6a9-6c567b89016a": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "his is I found the maximum,\u00a0\u00a0 we could have dually found the minimum on the\u00a0\nother side. So, remember that we want to take\u00a0\u00a0 everything on the left of V, everything on\u00a0\nthe right of V and I want to replace this\u00a0\u00a0 by something which fits between these two. "
+    },
+    "4b35fc54-0718-4725-9ec1-cf0f9d6e7149": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "So, I\u00a0\ntook the maximum from here and did it. But I could\u00a0\u00a0 also take the minimum from here and do it.\nSo, it is a matter of taste, but you have to do\u00a0\u00a0 one or the other, either you take the maximum\u00a0\nvalue in the left sub-tree, copy it here and\u00a0\u00a0 delete th"
+    },
+    "b12ccc11-861d-4fb0-bf84-3ac85b223225": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "e maximum there, take the minimum value\u00a0\nin your right sub-tree both trees are there\u00a0\u00a0 otherwise, you will not be in this case. Take the\u00a0\nminimum value in your right sub-tree, copy it here\u00a0\u00a0 and delete the minimum there. So, then you have to\u00a0\ndually write "
+    },
+    "38471990-b28d-4221-9bfe-e54504cfdc31": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "a thing for deleting the minimum. \n\u00a0 So, this is the full thing. So, the\u00a0\nleft hand side is what we already had.\u00a0\u00a0 So, now here are these three functions, which\u00a0\nwe talked about. The first one is to make\u00a0\u00a0 a leaf into an empty node. So, what it does\u00a0\nis it"
+    },
+    "de433fab-c900-4b31-9abd-d2fc09c02f15": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " does the reverse of creating a leaf,\u00a0\u00a0 it takes the value makes it none. And it deletes\u00a0\nthe pointers to the empty leaf and makes the none,\u00a0\u00a0 so it just makes all fields none. So, this\u00a0\nis how you take a node which was not, which\u00a0\u00a0 was a leaf node and mak"
+    },
+    "5c60196f-73fa-4e26-b66d-85f1b5b007a7": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "e it empty, you remove the\u00a0\nvalue and remove the left and right children.\n\u00a0 What about promotion? Well, promotion\u00a0\nis basically saying that if I had\u00a0\u00a0 a situation like this, supposing I have, I want to\u00a0\npromote the left child. So, I have a left child.\u00a0\u00a0 Bu"
+    },
+    "8259d95e-6e93-4107-a705-36a0ec4cd40f": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "t I have nothing here, this is empty, then\u00a0\nwhat I do is I just take this left child,\u00a0\u00a0 and I just copy all these values here. \nSo, that means that I effectively whatever\u00a0\u00a0 this is pointing to is now being pointed to from\u00a0\nhere. So, I bypass that left chil"
+    },
+    "6196b115-dd0f-448b-a5f8-b524cd9dc1ec": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "d in some sense,\u00a0\u00a0 I basically, this was earlier pointing to\u00a0\nthe left child, but I take this the left\u00a0\u00a0 value and copy it into the current value,\u00a0\nI take the left\u2019s left and copy it into\u00a0\u00a0 my left, and I take the left\u2019s right.\nSo, I have to be a bit caref"
+    },
+    "e62ae2d8-dd05-45f6-bfd2-02298b230f45": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ul here actually.\u00a0\u00a0 So, I should do this in the reverse\u00a0\norder. I should do self dot right\u00a0\u00a0 first. Because notice that if I update self dot\u00a0\nleft, then this value does not make sense anymore.\u00a0\u00a0 So, these two things actually should be\u00a0\nexchanged, I should "
+    },
+    "6813f0d2-7076-4f7a-afdd-72b388103895": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "first copy the right thing.\u00a0\u00a0 Because currently I am pointing\u00a0\nlike this so I must first copy this\u00a0\u00a0 and only then copy this because if I copy this,\u00a0\nthen I am no longer have access to the right.\n\u00a0 So, these two statements should be exchanged.\u00a0\nAnd if I do"
+    },
+    "77541b1a-be49-441e-a350-f232ea409886": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " the symmetric thing on the right\u00a0\u00a0 hand side, then the order is okay. Because I first\u00a0\ncopy the value from the right, then I set the left\u00a0\u00a0 pointer to the left pointer of the right child.\u00a0\nAnd then I set the right pointer to the right\u00a0\u00a0 pointer of the rig"
+    },
+    "545f9636-dbff-4584-ac3d-4f25a04ca87c": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ht child, and then everything\u00a0\nis fine. So, this is how we delete a value.\n\u00a0 So, effectively, what we do in\u00a0\nall these cases find of course,\u00a0\u00a0 we walk down a path and try to find it and\u00a0\nwe hit the leaf we say it is not there,\u00a0\u00a0 insert behaves like find, w"
+    },
+    "bb900985-e410-49d0-81ce-155859613c55": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "e try to find the\u00a0\nplace, if we find it, we do nothing. If we do\u00a0\u00a0 not find it, then where we should have found it,\u00a0\nwe create a node. So, again, we are walking down\u00a0\u00a0 one path and delete also, we will walk down\u00a0\none path to find the place to delete. So,\u00a0\u00a0"
+    },
+    "3aeeea3b-0cbc-4cb6-922d-fb921a120f0f": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " I will typically come down to V.\nAnd now in the worst case,\u00a0\u00a0 I will have to find the maximum below\u00a0\nthe left sub-tree. So, I will continue\u00a0\u00a0 by taking a left edge to the left sub-tree and\u00a0\nthen taking the most path. So, in all cases, I\u00a0\u00a0 am walking down "
+    },
+    "1fc8b668-8809-4446-a9d0-9a4607de53e6": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "only one path, I am never walking\u00a0\ndown multiple paths. So, all these operations are\u00a0\u00a0 going to be in the worst case as expensive as the\u00a0\nheight of the tree. Now the danger with this is\u00a0\u00a0 that there is no structure in the tree unlike in a\u00a0\nheap which guara"
+    },
+    "c5182cd9-eb8c-46eb-b445-acb849d0b1a4": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "ntees that this height is good.\n\u00a0 So, I could have a stupid tree which looks like 1\u00a0\nand then the right is 2 and the right is 3 and so\u00a0\u00a0 on. If I just take a sorted sequence and put the\u00a0\nsmallest or the largest value as the root, then\u00a0\u00a0 I will just get one"
+    },
+    "a6f053c7-5247-4dc9-92e0-5a12e6a2d2a3": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " long chain of things in one\u00a0\ndirection which represents a tree. So, technically\u00a0\u00a0 this will be a tree but it is effectively\u00a0\na line, so this will have height order n.\u00a0\u00a0 So, this is obviously not what we want, the\u00a0\nidea when we move to two dimensions is to"
+    },
+    "68e3a34a-f541-4de5-b482-59f545e7b712": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "\u00a0\u00a0 distribute the value so the height is small.\u00a0\nSo, we would really like to have this log n\u00a0\u00a0 height which we argued is the case for a heap.\nSo, in the heap, we make sure that everything has\u00a0\u00a0 two children, except possibly the lowest level,\u00a0\nor the level "
+    },
+    "a41f04fc-0e4f-4b1d-b92b-e7424be9d26e": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "just above that. So, we never have\u00a0\u00a0 these unbalanced kind of things, but in this\u00a0\ntree that we are constructing here, if I start\u00a0\u00a0 with the sorted list, and I start with an empty\u00a0\ntree and then I insert 1, then I insert 2, then I\u00a0\u00a0 insert 3 and so on I am"
+    },
+    "8a8b1bde-4c20-40bd-8023-73a03d914ffc": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": " going to get a tree which\u00a0\nlooks like this. So, we have to make sure that we\u00a0\u00a0 restore the balance.\nSo, we have a balanced tree\u00a0\u00a0 when we insert or delete from balanced\u00a0\ntree the balance could get damaged. So,\u00a0\u00a0 we need a quick way to restore the tree bac"
+    },
+    "e8399827-4892-491d-955d-220a1064c0b4": {
+        "content_id": 50,
+        "course_name": "PDSA",
+        "title": "Search Trees",
+        "week": 6,
+        "chunk": "k to\u00a0\na balanced tree so that as we go along through a\u00a0\u00a0 sequence of inserts and deletes, we maintain\u00a0\nthe balance and therefore we maintain this\u00a0\u00a0 logarithmic property. So, this is what we will do\u00a0\nnext, how to maintain balance in a search tree."
+    }
+}

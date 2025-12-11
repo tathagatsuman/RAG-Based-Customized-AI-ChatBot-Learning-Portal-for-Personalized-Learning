@@ -1,0 +1,604 @@
+{
+    "541daae5-5771-4187-8bbb-2c1e6e8f4398": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "We have seen two algorithms concerning single\u00a0\nsource shortest paths where we fix the starting\u00a0\u00a0 point and we look at all the paths which\u00a0\nare from that point to every other vertex,\u00a0\u00a0 we said the other class of shortest\u00a0\npath problems are all pairs. \n\u00a0 In "
+    },
+    "aa7aad2f-d047-4c84-978f-f9665db7ca88": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "the single source shortest path, you can\u00a0\nimagine that you have a warehouse or a factory\u00a0\u00a0 from which you are shipping things and you\u00a0\nwant to find the shortest way to reach every\u00a0\u00a0 destination from that fixed place. Whereas if you\u00a0\nare running this travel"
+    },
+    "dd0b1050-2832-4d19-8faf-5b31fff03bc6": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " service kind of thing,\u00a0\u00a0 you need to be able to answer questions over\u00a0\nevery pair of distance, you have no preference\u00a0\u00a0 for a given source and a given destination. \nSo, your customer will say I want to go from point\u00a0\u00a0 A to point B, what is the best route,"
+    },
+    "b8a4abfd-bbc3-4fd9-b3df-1aa9ae7c7390": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " and you\u00a0\nhave to be able to solve this for any A and any B.\u00a0\u00a0 So, what we are going to look at now is\u00a0\nthis all pairs shortest path problem?\u00a0\u00a0 So, Dijkstra's algorithm works for the single\u00a0\nsource problem for non-negative edge weights\u00a0\u00a0 and the Bellman-Fo"
+    },
+    "fc7f3993-b7f3-4e7f-b654-2dcb92dd6823": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "rd algorithm, which is more\u00a0\nexpensive, works with negative edge weights. \n\u00a0 But, of course, remember that you cannot\u00a0\nhave negative cycles with negative cycles;\u00a0\u00a0 shortest paths are not defined, because you can go\u00a0\naround the cycle and make paths arbitrar"
+    },
+    "8c1ee9ad-caf5-4c0d-abac-4454bcf1466f": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ily small.\u00a0\u00a0 So, one way to solve the shortest path problem,\u00a0\nof course, is to fix each vertex as a potential\u00a0\u00a0 source. I know, if I fix a source, I know how to\u00a0\nsolve a single source, shortest path problem. \n\u00a0 So, there are n sources, n possible\u00a0\nsources."
+    },
+    "249a2879-ffea-460f-9cd2-7a37dcb4d9da": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " So, I start from zero and I solve\u00a0\u00a0 by using the Dijkstra or Bellman Ford,\u00a0\nthen I started from one and I use it\u00a0\u00a0 use Dijkstra's Bellman Ford, and I keep doing\u00a0\nthis. And of course, that will give me a solution.\u00a0\u00a0 What we are trying to find is a more dir"
+    },
+    "ea0eaac0-5e6b-4e69-b4b1-ccdf102c9979": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ect way of\u00a0\naddressing this all pair shortest path problem, it\u00a0\u00a0 does not require me to repeatedly rerun Dijkstra\u00a0\nor Bellman Ford from every starting point. \n\u00a0 So, remember, the transitive closure\u00a0\nof a relation. So, the transitive\u00a0\u00a0 closure of a relation"
+    },
+    "fd1eea09-ab8b-4755-8a61-6d0a8dd5f1a2": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " consists of repeatedly\u00a0\napplying this relation. So, in the case of\u00a0\u00a0 a graph, the edge remembers captures are\u00a0\nrelation. There was a motivation for studying\u00a0\u00a0 graphs or graphs or visual representations\u00a0\nof relations, relationships between vertices,\u00a0\u00a0 when"
+    },
+    "5aa84864-9250-4bed-a0d1-0adf053c2159": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ever vertex 1 is related to vertex\u00a0\n2, there is an edge from v 1 to v 2. \n\u00a0 So, now, if we represent this in an\u00a0\nadjacency matrix, as we said before,\u00a0\u00a0 then if we multiply the matrices, then we get\u00a0\nall pairs which are connected by an intermediate\u00a0\u00a0 value "
+    },
+    "0cf4d192-4797-4329-b5e3-3240da30b5fb": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "in between. So, if I have A comma B is\u00a0\nin my relation and B comma C is in my relation,\u00a0\u00a0 then A B and B C would have been one in the\u00a0\noriginal matrix, and AC will now become one in\u00a0\u00a0 the square of the original adjacency matrix. \nSo, in this way, if I have"
+    },
+    "6e0abf8a-4038-47e2-86b9-ddfad8d05ce6": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " the kth power of my\u00a0\u00a0 adjacency matrix, it will tell me all word pairs,\u00a0\nwhich are related by a sequence of k intermediate\u00a0\u00a0 relationships. And since there are only n\u00a0\noverall, I can look for everything connected\u00a0\u00a0 directly or connected by a pair or conne"
+    },
+    "18e7c22b-729e-48c6-aafa-3de5f3b4e3e8": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "cted by\u00a0\nthree and so on. So, if I add up these things,\u00a0\u00a0 then I will get any pair of vertices which\u00a0\nare connected by a path of any length. \n\u00a0 And this is what we call the\u00a0\ntransitive closure A plus.\u00a0\u00a0 So, an alternative way to do this is to look\u00a0\nat how "
+    },
+    "1e34adce-f28a-4882-b8c2-356bd54a213c": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "these paths evolve. So, we look at paths\u00a0\u00a0 through a limited set of vertices. So, we\u00a0\nsay that B superscript k. So, the superscript\u00a0\u00a0 indicates that I am going from i to j. So, here\u00a0\nI was talking about the length of the path. So,\u00a0\u00a0 I was saying that, if I"
+    },
+    "45c8e5b3-dfcb-4a9b-a357-80015387cf17": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " look at A to the power\u00a0\nk, it is saying that there are k intermediate\u00a0\u00a0 steps. \nSo, I go from A1 to A2,\u00a0\u00a0 A2 to A3, and so on, I do this k times, and I will\u00a0\nget so if I do it one time, I have A if I do two\u00a0\u00a0 times k squared. If I route k times i , A to t"
+    },
+    "21f0028a-55bc-4d87-8350-700496ee117b": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "he\u00a0\npower k. So, the superscript the power of k in\u00a0\u00a0 this transitive closure computation captures\u00a0\nthe length of the path. Here, I am going to\u00a0\u00a0 capture not the length of the path, but the names\u00a0\nof the vertices, which I can see on the way. \n\u00a0 So, here, if"
+    },
+    "1b4b0589-d3b8-443f-9676-6f492c629bb3": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " I look at B k of Aj. What it\u00a0\nis describing is that I can go from i to j,\u00a0\u00a0 by using vertices only from 0 to k minus 1. It\u00a0\nis not telling me how many of these vertices\u00a0\u00a0 are used, what is the length of the part, it is\u00a0\njust constraining the choice of ver"
+    },
+    "30cde654-8bc7-4b51-9985-62e204638832": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "tices. And\u00a0\u00a0 of course, i and j are not constrained by this.\u00a0\nSo, this tells me from any i to any j, if I am\u00a0\u00a0 only allowed to pass through 0 to k minus 1. \nSo, i and j need not themselves be between 0 and\u00a0\u00a0 k minus 1, they could be arbitrary. But I am onl"
+    },
+    "42865a78-7397-4f28-be65-3f8e292b8c8f": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "y\u00a0\nallowed to visit these vertices in between. So it\u00a0\u00a0 is a constraint on where I am allowed to stop\u00a0\non my way from i to j. So, if I say that k is\u00a0\u00a0 0 then this set 0 to k minus 1 because k minus 1\u00a0\nbecomes now minus 1, that becomes an empty set,\u00a0\u00a0 or in "
+    },
+    "f3fcacc6-67e6-4ee7-898c-bba2aa8d60ef": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "Python notation an empty list, if I take\u00a0\nin Python a list of the form 0 to minus 1,\u00a0\u00a0 it is going to be an empty list. \nSo, this says that I can go in B 0,\u00a0\u00a0 if I go from i to j, it means I am not allowed to\u00a0\nuse any intermediate vertices. That means the "
+    },
+    "3e52c700-04a6-4069-bfd9-1f9fdad5ce76": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "only\u00a0\u00a0 way I can go from i to j is that I can directly\u00a0\nfollow an edge. So, there must be a direct edge.\u00a0\u00a0 So, B 0, in other words, is the same as this\u00a0\nmatrix A. So, B 0 is just the adjacency matrix,\u00a0\u00a0 which captures all the direct edges. Now, I\u00a0\ncan calc"
+    },
+    "79c69fc8-0f9f-42fc-9b60-fc0b151f4b5f": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ulate B k plus 1 from Bk as follows.\n\u00a0 In Bk, I already know that I can use the\u00a0\nvertices 0 to k minus 1. Now, and B k plus 1,\u00a0\u00a0 I am additionally allowed to use the vertex\u00a0\nk. So, remember that if I use k, then I am\u00a0\u00a0 allowed to use 0 to k minus 1. So, k "
+    },
+    "acddbc60-cacd-4720-bf8a-140449861e9e": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "itself is not\u00a0\nallowed. So, I am allowed to use the vertices from\u00a0\u00a0 0 to 1 minus the exponent. So, if I am doing B\u00a0\nk plus 1, I am allowed to use 0 to k. But in Bk\u00a0\u00a0 could always use already use 0 to k minus 1.\nSo, there is a possibility is that when I am\u00a0"
+    },
+    "ab734301-717a-4394-95d4-5e8481482a78": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0 allowed to use one more vertex, I do not need\u00a0\nit. So, I can already reach from i to j without\u00a0\u00a0 using this new vertex k. That means that B i j to\u00a0\nthe power k is already 1, or I need this vertex.\u00a0\u00a0 So, if I need this vertex, I start from\u00a0\ni, and I canno"
+    },
+    "0dca3dfb-a665-4aec-beeb-09bfcc7ed362": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "t get to j without using k.\u00a0\u00a0 But if I go from i to k, then remember that\u00a0\nthese are all going to be shortest paths.\u00a0\u00a0 If I am going from i to k, I should not\u00a0\nneed to visit anything in between. \n\u00a0 And if I go from k to j, I mean, I should not need\u00a0\nto vis"
+    },
+    "2bd29c7f-e60f-4cec-911e-2d443496e638": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "it k again in between and because overall,\u00a0\u00a0 I am constrained to go between 0 and K. And I have\u00a0\nalready seen the k then it must be that I go from\u00a0\u00a0 i to k using only 0 to k minus 1. And I\u00a0\ngo from k to j using only 0 to k minus 1.\u00a0\u00a0 So, either I use the f"
+    },
+    "e0bb8ff3-3327-47a3-98d1-5377239e10d8": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "act that B k ij is\u00a0\nalready 1, or I can go from i to k using 0 to\u00a0\u00a0 k minus 1 and k to j using 0 to k minus 1. \nSo, this gives me this way of updating. So,\u00a0\u00a0 Bk ij is 1. If either B k plus 1 ij is 1, either\u00a0\nBk ij is 1 or Bk ik is 1 and Bk kj is 1. So,\u00a0\u00a0 t"
+    },
+    "0c0da483-f8da-487a-9745-8158f9a4ff45": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "his gives me a way of updating these things.\u00a0\nSo, what is the connection to transitive closure?\u00a0\u00a0 Well, clearly B n, now\u00a0\ntells me that B n of ij is 1\u00a0\u00a0 if there is some path from i to j that passes\u00a0\nthrough only the vertices 0 to n minus 1. \n\u00a0 But only th"
+    },
+    "1552fe15-5dad-4536-ad59-7ed542cd5bd7": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "e vertices 0 to n minus 1 is all the\u00a0\nvertices. So, it tells me that if I am computing\u00a0\u00a0 this correctly, then B n i comma j, will tell me\u00a0\nthat there is some path from i to j. And this is\u00a0\u00a0 precisely what transitive closure also says that\u00a0\nthere is some se"
+    },
+    "2d190ba8-34f7-4166-9f49-5f02978da287": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "quence of intermediate vertices\u00a0\u00a0 in this relation, which takes me from i\u00a0\nto j. So, B n is the same as A plus. \n\u00a0 So, this way of calculating by restricting not\u00a0\nthe length of the path, but the vertices are\u00a0\u00a0 allowed to pass through on the path gives me a"
+    },
+    "f3531967-589b-4c99-bdf2-10a305095914": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "n\u00a0\nalternative way of computing, transitive closure.\u00a0\u00a0 And this transitive closure algorithm is called\u00a0\nwarshall's algorithm. So, notice that it is not\u00a0\u00a0 the same as the previous algorithm. They are\u00a0\nboth computing eventually the same thing. \n\u00a0 But one is "
+    },
+    "0564d8ee-a5fe-421b-8826-056a74194697": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "doing this matrix multiplication. It\u00a0\nis concatenating paths, it is saying there is\u00a0\u00a0 a path from A to B, and then the path of B to C.\u00a0\nSo, there will be a path from A to C whereas here,\u00a0\u00a0 you are doing something more clever, you are\u00a0\nsaying that I am pass"
+    },
+    "ff159628-0f5b-41c4-a72e-7d902ddff4d0": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ing through a new vertex,\u00a0\u00a0 which I have not seen before. And I am combining\u00a0\nthose two paths to form a longer path. \n\u00a0 So, the two paths I am combining might already\u00a0\nbe long paths, they are not just adding one. So,\u00a0\u00a0 the transitive closure, adding one ed"
+    },
+    "66e5d26a-ae0b-4b42-ac24-4baf311d43de": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ge at\u00a0\na time to an existing path whereas this,\u00a0\u00a0 these things could be combining to longer\u00a0\npaths, just passing through a new vertex.\u00a0\u00a0 So, what we are going to do is use this\u00a0\ntransitive closure algorithm to compute\u00a0\u00a0 all pair shortest paths. \nAnd this i"
+    },
+    "de5b119a-c32f-48a7-88af-78e4ce2b1b6e": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "s called the Floyd\u00a0\u00a0 Warshall Algorithm. So, the Warshall\u00a0\nalgorithm is the transitive closure part.\u00a0\u00a0 And Floyd contribution is to show how to\u00a0\nadapt this algorithm to compute all pair\u00a0\u00a0 shortest paths. So, together, it is called\u00a0\nthe Floyd Warshall algor"
+    },
+    "e0618280-c785-4722-bd61-7530353e811e": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ithm in most books.\u00a0\u00a0 So, as we did for this Warshall s algorithm,\u00a0\nlet us compute this quantity. So, there we call\u00a0\u00a0 it B for the transitive closure part of it. But\u00a0\nhere, let us call it SP for shortest paths. \n\u00a0 So, shortest path SP to the power k of i c"
+    },
+    "13296dc9-c714-4753-a755-e36a397617f7": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "omma\u00a0\nj is going to be the shortest path from i to j\u00a0\u00a0 provided I stick to vertices between 0 and k minus\u00a0\n1. So, earlier it said, does there exist a path\u00a0\u00a0 from i to J, which sets between 0 to k minus\u00a0\n1. Here I am computing a quantity, I am saying\u00a0\u00a0 this"
+    },
+    "e1662b42-9f81-4e16-8f8d-c883890658c1": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " is the length of the shortest path, which\u00a0\nsticks within 0 and k minus 1 between i and j. \n\u00a0 So, as before, if the index is 0, then I am not\u00a0\nallowed to pass through any intermediate vertex,\u00a0\u00a0 because the set 0 to 0 minus 1 is\u00a0\nempty. So, SP 0 of ij is ju"
+    },
+    "42a83f90-a102-426c-b8e7-acbd7407fd80": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "st a wait.\u00a0\u00a0 There is a direct edge, there is a weight,\u00a0\nthere is no direct edge, it is infinity. Now,\u00a0\u00a0 if I want to now calculate what happens when\u00a0\nI go from SP k to SP k plus 1, we have again,\u00a0\u00a0 the same possibility. \nI do not need this new vertex,\u00a0\u00a0 t"
+    },
+    "b5b85111-a0d4-4c03-879d-a81434a93a35": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "he index k plus 1 allows me this new vertex\u00a0\nk. So, I do not need it, in which case,\u00a0\u00a0 the shortest path using all of 0 to k is\u00a0\nthe same as the shortest path I already had\u00a0\u00a0 from 0 to k minus 1. So, the SP k plus 1 is the\u00a0\nsame as SP k or I do need it, if"
+    },
+    "c460b811-2f1a-490e-b641-cdf59acc9c06": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " I do need it,\u00a0\u00a0 I need to go from i to j and then any i to\u00a0\nk and then I need to come from k to j. \n\u00a0 So, then I combine SP k of i comma k with SP k\u00a0\nof k comma j. So, I look at both of these and I\u00a0\u00a0 decide the minimum of these two to be the answer.\u00a0\nSo, "
+    },
+    "d7bcfea3-7962-475d-9a3b-a3bcc588a281": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "SP now if I look at the nth iteration of this,\u00a0\u00a0 then again like intransitive closure, it tells me\u00a0\nthere is some path which passes through all the,\u00a0\u00a0 which is allowed to pass through\u00a0\nall the vertices 0 to n minus 1. \n\u00a0 Here, it says, this is the shortest"
+    },
+    "50a84a03-aca5-4b09-9315-317b641f560f": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " path, which\u00a0\npasses through any of the vertices 0 to n minus 1.\u00a0\u00a0 So, this gives me the shortest path. So,\u00a0\nthis is the Floyd Warshall algorithm,\u00a0\u00a0 which is Warshall s algorithm adapted\u00a0\nto the case of shortest paths.\n\u00a0 So, this is the same negative weigh"
+    },
+    "45026e48-1176-4661-9444-45d96d7d88d4": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "t\u00a0\ngraph that we use for Bellman Ford,\u00a0\u00a0 except now we are going to try and compute\u00a0\nall pair shortest paths. So, if I look at\u00a0\u00a0 the 0th matrix, these are all the direct\u00a0\nedges. So, for instance, there is an edge 1 5\u00a0\u00a0 with week 2. So at 1 5, I have week 2"
+    },
+    "2203004e-2ee2-4e0f-b9bc-e7647de6166a": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": ".\u00a0\nSimilarly, there is an edge 6 1 with minus 4. \n\u00a0 So, 6 1 is minus 4. So, every direct edge is\u00a0\nrepresented by its weight in this graph, and\u00a0\u00a0 every nonexistent edge is represented by infinity\u00a0\nsaying that there is no edge at this point.\u00a0\u00a0 So, now I want"
+    },
+    "5bfa3be3-fd2c-4480-8e1b-23828c8d3078": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " to calculate SP 1. So, SP 1 is all\u00a0\nthings which go from i to 0 to j, plus i to j. So,\u00a0\u00a0 either of these two is allowed. \nNow, if you look at 0 in this particular case,\u00a0\u00a0 it has a peculiar property, that there are no\u00a0\nincoming paths to 0 because both the "
+    },
+    "92b04776-b385-4c64-a4c9-432ae96be892": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "edges from\u00a0\u00a0 0 outgoing edges. So, even if you allow a path\u00a0\nto go through 0, and no other vertex, remember,\u00a0\u00a0 SP 1 is going to allow me to go through only 0,\u00a0\nno other vertex, if I am only allowed to pass\u00a0\u00a0 through 0, then I cannot really do anything\u00a0\nbec"
+    },
+    "7e02e9f0-8dc7-4175-8698-05016e2a2355": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ause 0 has no paths coming into it. \n\u00a0 So, I cannot get from anywhere to 0, and then\u00a0\ngo from 0 to somewhere else. So, therefore, SP\u00a0\u00a0 1 turns out to be exactly the same SP 0, allowing\u00a0\nmyself to go through 0 and not allowing myself to\u00a0\u00a0 go through 0. I ha"
+    },
+    "6463f30c-6fa9-4a47-8188-5ce47fa575d5": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ve no impact, both of them\u00a0\nessentially only allow me to use direct edges.\u00a0\u00a0 But now when I go from SP 1 to SP 2,\u00a0\nnow I am allowed to pass through 1. \n\u00a0 So, I am allowed to do things like\u00a0\ngo from 6 to 1 and then 1 to 5. So,\u00a0\u00a0 these are both direct edges."
+    },
+    "e5164b20-351a-4fcd-8167-19c7207cd2ca": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " And I am allowed\u00a0\nto use this, or I am allowed to go from, say,\u00a0\u00a0 so I am allowed to say, for example,\u00a0\ngo from 0 to 1 and 1 to 5 again. So,\u00a0\u00a0 these things become possible. So, things\u00a0\nwhich pass through one now become possible.\u00a0\u00a0 So, now if I look at the"
+    },
+    "c52f3b0d-c5a6-4aaf-8b18-e72098d61bcc": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " matrix, it says 0 to 5,\u00a0\nwhich was earlier infinity has now become 12\n\u00a0 Why is that because I can now go from 0 and\u00a0\n10 and plus 2 and reach 5 and 12. Similarly,\u00a0\u00a0 2 to 5 is become 3, because I can go from 2 and\u00a0\nthen come to 5. So, there is a, an edge fr"
+    },
+    "f517952c-fd35-40e6-995a-2cb5a04ee3e9": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "om 2\u00a0\u00a0 and so passing through 1 now, I can take anything,\u00a0\nwhich points into 1 and then anything which\u00a0\u00a0 points away from 1 and I can get an update. So\u00a0\nsimilarly, 6 to 5, I can go minus 4 plus 2. So,\u00a0\u00a0 I can get a net weight of minus 2 from 6 to 5.\u00a0\nSo, S"
+    },
+    "b9d193cc-c744-46f8-84af-587c307af58a": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "P 2 has some interesting new distances. \n\u00a0 Now, that I have discovered distances in SP 2,\u00a0\nI can now look at SP 3. So, SP 3 allows me to\u00a0\u00a0 go through 0 1 and 2. So, if I go through 2 for\u00a0\ninstance, it turns out that I can now do things\u00a0\u00a0 which I could not "
+    },
+    "dd69adea-c2b6-4be2-876e-a94ac9e859bb": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "do before. So, I am look at 5.\u00a0\nEarlier, I could not get from 5 to 5. But remember\u00a0\u00a0 that we said that there are some cycles. \nSo, now if I goes from 5, I can go if I am allowed\u00a0\u00a0 to go to 2 and 1. I can go 2 to 1 and then come\u00a0\nback to 5. So, now I have a"
+    },
+    "1c6119c5-1470-4a46-a775-ea3562c69532": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " cycle from 5 to 5 and\u00a0\u00a0 there are no negative cycles we assumed.\u00a0\nSo, therefore, we find that 5 to 5 has\u00a0\u00a0 length 1 because it is minus 2 plus 1 plus 2. So,\u00a0\nnow I have all these paths which get constructed.\u00a0\u00a0 So, for example, now that I am allowed to go\u00a0"
+    },
+    "f009615d-f274-42fe-a4c6-f1b1f391e24e": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "\nthrough 2, I can find a way to go from 5 to 3,\u00a0\u00a0 minus 2 plus 1 is minus 1. \nSo, 5 to 3 also is a new entry\u00a0\u00a0 because 5 points to 2. So, in adding 2,\u00a0\nyou can check in this particular graph\u00a0\u00a0 the only incoming edge 2 to is from 5. So,\u00a0\nthe only new things"
+    },
+    "8fec10a2-ef18-481f-9f02-a25976d5d77c": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " I will discover are in\u00a0\u00a0 this row for 5 because these are the only new\u00a0\nthings that get enabled by going through 2. So,\u00a0\u00a0 I keep going through like this and eventually,\u00a0\nfor instance, after I have done pass through 0\u00a0\u00a0 to 6. I have come with this matrix. "
+    },
+    "259cb26d-f0c3-4ed0-b74d-6c547d0bee47": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "And then if\u00a0\nI go from 0 to 6 to 0 to 7, then I stabilize. \n\u00a0 And this turns out to be my final thing. And\u00a0\nthen the final step, I get these entries.\u00a0\u00a0 And if you go back and look at the Bellman Ford\u00a0\nexample that we did last time on the same graph,\u00a0\u00a0 you "
+    },
+    "dc983f99-ff10-4c1b-ba1c-7241b2e4d9f5": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "will find that Bellman Ford found exactly\u00a0\nthe same things as the shortest paths from 0\u00a0\u00a0 to all the other vertices which is what you would\u00a0\nexpect, because among the all pair shortest paths,\u00a0\u00a0 in each row are the single source shortest\u00a0\npath for that row."
+    },
+    "1cf67fdc-9dbc-4820-b834-a4d8b4245a0f": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " And notice that some\u00a0\u00a0 things are not reachable. So, from 5 no\u00a0\nmatter what we do, we cannot reach 6. \n\u00a0 And it is not symmetric, because from 6 we can\u00a0\nreach 5. But we cannot get back from 5 to 6. So,\u00a0\u00a0 this is an interesting thing that, it kind of\u00a0\ntell"
+    },
+    "c5c532af-d19f-43cf-9060-db9899077f23": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "s us things about the structure of this graph,\u00a0\u00a0 which may not be very obvious when looking at\u00a0\nit. Now, again, this is a very simple thing to\u00a0\u00a0 implement, like Bellman Ford, because it\u00a0\nis just a bunch of nested iterations. \n\u00a0 So, what we have to do is we"
+    },
+    "1a8216b1-706f-4741-af20-6a5fc2492085": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " have to keep\u00a0\ntrack of the shortest path matrix. So,\u00a0\u00a0 what is the shortest path matrix it is the form\u00a0\u00a0 SP k i comma j. So, this is n cross n. And this\u00a0\none starts at 0 and goes up to n. So, I need n\u00a0\u00a0 plus 1 versions of this matrix to go through the\u00a0\ndi"
+    },
+    "c8ad16a3-a937-49f4-a0a1-4c9a47e7d0ab": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "fferent stages. So, the shortest path matrix is\u00a0\u00a0 n cross n for the i comma j vertex pairs, and k\u00a0\nn plus 1 for the number of iterations that I go.\u00a0\u00a0 That is the index k that I am talking about.\u00a0\nSo, I start off by setting up this matrix. \n\u00a0 So, first I, a"
+    },
+    "7bcbbc66-cc33-45c7-961d-9b8725f43901": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "s usual, I read the input\u00a0\nweighted adjacency matrix, I find out this\u00a0\u00a0 suitable candidate for infinity. And now I will\u00a0\nset up the shortest path matrix to be 0 matrix\u00a0\u00a0 with n rows n columns and n plus 1 dimensions, in\u00a0\nterms of the stages that I am going"
+    },
+    "7b07271c-b934-44c1-b3dc-a18d4159a47e": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " to construct.\u00a0\u00a0 So, the first step is to construct the zeroth\u00a0\nstage. So, I want to say the zeroth stage. Zeroth\u00a0\u00a0 stage is initialize everything to infinity. \nThen having initialize it to infinity,\u00a0\u00a0 what I do is for every edge in my graph. So, for\u00a0\never"
+    },
+    "66ba50b5-832e-425d-9c74-63d2227646b7": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "y ij, for which this adjacency matrix has\u00a0\u00a0 one entry in the zeroth column, I set that\u00a0\nshortest path to be the weight, which is the\u00a0\u00a0 one entry in that column. So, remember that WMat\u00a0\nij 0 tells me whether there is an edge or not,\u00a0\u00a0 WMat ij 1 tells me wha"
+    },
+    "21e5f0e4-242b-4e28-b78a-5cf736bf254f": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "t is the weight of that\u00a0\nedge. So, this is the initialization. So, this is\u00a0\u00a0 setting what we had earlier\u00a0\ncalled SP 0 of i comma j. \n\u00a0 And now we just do this very trivial iteration.\u00a0\nSo, from 1 to k, or 1 to n rather. We just\u00a0\u00a0 go through every pair i com"
+    },
+    "f9411043-20f3-4a13-85a6-8adfd6c69471": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ma j. And for\u00a0\nevery k, we just say what the equation said,\u00a0\u00a0 which is either we keep the shortest path,\u00a0\nremember there it was in terms of k plus 1,\u00a0\u00a0 and k here is from k and k minus 1. So, it is\u00a0\njust slight shift of notation. So, there we talked\u00a0\u00a0 abou"
+    },
+    "025a4dc9-a990-4a1b-95f5-c9043c7000fd": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "t SP k plus 1 in terms of SP k. Here, we are\u00a0\ntalking about SP k in terms of SP k minus 1. \n\u00a0 So, SP k minus 1 of ij or SP k minus\u00a0\n1 of i k minus 1 plus SP k minus 1 j\u00a0\u00a0 at level k minus 1. So, this is just the either\u00a0\nyou have a new path whose weight is "
+    },
+    "565557ad-36e0-45a8-b48b-3bedf490fd68": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "shorter\u00a0\u00a0 going through the new vertex k minus 1, or you\u00a0\nhave the old path which did not need it at all.\u00a0\u00a0 And then finally, you want to return the last\u00a0\nkind of, so you have these n plus 1 levels at\u00a0\u00a0 which you computed the shortest path. \nSo, you want t"
+    },
+    "c8a20b02-ea4d-460f-b429-08a1531060ad": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "o return the last one. And\u00a0\u00a0 that is the one which is at index n, which is this\u00a0\ncolumn number of columns. So, this is what we get.\u00a0\u00a0 So, this is the implementation\u00a0\nvery straight forward\u00a0\u00a0 like Bellman Ford, it is just a\u00a0\nbunch of nested iterations. \n\u00a0 So"
+    },
+    "8f550e62-3609-4d46-ab82-0484dcd3c1bf": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": ", when I initialize it updated, and so on, it is\u00a0\nvery clear that this particular thing is n cube.\u00a0\u00a0 And once it is n cubed, it is quite easy to see\u00a0\nthat nothing much is going to happen if you use\u00a0\u00a0 because we have to literally I mean, for\u00a0\nthis is not a "
+    },
+    "dccb1f0d-eb16-44d4-973b-969ce2def742": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "question of edges. It is not\u00a0\u00a0 like Bellman Ford, where or in Dijkstra where I\u00a0\nam updating something based on the edges.  \n\u00a0 I am literally saying for every pair, i comma\u00a0\nj, compute a better value for i comma j. So,\u00a0\u00a0 I have to do this n squared calculat"
+    },
+    "efb5f115-afc2-46a9-ac8d-fbaa0cd08e4a": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ion every time\u00a0\u00a0 regardless of whether there are direct edges or\u00a0\nnot. So, having an adjacency list does not help\u00a0\u00a0 at all. So, I might as well just write it in\u00a0\nterms of adjacency matrices, if you rewrite it\u00a0\u00a0 in terms of adjacency lists, you will find th"
+    },
+    "365a910f-6e26-49b8-8dae-b0746847460d": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "at\u00a0\nthere is no improvement in the complexity. \n\u00a0 But one interesting thing is there, which is\u00a0\nthat notice that when I look at the k eth step,\u00a0\u00a0 what I am looking at is the k minus 1 slip. So,\u00a0\nI should think of this as having these kinds of.\u00a0\u00a0 So, this i"
+    },
+    "b829c228-eea6-4414-b870-7bc84c49a707": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "s my SP 0, then this is my SP 1,\u00a0\nthis is an SP 2 and so on. So I am computing\u00a0\u00a0 this shortest path matrix in stages 0 1 2 3k.\u00a0\nSo, but in order to know the entries for k. \n\u00a0 So, I initialize the entries for 0, then I get the\u00a0\nentries for SP 1, looking at "
+    },
+    "f6bbe82b-3156-4d3a-9783-7e2da7c96bc1": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "SP 0. So, that is,\u00a0\u00a0 if you look at the way we worked it out,\u00a0\nthis is exactly what we did. So, we said,\u00a0\u00a0 If I know SP 0, then I can get SP 1.\u00a0\nIf I know SP 1, then I can get SP 2.\u00a0\u00a0 So, in order to get SP 2, I do not need to\u00a0\nknow SP 0 anymore, I can thr"
+    },
+    "0512bcbd-3917-4e77-b87e-9ed0b13c038d": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ow it away. \n\u00a0 SP 0 is done. Similarly, from SP 2, I can get 3\u00a0\nfrom 7, I can get 8 and so on. So, what we are\u00a0\u00a0 really saying is that we only need the previous\u00a0\nslice in this. So, this particular thing here,\u00a0\u00a0 I only need the previous slice in order to co"
+    },
+    "ad0d0a48-3aba-43f1-a648-1742c2d6cd8a": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "mpute\u00a0\nthe current slice. So, in principle, I have this n\u00a0\u00a0 cubed sized matrix, which I am using to calculate\u00a0\nshortest paths, but we are saying we only need\u00a0\u00a0 two n squared slices of it. \nSo, I can reduce the space\u00a0\u00a0 from n cube to n squared. So, I mainta"
+    },
+    "d51ec4a9-3f8f-48aa-a952-2c4b12ffe61b": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "in\u00a0\nthe current slices in the previous slices.\u00a0\u00a0 So, I maintain the I have the previous\u00a0\nslices, I compute the current slices,\u00a0\u00a0 then I say now this is the current slices.\u00a0\nSo I make this the previous slices. So,\u00a0\u00a0 I just keep updating it, I throw away the"
+    },
+    "d61cbcb9-892a-4b41-b11c-cf43b58e9cb4": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " previous\u00a0\nslices, and make this the previous slices.\n\u00a0 I compute the next slice from\u00a0\nthis. So, I need to keep only\u00a0\u00a0 the current copy of the SP to the power k and the\u00a0\nprevious copy SP to the power k minus 1. So, those\u00a0\u00a0 are time complexity cannot be rea"
+    },
+    "97f5ca2d-2ad1-4c9e-b54e-ca55915a4712": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "lly improved, the\u00a0\nspace complexity in this case can be improved.\n\u00a0 So, to summarize, Warshall algorithm is a\u00a0\ndifferent way to compute transitive closure,\u00a0\u00a0 and we can now adapt it. And this is the Floyd\u00a0\nWarshall algorithm to compute shortest path. So,\u00a0\u00a0"
+    },
+    "a636195c-bf47-4e68-8fe8-211bbc02312e": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": " the shortest paths tell us in this algorithm,\u00a0\nhow to get from i to j by going through a\u00a0\u00a0 prefix of the vertices from 0 to k minus 1. So,\u00a0\nthis again works with negative edge weights,\u00a0\u00a0 assuming no negative cycles. And it has a\u00a0\nvery simple nested loop i"
+    },
+    "cfbe9bb8-a2fa-4041-9895-1f17f42e291b": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "mplementation. \n\u00a0 So, it is very trivial to write the code for this\u00a0\nand it takes time order n cubed, and this order n\u00a0\u00a0 cubed, unfortunately, cannot be helped because\u00a0\nit is dependent. The n cube comes in the fact\u00a0\u00a0 that for every iteration, I have to phy"
+    },
+    "24afdff7-7bf5-4d95-8716-83b1fdf74bb5": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "sically\u00a0\nupdate every pair every ij whether or not there\u00a0\u00a0 is an edges. So, it is not proportional\u00a0\nto the number of edges in the graph. \n\u00a0 It is just proportional to the square of the\u00a0\nvertices. So, it is always going to be order n\u00a0\u00a0 cube. However, by doi"
+    },
+    "fade3d1f-ba0b-4afb-9e34-878e70b76de8": {
+        "content_id": 42,
+        "course_name": "PDSA",
+        "title": "All Pairs Shortest Paths (Floyd-Warshall Algorithm)",
+        "week": 5,
+        "chunk": "ng this trick of reusing\u00a0\nthe slices, SP k minus 1 SP k, SP k plus 1,\u00a0\u00a0 I throw away k minus 1 and use k. By keeping only\u00a0\ntwo slices of this thing I can do this calculation\u00a0\u00a0 using n squared space rather than n cubed space,\u00a0\nwhich can be a saving."
+    }
+}

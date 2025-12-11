@@ -1,0 +1,611 @@
+{
+    "9b3bef53-3cb6-4eb3-a022-c2b25cac9c25": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "So, we are looking at Minimum Costs Spanning\u00a0\nTrees. And we said that there are two broad\u00a0\u00a0 strategies. And the first one of them is called\u00a0\nPrim's algorithm. So, in Prim's algorithm,\u00a0\u00a0 we will try to find a minimum cost spanning tree\u00a0\nby incrementally gro"
+    },
+    "3d19a609-6e20-4cb1-b9f3-28f14c958d99": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "wing it from a small edge.\u00a0\u00a0 So, in particular, we could start with the\u00a0\nsmallest edge, and then we will extend the tree\u00a0\u00a0 by adding the smallest edge from the tree. \nSo, we already have a tree in Prim's algorithm,\u00a0\u00a0 so starting with 1 edge, so 1 edge is a"
+    },
+    "59188048-0685-45d0-a349-f2004646f64f": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0\ntree. So, we will start with something\u00a0\u00a0 that is already a tree, and we will\u00a0\nsee in what way we can grow this graph.\u00a0\u00a0 Within the graph that we are looking at, what way\u00a0\nwe can extend this tree while keeping it a tree in\u00a0\u00a0 the minimal way. So, we want t"
+    },
+    "0bce1154-d0fa-4e9b-9627-0818accdfb4e": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "o add the smallest\u00a0\nedge to the existing tree to get a larger tree\u00a0\u00a0 until we can grow no more. So that\u00a0\nis broadly Prim's algorithm. \n\u00a0 So here is Prim's algorithm at work, so I first\u00a0\nstart with the smallest edge. In this case,\u00a0\u00a0 the smallest edge weight"
+    },
+    "ca6187fb-a644-4ebc-8184-5bf7667b4854": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " is 6, so I start with\u00a0\nthe edge 1, 3. Now, I have to grow this tree.\u00a0\u00a0 So, I can either add this edge, or I can\u00a0\nadd this edge or I can add this edge or\u00a0\u00a0 I can add this edge because I cannot add,\u00a0\nI cannot add edge 8. Because if I add the\u00a0\u00a0 edge 8, then "
+    },
+    "c9a359b5-c691-4890-bcf8-0042c60d51e1": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "I would have essentially. If I add\u00a0\nthe edge 8, then I will have two disconnected\u00a0\u00a0 components. I would have two 4 and one 3. \nSo, I cannot add the edge 8, so I have to add\u00a0\u00a0 among the others the smallest edge to extend\u00a0\nthe tree. So, for instance, I would"
+    },
+    "36fda3fc-ac88-453b-b6be-2c3c8a8bd526": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " pick\u00a0\u00a0 the edge 10 because 10 is the smallest\u00a0\nof these. So, now I have this. Now,\u00a0\u00a0 among those which are connected,\u00a0\nthe smallest is 18. But if I add 18,\u00a0\u00a0 I will end up creating a cycle. So, this adding\u00a0\n18 will not allow me to keep this a tree. \n\u00a0 So,"
+    },
+    "814f007e-a9ea-42d5-9311-adc47317a6b8": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " the smallest edge I can add, which keeps\u00a0\nit a tree is, so I cannot add that edge,\u00a0\u00a0 so the smallest edge I can add to keep\u00a0\nit a tree is 20. And finally, now I have\u00a0\u00a0 reached the point where I can add the edge 8, so\u00a0\nI can add that and now I get this spa"
+    },
+    "de5ebe04-75be-48b7-8200-818cc2970d46": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "nning tree.\u00a0\u00a0 So, this is Prim's algorithm. We have started with\u00a0\nthe smallest edge 6, take the smallest edge which\u00a0\u00a0 is connected to the current tree 10, smallest edge\u00a0\nis connected but does not form a cycle that is 20\u00a0\u00a0 and then 8 and I get a spanning tr"
+    },
+    "1bf553b5-415c-4cbe-812a-44a26a3462f0": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ee. So, we\u00a0\nhave to argue that this is correct, of course,\u00a0\u00a0 but this is Prim's algorithm. \nSo, Prim's algorithm says,\u00a0\u00a0 incrementally build a spanning tree. So, we have\u00a0\na set of vertices, which are already in the tree,\u00a0\u00a0 we have a set of edges, which are"
+    },
+    "a080c6c4-408f-4846-a0c0-91fbd62aaf95": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " already in the\u00a0\ntree. So, the set TE forms a tree over the set TV,\u00a0\u00a0 both of which are parts of the existing\u00a0\ngraph. So, initially, I have nothing. \n\u00a0 So, one strategy that we saw now\u00a0\nis to start with a minimum cost\u00a0\u00a0 edge. So, we start with the smallest"
+    },
+    "33400c4a-b6f1-4ee9-8018-032b7af4d716": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " cost edge\u00a0\ni comma j and make that our initial set of tree\u00a0\u00a0 vertices i comma j and our initial edge is this\u00a0\nE. And now, I will choose the smallest edge,\u00a0\u00a0 which starts in the tree\u00a0\nand ends outside the tree.\u00a0\u00a0 So, U is in the tree, V is outside\u00a0\nthe tre"
+    },
+    "77e44d61-5d11-43b1-8c91-bf64fc8e4d43": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "e, and I will add this edge,\u00a0\u00a0 and I will add the corresponding vertex\u00a0\nV to the set of tree vertices. \n\u00a0 So, I will add U, V to the U comma V edge\u00a0\nto TE and I will add the vertex V to TV.\u00a0\u00a0 So, just to run it by hand, so initially here\u00a0\nTV is empty and T"
+    },
+    "3c1f2e8f-af44-4db1-a9bc-d7e16b8f8b41": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "E is empty. Then we pick that\u00a0\u00a0 1 comma 3 edge, so we say that the set of tree\u00a0\nvertices 1 and 3 and the edge 1 comma 3 is there.\u00a0\u00a0 Now, I pick 1 comma 0 or 0 comma 1. So, I\u00a0\nadd the vertex 0 to my tree vertices and I\u00a0\u00a0 add the edge 1 comma 0 to my tree ed"
+    },
+    "d19a9ea4-4815-4461-a473-70a871562aca": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ges. \nNext thing to add is1 comma 2. So, I will add\u00a0\u00a0 the vertex 2 to my set of vertices and the edge\u00a0\n1 comma 2 to my tree. And finally, I will add the\u00a0\u00a0 vertex 4 and the edge 2, comma 4. So, this is the\u00a0\nrepresentation of Prim's algorithm as we call. \n\u00a0 "
+    },
+    "da44f264-2030-47e9-810d-ae84da564335": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "So, let us see, why this is correct.\u00a0\nSo, the correctness of this algorithm\u00a0\u00a0 is based on what is called the Minimum\u00a0\nSeparator Lemma. So, supposing I can take\u00a0\u00a0 any set of vertices, and partition it\u00a0\ninto two parts. So, I have U and I have W.\u00a0\u00a0 And now, l"
+    },
+    "75db8945-a1bd-44b8-9ea4-271328d4f0c9": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "et me look at any edge, which\u00a0\ncrosses the partition. So U is on, so this is\u00a0\u00a0 small u and w. So, small u is on the left hand\u00a0\nside small w is on the right hand side. \n\u00a0 Then the claim is that, no matter how\u00a0\nI construct a spanning tree on, so this\u00a0\u00a0 is pa"
+    },
+    "93017f45-af78-4044-b07c-54eedbe6cba9": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "rt of the entire graph. So, no matter how I\u00a0\nconstruct the spanning tree on this entire graph,\u00a0\u00a0 it must include this red edge. So, that is\u00a0\nwhat the minimum separator lemma says.\n\u00a0 So, let us assume for simplicity that\u00a0\nall the edges have different weight"
+    },
+    "5e71135e-4d5b-43ca-b523-37d5cb51b2e3": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "s. So,\u00a0\u00a0 all edge weights are distinct. So, this is the\u00a0\npicture now. So, my entire set of vertices, so,\u00a0\u00a0 this whole thing is meant as set V, so this\u00a0\nis capital V, this is my set of vertices,\u00a0\u00a0 and it is split into two parts, one part\u00a0\ncapital U one part"
+    },
+    "9f7448b5-c6d4-444e-acd8-b469e118dfdd": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " W, and I have an edge of\u00a0\u00a0 going from capital U to capital W of\u00a0\nminimum weights. So, I might have many\u00a0\u00a0 different edges here. And among these this\u00a0\nis the smallest one. So, the claim is that,\u00a0\u00a0 this must be part of every\u00a0\nminimum cost spanning tree. \n\u00a0 "
+    },
+    "c7442087-30d9-4806-8120-bf768e91273e": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "So, supposing we have a tree,\u00a0\nwhich does not include this edge.\u00a0\u00a0 So, the tree that does not include\u00a0\nthis edge because it is a spanning tree\u00a0\u00a0 it connects the entire graph. So, in particular\u00a0\nin this tree, I have this path. So, I have a path\u00a0\u00a0 from U to "
+    },
+    "07bf4b9a-620c-46ab-973d-7ec180308985": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "W in this tree. So, the blue dashed\u00a0\nlines represents a path from u to w. \n\u00a0 So, this P this path P starts in capital U.\u00a0\nSo, this is the path from U to W. So, this path\u00a0\u00a0 starts on the left-hand side in the red set, and\u00a0\nit ends on the right-hand side in "
+    },
+    "b9961a56-218f-4df3-aa19-5a4086df6598": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "the purple set,\u00a0\u00a0 so it must cross at some point, it has to go\u00a0\nfrom here to there. So, this must be some edge,\u00a0\u00a0 which takes it from capital U to capital\u00a0\nW. So, let this be the first such edge. \n\u00a0 So, what do we know? We know that this\u00a0\nis the smallest e"
+    },
+    "2c95c6d5-0005-4839-b60f-73d9f02145bb": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "dge which crosses.\u00a0\u00a0 And here is another edge which crosses,\u00a0\nand we have assumed that all the weights\u00a0\u00a0 are distinct. So, we know that the weight of\u00a0\ne is strictly less than the weight of f. \n\u00a0 So, what we can do now is remove f and construct\u00a0\nthe path th"
+    },
+    "0d3d4c47-9d4c-4df9-b936-a37ecc7ef8e0": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "e other way. So, we get something which\u00a0\u00a0 excludes f and includes e, so it will certainly\u00a0\nhave less cost because we have taken a bigger edge\u00a0\u00a0 and we have dropped it to a smaller edge, and now,\u00a0\nyou have to argue that is a spanning tree. So,\u00a0\u00a0 that is eas"
+    },
+    "91068cb8-491a-4a2b-92c2-52b75c95c11c": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "y to check. Because you now just have\u00a0\nto check that everything is still connected. \n\u00a0 So, anything that was connected through f is now\u00a0\nconnected through e. Because if I can go from here\u00a0\u00a0 to here, and so, supposing I let me assume that\u00a0\nI had some other "
+    },
+    "ed65ea32-53f0-4edf-b770-516b65f56678": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "path which followed this thing,\u00a0\u00a0 so now I can instead go from here to here go\u00a0\nall the way around come here and then go there.\u00a0\u00a0 So, every path which was there before\u00a0\nthrough f can now be rerouted via e.\n\u00a0 And in particular, because e is smaller than f,\u00a0"
+    },
+    "cbe7b936-ce6b-4ea2-b438-67ac806740f9": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "\nthe new tree that I have constructed is strictly\u00a0\u00a0 smaller. So, this minimum separator\u00a0\nlemma is very powerful. It says that,\u00a0\u00a0 if I take every way of partitioning my thing then\u00a0\nthe smallest edge connecting these two partitions\u00a0\u00a0 has to be there in every"
+    },
+    "82b25b49-c742-41fd-8844-29047c71b37d": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " particular tree.\u00a0\nSo, what if two edges have the same weight?\u00a0\u00a0 Well, then we will kind of break ties by\u00a0\nassigning some index. And we will say that,\u00a0\u00a0 one edge is smaller than another edge either\u00a0\nif it has a lesser weight or it has a smaller\u00a0\u00a0 index. An"
+    },
+    "62985d0a-4f22-442c-b3a8-1831c976bd92": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "d then in that sense, we will say that\u00a0\nthe smallest edge must always be there. \n\u00a0 So, what we have in Prim's algorithm remember,\u00a0\nis that, at every point we have constructed\u00a0\u00a0 the tree so far, this is TV, with a set\u00a0\nof edges, and then we have the remaini"
+    },
+    "8c89a24b-0a4d-4158-ad3d-d348b32353b1": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ng\u00a0\u00a0 part of the graph. And what we are doing is\u00a0\nwe are trying to find the smallest edge e\u00a0\u00a0 such that u belongs to TV,\u00a0\nand V belongs to the rest.\n\u00a0 So, the smallest edge which takes me from the\u00a0\ntree outside the tree. But this is like saying\u00a0\u00a0 that I ha"
+    },
+    "4e82b4d4-0cdd-4d5b-9d12-852144603012": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ve a partition, and I am looking for\u00a0\nan edge which goes from this partition to that\u00a0\u00a0 partition. And therefore, from the separator\u00a0\nlemma it says that this edge that I have picked\u00a0\u00a0 in Prim's algorithm must be part of every spanning\u00a0\ntree, so it is always"
+    },
+    "cd676dc9-3eee-454f-ac81-03deb845bdaf": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " making a correct choice. \n\u00a0 So, actually, we started with the smallest\u00a0\nedge, and the smallest edge must be there\u00a0\u00a0 in every spanning tree. Because if\u00a0\nI take, if i, j is the minimum edge\u00a0\u00a0 in the graph. If I take my\u00a0\npartition as i and V minus i,\u00a0\u00a0 then "
+    },
+    "7d601661-1ea0-4402-9f12-bf98c7ff1c32": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "clearly since i to j is the\u00a0\nsmallest edge anywhere in the graph,\u00a0\u00a0 this must be the smallest edge connecting\u00a0\ni to the rest, so it has to be there. So,\u00a0\u00a0 that is for starting with the smallest edge\u00a0\nis a safe thing to do. But if you look at this\u00a0\u00a0 minimum"
+    },
+    "468a91e9-b9fb-4ae2-ae26-4f8ae03f1562": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " separator lemma, it actually tells you\u00a0\nsomething a little bit more general than that.\n\u00a0 It says that, for any vertex if you take.\u00a0\nSo, it is not necessary, in this case,\u00a0\u00a0 we are looking at that particular minimum edge\u00a0\ni comma j and saying i and the res"
+    },
+    "1ea2f20e-14d7-4d6b-bff3-87425bba9d01": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "t or j and the\u00a0\u00a0 rest must be connected by this edge. But if I take\u00a0\nany vertex V, and I take the rest of the vertices,\u00a0\u00a0 then this vertex because original graph is assumed\u00a0\nto be connected, this vertex must be connected to\u00a0\u00a0 the other vertices somehow. \nS"
+    },
+    "aeac94af-3f80-4ded-b6d3-d6e72f65c9f9": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "o, if I take the smallest\u00a0\u00a0 edge coming out of this vertex, it goes to\u00a0\nthe other side. So, I am sitting here in V,\u00a0\u00a0 and here I have V minus v. So, here I have a bunch\u00a0\nof edges, because it is connected I have at least\u00a0\u00a0 one. So, if I take the minimum amo"
+    },
+    "1c026a93-8fda-4af9-9463-ae588427dc73": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ng these it\u00a0\nis going to be the smallest edge connecting the\u00a0\u00a0 partition small v to the partition V minus v.\nSo, therefore, the smallest weight edge leaving\u00a0\u00a0 any vertex has to be part of every MCST. So,\u00a0\ninstead of starting with this minimum cost edge,\u00a0\u00a0 "
+    },
+    "8f81763a-30df-49d2-8b16-b1f89a14b34a": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "we can actually start with any vertex and just\u00a0\nstart with a trivial tree consisting of one point.\u00a0\u00a0 And then say, okay, from this one point I want\u00a0\nto grow this tree, so I want to pick the smallest\u00a0\u00a0 edge which leaves this tree, this one point. And\u00a0\nthen "
+    },
+    "936bddd3-151a-4ccc-ae11-7318ea8d0ec3": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "I get 1 edge which may not be the overall\u00a0\u00a0 smallest edge, but it will be the smallest edge\u00a0\nfrom this V, but still we will get a correct\u00a0\u00a0 answer because that will be still by the minimum\u00a0\nseparator lemma part of every spanning tree.\n\u00a0 So, here is an impl"
+    },
+    "9122df41-8509-409e-bd6b-597794acc6af": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ementation. So, we are going\u00a0\nto keep track of the tree that we have built,\u00a0\u00a0 and we are going to keep track of the distance of\u00a0\nevery vertex. Because, remember, that we have to\u00a0\u00a0 take the shortest distance for every vertex from\u00a0\nthe tree that we have buil"
+    },
+    "5fd4bad4-48a0-46c6-a8db-c77a7828887a": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "t and pick the vertex,\u00a0\u00a0 which is at the shortest distance, and we are\u00a0\ngoing to keep track of the tree edges. \n\u00a0 So, remember, so this is basically going to tell\u00a0\nus what we call TV, and this is going to tell us\u00a0\u00a0 what we call TE. And this is going to, di"
+    },
+    "146dfc34-db9b-45e4-8617-bf72d67a1249": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "stance V\u00a0\nis going to tell us the distance from every vertex\u00a0\u00a0 to TV, that is the smallest edge connecting V to\u00a0\nthe tree. And we are going to pick the minimum\u00a0\u00a0 among those at every step. So, these are the three\u00a0\nthings that we are going to keep track of."
+    },
+    "f02c6259-a4b7-45b3-8530-6fb545347de5": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " \n\u00a0 So, initially, as usual, we define infinity.\u00a0\nSo, we are directly working with a list because\u00a0\u00a0 we do not, we know that it cannot be worse than\u00a0\nworking with a matrix, so we work with a list. So,\u00a0\u00a0 we initialize visited to be a dictionary, distance\u00a0\nto"
+    },
+    "77ff14a4-569d-44a9-871d-46bad8f45115": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " a dictionary and tree edges to be a list,\u00a0\u00a0 to empty dictionary empty list. \nNow, the first thing what we do,\u00a0\u00a0 is that, for every vertex we\u00a0\ninitialize visited to false,\u00a0\u00a0 and we initialize distance to infinity. So,\u00a0\ninitially, there is no tree, so every"
+    },
+    "15f52116-a20c-46bc-9c9a-98505fb2fe40": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " vertex is\u00a0\u00a0 unvisited and every vertex is infinitely far from\u00a0\nthe tree, because there is no vertex in the tree.\u00a0\u00a0 Now, we set some vertex to be in the tree. \nSo, we said before that it is not necessary to\u00a0\u00a0 start with the minimum vertex, so we can just\u00a0\n"
+    },
+    "b4b4080e-4e2e-42a8-b5ed-8d743a109ce3": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "pick vertex 0 and say start the tree at 0.\u00a0\u00a0 So, eventually, in the tree 0 has to be there.\u00a0\nAnd we said that the smallest edge connected to\u00a0\u00a0 0 will actually form part of the tree. So, once we\u00a0\nhave thrown 0 into the tree, then 0 is part of TV.\u00a0\u00a0 So, if I"
+    },
+    "1e63052e-fbcb-4ad7-83a6-8cb68b50232e": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " have 0 there, vertex 0, and if I look at\u00a0\nall its neighbors, they are now connected to the\u00a0\u00a0 tree by edges to 0, and that now defines\u00a0\ntheir minimum distance to the tree. \n\u00a0 So, for every vertex in the adjacency list of\u00a0\n0, I set the distance to that vert"
+    },
+    "37fbf9d2-9b4c-4383-8247-c17c303ddc68": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ex to be the\u00a0\u00a0 distance of that edge, the weight of that edge.\u00a0\nSo, if I have u, 0 to v, with distance d, it will\u00a0\u00a0 be a pair v comma d in the adjacency list of 0,\u00a0\nso I will set the distance of it v to be d. \n\u00a0 So, this is my initialization. So, I have se"
+    },
+    "7b471f5e-752f-47b1-a781-27610aa010b7": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "t\u00a0\nup a trivial tree with one vertex and I have\u00a0\u00a0 initialized the distance of all its neighbors\u00a0\nto be the distance of the edge from 0 to its\u00a0\u00a0 neighbor. And now, I do the usual thing, which is\u00a0\nI will try to calculate the minimum distance. \n\u00a0 So, I initia"
+    },
+    "da097976-452d-4643-8d3e-9b209e56fdad": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "lized to, I will do the\u00a0\ntraditional minimum distance thing. I\u00a0\u00a0 will set minimum distance to be infinity, and\u00a0\nthen I will find it. And I will set the next\u00a0\u00a0 vertex that I want to add to be none. So,\u00a0\nessentially, I will go through all the vertices\u00a0\u00a0 and "
+    },
+    "e800200c-b785-4b24-9528-ba18170a0f67": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "I will check whether it is visited. And if\u00a0\nits minimum distance is currently smaller than\u00a0\u00a0 the minimum distance of the, so this is. \n\u00a0 So, basically, I take an edge u\u00a0\ncomma v, I check that u is visited,\u00a0\u00a0 v is not visited and this is the distance.\u00a0\nAnd "
+    },
+    "b57c2792-511c-4e34-930d-c9661921b6ca": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "I check whether this distance\u00a0\u00a0 is actually smaller than the minimum distance that\u00a0\nI am trying to calculate, and if so, I update it.\u00a0\u00a0 So, at the end of this loop, I have found the\u00a0\ndistance which is minimum, and I found the next\u00a0\u00a0 vertex, and I found the"
+    },
+    "04cf2455-66d4-4248-8a88-61aeef20e9f3": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " next edge also, which is\u00a0\nthe UV, this is the next edge to be added. \n\u00a0 So, if I have not found a vertex to add, I\u00a0\ncome out of it. So, this will be a paradox,\u00a0\u00a0 this will be a pathological case when the graph\u00a0\nis not connected, which we need not worry ab"
+    },
+    "5b08a7d9-486c-4681-aabf-ae52cbfcdb80": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "out,\u00a0\u00a0 but I have put it for completeness. But in\u00a0\ngeneral, I will come to this point, where we\u00a0\u00a0 have now identified this minimum vertex. \nSo, we have identified this minimum vertex.\u00a0\u00a0 And now, we set it to be true, we append the\u00a0\nedge that we have discov"
+    },
+    "65665a9f-e942-43e6-8fce-1150c7ae6c96": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ered from u to v,\u00a0\u00a0 so, there is bracket u to v to be there.\u00a0\nAnd now, for every neighbor of the vertex\u00a0\u00a0 that we have just discovered, for every v\u00a0\ncomma d, which is in the list of next v,\u00a0\u00a0 if it is not visited, we update its distance.\u00a0\nSo, this is how P"
+    },
+    "a2d8d3f4-ffaa-4ae7-ae01-445023ef7731": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "rim's algorithm works. \n\u00a0 But if we look at the complexity of this\u00a0\nalgorithm, the initialization takes order n,\u00a0\u00a0 the loop runs n times as usual.\u00a0\nAnd now in this loop, we have this,\u00a0\u00a0 which is actually looking at all the edges. So,\u00a0\nit is saying for ever"
+    },
+    "0833da68-8090-4646-972b-29fe39daf9fc": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "y edge, if the starting point\u00a0\u00a0 is inside and the ending point is outside\u00a0\nthen consider the distance and add it. \n\u00a0 So, this is terrible, because this thing is\u00a0\nactually n times m, which could be n cubed.\u00a0\u00a0 And we would hope that this would be no worse th"
+    },
+    "0d4c95b1-7ca3-4218-994c-f363d4eb5b7e": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "an\u00a0\nn square, similar to say, Dijkstra\u2019s algorithm.\u00a0\u00a0 So, we have to do something a little more\u00a0\nclever to get this algorithm to actually\u00a0\u00a0 come down to a reasonable complexity. So,\u00a0\nwe will do the same thing, but we will\u00a0\u00a0 maintain our information a littl"
+    },
+    "f4aa5fb4-2ad6-4f24-8e9e-4dd7d7237ae6": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "e differently. \nSo, as before, we will keep this visited and this\u00a0\u00a0 distance. But remember, that every time we update\u00a0\nthe distance, we have a reason to update it. So,\u00a0\u00a0 we updated the distance because we discovered\u00a0\nthe distance from the most recently add"
+    },
+    "aa8444a3-2a97-4bef-9576-412e45dd248d": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ed vertex\u00a0\u00a0 was smaller than the distance we had before.\u00a0\nAnd therefore, this edge represents the edge,\u00a0\u00a0 which connects this unvisited vertex\u00a0\nto the tree in the smallest way. \n\u00a0 So, supposing I had this thing, and I had a vertex\u00a0\nv there, and now I grow "
+    },
+    "95974503-bd78-476a-baa9-d075b282cb8d": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "my tree to this point.\u00a0\u00a0 And now, I discover that this distance is smaller\u00a0\nthan whatever distance I had from here to here.\u00a0\u00a0 So, I throw away that and I say that this is my\u00a0\nnew distance, but I also know that this edge is\u00a0\u00a0 the reason why this vertex has "
+    },
+    "ff7af8cd-f605-4183-b1d8-110b3e23d890": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "its distance. \nSo, when I compute the minimum distance,\u00a0\u00a0 I will also recognize which edge I added,\u00a0\nso I will keep track of this neighbor. So,\u00a0\u00a0 distance v tells me how far away v is from\u00a0\nthe tree, but neighbor v tells me which\u00a0\u00a0 vertex in the tree is ac"
+    },
+    "9e43febf-cbdb-49ae-9237-0f3444414c44": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "tually connected\u00a0\nat that distance. So, remember that this\u00a0\u00a0 is not the shortest path distance this is a\u00a0\ndirect distance. This is an edge connecting v\u00a0\u00a0 to the tree. So, where is the other endpoint\u00a0\nof the edge that is that neighbor of v. \n\u00a0 So, now this "
+    },
+    "a9ea0802-baff-4bf4-a9bb-82a4b9da52bc": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "becomes my new thing.\u00a0\nI no longer need the tree edges,\u00a0\u00a0 because I will discover them from the neighbors.\u00a0\nEventually, the neighbors will form the tree.\u00a0\u00a0 So, what I will do is, instead of keeping\u00a0\nthe three edges I will keep the neighbor,\u00a0\u00a0 and initially"
+    },
+    "96fe355e-38fc-4b1d-9de1-ee82ae9f004d": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": ", the neighbor is also\u00a0\na dictionary, which is empty. \n\u00a0 Now, I initialize visited to false as\u00a0\nbefore distance to infinity as before,\u00a0\u00a0 and the neighbor of every vertex, I initialized\u00a0\nto minus 1. Minus 1, it should be a name of a\u00a0\u00a0 vertex between 0 and n"
+    },
+    "1a404214-7b55-4374-834e-8bd38565a3a6": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " minus 1, so since\u00a0\nit is minus 1 there it is not defined. \n\u00a0 Now, as before, I start by\u00a0\nsetting visited of 0 to be true.\u00a0\u00a0 And now I do two things. For every\u00a0\nneighbor of 0, I set its distance to be d,\u00a0\u00a0 and I set its neighbor to be 0. So, now\u00a0\nwhen I co"
+    },
+    "75d10ce3-0ec7-4887-80b0-abdbfab22c5d": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "nnect 0 to all its neighbors\u00a0\u00a0 I make them all point back saying the reason my\u00a0\ndistance is d is because my neighbor is 0.\n\u00a0 So, now that I have this list of neighbors, I\u00a0\nam in a little better shape. I can do what we\u00a0\u00a0 did in Dijkstra'salgorithm, which is"
+    },
+    "45e99013-5cc3-4e75-bf5e-801ce7f5ce03": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " among\u00a0\nnow all the vertices which are not visited\u00a0\u00a0 I find the distance. And among these, I\u00a0\nfind which ones are the, I mean, I find the\u00a0\u00a0 minimum distance and then I find the vertices\u00a0\ncorresponding. So, this is exactly the same\u00a0\u00a0 code that was there in "
+    },
+    "cfb90250-6bfd-4654-afbd-b7416019a316": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "Dijkstra'salgorithm.\nWe first find the minimum distance among the\u00a0\u00a0 unvisited vertices, and among those, we find\u00a0\nout which vertex actually has that distance,\u00a0\u00a0 so we get a candidate to add. So, we get\u00a0\nthis candidate next v, and we make it true,\u00a0\u00a0 but we "
+    },
+    "c67241e7-e7a3-40d6-87df-a871984ca30c": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "do not need to know how it was connected\u00a0\nbecause it was already connected by its neighbor,\u00a0\u00a0 so that is the critical thing. So, we do not need\u00a0\nto know, which edge to add because that edge is\u00a0\u00a0 implicitly there, in neighbor of next v. \nAnd now we go throu"
+    },
+    "eece8da8-e0b0-4e64-b534-338bd5ba00cf": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "gh all the neighbors of this\u00a0\u00a0 newly added nodes. And when we update the\u00a0\ndistance, we also update the neighbor. So,\u00a0\u00a0 if the distance reduces because of next\u00a0\nv, then the neighbor becomes next v. \n\u00a0 So, in this way, as we update the distance, we\u00a0\nalso kee"
+    },
+    "aaa09a44-08ec-40d0-af0a-15bf630041a6": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "p track of this witness, as it was saying,\u00a0\u00a0 why did my distance come down to d because it\u00a0\ncame down through this vertex u. So, when I pick\u00a0\u00a0 up this vertex to add to my tree, I already know\u00a0\nwhich edge I add. I add the edge from my neighbor\u00a0\u00a0 to myself. "
+    },
+    "c446ea99-6886-4825-a255-84c4d47afaa8": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "So, if I return the set of neighbors\u00a0\nat the end, then from the neighborhood relation,\u00a0\u00a0 I know exactly I can reconstruct the tree. It\u00a0\nwill tell me, the neighbor of 3 is 2, it means\u00a0\u00a0 that the edge 2, 3 is in the tree, and so on. \nSo, this is an alternati"
+    },
+    "a1fecacf-31a4-45da-bf81-874cc510d9dc": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ve way of implementing the\u00a0\u00a0 same idea of Prim's algorithm, except that instead\u00a0\nof keeping the tree edges, we keep track of this\u00a0\u00a0 neighbor for every unvisited vertex saying this\u00a0\nis my current best way of joining the tree. \n\u00a0 So, in this case, we scan al"
+    },
+    "48434f00-4e48-4a6b-8989-cc424ddffbf4": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "l the non-tree\u00a0\nedges. And after we do all this, then the\u00a0\u00a0 complexity improves because the scan to find the\u00a0\nnext vertex is now order n. Earlier it was order\u00a0\u00a0 m. So, this is very similar to Dijkstra\u2019s\u00a0\nalgorithm, in fact, so Prim's algorithm and\u00a0\u00a0 Dijkst"
+    },
+    "3f53f01d-ea1a-45f4-9671-71a5a0f1ac39": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ra\u2019s algorithm are really more or less\u00a0\nthe same except for this update operation. \n\u00a0 In one case, you update the distance to be the\u00a0\ndistance to the burnt vertex plus the new edge,\u00a0\u00a0 here we just contain, construct the distance from\u00a0\nthe burnt vertex do n"
+    },
+    "96f35fad-53a2-42e4-9867-f17b9666c121": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ot plus it. We just take the\u00a0\u00a0 distance from the most recently burnt vertex to\u00a0\nthe tree, to this vertex. So, we want to know\u00a0\u00a0 the distance to the tree and not the distance\u00a0\nto the source, that is the only difference. \n\u00a0 So, Prim's algorithm is really a k"
+    },
+    "52111887-1aec-4255-97b3-cef7af3c0059": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ind of variant\u00a0\nin some sense of Dijkstra\u2019s algorithm. So,\u00a0\u00a0 like Dijkstra\u2019s algorithm, though it remains order\u00a0\nn squared for adjacency lists we will see that\u00a0\u00a0 if we can do this more cleverly of finding the\u00a0\nminimum in a collection then we can do better."
+    },
+    "6fec28d5-1b35-4919-9aef-e587b89854d6": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " \n\u00a0 So, Prim's algorithm is our first algorithm\u00a0\nto build a minimum cost spanning tree. So,\u00a0\u00a0 it starts with an arbitrary vertex or\u00a0\nthe minimum edge as the case may be,\u00a0\u00a0 and it grows this tree by adding to this existing\u00a0\ntree, the smallest edge that can "
+    },
+    "6fc86666-9a93-4a46-993a-bf1d8e0dea2e": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "be added. \n\u00a0 So, we had this very powerful minimum separator\u00a0\nlemma, which showed that every edge that Prim's\u00a0\u00a0 algorithm adds to the tree is necessary for the\u00a0\ntree to grow. So, it basically justifies why this\u00a0\u00a0 strategy of, again, it is a greedy strategy"
+    },
+    "8ed29a30-07e7-4c5a-bf55-599692f4edec": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": " like\u00a0\nDijkstra\u2019s algorithm, where I look around the tree\u00a0\u00a0 and I find the smallest edge which is connected\u00a0\nout of the tree, and I add that to the tree.\n\u00a0 So, I am not going to look further down and\u00a0\nsee, whether I can take the second minimum\u00a0\u00a0 now and ma"
+    },
+    "c0575444-a1c0-4e52-b2ad-83401568d454": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ybe later on it might help me.\u00a0\nSo, every time we have a greedy strategy,\u00a0\u00a0 we have to justify that this choice, which\u00a0\nis frozen now is going to work in the future.\u00a0\u00a0 So, just like in Dijkstra\u2019s algorithm, we\u00a0\nhad that argument telling us that later\u00a0\u00a0 on "
+    },
+    "73674424-f4ce-4f43-a152-9dbada33be3b": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "we cannot find a shorter path here it\u00a0\nsays that every such greedy choice we make\u00a0\u00a0 is guaranteed to be correct, because it must form\u00a0\na part of every minimum cost spanning tree. \n\u00a0 So, the implementation is also very\u00a0\nsimilar to Dijkstra\u2019s algorithm. And\u00a0"
+    },
+    "d55fa47a-543f-4105-b716-f58efa475359": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0 like in Dijkstra\u2019s algorithm the complexity\u00a0\nis n squared even with adjacency lists,\u00a0\u00a0 but the bottleneck is really this thing of\u00a0\namong the unvisited vertices find the minimum.\u00a0\u00a0 And so, this is a common problem that arises and a\u00a0\nlot of things that I h"
+    },
+    "14a7669f-5782-47d2-8089-a9a949edb0ae": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "ave a collection of objects\u00a0\u00a0 and I want to find the minimum and remove it\u00a0\nor I want to find the maximum and remove it,\u00a0\u00a0 they are kind of symmetric questions. \nSo, we will look at a data structure for\u00a0\u00a0 this later on, which will allow us also\u00a0\nto reduce "
+    },
+    "0b2dd1c2-5e78-4467-b991-4759799bca84": {
+        "content_id": 44,
+        "course_name": "PDSA",
+        "title": "Minimum Cost Spanning Trees (Prim's Algorithm)",
+        "week": 5,
+        "chunk": "the complexity of Dijkstra and\u00a0\u00a0 Prim's algorithm to something from n\u00a0\nsquared down to something more like n log m."
+    }
+}

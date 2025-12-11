@@ -1,0 +1,317 @@
+{
+    "0ab2f47a-e68e-48bc-b72b-fb662e27a5b0": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "So, let us analyze quicksort. So, remember,\u00a0\nthis is how quicksort works. It chooses a pivot,\u00a0\u00a0 partitions it, moves the pivot between the lower\u00a0\nand right segments, and then recursively sorts\u00a0\u00a0 the two partitions. So, it all amounts to\u00a0\nreally asking how "
+    },
+    "2b1a7b89-f2f3-4d45-966a-f1c289dc7cc8": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "well this partitioning\u00a0\u00a0 works in terms of dividing the array into\u00a0\ntwo or the list into two smaller parts.\n \n\u00a0 So, partitioning itself takes linear time,\u00a0\nbecause we saw that in one scan of the list,\u00a0\u00a0 we can do the partitioning. But the\u00a0\nreal question is"
+    },
+    "bcb1a3ad-a798-4cbd-b4d0-1b4d1b8be3ee": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": ", what are we partition,\u00a0\u00a0 partitioning with respect to. So, if the pivot\u00a0\nis actually the median, then we know that the\u00a0\u00a0 two halves are roughly equal in size. So, we\u00a0\nknow that the lower half has half the elements,\u00a0\u00a0 the upper half has half the elements."
+    },
+    "a7aa74f6-8d77-4a08-9fcc-aa8802a09ef3": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " So, we get\u00a0\nour familiar merge sort recurrence, which is Tn\u00a0\u00a0 is 2 of T2 times n by 2 plus the partitioning\u00a0\ncost of n and we get an n log n algorithm.\n\u00a0 If this were indeed the case, we would\u00a0\nbe in business because now we have got an\u00a0\u00a0 in place algorith"
+    },
+    "76d5decf-36fc-4dde-b7c5-6264900eedc3": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "m, which I also claimed can be\u00a0\ndone iteratively. But it does not have the cost of\u00a0\u00a0 the recursion and the extra space of merge sort,\u00a0\nbut it is as good theoretically as an upper bound.\u00a0\u00a0 But unfortunately, this is not going to be the\u00a0\ncase. So, in the wor"
+    },
+    "517278f1-8647-457d-9dd5-e8ce94d0dbbe": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "st case, because you have no\u00a0\u00a0 control over the pivot, because it is picking it\u00a0\nup from someplace in the list, the first element\u00a0\u00a0 of the list need not be the median. You are just\u00a0\npicking it up without analyzing the values.\n\u00a0 In the worst case is either "
+    },
+    "3c37118f-7f0a-48ff-be05-59e813acd3b6": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "the\u00a0\nsmallest or the largest value.\u00a0\u00a0 So, if it is the smallest or the largest value,\u00a0\nwhat will happen is that every other value will be\u00a0\u00a0 either smaller than it or bigger than it. So, one\u00a0\nof the two partitions, either everything will go\u00a0\u00a0 into the lower"
+    },
+    "314f2485-7667-4694-afee-f59aca4d6ddc": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " part and nothing will go into the\u00a0\nupper part or everything will go into the upper\u00a0\u00a0 part and nothing will go into the lower part. So,\u00a0\nworst case, your partitions will have size 0 and n\u00a0\u00a0 minus 1, instead of n by 2, n by 2, of course,\u00a0\nthe pivot will not"
+    },
+    "f8ecec5a-6fb1-4fbf-be82-a4876cf4b88e": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " be there, so n will reduce.\u00a0\u00a0 But it will reduce in this very asymmetric way,\u00a0\neither the lower will be empty and the upper will\u00a0\u00a0 be n minus 1 elements or the lower will have\u00a0\nn minus 1 elements and the upper will have.\n\u00a0 So, remember this worst case. We"
+    },
+    "0fe779e5-f206-465a-ac73-069b9541aa2c": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " cannot\u00a0\navoid the worst case. So, this might happen.\u00a0\u00a0 So, in this case, then the recurrence\u00a0\nin the worst case says that to sort n,\u00a0\u00a0 I end up having to sort the larger of the two\u00a0\npartitions, which in this case is n minus 1\u00a0\u00a0 and I have spent order n wo"
+    },
+    "a6de40ff-2683-4fb8-a71a-757eb2d6dd9a": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "rk getting there.\u00a0\nSo, I have exactly the same recurrence that we\u00a0\u00a0 had for selection, for insertion sort when we\u00a0\ndid it recursively. So, I have Tn is T n minus\u00a0\u00a0 1 plus n and this ends up being n square.\nSo, unfortunately, this very clever strategy\u00a0\u00a0 of "
+    },
+    "2de0cc8a-4b70-4df6-9bf5-03db43abf113": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "avoiding the merge has a worst\u00a0\ncase complexity, which is n square.\u00a0\u00a0 And what is the worst case? Well, paradoxically,\u00a0\nthe worst case is one where in fact,\u00a0\u00a0 the array is already sorted. So, for instance,\u00a0\nif I am sorting it in ascending order\u00a0\u00a0 and I giv"
+    },
+    "dead8adc-5655-4e6c-82f8-7a7b36896fd8": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "e you an array in ascending order\u00a0\nand I pick the first element as a pivot,\u00a0\u00a0 then the first element is going to be the\u00a0\nsmallest one. So, it is going to produce an upper\u00a0\u00a0 partition consisting all\u00a0\nthe remaining elements.\n\u00a0 But remember, they are going to"
+    },
+    "c4130095-5535-442f-87d6-b155ae38dd0c": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " be generated in\u00a0\nthe same sequence. So, the upper partition will\u00a0\u00a0 again be a sorted sequence with the first element\u00a0\nis the smallest one. So, if I pick that one,\u00a0\u00a0 again, it is going to produce an upper thing\u00a0\nwith n minus 2 sorted things and so on.\u00a0\u00a0 So"
+    },
+    "03fbaba0-dfcb-4073-b71d-066652ba380b": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": ", the case which is actually bad is the case\u00a0\nwhich should be good. Like we said in insertion\u00a0\u00a0 sort I give you an already sorted sequence in\u00a0\nthe correct sequence sorted in the same sequence\u00a0\u00a0 that I am looking for. It will actually work\u00a0\nwell. Here, it a"
+    },
+    "541e01b1-b733-4a39-a320-0184387e9301": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "ctually works very badly.\n \n\u00a0 But there is some silver lining. So, actually,\u00a0\none can show that the average case for quicksort,\u00a0\u00a0 we are not going to prove it, but I am just\u00a0\ngoing to claim it. The average case is m log n.\u00a0\u00a0 So, we had a discussion earlier"
+    },
+    "0cf13d19-45c2-476e-a660-85178c2ddc0e": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " about what this\u00a0\nentails. Average case means we have to talk about\u00a0\u00a0 all inputs, some distribution over the inputs, and\u00a0\nthen somehow look at the expected running time and\u00a0\u00a0 all that. So, in this case, how does it work?\nWell, the first thing that is there"
+    },
+    "8eb3a06f-d972-4fd2-9090-1229583422fc": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " is that in\u00a0\u00a0 principle you have infinitely many arrays of a\u00a0\nfixed length. Even if I say that the length is\u00a0\u00a0 n, there is no limit to the number of arrays or\u00a0\nlists you can construct of length n, because you\u00a0\u00a0 can keep changing the values arbitrarily. But"
+    },
+    "7d5ed0ef-896d-4996-8e11-7f6384cb2e56": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "\u00a0\nwhen I am doing compare and swap as my sorting,\u00a0\u00a0 it really does not matter where, if I give you a\u00a0\nlist with 1, 2, 3 and if I give a list of 10, 20,\u00a0\u00a0 30, it really does not matter. They are both the\u00a0\nsame list as far as the algorithm is concerned,\u00a0\u00a0 be"
+    },
+    "9ddb3db2-34b6-4a11-bb40-bcc560f67307": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "cause the first position is smaller than second\u00a0\nposition is smaller than the third position.\n\u00a0 So, the actual values are not important.\u00a0\nWhat is important is their relative order,\u00a0\u00a0 which is the biggest one, which is the second\u00a0\nbiggest one. So, I can alw"
+    },
+    "231856f9-07b9-4f49-a245-a84dd3a46bc1": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "ays think of any input\u00a0\u00a0 of size n as being a permutation of n elements. It\u00a0\ntells me the biggest element is in one position,\u00a0\u00a0 the second biggest is somewhere else, and so on.\u00a0\nIt really does not matter what the values are.\u00a0\u00a0 So, this allows me to now fir"
+    },
+    "33196cfd-0a1c-4ac9-adb7-f565a5580b6d": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "st bound the space\u00a0\nover which I am calculating the probability.\u00a0\u00a0 I can say that for input of size n, I am\u00a0\nlooking at all n factorial permutations of\u00a0\u00a0 1 to n. And then I have to make an assumption.\nBut in the case of sorting you can imagine that\u00a0\u00a0 someb"
+    },
+    "4fd77209-f15b-42fb-b926-34985aec036d": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "ody is giving you a list to sort there is\u00a0\nno bias, every permutation is equally likely. So,\u00a0\u00a0 you can assume that for the probability part\u00a0\nthat each is equally likely. And then because\u00a0\u00a0 it is exhaustive, you can actually do a count and\u00a0\nverify this. So,"
+    },
+    "5c9ea4bd-5b28-4ad2-ae02-c869c025b299": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " that is how this thing comes out,\u00a0\u00a0 saying that the expected running time for\u00a0\ninputs of size n over all permutations of size n\u00a0\u00a0 you can actually calculate its n log n, even\u00a0\nthough there are going to be some inputs which\u00a0\u00a0 are going to be worst case n s"
+    },
+    "a8780b6a-af36-4dc0-9b5f-f3dbc61bae26": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "quare. \nSo, although, so, therefore, in some sense,\u00a0\u00a0 n square is a rare case, because n log n turns\u00a0\nout to be the average case. So, this is not\u00a0\u00a0 possible for most scenarios and algorithms, but\u00a0\nfor sorting it is possible. And in particular,\u00a0\u00a0 it has bee"
+    },
+    "e626c7da-f1e5-451a-bf68-0acffb971b37": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "n done for quicksort to show that\u00a0\nits expected running times n log n.\n \n\u00a0 So, there is another way to beat, I mean,\u00a0\nto exploit this to beat this worst case in\u00a0\u00a0 the case of quicksort. So, the real problem with\u00a0\nquicksort turns out to be that choosing the"
+    },
+    "3e204b56-65e1-4021-bb39-afad8bad033a": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " pivot\u00a0\u00a0 using a fixed position gives us a problem. So,\u00a0\nwe saw that if the first position is our pivot,\u00a0\u00a0 then if we put the smallest value at the first\u00a0\nposition each time, we can kind of build up\u00a0\u00a0 an array or a list which will always\u00a0\ngive us a worst c"
+    },
+    "5066d554-4206-4c97-be25-f67435174974": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "ase behavior.\n\u00a0 Supposing you say, no, I am not going to take\u00a0\nthe first position, I am going to take the\u00a0\u00a0 last position, then I will give you a symmetric\u00a0\ninput, which will be bad for that. If you say,\u00a0\u00a0 I am going to pick the middle position, then I\u00a0\nca"
+    },
+    "bf7d07ce-f075-4cc0-bf73-909a0f0a903c": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "n make sure that in the input I construct that\u00a0\u00a0 the first element, the extreme element is going\u00a0\nto be the middle, then I will run your quicksort\u00a0\u00a0 implementation to figure out what time is left,\u00a0\nwhat happened the lies and then I can put again\u00a0\u00a0 the seco"
+    },
+    "14e408df-5247-4256-a112-a82b97f24860": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "nd minimum and the third minimum at the\u00a0\nmidpoints of the two partitions that you find. \n\u00a0 So, I can always reconstruct a worst case\u00a0\nand put if you have a fixed strategy for\u00a0\u00a0 finding the pivot. So, what is the solution?\u00a0\nThe solution is that you do not h"
+    },
+    "add22da3-00f0-470c-b92c-591cb71c6866": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "ave a fixed\u00a0\u00a0 strategy. At every time when you want to\u00a0\nrun quicksort, you have to fix a pivot\u00a0\u00a0 and then partition. But you do not fix a\u00a0\npivot by choosing the first element or the\u00a0\u00a0 middle element or the last element, you kind\u00a0\nof pick a random value bet"
+    },
+    "776482c7-03aa-444e-97c7-ce6407f032eb": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "ween 0 and n minus 1,\u00a0\u00a0 uniformly. So, you just generate a random number\u00a0\nuniformly with probability 1 by n between 0 and\u00a0\u00a0 n minus 1 and you say, okay, for now, this is\u00a0\nthe pivot, next time will be something else.\n\u00a0 So, since you are picking the pivot at"
+    },
+    "a41f6acc-d785-4aa7-8af0-bf08f2007916": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " random,\u00a0\nthere is no way to, I mean, in some sense,\u00a0\u00a0 intuitively for somebody adversarial to give\u00a0\nyou a bad input. So, if you do the calculation\u00a0\u00a0 in this randomize sense, where each time you\u00a0\npick the pivot, so this pivot is not always the\u00a0\u00a0 left-hand "
+    },
+    "c3d2f458-2c4d-4561-84e9-a6ae4702dd82": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "side of your list, but it is some random\u00a0\nposition, which you calculate with each iteration,\u00a0\u00a0 then it turns out that again you can show that\u00a0\nyou have an expected running time of n log n. So,\u00a0\u00a0 this is a different way of achieving that average\u00a0\ncase. And "
+    },
+    "756a8355-4a30-4909-879b-53d4abbc1d84": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "it is an easier way in some sense,\u00a0\u00a0 because what it means is that when you actually\u00a0\nimplement it, if somebody gives you a worst case\u00a0\u00a0 input your algorithm is not necessarily\u00a0\ngoing to be stuck in that worst case.\n \n\u00a0 We also mentioned this iterative qui"
+    },
+    "b3f5d5a6-d3c1-4ca2-84bc-6abcd6381f04": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "cksort. So,\u00a0\nI will not go into it in much detail. But just to\u00a0\u00a0 suffice to say that, basically these calls are\u00a0\nhappening on disjoint parts of the array. So,\u00a0\u00a0 since I am anyway telling quicksort to work within\u00a0\na bounded interval from left to right, when"
+    },
+    "09997c16-bf93-48cd-9719-144c66f73903": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": " I work\u00a0\u00a0 on this interval it does not influence anything\u00a0\nelse, when I work in that. So, I can always\u00a0\u00a0 rewrite this code to work iteratively on each\u00a0\nsegment between l and r minus 1. So, I would not\u00a0\u00a0 go into the details, but you can convince\u00a0\nyourself t"
+    },
+    "f2e9feba-3359-4517-b7f2-2bc3eaba1d7a": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "hat this algorithm can actually be\u00a0\u00a0 implemented iteratively. So, when we are\u00a0\ndoing this iterative thing, we have to each\u00a0\u00a0 time when we are running quicksort, we have\u00a0\nto know between which r we are working.\n \n\u00a0 So, given all this, you might ask why are "
+    },
+    "72b2f064-5beb-4535-babf-7e2f7baf5215": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "we so\u00a0\ninterested in quicksort? Well, it turns out that\u00a0\u00a0 quicksort despite its order n square upper bound\u00a0\nis actually very fast in practice. So, in many\u00a0\u00a0 situations you use built in sorting. You take a\u00a0\nspreadsheet, you take a column and you say sort\u00a0\u00a0 "
+    },
+    "09d36ef6-109e-47b8-9637-4af819d1a9a5": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "it, or you might have a sort function which you\u00a0\ncan call like we have in Python, like l dot sort\u00a0\u00a0 or sorted, so you might have a function that you\u00a0\ncan call for free in a programming language. You\u00a0\u00a0 do not have implement it. So, in many such cases,\u00a0\nactu"
+    },
+    "70fbe656-6f38-42ce-8768-6b4d1d8bdf85": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "ally quicksort is the algorithm that is used.\u00a0\u00a0 So, that shows basically that despite the worst\u00a0\ncase it actually works this implementation without\u00a0\u00a0 the overhead of merge sort actually makes it\u00a0\ncompetitive and very efficient in practice.\n \n\u00a0 So, to summa"
+    },
+    "7354c266-3dd9-4ddf-b77a-4e31188d66c0": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "rize, the worst case\u00a0\ncomplexity is n square, but actually\u00a0\u00a0 you can calculate the average is n log n.\u00a0\nAnd one way to kind of achieve this average\u00a0\u00a0 is to have a randomized strategy to choose\u00a0\nthe pivot. So, at each time you want to\u00a0\u00a0 pivot the thing you "
+    },
+    "b31f61fe-35cb-40d7-8540-bd72af3bffd6": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "pick a position with uniform\u00a0\nprobability between the beginning and the end.\u00a0\u00a0 So, quicksort overcomes some of the limitations\u00a0\nof merge sort, in that it works in place,\u00a0\u00a0 it does not require you to construct a new\u00a0\narray, even though it is can be implemen"
+    },
+    "1ce471b7-f8ad-4ee9-866c-4405c61453b9": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "ted\u00a0\u00a0 recursively and it also can be implemented\u00a0\nnon-recursively, it can be done iteratively. \n\u00a0 And the main selling point of quicksort is\u00a0\nthat it is very fast in practice. So, it is\u00a0\u00a0 often used for built-in sorting functions and it\u00a0\nkind of illustrate"
+    },
+    "ec48f172-4db5-413a-b878-a8cd8040d7c2": {
+        "content_id": 23,
+        "course_name": "PDSA",
+        "title": "Analysis of Quicksort",
+        "week": 3,
+        "chunk": "s the point that we made that\u00a0\u00a0 using upper bound as a prediction of\u00a0\nthe overall behavior of an algorithm is\u00a0\u00a0 often very pessimistic and this is one real life\u00a0\nsituation where this pessimism actually shows up."
+    }
+}

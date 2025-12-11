@@ -1,0 +1,254 @@
+{
+    "b6e8c722-5ee2-41af-8c17-2ec03f6ddb2a": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "So, let us take a look at how this\u00a0\nJupyter notebook works in Colab. \n\u00a0 So, if you go to this Colab url,\u00a0\ncolab.research.google.com and you have logged in,\u00a0\u00a0 then it might show you what you have seen, done\u00a0\nbefore or it will give you an empty menu and ask\u00a0"
+    },
+    "d4dd984e-c0cd-4422-942d-28b1eaddc0d9": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "\u00a0 you whether you want to import something say\u00a0\nyou can take something from your Google Drive\u00a0\u00a0 or you can upload something from\u00a0\nyour computer and so on. \n\u00a0 So, here we have already, I have already done\u00a0\nsomething, so let me just open something that\u00a0\u00a0 we "
+    },
+    "3f706936-e3e4-458c-b3d9-cf15d3e40284": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "have, I have already used. So, this is the\u00a0\ncode which I was, had used as the backdrop of the\u00a0\u00a0 slides of the first lecture. So, notice now that\u00a0\nwe have cells. So, we have a cell here, we have a\u00a0\u00a0 cell here, we have a cell here and so on. \nSo, this is tha"
+    },
+    "6420784b-5b20-4995-9294-cfe3cd55bc87": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "t one dimensional kind of\u00a0\u00a0 spreadsheet structure that I talked about and if\u00a0\nyou look at the left of each cell there is a kind\u00a0\u00a0 of bracket there, so this indicates whether cell\u00a0\nhas been run or not. So, at the moment none of\u00a0\u00a0 these cells have been execu"
+    },
+    "61b211e7-46a0-4a71-b5fb-2847e55f45a2": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "ted. The other thing is\u00a0\nthat we have this text over here and we have code\u00a0\u00a0 over here, so these are these two different types\u00a0\nof cell and Colab allows you to add new cells. \n\u00a0 So, if I say plus code on the top it adds a\u00a0\ncell in which I can type code and"
+    },
+    "6d9f8aea-6876-44c0-a0ae-cce07c8b8996": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " if I say\u00a0\u00a0 plus text it will add a cell in which I can do\u00a0\ndocumentation. So, now if I go to a text cell\u00a0\u00a0 for example, and I edit it right then you see\u00a0\nthis Markdown syntax. So, this Markdown syntax\u00a0\u00a0 is basically saying that this double hash\u00a0\nis giving"
+    },
+    "ff021c9e-68ad-4c9d-bebd-2bf90e93ed4d": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " me this kind of a heading.  \n\u00a0 If I use a single hash, you will see that\u00a0\nthis thing will actually become bigger,\u00a0\u00a0 so you notice that it actually displaying, Colab\u00a0\ndisplays this, Jupyter notebook will not display,\u00a0\u00a0 you have to execute the cell, but if "
+    },
+    "c7e754d2-1792-4e1e-8cbe-71e0f002c008": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "I come out\u00a0\nof the cell now it has become bigger. The other\u00a0\u00a0 things I can do here for instance is I can\u00a0\nkind of create, so I said that you can use\u00a0\u00a0 text like formatting. \nSo, you can say,\u00a0\u00a0 so you can use formatting like this, this hyphen\u00a0\nand this will"
+    },
+    "7f711fce-5240-4445-864f-78a6d1002ee9": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " automatically come out as you can\u00a0\u00a0 see on the right as some bulleted items in\u00a0\nthe list, so of course, now in this Colab\u00a0\u00a0 environment this is not true in the normal Jupyter\u00a0\nnotebook that you would run on your laptop,\u00a0\u00a0 it actually allows you to do this"
+    },
+    "4baf499b-4507-4983-80a1-33b04fdfef0f": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " using this\u00a0\ninterface where you can say that I want to\u00a0\u00a0 kind of add, say a bulleted item and so on. \nSo, you can actually do this directly,\u00a0\u00a0 but normally you have to use this Markdown. So,\u00a0\nit is still doing it in Markdown, as you can\u00a0\u00a0 see it is using "
+    },
+    "d1ac8a74-d22d-4b1a-8ad5-c3724a68a32e": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "star, so minus gives\u00a0\nyou a bulleted item, star also so,\u00a0\u00a0 Markdown is flexible, so you get this kind\u00a0\nof text and it gives you documentation. \n\u00a0 Now, when you come down to the code for instance,\u00a0\nnow at the moment none of these have been run.\u00a0\u00a0 So, here I"
+    },
+    "e94e0645-d03d-4079-9ee7-39326029f37c": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " have, so this code\u00a0\nlet me explain what is doing. So,\u00a0\u00a0 this first function factors is creating the list\u00a0\nof factors of a number n, so it is running from\u00a0\u00a0 1 to n and it is checking all the numbers,\u00a0\nwhich divide n and putting them into a list\u00a0\u00a0 of factor"
+    },
+    "4063148d-1785-4ad6-80ed-ea4302bc7af1": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "s. So, that is factors of n. \nAnd then there are two definitions of prime,\u00a0\u00a0 the first definition of prime checks whether\u00a0\nthe factors of n is precisely 1 comma n,\u00a0\u00a0 the second definition of prime checks\u00a0\nwhether the length of this factors list\u00a0\u00a0 is exactl"
+    },
+    "ec4c222e-1101-4e94-9d0b-c867c1cc59cf": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "y 2, both are the same, because if there\u00a0\nare exactly two factors there must be one comma n,\u00a0\u00a0 but these are just two different to show you that\u00a0\nyou can have the same function defined in two\u00a0\u00a0 different ways coexisting inside the notebook. \nAt the moment "
+    },
+    "894ae5ea-9942-4a22-89f4-44f5d9e2869c": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "neither of these is active because\u00a0\u00a0 I have not run anything. And finally here is a\u00a0\nfunction a piece of code, it is not a function\u00a0\u00a0 actually. It is a piece of code which actually\u00a0\ncomputes all the primes from 1 to 100. So,\u00a0\u00a0 it takes i in the range 100, "
+    },
+    "8fcd3781-c45c-4910-9c32-ba55b7b629fd": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "and if i is a\u00a0\nprime then it appends it to the prime list\u00a0\u00a0 and finally it prints the prime list. Now,\u00a0\nsee that there is some output at the bottom.\u00a0\u00a0 So, this code actually was run before. \nAnd this is what I meant earlier when I said\u00a0\u00a0 you can export the"
+    },
+    "f32edcc7-61b9-4f8b-b54a-376ad189a6df": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " notebook with the output, so\u00a0\neven though I have not run the code even once,\u00a0\u00a0 the output is there so that you can show it\u00a0\nto somebody, saying this is what happened\u00a0\u00a0 when I ran the code the last time right, so the\u00a0\noutput is preserved when you save this"
+    },
+    "b2c15412-9d22-4512-bb31-2ce0464b9fe2": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " file or\u00a0\u00a0 in Colab it is automatically saved like a Google\u00a0\ndocument. So, when you reload it or you send it\u00a0\u00a0 to somebody they will be able to open it and see\u00a0\nthe same output that you saw when you ran it. \n\u00a0 So, now let us see what happens if I try to\u00a0\nr"
+    },
+    "a00c4cf0-7021-4cc2-aee0-a30e1e822e86": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "un this code. So, if I kind of hover over\u00a0\u00a0 these things I get this run\u00a0\nsymbol, so if I run this code\u00a0\u00a0 now it is going to complain because I have\u00a0\nnot run the code before it, so in the current\u00a0\u00a0 environment the functions prime and factors which\u00a0\nare used"
+    },
+    "56b9b7bd-58cf-469d-bea1-91321a0f7bde": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " here are not there, so in particular I\u00a0\u00a0 get the standard Python error which says name\u00a0\nerror, the name prime is not defined. \n \n\u00a0 So, that means IS must go and define one of\u00a0\nthese two prime, so let me say take the second\u00a0\u00a0 one. Now if I try to do that t"
+    },
+    "1bdf6944-b5f6-4a82-a3c3-c2b6f9587dab": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "hen it goes\u00a0\nthrough, but now if I try to run this thing,\u00a0\u00a0 now prime is defined but I am going to get a\u00a0\ndifferent error saying that inside prime the\u00a0\u00a0 name factors is not defined. So, these are all\u00a0\nthings which are only available at runtime. \n\u00a0 So, when"
+    },
+    "5c44f32b-25cc-4f1d-b2eb-901f1f5bd685": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " I compile a function in some sense,\u00a0\nwhen I run a function definition it does not\u00a0\u00a0 check that those values at the function definition\u00a0\nuses are defined because it will not know that,\u00a0\u00a0 few factors could have been some kind of a global\u00a0\nvariable as far as"
+    },
+    "c1f7bf7f-58c5-439f-801f-8d4bb662390f": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " the function is concerned, so\u00a0\u00a0 it has no idea what to do with that factors. \nSo, now that I know that it still does not run\u00a0\u00a0 I go back and I run factors right and now that I\u00a0\nhave run factors this prime list will now run, now\u00a0\u00a0 I can run prime list and "
+    },
+    "7d140cea-5d96-491d-b516-21fdbec7b77f": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "this time it will execute\u00a0\nand produce the same output that I saw before.\u00a0\u00a0 So, two things to understand, one is that this\u00a0\noutput was there before, but these functions were\u00a0\u00a0 not run and now if you look carefully, it is not\u00a0\neasy to see, but there are num"
+    },
+    "2cbbc5c7-2537-4ea8-8d80-96064cf5c101": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "bers inside these\u00a0\u00a0 boxes. So, it is, actually I executed these cells\u00a0\nin a particular order, so there is some one,\u00a0\u00a0 two, and this is called four, because\u00a0\nI ran this a third time in between. \n\u00a0 Now, I can now for instance take this function,\u00a0\nthis defini"
+    },
+    "c4c9f460-31cf-47a9-9674-03dc23fab9bb": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "tion of prime and run it. What this\u00a0\u00a0 does is it takes the previous definition of\u00a0\nprime and replaces it by this definition. So,\u00a0\u00a0 the most recently defined version of prime is\u00a0\navailable in manual, so if I run this code again,\u00a0\u00a0 of course, in this case th"
+    },
+    "dfe75c55-add0-4dd0-aceb-bed02a116800": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "ere is no big difference\u00a0\nbecause it is going to be the same thing,\u00a0\u00a0 is going to produce the same output. \nBut supposing I make a mistake,\u00a0\u00a0 so supposing I, instead of equal to equal to I\u00a0\nsay not equal to, so supposing I say a number is\u00a0\u00a0 prime if the li"
+    },
+    "7d18b938-bad1-4faa-a50b-397589449c5d": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "st of factors is not one comma n,\u00a0\nin other words I have exactly negated the thing,\u00a0\u00a0 so I have got factors other than one comma n. Now,\u00a0\nsupposing I call this my definition of primes and\u00a0\u00a0 now I run this then what I will get is? \nI will get a list of non-"
+    },
+    "ada33e79-c7fc-4604-ba99-fe65e96278f7": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "primes, I get 2 and\u00a0\u00a0 3 are skipped, I get 1, which is not a prime,\u00a0\n2 and 3 are skipped, which are primes, I get 4,\u00a0\u00a0 I skip 5, I get 6 and so on. Now, if I go back\u00a0\nand I take the correct definition of prime which I\u00a0\u00a0 have not changed and I run this agai"
+    },
+    "07906606-3c8d-4365-8c18-d3553fd02122": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "n, then I get\u00a0\nthe primes again. So, this is the nice thing about\u00a0\u00a0 this notebook that you can dynamically\u2026 \nSo, in this case I made a mistake,\u00a0\u00a0 but you can have two different definitions of a\u00a0\nfunction, you can kind of interplay between them\u00a0\u00a0 and you ca"
+    },
+    "4ea8038d-6fb0-4efb-85fa-2d63d5ee6c62": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "n come back and run your code,\u00a0\nwithout having to go back and do a lot of\u00a0\u00a0 copying and pasting and editing and all that, so\u00a0\nsome subset of these cells are available and the\u00a0\u00a0 current state of the cells is what is basically\u00a0\naccording to the dynamics of h"
+    },
+    "f7fe3b90-4561-4370-a631-83f9e1813ece": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "ow you ran them. \n\u00a0 So, let us look at this other example. So, here\u00a0\nis that sine curve which I had shown in the slide.\u00a0\u00a0 So, the sine curve, again the previous plot\u00a0\nis available, it is not that it is run,\u00a0\u00a0 so now if change, for example, this function\u00a0\ns"
+    },
+    "39fdc716-2ea4-461b-9909-2abed96208ba": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "in to cosine, so if you know your trigonometry,\u00a0\u00a0 you will know that cosine is basically\u00a0\ngoing to be the mirror image of sin. \n\u00a0 So, this particular thing goes up and then\u00a0\ndown, so cosine will go down and then up.\u00a0\u00a0 So, if I run this code now, it is goin"
+    },
+    "954bfa5a-758e-45eb-9c08-84751b698491": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "g to\u00a0\nrecompute that plot and now it is going to\u00a0\u00a0 start from above and go down, so I get a kind\u00a0\nof flipped version of the sin thing because\u00a0\u00a0 sin and cosine are flipped. So, this is a\u00a0\nkind of dynamic environment in which I can,\u00a0\u00a0 now if I save, so this "
+    },
+    "20311489-5de1-4430-a89a-9db5e83be958": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": "file now will have, at this\u00a0\njuncture will have whatever changes I made. \n\u00a0 So, if I share this with you now, you will see\u00a0\nwhatever updates I made now and in general I\u00a0\u00a0 can change it yet again and present you a\u00a0\nversion which is instructive in terms of\u00a0\u00a0"
+    },
+    "70c7bff1-f23d-4c9b-aee9-f2e7f0c32cbe": {
+        "content_id": 2,
+        "course_name": "PDSA",
+        "title": "Implementation of Python Codes - Part 01",
+        "week": 1,
+        "chunk": " text and in terms of outputs and then\u00a0\nyou can take it and further run it,\u00a0\u00a0 so that is the advantage of\u00a0\nusing this Jupyter notebook. "
+    }
+}

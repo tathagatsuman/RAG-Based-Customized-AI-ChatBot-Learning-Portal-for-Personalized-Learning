@@ -1,0 +1,765 @@
+{
+    "cf4da580-643e-4d52-b60f-25e169a823d6": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "So last time we saw that heaps can be\u00a0\nused to implement a priority queue.\n\u00a0 So, remember that in a priority\u00a0\nqueue, there are two basic operations,\u00a0\u00a0 insert which adds an element and delete max. So,\u00a0\nin a priority queue each element has a priority,\u00a0\u00a0 so w"
+    },
+    "2fc23159-41e4-4266-872c-1f6cb969babf": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "hen you remove an element from the\u00a0\nqueue you must remove the one with the\u00a0\u00a0 highest priority not the one that was\u00a0\ninserted earliest. So, in a normal queue,\u00a0\u00a0 it is first in first out, whereas here you look\u00a0\nat all the elements that are there and you take"
+    },
+    "4f555d88-0254-41d5-b331-62b2e91a95dd": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "\u00a0\u00a0 out the one with the highest priority.\nNow you could dually also take out the\u00a0\u00a0 one with the lowest priority in\u00a0\nwhich case it could be delete min.\u00a0\u00a0 So, we could implement this in an efficient\u00a0\nmanner using heaps, so heaps are balanced trees,\u00a0\u00a0 balance"
+    },
+    "940e5b17-cb47-4ef5-83eb-d881195b335b": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "d binary trees, in which insert and delete\u00a0\nmax or delete min can both be done in log n time\u00a0\u00a0 if there are n elements currently in the heap.\nAnd then to start with you must make a heap so we\u00a0\u00a0 saw that you could take a list of n elements and\u00a0\nconstruct a "
+    },
+    "3c49a8a1-c4ba-42e9-8c00-e42a9a8e19ac": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "heap from it in order n time. The main\u00a0\u00a0 advantage of working with heaps is that because of\u00a0\nthe balanced structure remember that the heap is\u00a0\u00a0 filled layer by layer left to right you can now\u00a0\nindex the heap starting with the index zero for\u00a0\u00a0 the root 1 an"
+    },
+    "428e27a6-9231-42d4-9c3e-13de1c06c613": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "d 2 for its children and so on.\nAnd then by just doing a simple index calculation,\u00a0\u00a0 if you remember 2i plus 1, 2i plus 2 will give\u00a0\nyou the children of i. And if you take i minus\u00a0\u00a0 1 and take divide by two integers, you will get\u00a0\nthe parent of a node. So,"
+    },
+    "c960c151-378a-4206-b3ee-4618598270bb": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " we do not actually have\u00a0\u00a0 to maintain a graph like structure we can\u00a0\njust work with a list or an array and just\u00a0\u00a0 move around in the array using the simple index\u00a0\narithmetic to get from parents to children.\n\u00a0 So now that we have this heap in which we can\u00a0"
+    },
+    "b7a52c4c-5d99-42fb-9eca-860647df32c6": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "\nmaintain these values, so that we can extract\u00a0\u00a0 the minimum or the maximum in logarithmic time,\u00a0\nand also insert in logarithmic time, what more\u00a0\u00a0 do we need to use it in an algorithm? And which\u00a0\nalgorithm are we actually going to use it in?\n\u00a0 So, the reas"
+    },
+    "65001d79-5dc0-478e-a8bc-3c922f303ed8": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "on that we started looking at heaps\u00a0\nto begin with is, because of Dijkstra algorithm,\u00a0\u00a0 if you remember in Dijkstra algorithm, what\u00a0\nwe do is we start with a single vertex,\u00a0\u00a0 and then we keep updating the distances to all\u00a0\nthe remaining vertices based on t"
+    },
+    "2b3d1c5d-f378-4d66-804c-38ef9cf90868": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "he values we\u00a0\u00a0 have already visited. So initially, we\u00a0\ndo not know anything about any distance,\u00a0\u00a0 then we start with one vertex, it is at distance\u00a0\nzero, then we update the values of it neighbors,\u00a0\u00a0 then pick the nearest neighbor go to that\u00a0\nupdate the val"
+    },
+    "e82ae8f0-1da4-4444-a73b-7417bd07b22c": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ues of its neighbors and so on.\n\u00a0 So, in this way, we sequentially visit all\u00a0\nthe vertices in the order of the distance\u00a0\u00a0 from the starting node. So, we have\u00a0\nto maintain these two dictionaries,\u00a0\u00a0 one which tells us which nodes have already been\u00a0\nvisited. "
+    },
+    "1b488d9c-0cd4-4445-9675-0b1e71e243a9": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "And the second one, which tells us how\u00a0\u00a0 far it is to each unvisited node. So, when it\u00a0\nis visited, the distance becomes frozen.\n\u00a0 After the distance after the note is visited,\u00a0\nyou do not find a shorter distance that was the\u00a0\u00a0 proof of Dijkstra algorithm,"
+    },
+    "efb96740-96d5-4b67-8853-d169e392e10a": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " but till it is\u00a0\nvisited, you will keep finding shorter paths\u00a0\u00a0 because you will discover new paths to it. So, you\u00a0\ninitialize this distance dictionary to infinity,\u00a0\u00a0 and then you initialize the start\u00a0\ndistance of the starting vertex. So,\u00a0\u00a0 this is this di"
+    },
+    "eff5ec84-ddae-409d-b480-3294abe62816": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "stance of s to zero, and then you\u00a0\nkeep finding the smallest unvisited vertex.\n\u00a0 So, you call that next vertex, the smallest\u00a0\ndistance unvisited vertex, you set its\u00a0\u00a0 visited status to prove and now this was the\u00a0\nproblem that you have to actually re comput"
+    },
+    "58d538ab-abcb-4c14-8cfc-1e232e39a067": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "e\u00a0\u00a0 the distance for all the neighbors of this\u00a0\nnew vertex. So, you have two problems here,\u00a0\u00a0 you have to find the unvisited vertex, and\u00a0\nyou have to update all the distances.\n\u00a0 So, the first bottleneck is to find this unvisited\u00a0\nvertex. And what we said w"
+    },
+    "507400a1-accd-4186-be1b-517d21bf9c73": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "as that there is\u00a0\u00a0 no simple way to do this, because the vertices\u00a0\nare not maintained in any particular structure.\u00a0\u00a0 So, we have to just scan all the vertices and\u00a0\ncheck. So, this is what we do here. So, we run a\u00a0\u00a0 loop saying, take every vertex that is no"
+    },
+    "4f09c452-363c-4ed2-afe7-c294d932497b": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "t visited\u00a0\nand find the one with the minimum distance. So,\u00a0\u00a0 we really have to do an order n scan in order\u00a0\nto find the next vertex at every iteration.\n\u00a0 And there are n iterations because we are\u00a0\nfinding the vertex to finding the distance\u00a0\u00a0 to n vertices."
+    },
+    "b7c2a21a-fc11-44cd-9e46-9a4de9e1255c": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " So that is what we got for our\u00a0\nn squared worst case complexity for Dijkstra.\u00a0\u00a0 So now our obvious suggestion is that we can\u00a0\nuse a min heap because what we want is we have\u00a0\u00a0 a collection of distances and we want to take\u00a0\nfrom this collection, the smalles"
+    },
+    "6c272b28-9632-459c-9565-9a6010398a41": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "t value or\u00a0\u00a0 a smallest value of more than one.\nSo, remember that this min actually gives\u00a0\u00a0 us a collection of values which could have\u00a0\nthe minimum distance and then we actually\u00a0\u00a0 take this next vertex list and pick the kind of\u00a0\nsmallest one in that. So ho"
+    },
+    "ce08bf22-1881-4520-849c-3bfafdc852f2": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "w do we do this? Well,\u00a0\u00a0 we should be able to keep a min heap. So, if we\u00a0\nkeep a min heap, so we keep the distances in a\u00a0\u00a0 min heap. Now why do we need a min heap because\u00a0\nwe need to delete the minimum, not the maximum.\n\u00a0 So, you take a min heap, remove th"
+    },
+    "8b21aa9d-6fe8-4caa-ac80-49ecea9a1567": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "e smallest\u00a0\nvertex. And what we have just seen is that this\u00a0\u00a0 deletes min should always work in logarithmic\u00a0\ntime. So therefore, if we do this n times,\u00a0\u00a0 we will have an n log n cost for finding\u00a0\nthe next vertex over our n iterations.\u00a0\u00a0 But there is still "
+    },
+    "505793e4-5bc1-4570-bfe4-359ad8dd5f58": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "one bottleneck,\u00a0\nwhich is this part. \n\u00a0 The bottleneck is not so much to do with\u00a0\nthe complexity of the loop here. But the\u00a0\u00a0 fact that we have to do something on the\u00a0\nheap which we have not described how to do,\u00a0\u00a0 so we have to take the elements on the\u00a0\nhea"
+    },
+    "3593169f-fd95-43fd-98ce-9468c56ac63a": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "p, which are all the unvisited vertices,\u00a0\u00a0 and we have to change their values, because the\u00a0\nvalues on the heap represent the distances. \n\u00a0 And when we visit a new vertex, the main property\u00a0\nthat we have to ensure is that now we recompute\u00a0\u00a0 the distances fr"
+    },
+    "ee01a54a-eb99-4701-925c-82d6d829d631": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "om this new vertex and see if\u00a0\nit is smaller than the distance we already knew.\u00a0\u00a0 And if it is smaller than we reduce it, so\u00a0\nwe take the minimum of these two distances,\u00a0\u00a0 the new distance and the old distance.\nBut so far, in a heap, we have not seen any\u00a0\u00a0"
+    },
+    "b10eed56-12c0-4638-8c23-9663c994a40a": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " possibility of modifying a value. We know how to\u00a0\ninsert a value. We know how to delete the maximum\u00a0\u00a0 or the minimum in this case is min a minimum.\u00a0\nBut how do you take an arbitrary value which,\u00a0\u00a0 so if it was a minimum value that we wanted\u00a0\nto change, it"
+    },
+    "71894055-8f47-4d8e-9437-e0423f9c3f68": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " would be easy, you delete it,\u00a0\u00a0 and then you insert the new value.\nBut we are changing some value, which\u00a0\u00a0 is neither the minimum nor is it a new value to be\u00a0\nadded, we have to take some arbitrary value in the\u00a0\u00a0 middle of the heap and change it. So, this "
+    },
+    "fef83adb-62b1-4352-b636-646b886eb068": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "means\u00a0\nthat we cannot directly use a heap for the access\u00a0\u00a0 algorithm without making some additional\u00a0\nobservations about how the heap works.\n\u00a0 So, what we are going to see now is how to\u00a0\nupdate values in a heap. So, what we have\u00a0\u00a0 seen earlier is how to ins"
+    },
+    "14cd7a26-e946-42cd-8a35-d040c3f2c19d": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ert a new value into\u00a0\na heap, add a node, delete the minimum value,\u00a0\u00a0 remove the value at the root, remove one node\u00a0\nat the bottom, and then readjust the heap.\u00a0\u00a0 And now we want to modify values.\nSo, supposing we take this value 54,\u00a0\u00a0 and we want to change"
+    },
+    "e1a386cf-c418-4af1-adda-7288a59ba2bc": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " it to 35. So if\u00a0\nwe update it to 35, then what happens\u00a0\u00a0 is that we could because now it is a min\u00a0\nheap, so each value has to be smaller than\u00a0\u00a0 its children. So, if I reduce this from 54,\u00a0\ndown to 35, it is definitely going to remain\u00a0\u00a0 smaller than its ch"
+    },
+    "11e53fd1-76bc-4817-9918-4e49bbfb5116": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ildren. 54 was already smaller\u00a0\nthan 68 and 59. I have taken 54 and made 35.\n\u00a0 So, there is no problem with its own children.\u00a0\nRemember, the heap properties are all local;\u00a0\u00a0 I only have to look at a node and its children.\u00a0\nAnd then inductively, it shows th"
+    },
+    "26d8e098-9f1a-47e0-9ce5-6e661a07cdaf": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "at the smallest\u00a0\u00a0 value must be at the root. So now, there\u00a0\nis no problem here. But what about here?\u00a0\u00a0 So here earlier, 38 was smaller than 54, and\u00a0\n47. But because I have reduced 54 to 35, I have\u00a0\u00a0 a violation of the heap condition with respect\u00a0\nto the pa"
+    },
+    "d785d8e9-b428-4b9f-aef9-9d920586e636": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "rent of the node that I am changing.\n\u00a0 So if I have a violation with respect to\u00a0\na parent, this is something that we have\u00a0\u00a0 seen before this happens typically, when we\u00a0\ninsert a new node, when we add a new node here,\u00a0\u00a0 it could very well be something like "
+    },
+    "6f3185b8-7d69-4b94-8ec3-b8ec4d15c109": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "11,\u00a0\nand it might be smaller than 47. And then\u00a0\u00a0 we have to do some work. And the work that\u00a0\nwe do is to swap it with its parents.\n\u00a0 So, we can do the same thing here, we find we\u00a0\nreduce the value, we check with its parent.\u00a0\u00a0 And then we exchange. So, simi"
+    },
+    "9d2bbe38-c586-4d4b-9183-57ad302a1be7": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "lar to insert,\u00a0\nwe exchange. And remember, similar to insert,\u00a0\u00a0 this is guaranteed to be smaller than this because\u00a0\n35 The reason I am swapping it is because it is\u00a0\u00a0 smaller than what its parent was 38. But that\u00a0\nparent was earlier smaller than 47 anyway,\u00a0"
+    },
+    "ea0fcb13-9ce7-42d2-a07f-a2a2d294d1f0": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "\u00a0 so by moving a smaller value up, I am not going\u00a0\nto violate the heap property on the other child.\u00a0\u00a0 Now, it so happens and stops here. \nBut supposing it had been 25, then 25\u00a0\u00a0 would have been exchanged one more time. And I\u00a0\nwould have got 29 here in 25 t"
+    },
+    "680bcae2-56bc-4fc8-a657-8016bccb608e": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "here. So, this is\u00a0\u00a0 very similar to insert, except we are starting\u00a0\nfrom not the bottom as we did an insert with a\u00a0\u00a0 new node but somewhere in the middle of the heap.\u00a0\nSo whenever in a min heap, we reduce the value,\u00a0\u00a0 it might need to be bubbled up the hea"
+    },
+    "902963b6-99aa-4819-bb75-2c63e222964b": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "p, swapping\u00a0\nwith its parents along the path to the root.\n\u00a0 And of course, the other problem or the\u00a0\nother kind of update we could do is to\u00a0\u00a0 increase the value. So, supposing I\u00a0\nnow take this value, and I make it 71.\u00a0\u00a0 Now, because in a min heap it must b"
+    },
+    "9bd5d97a-c043-4fcb-8934-6ecc66901f6a": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "e smaller\u00a0\nthan its children, the problem cannot come with\u00a0\u00a0 the parent of course, this is the root node but\u00a0\nsupposing I take this 31 for example, and made it\u00a0\u00a0 made it safe for instance 81.\nSo, this cannot create a problem with its parent\u00a0\u00a0 because it wa"
+    },
+    "419214cf-917d-4aff-b2b3-76601db13158": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "s already bigger than its parent\u00a0\nbecause the parent was smaller than it. So, 81,\u00a0\u00a0 31 was already bigger than 29. So, 81 will remain\u00a0\nbigger than 29. But the problem could happen here,\u00a0\u00a0 so 81 now becomes bigger than 61. So let us stick\u00a0\nto the example th"
+    },
+    "419d71e1-4c8b-4795-94a9-f0f35712c7c1": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "at we have. So let us not fix\u00a0\u00a0 this node, but fix 29. So, 29, we change to 71.\nSo, like we did, now, this is similar to the\u00a0\u00a0 delete min, this what this is what happens\u00a0\nsometimes when we, we delete the minimum,\u00a0\u00a0 and we put a big node A big value up\u00a0\nthe"
+    },
+    "611b6964-4107-4ec0-85da-52699eb6424c": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "re, and then we have to move it down,\u00a0\u00a0 so we move it down to the smaller of its children.\u00a0\nSo, 29 has to be exchanged with either 35 or 31.\u00a0\u00a0 But we want to move the smaller one up so that the\u00a0\nheap property is fixed it, so we will exchange it\u00a0\u00a0 from 71, "
+    },
+    "aa80259b-39d9-4c92-864e-ddf586f5c22c": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "we will exchange it on the right-hand\u00a0\nside. So, we have done an exchange here.\n\u00a0 And now 71 is still not in the right place,\u00a0\nbecause it is still bigger than 61. So, I have\u00a0\u00a0 to do it one more time. And then eventually, so\u00a0\n71 has come all the way down he"
+    },
+    "6ef19f21-ce5e-4fc7-849f-53ad9add9cf6": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "re and these two\u00a0\u00a0 values have gone, so this is very similar to\u00a0\nwhat happens when we delete the top element,\u00a0\u00a0 the root element, we delete the minimum, we\u00a0\nwill take a large the value which is at the\u00a0\u00a0 last leaf and move it there. But that could be an\u00a0\nar"
+    },
+    "3c3eb9fa-e574-4096-b25d-ada0b476b3cf": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "bitrary value need not be the new minimum. So,\u00a0\u00a0 then it has to bubble down.\nSo, these two update operations\u00a0\u00a0 are exactly like what you will do for\u00a0\nthe two other operations that we know,\u00a0\u00a0 insert and delete min. So, in this case, reducing\u00a0\na value behave"
+    },
+    "11d2a1e8-6000-4bca-ba6a-a18c11a55a8c": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "s like insert in terms of update you\u00a0\u00a0 have to make except you start from the middle of\u00a0\nthe heap. And similarly, increasing value causes\u00a0\u00a0 operations like delete min, except you start\u00a0\nsomewhere in the middle of the heap again.\n\u00a0 So, both of these updates"
+    },
+    "702f43a5-a058-4165-ac6c-f6552bdf87c2": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " are there\u00a0\nfor log n, because we know that insert\u00a0\u00a0 as a whole is log n. So, this is a special version\u00a0\nof insert in a sense. Similarly delete min is log\u00a0\u00a0 n. So now if that is the problem that we had,\u00a0\nhow to do that. So, remember the bottleneck that\u00a0\u00a0 w"
+    },
+    "5c143bdb-168c-4e95-bff3-b35b3fa1f99e": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "e had in Dijkstra algorithm was that at this\u00a0\npoint, we had to update all these things.\n\u00a0 And the question was, how do we do it in a heap,\u00a0\nbecause we did not know how to do it in a heap.\u00a0\u00a0 So, what we claim now is that you can do it\u00a0\nin a heap in log n ti"
+    },
+    "2ef85989-ffd6-4910-9cbd-6f9a3af1c627": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "me. But there is still\u00a0\u00a0 a small problem, which is when I say change 54\u00a0\nto 35, what I would really typically have is I\u00a0\u00a0 will have in my graph, I will have a vertex,\u00a0\nsay I will say that this is V7, and I will\u00a0\u00a0 say update the value of V7 from 54 to 35.\nS"
+    },
+    "4cc0f49c-4e8b-4001-b7e7-ced76bd4d045": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "o, I am talking about the values with respect\u00a0\u00a0 to the nodes in my original graph. Now, these\u00a0\nvalues have been moved around and they are\u00a0\u00a0 living somewhere in this heap. So, the question\u00a0\nthat I have to now resolve is, how do I find\u00a0\u00a0 that value 54 that I"
+    },
+    "de162136-3f42-4bbc-a780-94044d9905f4": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " wanted to change in this\u00a0\nheap. So, where, so, I have a node in my graph,\u00a0\u00a0 and I have a distance to that node. \nAnd that distance is currently sitting in the\u00a0\u00a0 heap in some position based on all the previous\u00a0\noperations that have happened, now, I want to"
+    },
+    "db445fc2-5ac3-43d1-9395-5303ac3b9f2c": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " make\u00a0\u00a0 this distance something else, I want to reduce\u00a0\nit. How will I go into that heap and find where\u00a0\u00a0 this distance is? because unfortunately,\u00a0\nthis heap has no other particular value,\u00a0\u00a0 notice that in this min heap, for instance.\nI have values on the "
+    },
+    "b9e5cf4d-41ee-485e-a3fd-5d4bb6e31e12": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "left, which are smaller\u00a0\u00a0 than the values in the right but I could also\u00a0\nhave values on the right which are smaller than\u00a0\u00a0 values on the left. So, there is no particular\u00a0\norder, once I go after the minimum property\u00a0\u00a0 within that within the neighborhood, th"
+    },
+    "427fcbb5-a86a-4576-a723-e862e217aa15": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ere is\u00a0\nno global property, which says where to find,\u00a0\u00a0 so finding will become an exhaustive search. If I\u00a0\nhave to find that value, I will be in trouble.\n\u00a0 So, in order to keep track of that, we have\u00a0\nto actually maintain a kind of separate index.\u00a0\u00a0 So, si"
+    },
+    "1acd60a3-c26d-42d1-9f9a-3d709d357443": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "nce we are talking in the context of\u00a0\ngraphs, like Dijkstra algorithm, I will assume\u00a0\u00a0 that the original values that I am keeping\u00a0\ntrack of are the vertices, and these vertices\u00a0\u00a0 live in the heap at some positions. Now, there\u00a0\nare n vertices, and there are"
+    },
+    "21daf114-da24-40ed-9a39-1afe3376d552": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " n positions. \n\u00a0 So, there is a one-to-one map, each vertex is\u00a0\nin a unique position, and each position has a\u00a0\u00a0 unique vertex. So, I want to keep track of this\u00a0\nmap, and you can think of it as a dictionary,\u00a0\u00a0 which says, given a vertex,\u00a0\nwhat is the positi"
+    },
+    "4b89a192-6873-4d99-9f84-8adc5bef78b1": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "on of the node\u00a0\u00a0 given a node which vertex is here,\u00a0\nso it is convenient for us that the\u00a0\u00a0 vertices are numbered 0 to n minus 1 and the\u00a0\npositions are also numbered 0 to n minus 1.\n\u00a0 So let me kind of represent that same heap in\u00a0\nslightly more detail. So l"
+    },
+    "3fcd12c1-d948-4fac-bd7e-bdb245d124f6": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "et us assume that the\u00a0\u00a0 blue numbers, which are in the nodes represent\u00a0\nthe vertex number. And the black number is the\u00a0\u00a0 distance so it is a min heap with respect to\u00a0\nthe black numbers, 29 is smaller than 38 and 31,\u00a0\u00a0 31 is smaller than 84 and 61, and so o"
+    },
+    "73345dc9-b0a2-4603-9f75-c58a1abac883": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "n, but these\u00a0\nvertices are like this. So, I have this mapping\u00a0\u00a0 here which says that vertex 0 is at position 7.\nSo, if I want to update vertex 0,\u00a0\u00a0 I will go 1 2 sorry, so remember that I will\u00a0\nnumber a heap from the top 0, 1, 2, 3, 4, 5, 6,\u00a0\u00a0 7, 8, so the"
+    },
+    "6c4b8108-acce-4315-9ecf-dd5069138960": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "se are my heap indices, which are\u00a0\njust determined by this top to bottom left to\u00a0\u00a0 right order. So, it says 0 is at 7, so I just\u00a0\nhave to go to heap position 7. And indeed, I find\u00a0\u00a0 that the vertex there is 0, If I look at vertex,\u00a0\n6, for instance, it says"
+    },
+    "d10d0b8a-06bd-47f2-9049-646a691b7512": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " its position is 6.\u00a0\u00a0 And indeed, that position 6, I have 6.\nSo, this is my vertex to heap, given a vertex,\u00a0\u00a0 if I want to update vertex j, I look at this V to\u00a0\nh dictionary, and I look up the value for key j,\u00a0\u00a0 and it will tell me which node in the heap h"
+    },
+    "f51e6b90-9528-4157-afc5-161a5e026e24": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "as\u00a0\nthat value. But then, I also need the reverse,\u00a0\u00a0 because I need to kind of, when I exchange, I will\u00a0\ngo to a new position, and I need to know which\u00a0\u00a0 vertex I am moving, so that I can update this\u00a0\nthing. So, I have the reverse thing, which says,\u00a0\u00a0 at p"
+    },
+    "227e1e9a-1ef8-455c-bc12-fcc0979a4dc1": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "osition 3, which is here, at position 3. \nThe vertex is 1. So, this is a heap to Vertex Map,\u00a0\u00a0 it tells me if I am at position, k in the heap,\u00a0\nwhich vertex i is stored in that position k.\u00a0\u00a0 So, if you go through this, so if you saw, the\u00a0\nreason I have put"
+    },
+    "53d9049c-2e8d-4535-b24a-0f116f668ad4": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " these blue vertex numbers on the\u00a0\u00a0 heap is that in the normal set course of things,\u00a0\nof course, you will only keep the distance.\n\u00a0 But here, I do not have the\u00a0\ngraph. This is a kind of imaginary\u00a0\u00a0 example. So, I am just claiming that this was\u00a0\nthe graph, "
+    },
+    "fb54b448-7bc6-4c08-9574-8c6f32c33e19": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "So the graph had these vertices,\u00a0\u00a0 0 to 8. And at some point, these were\u00a0\nthe distances, so I am just keeping the\u00a0\u00a0 vertex names to just show you that\u00a0\nthis mapping is actually consistent.\u00a0\u00a0 So now the problem has to be to update this.\nSo, when I come to u"
+    },
+    "0101a037-960d-485f-973d-4d21cbe2dcb1": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "pdate, suppose supposing\u00a0\u00a0 now Dijkstra algorithm says, change the\u00a0\ndistance for 1, which was 54, Change it to 35.\u00a0\u00a0 So, then I know that I am going to be doing\u00a0\nsomething with this entry rate. So first,\u00a0\u00a0 I look at this vertex to heap and I find that\u00a0\nthe"
+    },
+    "77d3d6f5-d2b5-4dfd-bb6b-97feb1023784": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " node 1 is at position 3. So, remember,\u00a0\u00a0 this is position 123. So, 0123. So now I\u00a0\nknow what position I have to update. \n\u00a0 And because it is a heap, I know its parent\u00a0\nis at position 3 minus 1 by 2, which is 1,\u00a0\u00a0 So I know this position. So, I look at pos"
+    },
+    "4b4f8015-db85-4bb1-96f0-a92a459e9bdd": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ition 1,\u00a0\nand I decide I have to swap because 35 is smaller\u00a0\u00a0 than 38. But what is that position 1, this is\u00a0\nwhere I need the other thing, I go to position 1,\u00a0\u00a0 and I see that what is there is node 5. So,\u00a0\nthen I have to go here and look at node 5.\u00a0\u00a0 So th"
+    },
+    "35ccf518-2c85-4f91-8cd4-6d29d1e53e88": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "at is going to change. If position 1 is\u00a0\nswapped with position 3, the where position,\u00a0\u00a0 node 5 is? Is going to change from 1 to 3.\nAnd this is also now going to change because\u00a0\u00a0 what is it 3 is going to become 5, and\u00a0\nso on. So basically, after this exchan"
+    },
+    "4687b6a0-6573-4c87-9160-f89fd33d7481": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ge,\u00a0\u00a0 I have to make this update in these 2, so I\u00a0\nhave to exchange the values. But exchanging\u00a0\u00a0 the values in the heap also entails updating\u00a0\nthese entries. So, the entries which corresponded\u00a0\u00a0 to vertex 1 and 5 get swapped from 31 to 13.\nAnd the entries "
+    },
+    "0e2727b3-21fb-4f0b-ab2a-40f9147c46be": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "corresponding to positions 1 and 3\u00a0\u00a0 in the heap, get swapped to vertex 1 and vertex 5\u00a0\nfrom 5 and 1. So, every time we make a swap in my,\u00a0\u00a0 in our heap operation, we have to update\u00a0\nthis, but this is just because they,\u00a0\u00a0 they kind of reference each other,"
+    },
+    "e493f603-cdf6-451d-93cc-1fbc82560773": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " it is just\u00a0\na constant number of lookups, I go from V to H,\u00a0\u00a0 I get the value, I go back from H to V.\nAnd then I update both the corresponding place,\u00a0\u00a0 so I do these two swaps in this V to H and H to V\u00a0\narray, and I am done. So, this then is how you do\u00a0\u00a0 "
+    },
+    "8e0dc10d-8841-4b5e-8f49-837c153208e2": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "this Dijkstra algorithm with the heap. So first\u00a0\nof all, you use a min heap, to keep track of the\u00a0\u00a0 distances of the unvisited vertices. But because\u00a0\nyou have to do this update, which behaves like\u00a0\u00a0 insert or delete min, now Dijkstra algorithm,\u00a0\nyou are al"
+    },
+    "f483cea7-5084-480c-a100-a83cd7314250": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ways going to reduce, the value.\n\u00a0 So, it is always going to behave like\u00a0\ninsert. So, it is always going to become\u00a0\u00a0 smaller than perhaps its parent and go up, you\u00a0\nare never going to update a value in Dijkstra\u00a0\u00a0 algorithm are going to become bigger. So,\u00a0\n"
+    },
+    "675f4a7e-2e30-46ab-9834-310c166b11af": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "all of the Dijkstra algorithm updates are\u00a0\u00a0 going to be of the type where you reduce the\u00a0\nvalue and therefore you move up but still,\u00a0\u00a0 whatever you are doing in the heap in terms of\u00a0\nupdating, you have to first find that element. \n\u00a0 And for that you need t"
+    },
+    "617090d4-34c0-4297-83bb-3a56932391d7": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "o keep track of these\u00a0\nextra index dictionaries telling us where a\u00a0\u00a0 vertex is in the heap and which point in the heap\u00a0\nwhich vertex position in the heap points to. \n\u00a0 So now that we have that under control, so\u00a0\nnow, we do have a heap-based implementation\u00a0"
+    },
+    "03172866-befb-478d-9de6-8c3d654effdc": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "\u00a0 of Dijkstra algorithm with this extended version\u00a0\nof a heap, so this extended version of a heap,\u00a0\u00a0 First, it allows us to identify the\u00a0\nnext vertex visit in logarithmic time,\u00a0\u00a0 because it is basically this min heap.\u00a0\nSo, I just have to do a delete min.\n\u00a0"
+    },
+    "05c0f908-64a5-4163-b434-e19c46f566d8": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " Now updating the distance, because of the\u00a0\nway we said the update works in the heap\u00a0\u00a0 is log n times per neighbor. So, I have to\u00a0\ntake the vertex that has just been visited\u00a0\u00a0 and update all its neighbors, because those are\u00a0\nthe only ones for which the dis"
+    },
+    "0b54646d-a737-456d-9230-4970d95509e0": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "tance has now\u00a0\u00a0 changed as a result of this becoming visited.\nBut if I am keeping an adjacency list, as we saw\u00a0\u00a0 before, then then I can efficiently enumerate\u00a0\nits neighbors by just walking down the list.\u00a0\u00a0 So, the work I will do for a given neighbor is\u00a0\np"
+    },
+    "ad005a77-da6f-48d0-aabe-65cfa98a9d0e": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "roportional to the degree of that neighbor.\u00a0\u00a0 So therefore, over all this, I\u00a0\ncan expect that if I update, if I\u00a0\u00a0 visit n vertices, each time I have to choose the\u00a0\nvertex to visit and that takes log n time.\n\u00a0 So, I take n log n time to identify\u00a0\nthe sequen"
+    },
+    "71cd3c63-011b-421c-a349-fb1fa9e8d99a": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ce in which I visit vertices.\u00a0\u00a0 And when I visit a vertex, I have to update its\u00a0\nneighbors, which takes log n time per neighbor.\u00a0\u00a0 But if I add up like we have done before, for\u00a0\nbreadth first search and depth first search,\u00a0\u00a0 if I use this degree property t"
+    },
+    "360f360b-5ac2-48c2-ab98-499f6f4e4e29": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "hat I am using the\u00a0\nadjacency list, so the total number of updates I\u00a0\u00a0 am making is proportional to the total number of\u00a0\nedges because I will update only across an edge\u00a0\u00a0 in particular index are only once because\u00a0\nfrom the visited site to the unvisited sit"
+    },
+    "97f2c80e-4c97-4801-b849-86c8606135e4": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "e,\u00a0\u00a0 I will never go back because I will\u00a0\nnever update and unvisited neighbors.\n\u00a0 So, I will make as many updates as there\u00a0\nare edges. So that is going to take me\u00a0\u00a0 m log n times. So, m is the number of edges. So,\u00a0\nn log n time for finding the vertex to vi"
+    },
+    "4fd04a8d-bef4-45c6-a6da-9352de4745c8": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "sit m\u00a0\u00a0 log n time to do the updates. So, this gives\u00a0\nme an overall time of m plus n times log n.\u00a0\u00a0 So, remember that m plus n is roughly\u00a0\nthe size of our graph, it is the number\u00a0\u00a0 of edges plus the number of vertices. \nSo, we saw earlier that when we clai"
+    },
+    "69da3ef2-3c41-48e7-90f0-d44a24405f1e": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "m that\u00a0\u00a0 say BFS and DFS were linear time it was order\u00a0\nm plus n. So, this is really something like the\u00a0\u00a0 equivalent of n log n we have already\u00a0\nseen that in when we use for instance,\u00a0\u00a0 in Kruskals algorithm, if you use union find we\u00a0\ngot a similar complex"
+    },
+    "99143115-e25d-4c4b-a7a1-8a60b34ec0ad": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ity. So, this is more or less\u00a0\u00a0 the best you can hope for a non-trivial algorithm,\u00a0\nbecause we cannot do it in a single linear scan,\u00a0\u00a0 but we can at least do it and then kind\u00a0\nof n plus n times log n type of scan.\n\u00a0 So, there is something else interesting "
+    },
+    "e3c630af-4e0a-463a-859e-ec1593a807c7": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "that we\u00a0\ncan do with the heap. So, one part is to implement\u00a0\u00a0 Dijkstra algorithm and get an efficient solution.\u00a0\nBut we can also sort a list using a heap. Now,\u00a0\u00a0 you can realize that heap is somewhere in between\u00a0\nan unsorted thing and a sorted thing becaus"
+    },
+    "0bd4ec7f-a2b4-40a4-9037-33c08ebe64e9": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "e at\u00a0\u00a0 least it is found the maximum or the minimum.\nSo, you are not in a totally unsorted case. But\u00a0\u00a0 you are not in a totally unsorted, you are not\u00a0\nfully sorted case either, because the values\u00a0\u00a0 outside the root are in arbitrary order.\u00a0\nSo, if I want to"
+    },
+    "01332a57-04be-460b-bad8-b09e534d7d2c": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " actually sort a list,\u00a0\u00a0 what I can do is first build a heap. And as we\u00a0\nknow, building a heap takes linear time. So, I can\u00a0\u00a0 start with an unsorted list and build a heap. And\u00a0\nnow I can repeatedly find the extreme elements.\n\u00a0 So let us assume it is a max "
+    },
+    "da9edca7-0131-49a4-8baf-55f4a310e741": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "heap, for instance,\u00a0\nthen I delete max, I have got the maximum. So,\u00a0\u00a0 it is a bit like a clever way of doing\u00a0\nselection sort. So, if you remember,\u00a0\u00a0 this is what we did in the selection sorted,\u00a0\nwe scanned the entire stack of papers,\u00a0\u00a0 which we were given "
+    },
+    "6da60522-84f6-4f51-9559-6ac9679f0dae": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "by our teacher to grade, after\u00a0\ngrading, we took the maximum one and put it aside,\u00a0\u00a0 then we went through the whole stack again,\u00a0\ntook the second maximum one and put it away.\n\u00a0 Now the thing is that instead of doing\u00a0\nthis in an arbitrary way, we first buil"
+    },
+    "d7d55ef2-3abb-47f2-b1c5-ee5cf7c71ed2": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "t a\u00a0\u00a0 heap out of these papers, then delete max gives us\u00a0\none, but one way delete max, magically, the heap\u00a0\u00a0 reorganize itself. So the maximum is again at\u00a0\nthe top, so I keep deleting the maximum n times.\u00a0\u00a0 And after I deleted n times, I have extracted\u00a0\nth"
+    },
+    "286e377a-bf64-428f-993d-c9b5f95a6f69": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "e elements in descending order, So therefore,\u00a0\u00a0 I have actually found a sorted sequence\u00a0\ncorresponding to the original sequence.\n\u00a0 And how long does it take? Well, it takes\u00a0\nme log n times for each delete maximum and\u00a0\u00a0 n log n time I have sorted. So where "
+    },
+    "aba84997-f762-4fcf-ae84-46892b3b5acd": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "do I keep\u00a0\nthe second stack? This is always a problem,\u00a0\u00a0 so we saw that in selection sort, we would move\u00a0\nthat extreme element to the beginning and then\u00a0\u00a0 sort from the second element onwards.\nIn a heap, we can do the same thing except\u00a0\u00a0 we can turn it aro"
+    },
+    "9540a003-b0fd-4eeb-b4d7-31410fe06324": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "und and move it to the end,\u00a0\nso we can take the heap which has positions\u00a0\u00a0 0 to n minus 1. And remember when I have 0 to\u00a0\nn minus 1, I think of it as 0 1, 2, then 3, 4,\u00a0\u00a0 5, 6, and so on. So, the logical thing we saw\u00a0\nsaid when we delete an element is to d"
+    },
+    "7f6f0bf6-3e9f-4c99-a1cf-3ab385dbdc98": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "elete\u00a0\u00a0 the last element. So, the heap shrinks\u00a0\nby one means that the positions go from\u00a0\u00a0 0 to n minus 1, they become 0 to n minus 2.\nSo, this position, henceforth is outside the\u00a0\u00a0 heap. So, this is a position that is available to\u00a0\nme. So, the value that I"
+    },
+    "49d74460-fef7-4536-80d6-9e3cb10bccd2": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " just deleted can go here\u00a0\u00a0 and it will not be touched again. So, we can store\u00a0\nthe maximum value at the end of the current heap\u00a0\u00a0 at position n minus 1 because the\u00a0\nheap is now lost that value. So,\u00a0\u00a0 it only exists in the space 0 to n minus 2,\u00a0\nnow I dele"
+    },
+    "92f26f01-1764-4503-96f1-159efeb20bb1": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "te from 0 to n minus 2, then the\u00a0\u00a0 n minus 2 positions will become free. So whatever\u00a0\nvalue delete max gives me, I can put it there.\n\u00a0 And I have all the elements again in a heap\u00a0\nfrom 0 to n minus 3, so I can keep doing this.\u00a0\u00a0 And in this process, I actu"
+    },
+    "d00b7d2f-7a13-4f0b-afee-a554f333e28d": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ally get an In place\u00a0\norder n log n sort, I take a list in some sense,\u00a0\u00a0 I heapify it in place, Go the heapify operation\u00a0\nalso just did some exchanging and put it in place,\u00a0\u00a0 then I do a delete max and I take\u00a0\nthat value and put it to the end,\u00a0\u00a0 I take the"
+    },
+    "0a1fb618-b104-45e8-b24e-68534c305280": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " next value put at the end,\u00a0\nand so on. So I have an order n log n\u00a0\u00a0 in place sort, so remember, the only other order\u00a0\nn log n sort that we have is merge sort. \n\u00a0 And it is not in place, because\u00a0\nthe merging operation requires us\u00a0\u00a0 to create a new list. So"
+    },
+    "d59c5f65-f83d-4ac2-badb-7381add131e7": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " in that sense,\u00a0\nthis is an improvement on merge sort.\n\u00a0 So, to summarize, we have seen that you can take\u00a0\nthis heap, which has insert and delete min, delete\u00a0\u00a0 max, depending on whether it is a min heap or\u00a0\na max heap. And we can extend it to have this\u00a0\u00a0 u"
+    },
+    "40446b5c-9f16-4f80-abe0-d7850dd91201": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "pdate operation. And this update operation\u00a0\nwill also work in logarithmic time. But in\u00a0\u00a0 order to use this update operation, we need to\u00a0\nbe able to decide which position to update.\n\u00a0 So, if you need to point to the position and say\u00a0\nupdate this position, w"
+    },
+    "377063aa-f611-40b5-976c-6c249eb7d2df": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "e need a way of going back\u00a0\u00a0 and forth between the values that we are keeping\u00a0\ntrack of and the values in the heap. So we said\u00a0\u00a0 that we will keep these two dictionaries, which\u00a0\ngives us this one to one mapping between the\u00a0\u00a0 values we are like the nodes, t"
+    },
+    "72b12bba-5629-4d46-9dbd-14e82da0892c": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "he distances\u00a0\nof the vertices and the nodes in the heap.\n\u00a0 So, with this extended notion of a heap, the\u00a0\nDijkstra algorithm came down in complexity from n\u00a0\u00a0 squared to m plus n log n. So, the other algorithm\u00a0\nwhich is similar to Dijkstra algorithm is prims"
+    },
+    "8bd35a8f-93b0-4f06-ad14-535ed0c0d7fa": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "\u00a0\u00a0 algorithm for the minimum cost spanning tree.\nSo, we have already seen that Kruskals algorithm\u00a0\u00a0 for minimum cost spanning tree with the union\u00a0\nfind becomes m plus n log n, Dijkstra algorithm\u00a0\u00a0 with the heap becomes n plus n log n. prims\u00a0\nalgorithm is v"
+    },
+    "a2530ffc-1630-48f7-ab57-2359cd540e25": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "ery similar to the Dijkstra\u00a0\u00a0 algorithm. The only difference is that when you\u00a0\ntake the distance and update it, you are not\u00a0\u00a0 updating the cumulative distance but the shortest\u00a0\nedge to the tree you have built so far. \n\u00a0 So instead of taking the distance of"
+    },
+    "c1983f1b-4b71-4bf8-bf09-38cb2aa5bef9": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": " the\u00a0\ncurrent vertex, and adding it to the edge cost,\u00a0\u00a0 you are just taking the minimum of the edge\u00a0\ncost. But otherwise, it is identical, you\u00a0\u00a0 have to find the smallest cost edge or smallest\u00a0\ncost unvisited vertex to add to your tree.\n\u00a0 So, you can do ex"
+    },
+    "ee8491c9-3a3c-423e-9dcd-242dde4c6792": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "actly the same thing that\u00a0\nwe did just now for Dijkstra algorithm,\u00a0\u00a0 and implement prims algorithm using a min heap\u00a0\nand get the same complexity of m plus n log n. So,\u00a0\u00a0 everything is the same as for Dijkstra\u00a0\nbecause essentially prims algorithm and\u00a0\u00a0 Dijk"
+    },
+    "230d08fe-7309-4e8c-9c3c-b4a8143de422": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "stra algorithm have more or less the same\u00a0\nstructure, it is only the distance calculation,\u00a0\u00a0 or the distance update, which is different.\nAnd finally, we saw that heaps can be used to\u00a0\u00a0 sort a list in place in order n log n time. So we\u00a0\nhave an order n log "
+    },
+    "6fdd66d9-1fa7-4487-b9a7-c15e52e2f3c5": {
+        "content_id": 49,
+        "course_name": "PDSA",
+        "title": "Using Heaps in Algorithms",
+        "week": 6,
+        "chunk": "n sort, which is merge sort,\u00a0\u00a0 which requires extra space. Now we have an order n\u00a0\nlog n sort which actually sorts in place."
+    }
+}

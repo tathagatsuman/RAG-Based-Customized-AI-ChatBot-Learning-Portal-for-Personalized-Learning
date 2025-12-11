@@ -1,0 +1,828 @@
+{
+    "c0f1fc6b-726b-4e7f-8430-39319c172974": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "So, we explored one greedy algorithm\u00a0\nin the context of scheduling.\u00a0\u00a0 Let us look at another one in\u00a0\na similar type of problem.\n \n\u00a0 So, remember that a greedy algorithm is one that\u00a0\nmakes locally optimal choices. So, we are trying\u00a0\u00a0 to achieve some global "
+    },
+    "44f26ae3-4f10-495e-8053-6fe39495ec51": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "optimum. We are trying to\u00a0\nachieve some minimum or some maximum overall. But\u00a0\u00a0 we proceed step by step by taking local choices.\u00a0\nAnd at each local choice, we look at some local\u00a0\u00a0 measure or some local cost or some local distance\u00a0\nor some local time and cho"
+    },
+    "d35beedb-eb6a-4f3e-bf4c-bae75030ce37": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ose something which is\u00a0\u00a0 optimal right now and we never go back and examine\u00a0\nthis choice again. So, the real difficulty is to\u00a0\u00a0 justify that the strategy that we use to make\u00a0\nthese local choices is actually optimal.\n\u00a0 So, in our first scheduling algorithm,"
+    },
+    "c56d355d-e66f-4d51-b089-b69d191bc308": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "\u00a0\nwhich was interval scheduling,\u00a0\u00a0 what we wanted to ensure was the maximum number\u00a0\nof requests for this resource were satisfied.\u00a0\u00a0 And we came up with several heuristics, which\u00a0\nwe could show were wrong by giving counter\u00a0\u00a0 examples. And finally, we came u"
+    },
+    "65de9a27-3543-4853-bf53-1486e2750de1": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "p with a greedy\u00a0\nstrategy, which says that we should take the\u00a0\u00a0 earliest finishing time as\u00a0\nthe next job to process.\n\u00a0 Now, when we did this, what we said was that\u00a0\nthe optimal solution need not coincide with\u00a0\u00a0 the solution that our greedy strategy gave,\u00a0\n"
+    },
+    "74861c96-5f31-464e-8b1a-209867c8548c": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "because there could be different subsets of\u00a0\u00a0 jobs which satisfy this criterion of being the\u00a0\ntotal number of jobs scheduled being the maximum.\u00a0\u00a0 So, since we cannot directly argue that the\u00a0\noptimum solution is equal to the solution of\u00a0\u00a0 the greedy algorit"
+    },
+    "2964ea33-1126-417d-bc65-7350b10484ab": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "hm, we had an incremental\u00a0\napproach by which we said, okay, if we\u00a0\u00a0 order the jobs in the sequence in which they\u00a0\nappear in the schedule, then we can show step\u00a0\u00a0 by step that at step K, the greedy algorithm has\u00a0\nalways stays ahead in time. So, it is always"
+    },
+    "0a9898c9-27d0-434a-9b5d-0ce961832f6e": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " doing\u00a0\u00a0 better than any optimum solution that you could\u00a0\nget. So, this was one strategy that we use to show\u00a0\u00a0 that a greedy algorithm performs optimally.\nNow, today we will look at a different type of\u00a0\u00a0 problem, where actually the two solutions are\u00a0\ncompa"
+    },
+    "d866e221-d1a5-42d8-bf55-6baf2b3754e6": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "rable, that is you can take the solution\u00a0\u00a0 of the greedy algorithm, and you can argue that\u00a0\nany optimum solution must also have a similar\u00a0\u00a0 structure. And then we will show that we can prove\u00a0\noptimality by taking the optimal algorithm and\u00a0\u00a0 transforming th"
+    },
+    "ad9b4a1c-a9f9-4f41-bfdd-009780fce45c": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "e structure from that into\u00a0\nthe greedy algorithm so that the two have\u00a0\u00a0 the same structure. And this transformation\u00a0\nwill not violate optimality. So, if you start\u00a0\u00a0 with an optimal solution and you keep making\u00a0\ntransformations which preserve optimality\u00a0\u00a0 a"
+    },
+    "153f86fe-2d32-4947-92de-8e5c024c5024": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "nd you eventually reached the solution of the\u00a0\ngreedy algorithm, and the greedy algorithm itself\u00a0\u00a0 has produced an optimum solution.\n \nSo, as I said, this is another\u00a0\u00a0 scheduling problem. So, in the earlier case, we\u00a0\nwere talking about a lecture room where"
+    },
+    "18309bca-0c58-43bf-ac32-b3f0af1499bf": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " faculty\u00a0\u00a0 wanted to record lectures and they said they gave\u00a0\npreferences in terms of times when they wanted\u00a0\u00a0 to come. And we wanted to allocate the lecture\u00a0\nrooms so that two faculty, who came to use the\u00a0\u00a0 lecture room and had the same, had an overlappin"
+    },
+    "7b865031-dc87-43ec-bea0-eee2ee56871d": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "g\u00a0\ntiming could not be allocated at the same time.\n\u00a0 Here we have a different type of resource\u00a0\nconstraint. So, let's suppose we have a\u00a0\u00a0 resource like a 3D printer. So, different\u00a0\npeople want to use this 3D printer. So, there\u00a0\u00a0 is no fixed time that they "
+    },
+    "ec2f3401-f6c5-448d-947d-6c82ff1aed3b": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "use it that, but each\u00a0\nperson has a different type of requirement. So,\u00a0\u00a0 they want to print some object. And this 3D\u00a0\nprinter takes different amount of time. So,\u00a0\u00a0 each user i requires the printer for time Ti. And\u00a0\nthough they do not have a fixed time inte"
+    },
+    "a444aaff-07b9-4469-9a0d-b31b4e06d0f7": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "rval when\u00a0\u00a0 they want to use it, they do have a deadline, so\u00a0\nthey want to complete and have their object ready\u00a0\u00a0 by some deadline D of i. So, each user has\u00a0\na time required for that person's job T of i\u00a0\u00a0 the user has a deadline D of i.\nNow, in the earlier"
+    },
+    "2c3a78e0-e9c9-4bbf-9b1b-1eb9e611eb1a": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " scheduling problem, we\u00a0\u00a0 said we would only allocate a subset of the users\u00a0\nthose who do not contradict each other's timings.\u00a0\u00a0 Here on the other hand, we are going to make sure\u00a0\nthat everybody is actually allowed to use the \n\u00a0 printer. But what we want t"
+    },
+    "6c04ac1c-62f5-4f48-9533-aa836df5ef7e": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "o minimize is\u00a0\nby how much they miss their deadlines. So,\u00a0\u00a0 each user starts at some time and because\u00a0\nthe time that the printer takes is fixed,\u00a0\u00a0 so you have this T of i. So, the time that the\u00a0\nuser will finish is guaranteed. If they started\u00a0\u00a0 S of i, the"
+    },
+    "8cff5cee-2b40-4dbe-a6d6-9b3b56f773d8": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "n they will finish at F of i which\u00a0\nis the start time plus the time taken by the\u00a0\u00a0 task that the i-th user has for this printer.\nNow, our goal of course is that the i-th user\u00a0\u00a0 should finish before the deadline. So, we would\u00a0\nlike F of i to be less than or"
+    },
+    "367b6399-e2c0-4d93-b90b-7e710ec3b834": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " equal to D of i.\u00a0\u00a0 But it could be that F of i exceeds D of i in\u00a0\nwhich case this user i is late. The user i has\u00a0\u00a0 missed their deadline. So, there is a lateness\u00a0\nfor L of i, which is the finish time minus\u00a0\u00a0 the deadline. If that finish time is after\u00a0\nthe"
+    },
+    "9c9bd074-d28c-4ad6-9498-c6fe103711df": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " deadline. If it is before the deadline,\u00a0\u00a0 then this thing would be 0. We would not take\u00a0\nit as late as being negative. So, you would\u00a0\u00a0 only use this when the lateness is positive,\u00a0\nwhen the finish time is after the deadline.\n\u00a0 So, what we want to compute "
+    },
+    "13cff29d-ed46-4204-abd7-15a9af868ffc": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "is, how bad is this\u00a0\nacross all the users. So, we are not trying to\u00a0\u00a0 add up the lateness of all the users, but rather\u00a0\nsay which user has been delayed the most. So,\u00a0\u00a0 we want the maximum value of Li over all the\u00a0\nusers who are trying to use this resource."
+    },
+    "94b37cef-29f0-4a43-a9b0-7e570ee29375": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "\u00a0\u00a0 And our goal is to minimize this maximum. So,\u00a0\nwe are not again computing the sum of all the\u00a0\u00a0 lateness. We are saying, take each user and\u00a0\nsee how late that user is. And we are trying to\u00a0\u00a0 minimize this maximum. So, this is\u00a0\nour goal. So, we want to sc"
+    },
+    "744f1d7d-7d77-4799-ae25-c48b84b61955": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "hedule\u00a0\u00a0 this resource allocation for this printer in such\u00a0\na way that we minimize the maximum lateness.\n \n\u00a0 So, like the earlier scheduling thing,\u00a0\nwe could come up with many heuristics\u00a0\u00a0 which seem reasonable at first sight. So,\u00a0\nfirst thing would be to "
+    },
+    "4a94c322-0d5c-4a99-9ea8-88927c38edcb": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "try and finish off\u00a0\u00a0 short jobs earlier so that people do not\u00a0\nget delayed. So, you can schedule requests\u00a0\u00a0 in the ascending order of the expected time that\u00a0\nit takes for that job. Remember, we know we have\u00a0\u00a0 a prediction T of i saying that the i-th job wi"
+    },
+    "ba210354-8e66-4d21-adca-755ec7fe68da": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ll\u00a0\ntake exactly T of i time. So, we sought the jobs\u00a0\u00a0 in terms of this and do the shortest jobs first\u00a0\nso that people are not unnecessarily waiting.\n\u00a0 Unfortunately, we can construct a simple\u00a0\ncounter example with this does not work.\u00a0\u00a0 So, here it is. So,"
+    },
+    "97b450e3-8972-428a-b9ac-375052f34d6d": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " we just have two jobs. We have\u00a0\none single job which requires only one time unit,\u00a0\u00a0 and we have a job which requires 10 time units.\u00a0\nSo, we will always assume that we start at time\u00a0\u00a0 equal to 0. So, we are measuring this in some\u00a0\nunit hours, minutes, days"
+    },
+    "76ff5598-8424-4bb9-bc97-85d0acd19890": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": ", it does not matter.\u00a0\u00a0 So, at time equal to 0, if we allocate the first\u00a0\njob, so a time equal to 0. Then at time equal to\u00a0\u00a0 1 it will finish. So, this will be job 1.\nAnd then at time equal to 11, the second job\u00a0\u00a0 will finish, because it is going to take t"
+    },
+    "f6a48617-c0cf-4964-bf78-c51cd6e85ee2": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ime,\u00a0\ntake 10 time units. As a result of which the\u00a0\u00a0 second job has got delayed by 1 time unit to\u00a0\nmake the deadline because the deadline was 10.\u00a0\u00a0 So, this is not a good allocation. But obviously\u00a0\nyou can see that if you reverse this allocation,\u00a0\u00a0 because"
+    },
+    "b26e1294-eb5d-4a10-84d2-872ad6f10f12": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " the first job though it takes only\u00a0\n1 time unit has a very relaxed deadline.\u00a0\u00a0 So, instead, what you should do is you should\u00a0\nallocate job 2 first and finish it on time so\u00a0\u00a0 that there is no delay. And then in the next\u00a0\ntime unit, you can finish off the f"
+    },
+    "7abec10c-3cb3-4450-9a39-5e77812b5ecc": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "irst job\u00a0\u00a0 and it is time delays is not at all in question,\u00a0\nbecause it can afford to wait till time 100. \n\u00a0 So, therefore picking the smallest time\u00a0\njob first is not a good strategy. Here,\u00a0\u00a0 you would like to pick the larger time\u00a0\njob. So, this is not a g"
+    },
+    "efed9a66-5b9f-4526-84b4-0038660f7836": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ood algorithm.\u00a0\u00a0 On the other hand, you can ask, so here we have\u00a0\na kind of tight deadline. So, this job takes 10\u00a0\u00a0 units of time and it must finished by time 10.\u00a0\nSo, that means that there is not much flexibility\u00a0\u00a0 to move this job back and forth, whereas"
+    },
+    "7b115373-4484-4748-a1a6-f4ab1caa21b8": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " this\u00a0\njob has a lot of flexibility. It requires only\u00a0\u00a0 1 time unit, but it can finish anytime up to\u00a0\n100. So, you can move it up and down a lot.\n\u00a0 So, you can look at this difference how far away\u00a0\nthe deadline is compared to how long the job is\u00a0\u00a0 going to"
+    },
+    "e2fd0876-b269-41f2-a0a9-aa5f06d0e28b": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " take. And that gives you a measure\u00a0\nof how flexible the scheduling of the job is,\u00a0\u00a0 how much you can move it up and down. So, what we\u00a0\nmight argue is that those which are inflexible,\u00a0\u00a0 like this one, so this one, I do not have really\u00a0\nmuch, I do not have "
+    },
+    "8e21a909-dfc2-4939-803c-44db75d4af5d": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "any flexibility. If I want to\u00a0\u00a0 finish by the deadline I must start it right away.\u00a0\nSo, we can start with those requests which have\u00a0\u00a0 the least flexibility, so the least slack time.\u00a0\nThe slack time is the amount of time that I have\u00a0\u00a0 to play with between t"
+    },
+    "066e0813-5935-483b-a36b-7e27847df7c7": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "he deadline and the time\u00a0\nthat the job will actually take to finish.\n\u00a0 So, supposing, I give priority to jobs with\u00a0\nsmaller slack time, then would this work.\u00a0\u00a0 So, again as you might expect, we can come up\u00a0\nwith a counter example which is sort of similar\u00a0\u00a0"
+    },
+    "e2ef06f5-1205-4519-951a-9d1960cfbb4c": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " to the earlier one, except we move this deadline\u00a0\ndown to 2. So, now let us see what happens. So,\u00a0\u00a0 if we take the smaller slack time then we do this\u00a0\nfirst. So, then we have, this thing is delayed by,\u00a0\u00a0 is finishes in time 10. So, this is job number\u00a0\n2 f"
+    },
+    "c7ef4e3b-03c6-49ed-9cf6-9816e8b474d2": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "inishes at time 10. And then job number 1\u00a0\u00a0 finishes at time 11. But with respect to the\u00a0\ndeadline of this job, the deadline was 2 and\u00a0\u00a0 it finished at 11. So, the cost is actually 9. For\u00a0\njob 1, the cost turns out to be 9 in this case.\n\u00a0 On the other hand"
+    },
+    "dcb4a175-78f6-4c04-87b8-b1b1b7005812": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": ", if you did it the other\u00a0\nway that is you pick the job which had some\u00a0\u00a0 flexibility first, then you would finish the first\u00a0\njob in time, at time 1. So, it would not incur any\u00a0\u00a0 penalty. And then you take up the second job and\u00a0\nit will finish at time 11. B"
+    },
+    "2a3f3a80-725e-4c17-882d-62fe71e9e488": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ut now the deadline\u00a0\u00a0 has only been violated by 1. So, the lateness of\u00a0\njob 2 is only 1. So, by taking it in the order,\u00a0\u00a0 where you take the one with more slack time\u00a0\nearlier, you actually incur a smaller penalty\u00a0\u00a0 in terms of lateness because the deadline"
+    },
+    "faa68a86-55d8-437d-8ed1-3c67b5c5a162": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "s were\u00a0\nlater. So, neither of these strategies actually\u00a0\u00a0 works. And in both of these cases, we have\u00a0\ncome up with specific counter examples.\n\u00a0 Now, the reason to go through these kinds\u00a0\nof arguments is to show that it is very\u00a0\u00a0 tempting to come up with gr"
+    },
+    "f65df82f-e9aa-436d-a36b-ad60ecb42c3e": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "eedy strategies\u00a0\nwith sound plausible. But when you come up\u00a0\u00a0 with a greedy strategy, as we have seen, what\u00a0\nyou need to do is justify that it works. And\u00a0\u00a0 that is the whole purpose of this exercise.\nSo, let us look at a third strategy. So, the third\u00a0\u00a0 str"
+    },
+    "27a694f6-0b85-475f-8959-c44f88f45a8e": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ategy says, okay, instead of asking which jobs\u00a0\ncan finish first or which ones are most flexible,\u00a0\u00a0 which jobs take the least time or which jobs are\u00a0\nmost flexible, let us ask which jobs are the most\u00a0\u00a0 urgent, so which jobs have the earliest deadlines,\u00a0\nwh"
+    },
+    "6cbe0454-3eda-471e-8759-eb858d804edc": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ich are the ones that we must do first.\u00a0\u00a0 And it turns out that this actually works. So,\u00a0\nwe actually schedule the jobs in the order of\u00a0\u00a0 their deadlines. So, when we do it in order\u00a0\nof deadlines, we are ignoring how much time it\u00a0\u00a0 takes for that job. We a"
+    },
+    "5f9f33fc-148a-4a19-bdfc-5bd1896e586e": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "re also ignoring how much\u00a0\nslack we have between them. We are just looking\u00a0\u00a0 at when the job should be finished.\nNow, if you think about the way that,\u00a0\u00a0 if you have a lot of commitments, this is one way\u00a0\nto process your list of to do things, which are\u00a0\u00a0 th"
+    },
+    "a419d4c6-4282-42c8-a44e-a364d238981b": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "e things which I have to do by tomorrow, which\u00a0\nare the things I have to do by day after tomorrow,\u00a0\u00a0 and so on. So, it is sort of natural. But why\u00a0\nis this more or less natural and the other is\u00a0\u00a0 not clear and why should it work? Well, it does\u00a0\nwork. And o"
+    },
+    "6ac1e8d3-2972-45ce-8956-36408555e152": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ur goal is to prove that it works.\n \n\u00a0 So, what we are going to do is a very\u00a0\nsimple. We are going to take all the\u00a0\u00a0 requests that have come. These are print jobs\u00a0\non this 3D printer. So, we call them jobs or\u00a0\u00a0 requests. So, we take all these jobs and we w"
+    },
+    "1bcd9dd0-d66b-4eeb-bc4d-ab0e720bd169": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ill\u00a0\nnow sort them by their deadline. So, remember D\u00a0\u00a0 of i is the deadline, T of i is a time it takes.\u00a0\nSo, we sort them by the deadline. So, that the\u00a0\u00a0 numbering is such that the job is 1 to n. Job\u00a0\n1 has the earliest deadline, job 2 has the next\u00a0\u00a0 deadl"
+    },
+    "8debf0d8-ac76-4959-98d1-c71cfae69499": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ine. Now, you might be multiple jobs with\u00a0\nthe same deadline. We do not rule that out.\n\u00a0 So, all we know is that D1 is less than or equal\u00a0\nto D2 is less than or equal to D3, and so on. It\u00a0\u00a0 is possible that they all have the same deadline.\u00a0\nIt is possible "
+    },
+    "9a0b7e04-a9d0-4b9d-b955-1432bc80a1aa": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "they all have distinct deadlines,\u00a0\u00a0 but they are arranged in increasing order of\u00a0\ndeadlines. Now, once we do this, the algorithm\u00a0\u00a0 is very simple. The schedule is just, because\u00a0\nwe are going to schedule everybody. Remember,\u00a0\u00a0 it is not like the earlier int"
+    },
+    "96e17dac-e1d6-428d-aaa2-c31256089792": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "erval scheduling\u00a0\ncase. We have to pick out something and then we\u00a0\u00a0 have to remove all the conflicting things.\nRemember, that if we allocated person i to take\u00a0\u00a0 the room, then anybody who\u2019s slot conflicted with\u00a0\ni had to be removed from the set of possibil"
+    },
+    "828f98b6-7bee-449a-be56-5d65fff42d6c": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ities.\u00a0\u00a0 Here, there is no such thing. Everything is\u00a0\npossible. It is just a question of delay.\u00a0\u00a0 So, we just, once we sort this in terms of\u00a0\ndeadlines, we are just going to allocate it in\u00a0\u00a0 that same order. So, once we have got this sort,\u00a0\nwe have got the"
+    },
+    "f3ca8d19-e276-4374-8560-124551d87c75": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " allocation. It is just 1 to n.\u00a0\u00a0 So, in this allocation job 1 that is\u00a0\nthe one with the earliest deadline\u00a0\u00a0 starts at time 0 and it goes on to time T1.\u00a0\nT1 is the amount of time job 1 takes.\n\u00a0 So, S2 the second job starts at the time\u00a0\nthat the first job f"
+    },
+    "407234f2-de1c-43f8-bc88-8982136c4e72": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "inishes which is T1.\u00a0\u00a0 So, S2 starts at F1 and then F2, the time when\u00a0\nthe second job finishes is F1 when it starts,\u00a0\u00a0 sorry S2 when it starts plus the time it takes\u00a0\nS2 plus T2. Similarly, if I have finished\u00a0\u00a0 Fk then the next one will start at Sk will be"
+    },
+    "5ca702fb-f8a1-46a3-9836-802d6d897a47": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "\u00a0\nequal to Fk and then it will be Sk plus Tk. So,\u00a0\u00a0 in general, the last job Sn will start\u00a0\nwhen the n minus job is, n minus 1th\u00a0\u00a0 job is finished. And it will finish at time\u00a0\nFn which is Sn plus Tn. So, this is a simple\u00a0\u00a0 algorithm. But what we have to ju"
+    },
+    "a6fbff09-b1a7-4da0-9004-25bddcd5d79d": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "stify\u00a0\nis that this way of doing it works.\n\u00a0 So, one thing to observe is that when we do\u00a0\nit this way, we are not having any gaps. There\u00a0\u00a0 is no idle time. There is no time when\u00a0\nthe printer is not being used, because\u00a0\u00a0 as soon as the first job finishes, w"
+    },
+    "201ae13d-8760-4bcc-ad2f-6c4c243c6d69": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "e start the\u00a0\nsecond job, as soon as the second job finishes,\u00a0\u00a0 we start the third job and so on. So, a printer\u00a0\nis being used continuously from 0 to F of n.\u00a0\u00a0 And the claim is that this is in general a good\u00a0\nstrategy. That is there will always be an optima"
+    },
+    "a466533b-58ea-4dbb-93f5-f8e64cc09542": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "l\u00a0\u00a0 schedule in which there is no idle time.\nNow, why will there be an optimum schedule\u00a0\u00a0 in which there is idle time. Well, you could have\u00a0\nvery large delays. So, supposing I have two jobs,\u00a0\u00a0 each of which take only time 1 and\u00a0\neach of them has a deadline"
+    },
+    "74c51358-758c-4dfe-9fd7-40daeb5eac67": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " of 100,\u00a0\u00a0 then I have many different ways in which I can\u00a0\nschedule them. I can wait and put them after\u00a0\u00a0 time 99 for the one at 98 and one and 99. And I\u00a0\nwill still finish within the deadline. Remember\u00a0\u00a0 that if we finish within the deadline, we do not\u00a0\nc"
+    },
+    "fff8fce3-5fba-4b8c-84f4-d2f99432a9f6": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ount the lateness. So, we are not asking anything\u00a0\u00a0 about jobs was finished ahead of the deadline. So,\u00a0\nthere could be optimal schedules with idle time.\u00a0\u00a0 But we are saying that there will always be\u00a0\nan optimum schedule without idle time.\n\u00a0 And that is ver"
+    },
+    "74015cd3-f621-4959-8ea0-7f0f3b10fc8e": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "y easy, because what happens if\u00a0\nyou have idle time is that you have your job here\u00a0\u00a0 and at some point, this is your job allocation and\u00a0\nthere is a period in between when nobody is using\u00a0\u00a0 the printer. Well, if I just take this entire\u00a0\nsegment and move it "
+    },
+    "309f2e17-5661-409d-b43f-93375f6e2f22": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "to the left, then obviously\u00a0\u00a0 everybody will finish earlier than they had\u00a0\nfinished before. So, therefore, if they were late,\u00a0\u00a0 they will be less late. If they were not late,\u00a0\nthey will not be late now as well. So, it can only\u00a0\u00a0 reduce lateness. So, so com"
+    },
+    "05904d83-6888-4bff-ae17-8e6a704135d4": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "pressing a schedule\u00a0\nwith gaps into a schedule without gasp, removing\u00a0\u00a0 all the gaps, reducing the gap by removing\u00a0\neverything left can only reduce the lateness.\n\u00a0 So, if I have an optimum schedule, as I\u00a0\nsaid, if I have this stupid example where\u00a0\u00a0 I have "
+    },
+    "957030aa-3345-42c0-b1d5-e0436710bb2f": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "a deadline of 100, and I have two jobs\u00a0\nwhich take time 1 each, and I decided to allocate\u00a0\u00a0 them here, at 98 and 99, then I can take this\u00a0\nwhole thing and shift it left and allocate them\u00a0\u00a0 at 1, 2 and finish them off. So, this is what\u00a0\nwe mean by saying th"
+    },
+    "eab75c2e-f93e-48c4-acf1-9d2bd7955da8": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "at there will always be\u00a0\u00a0 an optimum schedule with no idle time. So, it is\u00a0\nsufficient to look in that space. So, what we want\u00a0\u00a0 to argue is that our greedy solution is optimum.\u00a0\nAnd like last time, what we do is compare it to\u00a0\u00a0 an arbitrary optimal schedu"
+    },
+    "98129ce2-ffb7-4e33-bc86-0c9d6cbf3728": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "le. So, there are\u00a0\nmany optimal schedules we could compare it to,\u00a0\u00a0 but we will only compare it to optimal schedules,\u00a0\nwhich like our solution has no idle time.\n \n\u00a0 So, now, let us look at correctness.\u00a0\nSo, let us before we said,\u00a0\u00a0 look at an arbitrary opt"
+    },
+    "cfe473f3-8bd0-4336-b05c-a39985840017": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "imal schedule. So, let\u00a0\nus look at an arbitrary optimal schedule O. So,\u00a0\u00a0 we have a schedule which our greedy algorithm\u00a0\nproduces which is sorting and just saying 1 to n.\u00a0\u00a0 So, remember, the numbering has been fixed by our\u00a0\nsorting. So, what we are going t"
+    },
+    "98c37ccf-da5e-4c97-b218-84caf38fc6a6": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "o show now is that\u00a0\u00a0 now notice that any schedule has to schedule all\u00a0\nthe jobs. It is not like the earlier case where\u00a0\u00a0 the optimum schedule could have given a subset of\u00a0\ninstructors the lecture room and my schedule could\u00a0\u00a0 have given another subject, we "
+    },
+    "aa732a18-d67f-4e91-a971-59e4090bdd5d": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "just had different\u00a0\nsubsets of the same size. It is not like that.\n\u00a0 The optimum schedule here is going to have exactly\u00a0\nthe same indices 1 to n, but in a different order.\u00a0\u00a0 So, what we are going to argue is that we can take\u00a0\nthe sequence in which O alloca"
+    },
+    "ff63272d-d292-491c-a14a-19f2f5069a98": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "tes this printer\u00a0\u00a0 and transform it into something which looks like\u00a0\n1 to n without changing the optimality of O.\u00a0\u00a0 So, notice that in our schedule, if\u00a0\na number 2 appears before number 3,\u00a0\u00a0 it means that the deadline of 2 is before\u00a0\nthe deadline of 3. So,"
+    },
+    "22354e6f-497c-44c9-b7c6-9caf30601cbe": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " that is the property\u00a0\u00a0 that we add for this numbering. \nSo, in our schedule there are no\u00a0\u00a0 inversions. And inversion happens when i\u00a0\nappears before j. But the deadline of j\u00a0\u00a0 is actually earlier than the deadline of i.\nRemember, now the numbering is alrea"
+    },
+    "a118c945-c37b-4486-b095-a0016b6d4b14": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "dy in\u00a0\u00a0 some sense reflecting the sequence of the\u00a0\ndeadline. So, obviously by construction,\u00a0\u00a0 we cannot have an inversion in our greedy\u00a0\nschedule. But this optimum schedule could have,\u00a0\u00a0 any time you have something which is\u00a0\ndifferent from the greedy sched"
+    },
+    "b0a1f34e-2ed8-4067-a869-bad6db52b4b3": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ule,\u00a0\u00a0 it will mean that there are two indices which are\u00a0\nin the wrong order. And if they are in the wrong\u00a0\u00a0 order, then necessarily it must mean that the\u00a0\nlater one has something which is not necessarily,\u00a0\u00a0 but in general it will mean that the later one\u00a0\n"
+    },
+    "5024a0e7-38c1-4448-94f3-159a29e1a192": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "has a deadline which is earlier than the previous\u00a0\u00a0 one. And therefore, it should have been done in\u00a0\nour greedy schedule in the opposite order.\n\u00a0 So, now first look at a solution in which there\u00a0\nis no idle time, which we have already argued\u00a0\u00a0 must be the c"
+    },
+    "f5d60af1-1449-41bb-8967-bb192c291b0b": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ase. And there are no inversions, but\u00a0\nthey are different. Now, how can two schedules be\u00a0\u00a0 different, but have no inversions? Well, the\u00a0\ndifference can happen because I have equal\u00a0\u00a0 deadlines. So, when I said before that we do not\u00a0\nassume that the deadline"
+    },
+    "075ad10e-b26c-4ed2-9035-39a54b2c2b36": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "s are distinct, I could\u00a0\u00a0 have that Di is less than or equal to Dj. And\u00a0\nactually, in fact, or Di plus 1, let us say, just\u00a0\u00a0 say two adjacent things. In fact, this is equal\u00a0\nto. So, our greedy algorithm chooses one order.\n\u00a0 It chooses i and then i plus 1, "
+    },
+    "94f85e80-b358-472f-9b1c-f41fa1a27c23": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "but maybe the\u00a0\noptimum schedule chooses i plus 1, then i. So,\u00a0\u00a0 then these two would be different schedules.\u00a0\nBut there is no inversion, because inversion\u00a0\u00a0 says that the later one must be strictly earlier\u00a0\nin deadline than the previous one. So, it is\u00a0\u00a0 an"
+    },
+    "beb3fe66-5984-4492-a3a4-057bb272c9b8": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " inversion only if the one that appears later\u00a0\nhas an earlier deadline, not an equal deadline.\u00a0\u00a0 So, therefore, if I have no inversions, and no\u00a0\nidle time, the only difference can be in the order\u00a0\u00a0 of requests with the same deadline.\nSo, what we have to ar"
+    },
+    "3bcf8012-d730-4133-9094-e1a68e4c6f40": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "gue is that\u00a0\u00a0 this does not matter that they all produce the\u00a0\nsame maximum lateness. So, any reordering of jobs\u00a0\u00a0 which are next to each other with the same\u00a0\ndeadline is not going to create a problem.\u00a0\u00a0 So, let us look at the situation. So, supposing\u00a0\nwe h"
+    },
+    "0b277027-66b8-4bf2-82a9-a20f3a2ababb": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ave at this point, so we are here maybe,\u00a0\u00a0 and now we have the next three jobs in our\u00a0\nlist had the same deadline which is this.\u00a0\u00a0 And our schedule, the greedy schedule, produces\u00a0\nthis order, the green one followed by the yellow\u00a0\u00a0 one, followed by the oran"
+    },
+    "deae4062-c51c-4d51-9e22-c738d2412141": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ge one, and the actual\u00a0\ndeadline is somewhere here in the middle of this\u00a0\u00a0 yellow patch. So, this is the actual deadline.\nAnd let us assume now the optimum schedule it\u00a0\u00a0 cannot invert, but it can reorder this, because it\u00a0\nwill not be an inversion in the se"
+    },
+    "8f39e86b-3322-45f8-aac2-b737b4563910": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "nse that we have\u00a0\u00a0 defined it, because they are greater, they are\u00a0\nall equal. So, let us assume the optimum schedule\u00a0\u00a0 actually does yellow first, then orange, then\u00a0\ngreen. So, the relative lengths of these segments\u00a0\u00a0 is the same, because it is the same jo"
+    },
+    "5ebc33cd-ba6e-4822-94dd-432bea1f86ee": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "b, but\u00a0\nit is just that the sequence has been shuffled.\u00a0\u00a0 But notice that in the sequence shuffling, the\u00a0\ntotal time it takes the time for the green job\u00a0\u00a0 plus the time for the yellow job plus a time\u00a0\nfor the orange job in whatever order I take.\n\u00a0 So, if I"
+    },
+    "fcf0c8be-7da3-4fa2-aae9-34efd8757b22": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " look at the beginning and if I look\u00a0\nat the end, the end of this group happens at\u00a0\u00a0 the same time as it does in the earlier case. So,\u00a0\nif I look at the lateness of the maximum lateness\u00a0\u00a0 then it is determined by the difference between\u00a0\nthe end of the gree"
+    },
+    "4159ae50-cac3-4902-8de3-0d512daab508": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "n job now and the deadline\u00a0\u00a0 which is the same deadline for all of these.\u00a0\nSo, earlier the orange job was the witness for\u00a0\u00a0 the maximum lateness. Now, the green job is the\u00a0\nwitness for the maximum lateness. So, which job\u00a0\u00a0 is being delayed is changing, but"
+    },
+    "4af767d9-467c-47a9-8a58-36015e3ae4c9": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " the amount\u00a0\nby which it is being delayed is not changing.\u00a0\u00a0 So, any two schedules with no inversions and no\u00a0\nidle time have the same maximum lateness. So,\u00a0\u00a0 shuffling around things with equal idle time does\u00a0\nnot matter, with equal delays does not matter.\n"
+    },
+    "b1f1b1cf-956e-4947-862f-2c8c99e434e1": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " \n\u00a0 So, now we want to argue that there is an optimum\u00a0\nschedule with no inversions and no idle time.\u00a0\u00a0 So, our schedule, the greedy schedule is such\u00a0\na schedule. It has no inversions and no idle\u00a0\u00a0 time. We want to argue that there is such an\u00a0\noptimum sched"
+    },
+    "50a0a76c-6e6e-4def-8193-9471f95b903f": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ule. So, we start with, as before,\u00a0\u00a0 we start with an arbitrary optimum schedule, but\u00a0\nwe can always assume that this optimal schedule\u00a0\u00a0 has no idle time, because we as we said, we\u00a0\ncan always compress an optimal schedule without\u00a0\u00a0 increasing the lateness,"
+    },
+    "876479bb-54b9-45af-bf11-3a7e11f31848": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " because everything\u00a0\njust shifts to an earlier time.\n\u00a0 So, now our problem is that there may be\u00a0\ninversions, because we want no inversions\u00a0\u00a0 and no idle time. So, no idle time is\u00a0\nokay, but no inversions is not something\u00a0\u00a0 that we can assume in general abo"
+    },
+    "a4be722a-6639-4426-9b68-07151040efb6": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ut an\u00a0\narbitrary optimal schedule. So, if \n\u00a0 there is an inversion, then I claim that there\u00a0\nwill be an inversion between two adjacent jobs,\u00a0\u00a0 because if you start with, so my optimal\u00a0\nschedule orders them as i1, i2 up to in. So,\u00a0\u00a0 this is some permutation"
+    },
+    "27ffa78b-920f-40fe-a5cf-96b008a1683e": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " of 1 to n.\nNow, if you start from here and if I look\u00a0\u00a0 at D of i1, then it will be smaller than D of i2\u00a0\nup to some point. And then at some point, I will,\u00a0\u00a0 because it is, there is an inversion,\u00a0\nthere is something later which is earlier.\u00a0\u00a0 So, this deadl"
+    },
+    "5e5d08b8-9780-47ee-908f-52e80cf5c841": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ine which keeps increasing must go\u00a0\ndown at some point. So, if I look at these to,\u00a0\u00a0 the place where it goes down, the first\u00a0\npoint where the deadline decreases instead of\u00a0\u00a0 increasing. In our greedy schedule, the deadline\u00a0\nas we go from left to right keep"
+    },
+    "b71feb20-8f31-4c13-bcd7-d3a6e6d0ce75": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "s increasing.\u00a0\u00a0 In a schedule with inversions, it must decrease at\u00a0\nsome point. Otherwise, there is no inversion.\n\u00a0 So, if I look at that point\u00a0\nwhere this decrease happens,\u00a0\u00a0 I am guaranteed that there will be two adjacent\u00a0\nthings in which the second job "
+    },
+    "cb1a9563-45e6-4e1e-b1ed-7e7b3800eebe": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "has an earlier\u00a0\u00a0 deadline than the first job. So, the inversion\u00a0\nis actually between two adjacent elements.\u00a0\u00a0 So, if I exchange these two,\u00a0\nso i and j are these two.\u00a0\u00a0 So, the reason they are called i and j is because\u00a0\nthe numbering i and j is with respect"
+    },
+    "8b206dc7-59a0-43eb-8989-1f9b2e303036": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " to my greedy\u00a0\u00a0 schedule. So, they are consecutive elements in\u00a0\nthe optimal schedule, but with respect to their\u00a0\u00a0 job numbering, there are some i and some j and\u00a0\nthey come after each other and j is after i. \n\u00a0 So, I can say, put j before i. Now, because j,"
+    },
+    "4f501390-5563-4827-a221-27c5d62d9447": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "\u00a0\nbecause the assumption of the inversion is that Dj\u00a0\u00a0 is less than Di, so if I exchange these two, then\u00a0\nthis one inversion goes away, because earlier now\u00a0\u00a0 this was inversion. Now, I swapped them. So, it\u00a0\nis easy to see that the inversion decreases. But\u00a0"
+    },
+    "ece74da8-5a63-4dab-84c6-9d3d83831814": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "\u00a0 what is the property that holds for the\u00a0\nlateness, because that is what we want. So,\u00a0\u00a0 we can swap these two jobs. But does\u00a0\nit affect the optimality of O?\n\u00a0 So, the claim is this does not. So, it is\u00a0\nnot obvious. So, we have to prove this that\u00a0\u00a0 exchang"
+    },
+    "52e829de-9be4-463b-9bfe-b631aec9164c": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ing i and j is the obvious thing to do\u00a0\nto remove the inversion. But why does this not O\u00a0\u00a0 any worse than it was before? Why\u00a0\ndoes it keep the maximum lateness\u00a0\u00a0 not worse than what it was before? So, this is\u00a0\nthe picture we have. So, we come up to some po"
+    },
+    "ec791be4-d6fb-4788-8653-2da49f334e91": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "int\u00a0\u00a0 and then we have these two jobs i and j, such that\u00a0\nthe deadline of j is before the deadline of i.\n\u00a0 So, let us assume that the things have\u00a0\npassed. If the deadlines are to the right,\u00a0\u00a0 there is no problem. So, let us assume that the\u00a0\ndeadline has pa"
+    },
+    "f8219d05-5456-49f5-b690-e791b62d7f47": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ssed. So, the deadline of j is\u00a0\u00a0 like this. So, we have this delay between the\u00a0\ndeadline of j and the time that j finishes. So,\u00a0\u00a0 this is the lateness as observed by j.\u00a0\nNow, I am going to exchange these two.\u00a0\u00a0 In the process, the lateness of j is going\u00a0\nt"
+    },
+    "aad94d5e-30f7-4d9b-b7fc-301615cbcbb9": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "o reduce clearly, but the lateness of i is\u00a0\u00a0 going to increase, because it is going to go\u00a0\nto the right, so what is going to happen.\n\u00a0 So, when I exchanged these two, now I have a\u00a0\nproblem with the lateness of i. The lateness of j\u00a0\u00a0 is no worse than before"
+    },
+    "b382e6f2-a689-4f84-aeb0-dccd7de7d741": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": ", because it is finishing\u00a0\nearlier. But what about the lateness of i. Well,\u00a0\u00a0 the lateness of it certainly worse than before.\u00a0\nSo, I have to compare the earlier lateness of\u00a0\u00a0 j and the current lateness of i. But here I\u00a0\nhave this property. I know that the "
+    },
+    "2a14c128-d628-4aef-9865-13ab3644a329": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "deadline\u00a0\u00a0 for j was strictly earlier than the deadline\u00a0\nfor i. So, if I look at the difference from\u00a0\u00a0 this point to the deadline of i, it is\u00a0\ngoing to be less than from here to j.\n\u00a0 So, whenever I do this swapping of adjacent things\u00a0\nwhich have an inversi"
+    },
+    "fcf6a329-9651-4390-852d-63c45b3dba86": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "on, I am guaranteed that the\u00a0\u00a0 lateness due to these two does not change. Now, it\u00a0\ncould be that there is some other job which has a\u00a0\u00a0 higher lateness, but I am not affecting that job\u00a0\nis finishing time anyway. Everything to the left\u00a0\u00a0 of this and everythi"
+    },
+    "c39ef840-307f-4f07-95e7-f6c6c6aa0733": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ng to the right of this, all\u00a0\nfinish at the same time as they did before after\u00a0\u00a0 the swap. This is only affecting the finishing\u00a0\ntime of i and j. So, within i and j the lateness\u00a0\u00a0 only reduces. It could be there is some other job\u00a0\nwhich has a maximum laten"
+    },
+    "1ab2f1b2-ab0f-460c-ba7e-b56878b8c93e": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ess which is higher than\u00a0\u00a0 this that is unaffected. But if j was the culprit,\u00a0\nif j was the maximum, in fact, we have reduced it.\u00a0\u00a0 But certainly it is not increasing.\nSo, this is the property now that we\u00a0\u00a0 have shown. We said that we have\u00a0\nan optimum sche"
+    },
+    "1a702fb1-9b3d-4ee0-9c1d-319197b3df44": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "dule. We will find\u00a0\u00a0 if there is an inversion. We will find\u00a0\ntwo adjacent elements which have this\u00a0\u00a0 inversion among them and we can swap them and\u00a0\nin the process the lateness does not change.\u00a0\u00a0 So, using C we can remove each adjacent inversion\u00a0\nwithout in"
+    },
+    "2e0554fd-8e5b-4233-a71c-947e865a74f1": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "creasing lateness. Now, how many\u00a0\u00a0 examples of this could there be?\nWell, every time there is a lateness, it is\u00a0\u00a0 with respect to some pair i comma j. So, there\u00a0\nare only as many possible inversions as there are\u00a0\u00a0 pairs i comma j and the number of pairs\u00a0\ni"
+    },
+    "8b17b3aa-6c97-47a5-8cfa-4a36f9dc8a5c": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " comma j is n into n minus 1 by 2.\u00a0\u00a0 It is a very simple observation. The\u00a0\nnumber of ways you can pick two elements\u00a0\u00a0 from n is n into n. So, they cannot be more than\u00a0\nn into n minus 1 by 2 inversions to start with.\n\u00a0 So, if I just keep repeatedly removing"
+    },
+    "e8f99eb3-0905-4d67-836b-b5bda36785ac": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": " these\u00a0\ninversions without affecting optimality,\u00a0\u00a0 I am gradually moving from O towards a\u00a0\nscheduled which has no gaps, no idle time,\u00a0\u00a0 and no inversions. And once I finally\u00a0\ndo that, so ultimately this must be\u00a0\u00a0 the schedule that we have in our greedy\u00a0\nal"
+    },
+    "9c14b728-7c87-48fa-9a29-7ab2df224a3e": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "gorithm. Our greedy algorithm has this property\u00a0\u00a0 that it has, it is defined this order.\u00a0\nSo, it has no inversions by construction\u00a0\u00a0 and no gaps. And I have taken an arbitrary\u00a0\u00a0 optimal schedule and done this exchanging.\u00a0\nSo, this is called an exchange arg"
+    },
+    "9262f6bd-a20e-40e0-b47a-774b7070eb93": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ument.\n\u00a0 By exchanging components of that solution, I have\u00a0\ngradually transformed it into the solution that\u00a0\u00a0 I have. So, this is proof that any optimum\u00a0\nschedule can be converted into a schedule\u00a0\u00a0 which looks like our greedy schedule. And since\u00a0\nthis conv"
+    },
+    "52327e64-c4e7-44c5-bb16-df9739f495c4": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ersion does not affect optimality,\u00a0\u00a0 our schedule that we produce because of\u00a0\nthis greedy algorithm must be optimum.\n \n\u00a0 So, to summarize, we have a simple situation here.\u00a0\nWe have one resource. And we have users trying\u00a0\u00a0 to access this resource. And they "
+    },
+    "02b2b293-b72e-4415-af92-77e7a3d8ef67": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "do not have\u00a0\nfixed time intervals when they want to use it,\u00a0\u00a0 unlike the lecture on scheduling. But they do have\u00a0\na requirement in terms of Ti of how much time they\u00a0\u00a0 need and they have a deadline by which they would\u00a0\nlike to finish it. And our goal is to "
+    },
+    "12cb308b-a7c6-4994-9d13-1a8c36ff1333": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "minimize\u00a0\u00a0 the maximum lateness. That is among all the users\u00a0\nwho do not meet the deadline, I want to find out\u00a0\u00a0 what is the maximum slippage of this deadline that\u00a0\nI have. I am not trying to add up these delays,\u00a0\u00a0 but rather just find out by how much does"
+    },
+    "9370ccd5-2d71-4ae9-ae09-518e67d0fd21": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "\u00a0\nthe worst affected user get delayed. \n\u00a0 So, our simple greedy algorithm just sorts the\u00a0\nrequests by this deadline and then processes\u00a0\u00a0 them in that order. And what we said is that\u00a0\nthis is guaranteed to be correct by our exchange\u00a0\u00a0 argument. And this tak"
+    },
+    "a371710d-64d8-471d-8708-f2952214f1d2": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "es n log n time to sort.\u00a0\nAnd then once we have sorted it, of course,\u00a0\u00a0 the schedule is just the order in which the sorted\u00a0\narray comes. So, that just takes linear time. So,\u00a0\u00a0 this exchange argument is critical, which\u00a0\nsays that we can take any optimal sol"
+    },
+    "8d1c6157-bec2-495a-833d-42015930246e": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ution.\n\u00a0 And then first we made some assumptions that\u00a0\nthis optimum solution looks a little bit\u00a0\u00a0 like our thing, because it has no idle time. And\u00a0\nonce it has no idle time, we can keep exchanging\u00a0\u00a0 these adjacent inverted elements until\u00a0\nwe eventually rem"
+    },
+    "68e5705c-c979-4538-b1f2-392fbb4b98ed": {
+        "content_id": 53,
+        "course_name": "PDSA",
+        "title": "Greedy Algorithms-Minimizing Lateness",
+        "week": 7,
+        "chunk": "ove all inversions,\u00a0\u00a0 and therefore, we must have reached our greedy\u00a0\nsolution without sacrificing optimality."
+    }
+}

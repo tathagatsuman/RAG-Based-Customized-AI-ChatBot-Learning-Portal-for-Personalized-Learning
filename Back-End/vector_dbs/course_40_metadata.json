@@ -1,0 +1,674 @@
+{
+    "58924781-017f-4381-a2e2-bbc844655ba5": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "We are looking at shortest paths and weighted\u00a0\ngraphs. And we said that there are two types of\u00a0\u00a0 shortest paths single source, and all pairs. So,\u00a0\nlet us look at single source shortest paths.\n\u00a0 So, we want to find the shortest path\u00a0\nfrom a fixed vertex to "
+    },
+    "59c30cb4-f3ad-428d-b893-c52f75ca4e67": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "every other vertex\u00a0\u00a0 in a weighted graph where we have this weight\u00a0\nfunction, which assigns the real number weight\u00a0\u00a0 to every edge. And for now, we will assume\u00a0\nthat these weights are all non negative. So,\u00a0\u00a0 there are no negative weights in the graph.\nSo, "
+    },
+    "0cc235c5-5c3c-45f3-8d8b-aa06ba53295b": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "the shortest path problem now is to compute\u00a0\u00a0 the shortest path from some fixed vertex. So,\u00a0\nlet us say that fixed vertex happens to be 0.\u00a0\u00a0 So, we want to compute the shortest\u00a0\npath from 0 to every other vertex.\u00a0\u00a0 So, here is a way to think about it,\u00a0\nyou"
+    },
+    "2f411bc7-5d95-4d0e-899d-ce6a2075f513": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " think about the time it will take\u00a0\u00a0 to reach every other vertex from 0. So, you\u00a0\nstart off some process, which takes a uniform\u00a0\u00a0 time according to the cost of the path. \nSo, you can imagine that if these are roads\u00a0\u00a0 that you are walking on and these paths"
+    },
+    "7f6abd68-d0a0-4041-92c8-8063669f32f3": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " are\u00a0\nthese weights are actually lengths of roads,\u00a0\u00a0 and if you walk at a uniform pace, then the time\u00a0\nit will take you to reach a given place would\u00a0\u00a0 be proportional to the length of the road up to\u00a0\nthat place. So, to graphically illustrate that,\u00a0\u00a0 let us"
+    },
+    "917c85d3-6038-4b98-afc0-fa876ea829c4": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " assume that these are oil depots, and\u00a0\nthese edges are actually oil pipelines.\n\u00a0 And now we set fire to this depot at vertex 0. So,\u00a0\nthe fire will now travel along all the pipelines\u00a0\u00a0 at some uniform rate in all directions. So, you\u00a0\nwait to see where this"
+    },
+    "6a8eb1e8-d282-48fc-a8b3-08dc37f63092": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " fire will reach first,\u00a0\u00a0 and that will set fire to the next depot. So, for\u00a0\ninstance, if the fire travels at a uniform speed,\u00a0\u00a0 the first oil depot to catch fire after 0 is\u00a0\ngoing to be 1 because if I start a fire from\u00a0\u00a0 0 and go in both directions, then "
+    },
+    "120ee849-b2ee-4f04-8ae4-7e051ea9f8e8": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "after 10 units\u00a0\nof time the fire is going to reach vertex 1.\n\u00a0 Then if the fire continues to flow, then the fire\u00a0\nwill propagate from here in both these directions,\u00a0\u00a0 and then the next vertex to burn will be the\u00a0\none which is second closest to 0. So, it is"
+    },
+    "c72920bd-7f93-4297-927b-bc7a79a58591": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " not\u00a0\u00a0 measured in terms of the number of edges, but in\u00a0\nterms of the time it takes for the fire to reach.\u00a0\u00a0 So, we can make this systematic\u00a0\nin the form of an algorithm.\n\u00a0 So, for instance, we start at 0 and then after\u00a0\n10 units of time, we can see that v"
+    },
+    "c9db76ec-f45e-4685-9b6b-835965419744": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ertex 1 is\u00a0\u00a0 going to burn. And now at this point, this\u00a0\nfire has started here. So, it has reached up\u00a0\u00a0 to some point. So, this is not that there is no\u00a0\nfire going towards 2 there is a fire, but it is\u00a0\u00a0 only reached 1 eighth of the distance because\u00a0\nthis t"
+    },
+    "0849b196-5819-4c74-ae9a-d055073e6ab3": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "raveled 10 by 80 of the distance. Now\u00a0\u00a0 after 6 more units, this fire will reach here.\nSo, there will be a fire going in both directions,\u00a0\u00a0 but the fire will reach 2 before it reaches 4. So,\u00a0\nafter 16 units of time from the beginning, that is\u00a0\u00a0 6 units of "
+    },
+    "7d71601c-d97c-4256-ba39-5a30b10d2cff": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "time after vertex 1 burned, I have a\u00a0\nfire, which is kind of heading in this direction,\u00a0\u00a0 I have this fire which has made some progress,\u00a0\nbut I have burned vertex 2. Now I am at time 16.\u00a0\u00a0 So, if I continue for some time, then when I am\u00a0\n20 units away from"
+    },
+    "cd6e6d92-66d1-486b-8bcd-c8d82a774da0": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " this time, so, at time 30 I\u00a0\u00a0 will expect that vertex 4 will have burned.\nNow at this point there is a fire which has\u00a0\u00a0 started from 2 towards 70. Towards 3, there\u00a0\nis this fire, which is still running from\u00a0\u00a0 0 towards 2. So, there are these two ongoing\u00a0\n"
+    },
+    "08cad2e8-7f9a-4f4f-a47d-7d0536bd4fb0": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "fires which will eventually get there. But we\u00a0\u00a0 may not need to, they may not need for\u00a0\nexample, this fire certainly does not\u00a0\u00a0 have any purpose to serve because once it reaches\u00a0\n2, it is going to find the 2 is already burned.\u00a0\u00a0 So, now proceeding after 30"
+    },
+    "5ff70219-ab62-4d74-8d92-00627e25a364": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": ", the next thing\u00a0\nthat is going to happen is that I am going to\u00a0\u00a0 have two fire going in this direction. So, after\u00a0\n5 units of time, something is going to happen.\n\u00a0 So, at 35 node 6 will burn at 45 node 10\u00a0\nwill burn. And finally, the only unburned\u00a0\u00a0 verte"
+    },
+    "7ca1f9a2-51ac-4c8e-b100-b19ff70d74ae": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "x at this point is 3 and the only way it\u00a0\ncan burn is from 2. So, since 2 burned at 16,\u00a0\u00a0 and it takes 70 units of time from 2 to reach 3,\u00a0\nat time 86 I will finally see vertex 3 burn. So,\u00a0\u00a0 this is the way we want to track this process\u00a0\nand compute these "
+    },
+    "152c8529-e9a6-417a-95b9-fae2927bbc29": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "distances. So, from this what\u00a0\u00a0 we will conclude is the shortest distance from\u00a0\nsay, 0 to 3 is 86 from 0 to 5 is 45, and so on.\n\u00a0 So, to make this actually effectively computable\u00a0\nwe need to calculate these times and decide which\u00a0\u00a0 will burn left what we d"
+    },
+    "e3bd9f45-9988-415d-a197-8ab51c1f8f47": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "id by kind of examining\u00a0\ngraph by hand. So, we compute what is called an\u00a0\u00a0 expected time to burn. So, initially,\u00a0\nwe know nothing about the graph. So,\u00a0\u00a0 all the vertices will, may never burn. So, we\u00a0\ncan just assume them to be some arbitrary value\u00a0\u00a0 infini"
+    },
+    "8a905079-b171-4c1d-a126-ae46385127b7": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ty. So, all vertices as far as\u00a0\nwe know will burn will never burn.\n\u00a0 Now, we set fire to the start vertex. Remember\u00a0\nthis is a single source shortest path problem. So,\u00a0\u00a0 they will be a well defined start vertex which\u00a0\nis we start at. So, we know that at ti"
+    },
+    "c2000288-fb18-4788-96f6-54cdb381e3f6": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "me 0,\u00a0\u00a0 we will burn but 0. So, that expected burn\u00a0\ntime of 0 gets upgraded from infinity to 0.\u00a0\u00a0 But once we know when vertex 0 burns,\u00a0\nwe can look at its outgoing edges.\u00a0\u00a0 And from these outgoing edges, we have a better\u00a0\nestimate of when its neighbors wi"
+    },
+    "c39e0842-d26a-4dbe-b4c4-26bef06f0457": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ll burn.\n\u00a0 So, I know now that vertex 1 will burn not later\u00a0\nthan 10. And vertex 2 will burn not later than\u00a0\u00a0 80. So, I can update their times from infinity to\u00a0\n80. Now I look at all these expected times. And\u00a0\u00a0 hopefully there is something which is finite."
+    },
+    "b3bb36a9-b491-42a8-a62b-fdb385dc77fb": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " And\u00a0\namong the finite one, whichever one is smallest is\u00a0\u00a0 the 1 that is going to burn next. So, I can now\u00a0\nsee that there are only two finite 1, 80 and 10.\u00a0\u00a0 But 10 is smaller than 80. So, in 10\u00a0\nunits of time, vertex, 1 will burn.\n\u00a0 And once vertex 1 bur"
+    },
+    "cbda6c21-975f-4bc8-acb4-cf039cbed2af": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ns, again,\u00a0\nI can look at its neighbors.\u00a0\u00a0 So, one of its neighbors is already burned. So, it\u00a0\nis not useful to me, but neighbors which are not\u00a0\u00a0 burned, namely 2 and 4, I can update my estimate.\u00a0\nSo, earlier, I believe that vertex 2 would burn\u00a0\u00a0 at time 8"
+    },
+    "a0ea1f40-b20c-4a20-8153-6ca98f5b1227": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "0. But now I know that it is actually\u00a0\ngoing to burn not later than 16 because the vertex\u00a0\u00a0 the 1 fire is going to reach it at time 16.\nSimilarly, the vertex 4, which was earlier\u00a0\u00a0 assumed to never burn is now going to\u00a0\ndefinitely burn within 30 times unit"
+    },
+    "941e862b-7bb3-487c-b642-fc6e65d20238": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "s.\u00a0\u00a0 So, I can update now those to 16 and 30. So, at\u00a0\neach point, when I burn a vertex, I will update\u00a0\u00a0 the expected time of its neighbors and\u00a0\nI will keep them picking up the smallest\u00a0\u00a0 unburned vertex to burn next. So, after\u00a0\nthis now, I can see that I h"
+    },
+    "c6877d3d-24bd-4563-b1aa-7367e6392f19": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ave two things\u00a0\u00a0 which are unburned and which have a finite time to\u00a0\nburn. So, of these 2, at 16 is the earlier one.\n\u00a0 So, I will burn that this will update only one\u00a0\nthing, namely the time at 3 from infinity to 86,\u00a0\u00a0 because it was earlier believed to nev"
+    },
+    "baddb7b5-dbef-4d17-8cf7-963ebec3b0e5": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "er burn\u00a0\nnow I know it will burn within 70 time units of\u00a0\u00a0 2 having burned. So, now I have these two which\u00a0\nare unburned, 86 and 30. So, I pick the smaller\u00a0\u00a0 one of these two and burn it. And now I have to\u00a0\nlook at the new things that I learned from that.\u00a0"
+    },
+    "575d69fa-c484-479d-b755-c3e8d376b260": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0 So, from this, I learned that vertex 5 will burn\u00a0\nat time 80 and vertex 6 will burn a time 35. \n\u00a0 So, now I have all my unburned vertices have a\u00a0\nfinite estimate. So, the smallest estimate among\u00a0\u00a0 those is actually going to be the one that\u00a0\nwill burn nex"
+    },
+    "2f93f394-4eb6-4df2-878a-401b75479f9b": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "t. So, I burn at 35 vertex 6.\u00a0\u00a0 And with this, I get a new update saying this is\u00a0\nnot 80 but 45. So, now I am left with these two.\u00a0\u00a0 So, I burned the 1 at 45 and\u00a0\nfinally I burn the one at 86.\u00a0\u00a0 So, this algorithm that we have just described\u00a0\nis a very wel"
+    },
+    "cb5c3ab4-3ef7-4a19-bb89-48820005c9c3": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "l known algorithm due to a very\u00a0\u00a0 famous computer scientists called Edsger Dikjstra.\u00a0\nSo, this is often called Dikjstra algorithm.\n\u00a0 So, in Diksjtra algorithm,\u00a0\nwe are choosing a strategy\u00a0\u00a0 to burn vertices, based on what we have seen\u00a0\nnow and what is the "
+    },
+    "e03d4d69-798e-4892-abe4-d91c5c2b213d": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "best at the next step. So,\u00a0\u00a0 we have made these estimates about when things are\u00a0\ngoing to burn. And we are using these estimates to\u00a0\u00a0 guide us to tell us which vertex burns next. So,\u00a0\nthis kind of short sighted strategy where we are\u00a0\u00a0 ignoring anything els"
+    },
+    "52f90ccd-146c-4723-9430-78947d698e8c": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "e, we are just saying, so\u00a0\nfar this looks like the best thing to do next,\u00a0\u00a0 we will not look two steps ahead, for example.\u00a0\nWe will just directly burn it and proceed.\n\u00a0 We never go back and make a choice that we had\u00a0\nto take a choice we had taken before an"
+    },
+    "3764ca08-419d-462e-99b5-f8acb8451855": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "d undo it.\u00a0\u00a0 So, this kind of forward thinking strategy\u00a0\nwhere we keep making a local decision\u00a0\u00a0 and never go back on it is called a greedy\u00a0\nstrategy. So, greedy for the obvious reason,\u00a0\u00a0 you have a number of choices given to you,\u00a0\nyou take the one that lo"
+    },
+    "f91f6a9b-b862-4d27-bd21-c8639fa65d02": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "oks best, and then\u00a0\u00a0 you jump into it, and you never undo that.\nSo, whenever we have a greedy strategy,\u00a0\u00a0 we have to argue that this short sighted strategy\u00a0\nof doing whatever looks good next, is better than\u00a0\u00a0 having to wait and do something later on. So,\u00a0\n"
+    },
+    "b3d0df96-f0c6-4f40-895e-8329364421e6": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "very often, this is something that happens. So,\u00a0\u00a0 you are, looking for some to buy something and\u00a0\nyou go to a shop, and in that particular shop,\u00a0\u00a0 there are 5 things on display which are of\u00a0\ninterest to you, and one of them is the best.\n\u00a0 Now, if you had a"
+    },
+    "3e4e14d9-ca29-437c-b5c1-0d5247395a16": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " greedy strategy, you\u00a0\nwould buy that. But if you were not greedy,\u00a0\u00a0 then what you would say is, there are 3\u00a0\nother shops which are selling similar things,\u00a0\u00a0 maybe they have different products, which\u00a0\nmight be more interesting. So, you would say,\u00a0\u00a0 well in"
+    },
+    "34941ab6-c671-4ae2-b35a-68efb49e9ee1": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " this shop, this is the best, but I am not\u00a0\ngoing to immediately go for this. I am going to go\u00a0\u00a0 to the other shop and check and so on.\nSo, then your strategy is less greedy,\u00a0\u00a0 you are not looking at the very first option that\u00a0\ncomes your way. Whereas here"
+    },
+    "9f9fa0c3-af8f-48cb-9156-83cc95ffb733": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " in Dijkstra algorithm\u00a0\u00a0 we are doing that. So, whenever you have greedy\u00a0\nstrategy, you have to argue that it is correct.\u00a0\u00a0 So, each new shortest path extends an earlier\u00a0\none. And by induction, we have found paths to\u00a0\u00a0 all the vertices already burned. So, "
+    },
+    "a3e2d32b-4644-41c9-a31d-c3e2cfaf5ad7": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "this is now\u00a0\nthe strategy that we have at some given point.\n\u00a0 So, initially, we burned 0. So, that is clearly\u00a0\nthe shortest path. And now when we burn one more\u00a0\u00a0 vertex what we are inductively assuming is that\u00a0\nwe have found the shortest path. This is our\u00a0"
+    },
+    "15fffdc8-59ab-4ece-9aab-7c6fa52f04b9": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0 justification for the greedy strategy that every\u00a0\ntime when we choose the minimum expected time to\u00a0\u00a0 burn, it is actually the minimum time among all\u00a0\nthe vertices which is going to burn. So, at any\u00a0\u00a0 given point we have burned everything and whatever\u00a0\nwe"
+    },
+    "d6ee55f4-5376-45f1-9042-198cf1ad03ff": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " have burned has got the correct answer.\n\u00a0 Now, we have to check why the extension is\u00a0\ngoing to continue to give us the correct answer.\u00a0\u00a0 So, supposing we choose to burn a vertex v which\u00a0\nis connected to so, now it must be connected the\u00a0\u00a0 fire has to reach"
+    },
+    "acb55d7c-3689-409b-84ca-ad84df45e20c": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " v. So, let us assume the fire\u00a0\nis going to reach v from x. What we have to argue\u00a0\u00a0 is that the fire that reaches v from x because\u00a0\nright now we believe is the next one is not going\u00a0\u00a0 to be wrong, because later on there is a fire\u00a0\nfrom some other vertex wh"
+    },
+    "0b598386-01de-4486-9428-01fa0fe8afdd": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ich comes indirectly,\u00a0\u00a0 which should have arrived earlier.\nSo, at the time when we decide to burn v,\u00a0\u00a0 we should rule out the possibility that we can\u00a0\nget this kind of a fire which is coming from\u00a0\u00a0 see it cannot come directly from y to v because if\u00a0\nit was"
+    },
+    "9137c073-edb9-48a6-a58f-339fcd918a79": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " y to v, I would have chosen y instead of x\u00a0\u00a0 to update the time of y. So, there must be\u00a0\nsome indirect path, which I do not know of now,\u00a0\u00a0 which causes v to burn faster\u00a0\nthan if I burn it from x.\u00a0\u00a0 And we have to say that this cannot happen.\nWell, so now,"
+    },
+    "b645b279-6ba1-4075-96cd-8cbced6a7ae4": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " y can this not happen? Well,\u00a0\u00a0 first of all, let me say that this\u00a0\nis some m, and this is some n.\u00a0\u00a0 So, the fact that I chose to burn v before\u00a0\nw means that m must be smaller than n.\u00a0\u00a0 It cannot be bigger than n. So, n is\u00a0\nat least as big as m. And now I "
+    },
+    "f1ab9d01-5ea8-43ce-bacc-1eaa6c15a153": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "have\u00a0\u00a0 to come and do something here. So, this has\u00a0\nto be at least 0. So, I have n plus some q.\u00a0\u00a0 So, I am comparing m to n plus q, the two\u00a0\nsteps on the other direction. And q is,\u00a0\u00a0 n is at least as big as m and q cannot\u00a0\nbe negative. So, q cannot reduce "
+    },
+    "561bab7a-aad5-43bc-8394-5e17e8686faa": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "m. \n\u00a0 So, this basically tells us that this\u00a0\ngoing around these two things cannot be\u00a0\u00a0 shorter than coming this way. Now, if q could be\u00a0\nnegative, if I have this and if q is negative,\u00a0\u00a0 then I have a problem. So, supposing this\u00a0\nis 5, and this is 7, but th"
+    },
+    "eeb5532b-d26f-4d14-8ac3-54e87911efbd": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "is is minus 3.\u00a0\u00a0 Then by choosing 5 right now, it looks\u00a0\ngood. But actually, if I chose the 7,\u00a0\u00a0 then it would allow me to come back and\u00a0\nfinish this move in 4, 7 minus 3.\n\u00a0 So, this is why we had assumed initially\u00a0\nthat there are no negative edges. So, it"
+    },
+    "b4365cb3-2ec0-48dd-8d25-d96357cdc8bc": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0\u00a0 is not a question of negative cycles, no negative\u00a0\nedges at all. Only if we have no negative edges,\u00a0\u00a0 can we guarantee that this particular greedy rule\u00a0\nof Dijkstra to pick the shortest vertex shortest\u00a0\u00a0 time to burn available to be right now, as the\u00a0\nn"
+    },
+    "33afe913-4a96-4441-9117-44eff7b856f8": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ext vertex to burn is correct. So, we cannot\u00a0\u00a0 use the extra algorithm with negative edge weights\u00a0\nbecause this argument will not work anymore.\n\u00a0 So, let us look at an implementation\u00a0\nof this. So, we need to maintain\u00a0\u00a0 two things we need to maintain this b"
+    },
+    "7e737543-c502-409f-8320-01469e31b79d": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "urning.\u00a0\nSo, burning is the same as visiting. So,\u00a0\u00a0 we need to make keep track of which vertices have\u00a0\nbeen burned or visited. And we need to keep track\u00a0\u00a0 of when a vertex is going to burn which is\u00a0\nbasically the distance. So, the distance or\u00a0\u00a0 time is the"
+    },
+    "77c91320-61b4-46cf-9abc-8b1fe0b22943": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " cost. So, we want to keep track of the\u00a0\nvisited status true or false and the distance.\n\u00a0 So, initially, we said that everything is going\u00a0\nto be assumed to burn at infinity is not going to\u00a0\u00a0 burn at all. So, what is infinity? So, we need a\u00a0\nvalue for infin"
+    },
+    "5577de7f-869c-49a3-983f-7279f66a3c0c": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ity because we cannot put infinity\u00a0\u00a0 into our Python code. So, one way of thinking\u00a0\nof infinity is that something which is larger\u00a0\u00a0 than any part that you could find. So, we have\u00a0\na weighted graph. So, there are some weights in\u00a0\u00a0 our particular weighted gr"
+    },
+    "f4650401-4eea-4872-b7dd-24a386e57fbd": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "aph matrix.\nSo, supposing I take the largest weight\u00a0\u00a0 amongst these. Now, the longest sequence of\u00a0\nedges that connects two vertices in the path\u00a0\u00a0 has at most n minus 1 edges. So, if I take the\u00a0\nlongest weight largest weight and multiply it by\u00a0\u00a0 the number "
+    },
+    "fafe1758-e161-4760-b8cb-8ccbdd9c0f76": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "of vertices, then this must be bigger\u00a0\nthan the length of any path which is actually\u00a0\u00a0 there in the graph. So, this is what we are doing\u00a0\nhere. So, initially, we are finding out so, this s\u00a0\u00a0 is our source matrix and W mat is the weighted\u00a0\nadjacency matrix "
+    },
+    "12f06239-8424-49c0-ba58-c9ea392e7ad8": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "that we are working with.\n\u00a0 So, now, we take this weighted adjacency matrix\u00a0\nand we use the as usual the shape attribute\u00a0\u00a0 to find out how many rows and columns that are,\u00a0\nremember now, this is going to be we are going to\u00a0\u00a0 assume this is actually a two di"
+    },
+    "08b42787-268c-4c55-aa45-ad3df1a7c577": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "mensional matrix.\u00a0\nSo, the zeroth entry, so, this x here, x is 0 and\u00a0\u00a0 x is 1. So, this will be the edge information and\u00a0\nthis will be the weight information. So, ij 0 will\u00a0\u00a0 be whether there is edge from i to j, ij 1 will be\u00a0\nwhat is the weight of the edg"
+    },
+    "2cee8c0d-ef66-491d-b1d0-8375baacefba": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "e from i to j and ij\u00a0\u00a0 1 will be nonzero only if there is an edge.\nSo, if there is no edge, there will be no\u00a0\u00a0 weight. So, we get the shape so, we get the\u00a0\nrows and columns. So, now from this we make\u00a0\u00a0 a crude estimate of infinity, we say take the\u00a0\nmaximum"
+    },
+    "b62258c6-92e5-4df0-99f1-16ed3b9b9489": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " value that appears anywhere in this\u00a0\u00a0 weighted matrix, multiplied by the\u00a0\nnumber of rows, this is the length\u00a0\u00a0 of the longest path you can get by having the\u00a0\nlongest largest weight repeated again and again.\u00a0\u00a0 And then just for good measure rows plus 1.\nSo"
+    },
+    "fc09dec5-101c-45e7-a3c9-754a2d662fc3": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": ", this is a very conservative estimate,\u00a0\u00a0 but it is certainly larger than any\u00a0\nreal path distance that you will find.\u00a0\u00a0 That is all we want. Infinity should be\u00a0\nsuch that if I compare it to a real path,\u00a0\u00a0 infinity must be bigger. So, now I have set my,\u00a0\u00a0 s"
+    },
+    "45e310fa-7d54-43ec-99f9-5fc9db2f0e13": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "o I have this visited dictionary and the distance\u00a0\ndictionary. And for every vertex, initially,\u00a0\u00a0 I said visited to false and I said distance\u00a0\nto infinity. So, this is my initialization.\n\u00a0 That is what I have done so far. Now I\u00a0\nam begin now I am ready to "
+    },
+    "02a87b5f-d1b3-4138-b776-86229c179212": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "get started.\u00a0\u00a0 So, the way I get started is by saying, let me\u00a0\nset the distance of the source vertex to be 0.\u00a0\u00a0 But I have not yet visited it, because I\u00a0\nam going to put that into this loop. So,\u00a0\u00a0 what I will typically do is I will look for the\u00a0\nsmallest d"
+    },
+    "ffd4cd5c-8c7e-4aff-960f-4027b07ce364": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "istance vertex which is not visited,\u00a0\u00a0 that is what I will look for. That is my\u00a0\nstrategy I look for the expected burn time\u00a0\u00a0 of this unburned vertices, which is smallest.\nSo, in our current terminology, there is\u00a0\u00a0 the distance to vertices among the unvisi"
+    },
+    "459c085c-7b30-49b5-9379-228775a05b64": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ted\u00a0\nvertices that the smallest. So, at the moment,\u00a0\u00a0 everything was infinity, and I said distance s\u00a0\nto 0, but I did not set it to be visited. So,\u00a0\u00a0 the first vertex I am going to explore is in\u00a0\nfact 0, but formally, I will do it in a loop.\n\u00a0 So, what I w"
+    },
+    "e9e5daf1-583a-4092-b7fe-b8d36aa43628": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ill do is, I will first find out, what\u00a0\nare all the minimum distances that are there. So,\u00a0\u00a0 I will take this min function, I will\u00a0\ncompute the distance for every vertex in my\u00a0\u00a0 graph, which is not visited, and I will take\u00a0\nthe minimum of these now there co"
+    },
+    "00439f75-3abf-45c3-9c8f-15cf82373681": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "uld be multiple\u00a0\u00a0 such vertices at the beginning, there will\u00a0\nbe only one but in given point there could\u00a0\u00a0 be multiple such vertices. So, I will say that\u00a0\nthe next distance that I am going to explode,\u00a0\u00a0 next, D is the next distance is the minimum\u00a0\ndistance"
+    },
+    "0d048ac5-0bab-44d0-b6bc-5355c82389d3": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " among the unburned vertices.\n\u00a0 Now, I have to find the vertex for which that is\u00a0\nthe minimum distance. So, that is my next thing I\u00a0\u00a0 will say. The next vertex list is a list of all\u00a0\nvertices which are not visited and which have\u00a0\u00a0 this actual distance. So,"
+    },
+    "9ae5698e-925d-429d-add6-c9ee21f98886": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " there is a two passes on\u00a0\nthe list. So, you can do it in an explicit loop,\u00a0\u00a0 but I felt that this was the fastest way to\u00a0\ndo it. So, you first scan it once, to find\u00a0\u00a0 what is the minimum distance among the unvisited\u00a0\nvertices, then you scan it a second ti"
+    },
+    "baa6b973-ef59-40ff-a58a-e05589113c62": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "me to find\u00a0\u00a0 out which are all the unvisited vertices, which\u00a0\nhave that distance, and that is my next v list.\n\u00a0 Now, it is conceivable that there are some\u00a0\nvertices which are never going to be visited. So,\u00a0\u00a0 basically, if I do not have any vertices\u00a0\nin thi"
+    },
+    "f0c079e7-6051-4159-95fe-4e8792d7a055": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "s list, I will just get out and\u00a0\u00a0 I will not continue. So, this is just a kind\u00a0\nof to handle a boundary condition. So, now,\u00a0\u00a0 the real situation is going to happen when I\u00a0\nfind these things. So, I need to now choose one.\u00a0\u00a0 So, I choose the smallest vertex "
+    },
+    "5efaa22d-d139-4256-8b4c-a0bac97cf6bc": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "among the\u00a0\nminimum vertex list to be the one to burn next.\n\u00a0 So, these are all vertices, which have the\u00a0\nminimum distance and are unvisited. So,\u00a0\u00a0 I pick one of them and I make them visited, and I\u00a0\nwill call that next week. So, I how do I visited,\u00a0\u00a0 I will"
+    },
+    "a1de5316-e3da-4f95-8471-bf3442eacf7f": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " first set its value to be true. And then\u00a0\nI have to take all its outgoing. So, I have\u00a0\u00a0 next v here, which I am going to and\u00a0\nthen I look at all its outgoing edges.\u00a0\u00a0 And I will update for all these vertices, the\u00a0\ntime that they burn, which is their dista"
+    },
+    "934eaa87-145c-47ea-88e0-3a4a210f0978": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "nce,\u00a0\u00a0 to be the minimum of their known time,\u00a0\nI already know they are supposed to\u00a0\u00a0 burn at some point, or the time I will\u00a0\nget where burn it through next week.\n\u00a0 So, I take the minimum of the existing distance\u00a0\nof v, and the distance from the new vertex "
+    },
+    "123e15a7-7c98-4904-a857-7c75fb50ebe0": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "next v,\u00a0\u00a0 plus the edge weight. So, the edge\u00a0\nweight remember is ij comma 1. So,\u00a0\u00a0 this is just saying that for each vertex, update,\u00a0\nits distance to be either the current distance\u00a0\u00a0 or the distance from the vertex I\u00a0\njust burned, plus 1. And now I kind of"
+    },
+    "5f04bc69-5e9f-4981-9432-83d841785c57": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0\u00a0 come back and do this again. So,\u00a0\nthis is my implementation. \n\u00a0 So, I said the distance s to 0. And I repeat\u00a0\nuntil all the reachable vertices are visited,\u00a0\u00a0 find the next vertex v to visit, set it to true\u00a0\nand recompute the distance for every neighbor."
+    },
+    "c8e26b6a-b300-450d-95db-453677d8e849": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0\u00a0 So, this is with an adjacency\u00a0\nmatrix. And as you might guess,\u00a0\u00a0 this is not likely to be ideal in\u00a0\nterms of computational complexity\n\u00a0 So, this itself requires n squared time, because\u00a0\nI have to go through this entire weighted matrix,\u00a0\u00a0 find the maximu"
+    },
+    "80c9c2fa-aed7-41d2-9528-8980a960b8c9": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "m value, that is an n squared\u00a0\nsize matrix, and then add something to it. Now,\u00a0\u00a0 this main loop, runs n times because in every\u00a0\niteration of the loop, I find one more shortest\u00a0\u00a0 distance. So, I keep a numerating these vertices\u00a0\none by one. So, I need order"
+    },
+    "2107f588-c74a-437b-abc0-fdb5428b14a9": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " n time to find the\u00a0\u00a0 next vertex to visit and I need order n time.\nSo, that is this part, I need to scan through the\u00a0\u00a0 entire thing to find the minimum distance and\u00a0\nthen scan through it again to find which vertex\u00a0\u00a0 has a minimum distance. And then I need"
+    },
+    "43702f49-a6ce-476a-b599-32863fe0edb9": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " order\u00a0\nn time, because I have an adjacency matrix,\u00a0\u00a0 I need order n time to update these distances,\u00a0\nI have got to go through all the columns in a\u00a0\u00a0 matrix. And wherever a vertex is not visited,\u00a0\nI have to check its distance and update it. \n\u00a0 And regardle"
+    },
+    "d2fd7c42-cd67-41a4-89fe-cd68cac082b8": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ss of the degree of this vertex, I\u00a0\nhave to go through all the columns. So, I have an\u00a0\u00a0 order n outside and I have these two order n steps\u00a0\ninside. So, this is going to be order n square.\u00a0\u00a0 So, the usual thing is what happens\u00a0\nif we move to an adjacency li"
+    },
+    "4d44875e-13cd-4987-bb1e-7751e3b5bd98": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "st.\n\u00a0 So, here is the same thing with an\u00a0\nadjacency list. So, now I am passing\u00a0\u00a0 a weighted adjacency list,\u00a0\nwhich I will call w list.\u00a0\u00a0 So, again, I will compute infinity in a similar\u00a0\nway, I mean, so, basically I take the length,\u00a0\u00a0 this is the number of "
+    },
+    "d421e792-4ce2-49e0-87c2-ccc0b0ff5765": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "vertices, the length of\u00a0\nthe number of keys of my weighted adjacency list,\u00a0\u00a0 and multiplied by the maximum value of\u00a0\nall the weights in my adjacency list.\n\u00a0 So, I every entry in my adjacency list has a is\u00a0\nof the form v comma d. So, u to v with distance d,"
+    },
+    "cdeac495-7fd1-441e-a63c-fc12b4ab8d75": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0\u00a0 So, I take the maximum among these d and\u00a0\nmultiplied by the number of vertices add 1.\u00a0\u00a0 So, this is the same infinity as the earlier\u00a0\n1 except that I am doing this in order m time.\u00a0\u00a0 Why am I doing in order m time because this\u00a0\nprocess of finding the ma"
+    },
+    "798f5a40-2701-4f2e-abb5-d44926a07594": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ximum across all the\u00a0\u00a0 adjacency lists is proportional to the number\u00a0\nof all the edges in my adjacency list.\n\u00a0 So, it is not order n squared, but order n. So,\u00a0\nthat is a good piece, I have done one thing,\u00a0\u00a0 which was order n squared before I have replaced\u00a0"
+    },
+    "92e2c78c-a005-451e-a0d4-bce12f1d5859": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "\nby something which is order m. So, that is good.\u00a0\u00a0 Now the rest is similar. I kind of initialize\u00a0\nthe visited and distance to empty then I update\u00a0\u00a0 these things. And then I start with\u00a0\ndistance s 0. So, so far, so good. \n\u00a0 Now, again, I have this\u00a0\nouter l"
+    },
+    "80a857a7-3ce3-434f-b698-acc0a37fe03e": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "oop, which is order n.\u00a0\u00a0 In this outer loop, we had two nested things\u00a0\nwhich are problematic 1 is solved because now\u00a0\u00a0 if I want to update the degrees, this is order\u00a0\nm. Because once I get a vertex, and I want to\u00a0\u00a0 update all its neighbors, I only have to "
+    },
+    "aec82f00-2578-4e73-9c5c-2efd95716a11": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "go\u00a0\nproportional to the degree of that vertex,\u00a0\u00a0 which amortized as usual across all of them is\u00a0\ngoing to be the sum of the degrees which will be\u00a0\u00a0 proportional to the number of edges. \nBut the problem is that this remains\u00a0\u00a0 the problem of identifying the "
+    },
+    "66bd5f7e-180d-4ff8-ac08-6d75792d8dd5": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "minimum vertex\u00a0\nremains I need to find the minimum vertex,\u00a0\u00a0 which is there. And therefore, I need to spend\u00a0\norder n time to scan through all the vertices\u00a0\u00a0 which are unvisited and find the minimum.\u00a0\nBecause these are in no particular order. So,\u00a0\u00a0 if we do"
+    },
+    "d6e7dfd0-31a2-4655-bb27-0928d8f966d9": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " not have a better way of doing that,\u00a0\neven with an adjacency list, the second loop\u00a0\u00a0 is going to take order n squared time. \nSo, we will see later that there is actually\u00a0\u00a0 this is therefore a useful thing to be\u00a0\nable to do to take a collection of values,\u00a0"
+    },
+    "3f509810-e2b6-4a54-9292-e3156033c1ad": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0 and to be able to extract the minimum. If it is\u00a0\nsorted, of course, I can extract the minimum.\u00a0\u00a0 But if it is not sorted, we can still do\u00a0\nsomething clever and extract the minimum fast\u00a0\u00a0 and that is what we will need to do. But till we\u00a0\nhave that, we are"
+    },
+    "7a4dad90-8454-49e7-a40e-fa2064135eb4": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": " stuck with this problem that\u00a0\u00a0 Dijkstra s algorithm takes order n squared time\u00a0\nwhether you use an adjacency matrix or a list.\n\u00a0 So, Dijkstra s algorithm basically computes\u00a0\nsingle source shortest paths, when we do not\u00a0\u00a0 have negative edges. It uses a gre"
+    },
+    "e61cb851-3aaa-4213-991b-8dbc207dd13f": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "edy strategy\u00a0\nto identify which vertex to visit next mainly\u00a0\u00a0 picks up the vertex with the expected burning time\u00a0\nwhich is minimum among those who are unburned or\u00a0\u00a0 unvisited vertex with the smallest distance. And\u00a0\nwhenever we use such a greedy strategy, w"
+    },
+    "cf6ab61c-7f0d-4c94-bb2a-c3b362eadc9c": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "here\u00a0\u00a0 we are ignoring everything and we are not looking\u00a0\nmultiple steps ahead, but choosing the optimum one\u00a0\u00a0 right now, we have to justify why it is true.\nAnd we prove that if the edges indeed have non\u00a0\u00a0 negative weights, then you can argue that you will"
+    },
+    "11efff2a-f118-4134-95d8-cf0942811e08": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0\nnot find the later part which will become shorter\u00a0\u00a0 than the path that you have just found. So, in\u00a0\nthat sense, Dijkstra s algorithm is correct,\u00a0\u00a0 without if you assume that there\u00a0\nare no negative edge weights.\n\u00a0 But one of the bottlenecks is that\u00a0\nbecau"
+    },
+    "d620ab9d-bdd2-4ce4-a8b7-02c689397017": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "se of this problem of having to\u00a0\u00a0 identify the next vertex as the one with the\u00a0\nminimum distance among the unvisited ones,\u00a0\u00a0 that takes order n time inside an order and loop.\u00a0\nSo, we have this complexity bottleneck of order n\u00a0\u00a0 squared whether we use adjac"
+    },
+    "d04b11a6-d9a7-4a53-a684-f961f369a9f0": {
+        "content_id": 40,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths (Dijkstra's Algorithm)",
+        "week": 5,
+        "chunk": "ency\u00a0\nmatrix or we use an adjacency list."
+    }
+}

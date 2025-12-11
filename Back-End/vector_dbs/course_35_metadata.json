@@ -1,0 +1,842 @@
+{
+    "b34ad657-e7e4-4a00-877d-9ceb0f4be0f8": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "So, we have been looking at graph exploration\u00a0\nusing breadth first and depth first search\u00a0\u00a0 and we have primarily focused on reachability\u00a0\nand recovering a path and also in the case of\u00a0\u00a0 breadth first search, we said you also recover\u00a0\nthe distance in terms"
+    },
+    "43572d33-71fe-400b-8d2d-c1faa16f075c": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " of number of edges. \n \n\u00a0 So, both of them systematically compute\u00a0\nreachability and since breadth first search\u00a0\u00a0 works level by level, it also discovers shortest\u00a0\npaths. So, the question now we are going to ask\u00a0\u00a0 is beyond reachability, what can we do with"
+    },
+    "c03ff1b2-5215-466c-bf50-daa0248195b2": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "\u00a0\nbreadth first and depth first search. \n \n\u00a0 So, one of the important things that we want\u00a0\nto know about a graph remember that a graph is\u00a0\u00a0 not something that we can see. So, if we see\u00a0\nthis graph visually, we can see that there is\u00a0\u00a0 something here which i"
+    },
+    "a6991d1e-3daa-4ce5-a046-dd4b61cb9e3d": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "s not connected to the\u00a0\nrest of the graph, we can also see that the\u00a0\u00a0 graph as a whole consists of multiple parts\u00a0\nwhich are not connected to each other. \n\u00a0 So, we can see that this graph is\u00a0\nconnected, disconnected whereas this\u00a0\u00a0 graph is connected. So in"
+    },
+    "a1d60154-2caf-4110-8d55-683184669cf5": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " a connected graph, we\u00a0\nare talking say here about undirected graphs,\u00a0\u00a0 in a connected direct undirected graph,\u00a0\nyou can get from everywhere to everywhere,\u00a0\u00a0 in a disconnected directed graph, there are\u00a0\nparts which cannot be reached from other parts.\u00a0\u00a0 So "
+    },
+    "2fdc4c9f-a507-4e40-bc0d-39561c646281": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "now, the question really is how do\u00a0\nwe discover this algorithmically. \n\u00a0 So, one way is to find out what are the connected\u00a0\nparts, so these are called connected components.\u00a0\u00a0 So, if the graph is connected, then there will\u00a0\nbe only one connected component w"
+    },
+    "c2dacf19-b462-4724-a81b-2af307d4c6be": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "hich collects\u00a0\u00a0 all the vertices, if the graph is disconnected, we\u00a0\nwill find more than one connected component. \n\u00a0 So, connected component is a maximal set of\u00a0\nvertices that are connected, that is everything\u00a0\u00a0 in that set of vertices connected and I canno"
+    },
+    "3c6e4d17-fe44-42de-b160-84e662656215": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "t\u00a0\nadd any more vertices to make it connected. So,\u00a0\u00a0 for example, in the bottom graph this 0, 1, 4, 8,\u00a0\n9, so I cannot add any more vertices and keep it\u00a0\u00a0 connected, any vertex in that graph below which\u00a0\nI add to it will be disconnected from these. So,\u00a0\u00a0 t"
+    },
+    "0758873e-ad0b-4870-9669-53272a79911e": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "hese 5 vertices form one connected component. \nThese 6 vertices on the right 2, 3, 6, 7,\u00a0\u00a0 10 and 11 are also one connected component\u00a0\nand we could also have a trivial connected\u00a0\u00a0 component which has only one vertex because it\u00a0\nhas no edges. So, 5 is a con"
+    },
+    "0bd2e3d2-6be2-453c-82c4-6bce72e11b60": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "nected component,\u00a0\u00a0 because 5 is not connected to anything else. So\u00a0\nit is connected to in a vacuous way because it is,\u00a0\u00a0 it is connected to itself even though there is\u00a0\nno explicit edge, but there are no edges anyways.\u00a0\u00a0 So, what we want to know is how to"
+    },
+    "615e62c5-a88e-49b1-85c0-5346f84883bd": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " find this. \n \nSo, the way to do this is to identify these\u00a0\u00a0 components through reachability. So, we assign\u00a0\neach vertex a component number. So, we start from,\u00a0\u00a0 so now we are really trying to find the number of\u00a0\ncomponents, so we are not using BFS or DFS "
+    },
+    "ba2b38dc-73ee-4cb4-b610-9d71a22e2cbc": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "in the\u00a0\u00a0 usual sense, where we start from one vertex\u00a0\nand want to know what all we can reach. \n\u00a0 We are asking something about the graph as a\u00a0\nwhole, it does not really matter where we start,\u00a0\u00a0 so you might as well start with 0. So, we\u00a0\nstart with vertex 0"
+    },
+    "f709860f-2abf-46d5-9b12-c326c66adba4": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " and what it will do is\u00a0\u00a0 it will explore everything that is reachable from\u00a0\nvertex 0. So, we will call all of this to be the\u00a0\u00a0 0th component. So, we start our component\u00a0\nnumbering from 0, so we say everything that\u00a0\u00a0 we can reach from vertex 0 is an compon"
+    },
+    "8edda334-0ad4-4b35-bbf3-7cf47570eecb": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ent 0. \nSo, in the graph on the top which is connected\u00a0\u00a0 this spans everything, because all the\u00a0\n5 vertices are actually reachable from 0\u00a0\u00a0 including 0 itself, whereas in the bottom, it\u00a0\ndoes not span everything. So, we reach 5 out\u00a0\u00a0 of the vertices, 5 out"
+    },
+    "2c96d1aa-8d1b-4ce5-8d94-19053c1a388b": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " of the 12 vertices, the\u00a0\nremaining 7 vertices are not yet reached. \n\u00a0 So, now we assign all these things which you can\u00a0\nreach in the first round of BFS or DFS, we assign\u00a0\u00a0 them the value 0 that is these are all in the 0th\u00a0\ncomponent. Now, I look for somet"
+    },
+    "a897e3fd-37ca-4154-9488-d1651e5e98f7": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "hing which has not\u00a0\u00a0 been visited. So, I pick the smallest unvisited\u00a0\nnode. So, in the first graph, there is no such\u00a0\u00a0 node, in the second graph I pick 2 for instance\u00a0\nand I starting with the smallest unvisited graph,\u00a0\u00a0 unvisited node I run again DFS or BF"
+    },
+    "7d3f6523-36fb-4e35-b864-e56eb5c9ac3c": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "S and it\u00a0\nwill now explore all of its reachable vertices,\u00a0\u00a0 but I have to now record that this\u00a0\nbelongs to a different component. \n\u00a0 So, before I start this, I will increment the\u00a0\ncomponent number. So, I will say now whatever I\u00a0\u00a0 can reach from 2 belongs t"
+    },
+    "26cc7256-1b0c-4854-9d0b-a4380a8433d7": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "o component number 1\u00a0\nnot 0, because 0 was whatever I could reach in\u00a0\u00a0 the first DFS. So, I ran BFS or DFS from component\u00a0\n2 in this case and I will get all the 6 vertices\u00a0\u00a0 and they will now all have a component\u00a0\nnumber 1 attached to them. \n\u00a0 Now, I see i"
+    },
+    "c50ff26b-2a4a-42bd-9a10-246b26e7b248": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "f there are still, so I repeat this\u00a0\nI see if there are still unvisited vertices,\u00a0\u00a0 I pick the smallest one namely in this case 5 and\u00a0\nthen I will explore everything I can reach from 5\u00a0\u00a0 which is just 5 itself and I will give it a new\u00a0\ncomponent number 2 a"
+    },
+    "d3a8ad1c-f8f2-4dae-9842-027a798ccc4c": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "nd now after these 3 BFSs\u00a0\u00a0 or 3 DFSs, I have now visited all the vertices,\u00a0\nso there is nothing left to do. So, this is how\u00a0\u00a0 I can discover the components in my graph and if\u00a0\nthere are more than one component in my graph,\u00a0\u00a0 it means the graph is disconne"
+    },
+    "e6d93a60-3a82-430a-b248-78eaad4ec15a": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "cted, if there\u00a0\nis only one component means it is connected.\n\u00a0 So, here is a BFS version of this connected\u00a0\nthing. So, I want to find the components\u00a0\u00a0 in a graph which is given by an adjacency\u00a0\nlist. So, what I do is I initialise that,\u00a0\u00a0 so this is going t"
+    },
+    "17ab8af6-5a3b-4bcd-8b16-57aab33ea107": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "o be a dictionary which\u00a0\ntells me the component number of each vertex,\u00a0\u00a0 so component of I is going to tell me which\u00a0\ncomponent vertex I belongs to. So, I initialise\u00a0\u00a0 the component of every vertex to minus 1. \nSo, if a vertex has component minus 1,\u00a0\u00a0 it m"
+    },
+    "676b54b7-288a-4697-ae8a-1264dc77c5bd": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "eans that it has not been visited yet.\u00a0\nSo, this is like saying that it is level\u00a0\u00a0 was minus 1 and BFS. So, this is an implicit\u00a0\nway of saying something has not been visited.\u00a0\u00a0 So, I have a current component ID, which I will\u00a0\ncompid, and I will mean this i"
+    },
+    "dc50a48e-4335-4bcc-828b-03f8fb29a950": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "s one way to see\u00a0\u00a0 whether we have finished or not, I will keep track\u00a0\nof how many vertices I have actually visited. \n\u00a0 So, this is the number seen.\u00a0\nSo, seen is just a number of\u00a0\u00a0 vertices which I have been visited. So,\u00a0\nwhen I have seen n vertices, I vis"
+    },
+    "fca7cc8f-2913-4389-99ea-fa6e143cc321": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ited them.\u00a0\u00a0 So, if I look at the keys of my adjacency\u00a0\nlist, they run from 0 to n minus 1.\u00a0\u00a0 So, so long as I have not reached n minus 1. So,\u00a0\nso long as the number of vertices I have seen\u00a0\u00a0 is less than n minus 1, there is still some work\u00a0\nto do. So, wha"
+    },
+    "20b04454-8556-4419-ac3c-e57af7c055bc": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "t is this work, I must find the\u00a0\u00a0 smallest vertex which has not been seen. \nSo, I take all those vertices whose component\u00a0\u00a0 is minus 1 and I take the minimum, so this is a\u00a0\nkind of short form for saying, I construct a list\u00a0\u00a0 of all i whose component value "
+    },
+    "26c1250c-02ab-4508-ad4d-c8a76ba28773": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "is minus 1 and\u00a0\nI take the minimum of that, which is a built in\u00a0\u00a0 list function in Python and I say that that is\u00a0\ngoing to be my start vertex for my next round\u00a0\u00a0 of BFS. I am going to start a BFS from here. \nSo, now I will visit everything from here. Now,\u00a0"
+    },
+    "8be1937e-b55b-40e1-a9ae-015f87850ae7": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "\u00a0 notice that when I visit from here, I am not\u00a0\nvisiting the things in the other components,\u00a0\u00a0 but I do not care, I just want to know which\u00a0\nones I visited from this start vertex and for\u00a0\u00a0 each of the nodes that I visit from, so now I am,\u00a0\nI have got visit"
+    },
+    "9dae5963-0ff4-4453-b9d1-721a3e91d63f": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ed is set to true because I have\u00a0\u00a0 kind of explored those things which\u00a0\nhave been visited from here. \n\u00a0 So, if visited is true, then I set this seen\u00a0\nto be seen plus 1 and I said the component to\u00a0\u00a0 be the current component and then eventually\u00a0\nI update thi"
+    },
+    "23f7c674-e571-4222-8911-4c4b08483d15": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "s. So, the point to note is that\u00a0\u00a0 this BFS list, is going to start with\u00a0\nvisited to false for everything. So,\u00a0\u00a0 each time I start a BFS list with start v, it is\u00a0\nas though I start a fresh BFS on that list. \n\u00a0 So, the earlier BFS values are not there. So,\u00a0"
+    },
+    "f5d5d7bd-a056-42a9-ada1-7b3272541e1b": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "\neach time the visited dictionary that I get\u00a0\u00a0 back from BFS is only true for those\u00a0\nthings which are reachable from that\u00a0\u00a0 particular node. So, that is why I am not going\u00a0\nto be overwriting the component of anything that\u00a0\u00a0 I have seen from an earliest sta"
+    },
+    "e5c52d6d-c131-43f6-976c-f4288887eb3e": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "rting node. \nSo, at this point, I go back and I check, have I\u00a0\u00a0 finished seeing everything, in the process\u00a0\nof this has seen reached n minus 1? If not,\u00a0\u00a0 there is still something to be seen. I look for\u00a0\nthe smallest unseen thing run another BFS and\u00a0\u00a0 so on"
+    },
+    "95cd0fb7-b9ac-4357-b9ea-825904eaa3ce": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " and finally, this component dictionary is\u00a0\nthe one that I want, it tells me the component\u00a0\u00a0 ID for every vertex in my graph and by finding\u00a0\nout how many values there are in the dictionary\u00a0\u00a0 and know how many components there are. So, this\u00a0\nis a BFS versio"
+    },
+    "e751d620-b8cb-4793-8b9f-5ee4b5d115fe": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "n of this component function. \n \n\u00a0 So, what else can we do with BFS and DFS?\u00a0\nWell, one thing we can do is to detect\u00a0\u00a0 cycles. So, a cycle is a path or technically a\u00a0\nwalk that starts and ends in the same vertex.\u00a0\u00a0 We said, remember that a path is\u00a0\nsomethi"
+    },
+    "920af068-487d-4484-b7de-e8dc0f3b05c0": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ng which does not repeat vertices.\u00a0\u00a0 So, let us look at this, so for example, 4, 8,\u00a0\n9, 4, if I go around counter clockwise, so this\u00a0\u00a0 is a path which starts at 4, it ends at 4. \nSo, by definition, the cycle will start and end\u00a0\u00a0 at the same vertex. So, in "
+    },
+    "acdf5d7d-7f3f-4eb4-8d9e-56fcefdf5625": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "that sense, it will\u00a0\nnot be a path because it will repeat a vertex,\u00a0\u00a0 so it will be a walk. Another cycle is this\u00a0\none. So, in this cycle, you might also repeat\u00a0\u00a0 an intermediate vertex. So, we start with 2 go\u00a0\nto 3, 7, then we go down here, come back here"
+    },
+    "6639ac2f-c4b4-4e76-b6f7-1ff533fe2d44": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": ",\u00a0\u00a0 come back here and come back here. \nSo obviously, the first and the last vertex\u00a0\u00a0 in a cycle must repeat. But in this case, also\u00a0\nthere is cycle vertex in between that repeats.\u00a0\u00a0 So, this is allowed. But what we do not\u00a0\nwant is that we go round and rou"
+    },
+    "4c358f91-e4cd-448f-9e32-156073c2aeee": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "nd the same\u00a0\u00a0 edge again and again. So, we do not want cycles\u00a0\nto repeat stages. So, in particular, we will not\u00a0\u00a0 say that, for instance this is a cycle. \nOtherwise every edge will become a cycle and\u00a0\u00a0 then it will be a bit problematic, because that is\u00a0\nno"
+    },
+    "8061e248-0b94-42a1-abca-47635ca66f80": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "t what we want to really look at. So, we want to\u00a0\u00a0 really look at non-trivial cycles, which at least\u00a0\ngo around 3 vertices. So, if I go from i to j and\u00a0\u00a0 back, that is not a cycle. So, I should never\u00a0\nget the same edge in both directions in a cycle.\u00a0\u00a0 I ca"
+    },
+    "75870dce-d01d-4a7f-a22c-4ed618e7bacd": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "n repeat vertices, of course, I will repeat\u00a0\nthe start and end I can also repeat intermediate\u00a0\u00a0 things, but if I just pass through like this, you\u00a0\nknow, so like this ray pass through this vertex\u00a0\u00a0 twice, if I pass through this vertex twice, but\u00a0\nI go throu"
+    },
+    "5114f1d7-4ae6-4ab3-b27d-5eb1ef5c4c9f": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "gh it through different edges. \n \n\u00a0 So, if I do not have this situation, then it is\u00a0\ncalled a simple cycle, because this cycle that\u00a0\u00a0 I drew earlier decomposes into 2 cycles. So,\u00a0\nthere is this cycle and there is this cycle.\u00a0\u00a0 So, this are 2 simple cycles "
+    },
+    "9c6913e1-e827-4e73-a584-231f58dfe45a": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "and if I combine\u00a0\nthem by attaching them at the 7, I get a\u00a0\u00a0 complex cycle which involves both of them. \nSo, in many situations, we are interested in\u00a0\u00a0 acyclic graph. So, a graph is acyclic which\u00a0\nhas no cycles. So, the graph at the bottom\u00a0\u00a0 is actually cy"
+    },
+    "2a1dc5ab-06b4-4405-80d7-701c97c76875": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "clic as we saw, because there are\u00a0\ncycles in the graph. Whereas this graph on the top\u00a0\u00a0 is a cyclic because if I start anywhere, I cannot\u00a0\ncome back following the edges in the graph. \n \n\u00a0 So, the way to explore this using BFS is\u00a0\nto observe that if I start"
+    },
+    "9f5b9947-5812-4350-a14a-04bf083420c1": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " with BFS and I\u00a0\u00a0 record the edges that are used for BFS, remember\u00a0\nwhen I use BFS when I find an unvisited neighbour,\u00a0\u00a0 I add it to the queue and I record this parent\u00a0\nthing. So, in some sense, I am recording this\u00a0\u00a0 edge from j to k was used in BFS. \nSo, "
+    },
+    "b10635b7-170a-4511-b1ae-eeeb41579819": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "these used edges actually will form\u00a0\u00a0 a tree because I will never come back to a node\u00a0\nwhich I have already seen and so, BFS guarantees\u00a0\u00a0 that I will never add an edge to a vertex which\u00a0\nhas already been visited. So, I will never that,\u00a0\u00a0 so if there is a c"
+    },
+    "9eeb1dc2-59a2-482c-a1ca-c26de9f354ff": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ycle it must be of that\u00a0\nform, I have I have already seen it from an\u00a0\u00a0 earlier node and then through some long path\u00a0\nI tried to come back and visit it again. \n\u00a0 So, this cannot happen, because BFS does not\u00a0\nallow you to visit the same vertex twice.\u00a0\u00a0 So, B"
+    },
+    "6e4081ae-da57-4f7c-a2b5-e902fcc8726e": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "FS will always visit edges that form a tree.\u00a0\u00a0 Now, of course technically, it may not be\u00a0\na tree because a tree is connected graph\u00a0\u00a0 on n with n vertices and this may not be a tree\u00a0\nin that sense, but it might be a collection of\u00a0\u00a0 trees like on the bottom "
+    },
+    "d65c92ca-acd4-44f3-b133-4aab4cb0b70f": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "here, these red\u00a0\nedges are what maybe BFS does and it forms\u00a0\u00a0 a collection of trees and a collection of trees\u00a0\nfrom the English term is called a forest. \n\u00a0 So, the point we want to observe is that if\u00a0\nthere is an edge which is not used by BFS,\u00a0\u00a0 then if I "
+    },
+    "99c7bbef-20e3-4860-bb0e-f0369be4b294": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "add that edge, it must correspond\u00a0\nto an edge which I discarded because I,\u00a0\u00a0 the target of the edge was already visited and\u00a0\nthat means that there must have been a cycle. So,\u00a0\u00a0 any non-tree edge must cause a cycle. So, if\u00a0\nI look at these blue, green edges"
+    },
+    "999a8d08-d26f-4d31-96d8-7c53281423e8": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": ", the bottom,\u00a0\u00a0 all of these actually correspond to cycles.\nSo, this is a cycle, this is a cycle, this is\u00a0\u00a0 a cycle, this is a cycle. So, any of these if I\u00a0\nadd through the cycle. Now here, for instance,\u00a0\u00a0 there are no such edges, because the tree itself\u00a0\n"
+    },
+    "97c2bb13-8812-46b7-9777-3227d28661a7": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "exhausts all the edges and there is no other way\u00a0\u00a0 of reaching any of the vertices except for\u00a0\nfollowing the BFS. So, if I have a non-tree\u00a0\u00a0 edge in a BFS tree, that is the cycle. \n \nNow, we can do the same thing with the DFS tree.\u00a0\u00a0 So, let us see what ha"
+    },
+    "8ff2158d-ef62-4f5b-8a2d-49d33fbe16ab": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ppens to DFS tree. So, in\u00a0\na DFS tree, I will do something more complicated.\u00a0\u00a0 So, I will maintain a counter which tells me\u00a0\nwhen I explored a vertex and when I finished\u00a0\u00a0 exploring a vertex, so in the BFS tree, I\u00a0\njust kept track of which edges I explored"
+    },
+    "db583a05-ca16-48e0-b4a0-a3f758055c93": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": ".\u00a0\u00a0 In a DFS tree, I will actually keep track of\u00a0\na more complicated thing I will say, I will\u00a0\u00a0 count in some sense that time that I started\u00a0\nexploration and finished exploring the vertex.\u00a0\u00a0 So, here is what we will do, so we will assign a\u00a0\npre and a post."
+    },
+    "e2e9bdcd-6c8b-4c79-9843-b087e3b617aa": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " So, let us look at an example. \n\u00a0 So, supposing I start with 0. So,\u00a0\nI start exploring it at step 0. So,\u00a0\u00a0 I assign the vertex 0 the pre-number 0 and\u00a0\nnow I this counter will keep incrementing.\u00a0\u00a0 So, from 0 I will go to 1. So, I enter 1 at\u00a0\nstep 1. So, th"
+    },
+    "f8220181-397f-46e4-9079-edfc66e5f3ec": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "is is the pre-number for 1,\u00a0\u00a0 but 1 is a dead end. So, I will finish with 1 and\u00a0\nnow I will say I finished with 1 at step 2. So,\u00a0\u00a0 each vertex has a purple number, a pre-number and\u00a0\na green number a post number. So, the pre-number\u00a0\u00a0 is when I started it an"
+    },
+    "9f9bf0cb-5ceb-4744-944d-ee42fcc3b32b": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "d the post number is when\u00a0\nI finished it and the post number will be after\u00a0\u00a0 the pre-number and I keep incrementing. \nSo, now I will come back to 0. So, I have gone\u00a0\u00a0 here and I have come back to 0 but there is I have\u00a0\nnot finished with 0 yet. There is mor"
+    },
+    "c8172a81-b0dd-4457-a811-15e670ba65cb": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "e work to do.\u00a0\u00a0 So, I will now enter 4 at step 3. Because I have\u00a0\nnot finished with 0, I will not mark it as done.\u00a0\u00a0 Instead, I will say that I increment a\u00a0\ncounter which I left it 2. I will increment\u00a0\u00a0 to 3 and I will start with vertex 4, 4 will now\u00a0\nexpl"
+    },
+    "273b208a-7c30-4ece-947c-b28524bfa407": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ore its smallest neighbour which is 8. \n\u00a0 So, 8 will now be explore at\u00a0\nstep 4, 8, will explore 9,\u00a0\u00a0 so 9 will be explored in step 5. But these are\u00a0\nall slippery numbers because I have not finished\u00a0\u00a0 any of these, I just going forward. When I come\u00a0\nbackwar"
+    },
+    "00c980e9-e965-414b-b79a-334e903d4409": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ds, I close. So, now 9 is a dead end,\u00a0\u00a0 because from 9 I can only come back to 4 which is\u00a0\nalready marked or 8, which is already marked. \n\u00a0 So, now I say 9 is finished. So, I mark 9\u00a0\nas closed and say its post number is step 6,\u00a0\u00a0 I come back to 8, 8 is don"
+    },
+    "f1876ec1-8800-4205-938b-cb596112297f": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "e.\u00a0\nSo, it is post number is 7,\u00a0\u00a0 4 is done, it is post number is 8. Now, I\u00a0\ncome back to 0, I have no further things\u00a0\u00a0 to do 0. So, it is post number is 9. So,\u00a0\nI finished exploring this component. \n\u00a0 Now remember, what happens next is I\u00a0\nlook for the sma"
+    },
+    "7f6d0b88-acc6-47f6-981c-72802d3a54d5": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "llest unmarked vertex,\u00a0\u00a0 so the smallest unmarked vertex is 2. So, I\u00a0\nstart with 2, but I continue my numbering. So,\u00a0\u00a0 I want to record the fact that I reached 2 only\u00a0\nafter finishing everything that I saw from 0.\u00a0\u00a0 So, when I finished 0, I was at step 9. "
+    },
+    "0de5fbe1-0c41-4e2b-94f0-94091e3a281a": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "\nSo, I start 2 at step 10. So, from 2, I go to 3,\u00a0\u00a0 which is exclude smallest neighbour,\u00a0\nwhich is the step 11, from 3, I go to 7\u00a0\u00a0 which is its smallest neighbour, from 7, I go to\u00a0\n6 which is its smallest neighbour at each point,\u00a0\u00a0 I keep incrementing thi"
+    },
+    "5274094e-0137-4eaf-be2b-bcb7d736e604": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "s counter and setting it\u00a0\nas the starting point. So, I started 2 at 10,\u00a0\u00a0 I started 3 at 11, started 7 at 12, I started 6\u00a0\nat 13, from 6 I go to 10, I started 10, at 14. \n\u00a0 Now, from 10, I cannot go anywhere, because\u00a0\n6 and 7 are done. So, I finished 10 at"
+    },
+    "46fae5c6-5aa9-4018-ad50-7dae5b9baf55": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " 15,\u00a0\u00a0 I come back to 6, 6 has only 2 and 7. So,\u00a0\n6 is also done at 16, I come back to 7,\u00a0\u00a0 now 7 is not done, because 7 went this way and\u00a0\ncame down here and then down come back. So, now I\u00a0\u00a0 can still go to 11, I can still go to 11. So, from\u00a0\n7 I can incr"
+    },
+    "06c08a22-6538-4e48-9e45-11da971e354a": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ement the counter to 17 and go to 11.\u00a0\u00a0 But 11 is a dead end, so I finish 11 and\u00a0\n18, now I come back to 7, 7 is a dead end,\u00a0\u00a0 so I finish 7 at 19. Now I finish\u00a0\n3 at 20 and I finish 2 at 21. \n \n\u00a0 So, now starting at step 10 and going up to step\u00a0\n21 I fini"
+    },
+    "154f5c61-3e30-46ad-8c51-c3d8ebdb6bf8": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "shed these 6 vertices, now I have to do,\u00a0\u00a0 again look for the smallest unmarked vertex\u00a0\nwhich is actually 5. So, I have to look at\u00a0\u00a0 it and continue in the sequence. So, 5 will now\u00a0\nstart at step 22. So, I start at step 22 and then\u00a0\u00a0 I come back at step 23"
+    },
+    "a80b0eb3-70ee-4837-b840-325267fb430d": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": ". Because that is it and now\u00a0\nthere are no unmarked vertices and I will stop.\u00a0\u00a0 So, this way when I am doing my depth first\u00a0\nsearch, not only am I keeping track of this tree,\u00a0\u00a0 so I have this tree here, this forest,\u00a0\nbut I am also keeping track of this\u00a0\u00a0 o"
+    },
+    "d664ab8d-e7bc-4888-81a9-5e411977aa2d": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "rder in which I went in and came out. So,\u00a0\nit said that I did 6 after I 7 and so on. \n\u00a0 So, as before any edge which is there in\u00a0\nthe graph, but which is not in my tree\u00a0\u00a0 creates a cycle. So, for instance I\u00a0\nhave this edge from 4 to 9 for instance.\u00a0\u00a0 So, t"
+    },
+    "fc7edb46-0d02-4b16-bb54-499b78d4130b": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "he way I did my depth first search\u00a0\nI came this way and then I backtrack\u00a0\u00a0 that is because 9 to 4 would have created a\u00a0\ncycle. So, in this if I look at my picture\u00a0\u00a0 on the right, it creates a non-tree, so\u00a0\nany non-tree generates a cycle. \n  \n\u00a0 So, here is "
+    },
+    "7a5675f7-7bac-4b5f-8152-c639dc090fea": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "an implementation of this\u00a0\nDFS with this pre and post. So, we will\u00a0\u00a0 use this global implementation, remember in DFS,\u00a0\nwe had this implementation we passed around these\u00a0\u00a0 dictionaries and the implementation\u00a0\nwhere we did not pass around. So,\u00a0\u00a0 here I will "
+    },
+    "97687456-fff0-4463-99d2-4548b49a2758": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "dispense with the parent information,\u00a0\nI am just in keeping the pre and the post. \n\u00a0 So, I have this visited dictionary and I have\u00a0\nnow these two things which record pre of i\u00a0\u00a0 and post of i, so all of them are empty. So, I\u00a0\ninitialise them by saying that "
+    },
+    "a2f4551f-aaed-4cc3-b1ab-3ab7ac5e672d": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "for every vertex\u00a0\u00a0 visited is false. So, there should be a v here\u00a0\nand pre and post are both set to minus 1 and now,\u00a0\u00a0 the way it works is that I start DFS, so I have\u00a0\nto keep this counter going, remember this counter\u00a0\u00a0 is a running counter, which starts a"
+    },
+    "4d7d9cc3-d3f5-42e9-be7f-bd252dbdaf63": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "t 0 and\u00a0\nas I go on it keeps getting incremented. \n\u00a0 So, this running counter is initially\u00a0\n0. So, we will have to call this thing\u00a0\u00a0 0 which I have not shown, but now when I come\u00a0\nto visit a vertex I set pre to be the current\u00a0\u00a0 value of the counter and the"
+    },
+    "b8c2cc4a-71a4-42c3-a588-f02b353e5cf6": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "n I increment the\u00a0\ncounter, then having incremented the counter\u00a0\u00a0 I do the usual thing which is I look at all the\u00a0\nneighbours and if they are not visited I set,\u00a0\u00a0 so this parent should not be there. So, let me\u00a0\njust remove this, so this parent is not there"
+    },
+    "71b9b017-a328-49d2-be8b-1cc0c983205d": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": ". \n\u00a0 So, I do not need to keep the parent, but what\u00a0\nI will do is I will recursively call this DFS\u00a0\u00a0 for k, with the new value of counter. Remember\u00a0\nI have currently I have just incremented the\u00a0\u00a0 counter, so I am now going to start this. So,\u00a0\nwhen I reach "
+    },
+    "251eed34-8ee1-4704-bc4e-bb97dc4efc17": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "that counter, its pre value will be\u00a0\u00a0 the current count plus 1 and when I finish all\u00a0\nthese recursive calls and I am about to exit,\u00a0\u00a0 I will set my post value to be the current\u00a0\nvalue of the counter and I will again,\u00a0\u00a0 increment the counter and leave so th"
+    },
+    "68fc2803-0833-4d03-a093-ecb0e3880f00": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "at the\u00a0\nnext day will get the, so every vertex which\u00a0\u00a0 is explored, can work with the current value of\u00a0\nthe counter that is returned by this DFS, then\u00a0\u00a0 assign it as pre or post, depending on whether\u00a0\nits call is coming from pre or post and then\u00a0\u00a0 incremen"
+    },
+    "478d83ab-9a2a-4875-a47f-9ef09cdbafd7": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ted to pass it on to the next round. \nSo, this is the only work that we have to do is to\u00a0\u00a0 maintain this extra pre and post dictionary as a\u00a0\nglobal dictionary and update it before and after\u00a0\u00a0 each vertex, each DFS call and pass this counter\u00a0\naround and inc"
+    },
+    "9714138d-31d5-43fe-8319-6e2ab994686c": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "rement it every time we assign it.\u00a0\u00a0 So, we assign pre-increment, call it with a new\u00a0\nvalue of count, I have to get back the value of\u00a0\u00a0 count. So, I have to keep this count running\u00a0\nthrough all these DFS calls, because the same\u00a0\u00a0 count is being used in thi"
+    },
+    "0c112bbc-9aa2-4762-bf75-aa20f2a9fe35": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "s whole sequence. \nSo, this is showing you for one particular search.\u00a0\u00a0 Now, if you want to do the earlier thing, you\u00a0\nhave to overlap it with the component thing\u00a0\u00a0 and do this counting on one component, then do it\u00a0\non the next component, do it on the next"
+    },
+    "1eb9e5f4-107a-4edb-a426-8f22e9380254": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " component\u00a0\u00a0 and keep the count value circulating through all\u00a0\nof these, so that I have not shown in this. \n \n\u00a0 So, what can we do with these numbers? I mean, in\u00a0\nthe undirected case, we just said this non-tree\u00a0\u00a0 edges will give us the cycles. But in a dir"
+    },
+    "2b6c8468-a303-4d23-87e8-123c9864dae3": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ected\u00a0\ncase, the natural nature of a cycle is a little\u00a0\u00a0 bit more complicated. So, for instance, if\u00a0\nyou look at this, if we look at 0 to 3 and 0,\u00a0\u00a0 then this is a cycle because it goes\u00a0\naround following the arrows. \n\u00a0 Whereas what looks like a cycle\u00a0\nin t"
+    },
+    "c2a6827b-267b-4fcb-afc9-ef4e7f6d3f6b": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "he picture, if I say 0 5 1 0,\u00a0\u00a0 this is not a cycle, because this last arrow is\u00a0\ngoing the wrong direction, I can go from 0 to 5\u00a0\u00a0 I can go to 5 to 1, but I cannot come back\u00a0\nfrom 1 to 0. So, it is not so straightforward.\u00a0\u00a0 So, a cycle must follow the edge"
+    },
+    "5cb710c2-783e-4507-bcd9-f30a83e3d777": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "s. So, if I\u00a0\ndo the same DFS, remember the DFS will work\u00a0\u00a0 whether the graph is directed or undirected. So,\u00a0\nif I do the same DFS on this particular graph,\u00a0\u00a0 then these are the pre and post numbers. \nAs usual, the purple numbers are the pre-numbers\u00a0\u00a0 and t"
+    },
+    "fdb24bbf-43ac-4184-aa28-dd58001c29ef": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "he greenish numbers are the\u00a0\npost numbers. So, I start with 0,\u00a0\u00a0 then I will go from 0, I will explore 1 from\u00a0\n1, I will explore 4, from 4 I will explore 5,\u00a0\u00a0 from 5 I will get stuck. So, from 4 I will then\u00a0\nexplore. So, from 5 I will explore 7 and 7 has n"
+    },
+    "9fee661f-ea4c-4cf0-993d-2b9df87045d2": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "o\u00a0\u00a0 outgoing edges. So, I get stuck, then I come back\u00a0\nand then I come back to 4 and I can explore 6. \n\u00a0 So, this is the left-hand side. Then after that I\u00a0\nam done with that side. So, then I will go from 0\u00a0\u00a0 to 2 and from 2, I will come to 3 and that is th"
+    },
+    "add81347-2dfe-402c-a97e-043f8a960bf4": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "e\u00a0\nright answer. So, this is how this DFS actually\u00a0\u00a0 was explored and these are the numbers. So now if\u00a0\nI look at this, of course, I have the tree edges.\u00a0\u00a0 So, I have these edges, which are edges from the\u00a0\noriginal graph, which I have used in my DFS. So,\u00a0\u00a0"
+    },
+    "5ef9e6dc-59fe-46c2-b8ec-690a9cd8edb8": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " all these mark edges are tree edges. \nBut I have many different types of non-tree\u00a0\u00a0 edges. So first of all, I have edges which follow\u00a0\nalong the paths in this tree, so I have edges that\u00a0\u00a0 go forward go down a path in the tree. So, 0 is\u00a0\nconnected to 5 in "
+    },
+    "808023d1-8663-4a63-8cc6-99caa3f61163": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "the tree via 1 and 4. But there\u00a0\u00a0 is also a direct edge from 0 to 5 in my original\u00a0\ngraph, which is not there in my DFS tree. So, this\u00a0\u00a0 is a forward edge, so it goes in the tree, from\u00a0\na node to something below it in the tree. \n \n\u00a0 And of course, symmetri"
+    },
+    "2c138338-b32d-40a6-adfe-56bee82c569e": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "cally, there is a backward\u00a0\nedge, something which comes from below to above.\u00a0\u00a0 So, we have an edge, for example, from 5 to 1, so\u00a0\n5 to 1 is not there in my tree, but it is an edge\u00a0\u00a0 from a node below to a node above in the tree. So,\u00a0\nit is connected by pat"
+    },
+    "ba48cf41-e547-43c1-9038-ea9bf7ae83c8": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "h in the opposite direction,\u00a0\u00a0 this is a backward edge and finally there will be\u00a0\nedges which go across branches in the tree. \n\u00a0 So, if I look at 3 to 6 for example. So, this\u00a0\npart, if you remember, was explored from this\u00a0\u00a0 side and this part was explored "
+    },
+    "28c3034a-bbbc-4cb3-8309-b3406ad040ab": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "from the side.\u00a0\nSo, these were part of two different explorations.\u00a0\u00a0 So, the edge from 3 to 6 is an edge from\u00a0\nthe right-hand side to the left-hand side.\u00a0\u00a0 Similarly, the edge from 6 to 7 is also something\u00a0\nwhich we will explore because these were explored"
+    },
+    "d249c4b7-ec39-4e7c-a0c3-eba838dbd0f0": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "\u00a0\u00a0 in two different settings. So therefore, 6 to\u00a0\n7 is also different edge. So, these are called\u00a0\u00a0 cross edges. So, they do not go from ancestor to\u00a0\nchild or child to ancestor but they go across. \n\u00a0 So, we have these non-tree edges come in these\u00a0\nthree fla"
+    },
+    "de0c5085-664b-4b29-987e-7f9c955f1051": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "vours either they go down the tree,\u00a0\u00a0 they are forward edges or they go up\u00a0\nthe tree, they are back edges or the\u00a0\u00a0 across the tree. They are cross edges.\u00a0\nNow, which of these are cycles? So, \n\u00a0 remember we said that if you look at\u00a0\nthis edge, for instance,"
+    },
+    "45940160-6ca3-420c-84eb-3dbf25301584": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " 5, to 1. \n\u00a0 So, the thing is that we have an edge\u00a0\nfrom 1 to 4 we have an edge from 4 to 5\u00a0\u00a0 and we have an edge from 5 to 1, which\u00a0\ngoes back and this is indeed a cycle,\u00a0\u00a0 what about the 0 to 5 edge. So, we\u00a0\nhave an edge from 0 to 1 and then we\u00a0\u00a0 have an"
+    },
+    "5daaeca9-33be-40c7-8f7c-bc9a4c5d2678": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " edge from 1 to 4 and then we have an\u00a0\nedge from 4 to 5. But now 0 to 5 in the wrong\u00a0\u00a0 direction, it does not complete a cycle,\u00a0\nI need us I need an edge from 5 to 0. So,\u00a0\u00a0 0 to 5 does not make, I mean 1 to 5 does not make\u00a0\na cycle here. So, it turns out t"
+    },
+    "3406dc79-07a8-445e-a8cd-eac0d60f5c17": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "hat only the back\u00a0\u00a0 edges will give you cycles, the cross edges and\u00a0\nthe forward edges will not give you the cycle. \n\u00a0 So, unlike in the undirected case, in the\u00a0\nundirected case, we said that you look at any\u00a0\u00a0 edge which is not there in the DFS tree or in "
+    },
+    "f837f4ee-41d2-4dae-a9d1-11821b0aa829": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "the\u00a0\nBFS tree and you are guaranteed to get a cycle.\u00a0\u00a0 But in the directed case, you have to be\u00a0\nbit careful because you will get a DFS\u00a0\u00a0 tree which you will get, which will give you\u00a0\nthe reachability but not every edge which is\u00a0\u00a0 absent from the DFS tree "
+    },
+    "2f9bc54e-e36e-4e8b-8f16-b3f956e078ef": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "actually gives you a\u00a0\ncycle. So, you need to classify these edges as\u00a0\u00a0 forward backwards across and look at only those\u00a0\ncycles which correspond to these back edges.\u00a0\u00a0 So, how do we find this out, this is\u00a0\nwhere our numbering helps us. \n \n\u00a0 So, we can find "
+    },
+    "e731b142-835d-4713-95ca-c6b6b43edda1": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "out whether an edge is a back edge\u00a0\nor a forward edge or a tree edge by using this pre\u00a0\u00a0 and post number. So, if a tree edge is a forward\u00a0\nedge, so let us look at this edge for instance.\u00a0\u00a0 So, it is going from some u to some v, then what\u00a0\nthis means is tha"
+    },
+    "fb457bd5-6b28-4c3a-a8ea-7fbe855ae8a0": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "t v was processed under u. So,\u00a0\u00a0 the starting of v happened after u started and\u00a0\nthe ending of v happened before u finished. So,\u00a0\u00a0 if I look at the interval 0 to 15, which\u00a0\nis the entire time that I was processing u\u00a0\u00a0 and I look at the time that I was proc"
+    },
+    "c641d4be-df1b-45cf-995c-563181c8d503": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "essing v, so\u00a0\nthis is the u interval and this is the v interval,\u00a0\u00a0 the v interval is included in the u interval. \nSo, if I see an edge from u to v and the interval\u00a0\u00a0 associated with the target is subsumed by the\u00a0\ninterval of the top, it means that this ent"
+    },
+    "2c05a01f-690c-47c6-819d-09c0b9318fb5": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ire\u00a0\u00a0 node happened below this node. So, that means it\u00a0\nis a forward edge. The backward edges the reverse,\u00a0\u00a0 this basically tells me this ancestor child\u00a0\nrelationship, a node is an ancestor of another\u00a0\u00a0 node, if its interval spans the interval of\u00a0\nthe lowe"
+    },
+    "367433ac-69e5-4def-82b3-72a3a392aae3": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "r node, so a back edge will go from\u00a0\u00a0 something which is sitting inside. \nSo, if I want to look at, for example\u00a0\u00a0 the edge from 5 to 1, I will say that\u00a0\n3 to 6 you are sitting inside 1 to 10.\u00a0\u00a0 So, if the starting interval is sitting inside\u00a0\nthe ending int"
+    },
+    "0ce0ab4e-c8e3-4c06-b39e-c790f94296ac": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "erval, then it is a back edge\u00a0\u00a0 if the starting interval is subsuming the other\u00a0\nintervals, so it is a forward edge and finally, if\u00a0\u00a0 the 2 edges, 2 intervals are kind of overlapping\u00a0\nor actually if they are disjoint, so if I look at\u00a0\u00a0 this, I have 4, 5 an"
+    },
+    "4e3a134f-ae49-464c-b6bd-dee1c72b8c0f": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "d I have 7 8 there is no, they\u00a0\nwill not overlap, they will just be disjoined. \n\u00a0 So, I have 7 8 and I have 12 13. So, they\u00a0\ndo not. So basically, while I was doing 6 I\u00a0\u00a0 was not doing 7, while I was doing 7 I was not\u00a0\ndoing 6, while I was doing 6 I was no"
+    },
+    "532d762f-d6e2-459f-be22-23c61805647b": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "t doing 3,\u00a0\u00a0 while I was. So, this interval basically tells\u00a0\nme I started doing it and I ended up doing it and\u00a0\u00a0 anything which has a number in between happened\u00a0\nwhile I was suspended or working on this node. \n\u00a0 So, forward edge will say the entire node be"
+    },
+    "bdb2a8fb-3489-46f0-8fbe-6002b27bab9f": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "low\u00a0\nwas processed while I was working, the back edge\u00a0\u00a0 will say that I was done, I was done before that\u00a0\nand so on and the cross edge will say we happen to\u00a0\u00a0 disjoined them. So, by looking at these \npre and post numbers, I can do this\u00a0\u00a0 classification. So"
+    },
+    "c3d15872-c1fa-48fd-b561-a09d75d94828": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": ", therefore calculating this pre\u00a0\nand post numbers gives us extra information. \n \n\u00a0 We can also do other stuff with this. So,\u00a0\nfor instance, this notion of connectivity,\u00a0\u00a0 which we talked about. So, connectivity, we\u00a0\nsaid was something which tells us wheth"
+    },
+    "f95087a2-2c6c-41d3-af4f-ed3aedefd982": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "er\u00a0\u00a0 everything is reachable from everything. But\u00a0\nin case of a directed graph. reachability\u00a0\u00a0 also has to take into account the direction. \nSo, if I look at direction, then I will say that\u00a0\u00a0 i and j are strongly connected. If I can go from i\u00a0\nto j and I c"
+    },
+    "ecdae74b-462e-41cd-b2e9-bf84be762f22": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "an go from j to i it is not enough to\u00a0\u00a0 go in just one direction. So, these are what are\u00a0\ncalled strongly connected components. So, in the\u00a0\u00a0 graph that we have on the right, the red marked\u00a0\nportions are strongly connected, because I can go\u00a0\u00a0 around this fr"
+    },
+    "580c42d3-303e-4610-84d3-b23d861da12d": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "om anywhere to anywhere I can\u00a0\ngo around this from anywhere, anywhere. \n\u00a0 Though I can go from 0 to 1, I cannot come\u00a0\nback, there is no way to come back from this\u00a0\u00a0 component to that. So, this does not help me,\u00a0\nthe fact that it is connected in one directi"
+    },
+    "29f9cc4c-30be-48fe-b09b-0ae37404d3f1": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "on.\u00a0\u00a0 So, strongly connected components correspond\u00a0\nto subsets of vertices where I can go from\u00a0\u00a0 anywhere to anywhere and it turns out\u00a0\nthat we can also use this DFS numbering\u00a0\u00a0 to compute strongly connected components, but\u00a0\nwe would not do that now in thi"
+    },
+    "63e31850-b679-48d9-bdc9-72b8ec6871f2": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "s course. \n \n\u00a0 So, to conclude, BFS and DFS are first can do\u00a0\nreachability they can talk about parents and paths\u00a0\u00a0 and BFS can also tell you about\u00a0\ndistance. But in addition to that,\u00a0\u00a0 we can find connected components. We can also\u00a0\nfind these cycles by loo"
+    },
+    "625e6465-7bc1-4a28-96f0-cf22b688b1fa": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "king for non-tree edges\u00a0\u00a0 and by using this numbering scheme for DFS,\u00a0\nwe can also find forward back and cross edges\u00a0\u00a0 because only back edges generate cycles. \nSo, DFS numbering is a very powerful way of\u00a0\u00a0 recording the progress of DFS and\u00a0\nuncovering the"
+    },
+    "4e788da9-4d33-4413-9c40-15a9c1d1c17e": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " structure of the cloud\u00a0\u00a0 of the graph and then connectivity also\u00a0\nis more complicated for directed graphs,\u00a0\u00a0 it is not enough to just be part of the same\u00a0\ncomponent as in terms of one directional edges you\u00a0\u00a0 need bi directional connect, we need to go from"
+    },
+    "5579f51e-99a4-457b-bd64-0eaed409e81c": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "\u00a0\ni to j and j to i. So, the DFS numbering can also\u00a0\u00a0 be used for strongly connected components. \nThere are also other structural features. So,\u00a0\u00a0 you might ask can I if I did, if I remove\u00a0\nthis vertex will the graph fall apart?\u00a0\u00a0 If I remove this edge will"
+    },
+    "15ac24f3-2154-4edc-9bfa-f548894f130c": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": " the graph fall apart?\u00a0\nSo, these are important things. So, these are like\u00a0\u00a0 if you have a telephone or internet cable and\u00a0\nif one cable is snapped, when the whole network\u00a0\u00a0 can disconnected or if this router breaks,\u00a0\nwill our network become disconnected. "
+    },
+    "1c927c23-f66e-445a-b6c7-189b76c0f9b6": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "\n\u00a0 So, these are important points to find out in\u00a0\na graph and these DFS numbering can also help\u00a0\u00a0 to find these. So, DFS numbering is actually a\u00a0\nvery powerful tool and that is why as I mentioned\u00a0\u00a0 before, though, it seems to be more complicated\u00a0\nas a conc"
+    },
+    "18e74117-b116-4300-9860-8d9ec72d042e": {
+        "content_id": 35,
+        "course_name": "PDSA",
+        "title": "Applications of BFS and DFS",
+        "week": 4,
+        "chunk": "ept because it uses recursion.\u00a0\u00a0 It seems more complicated as a concept than BFS.\u00a0\nActually, DFS gives you a lot more information\u00a0\u00a0 about the graph and therefore it is really the\u00a0\npreferred tool normally for exploring a graph."
+    }
+}

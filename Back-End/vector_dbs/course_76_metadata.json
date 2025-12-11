@@ -1,0 +1,709 @@
+{
+    "32f5596e-5390-4501-9bc6-9d70a65499f2": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "So, we looked at the bandwidth allocation problem,\u00a0\u00a0 which we modeled using linear programming. And\u00a0\nwe said that it was a problem, which involved\u00a0\u00a0 maximizing, the flow through a graph, we wanted\u00a0\nto flow as much internet traffic as possible\u00a0\u00a0 between mul"
+    },
+    "238c7638-90fd-4c63-83bb-5a7e5cf70ade": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "tiple nodes in a graph and we said\u00a0\nthat there may be a different way of doing it.\u00a0\u00a0 So, let us look at this generic\u00a0\nproblem called Network Flows now.\n\u00a0 So, imagine we have a network of pipelines. So,\u00a0\nlet us assume that we are trying to transport\u00a0\u00a0 oil f"
+    },
+    "12591e34-ae89-4ccf-b446-809c763927cb": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "rom 1 place to another place. So, we have a\u00a0\nnetwork of pipelines, which is given by this kind\u00a0\u00a0 of a directed graph. So, the edges represent\u00a0\nthe directions in which the oil will flow,\u00a0\u00a0 and the capacities of each of the\u00a0\npipelines is the number indicated"
+    },
+    "c4f6d238-74ec-4929-ab00-8d87ac48172e": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": ". So,\u00a0\u00a0 for example we have a pipeline here of capacity\u00a0\n2, a pipeline here of capacity 10, and so on.\u00a0\u00a0 So, our goal is to take as much as possible from\u00a0\nthe source to the target. So, we will have these\u00a0\u00a0 2 special nodes and we will think of the flow\u00a0\nalw"
+    },
+    "f05ad8fb-de8d-4017-97bf-7c2389020843": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ays going from the source to the target.\n\u00a0 So, 1 of the constraints, that we will impose\u00a0\nis that the flow cannot be stored anywhere. So,\u00a0\u00a0 all the liquid must flow, we cannot for\u00a0\nexample transport 3 units here and then\u00a0\u00a0 keep 2 units here and move only 1"
+    },
+    "71eb4ef9-69d5-4298-b7dd-1dd701ba93ea": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " unit in\u00a0\nthat direction, so that is not allowed.\u00a0\u00a0 So, everything must keep flowing, there\u00a0\ncan be no storage in the network.\n\u00a0 So, in this particular network, you can\u00a0\nactually work out, that you can transport\u00a0\u00a0 7 units of flow. So, here we have 2 units "
+    },
+    "6dfe3fbd-0c78-40e7-a622-d2a9766747a9": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "of flow\u00a0\ngoing this way and that goes there and comes down\u00a0\u00a0 here. So, this is 2 units. And then we have here\u00a0\n1 unit plus 4 units, but this 1 unit goes up and\u00a0\u00a0 then comes down, so it joins the 4 units here and\u00a0\nthen together they form 5 units, which is a"
+    },
+    "3605401c-ef44-4603-a3a8-0388d5b7dd57": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "llowed\u00a0\u00a0 in this pipe and another 5 units goes there.\nSo, we are actually able to achieve\u00a0\u00a0 7 units of flow in this particular network,\u00a0\neven though notice that we had some capacities,\u00a0\u00a0 which were more than 7, like we had this node,\u00a0\nthis pipe which allow"
+    },
+    "99324e69-4244-487f-a04c-2e23f3a862f7": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ed a unit flow of 10.\u00a0\u00a0 So, the question, that we want to\u00a0\nknow is, how do we know that the 7,\u00a0\u00a0 that we calculated by just kind of drawing\u00a0\nsome arbitrary flow is the maximum flow.\n\u00a0 So, formally what we have is a graph and\u00a0\nthis is essentially, we should"
+    },
+    "97905cf4-a769-44c3-8e0f-5a98db96c858": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " think about\u00a0\u00a0 it as a directed graph, but we will see later\u00a0\nthat we will kind of add edges to it also.\u00a0\u00a0 So, we have a special node, which is the\u00a0\nsource node and we have a special target node,\u00a0\u00a0 which is sometime called the sync node. So,\u00a0\nas I said bef"
+    },
+    "cf24b051-624a-45e3-808a-e26539173d5d": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ore we our goal is to transport\u00a0\u00a0 quantities from the source to the target. So, it\u00a0\nis best to think of this quantity as some kind of\u00a0\u00a0 liquid and these edges as pipes. So, we want to\u00a0\nflow as much liquid as possible from the source\u00a0\u00a0 node to the target no"
+    },
+    "4137e4e3-fd3f-471b-a859-7d056aeb1ec5": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "de through these pipes. \nSo, each edge as we said has a capacity. So,\u00a0\u00a0 we will write the capacity of an edge e as c as\u00a0\ne. And now we want to assign a flow to each edge,\u00a0\u00a0 we want to assign a quantity that flows through\u00a0\neach pipe, which of course cannot "
+    },
+    "558c6b80-7255-4c42-9699-2869920b054a": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "exceed its\u00a0\u00a0 capacity. So, f of e, the flow through the\u00a0\nedge e must be less than or equal to c of e.\u00a0\u00a0 The other constraint that we said\u00a0\nwas that, there is no storage.\n\u00a0 So, everything that comes in must go out. So, at\u00a0\nevery node except the source node "
+    },
+    "1724b83c-9c89-439f-98f4-fb2b205f2006": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "and the target\u00a0\u00a0 node, the sum of the incoming flow must equal the\u00a0\nsum of the outgoing flows. So, for instance if\u00a0\u00a0 I flow 3 units through this pipe here and I am\u00a0\nonly allowed to take 1 unit in that direction,\u00a0\u00a0 then I must put 2 units in this direction,"
+    },
+    "0e7d0392-28a8-46a1-940c-e160c7080b95": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "\u00a0\notherwise I am not going to be able to make\u00a0\u00a0 the flow match, we will have to end up with some\u00a0\nsurplus at that node, which is not allowed.\n\u00a0 So, whenever I have some quantity flowing and\u00a0\nit could come in through multiple sources. So,\u00a0\u00a0 now I have 1 com"
+    },
+    "b3402338-2e92-4652-8686-eab0770eeb0c": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ing in through here and\u00a0\nmaybe I have 2 coming in through there.\u00a0\u00a0 So, now I have 3 coming into d, now 3 has to be\u00a0\ndistributed. So, maybe 2 of them can go out there\u00a0\u00a0 and 1 can come here. So, the flow at\u00a0\nany node must conserve the quantity. \n\u00a0 So, everyt"
+    },
+    "4aa6da03-f696-4ed9-8f88-38332c187dad": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "hing that comes in must go\u00a0\nout, of course the only two exceptions\u00a0\u00a0 are the source node, and the target node,\u00a0\nbecause the source node is really generating\u00a0\u00a0 flow, it does not have you can imagine that\u00a0\nthere is an unlimited supply coming this way,\u00a0\u00a0 whic"
+    },
+    "4af57a2b-2085-4332-9f9d-b07d225aa2e9": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "h is generating flow. And here we have a kind\u00a0\nof unlimited reservoir in which to store the flow.\u00a0\u00a0 So, at the source and the target there is\u00a0\nno constraint, I can push out as much as\u00a0\u00a0 I am allowed to from the source I can collect as\u00a0\nmuch as I am allowed"
+    },
+    "6e7508f3-00f0-46d8-8c61-d96ffac24b3f": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " to at the target, but every\u00a0\u00a0 intermediate node must conserve the flow.\nSo, the total volume that I can push I can\u00a0\u00a0 measure it at either end, either I can\u00a0\nmeasure it at the target, or at the source.\u00a0\u00a0 So, let us just say that the total amount\u00a0\nthat I am"
+    },
+    "d16cf2f2-7067-4ebc-a59b-64ad29f321be": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " actually going to flow can be\u00a0\u00a0 computed by looking at how much flows out of the\u00a0\nsource, it might flow through different routes,\u00a0\u00a0 but in the end it must all come from the source.\u00a0\nSo, if I just add up the flow on the 3 outgoing\u00a0\u00a0 edges from the source. "
+    },
+    "f116a2cf-6989-4df2-a75e-3976fff328bd": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "Alternatively if I add up\u00a0\nthe 2 flows and the incoming edges of the target,\u00a0\u00a0 this must represent the flow that I have overall\u00a0\nacross all the pipes, independent of how the\u00a0\u00a0 flow is being inside rooted and so on.\nSo, we saw last time, that we could set u"
+    },
+    "b76d1b33-367c-45c0-ba93-cfc7f330af6c": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "p\u00a0\u00a0 a different flow problem, that bandwidth\u00a0\nallocation problem as a linear programming\u00a0\u00a0 problem. So, here we can try through the\u00a0\nsame thing. So, in that particular problem\u00a0\u00a0 one of the difficulties we faced with the linear\u00a0\nprogramming model was that w"
+    },
+    "03841c32-ce2a-48a6-999e-acc41ef24228": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "e were using a path\u00a0\u00a0 as a variable. And we said that there would be\u00a0\nexponentially many paths in a given graph. \n\u00a0 So, that would be a very large encoding\u00a0\nin terms of linear programming.\u00a0\u00a0 Well you can actually do it with edges. So, let\u00a0\nus assume that w"
+    },
+    "3b0d2f5b-85c5-4897-a610-67fb0e98f72a": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "e have a variable for each flow.\u00a0\u00a0 So, f e will represent the flow at each edge.\u00a0\nSo, we will have for every edge, so we can call\u00a0\u00a0 the edges by their end point. So, we will have\u00a0\nfor this edge s a we will have s f s a for b d\u00a0\u00a0 for instance we will have f"
+    },
+    "5837696c-70d6-4025-8940-2ed912300f84": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " b d and so on.\nNow, we have these constraints, which tell us\u00a0\u00a0 an upper bound for these flows. So, f b a\u00a0\nthe flow in this edge is constrained by 10.\u00a0\u00a0 So, we can write down for each of these variables,\u00a0\na constraint telling us how much capacity, that\u00a0\u00a0 e"
+    },
+    "0356aef1-965e-42fe-a307-d8e71afcd7e8": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "dge has as per the input graph. And now we have\u00a0\nthis conservation. So, conservation for example\u00a0\u00a0 tells us that if I am at d, then I have these 2\u00a0\nedges coming in. So, I have f a b and f b d and\u00a0\u00a0 I have 3 edges going out, I have d c d e and d t.\u00a0\nSo, the"
+    },
+    "dd4a18dd-6568-479e-ba50-3549354531a3": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " sum of the flows coming in that is f a d\u00a0\u00a0 plus f b d must be equal to the sum of the flows\u00a0\ngoing out which is f d c plus f d e plus f d t.\n\u00a0 So, now that we have these constraints,\u00a0\nthis completely captures in some sense,\u00a0\u00a0 what all is allowed in the fl"
+    },
+    "6e6f870b-57cc-4d31-b1b5-d3d23d4274ed": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ows and now what\u00a0\nI want to do is maximize the flow from s to t.\u00a0\u00a0 And as we said we can concretely capture that\u00a0\nmaximum flow, by asking how much is flowing\u00a0\u00a0 out of the source. So, we take all the edges,\u00a0\nwhich have this starting point as a source and\u00a0\u00a0 "
+    },
+    "cd312c00-e730-4b97-a89a-3e2d8a104dd0": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ask what is f s a plus f s b plus f s c in this\u00a0\ncase, because there are exactly 3 edges. So,\u00a0\u00a0 given a concrete graph you can write down this\u00a0\nformula in terms of the edges in that graph.\n\u00a0 So, then you can solve this as we had said\u00a0\nbefore using simplex "
+    },
+    "f8f870da-4df7-4bc7-98e4-fe26fdef02a8": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "for instance. And what\u00a0\u00a0 simplex will do, is it will try to identify this\u00a0\nfeasible region and look for these corner points,\u00a0\u00a0 these vertices and keep moving from one vertex\u00a0\nto the other, until it finds an optimum vertex.\u00a0\u00a0 So, what we are going to see in"
+    },
+    "5ae3fbd7-efd7-44a2-a5c2-da664fa635fd": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " this lecture\u00a0\nis a different way of interpreting that. So,\u00a0\u00a0 we will do something which will go from one\u00a0\nsolution to another solution, but we will do\u00a0\u00a0 it kind of directly without invoking simplex.\u00a0\nAnd in this process, we will get an algorithm\u00a0\u00a0 directl"
+    },
+    "fd25f2cc-5c3f-41d0-95a1-621e470fee57": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "y for maximum flow, in this particular type\u00a0\nof graph, where we have a source and a target.\n\u00a0 So, this is called the Ford-Fulkerson algorithm.\u00a0\nSo, initially we are just given a graph with\u00a0\u00a0 capacities and there is no flow. So, what we can\u00a0\ndo is of course"
+    },
+    "8a894b06-5b01-4964-adf2-0d1767753735": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " add some flow, wherever there is\u00a0\u00a0 capacity. So, for instance we choose a path from\u00a0\ns to t, in which the capacity is not being used\u00a0\u00a0 and we can augment the flow. So, for instance we\u00a0\nmight take some flow from here to there of unit 1,\u00a0\u00a0 because there is "
+    },
+    "1578e4c3-1538-4c1c-9707-05c5d0edf473": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "capacity of 1 and at the\u00a0\nmoment I had a zero flow. So, I can now put flow\u00a0\u00a0 s to 1, s to a and then a to t and\u00a0\nflow 1 unit from source to target.\n\u00a0 Now, if I do that on the upper\u00a0\npath and on the lower path,\u00a0\u00a0 then I am able to flow a capacity of 2 and\u00a0\n"
+    },
+    "df345956-cb3e-4b61-b982-51bba460507e": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "it is very easy to see in the simple graph,\u00a0\u00a0 that you cannot flow more than 2, because there\u00a0\nare only 2 edges going out of s and together they\u00a0\u00a0 can only hold a capacity of 2. So, it is very\u00a0\nclear that you cannot exceed this capacity.\u00a0\u00a0 But what if we c"
+    },
+    "c434b09c-34ca-47de-90f6-11f31e3e5ae5": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "hose this path initially? \nSo, right now we could have got this by\u00a0\u00a0 choosing the upper path and the lower path\u00a0\ncleverly, but what if we were not clever,\u00a0\u00a0 or the network was too complex to find a clever\u00a0\npath right in the beginning. So, supposing we\u00a0\u00a0 ta"
+    },
+    "8d5182dc-1d42-45b1-a834-ae2f82558e69": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ke a wrong path and we actually flow 1 unit\u00a0\nbut by mistake we go down the middle. So,\u00a0\u00a0 we come down here and go there. So, this also\u00a0\nflows 1 unit, but now notice what' is happened,\u00a0\u00a0 because I have taken this 1 unit if I take\u00a0\nsomething down here, it ca"
+    },
+    "6eef1127-7d9f-4000-aef6-a2578399829c": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "nnot be flowed,\u00a0\u00a0 because it has to pass out through b, the only\u00a0\nway to pass out through b is to take the edge b t,\u00a0\u00a0 but the edge b t has already been saturated\u00a0\nby the wrong flow, that it shows initially.\n\u00a0 And similarly, this edge which has capacity 1\u00a0"
+    },
+    "728ed64c-f336-46d9-a45e-ddaa5628d348": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "\ncannot be used anymore, because I cannot reach any\u00a0\u00a0 extra flow to a. The only way to reach flow to a\u00a0\nis to come from s to a, but then I do not have any\u00a0\u00a0 capacity left from s to a. So, when I have made\u00a0\nsuch a bad decision, then I need a way to kind of\u00a0"
+    },
+    "c8cfb724-ac16-45a2-b1ca-3c6028807739": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "\u00a0 proceed from this. So, this is imagine that this\u00a0\nis like in simplex you have chosen 1 vertex, 1\u00a0\u00a0 optimum point in your feasible region and you have\u00a0\nrealized, that this is not the best point, I mean\u00a0\u00a0 there is a different point I can go to, so how\u00a0\ndo "
+    },
+    "3c7d49f8-10e4-4e33-84e5-734396572829": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "you move to that point in this algorithm.\n\u00a0 So, what you do is, you essentially\u00a0\nallow yourself to reverse your choices.\u00a0\u00a0 So, whenever I put something in the flow, what\u00a0\nI say is that I am able to undo that flow.\u00a0\u00a0 So, the capacity in the direction of the"
+    },
+    "f17cae6e-b512-4d5d-bd57-e54a7a27b72c": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " flow\u00a0\nhas now been saturated, but I have a capacity\u00a0\u00a0 to undo the flow by reversing the direction of the\u00a0\nflow, which is the same as stopping the flow. So,\u00a0\u00a0 I add these reverse edges. So, I had flowed\u00a0\none unit through these orange edges. So,\u00a0\u00a0 I now say"
+    },
+    "da873478-03b8-4e61-bb47-f1d634c32af4": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " that the capacity along these orange\u00a0\nedges, which used to be 1 has become 0. \n\u00a0 But now I have added these new edges, these\u00a0\ngreen edges, which are this residual capacity.\u00a0\u00a0 It tells me that now if I really want to use s\u00a0\n2 a again I can push back some f"
+    },
+    "89a0a301-2d5e-4d3d-b8d2-47d15974cbe5": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "low from a to s,\u00a0\u00a0 because I have that capacity. It is basically the\u00a0\nsame as reducing the flow from s to a, but instead\u00a0\u00a0 I think of it as pushing it back from a to b. \nSo, I am always looking at the same type of\u00a0\u00a0 problem, it is still the flow problem,\u00a0\n"
+    },
+    "a9ec7fa2-4631-44fb-b451-ef0f5a071e03": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "I am not thinking of reducing a flow,\u00a0\u00a0 but increasing the flow through new edges. So, I\u00a0\nadd this, so I reduce the capacity of every edge\u00a0\u00a0 by the flow that I have pushed through that edge\u00a0\nin my previous allocation. And for each such edge\u00a0\u00a0 I introduce a"
+    },
+    "85e3d3b6-b169-45b3-a13e-2026e5ef57ad": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " reverse edge, which is equal to\u00a0\nthe capacity that I have just allocated.\n\u00a0 So, let us see how it works for instance. So,\u00a0\nthis is the Ford-Fulkerson algorithm, just to\u00a0\u00a0 remind you start with the zero flow, you choose\u00a0\nsome path, now you do not have to b"
+    },
+    "189c0d2c-8c38-4096-bb71-0245d80112c0": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "e intelligent\u00a0\u00a0 is the claim, you choose some path from the\u00a0\nsource to the target, or the source the sink\u00a0\u00a0 that is not saturated. And you push as much flow\u00a0\nas you can given the capacity of that path.\n\u00a0 Now, you build that residual graph. So, for each\u00a0\ned"
+    },
+    "4ececd9b-b007-4812-9c58-6a19bb6ab304": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ge that you have used in this particular path,\u00a0\u00a0 you replace the flow in the forward direction by\u00a0\nthe flow, the capacity minus the flow that you\u00a0\u00a0 have put in. And you add a new edge backwards\u00a0\nequal to the flow, that you have done.\n\u00a0 And how do you end, "
+    },
+    "96edc9d2-6e17-4685-a3b9-dbfdc0a1d07d": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "well you keep doing\u00a0\nthis until in this augmented graph,\u00a0\u00a0 you are building this graph with more and more\u00a0\nreverse edges, build in the residual way. At\u00a0\u00a0 the end you should reach a situation, where you\u00a0\nwill not be able to push any flow even though\u00a0\u00a0 you h"
+    },
+    "891f8a1b-2d25-4db0-bc86-cd22149a26a1": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ave added all these edges. So, this will\u00a0\nbecome clear when we do this example here.\n\u00a0 So, let us start with this example. So, as you can\u00a0\nsee there are flows of 10, 20, and 30. So, I might\u00a0\u00a0 pick initially the path, which goes from s to a, a\u00a0\nto b and b t"
+    },
+    "ce3d341c-1011-48c2-b7a0-44e1b46b30f1": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "o t. So, this allows me to flow 20 in\u00a0\u00a0 each of these edges. So, I can the algorithm\u00a0\nsays augment the flow as much as possible.\u00a0\u00a0 So, since I am allowed a flow of 20 on each of\u00a0\nthe edges, I can push through a flow of 20. The\u00a0\u00a0 next step is to build the r"
+    },
+    "15679d0d-a9fd-478c-9952-ec6e13ecfad9": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "esidual graph. So, I\u00a0\nhave to replace each of these edges by 0 capacity\u00a0\u00a0 indicating that the capacity minus the flow is\u00a0\n0. And I have to add these reverse edges. \n\u00a0 So, I will now replace each of those edges,\u00a0\nso sorry, so there was a mistake here. So,\u00a0\u00a0"
+    },
+    "bcf623cb-bddb-476c-95f0-5c32b156b577": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " this should have been 30. So, there is a 30 edge\u00a0\nthere sorry. So, if I have 30 there, then even\u00a0\u00a0 though I have 20 at the top and the bottom I\u00a0\ncan only flow 20 through these 30 edges. So,\u00a0\u00a0 when I build the residual graph, I actually\u00a0\nhave 10 capacity l"
+    },
+    "fba72a3e-f491-4353-ac12-e6acd0ad2614": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "eft on that edge and the\u00a0\u00a0 residual graph in the reverse direction\u00a0\nhas the flow that I actually produce. \n\u00a0 So, it is 20, 20, 20, but notice that there\u00a0\nis still a flow of 10 possible in this edge.\u00a0\u00a0 So, it is not always the case, that the\u00a0\nresidual graph"
+    },
+    "fa4d42f7-7199-4d11-9d2a-0f54c6dbffa3": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " will generate a zero edge.\u00a0\u00a0 If in some part of the flow, that you\u00a0\ncalculated you did not achieve the capacity,\u00a0\u00a0 then in that flow you will actually keep some\u00a0\nnon-trivial capacity left for the next round.\n\u00a0 So, now we work with this graph, the point is"
+    },
+    "c033a37d-1aa7-4d73-ba67-7264c1632c71": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "\u00a0\nthat we do not go backwards, we go forwards\u00a0\u00a0 but with larger and larger graphs. So, we now\u00a0\nwork with this graph and decide what to do.\u00a0\u00a0 In the limit what will happen is between every\u00a0\npair of edges, we will add a forward edge and\u00a0\u00a0 a backward edge and"
+    },
+    "59f364b0-f640-407f-ac5a-0657ed7ee432": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " we will keep adjusting\u00a0\nthe capacity back and forth due to residual,\u00a0\u00a0 the residual graph criteria. But at this\u00a0\npoint now we have these extra green edges. \n\u00a0 So, I can now look at parts, which go through\u00a0\nthese green edges, for example I can look at\u00a0\u00a0 a "
+    },
+    "a51cafb7-804e-486b-9c5c-458434d83167": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "path which did not exist before, which goes\u00a0\nfrom here to here to here, because I now have\u00a0\u00a0 added some capacity on this new green edge\u00a0\nfrom b to a, which was not there before.\u00a0\u00a0 So, if I do that, then I can flow how much? Well\u00a0\nI can flow 10 here, I can "
+    },
+    "b96b0ecb-19ad-4962-a7ba-7c35dc1e6a7f": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "flow 10 out of 20 here,\u00a0\u00a0 and I can flow another 10 there. So, I can add 10\u00a0\nnew flow from s to b to a to t. So, I do that.\n\u00a0 So, I add a flow of 10 from s to b to a to\u00a0\nt. And now if I compute the residual graph\u00a0\u00a0 this will become 0, this will become 0, t"
+    },
+    "76ba1eae-3503-4c05-bc5d-d50b3388aeac": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "his will\u00a0\nnow go from 20 to 10 and the 10 will come here,\u00a0\u00a0 I will add it to the backwards capacity. So,\u00a0\nevery time I add in the forward direction,\u00a0\u00a0 after I construct the residual graph, I\u00a0\ntake that much quantity and transfer it\u00a0\u00a0 from the forward direc"
+    },
+    "5f43c3bc-6f60-458a-8cbf-adc7cf7357ff": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "tion\u00a0\nto the backward direction.\u00a0\u00a0 So, this becomes my new residual graph.\nSo, now I have only 10 going up here\u00a0\u00a0 and 10 plus the old 10, 20 is now coming down\u00a0\nhere. And now this edge which had 10 has become\u00a0\u00a0 0 and the reverse is 10. And similarly, this "
+    },
+    "ace43cb7-5a00-453e-85c2-9be211db4c1e": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "edge,\u00a0\nwhich had 10 has become 0 in the reverse system.\u00a0\u00a0 At this point I am stuck because if I look\u00a0\nat s and I try to push more flow, it has to\u00a0\u00a0 go out this way, or this way and clearly,\u00a0\nI cannot do either, because both are 0.\n\u00a0 So, I say that the grap"
+    },
+    "41b7de84-e9af-4bf1-811a-9987a3d96f01": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "h has now reached a\u00a0\nsituation, where there is no feasible flow\u00a0\u00a0 from s to t. So, with this I now have I just have\u00a0\nto add up all the flows that I have put before\u00a0\u00a0 and get the total flow. Now, some of those\u00a0\nflows cancel out like we saw, because in\u00a0\u00a0 thi"
+    },
+    "f4ebea06-f574-463a-b32e-b22830785092": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "s edge for instance initially we put 20 down\u00a0\nand then we put 10 back up. So, the net flow,\u00a0\u00a0 which is going from a to b was just 10.\nSo, this now gives us the solution. So,\u00a0\u00a0 this is how the Ford-Fulkerson algorithm\u00a0\nworks. So, you just start with any flo"
+    },
+    "1d7394dc-1c57-4190-852a-6bce3d142732": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "w,\u00a0\u00a0 that flow should saturate some path,\u00a0\nthen you construct this residual graph\u00a0\u00a0 by reversing the edges with the flow, that\u00a0\nyou have created and reducing the capacities\u00a0\u00a0 by the flow you have created in the forward\u00a0\ndirection, keep going until you get "
+    },
+    "1959e170-89a3-40d4-b117-523ea89f75c9": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "stuck.\n\u00a0 Now, what about arguing that one has achieved a\u00a0\nmaximum flow. So, I have not given you a proof\u00a0\u00a0 that, that algorithm actually terminates, or\u00a0\neven computes the maximum flow. So, this is\u00a0\u00a0 something which is not part of this course, the\u00a0\npoint is"
+    },
+    "cac8309d-15ae-490f-9f0d-315c9d8cf053": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " just to illustrate that network flows\u00a0\u00a0 can be solved and we will see that\u00a0\nnetwork flows themselves are a useful\u00a0\u00a0 tool for reducing other problems, just as we\u00a0\nsaw that we can convert problems to linear\u00a0\u00a0 programming, we will use network flows as a\u00a0\nkin"
+    },
+    "1ec436f2-7e04-43ec-9fe7-352c747de0c5": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "d of base problem to solve other problems.\n\u00a0 So, if I give you a solution, let us assume\u00a0\nthat somebody claims that they have a solution,\u00a0\u00a0 how would you validate, that it is optimal. So,\u00a0\nlet us look at this graph, the first oil graph,\u00a0\u00a0 that we construct"
+    },
+    "c97e81b1-d05b-48b6-84c0-e35e3f61b3d3": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ed and let us look at these\u00a0\nthree edges. So, we have these edges from a to d,\u00a0\u00a0 b to d and s to c. \nSo, if you disconnect these edges,\u00a0\u00a0 then you will see that there is no way of going\u00a0\nfrom s to t, because these three edges together\u00a0\u00a0 cut all the paths f"
+    },
+    "ef1f82e0-4f9e-4c58-beeb-f9a14d10a298": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "rom s to t. So, such a set\u00a0\nof edges, which disconnects s and t is called a\u00a0\u00a0 s t cut, it is something which partitions your\u00a0\ngraph into something which contains the source\u00a0\u00a0 and contains a target and the s source and the\u00a0\ntarget are no longer reachable fr"
+    },
+    "dc1dec30-a20d-40ea-af24-db79c01b5817": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "om each other.\n\u00a0 So, since this disconnects s and t, if you had\u00a0\nany flow at all, it has to pass through this cut,\u00a0\u00a0 because if it avoided this cut that means there is\u00a0\na way to go around this cut and reach the target,\u00a0\u00a0 but we have just said that there is"
+    },
+    "68f71a46-0dec-48d7-b6df-c5223f5fcfc0": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " no\u00a0\nway to go around this cut, everything\u00a0\u00a0 gets disconnected with this cut. So, this cut must\u00a0\nactually witness all the flow that passes from s\u00a0\u00a0 to t, anything that goes from s to t has to pass\u00a0\nthrough at least one of the edges in the cut.\n\u00a0 So, in thi"
+    },
+    "b4a65c18-ed70-458d-bff8-fd7b5866bb1a": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "s case, if we look at that cut, that\u00a0\ncut has capacity of 4 plus 1 plus 2. Now, if all\u00a0\u00a0 the flow from s to t must go between 1 of these\u00a0\n3 edges, or more 1 or more of these 3 edges, then\u00a0\u00a0 that total capacity cannot exceed 4 plus 2 plus 1.\u00a0\nSo, I cannot f"
+    },
+    "6d2f33f2-b68a-4853-89bb-60a1cb82c677": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "low more than 7 in this particular\u00a0\u00a0 case minus 2 t. So, this gives me an upper bound.\u00a0\nSo, clearly if I have a cut, then the capacity of\u00a0\u00a0 the cut gives me an upper bound, which says that\u00a0\nthe flow cannot exceed that capacity. The max\u00a0\u00a0 flow cannot exceed"
+    },
+    "ff3d7f37-974c-437c-8150-0c2b39b83113": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " the capacity of min cut. \nBut what about the reverse? Can I always guarantee\u00a0\u00a0 that if there is a cut of this form, then I can\u00a0\nachieve that can I always make sure that I can get\u00a0\u00a0 7 flow. So, for instance I can draw another cut.\u00a0\nSo, I can take a cut, wh"
+    },
+    "1c9c38a0-49da-4fc1-8bcb-e1a779febb7b": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ich looks like this,\u00a0\u00a0 this is also a cut. Now, this cut has capacity\u00a0\n3 plus 10 plus 1 plus 4, because there are these\u00a0\u00a0 edges. So, there is this edge, there is this\u00a0\nedge, there is this edge, and there is this edge.\u00a0\u00a0 So, this edge has capacity 18. Now, "
+    },
+    "1081801a-8852-4aaf-875f-9e68e087b415": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "it\u00a0\nseems unlikely that we can put 18 flow\u00a0\u00a0 through this thing, because there is no\u00a0\nedge which has capacity more than 10. \n\u00a0 So, it is not always the case that if I draw, if\u00a0\nI find a cut and I find the capacity of the cut,\u00a0\u00a0 that is going to guarantee t"
+    },
+    "04084799-41b4-40fd-9137-1c2bab3de45a": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "he that much flow is\u00a0\npossible, every cut will ensure that all the flow\u00a0\u00a0 must pass through the edges in that cut, but not\u00a0\nevery cut will actually represent some flow that\u00a0\u00a0 is realizable. So, we know that the maximum flow\u00a0\ncannot exceed the capacity of m"
+    },
+    "5a48c90e-0741-437d-acb7-9005c441e354": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "inimum cut, but is\u00a0\u00a0 the minimum cut itself always realizable.\nSo, it turns out this is actually true. So,\u00a0\u00a0 this is a very powerful result, which again we\u00a0\nwill not prove, but you we will claim is called\u00a0\u00a0 the max flow min cut theorem. So, which says,\u00a0\nso"
+    },
+    "60376fd9-614c-4ce1-bdba-910f71c9e4d1": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " we know that the max flow cannot exceed the\u00a0\u00a0 min cut, but actually this theorem says that the\u00a0\nmax flow will always be equal to the min cut.\n\u00a0 Now, finding the min cut is actually difficult,\u00a0\nbecause we have to look at all these subsets\u00a0\u00a0 of edges and fi"
+    },
+    "a314301f-2784-4ae2-808f-f20c0d3055a8": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "nd out, if they are cuts\u00a0\nand then find out which is the minimum.\u00a0\u00a0 So, that could be a very tedious algorithm. Now,\u00a0\nthe claim we have is that the Ford-Fulkerson\u00a0\u00a0 algorithm, that we produce just now\u00a0\nwill actually find the maximum flow. So,\u00a0\u00a0 you can use"
+    },
+    "6d624265-4e67-40c3-a1d1-181097cee3d3": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " this theorem in reverse\u00a0\nin actual to actually compute the\u00a0\u00a0 capacity of the minimum cut, because we\u00a0\nknow how to compute the maximum flow. \n\u00a0 So, the theorem tells us, that the minimum cut\u00a0\nlimits the maximum flow, the algorithm tells us\u00a0\u00a0 that the maxim"
+    },
+    "c27fc2d6-acad-4d74-9a1e-c3011d43c973": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "um flow can be computed and together\u00a0\nthat means that with the maximum flow, which\u00a0\u00a0 we can compute reasonably efficiently, we can\u00a0\nactually get hold of the minimum cut as well.\n\u00a0 So, just to reason why this is true.\u00a0\nSo, as we said when we have a cut,\u00a0\u00a0 i"
+    },
+    "712490ff-3167-4cf2-9b37-2d1c2f10dac2": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "t partitions our graph into these 2 parts, there\u00a0\nis a left and right. And we know that from S you\u00a0\u00a0 can reach everything on the left-hand side and\u00a0\nfrom R you can reach everything on the right,\u00a0\u00a0 from R you can reach the right-hand\u00a0\nside, but you cannot g"
+    },
+    "65900bcd-f687-48c0-a859-be25fe0c5584": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "et from L to R.\n\u00a0 So, now if you look at any edge, which crosses\u00a0\nthis, if it is not at full capacity, that means\u00a0\u00a0 there should be something coming back here. And\u00a0\nif this is not at full capacity, the if this is\u00a0\u00a0 not at zero capacity, then this is not at"
+    },
+    "b25c73e8-2cc8-49a4-84e9-4757c90b35ed": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " full\u00a0\ncapacity. So, basically you can claim in the\u00a0\u00a0 residual graph, that if you look at edges, which\u00a0\ncross from this side to that side, the forward\u00a0\u00a0 edges will be saturated and the reverse edges\u00a0\nwill be 0. So, the forward edge is saturated\u00a0\u00a0 is just s"
+    },
+    "8463572e-473e-45ba-8570-19a52a9fa1f9": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "aying, that we have actually reached\u00a0\nthe capacity of the minimum cut. So, this is a\u00a0\u00a0 kind of informal hand waving argument as to why\u00a0\nthis max cut max flow min cut theorem holds.\n\u00a0 So, the Ford-Fulkerson algorithm is not in\u00a0\nitself going to be efficient "
+    },
+    "3a0bc5f8-2c44-4c0e-8c59-4fdfa8f91ea6": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "unless we do\u00a0\u00a0 things carefully. So, if we do not choose\u00a0\nour augmenting paths, that is the paths\u00a0\u00a0 which we get by doing this residual capacity\u00a0\nbusiness carefully, we might keep producing\u00a0\u00a0 bad path one after another, eventually I claim\u00a0\nthat the Ford-Fu"
+    },
+    "987dfde6-6056-436a-bade-1625b5ceae26": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "lkerson algorithm will produce the\u00a0\u00a0 maximum flow. But remember what we did earlier.\nSo, we took this flow and we flowed it through\u00a0\u00a0 this, in the very first graph, but there it was\u00a0\nnot a problem, because we just had capacity 1. So,\u00a0\u00a0 after 1 such thing w"
+    },
+    "3edb6e9d-4edf-4845-848c-349d4f920c24": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "e could construct\u00a0\nthe augmenting path and rectified.\u00a0\u00a0 Now, what is going to happen in this graph\u00a0\nis that one such thing if I do I will flow\u00a0\u00a0 99 will be left as a capacity and I will\u00a0\nget an augmenting path back of 1 here\u00a0\u00a0 and of course I will get an a"
+    },
+    "9c7fad62-5aca-4c4e-996a-fa3a60e591a6": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ugmented path back\u00a0\nof 1 here. So, this is after 1 iteration.\n\u00a0 Now, the only path that is left\u00a0\nthrough the graph is to go this way.\u00a0\u00a0 So, I will again get a flow of 1\u00a0\nhere. So, I will have 99 capacity here\u00a0\u00a0 and I will have a backward flow\u00a0\nof 1 here an"
+    },
+    "c6fe0554-d499-47a7-98b3-9960e1b35098": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "d I will again get a\u00a0\u00a0 forward flow of 1 here. So, after 2 iterations, I\u00a0\nwould have flowed 1 down the middle and 1 up the\u00a0\u00a0 middle and I would have reduced the capacity\u00a0\nof 100, 100, 100, 100, to 99, 99, 99, 99.\n\u00a0 So, if I keep doing this, then it will ta"
+    },
+    "d30505d0-19c0-4388-aa5f-34326a83150d": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ke me 200\u00a0\niterations, because every 2 iterations I reduce\u00a0\u00a0 the 100 to 99, the 99 to 98 and so on. So, it\u00a0\nwill take me 200 iterations of this poorly chosen\u00a0\u00a0 initial path to discover, that actually\u00a0\nI should have just said that there is\u00a0\u00a0 a flow of 100 t"
+    },
+    "52d9d839-4cce-4702-be32-2b03d0fccf57": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "hrough the top half\u00a0\nand a flow of 100 to the bottom half.\n\u00a0 So, in that sense the Ford-Fulkerson algorithm\u00a0\ncan grow very slowly, can grow for example if\u00a0\u00a0 your total flow is some quantity k, it could\u00a0\nactually take k iterations to reach there,\u00a0\u00a0 because "
+    },
+    "293c9259-54e2-4056-9195-7897d773d486": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "each time your quantity will\u00a0\nincrease in this case only by 1. So,\u00a0\u00a0 your flow is 200 and it actually takes\u00a0\nyou 200 iterations you get there.\n\u00a0 Now, it turns out that there is an heuristic,\u00a0\nwhich actually works for this. So, the way you do\u00a0\u00a0 this is you "
+    },
+    "b087ed78-275a-4e18-b062-b67d56610cfc": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "take breadth first search and then you\u00a0\nfind the shortest path to the target. So, remember\u00a0\u00a0 our goal is to find any path, which reaches\u00a0\nfrom the source to the target with some capacity\u00a0\u00a0 and flow that capacity as our next step.\nSo, it turns out that if y"
+    },
+    "c1c7be17-26ab-463d-bc69-20a167ef0dfd": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "ou choose the shortest\u00a0\u00a0 path. So, for instance this is not the shortest\u00a0\npath in terms of edges, this path has 3 edges,\u00a0\u00a0 whereas the path which is in green has only 2\u00a0\nedges. So, b f s would choose the green path\u00a0\u00a0 over the red path and say augment that."
+    },
+    "01902820-fb86-455c-9091-453ea17164cd": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " \nSo, either the top or the bottom, these are\u00a0\u00a0 both possibilities for b f s, but not the one\u00a0\nthrough the middle. And then it turns out if you\u00a0\u00a0 use this heuristic, that is you always use breadth\u00a0\nfirst search to choose the next path and choose\u00a0\u00a0 the shor"
+    },
+    "570d3f94-d810-46f6-ba23-80e27738471d": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "test length in terms of edges, then you\u00a0\nare going to beat this problem. And in general,\u00a0\u00a0 now your problem will be proportional to the\u00a0\nsize of the graph, it will still be not linear,\u00a0\u00a0 it will be the number of vertices.\nSo, n times m, but it will not be\u00a0"
+    },
+    "c9f96e18-f2a8-4c02-abd8-64a085d7e349": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": "\u00a0 dependent on the actual values of the flows,\u00a0\nwhich is what is happening here. So, here\u00a0\u00a0 it is taking time proportional to the values, we\u00a0\nput on the flows, whereas now we are saying it\u00a0\u00a0 is only going to take time proportional to the\u00a0\nsize of the graph"
+    },
+    "79926d32-8c3a-4e2a-88a3-004f0fcc1a26": {
+        "content_id": 76,
+        "course_name": "PDSA",
+        "title": "Network Flows",
+        "week": 11,
+        "chunk": " which is more reasonable. "
+    }
+}

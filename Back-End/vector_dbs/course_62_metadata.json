@@ -1,0 +1,646 @@
+{
+    "20704f77-8f5d-4709-a296-6e52c62fa079": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "So, last time we saw that many problems have an\u00a0\ninductive structure. But if you are not careful,\u00a0\u00a0 then the inductive problems get repeated. So, as\u00a0\nyou approach them from different, bigger problems\u00a0\u00a0 you might find yourself solving the same problem\u00a0\nmult"
+    },
+    "80cd6d71-4b19-4cc9-98e5-79307cec7599": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "iple times, and we would like to avoid this\u00a0\u00a0 wasteful re-computation. So, we said\u00a0\nthat there were two techniques that\u00a0\u00a0 would help us do this called memoization and\u00a0\ndynamic programming. So, let us look at a\u00a0\u00a0 concrete example and see how this works. \nSo"
+    },
+    "bfc3f6f4-1359-4f1f-a249-75460954c53b": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": ", just to remind ourselves, we have these\u00a0\u00a0 inductive definitions like factorial and insertion\u00a0\nsort, where the value for the given input is\u00a0\u00a0 defined in terms of these subproblems, which are\u00a0\nsmaller inputs, and you can convert these into\u00a0\u00a0 code quite eas"
+    },
+    "e75be5be-84ab-47f5-87b7-08258bb5458a": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ily as recursive functions. And then\u00a0\nwhen you look at the structure of the inductive\u00a0\u00a0 definition, you can identify the subproblems. \nSo, you can find out that for factorial of n,\u00a0\u00a0 you need to directly compute factorial of n minus\u00a0\n1, which in turn will "
+    },
+    "3b95a0d5-d028-4bcf-936a-f0431e46ae21": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "require n minus 2, and so\u00a0\u00a0 on. So, all the problems factorial i for i smaller\u00a0\nthan n are subproblems. Similarly, for insertion\u00a0\u00a0 sort, we said that every segment of this list\u00a0\nto be sorted would be a potential sub problem.\u00a0\u00a0 And the goal of inductive def"
+    },
+    "a696bf5a-d4ed-4025-b2c0-839393ffcf14": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "initions\u00a0\nis to use these sub problems and combine\u00a0\u00a0 their solutions effectively to get a\u00a0\nsolution for the whole problem. \n\u00a0 So, let us look at another very familiar\u00a0\ninductive definition. So, we have seen\u00a0\u00a0 factorial, but possibly the next most common\u00a0\ni"
+    },
+    "bd1e2ab9-c7ab-4bd9-adaa-4857008824d4": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "nductive definition is the Fibonacci numbers.\u00a0\u00a0 So, the Fibonacci numbers are defined\u00a0\nas follows. We start with the numbers,\u00a0\u00a0 0 and 1. So, the Fibonacci number at position 0\u00a0\nis 0 at position 1 is 1, and after that we keep\u00a0\u00a0 adding, so Fibonacci of 1 is "
+    },
+    "32119400-8f55-4038-b51b-7060296b1fc0": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "1, Fibonacci of\u00a0\n2 is 0 plus 1 is 1 again, Fibonacci of 3 is 1\u00a0\u00a0 plus 1 is 2, and so on, so we just keep adding\u00a0\nthe previous two numbers in the sequence. \n\u00a0 So, this is a very simple code for this. So, if\u00a0\nyou have something which is either 0 or 1, then\u00a0\u00a0"
+    },
+    "ca88d154-bb29-4b0f-911d-d571b74727f1": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " remember 0 return 0, 1 returns 1. So, the value\u00a0\nis, if the argument is less than or equal to 1\u00a0\u00a0 that is, if it is 0 or 1, then the answer you are\u00a0\ngoing to return is the argument. So, this is just\u00a0\u00a0 a shortcut for two cases and 1. So, 0 is 0, 1 is\u00a0\n1 ot"
+    },
+    "caddb043-a8c1-459b-bab6-1b02a1a55d32": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "herwise, you are going to compute recursively,\u00a0\u00a0 the Fibonacci for the two smaller values,\u00a0\nand finally, we are going to return it. \n\u00a0 Now there is a reason why I have done this\u00a0\nconvoluted thing of calling this intermediate\u00a0\u00a0 thing a value and then return"
+    },
+    "a3a47ffc-607b-4736-898d-590c8e80585e": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ing it, we\u00a0\ncould directly have written here, return n\u00a0\u00a0 and written this expression. But there is a\u00a0\nreason why I have specifically in both cases,\u00a0\u00a0 stored this value to be returned in a new\u00a0\nname called value and then returned it\u00a0\u00a0 which will become clea"
+    },
+    "af4eb27e-f971-406c-be74-49161431a9e9": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "r as we go along.\nSo, let us see what happens when we take\u00a0\u00a0 this code and we actually try to evaluate a small\u00a0\nFibonacci number. Like say, a Fibonacci of 5. So,\u00a0\u00a0 Fibonacci of 5, because it is not the base\u00a0\ncase, will go into this case. So, I will have\u00a0\u00a0 "
+    },
+    "d8bb3580-3212-4151-ab9b-91e0f79f151e": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "to evaluate Fibonacci of 4 and Fibonacci of 3, so\u00a0\nit will produce these two inductive subproblems,\u00a0\u00a0 which will be called recursively by the code. \nSo, now we will do them one by one typically left\u00a0\u00a0 to right, so we will first to n minus 1, and then\u00a0\nn mi"
+    },
+    "785c429d-5fae-4be2-b5b8-733c882d9bd4": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "nus 2. So, we will now look at this value,\u00a0\u00a0 and we will learn how to evaluate it by calling\u00a0\nthis function again. So, it in turn will generate\u00a0\u00a0 two more subproblems. For n minus 2 and n minus\u00a0\n1 for that, so 4 minus 1 and 4 minus 2. \n\u00a0 And again, we will"
+    },
+    "369b639e-b95a-41c3-ad5c-2095faa2073a": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": ", in general, go to the\u00a0\nleft of the 2 and start it again, so now we\u00a0\u00a0 will get Fibonacci of 2 and Fibonacci of 1. Then\u00a0\nfinally, we will come to Fibonacci of 2 again,\u00a0\u00a0 and we will get it to Fibonacci of 1 and\u00a0\nFibonacci of 0. Fortunately, both of these\u00a0\u00a0"
+    },
+    "bc985efc-c7af-41c6-bb8b-67ca23dbec67": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " are base cases. So, for both of these, I will\u00a0\nexit without having to call Fibonacci again.\u00a0\u00a0 So, I will get back the values for both of these\u00a0\nas base cases for my Fibonacci function. \n\u00a0 And then I will be here in Fibonacci of 2, so\u00a0\nI will compute the v"
+    },
+    "d13200f0-a7ec-4452-a0f0-3d4d211ae73e": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "alue of Fibonacci of 2 as\u00a0\u00a0 1 plus 0 is 1, so I will now get back the value of\u00a0\nFibonacci of 2. Now, I am here and I have finished\u00a0\u00a0 Fibonacci of 2, so I have to do Fibonacci of 1\u00a0\nagain. So, I will again go into Fibonacci of 1.\u00a0\u00a0 But then since Fibonacci "
+    },
+    "3164d5e8-cbcc-4b3c-83d9-2d22c0fb0945": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "of 1 is a base case, it\u00a0\nwill immediately return 1. And now from this 1\u00a0\u00a0 plus 1, I will get Fibonacci of 3 is 2. \nNow I am here for 4. I have done 3 and I\u00a0\u00a0 have to do 2. So, now I will go down this\u00a0\nFibonacci of 2 and I will again have to start\u00a0\u00a0 computi"
+    },
+    "1d049f63-5d2e-4d48-96d3-19ef3daf9be2": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ng the whole thing again. This is what we\u00a0\nmeant by saying that the same problem comes again\u00a0\u00a0 and again, and you have to be careful to avoid it.\u00a0\nSo, we have already computed Fibonacci of 2 but\u00a0\u00a0 we have forgotten that we had computed it, so we\u00a0\nwill agai"
+    },
+    "bc484eaf-070b-4ba8-85ef-4388333985a7": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "n, expand Fibonacci of 2 as 1 and 0. \n\u00a0 Again, realize that 1 and 0 are the base case\u00a0\nand again, realize the Fibonacci of 2 is just 1.\u00a0\u00a0 So, now with this, I have completed\u00a0\nthe evaluation of Fibonacci of 4.\u00a0\u00a0 So, I now know that Fibonacci of 4 is 3. So, "
+    },
+    "8be2f192-b95d-48bd-ac77-3344d7b15a50": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "I\u00a0\nhave gone back to the original call that I made,\u00a0\u00a0 and the first part Fibonacci of 4 has been\u00a0\ndone, but I still have to do Fibonacci of 3. \n\u00a0 Now, of course, I have done Fibonacci of\u00a0\n3 once before, but I have forgotten it,\u00a0\u00a0 this is the whole problem "
+    },
+    "2ba53418-c58f-4119-9cf6-a869ba1b1081": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "that we are facing.\u00a0\nSo, Fibonacci 3 will again expand to 2 and 1,\u00a0\u00a0 2, and again expand to 1 and 0, 1 and 0 will give\u00a0\nus back the values, so we will again get Fibonacci\u00a0\u00a0 of 2 is 1. Once again, Fibonacci of 1 will return\u00a0\n1, so I will again compute Fibon"
+    },
+    "3add6d29-d1dc-4e2b-89dd-9f190637eb9f": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "acci of 3 is 2.\u00a0\u00a0 And finally, I will get Fibonacci of 5 is 5.\u00a0\nSo, what we saw here is that we are basically\u00a0\u00a0 recomputing the same thing many times. \nFor example, we have recomputed, this whole\u00a0\u00a0 thing for Fibonacci of 3, twice. So, you can\u00a0\nlook at this"
+    },
+    "2113c6bf-eeb5-44ac-928c-cafbdd6dfba8": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " tree structure of the recursive\u00a0\u00a0 calls and identify these identical computations,\u00a0\nwhich we are doing more than once, because we are\u00a0\u00a0 actually not remembering that we have done it\u00a0\nbefore. So, this is true for Fibonacci of 3 but\u00a0\u00a0 it is also true for sm"
+    },
+    "a7e0e43a-0bd2-4762-8f9d-11752aca050b": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "aller computations. For\u00a0\nexample, Fibonacci of 2, we did it 3 times. \n\u00a0 So, in general, this will be actually exponential.\u00a0\nIf you actually write a Fibonacci function like\u00a0\u00a0 this, and you try to run it on a reasonably small\u00a0\ninput, it will be very complica"
+    },
+    "1aa52f0a-be8a-4272-9a36-669348bc75ed": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ted to evaluate,\u00a0\u00a0 even for, say Fibonacci of 50 or something\u00a0\nlike that, you will find it, it takes,\u00a0\u00a0 it will possibly not even terminate. \nWhereas it is quite easy for us to write\u00a0\u00a0 off Fibonacci of 50. I can start by saying\u00a0\nthis is the zeroth one this"
+    },
+    "21e762ff-8ae0-4311-b2d4-4b9deeb34b31": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " is the first one,\u00a0\u00a0 the next one is 1 plus 0, the next one is 2. So,\u00a0\nI can write off clearly the Fibonacci numbers with\u00a0\u00a0 no effort. Even though I am following the same\u00a0\nphilosophy, as this inductive definition, I am\u00a0\u00a0 not using this kind of wasteful rec"
+    },
+    "044da817-fd1e-4d66-9a97-fc65c10a713a": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ursive thing.\u00a0\nSo, what am I doing? So, this is the point.\n\u00a0 So, one way to avoid this wasteful re-computation\u00a0\nis actually to remember. So, we should remember\u00a0\u00a0 that the value that we have seen before has been\u00a0\ncomputed. So, if we come across it a second "
+    },
+    "50c6d378-8dfd-43d0-855e-499d07150948": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "time,\u00a0\u00a0 we will not recompute it, but rather remember\u00a0\nwhat we have said before, so we will need to\u00a0\u00a0 keep a table of values that we have computed. \nSo, we keep a memory table, let us call it a\u00a0\u00a0 memory table, which is basically all the values of\u00a0\nFibonacc"
+    },
+    "c7852508-9df7-44d9-a232-fa7cd57effb9": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "i, which I have already computed once in\u00a0\u00a0 my life. So, when I have this memory table, then\u00a0\nI can use this technique called Memoization. So,\u00a0\u00a0 memo comes from the, it is an old kind of English\u00a0\nterm memo for something, which is a reminder. So,\u00a0\u00a0 it is not"
+    },
+    "cdca1116-be94-4583-bb42-a0dbf8da36a3": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " memorization, but memoization,\u00a0\nyou are creating this memo saying, this is a\u00a0\u00a0 to do or this is a reminder that I\u00a0\nhave already done this before. \n\u00a0 So, this is our table, and we will this technique\u00a0\nof looking up this table is called memoization.\u00a0\u00a0 So, t"
+    },
+    "7b736261-1821-4926-a1d1-5665e0a60cec": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "he technique consists of basically every time\u00a0\nI compute Fibonacci of n for n for the first time,\u00a0\u00a0 by using this recursive thing, then I will\u00a0\nstore it in this table. But if I come across\u00a0\u00a0 it a second time, in general, when I get\u00a0\nFibonacci of n as a pro"
+    },
+    "8ccb2876-6299-4986-ad95-089794389ebd": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "blem to solve,\u00a0\u00a0 I will first look at the table.\nI will say in this table,\u00a0\u00a0 is there already a value for Fibonacci of\u00a0\nn, if there is already a value, pick it up,\u00a0\u00a0 do not recompute. Otherwise, I will make\u00a0\nthe recursive call. And with this actually,\u00a0\u00a0 it"
+    },
+    "c2f3e992-32af-45a5-a078-107393b61126": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " turns out that you will never recompute the\u00a0\nsame value twice, so Fibonacci in particular\u00a0\u00a0 will come linear because we know the subproblems\u00a0\nof say Fibonacci of n are n minus 1, n minus 2,\u00a0\u00a0 and so on up to 0. And if we are only going\u00a0\nto do each of them"
+    },
+    "6fde2112-b997-4ce3-b4fb-f7e089c6ab4d": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " once, then obviously,\u00a0\u00a0 the number of total calls for Fibonacci that we\u00a0\nreally use recursion on is going to be linear. \n\u00a0 So, let us see how this memoization works\u00a0\non the same example, with Fibonacci of 5.\u00a0\u00a0 As before we start with Fibonacci of 5, but\u00a0\n"
+    },
+    "84609816-e2e7-45fc-ba85-7d8e9d501814": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "now we have this table. So, this table is\u00a0\u00a0 going to be filled as and when we encounter\u00a0\nvalues that we have computed. So, right now,\u00a0\u00a0 we have not computed Fibonacci of k for any k.\nSo, we just have an empty table, I have just put\u00a0\u00a0 six boxes there. But i"
+    },
+    "bfe13176-0039-452b-949f-c38dd972466f": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "n general, this table will\u00a0\ngrow as we go along. So, we know nothing about\u00a0\u00a0 Fibonacci of 5, the table is empty, so we have to\u00a0\ncall, as usual, the recursive calls 4 and 3. Now\u00a0\u00a0 we know nothing about 4, as usual we will do it\u00a0\nleft to right. We know nothi"
+    },
+    "7c0c17c1-5760-4b5f-849b-81ccbae079c3": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ng about 4, so again,\u00a0\u00a0 we have to make a recursive call 3 and 2. \nOnce again, we know nothing about 3,\u00a0\u00a0 so we make a recursive call. So, so far, we have\u00a0\nnot done anything new. We are just following the\u00a0\u00a0 same trajectory that we did when we did the direc"
+    },
+    "ab8ee22f-3741-458f-b9fd-d4c3505b12c7": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "t\u00a0\nrecursive call. Finally, when I do 2, I get these\u00a0\u00a0 recursive calls 1 and 0 and now I start getting\u00a0\nanswers. So, technically speaking, even the base\u00a0\u00a0 case, I do not know until I reach the base case\u00a0\nthrough one of these recursive computations.\u00a0\u00a0 So, n"
+    },
+    "1afd2433-7357-4771-9998-ec30f29c6065": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ow I realize that if I do it left to right,\u00a0\nthat Fibonacci of 1, the function tells me is\u00a0\u00a0 actually 1. So, I will compute it, return the\u00a0\nanswer, but I will also put it in the table. \n\u00a0 So, this is my first entry in the\u00a0\ntable. It says for k equal to 1,\u00a0"
+    },
+    "371f5e73-8263-419d-bbc2-bc6fcdf6bd27": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "\u00a0 Fibonacci of k is 1. So, remember that this table\u00a0\nis not necessarily getting filled in the order\u00a0\u00a0 0, 1, 2, 3, 4. I am filling 1 first and\u00a0\nthen because I have done it in this order,\u00a0\u00a0 I will then find 0 and I will make an entry for\u00a0\n0 also. So, it says"
+    },
+    "83a9e7de-03f0-4c11-a12b-5200e4a9956b": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " now, I know in my table that\u00a0\u00a0 Fibonacci of 1 is 1 and Fibonacci is 0 is 0. This\u00a0\nis different from saying it is the base case, the\u00a0\u00a0 base case still means I have to evaluate and reach\u00a0\nthat point. And it is saying that if somebody ask\u00a0\u00a0 me Fibonacci of 1"
+    },
+    "9d6e3fc7-4096-416e-b7c6-ebc9690e220c": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " without executing the function,\u00a0\nI will look at this table and tell you it is 1.\n\u00a0 So, now I come back and now I have got a value for\u00a0\nFibonacci of 2. So, now I put an entry here saying\u00a0\u00a0 the Fibonacci of 2 is 1, because I have computed\u00a0\nit and I am never"
+    },
+    "0ad2ad21-08cf-4379-a9a4-92f9084d09ff": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " going to write this tree again.\u00a0\u00a0 So, now, I go back to this call and it ask me to\u00a0\ngo down and find out what is Fibonacci of 1. \n\u00a0 Now, again, I would like to emphasize, we are not\u00a0\ngoing to call the function because we are first\u00a0\u00a0 going to look at this "
+    },
+    "b471fbbe-641f-402a-b1b6-32d29641f48b": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "table and we are going\u00a0\nto say aha, Fibonacci of 1 is something that\u00a0\u00a0 I have already seen before. So, I will return\u00a0\n1 not because it is the base case, but so when\u00a0\u00a0 I write it in orange, now it means this function\u00a0\nwas not evaluated, it was actually look"
+    },
+    "5f55a8cf-3cb0-48ed-8c80-0e1e1ee35f54": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ed up.\n\u00a0 So, I just, so I would first look up the table,\u00a0\nif the table value has an entry for this argument,\u00a0\u00a0 I will return the value from the table otherwise\u00a0\nI will call the function. So, this version of\u00a0\u00a0 Fibonacci of 1 did not actually reach the code "
+    },
+    "3fb58777-aa61-4bdb-8c38-8e7830b5bc57": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "for\u00a0\nFibonacci of 1, it just directly returned it. So,\u00a0\u00a0 now with this, I have also computed Fibonacci\u00a0\nof 3. So, Fibonacci of 3 is now 1 plus 1 so\u00a0\u00a0 that is 2, and this now gives me a new entry\u00a0\nin my table, saying therefore k equal to 3,\u00a0\u00a0 I know that Fi"
+    },
+    "05253226-5c3c-4399-a18a-459cc4a35d4f": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "bonacci of 3 is 2. \nSo, now I come back to the call for Fibonacci\u00a0\u00a0 of 4, and it is going to ask me to evaluate\u00a0\nFibonacci of 2. Now in our earlier version,\u00a0\u00a0 we had to again expand 2, but this time\u00a0\nI look up and I find that 2 is there.\u00a0\u00a0 So, I will look "
+    },
+    "479f4ec6-a253-4dba-a68e-f7bc022e34e8": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "at the table and again, it will\u00a0\nbecome an orange evaluation, which is that it\u00a0\u00a0 did not call the function, it just looked up\u00a0\nthe table and returned the value the table. So,\u00a0\u00a0 you believe that you have computed it\u00a0\nonce, and the value does not change. \n\u00a0 "
+    },
+    "9693990d-9812-4e11-961f-7337d9712d60": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "So, if it was already known to be Fibonacci of\u00a0\n2 or already known to be 1 it is not going to\u00a0\u00a0 change. So, it is just one, you just look it\u00a0\nup and give it back. So, with this, now I have\u00a0\u00a0 computed Fibonacci of 4. So, I can now make a new\u00a0\nentry in the t"
+    },
+    "4aa5ff24-beb5-4a27-a46d-1fc67938d62b": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "able saying Fibonacci of 4 is 3. \n\u00a0 So, now I finally come back to my original\u00a0\ncall Fibonacci of 5. And now I have to, again,\u00a0\u00a0 evaluate Fibonacci of 3, but same thing. Instead\u00a0\nof expanding this whole tree, as we had done the\u00a0\u00a0 first time, I will realize"
+    },
+    "c5f66bfb-b4bb-4645-89a3-38400d19edc3": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " that 3 is actually an\u00a0\nentry in my table, so I will look it up and again,\u00a0\u00a0 I will make an orange called Fibonacci of 3 and\u00a0\nget back the value 2 directly by just looking\u00a0\u00a0 up this table. So, this two came from here. \nAnd now I have 3 plus 2, so Fibonacci"
+    },
+    "cd15d9a3-a7b0-4f30-bbb5-0f081c7af02e": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " of 5 is a\u00a0\u00a0 new entry in my table and I get Fibonacci of 5\u00a0\nis 5. So, this is how we memoize. As in when we\u00a0\u00a0 compute a value Fibonacci of k, we make an entry\u00a0\nin this table, you can think of it for now, it is\u00a0\u00a0 simplest way to think of it is as a diction"
+    },
+    "f225f9ba-f858-4231-814f-64561fa82039": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ary.\u00a0\nWith a key k, I put the value Fibonacci of k,\u00a0\u00a0 so that the order in which the keys come does\u00a0\nnot matter, I just have to check if the k\u00a0\u00a0 I am looking for is a key or not. If it is\u00a0\na key, then I will pick up the value if it\u00a0\u00a0 is not a key and make "
+    },
+    "5c7c174d-ee37-4d3a-bf38-bcfb88e3db12": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "a fresh entry.\nSo, this was our original Fibonacci,\u00a0\u00a0 it was just a naive recursion. It just\u00a0\nsaid that if n is less than equal to 1,\u00a0\u00a0 then return the value as n itself, otherwise,\u00a0\ndo the recursive computation. Now, we have to\u00a0\u00a0 embed this table in it. S"
+    },
+    "a238f895-86c7-406f-b097-a2f38186c155": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "o, we will assume that\u00a0\nwe have this dictionary called fib table, which is\u00a0\u00a0 defined outside, so I am not going to define it\u00a0\ninside. So, it is a kind of global dictionary.\n\u00a0 Let us assume that it is available to us, and\u00a0\nit is initially empty. So, what I "
+    },
+    "bc403f62-29e3-4d48-b7fd-e5c24ccaef79": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "will do is,\u00a0\u00a0 I will check whether the argument that I have got\u00a0\nis a key in this table. And if it is a key in this\u00a0\u00a0 table, then I will return the value of that key.\u00a0\nIf it is not a key in this table, then as before\u00a0\u00a0 I do this computation. And now you\u00a0\nc"
+    },
+    "fb7a4097-c33a-4c75-aee4-65ca6717e5e1": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "an see why I did not want to return\u00a0\u00a0 directly here because I want to keep this\u00a0\nvalue around, so that I can put it into it. \n\u00a0 That is the reason why we split this return n or\u00a0\nreturn fib n minus 1 fib n minus 2, instead of\u00a0\u00a0 just radically returning it, "
+    },
+    "28e91391-6588-4448-9695-768a22ca53d9": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "we stored it in this\u00a0\nintermediate value, so that we can now introduce\u00a0\u00a0 this line, which says, okay, here is my dictionary\u00a0\ncreate a new entry in the dictionary for this key\u00a0\u00a0 for which there was no entry before. Why do we\u00a0\nknow there is no entry before b"
+    },
+    "8a5339bd-de4e-4ce8-8a6e-f3d2cdd6d8d8": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ecause if there\u00a0\u00a0 had been an entry before, I would not have reached\u00a0\nthis point at all, I would have just returned.\u00a0\u00a0 So, we make an entry and then we return. \nSo, this is our first computation of fib table,\u00a0\u00a0 fib of n, but the next time is going to be in"
+    },
+    "0bd719ff-3c4c-4b57-a6d0-b1aa91b29dd0": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " the\u00a0\narray in the dictionary. So, the next time I am\u00a0\u00a0 not going to call this function again, at this\u00a0\npoint, I am going to just return without doing\u00a0\u00a0 the recursive computation. So, this is how\u00a0\nwe would memoize our Fibonacci function. \n\u00a0 Now there is no"
+    },
+    "fb2568a4-d516-4671-b513-fab8d36c5fca": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "thing very specific to the\u00a0\nFibonacci function, we can take any function. So,\u00a0\u00a0 supposing we have a function of\u00a0\nthree arguments, say f of X, Y, Z.\u00a0\u00a0 So, now, if I see a particular combination X, Y,\u00a0\nZ a second time, I should not compute it again.\u00a0\u00a0 So, he"
+    },
+    "df6c4357-44b0-4ebf-97e1-c528cb82be8e": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "re now my dictionary keys will be these\u00a0\ntriples X comma Y comma Z. So, I will take the\u00a0\u00a0 argument that I have got and I will say is this\u00a0\ntriple X comma Y comma X, is it already known\u00a0\u00a0 to be a value in this dictionary? If it is, then\u00a0\nI will just look up"
+    },
+    "d2bad666-32f9-4058-b28c-a999051da9f5": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " the table with that key.\n\u00a0 So, here I had fib table for fib. Here I have\u00a0\nsome arbitrary function f so I just call it f\u00a0\u00a0 table. So, I assume that I have this empty\u00a0\ndictionary to start with, which is defined\u00a0\u00a0 outside somewhere, so I can access it global"
+    },
+    "d4fec0aa-dbe2-4921-a494-a1c078290ffa": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ly\u00a0\nfrom here. So, I will now take this X, Y, Z\u00a0\u00a0 check if it is a key there, if it is not a key I\u00a0\nwill recursively compute the value of f of X, Y,\u00a0\u00a0 Z given whatever is the inductive structure of f,\u00a0\nit does not matter, this is a generic thing.\n\u00a0 Any f, "
+    },
+    "f12e6cc5-5131-441b-b012-4d5aa882efb9": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "which has an inductive structure, there\u00a0\nwill be some way to compute it from subproblems.\u00a0\u00a0 And then at the end of this computation, before\u00a0\nI return the value, I will make an entry. This is\u00a0\u00a0 the crucial thing. I will update my table saying\u00a0\nnow I know th"
+    },
+    "15684f41-5b2b-4b94-8c51-0391cbb6639c": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "e value f of X, Y, Z, so this should\u00a0\u00a0 be, sorry, this should be f table not f. \nSo, I will take and make an entry in f table\u00a0\u00a0 saying f table with this key X, Y, Z should have\u00a0\nthe value, value and then I will return it. So,\u00a0\u00a0 this is a very generic thing"
+    },
+    "0fe58ce1-b1ea-452b-b3ad-82489213de9f": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " you can\u00a0\ntake any recursive function memoize it\u00a0\u00a0 by just making sure you have an\u00a0\nappropriate dictionary sitting around. \n\u00a0 So, the next step from memoization is what is\u00a0\ncalled dynamic programming. So, in memoization,\u00a0\u00a0 what we did was, we recursively e"
+    },
+    "2e899b04-d1a5-4523-98e8-8bdc2b48e146": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "valuated the\u00a0\nfunction. And every time we came to a sub problem\u00a0\u00a0 for the first time, we use the recursive\u00a0\nstructure the second time we looked up the\u00a0\u00a0 table. So, we saw the subproblems\u00a0\nin the order in which they arise.\u00a0\u00a0 Now, what dynamic programming sa"
+    },
+    "a2c67d0f-ed0e-49a4-bbf4-5fdf79532c95": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ys is that,\u00a0\nokay, you know, the sub problems are there\u00a0\u00a0 and there must be some dependency obviously.\nSo, the sub problems depend on. I mean, the main\u00a0\u00a0 answer depends on the sub problem and there\u00a0\nis rarely local. So, when I say for example,\u00a0\u00a0 that facto"
+    },
+    "b8234564-60b3-447d-bd85-58ab09a2c3d8": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "rial of n, I said that it depends on\u00a0\nfactorial of n minus 1 down to factorial of 0,\u00a0\u00a0 but the dependency is not direct, I do not need to\u00a0\nknow factorial of 0 upfront to know factorial of\u00a0\u00a0 n. I only need to know factorial of n minus 1. \nSo, this is the im"
+    },
+    "490c70cc-9898-4a36-90f5-b67a1caad08f": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "mediate sub problem,\u00a0\u00a0 which gives the answer but for that, I will need\u00a0\nthe previous sub problem and so on. So, there is a\u00a0\u00a0 kind of dependency structure among the sub problem\u00a0\nsaying in order to evaluate this sub problem. So,\u00a0\u00a0 Fibonacci it is n minus 1,"
+    },
+    "a3080f34-4cf7-4dd3-8566-e2fe24ab5255": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " n minus 2. If I\u00a0\nknow n minus 1 and n minus 2 I can solve n. \n\u00a0 For factorial is n minus 1, but then\u00a0\nn minus 1 intern depends on n minus 2,\u00a0\u00a0 n minus 2 intern depends on n minus 3, and it goes\u00a0\nall the way down to 0. So, these must form a DAG.\u00a0\u00a0 A DAG re"
+    },
+    "2ee602ca-9855-4252-a618-b116048218fd": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "member is a directed acyclic graph.\u00a0\nIt cannot have cycles because if Fibonacci\u00a0\u00a0 of n requires n minus 1 and n minus 1 requires n,\u00a0\nthen how will like proceed. So, these have to be\u00a0\u00a0 resolvable down to a base case otherwise your\u00a0\ninductive definition is n"
+    },
+    "45a4258f-dc22-4c79-b30a-2a8d0a0e5a9d": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ot well formed. \n\u00a0 So, if you have a well-formed inductive\u00a0\ndefinitions, you should be able to unravel\u00a0\u00a0 it down to the base case, and then stop at a point\u00a0\nwhere you do not have any incoming dependencies.\u00a0\u00a0 So, this is, remember, when we did this DAG we\u00a0\n"
+    },
+    "74b70b58-bc6e-4f7d-be6d-f39d27bcf37d": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "said that there will always be a node which has\u00a0\u00a0 no incoming edges if it is a DAG. So, these\u00a0\nform the base case, the DAG of dependencies\u00a0\u00a0 or sub problems. So, the base case are those\u00a0\nproblems which do not have any prerequisite. \n\u00a0 So, now, we can go ba"
+    },
+    "46409287-bbb4-4684-b39e-b0f3e0289c52": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ck to what we have seen\u00a0\nbefore, which is you can evaluate DAGs, sensibly,\u00a0\u00a0 by going from those with no prerequisites and\u00a0\ngradually eliminating the prerequisites. This is\u00a0\u00a0 a topological sort. So, if you evaluate the values\u00a0\nin topological order, then yo"
+    },
+    "353bd9b4-19d1-4df9-b5bc-1d3a6d07f4cb": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "u never need to make\u00a0\u00a0 a recursive call. Because when you need that the\u00a0\ntable has already been filled. So, remember that\u00a0\u00a0 when we did memoization we did not anticipate.\nSo, when we did fib of 5,\u00a0\u00a0 we had not precomputed 4 and 3, even though it\u00a0\nis sort o"
+    },
+    "2c3651d9-7fe1-4fdf-bfa0-f8dde5809980": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "f obvious that 4 and 3 were needed,\u00a0\u00a0 we waited, and then we called\u00a0\nthe recursive function for 4 and\u00a0\u00a0 then we look at 3 and then 2 and then 1, and\u00a0\nthen we work backwards. In dynamic programming,\u00a0\u00a0 what he would say is, oh, I know that 0 and 1 are\u00a0\nrequi"
+    },
+    "2c30e1a1-08fb-48d2-8956-d3c970dd428b": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "red for 2, I know that 1 and 2 are required\u00a0\u00a0 for 3, so let me do it in that sequence. \nSo, I do not, I start with the cases which are,\u00a0\u00a0 the base cases do not require a recursive\u00a0\ncall, so that when it comes to the first case\u00a0\u00a0 that requires a recursive c"
+    },
+    "7aac22a7-16b0-4e98-964b-339f36a0fc89": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "all Fibonacci of 2, I\u00a0\nalready have the base cases. So, if you look at\u00a0\u00a0 this DAG structure for Fibonacci, so these are\u00a0\nthe subproblems. So, Fibonacci of 5, I need 5,\u00a0\u00a0 4, 3, 2, 1, 0 and the DAG structure just says\u00a0\nthat 4 and 3 are both required for 5. S"
+    },
+    "bdbade11-80d5-4063-b87b-d0e163ae512d": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "imilarly,\u00a0\u00a0 2 and 3 are both required for 4. Similarly, 1 and\u00a0\n2 are both required for 3 and finally 0 and 1 are\u00a0\u00a0 both required for 2 and 0 and 1 themselves\u00a0\nare base cases and have no dependencies. \n\u00a0 So, now I can enumerate this in any order.\u00a0\nNormally,"
+    },
+    "475c2376-3f64-4e02-9f45-76c79f5902d2": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " you would enumerate it in the order\u00a0\u00a0 0, 1, 2, 3, 4, 5. But because these are both\u00a0\nequal and base cases, you could also do it\u00a0\u00a0 in the order which is what we did when we did\u00a0\nmemoization, 1, 0, 2, 3, 4, 5. Because up to\u00a0\u00a0 this point, there are no require"
+    },
+    "a5643fba-95ab-4f99-91f1-9f07fef9ce2c": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ments it is only\u00a0\nhere that I have the first requirement, so when\u00a0\u00a0 I do two better I have done 0 and 1 both, but I\u00a0\ncould have done it in either order 10 or 01. \n\u00a0 So, normally when we do dynamic programming, what\u00a0\nwe will do is, we will do it in sequence"
+    },
+    "964cd455-510f-4efd-bb2d-d30e1fc801ed": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": ". So,\u00a0\u00a0 we will say, here are the cases that I can\u00a0\ndo right at the beginning then here is the\u00a0\u00a0 next case now that I know this, so I can fill\u00a0\nup that same table, that memo table that I had.\u00a0\u00a0 I can fill it up from no prerequisites to the\u00a0\nfinal answer wi"
+    },
+    "59ffa350-9729-4ec9-9d5d-c120d8398a6f": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "thout ever making a recursive\u00a0\u00a0 call. So, this is dynamic program. \nSo, to summarize, memoization says,\u00a0\u00a0 never recompute the same problem twice. Every time\u00a0\nyou use a recursive definition to compute a value,\u00a0\u00a0 store it in a table, so that you can look up "
+    },
+    "2e111037-c602-4bed-acbb-9f1ab08aad9d": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "that\u00a0\ntable before you make a wasteful recursive call\u00a0\u00a0 the second time. On the other hand, dynamic\u00a0\nprogramming says the same thing, but it says,\u00a0\u00a0 we will avoid recursive calls altogether. \nWe will look at the inductive structure of the\u00a0\u00a0 problem and bui"
+    },
+    "2a35b6c7-e043-4031-80ce-d37a1d2f2986": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "ld in our minds or in practice, it\u00a0\ndoes not really matter. Normally, it is a kind of\u00a0\u00a0 implicit, you do not actually explicitly draw the\u00a0\nDAG I have done before, but you try to work out\u00a0\u00a0 this dependency. What do I need for f of k? And\u00a0\nthen you say make "
+    },
+    "26986cc9-dda7-4f79-a323-8897aa0b00f4": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "sure that those are evaluated\u00a0\u00a0 first, so you work backwards and you say,\u00a0\nokay, which is the first thing I can evaluate,\u00a0\u00a0 start with that, and then build\u00a0\nup this table from bottom up. \n\u00a0 So, this is another thing that you often hear\u00a0\nabout dynamic progr"
+    },
+    "cdb86987-e4e4-4b0e-a521-27b5796400af": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "amming, it is bottom up.\u00a0\u00a0 Whereas memorization is top down, you start\u00a0\nwith the problem you want to solve, and you\u00a0\u00a0 keep breaking it down into subproblems, but you\u00a0\nnever do the same problem twice, whereas a dynamic\u00a0\u00a0 programming says, anticipate all the"
+    },
+    "ef8f1622-a131-48d0-a862-47f999df7602": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": " subproblems\u00a0\nyou might need and systematically evaluate them,\u00a0\u00a0 so that when you come to a new sub problem, the\u00a0\nprevious subproblems that it needs are already\u00a0\u00a0 evaluated and you never make the recursive call.\u00a0\nSo, this is memorization and dynamic progra"
+    },
+    "30acd9c3-55df-41c4-9a8d-afda4a161a25": {
+        "content_id": 62,
+        "course_name": "PDSA",
+        "title": "Memoization",
+        "week": 9,
+        "chunk": "mming."
+    }
+}

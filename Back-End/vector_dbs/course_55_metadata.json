@@ -1,0 +1,716 @@
+{
+    "7b287346-3cc6-4d9b-bae7-b419fa03c187": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "So, we will now look at more examples\u00a0\u00a0 of an algorithm design strategy\u00a0\ncalled divide and conquer. So, in divide and conquer, what you do is you\u00a0\ntake your problem and you break it up into parts,\u00a0\u00a0 typically into two parts, which are\u00a0\ndisjoint, which do n"
+    },
+    "b2cf6b96-cbe2-4bbe-aea0-208df9727dc8": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ot refer to each other.\u00a0\u00a0 Then you solve these parts separately and\u00a0\nthen you combine the solutions efficiently. So, a typical example of this is\u00a0\nmerge sort. So, if you remember,\u00a0\u00a0 in merge sort we break the list into\u00a0\nthe first half and the second half.\u00a0"
+    },
+    "b745666a-6f2b-4109-9548-5fc09aa8cca0": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "\u00a0 So, imagine in the TA situation that you have two\u00a0\nTAs, so you can give each of the TAs one half of\u00a0\u00a0 the papers to sort. They do not have to refer\u00a0\nto each other. So, these problems are disjoint. And then when the TAs bring the\u00a0\nmerge, the sorted papers"
+    },
+    "5ed3dd5a-8557-4f6e-a7f2-df566c8b3a17": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " back,\u00a0\u00a0 you have to merge them. So, that is the step\u00a0\nof combining the disjoint sub-problems. So,\u00a0\u00a0 you create these disjoint solutions and then\u00a0\nyou have to combine them and you have to do\u00a0\u00a0 that combination efficiently to make sure\u00a0\nthat you have got th"
+    },
+    "0bffde07-f575-4a8c-ab28-e55d89975ba8": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "e benefit of doing this. So, quicksort was also a divide and conquer\u00a0\nalgorithm. The division process was a little\u00a0\u00a0 more complicated. We did not just take the\u00a0\nmidpoint of the array or list and split it.\u00a0\u00a0 Rather we split the list based on a\u00a0\npivot. So, w"
+    },
+    "080d7c5a-56a3-4af9-a986-f84cbcd5cbc7": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "e created a lower partition\u00a0\u00a0 and an upper partition. So, it took\u00a0\na little bit of effort to split them. And then to combine them the lower\u00a0\npartition sits below the pivot and\u00a0\u00a0 the upper partition sits above the\u00a0\npivot. So, you combine them by just\u00a0\u00a0 plac"
+    },
+    "7823da96-9766-48af-85e6-1137d8dcdc85": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ing these two partitions with respect\u00a0\nto each other correctly around the pivot.\u00a0\u00a0 So, these are two examples of divide and\u00a0\nconquer and now let us look at another problem. So, the first example we are going to look at\u00a0\nis motivated by something called a r"
+    },
+    "86411c42-45fe-4865-ba3b-50933225955d": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ecommender\u00a0\u00a0 system. So, when you log into an online\u00a0\nwebsite, typically an ecommerce site,\u00a0\u00a0 you get some recommendations. Now, it could be\u00a0\necommerce, it could also be an entertainment\u00a0\u00a0 site like Netflix. So, you are told that here\u00a0\nare some shows that "
+    },
+    "698e3fd4-035d-4c90-9b50-1310cc237e9f": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "you might want to watch. So, of course, some of these are based on your own\u00a0\npast history. But a lot of the recommendations are\u00a0\u00a0 based on the histories of people which the system\u00a0\nbelieves are similar to you. So, the recommender\u00a0\u00a0 system tries to compare "
+    },
+    "0c340403-03f8-4f5b-994b-3b915773edb2": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "your profile with the\u00a0\nprofile of other customers. So, how do we do this? Well, we have to somehow identify other customers\u00a0\nwho have similar likes and similar dislikes. And\u00a0\u00a0 based on this, the recommendation believes that if\u00a0\nsomebody else likes similar "
+    },
+    "cf77ad53-d15f-46b5-abce-64393700bd3e": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "things to you and they\u00a0\u00a0 have liked something subsequently which you have\u00a0\nnot seen, then it should be recommended to you.\u00a0\u00a0 So, our task is going to be related to this\u00a0\nquestion of how to compare profiles. So,\u00a0\u00a0 how do you compare one customer\u00a0\nagainst an"
+    },
+    "2b08b91d-38e8-4b16-9c7f-1ecdd6d9b5ed": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "other customer? How do you\u00a0\u00a0 find out whether this customer is similar to that? Well, the assumption is that these customers\u00a0\nover time have given some ratings or rankings.\u00a0\u00a0 So, it essentially boils down to checking\u00a0\nyour likes and dislikes, which is the "
+    },
+    "fea0f75b-90c7-4a9e-8635-c3eb4ca77597": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "same\u00a0\u00a0 as comparing the rankings that you give\u00a0\nwith the rankings that somebody else gives.\u00a0\u00a0 So, let us look at comparing rankings. So, supposing there are five movies that you and a\u00a0\nfriend have both seen, let us just call them A, B,\u00a0\u00a0 C, D, E. So, your "
+    },
+    "58de5e4a-469c-48b0-876e-effc2074dea7": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ranking is the D is the best,\u00a0\nB is the second best, then C, then A, then E.\u00a0\u00a0 And on the other hand, your friend thinks B\u00a0\nis the best, then A, then C, then D, then E.\u00a0\u00a0 So, there are many ways to compare such rankings,\u00a0\nbut one of the simplest ways is to"
+    },
+    "ea2a03a2-9909-4dfe-9ffe-77842bf03cd7": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " just look at\u00a0\u00a0 each pair of movies and see\u00a0\nwhether you and your friend\u00a0\u00a0 agree on how they should be\u00a0\nranked relative to each other. So, for instance, if you look at B and C, then\u00a0\nboth you and your friend agree that B is better\u00a0\u00a0 than C. So, you agree o"
+    },
+    "33c543e2-ceaf-49f9-a13c-62963c2610af": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "n the relative merits of B\u00a0\nand C. On the other hand, if you look at D and B,\u00a0\u00a0 so here you believe the D is the best\u00a0\nmovie overall, and hence it is better than\u00a0\u00a0 B. But as your friend believes B is the best\u00a0\nmovie overall, and in fact, ranks D quite low."
+    },
+    "237913f0-29d3-472f-a1b6-a0372e1ffcd6": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " So, we are not really concerned about whether\u00a0\nD is very low or not compared to B. We are just\u00a0\u00a0 concerned about the fact that you prefer\u00a0\nD to B and your friend prefers B to D. So,\u00a0\u00a0 this is one point of difference between you\u00a0\nand your friend in terms o"
+    },
+    "3cd37b29-f71b-4135-9d13-3c89f19dd0b1": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "f preferences. So,\u00a0\u00a0 in this way, you can do it for every pair of\u00a0\nmovies and see how many movies you agree on,\u00a0\u00a0 how many pairs of movies you agree on, and\u00a0\nhow many pairs of movies you disagree on. So, essentially what we are looking for\u00a0\nis some measure"
+    },
+    "98e7981e-2301-4668-a44a-c51f5d7a2afe": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " of this disagreement.\u00a0\u00a0 So, we are looking for these inversions in\u00a0\npreference. So, where you prefer, say D to B\u00a0\u00a0 and your friend prefers B to D. So,\u00a0\nthis means this is a pair over which\u00a0\u00a0 your preference with respect to your friend\u00a0\nis inverted. So, cl"
+    },
+    "7093646a-9f83-439e-ad1d-198150cb7813": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "early, if every pair\u00a0\u00a0 is the same, for every pair of movies if you\u00a0\nand your friend agree on the relative ranking,\u00a0\u00a0 you can think about it, there is no way that\u00a0\nyour overall ranking can be any different.\u00a0\u00a0 So, if all pairs are equal, that is there are\u00a0\n"
+    },
+    "e0d6ba54-a8fd-4942-b95f-14ff463af566": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "no inversions, then you have identical taste. On the other hand, if you disagree\u00a0\ncompletely, this means on any pair\u00a0\u00a0 of movies where you think one is better than\u00a0\nthe other, your friend thinks the opposite.\u00a0\u00a0 So, if every pair is inverted, then you\u00a0\nare "
+    },
+    "10ff9355-6b18-4e3f-97fb-a4db837e44ad": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "maximally dissimilar. You cannot\u00a0\u00a0 be more different from that from\u00a0\nsomebody else in terms of tastes. So, the minimum number of inversions that\u00a0\nyou can have between two people in this is 0.\u00a0\u00a0 They agree on everything. The maximum number\u00a0\nis that they dis"
+    },
+    "9c1f5404-7f45-45ad-8bcf-c24bd16035ea": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "agree on every pair. So,\u00a0\u00a0 every pair among n elements is n into n minus\u00a0\n1 by 2. So, the number of inversions ranges\u00a0\u00a0 from 0 to n into n minus 1 by 2. So, 0 means\u00a0\nminimal that is they are exactly identical,\u00a0\u00a0 n into n minus 1 by 2 means they are maximal"
+    },
+    "9d36272d-9ded-4fb7-98f7-7b9359e4ab11": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ly\u00a0\ndissimilar. So, this gives us some measure. So, now, remember, our goal in this recommender\u00a0\nsystem was to say that one customer is similar\u00a0\u00a0 to another customer. So, what this number is\u00a0\ngiving you the number of inversions is giving you\u00a0\u00a0 is the oppos"
+    },
+    "3fabb2d8-9749-428a-8c9b-a07cae0afadc": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ite of similarity. It is giving you\u00a0\ndissimilarity. So, obviously, if you, something is\u00a0\u00a0 more dissimilar, it is less similar. So, you can\u00a0\njust invert this and say that people who have a\u00a0\u00a0 load inversion number are very similar, those who\u00a0\nhave a high inv"
+    },
+    "66ffbdb7-ce88-4f06-8992-5482fd9a7dbc": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ersion number are not very simple. So, it is a bit of a nuisance to work with\u00a0\nthis A, B, C, D, E and to look at two different\u00a0\u00a0 sequences and compare them for inversions,\u00a0\nbut we do not really need to think of them\u00a0\u00a0 as two different sequences, because we"
+    },
+    "05eaa48b-50a0-4932-b6d9-3f1090e250a6": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " can fix\u00a0\none as a reference. So, for instance, we can\u00a0\u00a0 take your sequence and renumber or rename all the\u00a0\nobjects to be 1 to n in the order that you prefer. So, the other person now has a different ordering.\u00a0\nIf their ordering is also 1, 2, 3, 4 up to n,"
+    },
+    "4916eecf-676c-4907-bc8b-dd3882a7f181": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "\u00a0\u00a0 then they have an identical ordering there are\u00a0\nrow inversions. But in general, with respect\u00a0\u00a0 to your preference, this is my movie one, this is\u00a0\nmy movie two and so on, there will be a different\u00a0\u00a0 order that the other person gives, which will be\u00a0\neffec"
+    },
+    "ab4a8809-5d62-4e76-bcf8-acda4a386f76": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "tively a permutation of these numbers 1 to n. So, in this situation is now easy to\u00a0\ndescribe what an inversion is. So,\u00a0\u00a0 as far as you are concerned the numbers should be\u00a0\nin ascending sequence. So, the higher numbers have\u00a0\u00a0 lower preference for you. But i"
+    },
+    "c4c846ad-3191-4a70-9330-308310241825": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "f they are\u00a0\ninverted, then it means that a higher number\u00a0\u00a0 has come before a lower number. So, you have\u00a0\nan I which appears before J in the sequence,\u00a0\u00a0 but actually I is bigger than J. So,\u00a0\nthis is how an inversion appears. So, as we said the number of\u00a0\nin"
+    },
+    "89c817f2-3f85-4b75-ab3c-967169c3b15f": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "versions ranges from 0 to\u00a0\u00a0 n into n minus 1 by 2, so they\u00a0\ncould be order n square inversions\u00a0\u00a0 and our goal is to determine this dissimilarities.\u00a0\nSo, we want to actually count the number of\u00a0\u00a0 inversions in order to give a number to this to\u00a0\nquantity to "
+    },
+    "7250f375-50bc-4c36-bf2e-21d2e44b29ae": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "this similarity between two people. So, let us say that your ranking as before is D,\u00a0\u00a0 B, C, A, E, so as we had said, we\u00a0\nwill renumber these things as 1, 2,\u00a0\u00a0 3, 4, 5 in that sequence. So, 1, 2, 3, 4, 5\u00a0\nrepresents now the new naming or numbering\u00a0\u00a0 in the"
+    },
+    "a406edb7-1957-4b79-85fd-9f8a336f9b64": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " order of preference that you have. And now\u00a0\nif you look at your friend\u2019s preference which is\u00a0\u00a0 B, A, C, D, E, then correspondingly\u00a0\nthe numbering becomes 2, 4, 3, 1, 5. So, now, we want to see how many things are\u00a0\ninverted. So, effectively it means lookin"
+    },
+    "c3d06ac1-fdbc-4388-ab25-a232a1e31f1d": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "g\u00a0\u00a0 for each number how many things which are\u00a0\nsmaller than that number come before it\u00a0\u00a0 or alternatively for each number, sorry,\u00a0\nbigger than that number come before it. So,\u00a0\u00a0 for example, if we look at 1 so I want to\u00a0\nsee how many numbers which are bigge"
+    },
+    "7ad20f6c-a279-443a-95a0-aab65d5be951": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "r than 1,\u00a0\u00a0 everything bigger than 1 should come to its\u00a0\nright according to our thing, but anything\u00a0\u00a0 that is to its left is an inversion. So, 2 is an\u00a0\ninversion, 4 is an version, 3 is an inversion,\u00a0\u00a0 because these are all, 1 is the\u00a0\nsmallest number. What "
+    },
+    "0c685237-badf-42ad-aa27-9edaf0bfb38d": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "about 2? Well, if I look at 2, then to its left there\u00a0\nis nothing. So, there is no number which is\u00a0\u00a0 inverted with respect to 2 in this sense. What\u00a0\nabout 3? Well, in terms of 3, 2 is before 3,\u00a0\u00a0 but 2 is smaller so it is fine, but 4 is before 3\u00a0\nand this "
+    },
+    "6d65f5a8-a103-413c-8152-108101e17827": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "is an inversion, 4 should come after 3.\u00a0\u00a0 What about 4? Well, for 4 the only number\u00a0\nbefore it is 2 which is smaller than 2,\u00a0\u00a0 so they are in the correct order. And finally for\u00a0\u00a0 5 which is the biggest number everything\u00a0\nis before 5, so there are no invers"
+    },
+    "4286303b-9773-4be5-9875-9142458fbc38": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ions. So, in this if you remember we got 3 inversions\u00a0\nfor 1, we got one inversion for 3 and nothing\u00a0\u00a0 else. So, the total number of inversions in\u00a0\nthis is these pairs. So, 1 and 2 are inverted\u00a0\u00a0 because they are in the wrong order, 1 and 3 are\u00a0\ninverted b"
+    },
+    "85cecdef-176f-4832-8b09-e24834d90a73": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ecause they are in the wrong order,\u00a0\u00a0 1 and 4 are inverted because they are in the\u00a0\nwrong order, and 3 and 4 are also inverted,\u00a0\u00a0 because they are in the wrong order, every other\u00a0\npair is in the correct sequence with respect to\u00a0\u00a0 your 1, 2, 3, 4, 5 ascendi"
+    },
+    "acbbe2b1-d05d-450f-aed3-3cea8e44f20b": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ng order. So, we would\u00a0\nsay that in this case, there are four inversions. So, there is another way to picturize\u00a0\nthis if you like. So, you can actually\u00a0\u00a0 write down these two sequences your sequence and\u00a0\nyour friend\u2019s sequence as two rows of numbers. So,\u00a0\u00a0"
+    },
+    "26a028a1-c323-4767-94cd-48607cf64a01": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " 1, 2, 3, 4, 5 is your sequence, 2, 4, 3, 1,\u00a0\n5 is your friend\u2019s sequence and you connect\u00a0\u00a0 the number on top to the corresponding number on\u00a0\nthe bottom. So, you connect every pair j comma\u00a0\u00a0 j. So, 1 is connected to 1, 2 is connected\u00a0\nto 2 and so on. Now n"
+    },
+    "c94a90e7-1715-4f81-a650-d35350decab8": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "otice what this means. It means that 1, 2 and 2, 1,\u00a0\nif I look at these two lines,\u00a0\u00a0 it means that they are in the opposite order below\u00a0\nbecause they should be in the same order. If they\u00a0\u00a0 are in the same order, then the lines will\u00a0\nbe something like this."
+    },
+    "1ff60ab7-21d4-46ef-b89b-f075cf575cfe": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " They will not cross.\u00a0\u00a0 Because if 2 comes after 1 on the top, 2 will also\u00a0\ncome after 2 on the bottom, then the two lines\u00a0\u00a0 connecting 1 and 2 to the bottom 1 and 2 will not\u00a0\ncross. They will kind of go down without meeting. Whereas if they do cross like "
+    },
+    "e799d5ca-cf0b-4914-a76c-839d2c35c92f": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "this case, that\u00a0\nmeans that 2 has somehow jumped before 1. So,\u00a0\u00a0 every time you see a crossing, you will\u00a0\nsee an inversion. So, just as we saw there,\u00a0\u00a0 we will see that we have these four inversions.\u00a0\nThis is the 1, 2 inversion the first one,\u00a0\u00a0 this is the"
+    },
+    "63cf2b54-9611-4b9f-87a3-ccf201746544": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " 1, 4, 4, 1 inversion\u00a0\nis this one, then we have the\u00a0\u00a0 1, 3 inversion is this one,\u00a0\nsorry, the 1, 4 inversion is\u00a0\u00a0 this one, and the 1, 3 inversion is this one,\u00a0\u00a0 and the one on top is the 3, 4 inversions. So,\u00a0\nwe have four inversions represented by four d"
+    },
+    "ae229236-0128-4e8c-8d44-2e9265ed214b": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ots. So, it is not very important which one you choose.\u00a0\nBut the point is that if I do this, the way we\u00a0\u00a0 did it now, and we are checking for every pair i\u00a0\ncomma j, whether j has been pushed in front of i,\u00a0\u00a0 then we are effectively taking order n square\u00a0\nt"
+    },
+    "cc9abe72-ce26-4b33-9cb3-2aa3662ebccc": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "erms, and we are computing for every pair whether\u00a0\u00a0 it is an inversion or not. So, we are explicitly\u00a0\ncounting the inversions by observing them and so\u00a0\u00a0 this is going to take order n square, because\u00a0\nthere could be order n square inversions and we\u00a0\u00a0 are ch"
+    },
+    "a09f0621-be71-4897-9bf7-801946188313": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ecking every pair by Brute force. So, the\u00a0\nquestion is whether we can do this more cleverly. So, since we are talking about divide and conquer,\u00a0\nobviously, we are going to do this by trying to\u00a0\u00a0 split the sequence into two parts. So, we have,\u00a0\nyour friend "
+    },
+    "fd2a131b-a505-4ada-bffd-d8438c530b9c": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "has given you, so remember that our\u00a0\u00a0 permutation is always 1, 2 up to n. So, we have\u00a0\na fixed ordering. And with respect to this fixed\u00a0\u00a0 ordering our friend has a different ordering which\u00a0\nis given by this permutation i1, i2, up to in.\u00a0\u00a0 Now, we want to c"
+    },
+    "4838f45f-5317-49b0-b60e-ed2299d556d7": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ount the number of inversions\u00a0\nbetween our ordering and this new permutation. So, what we do is we divide it into two lists\u00a0\nof size half. So, we go up to n by 2. So,\u00a0\u00a0 i1 up to i n by 2 is the left list and i n\u00a0\nby 2 plus 1 up to i n is the right list. So"
+    },
+    "50fbf4cc-3b06-41e3-8c85-f0bb7db22c95": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": ",\u00a0\u00a0 we break it up into two parts. This is very\u00a0\nsimilar to what we would have done in merge sort.\u00a0\u00a0 We take the first half and the\u00a0\nsecond half. Now, within this\u00a0\u00a0 by dividing and conquering, we assume that we\u00a0\ncan recursively find the solutions. So, we c"
+    },
+    "223637f4-8190-4ff8-952c-b749fb88d53f": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "an\u00a0\u00a0 count how many inversions are there within i1 to\u00a0\ni n minus 2, n by 2, and then we know how many\u00a0\u00a0 inversions there are in the second\u00a0\nhalf between i n by 2 plus 1 two i n. But this is not the only source of inversions,\u00a0\nbecause there could be inversi"
+    },
+    "dd3f5b38-03e2-4268-b9a8-d38bfe9de8de": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ons which involve\u00a0\u00a0 some number i here and some number j here.\u00a0\nSo, there could be inversions across this pair\u00a0\u00a0 which will not be captured in this recursive\u00a0\nsolution. So, we need to add those back. So,\u00a0\u00a0 we need to add the inversions\u00a0\nacross the boundary"
+    },
+    "d1f790a9-724a-4bc3-99ec-4717efd94180": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " between L and R.\u00a0\u00a0 So, the inversion here is something where,\u00a0\nremember, that L is a smaller list and R\u00a0\u00a0 is a bigger list. So, it is something where the\u00a0\nsmaller list has a number which is bigger than the\u00a0\u00a0 bigger list. So, i is on the left, j is\u00a0\non the"
+    },
+    "017e1dbd-3613-4dbf-ba51-db1e338d1fc5": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " right, but i is bigger than j. So, the number of inversions across this\u00a0\nboundary is the number of such pairs,\u00a0\u00a0 pairs where the left hand side is\u00a0\nan L, the right hand side is an R\u00a0\u00a0 and the left hand side is\u00a0\nbigger than the right hand side.\u00a0\u00a0 So, there"
+    },
+    "03a98fd9-a316-47ea-afce-1114b68e84cb": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "fore, our task to complete this divide\u00a0\nand conquer solution is to do this efficiently.\u00a0\u00a0 So, this is our combination phase. So, remember\u00a0\nthat divide and conquer consists of two parts,\u00a0\u00a0 divide the problem into sub-problems that\u00a0\nare disjoint, solve them "
+    },
+    "d3e1ae1f-b7f5-42b0-a759-bcf960b2acda": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "recursively,\u00a0\u00a0 that is phase one. So, here the division is easy.\u00a0\nYou just take the first half and the second half. Phase two is you take those solutions and put\u00a0\nthem back together to form a solution as a whole\u00a0\u00a0 and this you have to do efficiently. So, w"
+    },
+    "f81af4ff-12f0-470d-8ced-074a3732e260": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "e\u00a0\ndo not want to again fall into this trap of\u00a0\u00a0 comparing everything on the left with everything\u00a0\non the right and checking which is an inversion,\u00a0\u00a0 because everything on the left is n by\u00a0\n2, everything on the right is n by 2. So,\u00a0\u00a0 again, we will end up "
+    },
+    "61eeb617-389f-4f9e-988f-922e5cccc5b4": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "checking n square pairs.\u00a0\u00a0 So, we do not want to do that. We want\u00a0\nto do something more clever than that. So, how do we count the inversions across the\u00a0\nboundary? So, one way is to assume that there\u00a0\u00a0 is something a little bit more structured in L\u00a0\nand J, "
+    },
+    "bc72ba0d-560d-49c9-9ecc-554fad536500": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "L and R. So, L and R right now as given to\u00a0\u00a0 me are the two lists of preference, of elements as\u00a0\nordered by my friend split in the middle. But what\u00a0\u00a0 I can do is I can structure them by arranging\u00a0\neach of them in ascending order, for example. So, what I am"
+    },
+    "b65a2766-e392-4958-9456-f02ac7ea68d0": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " going to do actually is\u00a0\nto do more work than I need to do. All\u00a0\u00a0 I need to do is count inversions. But\u00a0\nin the process of counting inversions,\u00a0\u00a0 if I actually sort the list, it will\u00a0\nhelp me to do this inversion counting\u00a0\u00a0 cleverly, because I will just u"
+    },
+    "cb3ea7e0-0cc8-46d8-9a0f-e1b091636388": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "se a\u00a0\nversion of merge sort where I account. So, I am going to adopt merge sort. And I am going\u00a0\nto have a stronger merge sort which not only sorts\u00a0\u00a0 by using the merge sort procedure, but also while\u00a0\nsorting counts. So, I am going to write a version\u00a0\u00a0 of "
+    },
+    "ba3f6d8f-a2ce-4b73-b939-8be8b44df238": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "merge sort which sorts and counts. So, I will\u00a0\ncall it sort and count. And in order to sort and\u00a0\u00a0 count, I need to count somewhere and that count is\u00a0\nhappening at this point. But what is this point,\u00a0\u00a0 this is a point where I am taking the\u00a0\nleft and the rig"
+    },
+    "fab3f74d-85e7-4e00-bb17-c7d4a92603ac": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ht and I am merging them. So, what I am going to do is adapt that merge\u00a0\nprocedure of merge sort to actually count\u00a0\u00a0 inversions while merging. So, by counting\u00a0\ninversions while merging, while I am sorting,\u00a0\u00a0 I am also simultaneously keeping track of how ma"
+    },
+    "0b93ced5-5505-41f1-a425-3299f11ed458": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ny\u00a0\ninversions there are, and recursively, I will add\u00a0\u00a0 up all these inversions and get a total count as\u00a0\na part of the byproduct to the process of sorting. So, let us look at how merge\u00a0\nand count would work. So,\u00a0\u00a0 merge and count, we will take these value"
+    },
+    "363d620c-2ab6-4f11-9cae-86e849f42297": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "s say,\u00a0\nlet me say that this is 1, 3, 7 and now this is\u00a0\u00a0 2, 6, 8. So, supposing this is my left and this\u00a0\nis my right. So, remember what happens now,\u00a0\u00a0 I want to check how many things on the left\u00a0\nare bigger than things on the right. So,\u00a0\u00a0 I want i in L, "
+    },
+    "e4a54d27-0454-4c20-a41c-01a57b32ab12": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "j in R such that i is\u00a0\nbigger than j. This is an inversion. So, this is, for example, true of the\u00a0\nnumbers, 3 and 7. So, 3 is bigger than 2\u00a0\u00a0 and 7 is bigger than both 2 and 6. So,\u00a0\nbetween 3 and 7, I actually generate\u00a0\u00a0 three inversions, because 3 is bigg"
+    },
+    "c83643e2-8867-4e05-95c3-02bc51587972": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "er\u00a0\nthan one element on the right. So, 3,\u00a0\u00a0 2 or 2, 3 is a pair which is inverted, and 2,\u00a0\n7 and 6, 7 are both pairs, which are inverted. So, how do I discover this? Well, if\u00a0\nthere were no inversions, then I would\u00a0\u00a0 enumerate everything in L before I enum"
+    },
+    "a2ee894e-5f0d-4243-a660-7468b2dff014": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "erate R.\u00a0\nWhen I am merging, remember, I am picking out the\u00a0\u00a0 smaller of the two elements at the top and pulling\u00a0\nit out. If everything on the left is smaller than\u00a0\u00a0 everything on the right, then I will first exhaust\u00a0\nL and only then move to R. So, if at a"
+    },
+    "1fa1df83-f7d8-4229-8fb9-794c90f41eb9": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ny point if\u00a0\u00a0 I pick out something from R, before I pick out\u00a0\nsomething from L that means I have discovered\u00a0\u00a0 an inversion. There is something still left in\u00a0\nL which has been overtaken by something from R. So, we will count the inversions\u00a0\nwhile merging wh"
+    },
+    "05e4138a-467e-4af9-a8c4-04e858a801a9": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ich is that,\u00a0\u00a0 whenever as I said before, so let us draw\u00a0\nthat example again. So, we have 1, 3, 7, and\u00a0\u00a0 2, 6, 8. So, now when I am merging, I first pull\u00a0\nout a 1, and I say this is fine. Now, when I pull\u00a0\u00a0 out a 2, it has overtaken some elements in\u00a0\nL. Ho"
+    },
+    "d7051829-7062-4e16-94ef-c3bf443d5a21": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "w many elements in L? Well, everything,\u00a0\u00a0 which is an L at this point should have been\u00a0\nenumerated before 2 if there were no inversions. So, I can directly keep track of the\u00a0\nposition I am in L, and subtract it\u00a0\u00a0 from the length and say that, okay, now I\u00a0\n"
+    },
+    "8ab84183-9495-45c4-87d1-43881e42c7e0": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "have got two inversions because of this 2.\u00a0\u00a0 Now I get 3, but if I take from the left, there\u00a0\nis no problem. Every time I take from the left,\u00a0\u00a0 I have no inversions, because I am\u00a0\nsupposed to do left before right\u00a0\u00a0 in the non-inverted case. Now, I next num"
+    },
+    "8eb3e081-f7ba-4ee9-869c-b566f30d7a9d": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ber\u00a0\nto pull out a 6. So, when I pull out the 6,\u00a0\u00a0 again, I look at the left list, and\u00a0\nI see how many elements should have\u00a0\u00a0 been coming for this or how many elements\u00a0\n6 has overtaken. So, it says plus 1. Now, then after this I pull out 7.\u00a0\u00a0 And then fina"
+    },
+    "0c478962-6e3d-479b-9060-3dab6e7ac34e": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "lly, when I pull out 8, I do the\u00a0\nsame check. But now the left list is empty,\u00a0\u00a0 so I get nothing. So, in principle, every\u00a0\ntime I pull out something from the right list,\u00a0\u00a0 I have to look at the other list on the left\u00a0\nand see how many elements are left and"
+    },
+    "79944e7e-a7b4-4aa3-9b1a-85498f5ba130": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " all\u00a0\u00a0 those elements have been overtaken. So, that must\u00a0\nbe added to my count. So, this is what it says. So, whenever we add some number im\u00a0\nfrom the right side to the output,\u00a0\u00a0 then im is smaller than everything which is\u00a0\ncurrently in the left list. So, "
+    },
+    "82c51cd9-44db-461e-89eb-48988f8dd8d7": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "it is inverted\u00a0\u00a0 with respect to all of them. So, I must add\u00a0\nthe current size of L to the inversion count.\u00a0\u00a0 So, this is the old merge procedure which has\u00a0\nnow been enhanced to keep track of this count.\u00a0\u00a0 So, the new thing here is that we have this\u00a0\ncount"
+    },
+    "d2bac684-f39d-4a8f-9e1d-65930bb2d7e4": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " variable which is initialized to 0.\u00a0\u00a0 So, we are assuming now that A and B are\u00a0\u00a0 sorted lists. So, when we are merging, we are\u00a0\ngoing to count the inversions in this way. So, every time I pick from the right, I must\u00a0\nadd the length of the left. So, rememb"
+    },
+    "83625b49-425b-493d-8e37-e87ac6d835a5": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "er,\u00a0\u00a0 the length of the left is m, which is its\u00a0\ntotal length, minus i, because this index\u00a0\u00a0 is passing through the list A, and the index j is\u00a0\npassing through the list B. So, when I finished L\u00a0\u00a0 and I am only picking from the second list, in\u00a0\nprinciple, I"
+    },
+    "27341099-23ec-43fb-80fd-3d30ee4bbd70": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " will be adding. It is like that 8,\u00a0\u00a0 the last number 8 which I pulled out, it\u00a0\nhappens after I finished everything in A.\u00a0\u00a0 But at that point there are no\u00a0\ninversions. So, I just append\u00a0\u00a0 one more element from B and I increment the\u00a0\ncounters, the pointers "
+    },
+    "bdb3edd7-3025-4ed4-8e5b-c3e77aacea70": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "inside B and C as before. Whenever I pick from A there is nothing to be\u00a0\ndone, because no element from A contributes in\u00a0\u00a0 inversion. Likewise, if the first element\u00a0\nis smaller in A than in B, there is no\u00a0\u00a0 problem with this. But here when I pick something\u00a0"
+    },
+    "edb3ea56-88ab-4f11-930d-80b787d3028f": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "\nfrom B, then I must not only move the pointers\u00a0\u00a0 j and k, the respective pointers inside B and\u00a0\nC by 1, but I must also update this count. So,\u00a0\u00a0 I must take the count and update it by m minus\u00a0\ni, because m minus i is the current length of L.\u00a0\u00a0 It is what "
+    },
+    "262da970-395e-457b-b83a-f72d6e8ff4bc": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "is remaining in L\u00a0\nafter I have processed i elements.\u00a0\u00a0 So, n is the number of elements I had\u00a0\nto begin with. I am at position is i,\u00a0\u00a0 so 0 to i minus 1 has been\u00a0\nprocessed. So, i elements are gone. So, the remaining n minus i elements, m minus\u00a0\ni elements"
+    },
+    "4526f4fc-ddd3-4cf6-bc41-87b778c6ecbf": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " are inverted with respect to the\u00a0\u00a0 current p element. So, that is the only change\u00a0\nI need to make, keep this count and increment\u00a0\u00a0 it every time I pull it out. And of course, now\u00a0\nthis merge and count must return this value. So,\u00a0\u00a0 in addition to the merge"
+    },
+    "2a79aa84-7e2f-44c3-8e67-dcf0fc0c3fef": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " list, it also returns\u00a0\na count of how many inversions it observed.\u00a0\u00a0 So, once we have done this,\u00a0\nit is a very simple matter to\u00a0\u00a0 employ this in our merge sort\u00a0\nto make it a merge and sort. So, we have a sort and count. So, sort and\u00a0\ncount is exactly merg"
+    },
+    "2dea4c83-0fa8-4a01-9822-7b973aa16294": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "e sort, except that\u00a0\u00a0 I recursively assume that sort and count returns\u00a0\nthe sorted list and the number of inversions in\u00a0\u00a0 that sorted list. So, this is the divide part.\u00a0\nSo, I recursively sort the left and I see how\u00a0\u00a0 many inversions are there within the l"
+    },
+    "004b7a03-eddf-4d44-ad42-17f2d20cb073": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "eft. I\u00a0\nrecursively sort the right and see how many\u00a0\u00a0 inversions are there within the right. And now\u00a0\nI do this merge of L and R. And this returns\u00a0\u00a0 the overall sorted list, which is what merge\u00a0\nsort is supposed to return. But it also returns\u00a0\u00a0 these cross"
+    },
+    "dbd0a25a-fe2b-4d6f-b7eb-dfdf2b2343bc": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ing inversions, how many\u00a0\ninversions were observed while merging. So, now the total number of inversions\u00a0\nthat merge sort has discovered is those\u00a0\u00a0 inversions completely on the left plus those\u00a0\ninversions completely on the right plus these\u00a0\u00a0 inversions tha"
+    },
+    "d966157c-6f5a-47f1-b640-135fab446ad0": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "t the merge procedure discovered.\u00a0\nSo, this is the total number of inversions\u00a0\u00a0 that merge sort returns along with the sorted\u00a0\nlist. So, this is how we use this counting of\u00a0\u00a0 merge along with sorting to keep track of the\u00a0\ntotal number of inversions in our "
+    },
+    "7e6347d4-adc2-4a66-9dd3-b55f867d9fad": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "whole list. So, obviously, since this is very similar to\u00a0\nmerge sort, and there is really no extra work\u00a0\u00a0 that is happening except for keeping track of this\u00a0\ncount variable and adding 1 to it at every point,\u00a0\u00a0 the recurrence is going to be very similar. If"
+    },
+    "7cdf4876-5027-42aa-bfb8-b8de95bae1bb": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "\u00a0\nI have a trivial list, then I return in constant\u00a0\u00a0 time. If I have a non-trivial list, then I have\u00a0\nto solve each half of it, so 2 times n by 2,\u00a0\u00a0 and I spend order n work in the\u00a0\nsplitting and merging operations. I do not do any more than order n work. "
+    },
+    "d22614fb-ae59-4e3c-a646-21c16462607f": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "The merge\u00a0\nis still the same, because remember that when I\u00a0\u00a0 have to increment the count, I just keep\u00a0\ntrack of that length which is remaining and\u00a0\u00a0 just add a number. I do not have to scan\u00a0\nanything one more time. So, obviously,\u00a0\u00a0 if we solve this, we wil"
+    },
+    "e5c6b5aa-88ee-48de-adc4-308d6f3bb27b": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "l get T of n as order n\u00a0\nlog n, which is exactly the same as merge sort. So, the thing to note is that we are not claiming\u00a0\nthat the number of inversions is reduced.\u00a0\u00a0 So, we earlier said that the number\u00a0\nof inversions could be as low as 0\u00a0\u00a0 if they are id"
+    },
+    "2482e4df-9750-4bfb-a3a1-db1fb2bd1677": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "entical lists, or it could\u00a0\nbe as high as n into n minus 1 by 2 if\u00a0\u00a0 every pair of preferences is inverted. So,\u00a0\nthere could be order n square inversions. Now, when we did a Brute force algorithm,\u00a0\nwe were counting them one by one. We were\u00a0\u00a0 looking at eve"
+    },
+    "c34e7f6f-45c3-4d4f-93a8-3ecb41b08df5": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "ry pair i, j and deciding\u00a0\nwhether it is inverted or not. So,\u00a0\u00a0 if there were n square inversions, we\u00a0\nwould actually examine n square elements.\u00a0\u00a0 Even if there are not n square inversions,\u00a0\nwe have to examine every pair of elements\u00a0\u00a0 to determine whether "
+    },
+    "a789a006-982a-4478-ada6-84c5467aa22e": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "they inverted or not. So, we\u00a0\nare kind of enumerating the inversions one by one. Whereas here, even if the number of inversions is\u00a0\nlarge, we are kind of, we are doing it in chunks.\u00a0\u00a0 So, if you go back to that merge and count,\u00a0\nsee at this point, the coun"
+    },
+    "8baaa127-c03f-4b13-b024-89b607fa0b54": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "t increases by\u00a0\u00a0 a chunk. So, if there are lots of elements that\u00a0\nthis current value B of J is inverted with,\u00a0\u00a0 it will add all of them without going through\u00a0\neach of them and saying, I am inverted with this,\u00a0\u00a0 I am inverted with that. So, we are not\u00a0\nexpl"
+    },
+    "66c9bb8a-1885-4f9d-a4f0-89e819890f50": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "icitly examining every inverted pair. So, we are not going to exam, for example,\u00a0\none of the things we do not get from this\u00a0\u00a0 version of the algorithm is what we did\u00a0\nearlier. So, when we first solve this problem,\u00a0\u00a0 we got this explicit list of all the\u00a0\nin"
+    },
+    "e91e497a-dca1-4096-9004-641716bdb386": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "versions that was a byproduct of the\u00a0\u00a0 Brute forcing is an explicit listing of all the\u00a0\ninversions. We do not get an explicit listing. What we are getting is the number of such pairs.\u00a0\u00a0 And if you are asking for this recommender system,\u00a0\nthat is what we wa"
+    },
+    "68409097-5de0-4116-881e-85499ed9fec6": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": "nt. We want to know how similar\u00a0\u00a0 two people are. We are not particularly\u00a0\nconcerned about which movies they disagree\u00a0\u00a0 on. We want to know how many movies they\u00a0\ndisagree on. So, we just want the count. So, by doing this divide and conquer, we are\u00a0\nsolving"
+    },
+    "c1687c8b-a4f4-46c6-903d-62b38e6edefe": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": " the problem in a slightly weaker way\u00a0\u00a0 in some sense than the Brute force algorithm,\u00a0\nbut this is what we want. We want the count.\u00a0\u00a0 We do not want the list. The list could be large.\u00a0\nIf you want to enumerate the list, you have to do\u00a0\u00a0 order n square work"
+    },
+    "7984be2c-6a7d-4b48-b237-305bf7dbbfa8": {
+        "content_id": 55,
+        "course_name": "PDSA",
+        "title": "Divide and Conquer  Counting Inversions",
+        "week": 8,
+        "chunk": ". But if you just want the size\u00a0\nof the list, you can do it in order n log n time."
+    }
+}

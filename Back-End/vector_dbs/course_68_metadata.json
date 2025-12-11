@@ -1,0 +1,436 @@
+{
+    "7ba501d4-be1f-45e8-b6a4-c730f25d7294": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "The next string matching algorithm that we\nwill look at is the Rabin-Karp algorithm. So Rabin-Karp algorithm takes a radically\ndifferent approach to matching strings. So, earlier, all our string matching consisted\nof doing some kind of pattern match charac"
+    },
+    "d11214b8-564a-4e95-b1b3-f224f8221ca6": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "ter by character between a slice of our list,\nthis text, and the pattern itself. And what we saw with Boyer Mooore is you can optimize\nthis a little bit by skipping forward when you find mismatches. On the other hand, what the Rabin-Karp algorithm\ndoes is "
+    },
+    "5eaf1ef5-5bad-4773-99bb-cb58909af7f7": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "it actually converts string matching to a kind of numeric equality, to arithmetic.\nSo, it is simplest to describe when we take the alphabet to be the letter 0 to 9. So,\nthese are the digits that we use to write numbers. And clearly, you can take any string"
+    },
+    "cdb4d89a-6db0-429a-b763-b10b2679be43": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "\nover this sigma, this alphabet, and interpret it as a number in base 10. So, if I write a string, using the characters\n0 to 9, I can think of it as a number in base 10. Of course, there will be a complication,\nif there are zeros at the beginning of the st"
+    },
+    "eefe808a-7269-4fa4-8504-e6ca8e711d9d": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "ring, the number will be smaller than the\nlength of the string in some sense, but we can always take care of that by making sure\nthat we remember the zeros. So, if I now take a pattern, which has m characters\nin it, it is equivalent to an m digit number, a"
+    },
+    "fa0e417d-4c3e-47a5-978d-74cdf481ae92": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "n m digit number in our usual sense in our\ndecimal notation, it is an m digit integer. So, let us call this the number corresponding\nto p. So, n sub p. Now, similarly, if I take every string corresponding to a slice in my\npattern, which is of length m, it "
+    },
+    "145ccd86-1f71-49a8-b5c8-d320429b999d": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "will again be an m digit number. So, any m digit sequence\nof symbols over this alphabet, 0 to 9 can be thought of as an m digit number. So that means that if I can scan that block,\nthat slice and derive a number n b, then I can just compare it numerically "
+    },
+    "49dcf331-39c4-4dae-8127-953a72e0d0a5": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "with the number\ncorresponding to the pattern. I do not have to do a one by one digit by digit. So, when\nI compare two numbers, numerically, I am not doing it digit by digit, so there is a kind\nof arithmetic comparison is going on. So that makes it much eas"
+    },
+    "718f8048-535c-47ca-95fb-1a401663cd10": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "ier to do once I\nhave converted it. So, the first job is to convert it, but if I have converted it, then\nchecking so we earlier said that you could do a string comparison in a language like\nPython, which says is this slice is equal to p, but this definitel"
+    },
+    "503d068e-dae7-4ce9-8a6e-865378e0f0ce": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "y takes order m time.\nBecause it will do it character by character. On the other hand, if I take a number and\ncompare it to another number, then this is a numeric equality, which we can assume we\nhave done it all the time, when we say if A is less than 7, "
+    },
+    "aecc70e9-83cd-455b-8ccf-0da0f97ce583": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "do something, we counted\nthose as basic operations. So, we said that these numeric equality comparisons are just\nsingle steps. So if I have converted my string to a number, then this test for each block\nis actually kind of unit cost. So, how do we convert "
+    },
+    "fedf3e73-0eeb-4946-a0c8-4bb82e5d0427": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "a string to a number? So, fortunately, this is not difficult to\ndo, we can go left to right and we can incrementally compute it. So, for instance, if my string\nis 7842, then I will start with saying my number is 0, then I will take 7, 10, times\n0 plus 7, s"
+    },
+    "81b56ed5-f252-4850-a2b9-033b3f0ac4b3": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "o I will get the number corresponding to the first digit, then I will take my current\nnumber 7 times 0 plus 8, and I will get 78, corresponding to the first two digits, and\nso on. So, from 78, I will get 780 plus 4 is 784.\nAnd then I will get 7840 plus 2 i"
+    },
+    "27947760-106f-47e5-9a10-333bcd06ec2e": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "s 7842. So, it is just a simple loop, which says that\nyou walk through your string, and you accumulate this number by taking the current number multiplying\nby 10 and adding the next digit. And of course, in Python, we, so this should not be this\nshould be "
+    },
+    "40c96186-cfe0-4444-b3e0-62a0130dd1b0": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "int of t of i plus j. So, if I take the int function in Python,\nand if I feed it a digit, it will give me the number back. So, this is how we can do\nit in Python. Now, if we did this for every block from scratch, then we would spend order\nm time for every "
+    },
+    "a6120524-99bf-4514-ba7f-363bda460eac": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "block. So, this work of converting our string into a sequence of m digit numbers\nwill again cost us n times m. And n times m was anyway available to us in\nbrute force, which is preprocessing which saves us finally by giving us a unit cost\narithmetic equali"
+    },
+    "8b4b33b4-24dd-4b23-86a4-36afd9cc8b58": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "ty check is not giving us any saving in general because the preprocessing\nis taking as much time as the computation step in character by character thing. But\nfortunately, you can slide the number from one block to the next block without having\nto do order "
+    },
+    "387271f5-b3a6-48b1-9866-1e7a96353129": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "m work. So, the idea is very simple. So, if I want to go from the block starting\nat i minus 1 to the block starting at i, what do I need to do? Well, I have a t of i minus\n1 up to t of i minus 1 plus m minus 1. And then I am going to look at the next one, "
+    },
+    "f1d64d1a-d608-418b-a79c-cb07c038d8d9": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "t\nof i plus m minus 1, so this is my old block. And starting at t i is my new block. So, what\nI need to do is drop this digit and add this digit, I need to drop the leftmost digit,\nthe highest digit in the previous number, multiply by 10, so that I can mak"
+    },
+    "a97f12ca-63ac-4229-b88c-260e177ea81a": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "e space to\nadd a new unit s digit. So, that is what this thing is doing here. So, you subtract the highest digit, you subtract\n10 to the power m minus 1 times, again, this should be int of this number. So, you take\nthe digit the pattern value at position i"
+    },
+    "07ec5000-d85e-4b77-a558-f165337faa4c": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " minus 1 and multiply it by 10 to the power\nm minus 1 to get that number with all zeros, then you subtract it from the number you had\ncomputed at step n minus 1, and you will drop it. And now again, you will take int of the new\nposition and add it to the n"
+    },
+    "72a9733e-f94d-4fbd-8f5b-af23cc787ae1": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "umber that you have after multiplying it by 10. So, this\nstep you do once, for the new numbers, you remove the highest digit add the lowest digit.\nSo, this takes a constant number of steps per block. So, once you compute the first\nblock in order m time aft"
+    },
+    "eb71210d-ec9f-484e-9ad4-d3b3a7adaf0c": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "er that shifting the number, as you go, one character at a\ntime through your text takes only a constant amount of effort per shift. So, this gives us this overall Python implementation\nof the Rabin-Karp algorithm. So, the first thing to note is that we hav"
+    },
+    "414934bb-025f-4044-9e10-0a7e13831425": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "e to do this initial\nsetup. For the pattern, we have to convert the pattern to a number. And we have to take\nthe first block and explicitly convert it to a number using that loop. So, you take the number for the text and the\nnumber for the pattern, initial"
+    },
+    "85833dd9-d694-4325-bf42-6d64df4a04f7": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "ize it to 0 and then run through the first m impositions\nof each and keep multiplying the current number by 10 and adding the next digit. So, this\ntakes us order m times. Now, the first check is directly with these two values. So, remember that the first b"
+    },
+    "7b397fb1-cce6-49b7-8de2-4fa9a3848122": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "lock we have\nto do in this loop of length m, and block, the next block onwards, we will take the existing\nnumber drop a digit add a digit. So, we have to handle the 0 case separately from t 1 onwards.\nSo, t 0, we handle separately and if we find a match at"
+    },
+    "34323111-7d73-4b8b-a177-5f2997d7b959": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " t 0, then we append 0 to our POS\nlist. Now, from 1 onwards, so we range through all\nthe other positions, what we do is we first delete the highest digit. So, we delete the\nhighest digit. So, we have n of i minus 1. So, if i is equal to 1 at the moment, we"
+    },
+    "f3098842-6b58-4e62-89d8-7ff0c660104d": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " have\nn 0. So, for n zero, we delete the highest digit, and then we add the digit corresponding\nto position i. So, now we go from n i minus 1 to n i. Once\nagain, we check whether the number we have generated is equal to the number we are searching\nfor. Rem"
+    },
+    "d3d44024-b6ec-400c-80f3-8e5aa783da5a": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "ember, the pattern is already been computed once and for all is the number here.\nAnd if it is, so then we increment the we add i to our list of positions. And if not,\nwe go ahead. So, this, the important thing is that this\nshift takes only constant amount "
+    },
+    "c4331cec-cea9-4fcd-b552-05dd4e6c4691": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "of time. So, this is an order n loop, but it takes\nonly a constant amount of time. So, if all goes well, then this will take time order\nm here and order n in this loop to do the calculation, which is much better than order\nn times m. So, the problem is tha"
+    },
+    "d76dac7d-5a4e-4811-b3c9-0509c6064b60": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "t we have assumed so\nfar that this arithmetic is easy to do. And we took as a concrete example, sigma to be\n0, 1, 2, up to 9, the 10 digits and did it in base 10. Now in general, our alphabet is\ngoing to have some arbitrary number of letters. For instance,"
+    },
+    "7fb448e8-b02d-4b13-81d6-c637c91fcaea": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " if we are doing text in a normal\nkeyboard, there will be approximately 70 to 80 symbols that you can type, because you\nhave the capital letters, lowercase letters, the digits, the punctuation marks, and so\non. So, then, if you treat this as a number, you\n"
+    },
+    "2d52e88a-2ac0-4567-a799-7c598359a3ab": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "have to think of this as a number in base k. So, this will be a base 80 number. For\nexample, if there are 80 symbols in your alphabet, so the units digit will hold a value between\n0 and 79. The 10s digit which we call the next digit will be between 80 and "
+    },
+    "b9428e46-806b-464d-87d6-dadc9adcaec8": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "80 squared\nminus 1. 6500, 6399. Sorry. So, this becomes a problem now, that we have to do this arithmetic\nin base k. We can do the arithmetic in base k. Wherever\nearlier we said 10 times something plus num, 10 times num plus t of i. If we do something\nlike"
+    },
+    "aed1318d-206e-43a3-b11c-bb4b7c4a1f27": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " this, I can say k times this plus t of i. If I want to remove the leading digit I\nmultiply by something, k raised to the length minus 1. So, everything I can do using k instead\nof 10. But the problem is that this arithmetic will now be very large in terms"
+    },
+    "92bacba7-4779-4145-9352-4a6c979d04c7": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " of the numbers\nthat I have to deal with. So, the cost that I have saved in going from\nstrings to numbers by not having to do position by position is now transferred into the cost\nof doing this very large precision arithmetic. So, what is the solution for "
+    },
+    "08f7dea3-d4c4-4d1d-942e-3dc1e6f9107d": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "this? Well, the\nsolution is to actually not do this arithmetic explicitly and correctly, but to reduce the\nnumbers by going to some remainder modulo a prime. So, you pick a prime q, and you do all your\ncalculations, modulo a prime. Now the nice thing about"
+    },
+    "c150eccd-8337-41ec-9e20-9067b35a78d5": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " this modulo calculation, which\nyou can check that if I want to do a sequence of things, modulo like if I want a plus b\nplus c, mod q, I can do it incrementally, I can take a plus b, mod q. And then do plus\nc mod q, so I can keep the numbers small incremen"
+    },
+    "d2cd14bc-79b3-42f6-85c8-5a3926ef96fa": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "tally as I go along. It is not that I have to compute one humongous\nnumber and then take the remainder mod q, at every stage, I can reduce the number I\nam working with to number mod q. So, I will have one large number, one small number, one\nmodulus, one la"
+    },
+    "0376c8d6-d91f-484d-b37f-626360ad21df": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "rge number, one small number, one modulus, and I keep going. So, that is\nhow I do calculations modulo q. So, if I do this, then the situation arises\nthat we might have, of course, two different numbers, which have the same remainder modulo\nq. Okay. So, let"
+    },
+    "b77066c3-3f0c-4952-a0e1-87bac8afad50": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " us go back to our decimal example. So, let us assume that our alphabet\nis actually symbols from 0 to 9. But now I am not doing the calculation explicitly and\ncorrectly, but I am doing the calculations modulo some q, and the q that I have chosen\nis 13. So,"
+    },
+    "c98067f6-130b-4682-a05c-7a3f22522e47": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " my pattern is the sequence 31415, which,\nof course is the number 31,415. And my text is other long sequence of digits. And I can\nthink of it is a humongous number. But notice that in this text, actually, my pattern occurs,\nI have 31415, somewhere in my th"
+    },
+    "c6ebd2d8-6ee0-4632-9a19-1d28ab9764aa": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "ink. So, what I will do is I will first compute for my pattern,\nwhat is the remainder modulo 30. So, it turns out that 31, you can divide by 13. And check for yourself that 31,415 modulo\n13 is 7, or you can put into Python and use the percent operator, and"
+    },
+    "106ffaf8-4850-4e0e-b444-64cfd3d6ae92": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " you will find that\nit is 7. So, now I have to go through this and I have to check each other, I have to\ncheck what is the first five characters treated as a number modulo 7, I have to check what\nis the next five characters treated the number modulo 7 and "
+    },
+    "f3be3269-872f-444c-bcdf-f75fb41555dc": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "go on. So, it turns out that, for example, the first\nfive characters 235902, modulus, 23590, modulo 7 is 8. Now, if two numbers are different\nmodulus 13, sorry, not modulo 7, modulo 13. If two numbers have different remainders,\nwhen divided by 13, they mus"
+    },
+    "c5f515a3-a6f3-4f82-9e61-b27e1cd892d3": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "t be different. There is no doubt. So, this is not my pattern,\nthis is not my pattern. So, as I go down, I find a number whose remainder\nis the same as my pattern modulo 13. In this case, it is so turns out that actually the\npattern matches, but remember, "
+    },
+    "33956791-2fa2-444b-be6a-be89a265032d": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "I am not checking the number, I am not taking the pattern, I\nam only checking the remainder modulo 13. So, I am only able to check that what I am\nseeing in my text module 13, is what I see in my pattern, module 13. And the problem now comes out, if I go fu"
+    },
+    "aa59852d-a825-44e1-8678-c44ade947c0e": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "rther\ndown, and I look at this sequence 67399. And think of it as a number, this is also 7 modulo\n13. So, therefore, when I find a mismatch, I am good. When I find a match, I may or may\nnot be good, because it could be that because I am collapsing. So, rem"
+    },
+    "274bc04e-cc74-4b68-a7f3-c58383ea66ef": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "ember, we discussed\nthis when we looked at hashing very early on. So, you are taking a large space of numbers. In this case, we are taking numbers with five\ndigits, so wea re taking numbers of the form 0 to 99999, and we are collapsing it into\nremainders m"
+    },
+    "44c1d158-2da2-4aa0-94b6-bdd1c89b8d7a": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "odulo 13, which is 0 to 12. So, we only have 13 values in the range, and we\nhave one lakh values in the domain. So, obviously, there are going to be collisions. So, when\nI find a collision, with the pattern I am looking for, I have to be careful. So, I get"
+    },
+    "09d84628-07ef-4055-ba8d-6286df5ef272": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " these so called false positives.\nSo, I get something which reports the same remainder as my pattern. But then whenever\nI get that, I have to double check that in fact, that number is the same. So, then I\nhave to go back. So, if I am doing arithmetic, I mu"
+    },
+    "b80dc00b-0cea-4047-8cdd-c95432a63fda": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "st calculate the actual number for that\nthing and check or if I am doing a string match, which might be easier in this case,\nI am just have to check that that string matches. So, if I find a mismatch, I am done. So, if\nthat block does not have the same rem"
+    },
+    "68b9d200-b99a-4af0-bdf2-d15201c5fa46": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "ainder as my pattern I am done. If it does have the\nsame remainder modulo this prime as my pattern, I cannot be sure that I have actually found\nthe pattern till I explicitly evaluate that. So, this is the Rabin-Karp algorithm, the\nway it would work. If you"
+    },
+    "a5105d0a-d95d-4361-9e6a-2f29027063c5": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " extend it beyond small alphabets, you have to do some modulo\narithmetic to get around the arithmetic complexity of the whole procedure. So, as we saw the preprocessing time is proportional\nto the length of the pattern because we just have to convert this "
+    },
+    "cafdc494-293f-4257-9f85-ca14049cd7a9": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "into an m digit number.\nAnd if we are doing it modulo q, then it is m digit number module. On the other hand,\nwe could have a lot of these collisions. So, every time we have a collision, that is every\ntime the block reports a remainder, which is the same a"
+    },
+    "e5140be8-fc68-4c58-b818-9ff0eddb8e3b": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "s my number, I have to go and\ncheck it. So, I have to do a linear scan or I have to\ndo this order m work to convert it to a number and check numerically, whatever it is I have\nto do order m work to validate whether this positive is a false positive or a tr"
+    },
+    "c0c37b19-945f-49d1-b273-945b7db8ca67": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "ue positive.\nAnd I could cook up the numbers in such a way that these things all are a large number\nhappen to have the same thing. So, I could for almost all the positions end up having\nto do this scan, which results in a worst case of n times m. Of course"
+    },
+    "e19dcc1c-a696-485d-898b-a062c45e5ae5": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": ", in practice, it will be very unusual\nthat you will get such a large number of matches which have the same remainder. So, one thing\nwe have seen is that if you have a small enough (())(15:56) like we looked at 10 then you\ncan actually do this arithmetic e"
+    },
+    "5d8dd3b1-8b23-40e3-88ae-533de9eb481d": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "xplicitly, you do not have to go modulo and if you do\nit explicitly, then we said that it reduces to order n plus m, because you do an order\nm preprocessing and each shift takes me constant amount of time. So, therefore, processing, updating the number\nand"
+    },
+    "1a7506a9-0101-4077-a379-c18ca7f008ab": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " checking equality is a constant operation. So, in order n steps, I can process the entire\nstring and I can think of n plus m as n in general, because I can always assume we said\nearlier that m is much smaller than n. The other thing is that we can be like"
+    },
+    "25433483-971d-43c0-8610-47b7fc715098": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": " in hashing\nwe can see if we can choose a good q. So, by choosing the prime numbers that we\nare going modulo, well, we could again make sure that the number of collisions is small,\nbut there is no fixed guarantee as such. Once you go to large alphabets tha"
+    },
+    "c1e358c3-a0bf-4013-96b4-cf09e0fa9707": {
+        "content_id": 68,
+        "course_name": "PDSA",
+        "title": "String Matching: Rabin-Karp Algorithm",
+        "week": 10,
+        "chunk": "t you are going\nto actually save anything with this Rabin-Karp method."
+    }
+}
