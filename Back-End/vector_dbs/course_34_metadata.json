@@ -1,0 +1,485 @@
+{
+    "aab84595-9c12-499e-b827-10045485728f": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "We said that there were two fundamental\u00a0\nstrategies to search and find reachability\u00a0\u00a0 in graphs. One was breadth first. And now\u00a0\nwe will look at depth first search.\n\u00a0 So, in depth first search, we start from some\u00a0\nvertex, and we look at any one unexplored\u00a0"
+    },
+    "11ef24a8-671e-4077-b9d1-ff77f00b93ae": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "\u00a0 neighbour. And then from that explored neighbour,\u00a0\nwe will not come back and look at more unexplored\u00a0\u00a0 neighbours with the original vertex, but rather\u00a0\nwe will go to j and then proceed from j. So,\u00a0\u00a0 we kind of follow along path until we\u00a0\nget stuck, and t"
+    },
+    "96ee585c-0d55-4403-b4f6-936ce86123cb": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "hen we come back. \n\u00a0 So, unlike breadth first search, where we explore\u00a0\nall the neighbours of the first level, and all\u00a0\u00a0 the neighbours second level, here, we will kind\u00a0\nof follow exploration. So, it is sort of like,\u00a0\u00a0 if you are reading a web page and the"
+    },
+    "73f15da7-3c87-43f6-b37b-6f23880a64c9": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " first link\u00a0\nthat you come across, instead of reading the rest\u00a0\u00a0 of the text, you click on that link, and you go\u00a0\nto a new web page. And now the first link that\u00a0\u00a0 you see on that, you click on that and go to a new\u00a0\nweb page. So, you are kind of getting inf"
+    },
+    "47866644-3b57-4a55-9587-44d7d76cfad5": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "initely\u00a0\u00a0 distracted from what you were doing earlier, but\u00a0\nthis in a finite graph will actually work. \n\u00a0 So, we will continue until we reach a vertex\u00a0\nwhich has no unexplored neighbours. And when\u00a0\u00a0 we hit that point, because we did not look at\u00a0\nall the ne"
+    },
+    "d6ab214f-8bad-4a2c-9c49-80a2c5acea09": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ighbours before, when we looked at\u00a0\u00a0 a vertex, we explored the first neighbour that\u00a0\nwe found, maybe the second neighbour has not been\u00a0\u00a0 explored yet, it could have been explored also,\u00a0\nbecause we could have reached it in around about\u00a0\u00a0 way after going thr"
+    },
+    "917ba5dd-b084-4148-afc7-93f116a5fae4": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ough that first neighbour. \nBut if we find a neighbour, which is not explored,\u00a0\u00a0 we will visit that so we kind of backtrack,\u00a0\nbut we backtrack systematically. So,\u00a0\u00a0 we take the last place, we got stuck, come\u00a0\nback to the previous step, backtrack there,\u00a0\u00a0 t"
+    },
+    "e1a9b441-3661-4050-a15c-a9dd74809113": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "hen come back to this backtrack there and so on.\u00a0\nSo, in order to do the systematic backtracking,\u00a0\u00a0 we will use a different data structure\u00a0\nfrom what we did for the breadth first\u00a0\u00a0 search and the breadth first search, in order\u00a0\nto process vertices, we put "
+    },
+    "183674df-54d8-4082-94de-1bd875520e8e": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "them in a queue. \n\u00a0 So, every time we saw a new visited vertex, which\u00a0\nis unexplored, we put it in a queue, and they all\u00a0\u00a0 came up for exploration in the order in which\u00a0\nthey went into the queue. So, earlier vertices\u00a0\u00a0 got (pro) processed before later vert"
+    },
+    "ab5aecee-856c-422f-809b-98234809ccd5": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ices. Whereas\u00a0\nin depth first search, this is not going to happen\u00a0\u00a0 in general, because the earlier vertices, which\u00a0\nare not, which are neighbours of which could have\u00a0\u00a0 been seen later, will be processed only later. \nBut we want to make sure that when we b"
+    },
+    "cce757d7-2b53-45a7-92bf-ec8a05e3eeb8": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "acktrack,\u00a0\u00a0 we go back to the most recent vertices from which\u00a0\nwe made a choice. That is why we use a stack. So,\u00a0\u00a0 a stack is a last in first out. So, just\u00a0\nimagine a stack, like a stack of books,\u00a0\u00a0 you put a book on top of the stack, the book\u00a0\nthat you ta"
+    },
+    "a356b20f-f1e8-4534-bf25-7f5c63b33183": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ke out will be the one you put last,\u00a0\u00a0 if you want the second last book, you have\u00a0\nto take out the top book and then take out,\u00a0\u00a0 you can pull out something from in between.\nSo, if we run depth first search, for example,\u00a0\u00a0 from vertex 4 here, then we can ta"
+    },
+    "20a2f118-ca26-425c-afdc-cfd0eb641a90": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ke any one of\u00a0\nits neighbours, so it has 0, and 3, and 7. So,\u00a0\u00a0 if we take the smallest one, for instance,\u00a0\n0, so we mark it, and then we explore,\u00a0\u00a0 say, the strategy is that we will explore\u00a0\nthe smallest outgoing vertex from a given\u00a0\u00a0 vertex, so 4 now. So"
+    },
+    "9a91d053-9bda-4b45-ae18-cb153efd4024": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": ", now I basically put 4 on\u00a0\nthe stack saying that I am not finished with 4.\u00a0\u00a0 The thing that I had done with 4 was\u00a0\nincomplete. But I am now processing 0. \n\u00a0 So, now I look at the neighbours\u00a0\nof 0, so the neighbours of 0 are\u00a0\u00a0 1 and 2. And if I look at the"
+    },
+    "d9922412-792f-4cad-9420-b72c87542f79": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "m in this order,\u00a0\nthen I will find that 1 is not yet visited. So,\u00a0\u00a0 I will suspend 0 and look at 1 instead. So, now\u00a0\n0 has been put on top of 4 on the stack. So,\u00a0\u00a0 the stack is growing from left to right. So,\u00a0\nthe stack is growing in this direction.\n\u00a0 So, "
+    },
+    "243a18ac-cb00-49ee-b743-7cf2f0116989": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "now I have suspended 4 in the process of\u00a0\nexploring neighbours of 4, I have suspended 0.\u00a0\u00a0 And now I am looking at neighbours of 1. So,\u00a0\nwhen I look at the neighbours of 1, I find\u00a0\u00a0 that it has 2 neighbours 0 and 2, but only 1 of\u00a0\nthem 2 is unexplored. So,"
+    },
+    "e01b8795-10da-4279-b3f0-577a04b5eabb": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " I will suspend the 1\u00a0\u00a0 and explore 2 instead. But 2 has neighbours, which\u00a0\nare already explored. So, the exploration of 2\u00a0\u00a0 does not get me anywhere. So, this is a situation\u00a0\nwhere I get stuck. So, I get stuck here.\n\u00a0 So, since I get stuck, I have to go b"
+    },
+    "208004b4-11f5-4e4f-afce-98c9038ce71e": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ack and say,\u00a0\u00a0 I have nothing I can do here. So, I go\u00a0\nback to 1 and I ask was there anything\u00a0\u00a0 left pending in 1 which I could do now that I\u00a0\nknow that 2 is a dead end? So, I go back to 1.\u00a0\u00a0 So, I pull 1 off the stack and I say, now let me\u00a0\nlook at its ne"
+    },
+    "fdf5c435-4006-4015-8da2-ad0ecf9d3058": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ighbours again and see if there is\u00a0\u00a0 anything left to do. And I find there is nothing\u00a0\nleft to do because there are only to neighbours\u00a0\u00a0 0 and 2, 0 anyway, I had ignored because 0 was\u00a0\nmarked right at the beginning and I just marked 2.\u00a0\u00a0 So, now I say this"
+    },
+    "7c7b12a0-e04b-4119-b167-9f0fe47d01aa": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " 1 is also a dead\u00a0\nend for me. So, I backtrack to 0.\n\u00a0 Now I look at what was left with 0 so\u00a0\nwhen I went from 0 to 1; 2 was unexplored,\u00a0\u00a0 but notice that I came through this roundabout\u00a0\nroute and explored 2. So, now if I look at\u00a0\u00a0 0 to 2 directly, I find "
+    },
+    "09f08d82-121e-4ddf-9322-17442cc60f9a": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "that it is\u00a0\nalready been visited by some other\u00a0\u00a0 exploration which I initiated earlier.\u00a0\nSo, though 0 has never explored 2 itself\u00a0\u00a0 by the time 0 looks at 2; 2 is visited.\u00a0\nSo, this is unlike breadth first search,\u00a0\u00a0 where 2 would be visited only from 0, it"
+    },
+    "29f9d5d0-e4d5-4624-9158-ec1cc0d475cd": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " will\u00a0\nnot be visited somewhere else. So, 0 visits\u00a0\u00a0 cannot visit 2 so now I backtrack back to 4.\nSo, now I basically come back to the first vertex,\u00a0\u00a0 I started with saying that whatever I did in\u00a0\nthe direction 0 has now completed and there is\u00a0\u00a0 nothing mo"
+    },
+    "6055b4f4-f343-4e8f-93b5-8988556b5ea9": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "re to search below 0. So, I look at\u00a0\nmy next neighbour, which is 3. So, I say let me\u00a0\u00a0 suspend 4 again, and explore 3. Now 3 will suspend\u00a0\nitself and explore 5 because that is a smaller of\u00a0\u00a0 the two unvisited neighbours, 5 will suspend\u00a0\nitself and explore "
+    },
+    "7eabcf7e-86e9-47f8-9918-a2e72722aa23": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "6 because that is the smaller\u00a0\u00a0 of the two unvisited neighbours. \nBut 6 has no new neighbours to visit,\u00a0\u00a0 because 6 has neighbours 3 and 5, which are both\u00a0\nmarked as visited. So, 6 will say backtrack to 5.\u00a0\u00a0 So, now I have something interesting because\u00a0\nI "
+    },
+    "254a558a-53e2-4e52-93af-b9286067a0ed": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "went that way but I still have these two\u00a0\u00a0 pending. So, backtracking to 5 allows me to\u00a0\ndo more things, I do not have to go all the\u00a0\u00a0 way back to 4, like we did last time. So, 5\u00a0\nwill say, let me now explore 7 instead.\n\u00a0 So, I spend 5 one more time and thi"
+    },
+    "c0b800c6-addb-4a17-a49f-a3badf81c92c": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "s time\u00a0\nI explore 7. From 7, I can explore 8,\u00a0\u00a0 because 4 and 5 are known, but 8 is not. So,\u00a0\nI suspend 7, explorer 8. From 8, I explored 9.\u00a0\u00a0 Now 9 is a dead end. So, having explored\u00a0\n9, I will come back and backtrack to 8.\u00a0\u00a0 But there is nothing more to "
+    },
+    "e8b34547-8c8f-44e4-b2cf-b20ba3f28493": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "see from 8, so I\u00a0\nbacktrack to 7. There is nothing more to see\u00a0\u00a0 from 7, so I backtrack 5. There is nothing more to\u00a0\nsee from 5, so I backtrack to 3. There is nothing\u00a0\u00a0 more to see from 3, so I backtrack to 4. \nAnd now the stack is empty. So, there is noth"
+    },
+    "9e814864-99bd-4c79-8201-21c7919ece89": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ing\u00a0\u00a0 pending. I have seen everything. And as you\u00a0\ncan see, because it is the same graph. And\u00a0\u00a0 hopefully, you get to get the same result\u00a0\neverything is actually reachable from 4.\u00a0\u00a0 So, this is how depth first\u00a0\nsearch works with a stack. \n\u00a0 Now, when we im"
+    },
+    "a65a910b-c8ee-4b10-88b3-025d770c9b0d": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "plemented breadth first search,\u00a0\nwe actually had to construct that queue. If you\u00a0\u00a0 remember, we created a class called queue, and\u00a0\nwe created a queue object and kept track of it.\u00a0\u00a0 So, you might imagine that when you do depth first\u00a0\nsearch, you have to do "
+    },
+    "5f4e102d-a32f-400a-8fa9-039b748afbaf": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "the same thing, you have to\u00a0\u00a0 create a stack object and keep track of it. \nHowever, it turns out that you can actually\u00a0\u00a0 implement depth first search using recursion,\u00a0\nand recursion implicitly keeps a stack.\u00a0\u00a0 So, the thing about depth first search is if y"
+    },
+    "8aca4e12-0f86-4496-974c-ac009f0c918b": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ou\u00a0\nwant to do it, recursively, then you must separate\u00a0\u00a0 out the initialization from the recursive\u00a0\ncall, because otherwise, every time you initial\u00a0\u00a0 you call depth first search it initializes all the\u00a0\nvisited to be false in all that it is going to be\u00a0\u00a0 so"
+    },
+    "49b28ada-6528-4393-b2f2-87bc08b04564": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "mething that will not work. \nSo, there is an initialization phase\u00a0\u00a0 where you as always set in this case say let us\u00a0\ndo it in one shot, this is visited and parent.\u00a0\u00a0 So, we set visited to be the empty dictionary, the\u00a0\nparent to be the empty dictionary. And"
+    },
+    "3317bd9a-ea50-45a8-8071-d6beb1a9142d": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " then for\u00a0\u00a0 having extracted the number of so this is with\u00a0\nan adjacency matrix, having extracted the number\u00a0\u00a0 of rows, we can set all the vertices to not be\u00a0\nvisited and all of them to have parent minus\u00a0\u00a0 1. So, this is an initialization phase. \nSo, what "
+    },
+    "5e831920-78ad-4ec9-a8a2-ebc82488e3b8": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "it does is it returns an initialized\u00a0\u00a0 version of parent and visited. So, we now have to\u00a0\ntake this initialized version of parent and visit\u00a0\u00a0 and pass it through to DFS. So, the actual DFS is\u00a0\nhere. So, DFS now the way I have written it takes\u00a0\u00a0 4 parameter"
+    },
+    "ebf858a0-cc6e-4dd3-bb69-08a98d2b24b9": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "s, it takes the matrix of the\u00a0\ngraph, it takes the vertex to start and it\u00a0\u00a0 also takes the current status of visited\u00a0\nand parent. So, what does it do? \n\u00a0 So, it basically calls itself, so it\u00a0\ndoes the obvious thing that it visits\u00a0\u00a0 the vertex, which it has"
+    },
+    "6f4981f9-fbbd-45c7-b3c4-8bb3c6289048": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " been told to\u00a0\nvisit, so it sets visited of V to be true.\u00a0\u00a0 And for every neighbour, if it is not visited, it\u00a0\nsets the parents so all this is familiar to us,\u00a0\u00a0 this is what we do, whether you are doing\u00a0\nbreadth first search or depth first search.\u00a0\u00a0 But no"
+    },
+    "75afec95-aa76-4e9a-bb7d-5279869b3438": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "w this is the new thing, which is I\u00a0\ndo not proceed with the next neighbour. \n\u00a0 So, I am looking at all the neighbours\u00a0\nbut I am not if I see one neighbour,\u00a0\u00a0 which is not visited, I kind of suspend myself and\u00a0\nthis is done now implicitly through recursion"
+    },
+    "39d40b6b-1fb6-4685-af86-903fce4bf129": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": ", I\u00a0\u00a0 restart DFS from the new vertex k which I just\u00a0\nsaw, and I passed the current value visited\u00a0\u00a0 and parent is going to return back to me an\u00a0\nupdated value of visited and parent. So finally,\u00a0\u00a0 DFS when it concludes, gives back so\u00a0\nbasically each time I "
+    },
+    "98cf3ebf-de83-4099-b4de-354d21817243": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "visit something\u00a0\u00a0 it update visited and parent gives it back to\u00a0\nme. So, this is the recursive nature of DFS. \n\u00a0 Now, here, because we have essentially made\u00a0\nvisited and parent kind of internal to DFS,\u00a0\u00a0 we have to keep passing it around. We\u00a0\nhave to call "
+    },
+    "03a7e8a5-8601-490d-b1d1-90f81ba6aae4": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "DFS with visited and parent\u00a0\u00a0 and get it back. There is a little bit cumbersome\u00a0\nand this is not how you would normally see it\u00a0\u00a0 presented if you see an implementation\u00a0\nin a language other than Python. \n\u00a0 So, usually in presentations of DFS, they will\u00a0\nass"
+    },
+    "43a8d9b2-f0b3-4b52-931b-e6ff0bd97e98": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ume that this visited and parent, in this case\u00a0\u00a0 dictionaries, or lists or arrays or whatever you\u00a0\nare using to store that are actually global values\u00a0\u00a0 which you can access from inside DFS. And so you\u00a0\ncan update them from inside DFS without having to\u00a0\u00a0 pa"
+    },
+    "28e7bff4-1524-4e39-bf6b-8b0316f5fb0a": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ss them around. So, we can also do that. \nSo, we can make visited and parent global. So,\u00a0\u00a0 we declared outside all our functions, these two\u00a0\nempty dictionaries called visited and parent. And\u00a0\u00a0 now because Python has this convention that all\u00a0\nmutable values"
+    },
+    "dd97f215-89bd-4d6c-9ad3-e54d2e8f5f6a": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": ", a mutable value is either a list\u00a0\u00a0 or a dictionary. A mutable value can be globally\u00a0\nreferenced from inside a function. So, this is\u00a0\u00a0 one of the decisions that Python has made, which\u00a0\nis basically to take care of the situation. So,\u00a0\u00a0 you do not have to k"
+    },
+    "7a3a786c-c63e-4466-b80e-c1f53025bb69": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "eep passing lists and\u00a0\ndictionaries in and out of functions. \n\u00a0 I still have to initialize it,\u00a0\nbut the initialization happens\u00a0\u00a0 now in this case, without having to pass the\u00a0\ndictionary. So, remember, in the earlier thing,\u00a0\u00a0 the initialization actually ret"
+    },
+    "f1ae6225-3603-48e3-9679-ae8a807df4fa": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "urned back the\u00a0\ninitialized visited and parent dictionary here,\u00a0\u00a0 it is just going to initialize it. So, it is going\u00a0\nto do the same thing, it is going to run through\u00a0\u00a0 a loop. But now it is initializing it outside. So,\u00a0\nthis visited and parent dictionary "
+    },
+    "8b00cce1-0ff8-40a1-bf57-33323222a92f": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "are outside the\u00a0\u00a0 function is just setting them up. So, I will have\u00a0\nto first call this function to initialize it. \n\u00a0 And now when I do the DFS itself, I only\u00a0\nhave to pass the functions, the parameters,\u00a0\u00a0 which I would expect to pass, which is\u00a0\nthe matrix"
+    },
+    "7359cff3-a9d3-4362-b0f8-65b86b99ff57": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " and the vertex to start with.\u00a0\u00a0 So, I set visited of this vertex to be true. And\u00a0\nthen for every neighbour, if it is not visited,\u00a0\u00a0 I will call DFS with that. Earlier, I had\u00a0\nto call it with the updated value of visited\u00a0\u00a0 and parent and get it back. \nSo, "
+    },
+    "4cb3ad02-1379-4827-8730-4865f0c13490": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "this is a simpler,\u00a0\u00a0 easier to understand version. And this\u00a0\nrecursive function is implicitly manipulating\u00a0\u00a0 this visited and parent which are sitting outside.\u00a0\nSo, that is something so these updates here,\u00a0\u00a0 setting visited v equal to true and setting\u00a0\npar"
+    },
+    "6caaa1a6-254a-4789-b4a6-04437ab88905": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ent k equal to V, these are happening to\u00a0\u00a0 this global data structure, which is outside,\u00a0\nthose are something to keep in mind.\n\u00a0 Now, you can do the same thing with an adjacency\u00a0\nlist. So first, let us look at the version where\u00a0\u00a0 we have this thing passing"
+    },
+    "89466ff6-7eec-4389-ba95-0c4461019823": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " around. So as before,\u00a0\nexcept that we have a list, you will initialize\u00a0\u00a0 these dictionaries to be empty. So, this is the\u00a0\nversion where visited and parent are maintained\u00a0\u00a0 inside the function, so we have to keep passing\u00a0\nthem around. So, I will initialize"
+    },
+    "34b76088-2590-4c70-bd1f-294675ef2551": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " them using\u00a0\u00a0 the list of keys of the adjacency list. But\u00a0\notherwise is the same thing I updated to false and\u00a0\u00a0 minus 1 and I return the initialized arrays. \nAnd now when I call will DFS list, I have to\u00a0\u00a0 pass visited and parents. So again, I\u00a0\ndo the same "
+    },
+    "17bbe541-6a09-4f94-aa00-e88f9a07ccdc": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "thing I set visited to true.\u00a0\u00a0 And instead of checking the neighbouring function,\u00a0\nwhich looks at all the rows in the matrix, I just\u00a0\u00a0 check the adjacency list of the current vertex.\u00a0\nAnd for every such thing, if it is not visited,\u00a0\u00a0 I will set its parent "
+    },
+    "51d5a1ab-176f-49a4-82f0-33737e8c2dec": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "to be the current vertex.\u00a0\nAnd I will call recursively DFS with the current\u00a0\u00a0 value of visited and parent and get back an\u00a0\nupdated value of visited parent. And finally,\u00a0\u00a0 DFS when it returns has to return this\u00a0\nupdated value. So, this is the non-global\u00a0\u00a0 v"
+    },
+    "db1f4cd1-e4b2-4a18-ab0b-b12bb4d15d86": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ersion of DFS using an adjacency list. \nAnd here is the global version of DFS using\u00a0\u00a0 an adjacency list. So, as before, now, we make\u00a0\nvisited and parent dictionaries which are outside.\u00a0\u00a0 So, when we initialize, we only initialize\u00a0\nbut we do not return the "
+    },
+    "983bf931-6c67-4b3c-91c6-1294104fb4f3": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "initialized values\u00a0\u00a0 because they are being globally updated. And the\u00a0\nonly change is that the loop for initialization\u00a0\u00a0 runs over the keys of the adjacency list\u00a0\nrather than the columns of the matrix. \n\u00a0 And then the DFS itself is the same thing. The\u00a0\nonl"
+    },
+    "09b7f862-5cb8-4222-a51c-5e571bf03f5e": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "y difference is that instead of looking for\u00a0\u00a0 the neighbours of k, v, which looks at all\u00a0\nthe columns in the matrix, I just look at the\u00a0\u00a0 list of neighbours of V. And if it is not\u00a0\nvisited, I set the parent and I call it again.\u00a0\u00a0 So, these are now 4 differ"
+    },
+    "37046fca-bd50-4b6d-8e0d-b5ed1b40d722": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ent implementations\u00a0\nof DFS, which I have shown you,\u00a0\u00a0 with and without, with an adjacency matrix,\u00a0\nwith an adjacency list, and maintaining\u00a0\u00a0 visited and parent globally and locally. \nSo, all 4 of them work. And it is a question\u00a0\u00a0 of which one you find mos"
+    },
+    "257781ef-c721-4ef1-8021-68ed009fcec3": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "t convenient.\u00a0\nGenerally, if these are large values,\u00a0\u00a0 large dictionaries this is generally desirable,\u00a0\nnot to pass them around. So, global things make\u00a0\u00a0 it easier to write because you do not have to\u00a0\npass these dictionaries and remember to call\u00a0\u00a0 them and"
+    },
+    "e8db2dde-250e-433f-9369-20d21ffc8fa4": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " get the updated value. So usually, for\u00a0\nsuch things, the global version is preferred.\n\u00a0 So, what about the complexity? Well, the\u00a0\ncomplexity despite all this recursion is\u00a0\u00a0 very similar to BFS. So, every vertex is visited\u00a0\nonce so it is marked as visited "
+    },
+    "27cdc1b4-9d2c-49c5-ae66-ca40f0224ce7": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "once and it is\u00a0\u00a0 explored once. So, you call DFS from that\u00a0\nvertex only once. So, at that sense, we do\u00a0\u00a0 order n processing in terms of\u00a0\nvertices, we never see a vertex twice.\u00a0\u00a0 And as before, in order to explore a vertex,\u00a0\nto decide which of its neighbour"
+    },
+    "5e08a6d1-522b-420f-80c9-2cdd80f78334": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "s to process,\u00a0\u00a0 we have to check which are all the neighbours. \nAnd an adjacency matrix that takes order n time.\u00a0\u00a0 And in an adjacency list is take degree\u00a0\nv time. So, as exactly as in the BFS,\u00a0\u00a0 if we do this thing with an adjacency matrix,\u00a0\nwe get an ord"
+    },
+    "eada60f7-94dd-4ce5-87e6-90af32cd1e77": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "er n squared algorithm. If we do\u00a0\u00a0 this adjacency list, we get an order m plus\u00a0\nn algorithm. So, there is no difference\u00a0\u00a0 in the worst-case running time, of course, there\u00a0\nwill be a cost due to recursion, which we are not\u00a0\u00a0 going to worry about right now. "
+    },
+    "3d8c86b7-e227-4bb8-90c1-db0a646a3ddc": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "But otherwise,\u00a0\nin terms of the number of times you process\u00a0\u00a0 these vertices and edges, we have this usual\u00a0\nscaling of going from n squared to m plus n.\n\u00a0 So, DFS is a different strategy from BFS. And\u00a0\nit uses a stack rather than a queue and the\u00a0\u00a0 stack is"
+    },
+    "95ee0c9b-1f3a-45f5-99f3-e19c20698b76": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " implicit when we do it recursively.\u00a0\nNow, BFS we said gives us some extra bonus,\u00a0\u00a0 which is that you get shortest paths, so we\u00a0\ndid two things would BFS we first recovered\u00a0\u00a0 the path using parent and then we use this\u00a0\nlevel function to discover the distan"
+    },
+    "1f69a9bd-ef69-4fdb-9b19-15f8c8e596b8": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "ce. \n\u00a0 Now, in the BFS, we only did the parent part, we\u00a0\ndid not do the level part. And that is because\u00a0\u00a0 as we saw, even in that example, we saw that,\u00a0\nlike if I had 0, 1, and 2 connected like this,\u00a0\u00a0 it could be that DFS finds this path because it\u00a0\nsuspe"
+    },
+    "fb6e8f55-a45c-472d-b8f7-25bb04de8d8b": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "nds 0 then suspends 1. Whereas of course,\u00a0\u00a0 there is a shorter path. So, DFS is not generally\u00a0\ngoing to find the shortest path. So, even though\u00a0\u00a0 the parent thing tells us something about one way\u00a0\nof getting there, it is not really the fastest way\u00a0\u00a0 so DFS"
+    },
+    "bc2880ed-dcd4-48db-8e38-6f1b362d6b2d": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": " does not have that advantage. \nSo, you might ask, I mean, you have to do\u00a0\u00a0 all this work, you have to do recursion\u00a0\nyou have to do all this. And at the end,\u00a0\u00a0 you do not even get this information what is the\u00a0\npoint of DFS? It turns out that for other thin"
+    },
+    "3628b95f-6919-44c5-9a26-4069c4498aa5": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "gs,\u00a0\u00a0 DFS is very useful. So, actually, if on the\u00a0\nbalance of things DFS is a more informative search\u00a0\u00a0 than breadth first search. \nSo, we will look at examples\u00a0\u00a0 in a subsequent lecture as to why DFS gives\u00a0\nyou very useful information about the structure\u00a0"
+    },
+    "876aaca5-f47e-44d2-b20f-08c5875645fa": {
+        "content_id": 34,
+        "course_name": "PDSA",
+        "title": "Depth First Search DFS",
+        "week": 4,
+        "chunk": "\u00a0 of a graph and therefore very often DFS is the\u00a0\nprimary way of exploring a graph rather than BFS."
+    }
+}

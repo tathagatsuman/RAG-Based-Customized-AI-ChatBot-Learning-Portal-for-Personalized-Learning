@@ -1,0 +1,303 @@
+{
+    "c3af5572-ccd7-4558-ad67-b2679db78ec3": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "So, let us look at another linear programming\u00a0\nexample, which will lead us to another kind of\u00a0\u00a0 problem which we will look at as a general way of\u00a0\nsolving a large class of algorithmic problems. So,\u00a0\u00a0 this is a problem called bandwidth allocation. \nSo, supp"
+    },
+    "088c7732-179a-4ac1-83ac-02cab68dac11": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "osing we have a network, a telecom\u00a0\u00a0 network, basically an internet provider has a\u00a0\nnetwork, and there are these three users. So,\u00a0\u00a0 we have A, B and C they are these three\u00a0\nusers, and they need to be connected. So,\u00a0\u00a0 you can think of A, B and C as three lo"
+    },
+    "a6f2b18e-712e-459d-9cfb-51232d2a6d54": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "cations\u00a0\nof a company for instance. So, they want\u00a0\u00a0 this company would like a certain quality of\u00a0\ninternet connection between its 3 locations, and\u00a0\u00a0 small a small b and small c are the nearest hubs\u00a0\nmaintained by the internet service provider. \n\u00a0 So, basic"
+    },
+    "90ccd9fa-7dbb-4ccf-91f3-2e2b6d483a83": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "ally each company office is linked\u00a0\nto the nearest hub of the internet service\u00a0\u00a0 provider and these hubs are linked to\u00a0\neach other. And so, now the service\u00a0\u00a0 provider has to connect these offices capital\u00a0\nA, capital B and capital C through its network.\u00a0\u00a0 S"
+    },
+    "1da7a792-7867-4b9d-8d1d-78f33b58e50d": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "o, these numbers which are mentioned along\u00a0\nthese links, represent bandwidth capacity,\u00a0\u00a0 so, their capacity constraints. So, let us\u00a0\nassume that these are in megabits per second,\u00a0\u00a0 if you want you can think of a larger\u00a0\nunit but it is just illustrative. \n\u00a0"
+    },
+    "4a194c4f-2ede-48f5-b582-141172b7562d": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": " So, that means that no more than 10 Mbps can flow\u00a0\nfrom B to capital B to small b. So, one of the\u00a0\u00a0 constraints that the company that is buying this\u00a0\ninternet service has asked is that it must have a\u00a0\u00a0 minimum of 2 Mbps bandwidth between any pair of\u00a0\nits "
+    },
+    "d0e85204-e353-4303-a1bd-85f668adffb6": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "offices. So, there must be 2 Mbps bandwidth\u00a0\u00a0 going this way, going this way and going this\u00a0\nway all these must have 2 Mbps bandwidth. \n\u00a0 So, the bandwidth is not affected by how many hops\u00a0\nit takes. So, if I want to connect capital A to\u00a0\u00a0 capital B, so, I"
+    },
+    "7b3cd98e-9ff8-4a8b-be60-828bf9a531fb": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": " can of course do this shortest\u00a0\nthing, which is going from capital A to small a.\u00a0\u00a0 So, that is the nearest node of my\u00a0\nISP, my internet service provider\u00a0\u00a0 small a connects to small b small b is connected\u00a0\nto capital B. So, this is the fast route,\u00a0\u00a0 but th"
+    },
+    "fac74c37-3159-436f-956c-6f3065069ad8": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "ey could also be another connection which\u00a0\ngoes this way from small a it goes to small c\u00a0\u00a0 and then from small c goes to small b. \nSo, this kind of indirect connection is also\u00a0\u00a0 allowed and the sum of these two will be the\u00a0\ncapacity that I get from capital"
+    },
+    "d0947e0b-f342-4ff7-a337-d2ee2c1123b2": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": " A to capital B.\u00a0\u00a0 Now, there is another aspect to\u00a0\nthis, which is that for the company,\u00a0\u00a0 the company that is maintaining\u00a0\nthis and providing the service,\u00a0\u00a0 they get paid by this customer, and they\u00a0\nget differential payment for different\u00a0\u00a0 combinations of"
+    },
+    "40610a03-2007-4824-829e-cb0d81ee760f": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": " offices. So, some of\u00a0\nthese offices maybe for the company\u00a0\u00a0 that is buying the service are more important. \nSo, this company is willing to pay 300 rupees\u00a0\u00a0 per Mbps for traffic on this route. So,\u00a0\nyou need to pay only 200 for this route.\u00a0\u00a0 And it is willi"
+    },
+    "964eb4f6-eb92-4988-89f3-3285808249b2": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "ng to pay 400 for this route. So\u00a0\nhere I pay 300 here I paid 200 here i pay 400.\u00a0\u00a0 So, now what as an ISP we need to do is\u00a0\nallocate the bandwidth, to maximize the revenue.\u00a0\u00a0 So, remember that this is only at least it\u00a0\nis not that I am giving my customer e"
+    },
+    "fd8ecdf6-99d4-4863-ae7c-d5e9c781d43c": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "xactly\u00a0\u00a0 2 bandwidth that I am willing to give more than\u00a0\n2 also, but I should not give less than 2. \n\u00a0 So, now, if I look at any 2 offices of the\u00a0\ncustomer, then there are 2 ways to connect it as\u00a0\u00a0 we saw it. So, let X denote the shorter route. So,\u00a0\nX cap"
+    },
+    "53341780-e367-483b-b349-adb61cdb387c": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "ital A capital B denotes how much bandwidth\u00a0\u00a0 is being allocated to route traffic from A to\u00a0\nB via the short route by a small a and small b\u00a0\u00a0 and yAB will be the long route.\u00a0\nSo, this is xAB and this is yAB.\u00a0\u00a0 So, the same thing will hold for the others. \n"
+    },
+    "03ca942c-dcfb-4e5f-8836-9dddc1e0e840": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "So, there will be xAC and yAC\u00a0\u00a0 and similarly there will be an xBC and a long\u00a0\nroute which is yBC. So, there are 6 possible\u00a0\u00a0 routes 3 short and 3 long which together\u00a0\ngive us the three desired routes which\u00a0\u00a0 are from capital A to capital B capital A\u00a0\nto c"
+    },
+    "761d1782-d4f0-4b7c-b22f-fb6f8611b755": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "apital C and capital B to capital C.\u00a0\u00a0 Now, how do we reconcile the\u00a0\nconstraints. So, if we look at this route\u00a0\u00a0 then it uses this edge. So, anything that\u00a0\nflows along the short route from A to B\u00a0\u00a0 goes along this particular connection\u00a0\nfrom small b to cap"
+    },
+    "c4b7ba4d-a22a-476e-8ae4-f420ac0214f3": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "ital B. \n\u00a0 So, does anything which flows from here to\u00a0\nhere. So, these both contribute to the capacity\u00a0\u00a0 congestion on this edge, but so also this traffic\u00a0\ncoming from here so any traffic which comes to B\u00a0\u00a0 follows this thing. So, this traffic and this\u00a0\ntr"
+    },
+    "cca26a34-2d52-4eea-99cf-a0c3478f424f": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "affic also comes. So, if we look at which are\u00a0\u00a0 all these constraints which come here, then you\u00a0\nhave xAB and yAB that is all the traffic coming\u00a0\u00a0 to B from a by the short route to the long route,\u00a0\nand xBC plus yBC, which is all the traffic coming\u00a0\u00a0 from C"
+    },
+    "5ae6e726-e46a-44c2-b8f5-4191ea0138fc": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": ", and this total traffic cannot exceed\u00a0\nthe capacity of this link, which is 10. \n\u00a0 So, this link has only capacity 10.\u00a0\nSo, I have to respect that link.\u00a0\u00a0 Similarly, of course, you have the same\u00a0\nthing for these links. So, if I look at\u00a0\u00a0 this one, then all"
+    },
+    "ef3edbf6-3685-4da6-86e9-a5121a517f1d": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": " the traffic that comes\u00a0\nto A either from B or from C must add up to\u00a0\u00a0 something less than 12. And if I look at this\u00a0\nlink, then all the traffic that comes to C\u00a0\u00a0 cannot exceed 8. So, these are 3 constraints\u00a0\non these 3 links. Likewise, we will need to\u00a0\u00a0 e"
+    },
+    "f4fd2be4-203c-4845-83ea-e8eeeb57051f": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "xpress the constraints on these 3 internal\u00a0\nlinks between the nodes of the ISP itself. \n\u00a0 So, here we can see that\u00a0\nfor if I look at this edge,\u00a0\u00a0 then the short edge from capital A to\u00a0\ncapital B follows this thing. The long edge\u00a0\u00a0 from A to C follows this "
+    },
+    "c42b66f5-4ccb-438d-ab01-6e5b181b7643": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "thing. And the long\u00a0\nand the and the long edge from B to C follows\u00a0\u00a0 this thing. So, each internal link is\u00a0\non one short edge and two long edges.\u00a0\u00a0 So, this particular small A small B link\u00a0\nis on xAB, the short link from A to B,\u00a0\u00a0 I know the long links fro"
+    },
+    "a607e3e8-736d-4165-8823-79656cc05d49": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "m A to C and B\u00a0\nto C and this total cannot exceed 6. \n\u00a0 Similarly, for the other things, so this one would\u00a0\nbe on this short link and these two-long links.\u00a0\u00a0 So, we have for each of these, we have one short\u00a0\nlink, and two long links. And there is some of\u00a0\u00a0"
+    },
+    "6560673f-39d7-462d-929e-20d7eada3008": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": " these two-short links, I mean, two long links and\u00a0\none short link cannot exceed the capacity of that\u00a0\u00a0 edge. So, we have 6 edges, 6 constraints.\u00a0\nAnd then we have this other constraint,\u00a0\u00a0 which is the customer's service requirement, which\u00a0\nsays that the t"
+    },
+    "302948d7-daa9-460d-8b6b-52766246fb4f": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "otal amount of traffic from A to B,\u00a0\u00a0 which is the sum of the traffic on the short\u00a0\nlink, and the long link must be at least 2.\u00a0\u00a0 Similarly, for B to C and A to C.\u00a0\nAnd finally, we have of course, that\u00a0\u00a0 we cannot have negative traffic. \nBut finally, we ha"
+    },
+    "b61e02fc-f422-4a05-ad8a-c8182d86761d": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "ve the revenue part. So,\u00a0\u00a0 this is what we want to optimize as far as the\u00a0\nISP is concerned. We know how much we get on\u00a0\u00a0 each of the pairwise connections between\u00a0\nthe endpoints. So, what the ISP wants to\u00a0\u00a0 do is maximize how much revenue the customer is\u00a0\n"
+    },
+    "3df509f6-c8e7-4200-8716-4af8d66195ce": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "willing to pay. So, remember that this was 300.\u00a0\u00a0 This was the more expensive one 400. And this\u00a0\nwas the one which was cheapest only 200. \n\u00a0 So, if I am the ISP, then I will give the\u00a0\nminimum here on the bottom, I will make\u00a0\u00a0 this minimum to satisfy the 2 "
+    },
+    "96eae071-bf8d-4490-a67a-53ae695c6f0d": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "Mbps guarantee,\u00a0\nand no more and try to maximize in some sense\u00a0\u00a0 how much flow between A and C because that\u00a0\ntraffic will actually earn me more revenue. \n\u00a0 So, you can feed this of course to simplex.\u00a0\nAnd simplex will give you values for all these\u00a0\u00a0 variab"
+    },
+    "d45856a8-aec8-418b-9aad-1799f31edc7c": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "les. So, if you look at this variable, it\u00a0\nsays that along the short route, I am getting 0,\u00a0\u00a0 along the slow route of getting 7. Then\u00a0\nalong the short route I am getting 1.5,\u00a0\u00a0 along the long route among again\u00a0\ngetting 1.5. But so now this is all.\u00a0\u00a0 So, wh"
+    },
+    "b869a208-f78b-4301-9e4d-4593e8bc4655": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "at this is really saying is that total,\u00a0\nthe total from A to B is 7, the total from B\u00a0\u00a0 to C is 3, the total from A to C is 5. \nSo, even though A to C gives the maximum revenue,\u00a0\u00a0 it turns out, it is better to get because of\u00a0\nthe constraints that there in "
+    },
+    "f71c87c6-2b18-4400-8f08-e48d49471bb5": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "the network is\u00a0\u00a0 better to actually give more from A to B. And as\u00a0\nwe saw them, least revenue comes from B to C. So,\u00a0\u00a0 it is not surprising that this is the least amount\u00a0\nof allocation that this solution gives us. Now,\u00a0\u00a0 one thing that we observed in an ea"
+    },
+    "100ca5b6-5abd-4550-88ff-537c8a336a98": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "rlier problem\u00a0\nwas that we had fractional solution. Now, here it\u00a0\u00a0 is not. It is not like hiring one person or making\u00a0\none carpet or something which is indivisible. \n\u00a0 We can give half a bandwidth half a megabit\u00a0\nof bandwidth, so it is not a problem.\u00a0\u00a0 Fac"
+    },
+    "da523cb2-3375-4378-bbe2-5e2c28e43adf": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "tional solutions are okay. And if\u00a0\nyou look at this, it will turn out\u00a0\u00a0 that everything is saturated except this\u00a0\nedge. So, if you examine that solution,\u00a0\u00a0 but the problem with this approach mean, setting\u00a0\nup this problem as a linear program is that\u00a0\u00a0 it d"
+    },
+    "9d2ece47-ff5c-4896-969c-c295d3307bec": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "oes not scale well. And the reason it does\u00a0\nnot scale well is basically we have created\u00a0\u00a0 one variable for every possible\u00a0\nroute between the two nodes. \n\u00a0 So, we have in this case, a kind of triangular\u00a0\nnetwork in which there were two possible nodes,\u00a0\u00a0 rou"
+    },
+    "28e6cf2f-ceb6-4892-ad90-88c7948fa64d": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "tes, but imagine that if I had one more\u00a0\nway of a triangle here then I would have so\u00a0\u00a0 many more routes. I would have this route I\u00a0\nwould have this route I would have this route\u00a0\u00a0 and so on. So, the number of routes between\u00a0\npairs of nodes would explode. A"
+    },
+    "55026603-9f0e-4e26-8076-e7900a12f81f": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "nd in general,\u00a0\u00a0 the number of paths in a\u00a0\ngraph, paths are remembered,\u00a0\u00a0 where you do not even repeat a vertex. \nBut the number of paths in general is going to\u00a0\u00a0 be exponential. So, if you are setting up a linear\u00a0\nprogram, in which you construct one varia"
+    },
+    "8443f133-5664-4600-9e29-17ffa283a46f": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "ble per\u00a0\u00a0 path, then the linear program is going to be very\u00a0\nlarge compared to the graph that you started with.\u00a0\u00a0 So, this is not a good strategy actually, to model\u00a0\nsuch programs, such problems and what we will do\u00a0\u00a0 is we will actually look at a better ap"
+    },
+    "27302694-da25-4e9f-beab-ed0c6a2857ad": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "proach. \nSo, we will look at something which actually\u00a0\u00a0 solves these so-called network flows more\u00a0\neffectively. So, these are called network flows.\u00a0\u00a0 So, we have a network and flow\u00a0\nin this case is literal, I mean,\u00a0\u00a0 we want to flow some internet practical"
+    },
+    "94bab495-d15f-40f5-abfd-cc4a2028f99a": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "ly it\u00a0\ncould be pipe and we will see other examples\u00a0\u00a0 of things which do not obviously look like network\u00a0\nflow, but which can be modelled using flows. \n\u00a0 So, what we have seen is we have seen one\u00a0\ngeneral technique to solve optimization problems\u00a0\u00a0 called l"
+    },
+    "554dc2f6-8ece-41e1-9740-a8d5f35c53a7": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "inear programming, and we have seen some\u00a0\nexamples. So, we saw one example involving making\u00a0\u00a0 sweets and making an optimum combination of\u00a0\nsweets, we saw another thing about scheduling\u00a0\u00a0 production of carpets, and here we saw a problem\u00a0\nwhere we wanted to "
+    },
+    "1251ba55-a060-46fa-878a-9ec221046752": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "allocate flow in a graph. \n\u00a0 So, what we will see now, after this is that we\u00a0\ncan actually solve these problems using flows\u00a0\u00a0 in the graph more directly using the graph itself\u00a0\nrather than converting it to linear programming.\u00a0\u00a0 And then that in turn networ"
+    },
+    "f3527892-9e2a-4688-a38c-fcee79d6443f": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "k flows will also turn\u00a0\nout to be a generic problem-solving technique,\u00a0\u00a0 which we will apply to a number of problems. So,\u00a0\nthis is a very, so these two classes of problems.\u00a0\u00a0 So, we are not really studying in some sense,\u00a0\nhow to solve them so much as how t"
+    },
+    "a4fc4753-65fa-4428-9b57-bef4b0e3b254": {
+        "content_id": 75,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Bandwidth Allocation",
+        "week": 11,
+        "chunk": "o use them. So,\u00a0\u00a0 that will be the focus of what we are doing, how\u00a0\nto use these two powerful techniques to solve\u00a0\u00a0 other algorithmic problems which can be\u00a0\nmodelled in terms of these two tools."
+    }
+}

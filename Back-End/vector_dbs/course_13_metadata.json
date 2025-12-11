@@ -1,0 +1,1024 @@
+{
+    "13e498f1-bd51-4dfd-b718-fd710358a5ef": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "So, in the first week we looked at some\u00a0\nmotivation for studying algorithms.\u00a0\u00a0 And then towards the end, we looked at one\u00a0\nspecific problem regarding SIM cards and Aadhaar\u00a0\u00a0 cards, where we showed that doing the clever\u00a0\nthing can save you an enormous amoun"
+    },
+    "211cb618-ae4a-405a-ada5-36a1b83a0f01": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "t of time.\u00a0\u00a0 So, this is the design of an efficient algorithm;\u00a0\nbut we also need to analyze these algorithms.\u00a0\u00a0 So, let us spend a little bit of time trying to\u00a0\nunderstand what analysis of an algorithm means.\n\u00a0 So, essentially, we are trying to compute the"
+    },
+    "1d542c5e-3b79-4f4a-bdf3-bbcffce624aa": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "\u00a0\nperformance or the expected performance of an\u00a0\u00a0 algorithm. So, remember, this problem where we\u00a0\nwere trying to validate whether the other entries\u00a0\u00a0 in SIM cards were actually valid with respect to\u00a0\nthe other database. So, the Naive approach was\u00a0\u00a0 to comp"
+    },
+    "caee2105-7b62-41cf-8c9f-a2dd6f66d67b": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "are each SIM card along with every other\u00a0\nAadhaar card; so, have a nested loop for every\u00a0\u00a0 SIM card, check whether the Aadhaar card appears\u00a0\nin the other database. And this would be something\u00a0\u00a0 which we roughly said will take n squared\u00a0\ntime, if n is the n"
+    },
+    "431e10b7-3ad4-474e-9f37-abc55d283b02": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "umber of Aadhaar cards. \n\u00a0 So, we said that typically we assumed a realistic\u00a0\ncase where we had 1 billion; we actually have more\u00a0\u00a0 than that more than 100 crore, Aadhaar cards in\u00a0\nIndia. But, 100 crore Aadhaar cards and a similar\u00a0\u00a0 number of SIM cards, we "
+    },
+    "756c2ab0-b475-4ba4-b07d-2c8433a47863": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "said if we actually\u00a0\ntried this Naive approach to take us several\u00a0\u00a0 1000 years. On the other hand, if we were able to\u00a0\narrange the Aadhaar cards so that they were in,\u00a0\u00a0 say, ascending order; then we saw this clever\u00a0\nstrategy, where we keep checking the mid"
+    },
+    "b61967ad-1a85-406c-951e-95d461c0ce6a": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "point\u00a0\u00a0 and reducing the search space that we\u00a0\nneeded to look for the SIM card value\u00a0\u00a0 by half each time. And then we cut it down to a\u00a0\nsignificantly smaller amount of a few minutes.\n\u00a0 So, this was a kind of informal analysis\u00a0\nthat we did. So how do we for"
+    },
+    "8fa479a1-0b0c-4b79-8a97-7f540fb47273": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "malize this?\u00a0\u00a0 So first of all, what are we interested in when\u00a0\nwe are computing the performance of an algorithm?\u00a0\u00a0 The obvious thing is time? This is what we were\u00a0\ntalking about when we were looking at the Aadhaar\u00a0\u00a0 card and SIM card example. How long doe"
+    },
+    "4bc30112-14fc-4ce3-bcb4-f644e8cbbc4f": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "s the\u00a0\nalgorithm actually take to run? A less obvious\u00a0\u00a0 thing is space. How much memory do we need to\u00a0\nstore all the values that the algorithm computes\u00a0\u00a0 on its way to computing the final answer?\u00a0\nSo, time of course, depends to some extent,\u00a0\u00a0 on what we ar"
+    },
+    "03d1b677-e2af-42bc-8cc6-107e5c61bf06": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "e running the process on.\nSo, I had claimed that Python takes can compute\u00a0\u00a0 10 to the power 7 operations per second; and I did\u00a0\nnot qualify on what machine I was talking about.\u00a0\u00a0 Well, it turns out that hardware is such that\u00a0\nover the last 10 or 15 years, "
+    },
+    "020e1f34-0e1f-4a00-a3a9-f1222c889e69": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "there has not been\u00a0\u00a0 really much dramatic speed up in terms of the\u00a0\nprocessing power of the CPUs that we have in our.\u00a0\u00a0 You know, in the laptop or the desktop that we\u00a0\nare using at home, they are all pretty much the\u00a0\u00a0 same. So, this 10 to the power 7 appli"
+    },
+    "cdb888f2-c001-4f10-bc9c-3d2b9c836d94": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "es in\u00a0\nall of these. And if you remember, we ran the\u00a0\u00a0 experiments to show that it takes 10 to the power\u00a0\n7 on Google's co lab, which is on the cloud.\n\u00a0 So, if you are running on a normal machine,\u00a0\nyou can assume that. So basically, you are\u00a0\u00a0 running your "
+    },
+    "6a68f2c6-a9fa-4c3c-9f15-91dd52cce72a": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "stuff on some computer,\u00a0\nand it is very hard to change\u00a0\u00a0 the configuration of that computer. Of\u00a0\ncourse, you could buy a faster machine.\u00a0\u00a0 But we will see that changing to a faster\u00a0\nmachine that is even 10 times as fast will\u00a0\u00a0 only have a limited impact. S"
+    },
+    "91d6efb1-beda-43f5-ac94-f18c9c76e893": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "o, if you\u00a0\nhave something which is inherently long\u00a0\u00a0 to compute, it is not helped much to change the\u00a0\nhardware. So, you really have to look at something\u00a0\u00a0 which is efficient, independent of the hardware;\u00a0\nand that is how we will compute our time.\n\u00a0 Now, st"
+    },
+    "68c23761-b458-4b3a-9fa2-cb03eaa58698": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "orage in a sense is a little\u00a0\neasier to modify, because we can\u00a0\u00a0 more easily typically add additional memory to\u00a0\nour laptops, then we can add power to our CPUs.\u00a0\u00a0 So, in essence, storage is easier to augment,\u00a0\nand so partly for this reason and partly;\u00a0\u00a0 be"
+    },
+    "74699d6c-786c-4710-b31e-e1a377185de6": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "cause storage comes with a lot of other issues,\u00a0\nwhich are not easy to assess. We will focus\u00a0\u00a0 when we talk about performance more on the time\u00a0\nrather than the space aspect of the algorithm.\n\u00a0 So, clearly the time that an algorithm takes is\u00a0\nnot invariant;"
+    },
+    "6e3676a5-10c8-48b9-baac-9b96b57d3458": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " it is not that every time I run\u00a0\u00a0 the algorithm, it will take the same amount of\u00a0\ntime. And the most obvious dependence that this\u00a0\u00a0 running time has is on the input size. So, say\u00a0\nfor example, I am trying to rearrange a list\u00a0\u00a0 or an array in sorting order"
+    },
+    "ca02c54e-e5ce-4370-a4eb-d89f692e9cd6": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " in ascending\u00a0\norder. Obviously, the larger the list is,\u00a0\u00a0 the more elements that I have, the longer it\u00a0\nis going to take me to to arrange them. \n\u00a0 Similarly, if I am searching for a value, the\u00a0\nlarger the list, the longer it will take me find\u00a0\u00a0 the value."
+    },
+    "80f2b34b-88a8-4bf7-901a-64ea461432dc": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " So, input size clearly determines the\u00a0\nperformance of the algorithm. So, what we have to\u00a0\u00a0 do is talk about how this algorithm actually\u00a0\nbehaves as a function of the input size.\n\u00a0 If I, if I double the input size, what will\u00a0\nhappen to the time will it dou"
+    },
+    "59d5243d-14b4-4ee8-ae4f-3034f6a25c43": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ble? Will it\u00a0\u00a0 go up by a factor of 4? Will it go up by a factor\u00a0\nof 400? So, we talked about the time for an input\u00a0\u00a0 of size n t of n; so we think of it as a function.\u00a0\nA function which takes the input size as an input,\u00a0\u00a0 and produces an estimate of the\u00a0\n"
+    },
+    "d9069ea5-2d51-4b95-b533-d517b76a005c": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "running time as the output. \n\u00a0 Now, even when we fix n input size, it is not\u00a0\nclear that all inputs of the same size are equally\u00a0\u00a0 hard to process. For instance, if I am rearranging\u00a0\na table in ascending order or a list in ascending\u00a0\u00a0 order, and it is alre"
+    },
+    "f3a60d7e-ac95-41b2-8555-447ca7ab2ddb": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ady in ascending order;\u00a0\nthen clearly, I do not have to do much work.\n\u00a0 So, maybe I can just do one scan to verify that\u00a0\nit is in ascending order and say nothing needs\u00a0\u00a0 to be done. Or maybe I searching for a value\u00a0\nsometimes you might find the value very "
+    },
+    "fcc23b52-9561-4a42-84fd-59ac1dbee402": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "fast;\u00a0\u00a0 it might be the first position that will\u00a0\nlook in the list that has that value.\u00a0\u00a0 So, clearly, there is going to be a lot of\u00a0\nvariation even for the same input size. So,\u00a0\u00a0 we will have to come back to this a little later\u00a0\nand argue about what input"
+    },
+    "13f37e22-7ab1-4c12-9d8a-88ff2364ef2a": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " we are looking at. You\u00a0\u00a0 know which input of size n are we looking at,\u00a0\nor which inputs of size n are we looking at.\n\u00a0 So, with this minimal background, we will come\u00a0\nback and address these points more formally;\u00a0\u00a0 let us go back to our SIM card-Aadhaar ca"
+    },
+    "ad333b03-a987-45b5-8fbb-51a39d066e2a": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "rd\u00a0\nexample. So, there we said that n the input size\u00a0\u00a0 was roughly 10 to the 9, which is 1 billion or\u00a0\n100 crores; and this is related to the population\u00a0\u00a0 of India. So, roughly everybody has an Aadhaar\u00a0\ncard, and the number of SIM cards is equal to\u00a0\u00a0 the p"
+    },
+    "79a41086-7a55-4434-9552-d0d31a68279f": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "opulation; not because everyone has a SIM\u00a0\ncard, but because as we said, there are multiple\u00a0\u00a0 SIM cards with some people. So, we said that the\u00a0\nNaive algorithm, if we look at it as a function of\u00a0\u00a0 n takes time proportional to n squared; because we\u00a0\nhad the"
+    },
+    "b15ac0a1-d512-452b-9435-fddeeef46fa8": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "se two nested loops, where you had an outer\u00a0\u00a0 loop, which goes cycles through n SIM cards. \nAnd for each of the n SIM cards, you will cycle\u00a0\u00a0 through the n Aadhaar numbers to look for the\u00a0\ncorrect match; so, n times n, n squared. So,\u00a0\u00a0 that is how we got t"
+    },
+    "c65c4952-e20f-476e-848c-fb59e790c925": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "hat n squared. And when we\u00a0\ngave this clever algorithm, which would have the\u00a0\u00a0 interval to search, and if you think about that\u00a0\nhaving process; basically, takes an interval of\u00a0\u00a0 linked then, and then it keeps dividing it until\u00a0\nit comes down to an interval"
+    },
+    "d3f98f20-433f-4ab0-a2ca-09f5d7a6fdef": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " of size 1. So,\u00a0\u00a0 we start with n, we divide by 2, we divide by 2,\u00a0\nwe divide by 2, and we come down to 1. So, if you\u00a0\u00a0 reverse the process, we start with one we multiply\u00a0\nby 2, we multiply by 2, and we reach end.\n\u00a0 So, basically 2 to that many multiplicat"
+    },
+    "47709e2a-ef33-432f-9b8c-015cb8e134c3": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ions is\u00a0\nn, so two to the power k is n. So, the number\u00a0\u00a0 of times we have to divide n by 2 to reach 1,\u00a0\nis the same as the number of times you have to\u00a0\u00a0 multiply 1 by 2 to reach n. So, it is that power,\u00a0\n2 to the power k is n, so this is the log. So,\u00a0\u00a0 the"
+    },
+    "feecad9b-c082-40b4-bf0f-b2a8f5e1723d": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " log to the base 2 of n is how many times I\u00a0\nhave to probe or look into that Aadhaar card list,\u00a0\u00a0 for each SIM card. There are n SIM cards, so\u00a0\nn times log of n. So, we will typically write\u00a0\u00a0 just log, we will not use this 2; but for the\u00a0\nmoment, we will u"
+    },
+    "422a2454-a2b4-4ab2-a2a2-ab4fd68afde8": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "se to emphasize that we are\u00a0\u00a0 dividing by 2. But usually, if we do not write\u00a0\nthe base of the log, you can assume it is 2.\n \n\u00a0 So, now this Aadhaar card example is not the only\u00a0\ncase where one can get a dramatic improvement;\u00a0\u00a0 which makes a difference betw"
+    },
+    "d2f65250-aa37-4fd3-99f3-2a41d2ab8ce1": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "een something\u00a0\nbeing practical and something being wildly\u00a0\u00a0 unusable. So, let us imagine a hypothetical\u00a0\nvideo game; so, in a video game, there are\u00a0\u00a0 usually several items on the screen. \nSo, let us assume this is one of those\u00a0\u00a0 games where there are space"
+    },
+    "c2ac323f-364b-4dd0-afd6-3398af3aa87d": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ships and aliens\u00a0\nand, and whatever obstacles flying around. And\u00a0\u00a0 these are being tracked by you the game player\u00a0\nand of course by the game designer, because\u00a0\u00a0 the game designer also has to keep updating\u00a0\nthe screen every time something happens.\n\u00a0 So, let"
+    },
+    "4c916b7e-8be4-4782-8cfb-e620fa6e4b87": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " us assume that one of the\u00a0\nbasic things that the game designer\u00a0\u00a0 needs to do is to calculate among all the\u00a0\nobjects which are currently on the screen,\u00a0\u00a0 which two are closest to each other. So, it could\u00a0\nbe that for instance, it is trying to calculate\u00a0\u00a0 s"
+    },
+    "33aa5e41-1f2c-4128-8d41-8b66fc4b54a1": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "omething about some hostile piece, which is\u00a0\ngoing to attack some other piece, and so on. \n\u00a0 So, this is a basic step, say we want to\u00a0\ncalculate the closest pair of objects. So,\u00a0\u00a0 we have a large number of objects on the screen.\u00a0\nAnd at every instant that "
+    },
+    "807f218b-a348-4b6d-8961-c0fd51ccc6b8": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "the game progresses,\u00a0\u00a0 we need to keep track of each pair of objects\u00a0\nis the closest to each other. So, let us assume\u00a0\u00a0 that now the number of objects is our input; so,\u00a0\nwe have n objects, and we want to find out which\u00a0\u00a0 pair among these n are closest to e"
+    },
+    "671f4609-3a6c-4d44-a47d-7b47197c38b9": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ach other.\nSo, how would you do this naively? You will take\u00a0\u00a0 each object and measure the distance from that\u00a0\nobject to every one of the n minus 1 objects on\u00a0\u00a0 the screen. So, will have to compare n objects\u00a0\nto n minus one objects. So, of course, you can\u00a0\u00a0"
+    },
+    "b7f127da-b095-4e2d-b8f3-5dc32000a687": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " divide by 2 because you do not have to compare\u00a0\nit in both directions; but still, it is roughly\u00a0\u00a0 n into n minus 1 by 2, which is n squared. \nSo, if we want to compute all pairwise distances,\u00a0\u00a0 and then determine the minimum one; then\u00a0\nwe have to actually"
+    },
+    "6baf9341-1928-4cf0-9c95-579e6ce8660a": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " do n squared work.\u00a0\u00a0 Now, just like we saw in the earlier example,\u00a0\nyou can actually replace this brute force or\u00a0\u00a0 Naive n squared by an n log n; there is actually\u00a0\nan n log n algorithm for this problem also.\n\u00a0 So, what would the impact of\u00a0\nthis improveme"
+    },
+    "0cdbf5be-b6cd-4f48-ba35-27c008468d12": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "nt be in this case?\u00a0\u00a0 So, let us assume that we are working on some\u00a0\nstandard hardware. So, if you look at a typical\u00a0\u00a0 laptop, the type of laptop that you have at\u00a0\nhome; it will have maybe 1500 to 2000 pixels\u00a0\u00a0 horizontally and about 1000 pixels vertically"
+    },
+    "94cdce5f-7208-4fe4-8b8c-1d00aadfdf07": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": ".\u00a0\nBut, if you are really playing on some fancy\u00a0\u00a0 gaming console, you might have a large number\u00a0\nof pixels like 4000 this way and 2000 this way;\u00a0\u00a0 so that is about 8 million pixels. So, at the\u00a0\nmoment, we are not particularly concerned about\u00a0\u00a0 the pixels e"
+    },
+    "b8d2c211-b5dc-49e1-8082-4c398643a487": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "xcept that the more pixels you have,\u00a0\nthe more objects you can have on the screen.\n\u00a0 So, let us assume that this game designer has\u00a0\nactually programmed this game; so that there can\u00a0\u00a0 be at any given time up to one lakh, one hundred\u00a0\nthousand, 10 to the pow"
+    },
+    "9bf79c16-414c-487f-bfdc-33f5c5f5ed22": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "er 5 objects on the screen.\u00a0\u00a0 Now, if we do our naive algorithm for computing\u00a0\nwhich pairs are closest to each other,\u00a0\u00a0 then we are going to take roughly 10 to the\u00a0\n5 times 10 to the 5, which is 10 to the 10\u00a0\u00a0 steps in order to make this update, to compute"
+    },
+    "2412742b-79af-4646-aa30-1f6a22e9efb4": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "\u00a0\nwhich pair is closest to each other. And if\u00a0\u00a0 you do a simple calculation based on our earlier\u00a0\nestimate of how fast Python is, this will take us\u00a0\u00a0 1000 seconds; so, 1000 seconds is 16 minutes.\nSo, this means that if this is part of the game,\u00a0\u00a0 that is e"
+    },
+    "84ea9001-fe59-435c-8b88-29bb57aa552d": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "very time you make a you move your\u00a0\njoystick or whatever, you move your cursor or you\u00a0\u00a0 shoot something; this has to take 16 minutes to\u00a0\nrecalculate the state of the screen. Obviously,\u00a0\u00a0 this game is not going to be very exciting\u00a0\nto play. Now, you might t"
+    },
+    "b2de8e59-9647-4665-b799-f325c7212fc7": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "hink okay,\u00a0\u00a0 I would not do this in Python; I would do\u00a0\nit in c plus plus use a faster language. So,\u00a0\u00a0 it is C plus plus is about 10 times as fast as\u00a0\nPython; so what will happen in c plus plus is\u00a0\u00a0 this will become 1.67 minutes, so a minute is a\u00a0\nlong tim"
+    },
+    "2efd127a-ec14-47b5-b337-b09e3e63771a": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "e. So, after you make a move, if it is\u00a0\u00a0 going to take hundred seconds for it to update,\u00a0\nit is not going to be an effective game.\n\u00a0 So, this is why an n squared algorithm will be\u00a0\ntotally useless in this scenario. Because the\u00a0\u00a0 response time as a user of "
+    },
+    "0c8569b7-e46e-4001-8cbe-69b15c5ca8af": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "the system, you expect\u00a0\na response time will be almost instantaneous; so,\u00a0\u00a0 that you can play it in real time. You cannot\u00a0\nmake a move and then think about go back and sit\u00a0\u00a0 for half a minute or one minute, and then come\u00a0\nback and make another move. And wh"
+    },
+    "499867f9-2ec0-428b-bcc2-15c503a46b0a": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "at happens if\u00a0\u00a0 we use this n log n thing? What is log of one\u00a0\nhundred thousand? Well, 2 to the power of 10 is\u00a0\u00a0 roughly 1000, because it is 1024. And 2 to the\u00a0\npower 20 is 10 to the power 6, because it s 1000\u00a0\u00a0 times 1000; this is 10 to the power 5.\nSo, y"
+    },
+    "dfd228b2-6627-4ec5-95ce-ac6f09ae3771": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ou can make a kind of if you take this,\u00a0\u00a0 then 2 to the power 19 will be roughly five\u00a0\nlakhs; it is 512,000 and this is hundred\u00a0\u00a0 thousand. So, it is going to be something\u00a0\nsimilar to 1718, certainly less than 20;\u00a0\u00a0 so, log of one lakh is less than 20. So,"
+    },
+    "a4663332-27bd-497e-92f8-e90b4996c836": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " we\u00a0\nhave now 20 times n is 10 to the 5, which is\u00a0\u00a0 something like 2 into 10 to the power 6. \nSo, 10 to the power 6 is one tenth of 10 to the\u00a0\u00a0 power 7. So even in Python, this will take only\u00a0\npoint two seconds; and if you are using a faster\u00a0\u00a0 language lik"
+    },
+    "170c13b4-d030-47d2-9360-70b933cddde7": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "e c plus plus will take point 02\u00a0\nseconds. So, it will really be almost within your\u00a0\u00a0 is certainly faster than our human reaction time,\u00a0\nwhich is typically closer to point one second.\n\u00a0 So therefore, this will now be almost like any\u00a0\nmove you make, the wor"
+    },
+    "f4f94157-75ca-446e-a4f8-5e87d7e1a1bb": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ld changes instantly.\u00a0\u00a0 So, this is just another illustration as to\u00a0\nwhy designing an algorithm which goes from n\u00a0\u00a0 squared to n log n, can make a huge impact on\u00a0\nhow useful that algorithm is in practice.\n\u00a0 So, now let us get back to the more\u00a0\ntechnical as"
+    },
+    "7c34de37-6365-4418-bd1d-483c9d8bb4ee": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "pect, which is how do we actually\u00a0\u00a0 evaluate and compare these different algorithms\u00a0\nformally. So, we cannot just wave our hands and\u00a0\u00a0 say, this looks like n squared that looks\u00a0\nlike n log n and so on; we need a way to\u00a0\u00a0 actually compute this and compare t"
+    },
+    "fd844669-ff59-4473-9d01-4d500870169e": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "his. \nSo, the first thing is that we will always be\u00a0\u00a0 interested in comparing these functions. Remember,\u00a0\nt of n is the time taken for an input of size n;\u00a0\u00a0 but we will be interested on t of n up to some\u00a0\norder of magnitude. In other words, we will ignore\u00a0"
+    },
+    "6f3a15b5-5f78-42f1-a61f-38c17974cd1f": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "\u00a0 what are called constant factors. So, for\u00a0\ninstance, if you look at something like n cubed,\u00a0\u00a0 and look at n squared, it seems obvious\u00a0\nthat n cubed is bigger than n squared.\n\u00a0 But what if I stick a 5000 in front of n\u00a0\nsquared? Then is n cubed bigger than"
+    },
+    "2b7f3113-7773-4a79-9037-1f9f1fe0d00e": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " n squared?\u00a0\u00a0 In some sense, it is still bigger; because even\u00a0\nthough for small n, 5000 n squared will be more\u00a0\u00a0 than n cubed. So, supposing I take n is equal to\u00a0\n8, for example; on one side, I will write 8 cube\u00a0\u00a0 and here I will get 5000 times 8 squared. "
+    },
+    "66ba7dfd-43dc-4696-a9ca-66b1dbe27312": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "So,\u00a0\nit is clear that in this situation for a small\u00a0\u00a0 value of n, and 5000 n squared is not as good as\u00a0\nn cube. But we are not interested really in these\u00a0\u00a0 inputs of size 8 and 10, and so on. We really\u00a0\nwant to know what happens because our algorithm\u00a0\u00a0 is "
+    },
+    "28b468a1-07c7-45a4-a9d8-c1429f95d926": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "going to run on arbitrarily large inputs.\nSo, we are really looking at what is called the\u00a0\u00a0 asymptotic complexity; as n becomes\u00a0\nlarge, which of these two algorithms\u00a0\u00a0 is going to be better, which of these\u00a0\ntwo functions is going to go faster.\u00a0\u00a0 So, here y"
+    },
+    "48d98c4b-bffa-4553-afd2-9a905949bdeb": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ou can check that once I reach 5000, on\u00a0\nthe right side, I have 5000 times 5000 squared and\u00a0\u00a0 on the squared; and on the left-hand side, I have\u00a0\n5000 cube. And now if I go beyond that like 6000,\u00a0\u00a0 I will have 6000 cube; and here I'll have 5000,\u00a0\nwhich is a"
+    },
+    "c0fad304-322e-4864-862b-1023bb77b0d7": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " fixed constant times 6000 squared.\u00a0\u00a0 So, once I cross 5000, the function on the\u00a0\nright-hand side 5000 n squared is going to go\u00a0\u00a0 below n cubed and stay below n cubed; so, this is\u00a0\nthe kind of comparison that we want to make. \n\u00a0 So, we are interested in th"
+    },
+    "3697864a-6488-4c33-987f-4fb420b46f66": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "is t of n\u00a0\u00a0 in different forms or shapes; so, we have seen\u00a0\nthis logarithmic form. So, logarithmic complexity\u00a0\u00a0 comes for instance, when we are doing this half\u00a0\ninterval searching what is called binary search.\u00a0\u00a0 When we keep dividing by 2 the size that\u00a0\nwe"
+    },
+    "db623ede-ee43-4aeb-bacd-b21190064aff": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " are searching in; then in login steps,\u00a0\u00a0 we reduce our search interval to one point,\u00a0\nand then we have found it or not found it.\u00a0\u00a0 So, that is something which is logarithmic.\u00a0\nNow, we already saw examples of polynomials;\u00a0\u00a0 we have seen n squared algorithm"
+    },
+    "a6e88577-1baf-4779-bf41-37c3470d2bdf": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "s, these two\u00a0\nnested loops. You can have three nested loops;\u00a0\u00a0 you will get n cubed and so on. So, these are all\u00a0\ncalled polynomials, you could have exponential\u00a0\u00a0 something which takes 2 to the power n.\nSo, 2 to the power n is the number of subsets\u00a0\u00a0 of n "
+    },
+    "fa1e6dae-c46b-4995-b832-ead31d3e9249": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "elements. So, imagine that you have a\u00a0\nsituation, where you have a large number of\u00a0\u00a0 objects of different shapes and sizes; and you\u00a0\nwant to fit them into a loading load them into\u00a0\u00a0 a delivery truck. Now, you want to find out\u00a0\nwhich subset of objects will "
+    },
+    "3210ee1d-5134-4c5a-a43c-9e9fcb55c4c3": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "fit this truck\u00a0\u00a0 most effectively, so that you minimize the\u00a0\nnumber of trips that you make on the truck. \n\u00a0 So, the Naive solution would be to try every\u00a0\nsubset; and once you pick a subset, you will try\u00a0\u00a0 to fit it in as well as possible. And finally,\u00a0\nyou"
+    },
+    "68ee1e7d-932e-493d-9073-8ea35ff75d23": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " among all the subsets that you examine,\u00a0\u00a0 you find the one which leaves the least empty\u00a0\nspace in the truck and you choose that one.\u00a0\u00a0 So, this would be something\u00a0\nto take 2 to the power n.\n \n\u00a0 So, now we can tabulate these different functions,\u00a0\nand try t"
+    },
+    "42dd28aa-1e81-4235-902c-43b1be1b2ac9": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "o see how much time a typical input\u00a0\u00a0 will take in terms of number of steps as a\u00a0\nfunction of n. So here, on the left-hand side,\u00a0\u00a0 we have a column, which is the input size which\u00a0\nis growing in multiples of 10. So, we start with\u00a0\u00a0 input of size 10, which i"
+    },
+    "eb03e9de-b521-4f65-9ce1-b04b2676a459": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "s a very small input;\u00a0\nand we go all the way up to 10 to the power 10,\u00a0\u00a0 which is 10 billion, or one hundred crores.\u00a0\nIt is in a powers of 10, we increase the\u00a0\u00a0 input and then we see what happens; so the\u00a0\ncolumns correspond to different functions,\u00a0\u00a0 so, th"
+    },
+    "93650e8d-2f12-4a4f-b41c-554229444939": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "is is our logarithmic function. This is a\u00a0\npolynomial with degree one is a linear function,\u00a0\u00a0 this is n squared and cubed and so on. \nIn between n and n squared, we have n log n.\u00a0\u00a0 This is what we saw when we talked about the SIM\u00a0\ncard-Aadhaar card algorit"
+    },
+    "24c9e437-216d-4f8a-a617-add4fa05cbde": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "hm; or that video game\u00a0\u00a0 algorithm, which we claimed had an efficient n\u00a0\nlog n algorithm. And then I described to you a\u00a0\u00a0 situation, where 2 to the n might make sense, if\u00a0\nyou are trying out all possible subsets of some\u00a0\u00a0 set-in order to determine which is"
+    },
+    "7d400400-936f-4701-9650-76606d487e1d": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " the best one.\u00a0\nAnd if you are trying out all possible subsets,\u00a0\u00a0 but up to rearrangement; supposing you\u00a0\nare looking for all possible permutations,\u00a0\u00a0 which do something and which one is best. Then you\u00a0\nmight end up with something which is proportional\u00a0\u00a0 t"
+    },
+    "1e06f1b0-abf5-4fd7-9e6e-847966025cd4": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "o N factorial, because there are n factorial ways\u00a0\nof arranging n objects in different sequences.\n\u00a0 So, we have these different things; and now the\u00a0\nquestion is what happens when say n is 10. So,\u00a0\u00a0 when n is 10, if you look at the first row here,\u00a0\nthen alr"
+    },
+    "a6a3c4aa-74bc-4ccd-9d62-a502ef510669": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "eady n factorial has become quite large;\u00a0\u00a0 it is already within one tenth of pythons one\u00a0\nsecond limit, all the other values are reasonable.\u00a0\u00a0 But now, if I go to 100 at this point, this\u00a0\nnumber has already gone well beyond anything\u00a0\u00a0 reasonable that we ca"
+    },
+    "77d10cb5-745a-44b6-bce2-8b621c4e0f33": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "n do; 10 to the power 157\u00a0\noperations is going to take forever. Even 2 to\u00a0\u00a0 the power n has now exploded, because remember\u00a0\nthat 2 to the power 100, is going to be 2 times 2\u00a0\u00a0 times 200 times; if I just multiply 10 times I get\u00a0\n1000, a and I am going to ke"
+    },
+    "68d5f2aa-2a74-4047-8a4a-682d87ca916e": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ep multiplying it.\n\u00a0 So, I am going to get something like 10 to\u00a0\nthe power 30. So, 10 to the power 30 again,\u00a0\u00a0 if you think about even with a very fast language\u00a0\n10 to the power 8, or 9 or maximum 10 to the power\u00a0\u00a0 10 operations per second, you are going t"
+    },
+    "380bbc61-656d-4290-9070-579bc3295a0b": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "o\u00a0\ndo. You are going to take 10 to the power\u00a0\u00a0 20 seconds in order to get things done;\u00a0\nso this again has become infeasible. \n\u00a0 So, what you can see is that if your complexity\u00a0\nof an algorithm is a large function of n;\u00a0\u00a0 then very small inputs will drive i"
+    },
+    "56564218-0748-4770-bd83-462b52f52c94": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "t to an\u00a0\ninfeasible range, where you cannot execute. You\u00a0\u00a0 cannot take a 2 to the power n algorithm and hope\u00a0\nto even execute it for 100 objects. So, if you are\u00a0\u00a0 shifting house, and you have 100 objects in your\u00a0\nhouse, then you cannot apply this algorithm"
+    },
+    "5cfaf179-0dfb-4327-b204-c0224fa60621": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": ".\n\u00a0 So, what happens now as we go up the line, so we\u00a0\ngo to 1000 at 1000 n cubed is already approaching\u00a0\u00a0 an infeasible limit. So, in Python,\u00a0\nthis will be talking about 100 seconds;\u00a0\u00a0 100 seconds is like 2 minutes. And that is\u00a0\nacceptable in some situatio"
+    },
+    "219a0616-ad0e-4035-8f37-a4157c3c2834": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ns, but not acceptable\u00a0\u00a0 and others like in that video game situation. \nSo, if we go to 10 to the 4, then already n cubed\u00a0\u00a0 is off our list; because 10 to the 12 seconds or\u00a0\n10 to the 12 operations is going to take something\u00a0\u00a0 like 10,000 seconds, that is "
+    },
+    "29d1705c-2fc2-44a1-a976-b29b075f5aad": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "not good. So, now\u00a0\nas we see, at 10 to the power 6 for instance,\u00a0\u00a0 n squared also goes up above any\u00a0\nreasonable limit; and at 10 to the\u00a0\u00a0 power 7, 8, 9 we still can manage with n log n.\nSo, what we see in this thing if you want plot it,\u00a0\u00a0 is you can kind o"
+    },
+    "f9a2bd64-bdee-4788-8458-daf058cb686f": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "f draw a feasibility line. You\u00a0\ncan say that up to here, maybe it's feasible,\u00a0\u00a0 up to here is feasible; anything below this red\u00a0\nline is not feasible. Then when I come here,\u00a0\u00a0 above this is feasible, and I come here above\u00a0\nthis is feasible and so on. And t"
+    },
+    "214bf3c7-8207-4d53-99ab-74412c6b23c9": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "hen maybe here,\u00a0\u00a0 you can say that at this point, this is\u00a0\nsay let us say 10 to the 10 is feasible;\u00a0\u00a0 and then you can say that up to here. So, this\u00a0\nred step staircase tells us that, you can go up to\u00a0\u00a0 very large inputs if your function is up to n log\u00a0\nn."
+    },
+    "a350f6e9-a7d5-41d7-a7c2-630b12e25bca": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " But if it goes to n squared, you are already\u00a0\u00a0 down to inputs of the size, one lakh or less.\nTypically, 10,000 is more like it, because with\u00a0\u00a0 10,000 you can at least hope to do it in a\u00a0\nfew seconds. With one lakh already, you are\u00a0\u00a0 pushing it too; so may"
+    },
+    "c458c180-4647-44e1-a553-0deb8986fb16": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "be we should actually draw\u00a0\nthis line above 10 to the power 10, just to be\u00a0\u00a0 more. So, so what we are saying is that there are\u00a0\ntwo sides to this story. So, the one side of the\u00a0\u00a0 story is estimating how fast your algorithm will\u00a0\nwork; and from that, you ca"
+    },
+    "a115f381-b81b-43a1-a335-f877b1b83679": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "n determine what your\u00a0\u00a0 algorithm can be used for. What type of problems,\u00a0\nwhat sizes of problems, it makes sense to use it.\u00a0\u00a0 Conversely, if you know what size a problem\u00a0\nyou are going to use, then you can determine\u00a0\u00a0 whether you can get away with an inef"
+    },
+    "ad0145b3-2e62-41e1-985c-78749a6e28ef": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ficient\u00a0\nalgorithm or search for a better one.\n\u00a0 So, we still have this problem of measuring\u00a0\nrunning time. So, in this Python example, I\u00a0\u00a0 had defined for you a timer class, which actually\u00a0\nmeasured the running time of the code as it was\u00a0\u00a0 running. But th"
+    },
+    "6dd43aa8-409a-4449-afb1-7ff1e664db00": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "en that does not really help us\u00a0\nmuch, because it is should be independent of the.\u00a0\u00a0 I mean, we should be able to make an independent\u00a0\nassessment of the time, like we have done\u00a0\u00a0 with our other things. Without really having\u00a0\nto physically run it and see ho"
+    },
+    "d851200b-da83-4849-9f23-121902208e20": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "w long it takes\u00a0\u00a0 on a particular input of that size. So, we\u00a0\nwill typically measure this running time in\u00a0\u00a0 terms of what we will arbitrarily call\u00a0\nbasic operations. So, a basic operation\u00a0\u00a0 you can imagine is one line of Python code,\u00a0\nwhich does not involv"
+    },
+    "fa6297d9-338f-4025-8e10-2e1537f92097": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "e calling a function.\n\u00a0 So, what is the basic operation if I write\u00a0\nand if for a while; it says if x less than y,\u00a0\u00a0 or while n less than 100. Then you have to check\u00a0\nthat the current value of x is smaller than the\u00a0\u00a0 current value of y, or check that the cu"
+    },
+    "a45d984e-ece1-44e5-b73a-015a77ac8608": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "rrent\u00a0\nvalue of n is less than 100. So, this comparison\u00a0\u00a0 of two values can be a basic step. Similarly,\u00a0\nif I say assign y equal to x plus three,\u00a0\u00a0 then that is also a basic step; so,\u00a0\nassignment or a comparison is a basic step.\u00a0\u00a0 So, this notion of a basi"
+    },
+    "0982604a-9cbe-4831-b3eb-573012adaa12": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "c step is\u00a0\nsomewhat flexible, because it also\u00a0\u00a0 depends on what language you are looking\u00a0\nat. So, in Python, you would have seen this\u00a0\u00a0 kind of clever way to use pairs or tuples to\u00a0\nexchange; in particular to exchange two values.\n\u00a0 I mean, this is used as "
+    },
+    "db34d295-3b03-4ff9-8e22-96ff257e7818": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "it is essentially a\u00a0\nmultiple assignment, you can say x comma y\u00a0\u00a0 equal to zero comma zero. But in particular,\u00a0\nyou can assign each of them to the other one;\u00a0\u00a0 but in practice, this does not work. So,\u00a0\nyou can imagine that these are values,\u00a0\u00a0 supposing the"
+    },
+    "f3c4b364-deb7-47a2-b757-de5f05fddfa6": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "se values are actually physical\u00a0\nobjects. So, supposing you have two bottles,\u00a0\u00a0 one bottle has got some water and the other bottle\u00a0\nhas got some juice. And you now want to transfer\u00a0\u00a0 the water to the juice bottle and the juice to\u00a0\nthe water bottle; you hav"
+    },
+    "f33b87cc-90a4-4e9b-9a62-ea5c65e13961": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "e enough space to store\u00a0\u00a0 them in the end. But in between, you cannot\u00a0\ndo it without using a third bottle; because,\u00a0\u00a0 if you try to start pouring the water into the\u00a0\njuice, it will get contaminated and vice versa.\n\u00a0 So, you will need a third bottle into wh"
+    },
+    "5c6385b6-b36e-4e04-a4da-ecf33ff0c674": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ich\u00a0\nyou will pour one of the two and then you will\u00a0\u00a0 exchange. So, the same ways, how you would\u00a0\nnormally do this in a standard programming\u00a0\u00a0 language? You will create a new temporary name\u00a0\ncalled t and you will park the value of x that\u00a0\u00a0 you have now the"
+    },
+    "8d1777a6-7c04-4962-80d5-fd73d37ee468": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "re. So, that when you replace\u00a0\nx by y, because that is what you want to do,\u00a0\u00a0 you want to swap x and y; so, x has to take\u00a0\nthe value of y. When you take the value of y,\u00a0\u00a0 the value of x that you had before is not lost, it\u00a0\nis stored in t. So, then you can "
+    },
+    "bccec848-a2c8-44c5-9a0e-f36a279f6174": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "go to t and copy\u00a0\u00a0 that value back into y. So, in essence this, what\u00a0\nwe look think of as a Python with basic operation\u00a0\u00a0 on the left; takes three steps on the right.\nSo, we do not want to really bother about this.\u00a0\u00a0 So, if we ignore these constants as we "
+    },
+    "cff04af3-94c8-4d2d-b9b6-c934c72ad032": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "said,\u00a0\nwe would do and look at orders of magnitude.\u00a0\u00a0 If something takes three times, another thing it\u00a0\njust could be a way of implementing these basic\u00a0\u00a0 operations. And we do not want to worry\u00a0\ntoo much about having to do this kind of\u00a0\u00a0 low-level accounti"
+    },
+    "feb93508-699e-4968-98e2-04daa53f4ea1": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ng. So, in order to simplify our\u00a0\naccounting, in some sense, we will focus on just\u00a0\u00a0 the statement level execution of programs. \nAnd we will be able to collapse multiple\u00a0\u00a0 statements into one block saying, this block\u00a0\ntakes seven, seven steps. But it will "
+    },
+    "4bb18399-7f8e-4b32-a785-4d484299827f": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "always\u00a0\u00a0 take only seven steps; it will not take steps\u00a0\nproportional to the input. So, we will just\u00a0\u00a0 count it as one block. So, we do not have to be\u00a0\nvery precise about defining the basic operations.\u00a0\u00a0 And this is one motivation for looking at this\u00a0\nrunni"
+    },
+    "2d354bc6-bcb2-4b0f-82fa-d73689a7a378": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ng time in terms of orders of magnitude.\n\u00a0 So, the other thing that we have to be clear\u00a0\nabout is what constitutes the input size.\u00a0\u00a0 So, we said of course that if you are manipulating\u00a0\nlists and arrays; the number of elements in the\u00a0\u00a0 list the size of the "
+    },
+    "71c72c00-af9c-46f7-b8a8-145bf756dcd0": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "list is a natural parameter.\u00a0\nThe larger the list, the more time you are likely\u00a0\u00a0 to take to search or sort or whatever. If we are\u00a0\nrearranging objects, like we were looking at,\u00a0\u00a0 for example, trying to find an optimum collection\u00a0\nof objects to fit in our "
+    },
+    "d02d42f3-deeb-4c76-8481-7f959ddd5116": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "delivery truck;\u00a0\u00a0 then the number of objects would be the\u00a0\nnatural thing. We have seen before and we\u00a0\u00a0 will see in this course also graphs as a very\u00a0\npowerful way of representing relationships.\n\u00a0 And then algorithms on graphs have\u00a0\nto manipulate these grap"
+    },
+    "1757e145-ce9f-4f9b-94b1-fc0552118151": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "hs. So,\u00a0\u00a0 graph as you remember consists of these vertices\u00a0\nand some edges between them. So, there are\u00a0\u00a0 pictures like this, where you have the\u00a0\nnodes or the vertices connected by edges.\u00a0\u00a0 Now, there are two natural parameters,\u00a0\nthere is the number of vert"
+    },
+    "92fa2873-2a27-4457-bb5c-5a772a55cc13": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ices,\u00a0\u00a0 in this case 5; and then you have the number\u00a0\nof edges, which in this case is also 5,\u00a0\u00a0 not 6. So, there are six ages and five\u00a0\nvertices. So, you might think that if\u00a0\u00a0 I fixed the number of vertices, the number of\u00a0\nedges anyway cannot grow beyond a"
+    },
+    "b461abf6-4c60-4acc-963a-6362db56c9bd": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " certain level,\u00a0\u00a0 because every edge has to connect two points.\nAnd so, I only have a fixed number of points,\u00a0\u00a0 the number of edges is bounded by the number\u00a0\nof points squared roughly. But you could have\u00a0\u00a0 graphs in which you have very few edges, and that\u00a0"
+    },
+    "3dd090a6-048d-4a8d-8a08-bcea9c206867": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "\nactually makes a difference. So typically, it will\u00a0\u00a0 turn out that when we are looking at graphs, the\u00a0\ninput size consists of the number of vertices, and\u00a0\u00a0 separately the number of edges. Both of them are\u00a0\nimportant for us, they are separate parameters.\u00a0\u00a0"
+    },
+    "440e86d3-27bd-41f9-a1f3-6b3edc3145c6": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " Another very typical class of problems that we are\u00a0\u00a0 interested in when computing is problems about\u00a0\nnumbers. The most famous such question would be\u00a0\u00a0 to identify whether a number is prime\u00a0\nor not? So given n is n a prime.\n\u00a0 So, how should we measure the "
+    },
+    "ad1085da-2dc1-4054-bf6a-a8762226faf3": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "complexity of an\u00a0\nalgorithm which claims to determine whether n\u00a0\u00a0 is a prime? Should it be something proportional\u00a0\nto the value of n? So, if we say something is\u00a0\u00a0 proportional to the value of n; that means that\u00a0\nif I give you some number like 387, and ask "
+    },
+    "0ad9a4cd-73ff-4fc5-9d40-259e4077d99a": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "you\u00a0\u00a0 whether it's a prime. And then I give you a number\u00a0\nlike 4364, 5; that is not going to be prime, okay,\u00a0\u00a0 4367 and onwards prime. So, this is right going\u00a0\nfrom the top to the next number; so, this is\u00a0\u00a0 more than 10 times. But, do you expect\u00a0\nthat it w"
+    },
+    "8725e665-7fd8-4be5-87f5-080e8727ce76": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ill take 10 times the effort to\u00a0\u00a0 check whether a four-digit number is a prime\u00a0\ncompared to a three-digit number of prime. \n\u00a0 So, this is not typically a case and we know this;\u00a0\nbecause when we do arithmetic, we now work on\u00a0\u00a0 numbers, we know that we do no"
+    },
+    "1da47adc-7cc7-4412-924c-5dadbfd4b844": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "t do this according\u00a0\nto the magnitude, but according to the number of\u00a0\u00a0 digits. So, if I add two numbers like this, then\u00a0\nI will work from right to left; and I will do\u00a0\u00a0 work proportional to the number of digits. So, I\u00a0\nwill say 9 plus 3 is 12, carry the 1"
+    },
+    "a6c478f6-dec7-4333-9ff0-540d534e4086": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " then I will\u00a0\u00a0 say this is 11, carry the one and I will get\u00a0\n112. Now, if I had another digit on the right,\u00a0\u00a0 then I would say 7 5 is 12, carry the one; then\u00a0\n9 plus 3 is 12 plus one carry the one; and I\u00a0\u00a0 will get 1132, so this will be my new number.\nSo, "
+    },
+    "5c1ffa9c-eb7e-4f79-ba6e-8d05c245bb46": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "it did not take me again 10 times the work,\u00a0\u00a0 to go from adding two-digit numbers to adding\u00a0\nthree-digit numbers. It only took me one more\u00a0\u00a0 column of work in terms of moving carries.\u00a0\nSo, addition, subtraction, multiplication,\u00a0\u00a0 division, square roots, an"
+    },
+    "a4b8f2ce-e2fe-4d4f-9c36-21457fd7df70": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ything that you do,\u00a0\nwill typically work based on the length of the\u00a0\u00a0 number as represented in that format, say\u00a0\nin decimal, or in binary, or whatever. \n\u00a0 So, it turns out that we are interested\u00a0\nreally in that representation. So,\u00a0\u00a0 we are really intereste"
+    },
+    "04318a4c-f71f-47ec-be92-a7295d343ae8": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "d in number of digits. So,\u00a0\nwe want to say that as the number of digits grows,\u00a0\u00a0 how does the thing grow? Not the value.\u00a0\nSo, the number of digits close by one,\u00a0\u00a0 the value actually in decimal will multiply by\u00a0\n10. So, we really want it to be proportional\u00a0"
+    },
+    "7c0452ba-da8e-47bb-aa33-6f4292dd1c10": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "\u00a0 to the logarithmic logarithm of the\u00a0\nnumber that is the input size. \n\u00a0 So, now let us get back to the question that we\u00a0\nhad at the beginning, which is that I fixed the\u00a0\u00a0 input size. But now if I look at an input of size\u00a0\nn, there are very many different "
+    },
+    "67bdfca3-88be-42b0-ab19-4e2d09903169": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "inputs of size n,\u00a0\u00a0 and they all behave very differently.\u00a0\nSo, for instance, as I said before,\u00a0\u00a0 if you are searching for an element in an\u00a0\nlist; it could be a very large list. \n\u00a0 But you could just be lucky the value that you\u00a0\nare searching for right is a"
+    },
+    "dce9c2c2-bb43-4717-970c-3279cfcdce17": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "t the beginning of\u00a0\u00a0 the list. Or if you are using that binary\u00a0\nsearch, it could be at the midpoint. So,\u00a0\u00a0 with by just sheer luck on a particularly\u00a0\nlarge input, your algorithm might actually\u00a0\u00a0 execute very fast. So, ideally of course, we\u00a0\ndo not want to "
+    },
+    "29152e32-9511-4df4-8092-cdea1f2876c8": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "look at these extreme cases;\u00a0\u00a0 these extreme good cases in particular, and\u00a0\nbe very optimistic about our algorithm.\n\u00a0 What we would like to know is, if I try out\u00a0\ndifferent inputs, what is going to be the\u00a0\u00a0 typical behavior across the different inputs. So,"
+    },
+    "cacfac64-cc08-4323-8a48-01e96b01c2b7": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "\u00a0\nwe would like some notion of average behavior,\u00a0\u00a0 on an average how does it do? Now, unfortunately,\u00a0\nthis is a tricky problem. So, what is average\u00a0\u00a0 mean? It means that I have to take the time.\u00a0\nIt takes for many different things and then\u00a0\u00a0 you know take "
+    },
+    "84454db8-bfe1-4518-9b8f-46baf85add44": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "the mean; but first, I have to\u00a0\nenumerate these many things. How does it how\u00a0\u00a0 do I generate all the possible graphs that I\u00a0\nwill look for a graph algorithm for instance?\u00a0\u00a0 How will I possibly generate all the possible\u00a0\ndifferent objects of size n with dif"
+    },
+    "b2880775-3c1a-4c84-8c53-899736e1cca4": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ferent\u00a0\u00a0 values for their sizes?\nSo, even just enumerating all these inputs\u00a0\u00a0 before checking how how they do on these inputs\u00a0\nis hard. Secondly, there is a question of whether\u00a0\u00a0 all these inputs are actually equally likely? So,\u00a0\nare you actually going to "
+    },
+    "2d8ea8e7-caa5-49a4-b433-99def4b67eaf": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "look for every possible\u00a0\u00a0 combination of objects of different sizes?\u00a0\nOr are some more typical than others?\u00a0\u00a0 So, then we need a probability\u00a0\ndistribution also. Not only do we need to\u00a0\u00a0 list out all the inputs, we also need to say\u00a0\nwhat is the likelihood o"
+    },
+    "8580fdb9-5581-486e-81a0-e9f22305ccef": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "f each particular thing;\u00a0\u00a0 and then we have to take technically what is\u00a0\ncalled an expectation. We have to multiply\u00a0\u00a0 the probability of each input multiplied by the\u00a0\ntime it takes for that input and add it up.\n\u00a0 So, this is very hard to do, it is almost\u00a0\n"
+    },
+    "a63cf104-8fd6-4526-84b3-16c2c8a070fb": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "impossible; so that is why we cannot,\u00a0\u00a0 in most situations, talk about average case. So,\u00a0\ninstead we go for an easier thing, which is the\u00a0\u00a0 worst case? If we look at the algorithm, we can\u00a0\nsay this algorithm is going to get really stumped\u00a0\u00a0 by this particu"
+    },
+    "e8c19d3f-6302-4866-b94b-8912c463a027": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "lar input, it is going to\u00a0\nhave to spend a lot of time to answer it. \n\u00a0 So, a case in point is when I am searching\u00a0\nfor a value in a list when searching for a\u00a0\u00a0 value in a list, then when do I get stuck? I\u00a0\nget stuck, when it is not there in the list.\u00a0\u00a0 I "
+    },
+    "220eff9a-9190-4231-83d5-d64779621493": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "have to go through the entire process, to find\u00a0\nout whether the value is there or not. So, if I\u00a0\u00a0 am doing a linear scan, you know the one where it\u00a0\nis not sorted, and I go from beginning to end.\n\u00a0 Without looking at every value in the list, I\u00a0\ncannot be s"
+    },
+    "2d448033-85db-48ba-9d5a-da5ad4c5e66e": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ure that it is not there. I cannot just\u00a0\u00a0 look at so supposing some your mother asked you to\u00a0\nsearch for something in the kitchen; and you come\u00a0\u00a0 back and say I looked on three shelves, and it is\u00a0\nnot there, they are not likely to get very far.\u00a0\u00a0 So, you h"
+    },
+    "f8b99779-87b1-487d-bab4-34fd5bf4e719": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ave to convince her that you looked in\u00a0\nevery possible shelf, and it was not there. \n\u00a0 So, if you do not look at exhaustively at\u00a0\nevery elements, and something is not present;\u00a0\u00a0 you will not be able to tell, so this is now a\u00a0\nworst case. You know that this"
+    },
+    "58e0fff9-40c0-4e38-90f6-fb0b8af5bc11": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " algorithm takes\u00a0\u00a0 a maximum amount of time; it must scan every\u00a0\nelement in my list, if the element I'm looking\u00a0\u00a0 for is actually not in my list.\nSo, this is something which we can\u00a0\u00a0 typically extract by looking at how the algorithm\u00a0\nperforms. We can look "
+    },
+    "e9a429ae-4a42-44ae-b8a9-4d9fc91daeaa": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "at the algorithm and say,\u00a0\u00a0 this is a worst case. So, now if we can do\u00a0\nthis worst-case analysis, this gives us some\u00a0\u00a0 idea about how our algorithm does. It says that\u00a0\nthere are situations where it does this badly.\u00a0\u00a0 The problem is this is pessimistic, bec"
+    },
+    "e2a5aa8a-9827-48f2-ab0e-9af2c5a08001": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ause this\u00a0\nworst case may not actually happen many times; so,\u00a0\u00a0 it might be a rare case. But, the good thing about\u00a0\ndoing a worst-case analysis is you can actually\u00a0\u00a0 get a reasonable upper bound, like those n log\u00a0\nn cases. Even if all the SIM cards had inv"
+    },
+    "9d095a69-5553-4751-b698-4bf8a2d582ad": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "alid\u00a0\u00a0 Aadhaar cards; the algorithm that we looked\u00a0\nat there, we claim will take n log n time.\n\u00a0 Because it will take log n time per SIM card to\u00a0\ndetermine that the Aadhaar card Aadhaar number\u00a0\u00a0 is not there in the other database, and we do this\u00a0\nfor n. So"
+    },
+    "68cf2c93-f1f2-4a0c-b94e-ebf4fb94318f": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": ", if you can get a good upper bound for\u00a0\u00a0 the worst case that means that overall, you have\u00a0\na good upper bound. So, that is one reason why we\u00a0\u00a0 are quite interested in worst case analysis.\u00a0\nWhen we are able to prove good upper bounds,\u00a0\u00a0 worst case tells us"
+    },
+    "225b8a39-1a3b-47c7-a482-94c0991a36c8": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " a lot. When we are\u00a0\nnot able to prove good upper bounds,\u00a0\u00a0 worst case may or may not be a realistic\u00a0\nestimate of how good or bad an algorithm is.\u00a0\u00a0 There are many algorithms which have not so good\u00a0\nworst cases, but which work well in practice;\u00a0\u00a0 because t"
+    },
+    "658483ac-9308-4062-a606-9a4580817f81": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "he kind of worst cases where\u00a0\nthey do badly, do not occur very often.\n\u00a0 So, to summarize, there are two important measures\u00a0\nthat parameters that we look at, when we are\u00a0\u00a0 thinking about the performance of our algorithm,\u00a0\nrunning time and the space required"
+    },
+    "3ffdc1ea-dae1-403c-9d9e-86544d98f8d2": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": " memory\u00a0\u00a0 required. But we will mainly focus on the time for\u00a0\nbecause that is really more fundamental for us.\u00a0\u00a0 So, we said that the running time is not\u00a0\njust an absolute value; it is a function\u00a0\u00a0 of the input size. So, we are interested in how\u00a0\nlong the a"
+    },
+    "024f3e59-5822-49fd-872c-3424579a0cf2": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "lgorithm takes on an input of size n,\u00a0\u00a0 and we are interested in this up to some order\u00a0\nof magnitude. So, we will ignore constants,\u00a0\u00a0 we will kind of collapse things into basic\u00a0\noperations; and not worry too much about\u00a0\u00a0 what constitutes a basic operation."
+    },
+    "ec815bd2-a8aa-4c34-9a9d-e1bf80ed3652": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "\nAnd finally, we are looking at this thing\u00a0\u00a0 asymptotically. So, we are not interested in the\u00a0\nperformance for a fixed n, but rather what happens\u00a0\u00a0 as n becomes large. So, as this function, as\u00a0\nthis algorithm works on larger and larger inputs,\u00a0\u00a0 how does t"
+    },
+    "817237d8-64df-422f-962b-99c7b9882de0": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "he behavior change? So, one of the\u00a0\nthings we saw in that table was that if we know\u00a0\u00a0 something about the upper bound on the running\u00a0\ntime of the algorithm. It also tells us for what\u00a0\u00a0 classes of inputs, it will be feasible. So, it is\u00a0\na very important par"
+    },
+    "09e8381a-a347-4768-9e08-823ab647c70b": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "t of using an algorithm to be\u00a0\u00a0 able to tell what its running time is; because\u00a0\nonly when you know what is running time is.\n\u00a0 Will you know whether the problem we are\u00a0\ntrying to solve has a feasible solution using\u00a0\u00a0 this algorithm or not? And finally, we s"
+    },
+    "bf7a6a85-bf16-4318-94bf-ad2aceb7e1bc": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "aid\u00a0\nthat there are many inputs of a given size,\u00a0\u00a0 and we can hope in some situations to come\u00a0\nup with some kind of average performance,\u00a0\u00a0 but this is very hard. So, instead we will\u00a0\ntypically look at what is called the worst case;\u00a0\u00a0 so we will reverse eng"
+    },
+    "5dc434ab-f5c3-4971-a54b-88696cfd9b7e": {
+        "content_id": 13,
+        "course_name": "PDSA",
+        "title": "Analysis of Algorithms",
+        "week": 2,
+        "chunk": "ineer from the algorithm.\u00a0\nThe input that takes the longest time,\u00a0\u00a0 and based on this we will give an upper\u00a0\nbound on the running time of the algorithm."
+    }
+}

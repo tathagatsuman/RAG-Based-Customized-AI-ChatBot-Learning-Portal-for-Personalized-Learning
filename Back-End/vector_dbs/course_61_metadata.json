@@ -1,0 +1,534 @@
+{
+    "db8821fe-1280-4a62-ad5f-df9cb3a80f60": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "So, we will now turn our attention to\u00a0\na technique called dynamic programming.\u00a0\u00a0 So, let us go back to the kind of recursive\u00a0\nfunctions that we have been writing.\u00a0\u00a0 So, typically recursive functions arise from\u00a0\ninductive definitions. So, for instance,\u00a0\u00a0 we"
+    },
+    "ef3584a9-0a9c-4036-bf91-ebae2ad6b340": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " can define factorial inductively. By\u00a0\ndefining the base case the factorial of 0 is 1.\u00a0\u00a0 And for arbitrary n bigger than 1, the factorial\u00a0\nof n can be got by multiplying the recursive\u00a0\u00a0 call factorial n minus 1, so inductively, we know\u00a0\nhow to compute that"
+    },
+    "845d0e32-2a55-4b20-ada7-4f2e6be3073a": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": ", and multiplying it by n.\n\u00a0 We can also do this for structures, so we can do\u00a0\ninduction on the structure of a list. So, we can\u00a0\u00a0 say that if we want to do for example, insertion\u00a0\nsort, then for the empty list, it is already\u00a0\u00a0 sorted. So, the insertion sor"
+    },
+    "1a47b382-6f83-473d-9dae-d62672e8e890": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "t of the empty list,\u00a0\nso this is like the 0 case is just the empty list.\u00a0\u00a0 And if we need to sort a list from with X0 to Xn\u00a0\nwith n plus 1 elements, then what we can do is\u00a0\u00a0 we can sort the first n elements inductively.\u00a0\nSo, we do insertion sort on X0 to X"
+    },
+    "744bfcd6-71cc-4ea1-9f1c-eec378eae0a5": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "n minus 1,\u00a0\u00a0 and then we insert the last element into this.\nSo, insert is a separate function which is like,\u00a0\u00a0 so it is like multiply, so it is a\u00a0\nseparate function that we use to combine\u00a0\u00a0 the inductive case with the element which we are\u00a0\ncurrently dealin"
+    },
+    "9823061a-0c62-4afc-8a67-6b3a4c4879e6": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "g with. You can also write insert\u00a0\u00a0 inductively, but we will not bother about that for\u00a0\nnow. So, once we have these inductive definitions,\u00a0\u00a0 then when we write code for this, then they\u00a0\nnaturally become recursive functions. \n\u00a0 So, the factorial function wi"
+    },
+    "e92eb216-318e-4a70-ab1b-38a6f65d1a8e": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "ll\u00a0\nsay, if n is smaller than 0 or less,\u00a0\u00a0 return 1, otherwise return n times factorial\u00a0\nof n minus 1. Similarly, the insertion sort\u00a0\u00a0 function will say that if the list you are given\u00a0\nis empty, then return that list. Otherwise, insert\u00a0\u00a0 into the list up t"
+    },
+    "23762397-40a8-4c66-8984-ef39da1a4ebf": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "o but not including the last\u00a0\nelement, insert the last element. And then,\u00a0\u00a0 so you assume that this is sorted inductively\u00a0\nor recursively and then you insert.\u00a0\u00a0 So, this is how it works when we have inductive\u00a0\ndefinitions, we get recursive programs.\u00a0\u00a0 So, "
+    },
+    "ab324186-61ac-46d7-9852-6ca2b6b4b717": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "the reason that this works in general is that\u00a0\nwe have these sub problems. So, we have these sub\u00a0\u00a0 problems and we are combining these sub\u00a0\nproblems to solve our original problem. \n\u00a0 So, for example, when I look at factorial of n,\u00a0\nthen I need to solve the"
+    },
+    "274736e8-6a90-4e2c-9813-679a0f36d8fa": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " subproblem factorial of\u00a0\u00a0 n minus 1, but factorial of n minus 1, in turn,\u00a0\nwill ask me to solve the problem of factorial n\u00a0\u00a0 minus 2. So, all the smaller versions of\u00a0\nfactorial n minus 1, n minus 2 up to 0,\u00a0\u00a0 are all sub problems of the problem I am going"
+    },
+    "705c8b7c-43c0-4556-893b-7c320e9209df": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " to\u00a0\nsolve now. And once I can solve them, I can kind\u00a0\u00a0 of bring them together and solve this problem. \nSimilarly, if I want to sort a list,\u00a0\u00a0 I will have to do by insertion sort,\u00a0\nthen I will have to be able to sort\u00a0\u00a0 that prefix from 0 to n minus 1. So, "
+    },
+    "a000b8d6-2584-4fe5-b02b-ab553a84433c": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "if I sought\u00a0\nfrom 0 to n minus 1, then I can start from 0 to n,\u00a0\u00a0 but in general, I might end up having to sort\u00a0\ndifferent segments, so I should think about any\u00a0\u00a0 sequence Xi to Xj as a sub problem of this. \nSo, now, let us look at this sub problem situati"
+    },
+    "ae66f5fb-3b98-43f3-b127-60f06180b8f9": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "on\u00a0\u00a0 in a different context. So, remember,\u00a0\nthis interval scheduling problems. So,\u00a0\u00a0 the interval scheduling problem is something we\u00a0\nencountered when we looked at greedy algorithms.\u00a0\u00a0 So, we said that we had some resource. For\u00a0\nexample, we said there is a"
+    },
+    "6c3180c2-ce04-4278-9bcc-daf13e1164e9": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " video classroom,\u00a0\u00a0 which is going to be used by a number of faculty\u00a0\nmembers, and each faculty member has a fixed slot,\u00a0\u00a0 so they have a time period when they would like to\u00a0\nuse the classroom. But since no two people can use\u00a0\u00a0 the classroom at the same ti"
+    },
+    "0ab88cf8-d073-495d-bab0-b15b51ffd174": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "me, we have to choose\u00a0\na subset of slots to schedule during the week. \n\u00a0 And in the interval scheduling problem\u00a0\nour criterion was to keep the maximum\u00a0\u00a0 number of people happy. So, we wanted to\u00a0\nsatisfy as many requests as possible. So,\u00a0\u00a0 we wanted to choo"
+    },
+    "34617617-ef67-4328-8ff2-9fa613f156b4": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "se a subset of bookings, so\u00a0\nthat, the number of teachers who got their booking\u00a0\u00a0 was maximized. We were not concerned about\u00a0\nfor example, maximizing the utilization of\u00a0\u00a0 the room in terms of the number of hours\u00a0\nof recording or something like that. \n\u00a0 So,"
+    },
+    "3b526189-9aab-474f-abc4-270c6ab10646": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " here we have subproblems. So, each subset\u00a0\nof bookings is a sub problem. And we have this\u00a0\u00a0 greedy strategy, which says, pick based on some\u00a0\ncriterion, the first request to schedule. And\u00a0\u00a0 once I schedule that request, there are some other\u00a0\nrequests which"
+    },
+    "47285131-445f-44bd-b884-e6b576ea569b": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " overlap with it, because they have\u00a0\u00a0 the starting time or ending time is such\u00a0\nthat I cannot schedule them both together.\u00a0\u00a0 So, I have to remove those. \nAnd once I remove that, I get\u00a0\u00a0 what remains, and that is a subset of the original\u00a0\nproblem which I ha"
+    },
+    "0af9f686-4bd5-4def-a7d6-ff0ee3bdccaf": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "ve to solve. So, that is why\u00a0\u00a0 every subset in general is a sub problem.\u00a0\nSo, this is also there. So, this kind of\u00a0\u00a0 inductive structure, though we did not use\u00a0\nan inductive solution in the greedy thing\u00a0\u00a0 there is an inductive thing going on. That\u00a0\nis in o"
+    },
+    "da461ab8-95aa-458d-958b-0512c81f9dca": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "rder to solve the whole problem, I\u00a0\u00a0 take something out and then I solve a\u00a0\nsmaller version of the same problem.\n\u00a0 So, each subset is a small, is a sub problem.\u00a0\nNow, of course, since subsets are exponential,\u00a0\u00a0 if I have n bookings, there are 2 to the\u00a0\nn s"
+    },
+    "53e52e54-28e6-48fc-8cf6-b0abc77466cf": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "ubsets that are in principle 2 to the n\u00a0\u00a0 different subproblems. So, ideally, I would need\u00a0\nto look at all of these subsets. So, every subset\u00a0\u00a0 tells me something about how it can be solved\u00a0\nand I would have to look at the best of these.\u00a0\u00a0 But the reason t"
+    },
+    "0811d08a-1a36-4abd-bd46-0a1bc0c7f18f": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "hat the greedy strategy\u00a0\nis attractive is that it does not look\u00a0\u00a0 at all of them it only looks at a fraction of\u00a0\nsubproblems. But along with this, we have this\u00a0\u00a0 side effect that every choice that we make\u00a0\nrules out a large number of subproblems,\u00a0\u00a0 so we n"
+    },
+    "cc3f709f-18f4-4669-a522-0c013eb5e506": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "eed to make sure that the optimal solution\u00a0\nwe are looking for has not been ruled out\u00a0\u00a0 by looking at by making a poor choice. \nSo, whenever we make this kind of a greedy\u00a0\u00a0 strategy, then we need to prove optimality.\u00a0\nBecause we cannot be sure otherwise,\u00a0\u00a0"
+    },
+    "ecf8d533-c924-45b5-a8a2-f13039f1eaa3": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " that the choices that we have thrown away, are not\u00a0\ngoing to be bad. So, we saw that there were many\u00a0\u00a0 kinds of incorrect greedy strategy for which we\u00a0\ncould explicitly come up with counter examples.\u00a0\u00a0 Just because you cannot come up with a counter\u00a0\nexamp"
+    },
+    "b875458e-0732-4419-bd08-ce6d5a8bc324": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "le does not mean that the greedy strategy\u00a0\u00a0 is correct. So, you must necessarily prove that\u00a0\nit is correct. And we gave some arguments for\u00a0\u00a0 it. We talked about exchange arguments or showing\u00a0\nin this case that the interval scheduling using\u00a0\u00a0 the greedy str"
+    },
+    "698c87c4-d2ed-4de5-94df-10dcb0ee868f": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "ategy always stays ahead\u00a0\nof the optimal schedule, and so on. \n\u00a0 So, let us look at now a variant of this\u00a0\nproblem. So, remember, we said that in this\u00a0\u00a0 interval scheduling problem, we are only\u00a0\ninterested in maximizing the total utilization\u00a0\u00a0 in terms of "
+    },
+    "11580d91-8275-4c6c-ac8c-6a6ad44a477e": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "the faculty. We want to keep as many\u00a0\npeople happy as possible, but we are not looking\u00a0\u00a0 at any resource in terms of the room utilization.\u00a0\nBut supposing we are getting something from the\u00a0\u00a0 room. So, let us assume, for instance, that this\u00a0\nis actually not "
+    },
+    "07cf7467-3118-46ba-a2e9-86fed1d5bbe3": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "a captive resource inside IIT\u00a0\u00a0 Madras, but it is a commercial facility. So, in a\u00a0\ncommercial facility, so you charge rent for usage.\u00a0\u00a0 So, each person who makes a booking is willing\u00a0\nto pay a certain amount of money. So, there is\u00a0\u00a0 a certain weight associ"
+    },
+    "d32ac55f-9b25-43fd-8f9b-8709eb798d5d": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "ated with the booking.\nIt need not just be the length, it could also be\u00a0\u00a0 some people for have an urgent requirement, they\u00a0\nare willing to pay more. So, for each request,\u00a0\u00a0 there is also a weight. You can think of\u00a0\nit as how much money you are going to ear"
+    },
+    "3cbcf40b-93aa-4119-bb6a-b06a61014902": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "n,\u00a0\u00a0 if you satisfy that request. But the constraint\u00a0\nis still the same. That is these requests are\u00a0\u00a0 fixed in time, they must be from a starting\u00a0\ntime to an end time, they cannot shift.\u00a0\u00a0 And you cannot have two overlapping\u00a0\nrequests at the same time. \n\u00a0 "
+    },
+    "06117784-9fc2-40be-a566-c0223cca88a4": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "So now, our goal becomes different. We are no\u00a0\nlonger interested necessarily, in keeping the\u00a0\u00a0 maximum number of customers happy, rather, we\u00a0\nare interested in maximizing our revenue. So,\u00a0\u00a0 as the owners of this facility, we would like\u00a0\nto maximize the tot"
+    },
+    "1a82d112-96f8-471f-94e7-8904fdcafad8": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "al weight in this case,\u00a0\u00a0 the total income that we get as\u00a0\nrent from renting out this facility.\u00a0\u00a0 So, if you remember the greedy strategy that\u00a0\nwe had for the earlier question, which is to\u00a0\u00a0 maximize the number of users who use it, we said\u00a0\nthat you just t"
+    },
+    "c2006ba5-9350-455f-a888-76661e530b39": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "ake the earliest deadline.\n\u00a0 So, you look at the first job that is going to\u00a0\nfinish and schedule it first, knock out all the\u00a0\u00a0 jobs which overlap with it. Now among those that\u00a0\nremain, you take the first job that is going to\u00a0\u00a0 schedule it and so on. So, we"
+    },
+    "39e4b6d5-20c6-4856-8de5-07a545c6dab6": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " had this earliest\u00a0\ndeadline or the earliest finish time as our greedy\u00a0\u00a0 strategy. But it is quite easy to come up with\u00a0\na weighted example where this does not work. \n\u00a0 So here is a trivial case. So, I have\u00a0\nthree requests, two of them have weight 1,\u00a0\u00a0 and"
+    },
+    "85dc9236-ac96-4648-9764-ff6f0a0a39f5": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " one of them has weight 3. So, it is\u00a0\nvery clear that the best choice for me\u00a0\u00a0 is to use the job or to schedule the job,\u00a0\nwhich is weight 3. Now, if I were just\u00a0\u00a0 trying to maximize a number of customers, as\u00a0\nbefore, I would take this one and schedule it.\u00a0"
+    },
+    "daa36737-89bb-4c2d-8448-faeebceeda37": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "\u00a0 And then this would mean that this goes out.\u00a0\nAnd then because the other one starts later I\u00a0\u00a0 would schedule that. So, I would get two happy\u00a0\ncustomers, but my revenue would be only 2. \n\u00a0 Whereas if I did not go by the earliest deadline,\u00a0\nbut somehow wer"
+    },
+    "72527f24-4ae9-4f37-a4f0-a66c5fa69225": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "e able to take into account the\u00a0\u00a0 weights that I had, then I would actually prefer\u00a0\nto take just as one customer who is willing to\u00a0\u00a0 pay three units, and thereby get more than I\u00a0\nwould get by servicing the other two customers.\u00a0\u00a0 So, this earliest deadline "
+    },
+    "fff6f749-bd55-4646-bc64-30dcbc06cd2f": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "is no longer a valid\u00a0\ngreedy strategy if I add weights, and I now want\u00a0\u00a0 to maximize the weight of the schedule. \nSo, what should I do? So, can I look for a\u00a0\u00a0 different greedy strategy? So, I can start\u00a0\nlooking saying, okay, maybe I do not want\u00a0\u00a0 to do thi"
+    },
+    "7f4f0573-177e-4d46-92de-e4099c0e3567": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "s, maybe I want to find now. Remember\u00a0\nearlier also, we talked about the longest job, the\u00a0\u00a0 shortest job, there were various other parameters\u00a0\nthat we use, so we could now also look at the most\u00a0\u00a0 revenue earning job. Maybe we want to make\u00a0\nthat a priority "
+    },
+    "8c595593-c6a7-43ee-856a-9c38b374bbde": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "or we can take revenue into\u00a0\u00a0 time or revenue divided by time. \nThere are many, there is no shortage\u00a0\u00a0 of these kind of metrics that you can use in\u00a0\norder to evaluate jobs. And then whichever\u00a0\u00a0 one we choose, we either have to search for\u00a0\na counterexample "
+    },
+    "37efb832-248b-48cc-bcac-1c0a129d231a": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "or prove that it is correct.\u00a0\u00a0 But the other way, which is more\u00a0\nreliable, is to actually somehow\u00a0\u00a0 exploit the fact that we have the subproblems\u00a0\nso this is no different in a way from factorial\u00a0\u00a0 or insertion sort or something? So, the solution\u00a0\nto the or"
+    },
+    "b76317ca-bd6b-4d6b-b535-5ccd56a152c3": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "iginal problem depends on subproblems.\u00a0\u00a0 So, can we take those subproblems and build up\u00a0\na solution to original problem exactly as we do\u00a0\u00a0 there. So, can we find kind of inductive structure\u00a0\nto this weighted interval scheduling problem?\n\u00a0 So, here is a way"
+    },
+    "666593e3-ea07-4bb8-8458-89457d3cdb14": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " to do that systematically.\u00a0\nSo, let us just arrange the jobs in some natural\u00a0\u00a0 order. So, we can say we can arrange them by their\u00a0\nstarting time. So, remember, every request has a\u00a0\u00a0 starting time and an ending time. So, B1 is the\u00a0\nfirst starting time B2 i"
+    },
+    "f601d5ff-42d3-46e8-9f6c-d1fee957ab71": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "s a second starting time\u00a0\u00a0 and so on. Of course, they could have multiple\u00a0\njobs the same starting time, in which case we\u00a0\u00a0 will order them in some reasonable way, but let\u00a0\nus for convenience assume that our n requests\u00a0\u00a0 have n different starting times and "
+    },
+    "c70d170b-daf0-4dbc-9473-82ac14070094": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "B1 to Bn\u00a0\nrepresents the order of the starting times in\u00a0\u00a0 increasing order. \nSo, let us look at B1.\u00a0\u00a0 So, what happens with B1? Well, I do not know\u00a0\nthe solution, but I know that either B1 is there\u00a0\u00a0 in the optimum solution or there is an optimum\u00a0\nsolution"
+    },
+    "1e046200-98fb-4469-8854-da302816665c": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " without B1, there are only two choices.\u00a0\u00a0 Either I can find an optimum solution with\u00a0\nB1 or if I take B1, I am not going to find\u00a0\u00a0 an optimum solution. So, then I will explore both\u00a0\nthe possibilities. So, I will say that either B1\u00a0\u00a0 is part of an optimum "
+    },
+    "7a2316da-1846-432c-8b5a-c7e2f7489327": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "solution or it is not. \nSo, let us assume that it is part of an optimum\u00a0\u00a0 solution, then it will rule out\u00a0\nthings, which overlap with it.\u00a0\u00a0 And these things overlap with it will come in\u00a0\nsequence because the starting times is in an order\u00a0\u00a0 so maybe B2 over"
+    },
+    "667c8ae4-144c-4362-82ef-8795dec3208d": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "laps maybe B3 overlaps maybe B4\u00a0\nis the first job which starts after B1 finishes,\u00a0\u00a0 and if B4 starts after B1 finishes, so\u00a0\ndoes B5 because B5 starts after B4. \n\u00a0 So, there will be a certain number of\u00a0\njobs B2, B3 maybe which get ruled out,\u00a0\u00a0 so now I will"
+    },
+    "69dbad4e-6ade-412b-b357-e2ede0a59fcf": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " have to solve the remaining\u00a0\nproblem in this particular concrete case\u00a0\u00a0 for B4 onwards. So, if I include B1, then I must\u00a0\nkick out B2, B3 and go to B4. On the other hand,\u00a0\u00a0 if I do not include B1 then I just knock B1 out,\u00a0\nand I have a resulting problem, "
+    },
+    "3ac70170-fdaf-4b84-b32b-a1bdecfa4f97": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "which has B2 up\u00a0\u00a0 to Bn. So, these are now my two subproblems. \nAnd now what do I not need to do? I do not know\u00a0\u00a0 which one of these is the correct answer. I do\u00a0\nnot know whether I should have kept B1 or I should\u00a0\u00a0 have dropped B1 but let us assume inducti"
+    },
+    "314297f1-119d-4cb5-a7d2-7af8efb6d9a9": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "vely\u00a0\nI can solve these smaller subproblems. So,\u00a0\u00a0 we have solved the smaller subproblems, then I can\u00a0\njust take the maximum of the two in the sense that\u00a0\u00a0 if I include B1 I get the revenue from B1 plus\u00a0\nthe whatever I have solved, if I exclude B1,\u00a0\u00a0 I get"
+    },
+    "199d1f98-8718-473b-9323-b68cbcc0f5fd": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " the revenue for whatever else, but I do\u00a0\nnot get the revenue of B1, whichever of them\u00a0\u00a0 gives me more revenue more weight I use that. \nSo, this is a kind of exhaustive solution, which\u00a0\u00a0 in some sense is guaranteed to be correct.\u00a0\nNow, why is it guaranteed"
+    },
+    "470d2c7b-4ea2-4938-93ca-0bba1bfd41d8": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " to be correct?\u00a0\u00a0 Because it does not rule out any possibility\u00a0\nupfront. See, the greedy solution when I make\u00a0\u00a0 a choice, it rules out a bunch of things which I\u00a0\nwill never going to look at before look at again,\u00a0\u00a0 this is not like that. So, if I generalize"
+    },
+    "60eaf179-c8f9-4b73-aa24-5aedcabcc42d": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "\u00a0\nthis argument for B1, if I look at any Bj\u00a0\u00a0 any job in this sequence, either it is part of the\u00a0\nsolution or it is not part of the solution. \n\u00a0 So, in particular for B1 we have checked both\u00a0\ncases. So, B1 we have checked the case that\u00a0\u00a0 it is there it is "
+    },
+    "f71cef00-f404-4255-9221-418d5063a016": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "not there. Now, what about\u00a0\nB2? Well, B2 if it is not in conflict with B1\u00a0\u00a0 will be there in this list and in\u00a0\nthis list. So, whether I include B1\u00a0\u00a0 or exclude B1, I will look at a next choice for\u00a0\nB2, I will either include B2 or exclude B2. So,\u00a0\u00a0 I will c"
+    },
+    "12b272eb-9e2c-4d9a-8e7b-d8342721bf66": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "onsider it in the subproblems involving\u00a0\nB1 and the subproblems which exclude B1. \n\u00a0 On the other hand, if B2 is incompatible with B1,\u00a0\nthen it would not be here because when I choose\u00a0\u00a0 B1 I have to throw B2 out, but it will be in the\u00a0\nsecond one by guaran"
+    },
+    "70851a36-075d-48e6-a6b8-c4e2ab81b647": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "tee because if I throw out B1,\u00a0\u00a0 B2 still is possible. So, then I would check\u00a0\nif B2 is in conflict to B1 I would evaluate\u00a0\u00a0 all the answers for B2 assuming that B1 has been\u00a0\ndiscarded. So, by doing it in this sequence,\u00a0\u00a0 I know that if B2 is there B1 is n"
+    },
+    "d6115898-d06e-406b-b7f0-c15ef76c0845": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "ot\u00a0\nthere. So, there is no problem. So,\u00a0\u00a0 I am not ruling out the fact that B1 was there.\u00a0\nThe only reason v1 is not there is because\u00a0\u00a0 without B1 I could not do B2. So, this\u00a0\nnow becomes a kind of recursive thing.\n\u00a0 I go to B3 and it has the same thing.\u00a0\n"
+    },
+    "e1cff176-3cde-4cc6-80bc-c5814008e00a": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "So, when I get to B3, either it has been\u00a0\u00a0 allowed by my previous choices or it has been\u00a0\ndisallowed, but every situation where it is\u00a0\u00a0 allowed or disallowed will be considered.\u00a0\nI am not going to rule out anything. \n\u00a0 So, what is the problem? So, here is "
+    },
+    "538cefa6-fab6-4947-81c7-228dc309eba2": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "a situation\u00a0\nthat you might well have which is that B1 and B2\u00a0\u00a0 are incompatible. Let us look at the picture at\u00a0\nthe bottom. So, B1 and B2 are incompatible, so\u00a0\u00a0 B1 and B2 overlap, but they are both disjoint from\u00a0\nwhat happens afterwards. So, B3, so rememb"
+    },
+    "bc719086-f9cc-47c0-9b6b-49931119d66f": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "er these\u00a0\u00a0 jobs are arranged in starting time order. So, B1\u00a0\nstarts before B2, B2 starts before B3 and so on,\u00a0\u00a0 but both B1 and B2 finish before B3 starts. \nSo, whether I choose B1 or B2, I can\u00a0\u00a0 freely choose between B3 to Bn,\u00a0\nbut I cannot choose both B1"
+    },
+    "79ee4aca-7fd9-4215-87c1-50eb088a6030": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " and B2.\u00a0\u00a0 So, now if I start this exhaustive strategy that I\u00a0\ndid before, what will happen is I will first look\u00a0\u00a0 at the case where I choose B1. If I choose B1 I\u00a0\nmust rule out B2 and I must look at these things\u00a0\u00a0 or I will exclude B1. And If I exclude B1"
+    },
+    "f9e8ebec-ba09-48a5-80d6-39f36711ba4a": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": " then\u00a0\nthis is gone and I am looking at these things.\u00a0\u00a0 So, these are the two sub problems in\u00a0\nthis concrete situation, which arise\u00a0\u00a0 by making my first choice.\nI keep B1, I drop B2, I keep drop B1,\u00a0\u00a0 I keep B2 and in both cases I keep B3 to Bn.\u00a0\nSo, now, "
+    },
+    "f175107c-b63c-42ea-a2b2-dc4b945364e3": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "let us look at a case that arises\u00a0\u00a0 here. So, this is it should be B2. So, let us\u00a0\nlook at the case that arises in the second case.\u00a0\u00a0 So now in the second case I have B2 to Bn and\u00a0\nnow I must now look at the situation where I\u00a0\u00a0 am allowed to choose B2, whe"
+    },
+    "839f1ee4-b117-435d-9827-11bd06d5c7cb": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "ther I should keep\u00a0\nB2 or not. So, once again, just like B1 was the\u00a0\u00a0 first choice in this choice B2 to Bn I must\u00a0\ndecide whether to keep B2 or exclude B2.\n\u00a0 Now, if I keep B2 or I exclude B2, I still\u00a0\nhave B3 to Bn, because I know that B2 is\u00a0\u00a0 compatible "
+    },
+    "13f30595-9f1f-482f-829f-b260a4a1c0a0": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "with B3 to Bn, but this B3 to Bn\u00a0\nthat I am solving here, was already being\u00a0\u00a0 solved in the case where I chose B1. So, this\u00a0\nis the challenge. The challenge is that when I\u00a0\u00a0 apply this inductive strategy in this way,\u00a0\nwhen I break down the problem into sub"
+    },
+    "e6e8b0c6-1e0a-46ef-b26f-d01058a6c792": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "problems,\u00a0\u00a0 I cannot be guaranteed that the problem that\u00a0\narises from one path, the path that came from\u00a0\u00a0 choosing B1 is different from the one that came\u00a0\nfrom keeping B2 or excluding B2, so the same\u00a0\u00a0 sub problem in this case B3 to Bn\u00a0\nmight arise from di"
+    },
+    "137d7d76-07b0-4a97-9c2d-ff98881be7f9": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "fferent paths. \n\u00a0 And if I use recursion, as I\u00a0\nhad done. When we said fact n\u00a0\u00a0 is equal to n times factor n minus 1.\u00a0\nEvery time we saw an inductive dependence,\u00a0\u00a0 we just replace it by a recursive call. So,\u00a0\nwhat is going to happen in this case, is that,\u00a0"
+    },
+    "c04b9939-bec6-416e-88fc-476b9e5bc68d": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "\u00a0 we are actually going to evaluate this once when\u00a0\nI am solving for B1, and we are going to solve it\u00a0\u00a0 again for B2 which is clearly wasteful. Because\u00a0\nthe same problem is being solved a second time,\u00a0\u00a0 because we somehow did not recognize that\u00a0\nthis probl"
+    },
+    "6243cbc1-d56c-42ea-a134-c13bd838329e": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "em has been solved before. \n\u00a0 So, the question is, whether we can somehow\u00a0\nflag this. So, we can somehow flag this problem\u00a0\u00a0 and say that okay B3 to Bn must be considered\u00a0\nonce and not twice. So, if I have solved it once,\u00a0\u00a0 I should somehow recognize that "
+    },
+    "89cd3181-915d-4683-993c-7245c19ac441": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "I solved it again.\u00a0\nSo, when I come back to this problem, later on,\u00a0\u00a0 I can figure out that this problem is already been\u00a0\nsolved and I do not need to solve it again. \n\u00a0 So, we will basically this is what dynamic\u00a0\nprogramming eventually achieves. So, we wil"
+    },
+    "85bba95b-96a5-4a33-a107-5c23f0bdb86e": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "l\u00a0\u00a0 look at dynamic programming through a number of\u00a0\nexamples and illustrate why this problem is really\u00a0\u00a0 bad. I mean, this problem is really bad, because\u00a0\nremember, we said that if you have n jobs, then\u00a0\u00a0 you have 2 to the n possible subsets. So, there\u00a0\ni"
+    },
+    "fbbdaa62-d3d1-4087-ac9f-3ce24657d7ff": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "s really an exponential number of subproblems.\u00a0\u00a0 And if we are going to be solving them again and\u00a0\nagain then we are going to be in real trouble.\n\u00a0 So, this could actually blow up in terms\u00a0\nof a very simple recursive solution\u00a0\u00a0 that we get from an inductiv"
+    },
+    "47ae48b9-c230-461d-97ad-42506217a0ab": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "e structure, might\u00a0\nactually turn out to be impossible to compute\u00a0\u00a0 simply because of this overlap. So, unless\u00a0\nwe fix this overlapping problem, what seems\u00a0\u00a0 to be a very simple problem to compute could\u00a0\nactually be computationally infeasible. So, we\u00a0\u00a0 wil"
+    },
+    "b0ee27e1-15ca-4311-90c7-bb5e4cf494d4": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "l look at these two strategies. The first one\u00a0\nis basically, one, where we kind of remember. \n\u00a0 So, we come to a problem and we say, okay, this\u00a0\nis a problem I have seen before, and I will just\u00a0\u00a0 reuse the answer I have done before, and the other\u00a0\none is d"
+    },
+    "2d9c9b0c-f583-4e8c-9f1c-2fa489a26867": {
+        "content_id": 61,
+        "course_name": "PDSA",
+        "title": "Dynamic Programming",
+        "week": 9,
+        "chunk": "ynamic programming where we will say,\u00a0\u00a0 okay, I will solve the problems subproblems\u00a0\nin such a way that whenever I need one,\u00a0\u00a0 I will have the answer. So, this\u00a0\nwill become clear, as we go along."
+    }
+}

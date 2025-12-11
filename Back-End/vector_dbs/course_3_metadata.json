@@ -1,0 +1,268 @@
+{
+    "c0e7d55f-6e08-445c-b31b-1b5ffc87739b": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "Let us begin with a quick recap of Python. So,\u00a0\u00a0 I am not going to go into great detail but\u00a0\nthrough some examples we will just revisit\u00a0\u00a0 the basic syntax and just understand\u00a0\nwhat we need to remember.  \n\u00a0 So, my first running example is going to be\u00a0\nthe g"
+    },
+    "afb5e5ef-2db6-40ba-a345-6a79cdcddd74": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "reatest common desire is a problem gcd.\u00a0\u00a0 So, remember that the gcd which is also sometimes\u00a0\ncalled this hcf is the largest common factor or\u00a0\u00a0 the greatest common divisor of m and n. So, you\u00a0\nwant to take all the numbers which divide m,\u00a0\u00a0 all the numbers w"
+    },
+    "df7697fa-5f69-4014-b886-56b1db05101c": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "hich divide n and find the\u00a0\nlargest k that divides both of them. \n\u00a0 So, for instance if you take 8 and 12, then the\u00a0\ngcd is 4, because 4 divides 8, 4 divides 12,\u00a0\u00a0 4 times 3 and 4 times 2, so there is no larger\u00a0\nfactor which divides both 8 and 12. On the o"
+    },
+    "7aea1808-4484-42e5-949b-ed6433b6420e": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "ther\u00a0\u00a0 hand if you see 18 and 25, both of them have\u00a0\nfactors, so 18 is actually 9 times 2, so it is 3,\u00a0\u00a0 3 and 2 are the factors of 18 and 5 times 5, but\u00a0\nthere are no common factors other than 1. \n\u00a0 So, the gcd of 18 and 25, the largest\u00a0\nnumber that divid"
+    },
+    "371ec4b1-084b-460d-b24d-2a9cfe1e2aa9": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "es both 18 and 25\u00a0\u00a0 is 1. So, 1 divide everything as we know and\u00a0\nthat means that 1 is always available as a\u00a0\u00a0 factor of both m and n. So, this is good because\u00a0\ngcd of m and n is always defined, we do not have\u00a0\u00a0 to worry about whether gcd exists or not. In"
+    },
+    "c7bfaca2-fb36-41b6-a711-78b03ae0c360": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "\u00a0\nthe worst case if they have no common factors,\u00a0\u00a0 like in the earlier case of 18 and 25, they\u00a0\nhave no common factors, then gcd will be 1. \n\u00a0 So, our question now is how to\u00a0\ncompute this gcd. So, first of all\u00a0\u00a0 any factor of m is going to be smaller\u00a0\nthan"
+    },
+    "4ae4b1f1-cd5d-4405-a3ad-39a3f9888015": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": " n, the factors of m run from 1 to n,\u00a0\u00a0 similarly any factor of n is going to run from 1\u00a0\nto n and if something has to be a factor of both\u00a0\u00a0 m and n, it has to be smaller than the minimum,\u00a0\nso the gcd is always going to be smaller than\u00a0\u00a0 the minimum of the"
+    },
+    "fc537e98-5264-4e18-a304-809a5f75f8d6": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": " two numbers because\u00a0\nit has to divide both numbers. \n\u00a0 So, if a number is bigger than m, it cannot divide\u00a0\nm, if it is bigger than n, it cannot divide n.\u00a0\u00a0 So, the most obvious way is to run through all the\u00a0\nnumbers from 1 to the minimum of m and n and ch"
+    },
+    "774618b8-f4ac-4a3b-873e-379893274507": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "eck\u00a0\u00a0 if a number divides both m and n, so look for all\u00a0\nthe common factors, collect these in a list and\u00a0\u00a0 return the last element in the list. \nSo, here is the code for that, which we will\u00a0\u00a0 look at in a minute in more detail. So, you start\u00a0\nby setting th"
+    },
+    "22ceb74d-2b70-43e2-b537-1080ea1a12c8": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "is list of common factors to be empty\u00a0\u00a0 and now you run i from 1 to this minimum plus 1\u00a0\nand for each i you check whether it divides m,\u00a0\u00a0 so when it divides m it means that this remainder\u00a0\noperator percent, the remainder of m divided by i\u00a0\u00a0 is 0, that is t"
+    },
+    "7e48ecfe-68e0-481a-a215-c2d5be784e0e": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "here is no remainder. \nSo, it divides m. It also divides n and if this is\u00a0\u00a0 the case, then you add it to this list of common\u00a0\nfactors and finally at the end you are interested\u00a0\u00a0 in the biggest one of these. So, these are being\u00a0\nadded in sequence from 1 and"
+    },
+    "d25795a4-b1dd-489e-b1ee-df2e93f49752": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": " increasing order,\u00a0\u00a0 so the largest 1 will be the last one and that\u00a0\nwill be at index minus 1. So, let us just look\u00a0\u00a0 at this code a little more carefully to\u00a0\nunderstand all the nuances in that. \n\u00a0 The first thing is that we need to do\u00a0\nthis initialization"
+    },
+    "4808a92d-d3d2-4d8f-87f0-7f6456dbbf1a": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": " here, we cannot just\u00a0\u00a0 start off with cf inside the body of the loop\u00a0\nbecause we are applying this append function,\u00a0\u00a0 so the append function applies to\u00a0\nany name which is holding a list,\u00a0\u00a0 but in Python as you know, there is no way to\u00a0\nannounce to the Pyt"
+    },
+    "9ac81f88-dd93-45a3-9a60-6a4cf68065ac": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "hon interpreter that cf is\u00a0\u00a0 a list without actually setting a value. \nSo, the only way that Python can associate\u00a0\u00a0 types with names or variables is to look\u00a0\nat the value that that variable holds. So,\u00a0\u00a0 a value a variable which has not been initialized\u00a0\nha"
+    },
+    "dec7f550-41d3-44dd-b298-cde90a6820ac": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "s no type and if it has no type, then we do not\u00a0\u00a0 know what operations are legal. For example, is\u00a0\nappend legal or not, is plus legal or not? \n\u00a0 So, that is why we have to first announce to\u00a0\nPython that we have an empty list. so that when\u00a0\u00a0 we start adding"
+    },
+    "bdd9b334-a2e1-4f28-a8ef-367cb1338def": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": " things to the list using append\u00a0\nit is legal. So, this is the first thing to note\u00a0\u00a0 about this code. Then of course, we are using\u00a0\ntwo basic elements of Python control flow, so the\u00a0\u00a0 assignment statement is this one which assigns\u00a0\nan expression or a value"
+    },
+    "0b78a19b-54ad-4475-abf7-a1cd7dd25988": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": " in general to a name,\u00a0\u00a0 but we need to run through a sequence of\u00a0\nstatements in some order or may be repeated. \n\u00a0 So, we have conditional statement, so this\u00a0\nstatement is executed provided the condition that\u00a0\u00a0 I divides both m and n is true and overall th"
+    },
+    "be083ecf-185c-40f4-891f-c3e57bec294d": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "is\u00a0\nstatement is repeated a certain number of times\u00a0\u00a0 and that is what for if, so we have loops\u00a0\nand we have conditionals. The other thing\u00a0\u00a0 is that python has this general principle that\u00a0\nwhenever you take a sequence of numbers\u2026 \n\u00a0 So, in particular the r"
+    },
+    "3669cbea-a40f-4e57-bb2d-1fb4b1fbddc5": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "ange function is something\u00a0\nthat generates a sequence of numbers from a lower\u00a0\u00a0 limit to an upper limit, in this case separated\u00a0\nby plus 1, you can of course modify it to get\u00a0\u00a0 a range in which you skip elements, but the\u00a0\nimportant thing to remember is it "
+    },
+    "a32e705b-e8ad-4394-8c12-af82859703c4": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "always stops\u00a0\u00a0 before the last element and that is why we\u00a0\nhave to, if we want to look for factors from\u00a0\u00a0 one to the minimum of m and n, the range\u00a0\nfunction has to have this extra plus 1. \n\u00a0 Otherwise, the last factor will not be considered.\u00a0\nSo, for insta"
+    },
+    "76baccb9-2122-4377-89b9-b7b3304b4ecf": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "nce supposing we were looking at 8\u00a0\u00a0 and 12, then the minimum of 8 and 12 will be 8,\u00a0\nand we need to check whether 8 is a factor or\u00a0\u00a0 not otherwise we do not get the correct gcd. And\u00a0\nif we stop at the minimum in the range function,\u00a0\u00a0 then it will only go "
+    },
+    "8df51dd2-65b9-4fe1-9e5c-6d4a675c8925": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "up to 7, so this\u00a0\nis why we have to put that plus 1. \n\u00a0 So, these are all minor points which\u00a0\nI am sure that you are familiar with,\u00a0\u00a0 but it is worth repeating, so that you do not make\u00a0\nsilly mistakes when you are writing your code.\u00a0\u00a0 The other thing is th"
+    },
+    "6a8ab8f5-7208-4916-b39a-b5e71257318d": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "at lists are indexed starting\u00a0\nfrom 0 as usual, but Python has this interesting\u00a0\u00a0 option of counting backwards, so you go forwards\u00a0\nfrom 0 to n minus 1, let me say m minus 1. \n\u00a0 So, supposing the list is m, length\u00a0\nm, then the indices run forwards from\u00a0\u00a0 0"
+    },
+    "1e7a3c94-3253-4a56-b541-847ed4a3e2ea": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": " to m minus 1, but they also run backwards\u00a0\nfrom minus 1 to minus m. So, this way\u00a0\u00a0 it is much more convenient to talk about the\u00a0\nlast element of the list as having index minus 1,\u00a0\u00a0 which is what we are doing here rather than\u00a0\nsaying it is the length of cf"
+    },
+    "917b01a8-1f77-45b1-95fc-393091f7339b": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": ", so this is the\u00a0\u00a0 same we could have said length of cf minus 1. \nThis would have given us the same position in the\u00a0\u00a0 list, but obviously writing minus one alone is\u00a0\nmuch less cumbersome than writing length of cf\u00a0\u00a0 minus 1. So, these are some\u00a0\ninteresting "
+    },
+    "ba9e7f47-ef94-438f-a465-9208941decc8": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "things which we\u00a0\u00a0 have captured in this very simple function,\u00a0\nwhich captures gcd in a very naive way. \n\u00a0 So, one of the things we can realize is that\u00a0\nwe really do not need all the common factors,\u00a0\u00a0 we are only looking for the largest common factor,\u00a0\u00a0 in "
+    },
+    "7a217b58-51e6-455a-8b4a-90857f7b42d2": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "particular we are only looking for the last\u00a0\nelement of this list that we are constructing\u00a0\u00a0 and if you are only looking for the last element\u00a0\nof the list that we are constructing there is\u00a0\u00a0 no point in remembering all the earlier items in\u00a0\nthe list. So, w"
+    },
+    "86424d4b-ccaf-4505-806c-54366e38ecdc": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "e can actually eliminate the list\u00a0\u00a0 right and just keep track incrementally\u00a0\nof the most recent common factor. \n\u00a0 Now, remember we are computing common factors in\u00a0\nascending order, we are starting with 1, 2, 3, 4,\u00a0\u00a0 so every common factor we find will be t"
+    },
+    "0f80d020-b442-4f65-9030-8ee1fd4f6303": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "he latest\u00a0\ncandidate we have for the greatest common divisor,\u00a0\u00a0 because once we have found it all\u00a0\nthe earlier ones are now superseded,\u00a0\u00a0 so here we have a different version of the\u00a0\nsame code where we eliminate the list, so we\u00a0\u00a0 have the same for, and we h"
+    },
+    "f40964b4-d0ee-4e5a-8e11-12ccf8327af6": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "ave the same if. \nBut now whenever we find a common factor, we just\u00a0\u00a0 update this name mrcf - most recent common factor\u00a0\nto be 1. So, we have not initialized this. Is this\u00a0\u00a0 a problem? Will we reach this return statement\u00a0\nand return a value which has never"
+    },
+    "7fdb2ef5-c6d2-4357-abe3-0a1417e21ce2": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": " been defined?\u00a0\u00a0 Recall that 1 is always a divisor,\u00a0\nso 1 will be always a common factor,\u00a0\u00a0 so even though we do not initialize\u00a0\nmrcf here, like we did for the list. \n\u00a0 When we first encounter 1 we are going to get a\u00a0\nvalue here. Now, the difference betwee"
+    },
+    "329e6cc9-a228-462a-801a-02383598ee9d": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "n this loop\u00a0\u00a0 and the earlier loop is that when we first\u00a0\nencountered a number in the earlier loop,\u00a0\u00a0 we had to append it to the list, so we had to\u00a0\napply some operation to the value we were storing,\u00a0\u00a0 namely the list, so we needed to know that it was\u00a0\na l"
+    },
+    "fb066031-00de-4eb4-85e4-7ab87dbe77e2": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "ist, that is why we have to initialize it. \n\u00a0 Here we are not appending, we are merely\u00a0\nassigning, so the very first time we find a common\u00a0\u00a0 factor we are assigning it to the name, so name\u00a0\ngets a value and the next time we will update that\u00a0\u00a0 value we are "
+    },
+    "1d65f64d-0ea2-4192-b416-0338b8edd8f4": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "not going to operate, we do not have\u00a0\nto put a plus or a minus or a times or something,\u00a0\u00a0 so Python does not really care what the type of\u00a0\nthat name is as long as the name is updated and\u00a0\u00a0 because one is always a common divisor we\u00a0\nwill definitely return a"
+    },
+    "86b03800-c6b2-4e6e-b06c-4806e7b9fe28": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": " valid value. \n\u00a0 So, how long do these two functions take? This is\u00a0\ngoing to be one of the items that we are going to\u00a0\u00a0 look at in detail in this course, namely how\u00a0\nefficient are the algorithms or the pieces of\u00a0\u00a0 code that we write. So, as you can see it "
+    },
+    "6ce588de-358e-4117-95b2-6b65ac3b52b2": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "has\u00a0\na for loop which runs from 1 to the minimum of\u00a0\u00a0 m and n, so this is going to take time\u00a0\nproportional to minimum of m and n because that is\u00a0\u00a0 how many times this loop is going to execute. \nWhether we do it with a list or whether we do it\u00a0\u00a0 in this mrc"
+    },
+    "f7c353a2-a9cd-4062-b361-c9796d5ca252": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "f version or whether we do it\u00a0\nwith a list. So, although we have changed\u00a0\u00a0 the data structure in one case we are keeping\u00a0\ntrack of only the last common factor we found\u00a0\u00a0 and in one case we are keeping track of all the\u00a0\ncommon factors we found; fundamentall"
+    },
+    "78490978-022d-4ff7-aef6-e65c88c8e672": {
+        "content_id": 3,
+        "course_name": "PDSA",
+        "title": "Python Recap - I",
+        "week": 1,
+        "chunk": "y the time\u00a0\u00a0 taken does not change both are proportional\u00a0\nto the minimum of m and n. So, we will see\u00a0\u00a0 later that we can do much better than this, but\u00a0\nfor now let us move on to another example. "
+    }
+}

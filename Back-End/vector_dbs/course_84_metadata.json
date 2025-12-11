@@ -1,0 +1,744 @@
+{
+    "55e790bc-e4be-4427-834d-f62b1346c870": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "[Music] so in the context of memoization and dynamic programming we looked at this grid path problem which is an interesting curiosity but it is not a particularly useful problem you might argue because it does not have much of an application except to ill"
+    },
+    "204c9c9b-275c-4355-9f2e-728d65c6bc72": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ustrate some aspects of memoization and dynamic programming so now let us look at some more quote unquote useful functions right so these functions involve strings so you might want to look at two strings right and find out what is the longest common segme"
+    },
+    "71eeeef7-25fa-4cce-bb59-cec390cd7eea": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "nt in those two strings so this is called a sub word so a sub word is a segment so for instance if i look at secret and secretary then this is a segment and this is a segment so it occurs as a block so it has a sub word of length six if i look at bisect an"
+    },
+    "1f63da76-df1f-42b8-a3f8-1b4263c62344": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "d trisect then isect is there in both so this is a common sub word so it has length five right if i look at bisect and secret on the other hand i have this scc and i have scc and this is the longest common segment that is there in both so the length is thr"
+    },
+    "eaa5abb9-a7c1-476f-a7fb-fe1cdbc882ba": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ee and if i look at director and secretary for instance then i find very short things so i find this r e for instance ok or so i do not know why i said e it is not e e but ec right so i have e c and e c right so e c and r e are both of length two so this i"
+    },
+    "6490ba67-c1dd-4f97-b4ec-d88d0b1b28df": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "s the question now the question is if i give you two strings can you tell me what is the longest common sub word right so now there is obviously a brute force way of doing this so first lets see what the problem formally says so i have two words so u is of"
+    },
+    "9286b33a-89b6-492c-b1c6-687fcfd608ac": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " length m and as we normally index in in python let us assume that the positions in the string are 0 to n minus 1 and likewise v is of length n so we have a string v with position 0 to n minus 1. so what we want to do is find common sub words so basically "
+    },
+    "f6ebb492-f131-44e3-b3cf-8ca49b82adcb": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "we want to find some sequence of length k in both of them such that the two sequences of letters are the same and if we find such a length length k subsequence we say they have a common sub word of length k and we want to find the largest k for which such "
+    },
+    "f9db7fd5-5164-4265-96c3-a83df05d1843": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "a thing exists right so that's the longest common sub word so the brute force technique is just to check for every starting point right so for every starting point so i want to find out whether there is a long sub word starting from a i and b j once i fix "
+    },
+    "9d3b0fb9-caa0-4ae7-a5c9-f35c42ad5bf7": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "a i and b j i can find out what is the longest word that can start from there if a i is equal to b j then it is one then i go to the next one so i can keep scanning i go from a i b j a i plus one b j plus one a i plus two b j plus two i keep going so long "
+    },
+    "c9150696-9667-444f-a0e7-89cf73944979": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "as they are the same right and when once i find that there is a mismatch i stop so from every i j i can do a scan and try to find out how far i can go before i hit a mismatch and then i can record that as the longest common sub word starting at those two p"
+    },
+    "3ced8f58-07ae-43c8-9a47-922a5349d3b7": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ositions and i do it for every position and therefore i am going to find the maximum right so this is going to now take me m times n squared because there are m times n positions right there are m copies of m choices for i and n choices for j so for every "
+    },
+    "7df7f99a-9c7c-4b62-99de-2e18f5940975": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "i and j i am going to start this calculation and in general i am going to be scanning something which could be proportional to the length of the smaller world right so if i assume that m is bigger than n then the length could be proportional to the smaller"
+    },
+    "c37ba6bc-b290-42bb-b527-4814fbef9c64": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " world right so just as a trivial example you can see that if your sequences are like this u is this and v is this right now nobody has said that these longest common sub words are unique or something so now for every position in u and v i will find that t"
+    },
+    "9d0aec70-f492-4cfa-ba2a-b0059127af68": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "here is a longest common sub word of length 2. so i will actually be doing order n work for every position so i can easily achieve this m times n squared because my algorithm is not going to be able to look and say oh this is a special case right so i have"
+    },
+    "6c559494-6140-46d2-bfb6-536eeb2771a6": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " to do it so this is m times n squared the question is can we do something better than this by looking at the inductive substructure of this problem right so this is the theme of this these problems this week which is problems which have an inductive struc"
+    },
+    "7725819d-577e-4ade-8677-45c2acdde079": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ture which we can exploit and efficiently calculate so we want to find the largest k such that for some positions i and j there is a string of length k starting from ai and bj which are the same right so what we want to do is calculate for every ing that's"
+    },
+    "16057068-a50e-4bc3-a97a-a0ad9906b85c": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " what we are doing by brute force what is the longest common word starting at ing so now what is the inductive structure well if the position i in in u is not equal to position v in j and v then there is no common word starting there because right at the b"
+    },
+    "ed5c6834-7bae-4dba-bdd1-c002a96f02ea": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "eginning you have a mismatch right so if a i is not equal to b j the longest common sub word starting at i comma j has to be zero on the other hand if a i is equal to b j then i know that there is a longest common subword of at least one what happens after"
+    },
+    "351eb200-3396-46e8-94cb-2ec9d0dc2713": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " that i go to the next letter so if i know that there is a longest common sub word starting from i plus 1 j plus 1 then this word is one more than that so i can just take one plus the longest common subword at the next position right so this is the inducti"
+    },
+    "4d39498a-7d14-4b3e-891a-c0857d199331": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ve structure right so if i if if i can include i comma j in my longest common sub word then the rest of the sub word starts at i plus 1 j plus 1. so whatever is the longest word i can get from there plus this letter must be the longest word that i can get "
+    },
+    "f0236631-62c6-4e16-943c-ef748a3e9c22": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "from here so this is our inductive structure then what about the base case right so the base case is we are now looking at from i onwards right so when one of the strings get over so remember that the indices are 0 to m minus 1 and 0 to n minus 1 right so "
+    },
+    "bd0ec93b-e420-45b1-a014-b0a1ea2982db": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "when i reach index m or index n i have gone beyond the word right so when i basically have exhausted that word so the base case actually comes when i am looking at the empty string on either side so if i have the empty string on both sides then there is no"
+    },
+    "51da66a5-ca3d-4724-8b8b-ce322cc83e3d": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " common sub words that is 0 right and in general if i have empty string on one side then again there is no common sub word so if i look at i comma n because n is already beyond the length of v or if i look at m comma j because j m is already beyond the len"
+    },
+    "b345dc30-262b-4476-9b41-8589036cdd7c": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "gth of u both of these must be zero right so these are our base cases for this problem so what we have seen is that the sub problems are all these different combinations i comma j right so what we are going to do is obviously use some dynamic programming o"
+    },
+    "a6a441f8-bfa7-45d0-bc87-14d42eff66f4": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "r memorization so let us think of it as dynamic programming so we have these sub problems of the form i comma j and because this base case takes us from 0 to m minus 1 the length of the word and beyond so it's from 0 to m and from 0 to n so i have to compu"
+    },
+    "e78bb880-fc12-41e2-87fb-6702c910ca04": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "te this for these m times n entries m plus 1 times n plus one entries right so let me think of it as a table right so let us look at a concrete example one of the examples we had so we have secret and bisect right so bisect is u and secret is v let us say "
+    },
+    "3114ecb6-d65e-4aa9-b2f0-8c423dcf3e5c": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "so each of them is of length six so they have legitimate position zero to five and i have this fictitious position six where i have just written a dot which is beyond the thing right so now i need to find out how to fill up so each entry here is of the for"
+    },
+    "d79b876d-9875-4a11-b80d-9a565f9ac892": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "m lcw i comma j right so this is the idea so i need to find out a sensible way to fill up this entry lcwi comma j so what do we know well we know that there is some dependency what is the dependency it says that i j depends on i plus 1 j plus 1. so if i wa"
+    },
+    "c874be7b-dcfb-4d35-86b1-e80bb77c2a20": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "nt to fill this entry i need to know this entry if i want to fill this entry i need to know this entry but what about this entry well this entry does not have anything beyond it right so clearly i can start at this entry right and again if i look above it "
+    },
+    "1186868c-b978-4c6f-8c68-a3e7ac395913": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "this also does not have anything so the top the right most column has no dependencies i could also do it in the bottom row so so i could do this this way as well right but i will do it on the right most column so now what we already said is that since we a"
+    },
+    "85d852fe-2c35-4ebc-b6e3-65ccd5eeb20e": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "re beyond the length of secret we are beyond n right we should just treat this as going to be 0. now i come to this column and here because at this point these two letters are the same since in u of 5 is equal to v of 5 i get a 1 here and everywhere else i"
+    },
+    "30c6594f-4266-4bbf-9ea9-ca6eef5ba360": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " have 0 because there is a mismatch right so because t does not occur anywhere else in the columns now if i go to the next column here i will find that so i am looking at this row and this column right so basically this is e and therefore sorry i am lookin"
+    },
+    "c15c60e0-abbd-415a-a850-f1bf859ab956": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "g at that column so therefore wherever i see an e but there is only one e here i get a one right now i come to the next column right i am here and i am looking at for an r on the left hand side implicitly and there is no r right so when i got this e it is "
+    },
+    "dc7559e4-70fe-4a39-9181-3a0c69151481": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "1 plus the extension but there is nothing below it right so i keep going so here for instance i see that thanks to this this is a 1. right and now hopefully something interesting will happen now when i come here i will find that this e and this c generate "
+    },
+    "4a817c4b-697c-4b4f-9530-6adaec8a975a": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "a one but one plus this diagonal is going to generate a two right so i get a two here because i get a 1 from the fact that these 2 indices are both e plus 1 coming from here right so i have this lc w y comma j is 1 plus lc w i plus 1 j plus 1 and then like"
+    },
+    "21b19d5b-5c8a-4b4c-90ca-d6c39a0adea1": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "wise here i find that s and s are the same right so when i come here i will get 3. so basically i have to look at this thing and remember what is the longest common sub word it is that i comma j for which this value i have calculated is maximum so in this "
+    },
+    "cd173f8b-22b8-4dc2-aad9-3707285ea896": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "case this happens to the maximum so the answer is actually three right so it says that the longest common sub word between bisect and secret is length three which we had also done by inspection it is the word scc so now in this we have not really calculate"
+    },
+    "ac0d321b-6ce7-4868-85cc-c9af59ca79e7": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "d the word we only calculated this length so how do we get the word back right so to read off the solution first we find an entry which is maximum so we can keep track of it in as we are going along or we can go back and scan the table once to find the max"
+    },
+    "b5c4c719-4ce2-4eb6-a888-44d9a0c3a8cf": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "imum but we find the maximum here right now if it is the maximum it has got to its value by adding one to its diagonal element so it added one to something here which added one to something here right so i should be able to walk down and find out all the e"
+    },
+    "2935e6ea-160e-40d5-a0b5-854d68eb573d": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ntries that corresponded to that so i can walk down and then mark off these entries and if i look at the corresponding entries on the two words right they will actually give me the words right so this indices here if i project it onto the column and the an"
+    },
+    "df890f41-ec84-4e4d-b359-462163bc59e8": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "d the top row then i actually find out that it is basically scc which is the witness now there could have been another word of length three and that would have given me possibly a different in this case it was only one witness so i get sec but basically ju"
+    },
+    "f3f5af1b-e6b7-452f-82e6-6e9c759e6cf4": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "st computing the length is not a restriction because from that we can read off the answer from the final thing so here is some simple implementation these are i mean most dynamic programming problems are hard to set up but once you got it set up then its v"
+    },
+    "23c40020-e022-492b-9544-a52e416e6bc8": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ery easy to implement because it is just a kind of nested loop through an array typically so here we lets use a numpy array so what we will say is that we will get the lengths m and n of the two words and we want one remember which is m plus one times n pl"
+    },
+    "690dc99d-85a9-48e3-bf7c-c1752d1d45cf": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "us one and because our base case is zero it is convenient to set up this thing as a zero length ah zeros field array so we use the zeros function of numpy and we get an m plus one by n plus one array of zeros now i am going to keep track of the maximum len"
+    },
+    "65b126fb-4d77-44fb-a304-e3c08720e719": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "gth so this code does not tell you how to read off the answer that you will have to figure out for yourself but now it is just simple right i am doing it column by column and i am doing it from m comma n down right so i start with n minus 1 walk down to 0 "
+    },
+    "57de6ede-4275-4a14-b1a9-d0b2f28698d4": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "and i start with m minus 1 work down to 0 because remember the m and n column are implicitly 0 because i have already reset them to 0 here right and now i use the induction right if i have at the row and column the values are the same then i add one to the"
+    },
+    "1f335513-c7b7-4a3b-a6af-76a77ffff093": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " value at the next row and the next column the diagonal limit if they are not the same i set it to zero and depending on whatever i have calculated right i will update the max lcw right so if the current lc lcw of this row column turns out to be more than "
+    },
+    "91b55f6e-a5c6-433d-89f1-3366fc999a84": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "the maximum since over i update it and finally return the maximum right so this is very straightforward how long does this take well brute force if you remember for every starting position m times n starting positions we have to do a potentially order n sc"
+    },
+    "055c7206-1fef-40ad-b201-a7c78fa74c5e": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "an so it is m n squared whereas here we only have to fill up this table which is m times n m plus one times n plus one right is an order m n table and how much time does it take us to fill up an entry well we just have to look at the diagonal right so its "
+    },
+    "32e3ec45-ad81-4a02-9291-2acbfa5360b1": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "a constant amount of time so therefore it is m n because we have to just fill up this table of size m n and each entry takes only constant amount of time so i have saved one power of n from my thing so i brought a cubic in some sense down to a quadratic so"
+    },
+    "20fa22d1-2ea4-4209-8929-768505ba564e": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " the longest on common sub word is not really the more interesting problem the more interesting problem is the problem called the longest common sub sequence so in a sub sequence we are not restricted to taking a segment which sits there we can drop letter"
+    },
+    "c6fd43b2-0bda-4d3d-93e8-33c7d5e0dd27": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "s right so for instance with secret and secretary i already have a maximum match right and so will so with bisect and trisect but if i look at bisect and secret earlier i said that you could only match scc to scc but now if i allow you to drop letters you "
+    },
+    "a51cf882-7893-4210-b8bd-648d24f46cff": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "can extend this to scct and then drop these two and go to t right so you can actually move from a longest common sub word of three to a longest common sub sequence of four so in a subsequence as i going left to right i am allowed to delete some letters fro"
+    },
+    "34e1a3ea-c528-4e78-83c7-068710e0334b": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "m either of the two until i find the longest match with deletions similarly if i look at director and secretary right earlier we could only do two right we could do ec or we could do re but now i can skip along and say ok e c t r e c t r right or i can say"
+    },
+    "3746e6b3-4553-401d-9835-0e44ebdda91b": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " r e t r and r e d r right so by allowing some skipping i get a longer subsequence so one way to think about this in terms of what we have is we are taking sections and adding them up right so we have a longest common sub word so let us look at bisect and "
+    },
+    "f6a11470-cf83-43f0-8c7b-37047a8bc5b9": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "secret right so we have a longest common sub word which matches these two and then we have a separate common sub word which matches these two and they are in sequence right so i can take this segment which is the sec and then take the next non-zero entry b"
+    },
+    "9f111d31-4e40-4f83-9019-3da4c40dd193": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ottom and right and combine these and this will give me my longest common subsequence but of course this is not the useful way to calculate it but just a way to think about it longest common subsequence consists of these blocks of things which are concaten"
+    },
+    "89633546-7a55-44a5-bb52-0c9ce2023854": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ated to each other so why do we why are we interested in this because this really has many applications for example in genetics right it is really the case that the gene sequences are identical but there are large overlaps so one way to check whether two s"
+    },
+    "7c1b9094-257b-4293-8304-ab3ff24116b2": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "pecies are similar is to see how much of an overlap this is in terms of this matching right so you take and you allow yourself to drop some genes which appear in one and not the other and see if the rest of the genome actually looks the same so genetics is"
+    },
+    "3a8af34c-1b51-4344-8da8-77913926e3de": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " one application another application is more down to earth so if you use a unix or linux system there is a command line command called diff which will take two text files and tell you how different they are now this is very useful for instance if you are e"
+    },
+    "911d5841-efed-4c42-b578-6dbac6128fc7": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "diting some code or something and tell you which lines have changed so what it does is it tries to compute the longest common subsequence between the lines of your text file so it treats each line as a unit so if you start editing your file by breaking lin"
+    },
+    "f3633ebb-f2ff-4796-9a79-e4e7e68edc4a": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "es then it will think it is a different thing but if you are editing your file by just staying within the same lines it will tell you the maximum match between these two lines right so diff actually uses the longest common subsequence calculation to tell y"
+    },
+    "50216994-5db5-47f2-8901-8a5a46787d40": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ou what is the maximum amount to which these two text files are the same and where the differences are so it will say these two are different because here you have inserted this at line five and there you have deleted this at line seven or something else s"
+    },
+    "af22a4ac-7d16-4016-8535-74f0e1b84877": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "o it will give you some kind of a minimal way of taking one file and making it into a l file so there are several such applications where this long and longest common subsequence is used so let us try to see how we will solve this using our inductive strat"
+    },
+    "0aa5b3cf-512b-4bf6-b7b8-6bb8e7dbcda1": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "egy so as before we have two strings of length m and n and now we want to find in general for every position i comma j the longest common subsequence that starts at i in the first string and at j in the second string so the first thing is that if the two p"
+    },
+    "9e866ff3-3ec0-4f53-a204-2dcf1c8eb5fa": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ositions are equal right then is it a good strategy to include this in our longest common subsequence so we have a i a i plus 1 up to some a m minus one and we have here b j b j plus one up to some b j n minus one right ah sorry yeah b n minus one so now w"
+    },
+    "391ecb7f-76b0-4ad8-ab1a-65c049350f5c": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "hat we are saying is that these two are actually equal right so should i use that in my longest common subsequence so i can think of a long longest common subsequence of as something that pairs up letters in the first one and the second one right so it wil"
+    },
+    "3681aa75-46c5-4ea5-b957-796f3805afe4": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "l it will so i can pair up this and then this might get paired up with something else and that might get paired up with something else and so on but the pairing can never cross right i cannot pair up something earlier and new with something later in v and "
+    },
+    "628c4b62-0044-4945-8a5e-7f1499ee8337": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "then something later in new with something earlier in v because that would not be a sequence right if i have say x comma y here and if i have y comma x here i cannot claim that y comma x is the same subsequence as x comma y so this pairing must always be k"
+    },
+    "88b6c103-de39-40fc-a550-e835558554c2": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ind of non crossing so the question is why is it a good strategy to do this perhaps there would have been a better thing right if i had allowed this to go and pair up with something to the right or this to go and pair up something to the right so why not t"
+    },
+    "bc76a5c0-cfbe-4c74-97c6-e3afab63c8ca": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "hat well supposing this was not the right solution supposing there was a solution which goes there right but since ai is the very first thing here right it must go before anything that a i plus 1 touches so i can always take this and move this back right s"
+    },
+    "81f97484-0ea7-42cb-bafb-f359e10746dd": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "o this is a bit like our greedy thing where we said you can take a solution and modify it so that it looks a solution that i am giving you so in this way this is kind of a greedy strategy which is says that if a i is equal to b j include a i b j in your lo"
+    },
+    "a255f46d-194f-4c4f-91f5-007a52088f59": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ngest common subsequence and the reason is if a i could compare compete combined with something b beyond b j it can also combine with b j and i will get the same solution so the solution that you get by postponing your match for ai or postponing your math "
+    },
+    "0b947183-7f19-4de7-9b66-23410028cac2": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "for b j cannot be any better than this because that solution can be transformed to a solution which has this structure so in other words if a i is equal to b j so in the case of the longest common sub word we said if ai is equal to b j you just take 1 plus"
+    },
+    "e766a372-ea87-4bf9-94aa-86f7dbb357ad": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " the rest here we are saying if it is equal to b j you take 1 plus the rest again right so that part is the same what if it is not equal right if it is not equal then we can see that both of them cannot be in the same c in the final sequence because by the"
+    },
+    "d0deb279-5d09-4eb4-b4e3-d3710ab31855": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " same logic if i have a i b j right if this is part of my sequence right and i have not yet considered this then a i must be matching up with something later but now that something later if b j is matching something it must be it cannot match up with ai so"
+    },
+    "283eb1fd-5759-4c60-ba6d-5eecddbe78a8": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " it must be matching with something later so then i have this criss cross right so if ai is in my solution b j cannot b if b j is in my solution a i cannot b it of course could be that neither of them is my solution that's also ok right so the question is "
+    },
+    "113493bf-598c-4c38-a3dd-39188ae5f8d8": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "what should i do right so i have to drop either a i or b j and proceed but since i do not know any better i will do both right so i will solve it assuming that i drop b j so i will look at i comma j plus 1 and i will also solve it assuming i drop a i so i "
+    },
+    "93c7120e-c0c8-4951-9370-e2bd7ce8000b": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "look at i plus 1 comma j i will look at both these sub problems in one case i have omitted a i in one case i have omitted b j and then i will decide which of these better right so i will take the maximum of these so i am not ignoring anything right i am ju"
+    },
+    "1ad24741-9c50-43ba-a592-947c766f25e9": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "st doing all the sub problems that could contribute to this and taking the best one so as with the longest common sub word the base case comes when one of the two strings becomes empty then all the longest common subsequences becomes zero right so when i h"
+    },
+    "8b4d6770-98a3-447c-bb1f-546890f9bf03": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ave either i comma n or m comma j the longest common sub is going to be zero just for the same reason as it was for the lcw case so once again we have these sub problems of the form lcs i comma j for all i comma j so we have this m plus 1 times n plus 1 ta"
+    },
+    "77ce9665-9b8b-4f4f-b837-7b298b11fb8e": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ble of values but what is different now is the substructure right so substructure earlier for a value here i only needed the diagonal but now i need the value on the right and the value below right because either it is equal and i go to i plus 1 j plus 1 o"
+    },
+    "b589d99d-cbf3-41fd-b22c-d883f3ce8766": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "r it is not equal and i have to take the maximum of these two so i need all these three values to correctly evaluate i comma j for an arbitrary ionic arbitrary so everywhere i have these three contributors right which i have to keep track of so that means "
+    },
+    "73f1a766-9e82-4244-a9ec-9a47770bb5cb": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "that in order to solve this i had better have solved all of these now to solve this i better have solved all of these otherwise i am going to get into a situation where i will have to do some recursion so i am going to dynamic programming i should make sur"
+    },
+    "ecc5a859-2b0a-4d3a-9ad8-16c33d1e467f": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "e that when i reach a cell i comma j i know what is to the right of it what is below it and what is diagonally below it so as before i can start here because there is nothing to the right and below and again for these things i have a below but i so i i mea"
+    },
+    "3d1b47de-317a-4185-bbe8-9b85469b2b79": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "n i need these values right but because there is nothing to the right it effectively means i must look below and as we said this is the base case because i am beyond the end of the string so the last column is just zeros right now here is the difference ri"
+    },
+    "c894f6b3-f682-4fbd-9df2-4b3e0727ca87": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ght so i get this is 1 because this t matches that t all the others are 0 but the next column i will see a difference right so now what i see is that this e is not equal to this t so lcw will say if e is not equal to t then there is no common sub word star"
+    },
+    "95369867-a569-406f-afe0-815464477db8": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ting here so i must quit what lcs says is i can either discard the e or discard the t right if i discard the t then i come here then i have e t with m t and that's zero but if i discard the e then i come here i have a t matching a t so i take the maximum o"
+    },
+    "39873dec-e9ea-4403-beb9-edbddfe952db": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "f these two and i get a one okay and the same thing happens all the way if i look at e and c it says well i could either discard the e or discard the c right and if i discard the c then i am back to the e t t k so i get this one and therefore the maximum o"
+    },
+    "f0619f90-c5bf-4498-8ce8-6f7e626aec54": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "f this and this is one right so in all these cases here i am taking because they are not equal because this so here actually it is equal right but here i am getting 1 plus 0 is 1. here i am getting maximum of this is one so in each case it is one because e"
+    },
+    "cca328c7-bdb5-4a61-9e43-2b202b2af7f3": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ither it is not equal and the maximum of the two sub problems is one or it is equal in the specific case of e and i get one plus zero is one ok so i keep going like this and now here for the first time i see when we see the c here remember that this is whe"
+    },
+    "f05a60e9-6c55-42b5-85d5-9f5fdb5e5f65": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "re the longest common subword initially ended it is two because it is a match plus one and this one is basically coming from here right so there is a match further on what it's saying is that i have a match here and there is some match further on with some"
+    },
+    "69e39f1b-85f8-49bb-a6b5-b91957701086": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " gaps perhaps so therefore the total match starting at this point is one plus that match which was one so one plus one two ok and going backwards again i get a three and then i get a four right and unlike the longest common sub word thing this will always "
+    },
+    "132c728b-d727-4b93-9350-4d07ef7e999f": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "be the maximum because if i start at zero comma zero i can always if the supposing the maximum happens at in this case at actually comes at 2 comma 0 right because it is s e c so it is at position 2 in bisect and position 0 in secret but i can think of it "
+    },
+    "850ddca7-a764-4779-bdac-5633f4b6550f": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "as having dropped the first two letters in bisect right so therefore even from the beginning there is a substring of length subsequence of length two by just dropping the first two letters so the maximum for lcs is actually going to happen at zero comma ze"
+    },
+    "7c3dec63-accf-437b-a891-d99be9f9a212": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ro always because it accumulates all the lcss to its right it's not like lcw which must start there right so we get that now you can ask the same question how do i recover well i look at this now i know that this is my maximum but where do i actually accum"
+    },
+    "bf0fc84d-460d-4e8a-8f69-57da9b7eded1": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ulate letters in my longest common subscription wherever i have a match and i go diagonally right so so i have to basically track how did this entry become one so this entry became one because of zero and one but how did this entry become 2 well this big e"
+    },
+    "b6c547d1-f084-4fba-bf9b-97b94f1cc671": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ntry became 2 because i had a 1 here and then i added 1 to it so for each entry that i made in my table i know whether i got it from the diagonal entry because there was a match or where i got it from the maximum of the table entries below and to the right"
+    },
+    "62ed658a-688f-4275-b666-12b4a1b12a73": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " because it was ah not a match so wherever there is a match it contributes so basically i trace back this entire computation by just keeping track at every square of which of the two cases in my inductive definition i use did i use the max or did i use the"
+    },
+    "f744c475-0c34-43c7-9035-55a8f7d5b160": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " plus one and if i use the plus one then this is good right so i find out all these positions where i did a plus one and this gives me four to three three two two two to one and one to zero right see these are the four places so this if i now go back and m"
+    },
+    "a8e13ab5-6442-4f2f-964b-6b2459fbdf81": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "ap those four places there i get the corresponding segments in my word which contribute to this lcs so once again by doing a little bit of extra work after i do the length calculation i can actually recover a longest common subsequence so finding the lengt"
+    },
+    "d02914a4-9e2b-481b-80a2-4aec4bbe7d7d": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "h is actually enough and the length is the one that is easier to define inductively so you first calculate the length inductively and then you analyze how that inductive definition unrolled in order to calculate the actual world right so again the implemen"
+    },
+    "1494e98a-25d0-4e31-85b4-858b2077a1e5": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "tation is quite straight forward its even more straight forward than lcw because i do not have to keep this maximum right so i just set up these this array with zeros and i just run through this and i use the two inductive cases right so either i do one pl"
+    },
+    "38266a81-bc5f-4902-a889-5fac0442d91f": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": "us the diagonal or i do the maximum of the two things which are one below and one to the right right so this is the easy thing and finally i return the value at 0 comma 0. so just like for lcw lcs also basically fills up this m times n table right and each"
+    },
+    "4ec30f6d-8790-444e-b7ba-e4fcebf7ea28": {
+        "content_id": 84,
+        "course_name": "PDSA",
+        "title": "Common Subwords and Subsequences",
+        "week": 9,
+        "chunk": " entry takes constant time so this is also time something which takes time proportional to m times n"
+    }
+}

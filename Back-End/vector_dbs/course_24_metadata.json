@@ -1,0 +1,121 @@
+{
+    "ac005b82-46c4-4a18-bc05-d7814162b216": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "So, last week we looked at some experiments\u00a0\nwith sorting algorithms with insertion sort,\u00a0\u00a0 selection sort and merge sort to find out how\u00a0\nthey actually behaved on different types of\u00a0\u00a0 large inputs to understand whether they\u00a0\nwere uniform across different "
+    },
+    "e70cf660-e4b8-42a0-95ae-7365533c84f1": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "things or\u00a0\u00a0 they were better on ascending on descending.\u00a0\nSo, let us do the same now with quicksort.\n\u00a0 So, we begin with timer class which will\u00a0\nallow us to time the execution and get\u00a0\u00a0 an idea of how things happen on large\u00a0\ninputs. And quicksort is fundam"
+    },
+    "91d3bba3-fa49-437a-8743-ad2bf040dc1c": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "entally\u00a0\u00a0 a recursive implementation, the one that we have\u00a0\ngiven in the class. So, we are going to use that.\u00a0\u00a0 And that is going to create problems with this\u00a0\nbuilt-in small recursion limit. So, we will, as we\u00a0\u00a0 did for insertion sort in the recursive cas"
+    },
+    "b03cd920-6087-42d4-a7e2-ed848440da38": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "e, we\u00a0\nwill increase the recursion limit to the maximum\u00a0\u00a0 allowed which is 2 to the power 31 minus 1.\nSo, now, this is our quicksort algorithm that we\u00a0\u00a0 give in class. So, what we do is we sort from a\u00a0\nlower limit to an upper limit and we choose the\u00a0\u00a0 firs"
+    },
+    "7f899c7b-94a5-4868-bf91-c84fad1a793f": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "t element of the list as the pivot and then we\u00a0\ngo from left to right and we partition the pivot\u00a0\u00a0 into this lower, the remaining things lower and\u00a0\nupper, and then we move the pivot to the middle\u00a0\u00a0 and then we recursively sort the two parts. So,\u00a0\neventuall"
+    },
+    "2f3d02fe-353b-47b4-9bb5-a7643af885cb": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "y we come down here and we recursively\u00a0\u00a0 sort two parts and then we return here.\nSo, one the things that we want to check is,\u00a0\u00a0 of course, this is correct. So, let us take\u00a0\nsome sort of random array and just sort it\u00a0\u00a0 and validate that both. So, this techn"
+    },
+    "e1bf8a58-2359-481f-a9be-45527f90345f": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "ically\u00a0\nsorting in place, but it is also returning\u00a0\u00a0 the sorted list. So, you can see that if I kind of\u00a0\ntake this qlist and sort it and return it as qnew,\u00a0\u00a0 both qnew and qlist are the same. So, it is\u00a0\nbasically in place sort that we have implemented,\u00a0\u00a0 b"
+    },
+    "3a86000a-c9ed-4bac-9135-e7ce2018ea0c": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "ecause we are doing all these exchanges\u00a0\nwhich will actually happen inside this.\n\u00a0 Now, the thing that we want to see is how this\u00a0\nbehaves on large inputs. So, one of the things\u00a0\u00a0 we argued about quicksort is that typically\u00a0\nit behaves well. So, what this "
+    },
+    "a3285e89-55ad-41b6-ad28-626ee7033ef3": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "means is that\u00a0\u00a0 hopefully if we create a random array, it is\u00a0\ngoing to behave fast. But because of the nature\u00a0\u00a0 of the pivot when I have extreme values at the\u00a0\n0th element, either the largest or the smallest,\u00a0\u00a0 is going to break up these things unequally i"
+    },
+    "7cf0e7ca-6bfa-41e8-a5af-1c767faa5291": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "nto\u00a0\nan empty list and a list of size n minus 1. So,\u00a0\u00a0 I am going to get this n square behavior\u00a0\nlike insertion sort and selection sort.\n\u00a0 So, let us compare this performance of quicksort\u00a0\nwith say merge sort. So, merge sort, remember,\u00a0\u00a0 will take good tim"
+    },
+    "9810f24b-8da5-47fd-8417-c227d9125c00": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "e on any input. It does not have\u00a0\nthis problem ascending and descending, but let us,\u00a0\u00a0 in particular, look at this random\u00a0\nbehavior and see which is better.\n\u00a0 So, this is a last times implementation of merge\u00a0\nsort. So, here, we are now doing the same thing"
+    },
+    "a5500dbe-e2e2-44d6-9069-503c96e41d05": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": ".\u00a0\u00a0 We are creating a random input of size 10 to the\u00a0\n6, exactly the same size as we had for quicksort.\u00a0\u00a0 And for the ascending and descending for merge\u00a0\nsort, it does not matter. We can actually have\u00a0\u00a0 it of the same size because it is not going\u00a0\nto blow "
+    },
+    "99752551-8505-4421-9c6e-d7e21eb9e539": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "up like the quicksort worst case.\n\u00a0 So, if I run this now on merge sort, the\u00a0\nsame 10 to the power 6 which took 7 seconds\u00a0\u00a0 in quicksort is actually going to\u00a0\ntake a little longer in merge sort.\u00a0\u00a0 So, this actually shows that though they are both\u00a0\nsimilar "
+    },
+    "64ee91a6-21bf-4fac-914a-fe312a84354c": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "algorithms in terms of divide and conquer,\u00a0\u00a0 we said that quicksort is the worst-case time of\u00a0\nn square and we have, average case of n log n,\u00a0\u00a0 and merge sort is a worst case of n log n. \nSo, we can see that when we have large lists, we\u00a0\u00a0 always get someth"
+    },
+    "6fbc7bfb-8a7d-4e99-b9f7-f6b0c08a83e3": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "ing between 0 and 10 seconds, but\u00a0\nit is interesting that merge on this random array\u00a0\u00a0 takes actually about 50 percent more time almost\u00a0\nthan quicksort on the random array. So, this is\u00a0\u00a0 what we meant by saying that although quicksort\u00a0\ndoes not have a very"
+    },
+    "bc18ec8b-a620-436d-8706-60519acb9199": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": " attractive worst-case time,\u00a0\u00a0 it seems to be a very effective algorithm and\u00a0\nit is one that is often used in practice. So,\u00a0\u00a0 that is why we typically see quicksort being\u00a0\ntaught and used even though it theoretically\u00a0\u00a0 looks like insertion sort and selecti"
+    },
+    "44b068d6-131d-40bb-bec3-54b93499a605": {
+        "content_id": 24,
+        "course_name": "PDSA",
+        "title": "Implementation of Quicksort Algorithm",
+        "week": 3,
+        "chunk": "on\u00a0\nsort in having an n square worst time."
+    }
+}

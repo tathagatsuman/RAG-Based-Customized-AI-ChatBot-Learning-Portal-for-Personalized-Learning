@@ -1,0 +1,240 @@
+{
+    "bc8ca81d-fe7e-4e99-8dae-d0d8f546bf98": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "So, we saw that we can use BFS and DFS to detect\u00a0\ncycles in a graph. In an undirected graph,\u00a0\u00a0 we just look for non-tree edges and in a directed\u00a0\ngraph, we use the DFS numbering in order to look\u00a0\u00a0 for back edges and find cycles. Now, there are\u00a0\nactually a "
+    },
+    "85c6898c-99bb-49f3-9d15-468e5327cb35": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "large class of applications where\u00a0\u00a0 directed at acyclic graphs are important. \n \nTypically, a directed acyclic graph is what\u00a0\u00a0 you need to represent a set of\u00a0\ntasks and their dependencies.\u00a0\u00a0 So, suppose you are moving into a new office, let\u00a0\nus say a start"
+    },
+    "aa18f0a3-d2e2-4e72-aae4-c4e3d5884c6d": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "-up is moving to a new office. Now,\u00a0\u00a0 there are a number of things that need to be done\u00a0\nto make the office space ready for occupation. \n\u00a0 Do you have to lay the tiles,\u00a0\nplaster the walls, paint the walls,\u00a0\u00a0 you also have to lay conduits because there are\u00a0"
+    },
+    "95771f90-49b9-4c0d-9640-09f05f30a267": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "\ngoing to be lots of cables and wires, you have\u00a0\u00a0 to do the electrical wiring you have to do the\u00a0\nelectrical fittings, the plug points, but you also\u00a0\u00a0 have to do the telecom wiring and the telecom\u00a0\ncabling, so all this has to be done and there\u00a0\u00a0 will be so"
+    },
+    "d5ffe331-20d1-4ad0-8a4c-689c2f9be599": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "me constraints usually over this. \nSo, there will be some constraints. Let us say\u00a0\u00a0 for instance, that you obviously cannot break open\u00a0\nthe wall after it is plastered and painted, not\u00a0\u00a0 really conduit, so conduits have to be put before\u00a0\ntiles are put on th"
+    },
+    "2fc84692-14d3-4b87-864a-4f19a96c8639": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "e floor before the plastering\u00a0\u00a0 is done, you would probably want to lay the tiles\u00a0\nand plaster the wall before you paint, because\u00a0\u00a0 especially Of course, you have to plaster the wall\u00a0\nbefore you paint. But then if you put tiles after\u00a0\u00a0 you painted the wall"
+    },
+    "116b5014-5176-4530-bf3a-53817cdeba99": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "s, some of the cement used\u00a0\nto lay the tiles might splash on the walls. \n\u00a0 And finally, you might want to finish\u00a0\npainting before you do some cabling and wiring\u00a0\u00a0 and you might want to do the electric wiring\u00a0\nbefore you do this fitting because you cannot\u00a0\u00a0"
+    },
+    "4bc5dc5b-f053-4605-b297-03a495e5d9ca": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": " put the light bulbs refill wires are not in place.\u00a0\nSo, these are typically represented as a directed\u00a0\u00a0 graph in which the vertices are the tasks to\u00a0\nbe done and there is a dependency. So, these\u00a0\u00a0 constraints say you must do this before you do\u00a0\nthat. So, "
+    },
+    "8bae191e-d267-43bb-8089-2c3a9eef9dc0": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "that is a directed edge u before v. \n \n\u00a0 So, let us look at these constraints. So, we\u00a0\nhave these tasks. So, these are the vertices. So,\u00a0\u00a0 here is the graph that we might want to\u00a0\nconstruct using these vertices. So, we have\u00a0\u00a0 these various tasks, you know,"
+    },
+    "7e706735-094e-45b1-91b8-fc2a0b23b569": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": " conduits, tiling,\u00a0\nplastering, cabling, wiring and so on. So,\u00a0\u00a0 now the constraint, the first constraint is laid\u00a0\nthe conduits before the tiles and plastering is\u00a0\u00a0 done and there are two types of conduits, remember\u00a0\nthe electrical conduits and telecom con"
+    },
+    "2f4c9cda-01c4-40a4-97ea-587f789e60a9": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "duits. \n\u00a0 So, both the electrical conduits and the telecom\u00a0\nconduits have to be done before the tiling and the\u00a0\u00a0 plastering is done. Then it says lay the tiles and\u00a0\nplaster the walls before you paint. So, the first,\u00a0\u00a0 the second two steps must be\u00a0\ndone bef"
+    },
+    "870449fd-d131-4eb2-afa6-b4f69c8751dc": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "ore the painting step.\u00a0\u00a0 Painting has to be done before wiring and cabling\u00a0\nhas to be done and wiring has to be done before\u00a0\u00a0 the fittings are installed in the electrical\u00a0\nsetup. So, this represents the constraints,\u00a0\u00a0 this is a directed graph and this dire"
+    },
+    "51602881-2c56-489d-9604-7ca008aad3a4": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "cted\u00a0\ngraph should not have cycles. \n \n\u00a0 So, if it had cycles, it would mean that I\u00a0\nhave to do a before B. But I also have to do\u00a0\u00a0 B before A. So, that would be an unrealizable\u00a0\nthing. So, we want to schedule these tasks so\u00a0\u00a0 that these dependencies are r"
+    },
+    "f37b9c34-de90-41f1-8df3-d7652a626ca5": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "espected and there\u00a0\nmay be many ways to do it. So, we can just do\u00a0\u00a0 it like this. We can take the conduits first and\u00a0\nthen we can do the tiling and the plastering. \n\u00a0 Then we can do the painting and then\u00a0\nwe can do the wiring and the cabling,\u00a0\u00a0 then the fi"
+    },
+    "c96e9f51-d587-46ae-887a-8f2fc2921311": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "ttings, so this would be one sequence\u00a0\nin which you could do it. But if people are not\u00a0\u00a0 available or there is some other optimization\u00a0\nthat we can do in terms of using manpower,\u00a0\u00a0 we could also do some other things. \nSo, we could do conduits of the teleco"
+    },
+    "ffba3a99-edb7-4bf9-a692-0de1d29e2ee7": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "m\u00a0\u00a0 before we do the conduits of the electrical thing\u00a0\nand we can do plastering, before we do the tiling\u00a0\u00a0 and then after we do the painting, we could do\u00a0\nthe electrical wiring and then finish it off,\u00a0\u00a0 maybe the electrician is there, finish off the\u00a0\nwirin"
+    },
+    "fdfedd8b-fba9-4d97-86ce-438fa7dfe3c2": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "g and only then come to the cabling. \n\u00a0 So, there are more than one\u00a0\nway to process these tasks,\u00a0\u00a0 while respecting the dependencies. So,\u00a0\nthat is one thing we want to know, what\u00a0\u00a0 are the different ways in which we can execute\u00a0\nthese tasks, maintaining th"
+    },
+    "b2d9488f-6d32-4613-9462-a4bb89af047f": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "ese dependencies\u00a0\u00a0 and the other thing we might want to know is\u00a0\nhow long is the whole thing going to take,\u00a0\u00a0 if I do this with as many people as possible,\u00a0\nthere is still some constraint that I cannot\u00a0\u00a0 finish one job till I do the previous job and\u00a0\nthere"
+    },
+    "d078ae69-624c-403e-8871-4d04f7c09630": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": " may be some other constraint might be\u00a0\u00a0 that I need the paint to dry. \nSo, if I paint the room today,\u00a0\u00a0 maybe I will not be able to work in this room\u00a0\nfor another two days late. So, some of these\u00a0\u00a0 tasks might have other things, plus we have\u00a0\nthe fact tha"
+    },
+    "e618f262-5c55-4785-b78c-36a3881888a4": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "t we cannot violate this thing. So,\u00a0\u00a0 if I have all my working staff available all\u00a0\nthe time, but I still have to do these and\u00a0\u00a0 each of these has to be done on one or multiple\u00a0\ndays. What is the minimum number of days, so how\u00a0\u00a0 long will it take is basica"
+    },
+    "ce2922f8-8ba9-4d05-98cd-560281403855": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "lly a minimization\u00a0\nproblem, what is the fastest I can do this? \n \n\u00a0 So, this is a directed graph without cycles, which\u00a0\nis often called a Directed Acyclic Graph or a DAG.\u00a0\u00a0 So, finding a schedule amounts to listing out\u00a0\nthese vertices in a sequence. This "
+    },
+    "fa342d50-1191-45cc-8109-3b6a933e15fa": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "is the order\u00a0\u00a0 in which I am going to process the work, you can\u00a0\nthink of it, in such a way that I never have an\u00a0\u00a0 edge going from something which is later in the\u00a0\nsequence to something earlier in the sequence. \n\u00a0 So, I do not do conduits after plastering."
+    },
+    "e120d159-c588-47ca-b300-462360864aaf": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": " So,\u00a0\nin the sequence, all the edges must be respected\u00a0\u00a0 by the sequence. So, if i appears before j,\u00a0\nthen there cannot be an edge from j to i,\u00a0\u00a0 so this process of numerating the vertices in a\u00a0\nconsistent way with the constraints, constraints\u00a0\u00a0 being the "
+    },
+    "4304c9bd-1f1f-45a7-825f-1a97bde2048e": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "edges in my directed a cyclic graph. So,\u00a0\nthis is sometimes called topological sorting. So,\u00a0\u00a0 I want to take a graph, which has many possible\u00a0\nsequences, which are compatible and produce\u00a0\u00a0 any one. This is called topological sorting. \nThe other thing, whic"
+    },
+    "7e1371ee-728d-4377-a736-89cb4179d575": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "h is to ask how long I am\u00a0\u00a0 forced to wait, is what is called the longest\u00a0\npath. So, if I look at this, for instance you\u00a0\u00a0 can see that if I start this and then I say,\u00a0\nassume that everything can be done in a day,\u00a0\u00a0 then on day 1 I can do this. Then on day"
+    },
+    "27abc049-282b-48bf-914f-739a6fe4d8bb": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "\u00a0\n2, I can do these things and then day 3,\u00a0\u00a0 I can do these things, day 4, I can do these\u00a0\nthings and only on day 5, I can do this. \n\u00a0 So, I am guaranteed that I need 5 days to do this,\u00a0\nthere is no faster way no matter how I optimise\u00a0\u00a0 it, there is no, it"
+    },
+    "56428403-99aa-4348-961b-cd9aa646cbca": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": " could take more than 5 days\u00a0\nif I delay it, but I cannot do it in less than\u00a0\u00a0 5 days, because I have this longest path in my\u00a0\ngraph, which forces a dependency of 5 days. \n \n\u00a0 So, we are going to look at how to calculate these\u00a0\nthings using our usual graph"
+    },
+    "95e53139-2226-4015-8c0a-9571c55805e9": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": " representations. So,\u00a0\u00a0 to summarise, we have this notion of a directed\u00a0\nacyclic graph. So, it looks like acyclic graphs\u00a0\u00a0 are very simple and we should not need to worry\u00a0\nabout them. But actually, directed acyclic graphs\u00a0\u00a0 are very important, because they"
+    },
+    "d737d34f-3fb2-4195-9319-4beb02dd4fa1": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": " very naturally\u00a0\ncapture this idea of tasks and dependencies. \n\u00a0 So, anytime we have a constraint on\u00a0\ndoing things one before the other,\u00a0\u00a0 this is what we need to analyse in order to\u00a0\nunderstand how we can execute it without violating\u00a0\u00a0 the dependencies an"
+    },
+    "4d0e49fd-2722-42bf-bbde-7060a2cdfa4c": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "d also how we how fast we can\u00a0\ndo it. So, topological sorting and longest path.\u00a0\u00a0 So, these come in various forms. \nFor instance, you might have to satisfy some\u00a0\u00a0 prerequisites before you complete a degree.\u00a0\nSo, what is the minimum number of semesters\u00a0\u00a0 in"
+    },
+    "0f8ef996-58b3-4a6b-b806-0326b268dddc": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": " which you can complete and graduate? Or you\u00a0\nneed to process some food for cooking. So, some\u00a0\u00a0 things can be overlap, maybe you want to marinate\u00a0\nsomething while you are chopping something. \n\u00a0 So, maybe you have a lot of people in the\u00a0\nkitchen who are hel"
+    },
+    "08bde231-5078-4390-90f5-97f3790643a5": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "ping out. But still,\u00a0\u00a0 some steps must come before other steps. So,\u00a0\nhow fast can you actually prepare a dish?\u00a0\u00a0 Or of course, in a construction project, the kind\u00a0\nof thing that we said for preparing the room,\u00a0\u00a0 also applies to a building as a whole, you h"
+    },
+    "4c1a966c-b7c1-49d2-94e3-3ee3e807c6f3": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "ave to\u00a0\nlay the foundation, then you have to do some work\u00a0\u00a0 on laying this slabs and then\u00a0\nyou have to do some work. \n\u00a0 So, how fast can you actually\u00a0\nput up a house or a building?\u00a0\u00a0 So, all of these things have\u00a0\nthese natural constraints,\u00a0\u00a0 which can be e"
+    },
+    "7be36346-eeaf-4860-9b34-27e70deecac7": {
+        "content_id": 36,
+        "course_name": "PDSA",
+        "title": "Introduction to Directed Acyclic Graph DAG",
+        "week": 4,
+        "chunk": "xpressed in terms of DAGs\u00a0\nand then these questions which arise,\u00a0\u00a0 which is how do you process the tasks to satisfy\u00a0\nthe constraints and how fast can you do them."
+    }
+}

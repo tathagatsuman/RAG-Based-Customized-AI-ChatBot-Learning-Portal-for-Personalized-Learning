@@ -1,0 +1,464 @@
+{
+    "8a97c0f1-d6de-455d-9898-c65bd3b00666": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "So, we are looking at shortest path problems on\u00a0\nweighted graphs. And we started with the single\u00a0\u00a0 source shortest path problem. And we looked\u00a0\nat Dijkstra's algorithm, which works whenever\u00a0\u00a0 there are no negative edge weights. So, what\u00a0\nhappens if you do "
+    },
+    "3387c71a-82dc-4766-b807-0a98a1520a80": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "have negative edge weights? So,\u00a0\u00a0 let us look at the single source shortest path\u00a0\nproblem where there are negative weights.\n\u00a0 So, let us revisit the proof of Dijkstra's\u00a0\nalgorithm and see what the problem is.\u00a0\u00a0 So, we had this burning pipeline. And what we"
+    },
+    "739b445f-0674-4206-9dc7-7df7e9e69dd5": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " said\u00a0\nwas that we will keep track of the burnt vertices,\u00a0\u00a0 and how long it is going to take for the remaining\u00a0\nvertices to burnt the expected burn time. So,\u00a0\u00a0 initially, no vertex is burnt. And initially, all\u00a0\nvertices have an initial burn time of infinit"
+    },
+    "baaf36b2-dc88-48b0-b2d3-a179c2b4225b": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "y,\u00a0\u00a0 and then you burn one vertex, so the source\u00a0\nvertex now acquires a burnt time of zero. \n\u00a0 And after this, what we do is we pick the unburnt\u00a0\nvertex, which has the smallest burnt time or the\u00a0\u00a0 smallest distance among the unvisited vertices,\u00a0\nwe burn it"
+    },
+    "4fa0afd7-5601-4bd8-98cd-f58e8a6bb445": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": ", we make it status change from\u00a0\u00a0 unburnt to burnt or from unvisited to\u00a0\nvisited. And then we update, we update\u00a0\u00a0 the time or the distance to all the neighbours.\u00a0\nFor every j, every k, which is a neighbours of\u00a0\u00a0 the vertex j that we just chose, we update,\u00a0"
+    },
+    "5406f01c-1ec8-43d0-b688-57d2f26e7325": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "\nits burning time to be the minimum of its\u00a0\u00a0 already known burning time, or the burning\u00a0\ntime of j plus the distance from j to k. \n\u00a0 So, for this to work, we had this proof, which\u00a0\nsaid that if I extend my thing in this direction,\u00a0\u00a0 then coming from here, "
+    },
+    "abbc29d3-ecf8-4513-8237-eb9f90b966bf": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "cannot produce a shorter\u00a0\npath. And this required all my edge weights to be\u00a0\u00a0 non negative, because we said, for instance, that\u00a0\nif we had negative weight, like 5, 7 and minus 3,\u00a0\u00a0 then we could, in fact, discovered later on\u00a0\nthrough w a shorter path in te"
+    },
+    "250a9112-f3db-47a5-b1b9-2426d0e2d5fd": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "rms of the costs\u00a0\u00a0 to v, then we can discover right now. \nAnd so we could not apply this anymore.\u00a0\u00a0 And one of the reasons that this\u00a0\nhappens is because we are kind of\u00a0\u00a0 freezing this choice. So, we are saying this\u00a0\nis the shortest path, we have discovered"
+    },
+    "abfc186d-a39c-4d24-81be-38ab47470ada": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " to v,\u00a0\u00a0 and we have frozen it once we move it into this\u00a0\nred part, burnt vertices are the visited vertices,\u00a0\u00a0 we are never going to update its thing again. \nSo, this is a kind of one shot operation,\u00a0\u00a0 I discovered something is the current shortest if\u00a0\nI m"
+    },
+    "c74ced99-a33a-45c1-943c-d0f0a5cfac32": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "ake a decision to burn it, or to visit it, and\u00a0\u00a0 I will never reconsider that distance again. So,\u00a0\neven if I am presented with different information,\u00a0\u00a0 I will not reconsider it. So, if\u00a0\nwe have non-negative edge weights,\u00a0\u00a0 I am guaranteed that I am not goi"
+    },
+    "127d7393-ab9c-4628-8721-bd89261c950a": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "ng to\u00a0\nget contradictory information later on.\n\u00a0 So, it is fine. So, the obvious solution is\u00a0\nto say, well, maybe if I find the later path,\u00a0\u00a0 which is better, maybe I allow myself to change\u00a0\nit. And the problem with this strategies How\u00a0\u00a0 many times will I "
+    },
+    "1a0df7c5-1a19-4682-acc9-4e300f6016b1": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "do this? I mean, what\u00a0\nwill happen if I keep setting it, changing\u00a0\u00a0 it setting it changing it? How do I guarantee\u00a0\nthat this does not keep going on forever? \n\u00a0 So, we are going to allow negative edge\u00a0\nweights because that is the only scenario\u00a0\u00a0 in which th"
+    },
+    "77c38add-4b20-4967-aa82-f2e3b3ce9309": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "e Dijkstra's algorithm will no longer\u00a0\nwork in the way that we said before. But remember\u00a0\u00a0 that we do not allow negative cycles. So, if you\u00a0\ndo not allow negative cycles, then we cannot have\u00a0\u00a0 arbitrarily small path links. So, if you go\u00a0\naround the cycle, "
+    },
+    "dddc4924-07e1-4a88-a838-84dba9363a85": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "we cannot reduce the overall\u00a0\u00a0 length of the path. So, this means that there\u00a0\nis no advantage to going around the cycle. \n\u00a0 And if I go around the cycle, either\u00a0\nI incur zero cost which is fine,\u00a0\u00a0 or incur some positive costs. So if I go\u00a0\naround it, I migh"
+    },
+    "c32d1706-e0e6-4ae4-b0eb-af5e9a929d08": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "t as well not go around.\u00a0\u00a0 So, with this justification, we can easily argue\u00a0\nthat if I do not have negative cycles, then the\u00a0\u00a0 shortest way to go from anywhere to anywhere must\u00a0\nbe a path in the sense that we discussed before\u00a0\u00a0 a path is a sequence of edge"
+    },
+    "f0e9f6a0-cf4f-41c6-be69-ce9fac8fafa0": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "s which are connected\u00a0\nto each other which do not repeat a vertex. \n\u00a0 A cycle is a situation where you will repeat\u00a0\na vertex but going around the cycle has no\u00a0\u00a0 advantage. So, either it has zero disadvantage,\u00a0\nin which case you can still drop it because it"
+    },
+    "2573851f-64d8-4eba-8ae8-4b0499986756": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0\u00a0 only has cost zero. Or you could have a real\u00a0\ndisadvantage because it has a positive weight,\u00a0\u00a0 but it can never have a negative\u00a0\nweight and give you a bonus. \n\u00a0 So, with this in mind. Now we have some\u00a0\nidea that among all the so remember the\u00a0\u00a0 single so"
+    },
+    "d238f551-7a00-465a-b392-d1a1efbbb860": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "urce pathway. So, I am starting from\u00a0\nS and I am trying to go to some t and I might\u00a0\u00a0 have many different ways of going from s to\u00a0\nt. And I want the minimum among all this,\u00a0\u00a0 but what I am guaranteed is that the shortest\u00a0\nroute from s to t is going to be a"
+    },
+    "a379a425-644a-44ad-85f4-1e414fe19d5b": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " path. \n\u00a0 So, it cannot pass through more than n minus\u00a0\n1 edge, because if it passes through n edges,\u00a0\u00a0 then it will have to repeat a vertex\u00a0\nand then it will no longer be a path.\u00a0\u00a0 So, there is an upper bound in terms of number of\u00a0\nedges which are seen go"
+    },
+    "8529cd98-39b2-4238-9c8c-dbc12b1046d7": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "ing from s to t and this\u00a0\u00a0 will help us to derive an algorithm for the\u00a0\ncase where we have negative edge weights.\n\u00a0 So, supposing 0 is our starting vertex and we\u00a0\nwant to get to vertex k and the shortest path\u00a0\u00a0 follows these l edges. So, I have w1 to j1 th"
+    },
+    "d5fb5deb-2b7e-4544-9f8d-54e8ccf4e0aa": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "en\u00a0\nw2 to j2 and so on. And finally, wl minus 1 to j\u00a0\u00a0 l minus 1 and wl to k. So, I follow l edges. So,\u00a0\nthis as we discussed need not be the shortest in\u00a0\u00a0 terms of number of edges, but the shortest\u00a0\nin terms of number of weight if I add up w1\u00a0\u00a0 plus w2 to"
+    },
+    "58655334-43b9-4f5b-9ead-b8b1235060fb": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " wl I can find no shorter path. \nSo, the first observation is that each of the\u00a0\u00a0 paths before it must be themselves shorter. So,\u00a0\nsupposing for instance, I could find a better path\u00a0\u00a0 from 0 to j2. So, supposing there is\u00a0\nsomething which with weight w prime"
+    },
+    "82b42b5c-8bc9-4374-99fa-78928eef59b1": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": ",\u00a0\u00a0 which is less than w1 plus w2. Well, then I\u00a0\nknow that from j2 I can get to k. So, I could\u00a0\u00a0 choose the shorter path w prime and get a shorter\u00a0\npath from 0 to k which contradicts my assumption\u00a0\u00a0 that 0 to k as stated is the shortest path. \nSo, therefor"
+    },
+    "fac82f2a-9783-4cbd-8f1e-c0a5fec6a7c5": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "e, if this is the shortest path, then\u00a0\u00a0 0 to j l minus 1 is also shortest path, 0 to j l\u00a0\nminus 2 is also shortest path and so on. So, every\u00a0\u00a0 one of the paths on the way to this k is also\u00a0\na shortest path up to that intermediate vertex.\u00a0\u00a0 So, that means t"
+    },
+    "9c8a7b68-cee6-4bef-a048-5d700ee66ea1": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "hat if I can find\u00a0\nshortest paths of length l minus 1\u00a0\u00a0 and if I know that k has a shortest path of length\u00a0\nl, then for every vertex if I know the l minus\u00a0\u00a0 1 path or shortest length to that vertex. \nThen among those, I will get the shortest path of\u00a0\u00a0 leng"
+    },
+    "7ddcf4ce-bcc5-403f-99f6-a2e3f9d9f36a": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "th l to k. So, this is\u00a0\nthe idea now that we will keep\u00a0\u00a0 updating the shortest path, and each\u00a0\ntime we update the shortest path,\u00a0\u00a0 we would have discovered shortest paths up to\u00a0\na longer length. So, initially when we update\u00a0\u00a0 shortest paths, we will only k"
+    },
+    "14e36709-b084-47e9-aa49-76c8123652a6": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "now shortest\u00a0\npaths of length 1 path length to 1. \n\u00a0 So, that is if you remember our original picture.\u00a0\nSo, we had this 0 1 2. And we had these weights,\u00a0\u00a0 10, 6 and 80. So, if I look at path length 1\u00a0\nstarting from here, then I have this edge and\u00a0\u00a0 this ed"
+    },
+    "e8a665bc-43e5-4f37-822d-10ecd8f8c4e9": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "ge. So, this gives me this estimate of\u00a0\n80, and 10. Now, if I look at path links 2. So,\u00a0\u00a0 this is 80, and this is 10. If I look\u00a0\nat path links 2 then this 80 becomes 16.\u00a0\u00a0 So, the fact that there is a shortest path of\u00a0\nlength 2 to vertex to gets discovered"
+    },
+    "42ed9a9e-9b5f-4959-b428-77f25a97e124": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " after I\u00a0\u00a0 find the shortest paths of length 1. \nSo, in general, if I have a shortest path\u00a0\u00a0 of length l, this will be discovered after I\u00a0\nfind the shortest paths of length l minus 1.\u00a0\u00a0 And that is what we are going to do by iteratively\u00a0\nupdating. So, we a"
+    },
+    "5b6b5dbf-4d48-47ad-956b-f05a6cc138cc": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "re not going to freeze the\u00a0\u00a0 update, but we are going to keep up every\u00a0\ntime we make a change, we will update all\u00a0\u00a0 the neighbours of that changed vertex. \nSo after l updates, the claim is that\u00a0\u00a0 all the shortest paths using at most l edges\u00a0\nwould have rea"
+    },
+    "ec5d65ca-f0b8-4a48-9079-2f855f313bde": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "ched their optimum. And since,\u00a0\u00a0 as we discussed before, the shortest path to any\u00a0\nvertex must be a path and it can have at most n\u00a0\u00a0 minus 1 edge. If we do this n minus 1 times,\u00a0\nwe would have stabilized all the paths.\n\u00a0 So, this turns out to be a much sim"
+    },
+    "5bd563f7-3800-47ed-ab36-d478bcfb5bff": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "pler algorithm,\u00a0\nthen the Dijkstra's algorithm in some sense to\u00a0\u00a0 implement you, you first set the source vertex\u00a0\nto be let us assume the source vertex is 0. So,\u00a0\u00a0 initially, you assume the distance to 0 is 0,\u00a0\nand for everything else is infinity. And now,"
+    },
+    "fe45b246-5459-435c-be6b-34f57f5bb23d": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0\u00a0 every time you find a minimum vertex. \nSo, for each edge, for every vertex,\u00a0\u00a0 its estimate, you look at its outgoing edges,\u00a0\nand you reestablish the minimum for the outgoing\u00a0\u00a0 thing. So, supposing I am currently at j, and I\u00a0\nhave some outgoing things, a"
+    },
+    "8bce0efc-73dd-4aa6-8c79-e007f2be7fa1": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "nd I have some w1, w2,\u00a0\u00a0 w3 as my estimates there. And I know my w here.\u00a0\nSo, I have d1, d2, and d3. So, at every point,\u00a0\u00a0 I will compare w1 with w plus d1. \nI will compare w2 with w plus d2. So,\u00a0\u00a0 I will update everything, and I will update all\u00a0\nits neigh"
+    },
+    "bd7d1da4-669b-43bd-a302-cc1846129d78": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "bors. And I will keep doing this again\u00a0\u00a0 and again. So, that is the algorithm. So, this\u00a0\nworks for both directed and undirected graphs. So,\u00a0\u00a0 here is the algorithm we will come back and look\u00a0\nat it a little more carefully after we do kind of\u00a0\u00a0 run through "
+    },
+    "37898eba-e74a-41a5-a359-53244b65c5e6": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "of it. \nSo, what we do is we take an adjacent c matrix and\u00a0\u00a0 a source vertex. As before we figure out how many\u00a0\nrows we have, and we set this infinity in terms\u00a0\u00a0 of the number of rows and the maximum value in the\u00a0\nmatrix. And now we have this distance dict"
+    },
+    "b1a7fde1-e35a-433b-9b21-e712c0aea9b0": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "ionary,\u00a0\u00a0 which will give us a distance everything. So,\u00a0\ninitialize all the distances to infinity, and then\u00a0\u00a0 set the distance of the source vertex to 0. \nAnd now we are going to do something n times,\u00a0\u00a0 n minus 1 time suffices. But we will do n times.\u00a0\nSo,"
+    },
+    "3c04bd88-8af0-4043-85ac-08d9a9610772": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " n times, what do we do for every vertex\u00a0\u00a0 for every v. So, for every u\u00a0\nfor every v, if u v is an edge,\u00a0\u00a0 then we update the distance of v to be\u00a0\nthe minimum of the existing distance,\u00a0\u00a0 plus the distance of the starting point of\u00a0\nthe edge and the weight o"
+    },
+    "93a01de0-b1b4-4d63-a50a-aa4d941285d3": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "f the edge. \n\u00a0 So, we say d of v, is going to be min of\u00a0\nthe existing distance plus or d u plus\u00a0\u00a0 the weight of this edge. And we\u00a0\njust keep doing this blindly.\u00a0\u00a0 And an analysis says if there are no negative\u00a0\ncycles, and this is going to settle down.\u00a0\u00a0 So"
+    },
+    "7f580088-d791-4585-8795-e529189196f2": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": ", this is, as you can see, in terms of code,\u00a0\nthis is just a bunch of nested loops. And it is\u00a0\u00a0 significantly simpler than Dijkstra's\u00a0\nalgorithm to implement. \n\u00a0 So, here is an example of a graph which has\u00a0\nnegative weights. So, you have these minus 4\u00a0\u00a0 an"
+    },
+    "529b1ae9-57fb-4eec-8fc5-f616a332bf50": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "d minus 1 and so on. But there are no negative\u00a0\ncycles. So, for instance, if you go around this,\u00a0\u00a0 there is a cycle. But the along this path,\u00a0\nthe cycle, you have minus 2 plus1, plus 2,\u00a0\u00a0 so the total of this cycle is plus 1. So, in\u00a0\nthe same way, you can "
+    },
+    "df434964-0aef-4b79-8ea3-62b59f35dd68": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "look at other cycles. So,\u00a0\u00a0 there is a cycle here, for instance, 6 to 1,\u00a0\n1 to 5, no, that is not the cycle, sorry. \n\u00a0 So, you have a cycle here, for instance, 5 to 2, 2\u00a0\nto 3, 3 to 4, so here this minus 1, minus 2 plus 1\u00a0\u00a0 plus 3 minus 1. So, this again, "
+    },
+    "4d08f324-c5b3-4a76-ac27-690e5ff23c52": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "has a net of plus\u00a0\n1 because it is minus 3 plus 4. So, in this graph,\u00a0\u00a0 we have negative edges, but no negative cycles.\u00a0\nAnd in principle, if I take 0 as my canonical\u00a0\u00a0 starting vertex, this algorithm that we just\u00a0\ndiscovered, called the Bellman Ford algor"
+    },
+    "f652e979-a9dc-4d9d-8d43-1c7cdfe07020": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "ithm,\u00a0\u00a0 after two gentlemen, Bellman and Ford.\u00a0\nThis algorithm should produce the shortest\u00a0\u00a0 paths from 0 to every other vertex.\nSo, the way it works, as we will keep this\u00a0\u00a0 stage wasting. So, initially, we want at the 0 at\u00a0\nstage, the distance to 0 is 0 a"
+    },
+    "30336586-a437-400b-9f2c-48f0e88df569": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "nd the distance,\u00a0\u00a0 so everything else is infinity. That is\u00a0\nour initialization. Now, what I do is I\u00a0\u00a0 take everything that is known, and I update things\u00a0\nwhich are unknown. So, what do I know? 0. So, if I\u00a0\u00a0 know that 0 is 0, then this must be 8. And if I\u00a0\n"
+    },
+    "65beece7-f4dd-4f30-b4b8-70121cc54496": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "know 0 is 0, this must be 10. For everything else,\u00a0\u00a0 my current estimate is infinity. \nSo, infinity plus whatever is going\u00a0\u00a0 to be infinity. So, I get a new distance for\u00a0\n7 and 1. So, vertex 1 is going to be 10. And\u00a0\u00a0 vertex 7 is going to be 8. So, this is"
+    },
+    "195a2758-af3d-42c5-90bc-838dd068267a": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " what\u00a0\nI get. So, I get new entries here, 7 and 8.\u00a0\u00a0 Now from this, I can get the distance to 6.\u00a0\u00a0 So, now I know something about 7, I know\u00a0\nsomething about 0, I know something about 1.\u00a0\u00a0 So, now I can update to 6, for\u00a0\nexample, 7. I can update from 1 to 5"
+    },
+    "bcb26da8-d7bb-4eac-b5c3-38d89f3b68d9": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": ".\u00a0\u00a0 And so I get two new entries for 6 and 5. \nSo, I keep doing this. So, now that I know all\u00a0\u00a0 these things, I can update once more.\u00a0\nAnd I will get now information about 2,\u00a0\u00a0 I get information number 2, because I know 5. So I\u00a0\nknow from 5 to 2. So, 5 was"
+    },
+    "587dbaab-618a-4994-8174-26e280fdf3ce": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " at distance 12 before\u00a0\u00a0 and 12 minus 2 is going to be 2. So, I keep doing\u00a0\nthis. And I do this blindly. And after the seventh\u00a0\u00a0 iteration of this, I stabilize. And this is going\u00a0\nto be the shortest path from 0 to everything else.\u00a0\u00a0 So, this is the Bellman"
+    },
+    "ae48710a-d3ff-4189-8581-b5a94ff73504": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " Ford algorithm.\nNow, if there was a negative cycle,\u00a0\u00a0 then what would happen is that if\u00a0\nI computed one more column of this,\u00a0\u00a0 then I would find a longer path which has gone\u00a0\naround the cycle, and then something will reduce\u00a0\u00a0 one more time. So, this Bellm"
+    },
+    "b1175a26-bb0d-4379-9f3e-411fdf00690b": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "an Ford algorithm\u00a0\nwill work correctly if there are no negative\u00a0\u00a0 cycles, but if there are negative edge weights,\u00a0\nbut also if I run it one more time, then it should\u00a0\u00a0 stabilize and it has not stabilized. \nSo, I had run it an eighth time\u00a0\u00a0 for seven, rathe"
+    },
+    "170e68a0-e367-4053-ab0e-8ffe367304aa": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "r a ninth time for these eight\u00a0\nvertices. And if it does not stabilize, that\u00a0\u00a0 means actually there is something wrong. So, I can\u00a0\nalso detect negative cycles using Bellman Ford.\u00a0\u00a0 So, I just check up the n eth update will\u00a0\nreduce the distance to any verte"
+    },
+    "fd7ec0a1-e7e7-4a7b-8be7-64f966e1bac5": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "x. If it does,\u00a0\u00a0 then there is some negative cycle. \nSo, here is the adjacency matrix version\u00a0\u00a0 of it that we saw before. So, this\u00a0\nis going to take now n squared time.\u00a0\u00a0 And then this loop runs n times.\u00a0\nAnd inside this loop, we have this,\u00a0\u00a0 which is anot"
+    },
+    "4e4b4247-f9b1-4f94-aaf2-6b6cc6fb5ff4": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "her n squared time. And so this\u00a0\nwhole thing is going to take, it should be an\u00a0\u00a0 n cube I think. We should take n cube.\u00a0\u00a0 So, if we take adjacency lists instead,\u00a0\nagain, this is an order m algorithm. \n\u00a0 And now, this particular update inside, which is\u00a0\near"
+    },
+    "742bc887-90b5-45b9-97cc-56fe8cca64ae": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "lier taking n squared time. So, remember this\u00a0\u00a0 is n cubed, this earlier thing, which is taking\u00a0\nn squared time is now going to take order m time.\u00a0\u00a0 I am going to take and update the distance\u00a0\nacross all the edges in my graph. I am not\u00a0\u00a0 going to look at a"
+    },
+    "ed700e3c-8f62-4c4c-af17-d25a7321cfe1": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "nything except an edge. \nSo, across all the vertices, I am going to\u00a0\u00a0 look at all the neighbors and that is going to\u00a0\nbe the sum of all the edges in my graph. So,\u00a0\u00a0 I will do that update, and that will be ordering.\u00a0\nSo, therefore, I have an outer loop, whi"
+    },
+    "3dc29708-8613-4284-b10b-d3a81f2d238b": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "ch is n.\u00a0\u00a0 And inside that outer loop of n, I am doing order\u00a0\nm operations. So, I am going to do m times n. \n\u00a0 So, remember that m is at most n squared. So,\u00a0\nm times n could be n cubed. But if m is small,\u00a0\u00a0 for example, as we said, If m is linear in the\u00a0\nn"
+    },
+    "9b0e7409-4203-4e65-9493-0594cd79b8c6": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "umber of vertices, then m times n could be an n\u00a0\u00a0 squared. So, it could be one order of magnitude\u00a0\nsmaller than n cube. So, again, adjacency lists\u00a0\u00a0 give us a much better complexity, then\u00a0\nadjacency matrices for Bellman Ford.\n\u00a0 So, Bellman Ford allows us t"
+    },
+    "70fefad0-70d2-446e-981c-6ff164d7680d": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "o do single source\u00a0\nshortest path, even in the presence of negative\u00a0\u00a0 weights. So, the point of Dijkstra's algorithm was\u00a0\nthat because of this assumption about non negative\u00a0\u00a0 weights, you could do this greedy update. Whenever\u00a0\nyou see the minimum distance "
+    },
+    "a2c9c38e-0686-4647-8494-69f093b8b6af": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "to an unburnt vertex,\u00a0\u00a0 or unvisited vertex, you could freeze that and\u00a0\nsay, forever, this is the minimum distance. \n\u00a0 But if you have negative edges, you could\u00a0\nlater discover a shorter path to that vertex,\u00a0\u00a0 and you have no way to update it in Dijkstra's"
+    },
+    "52bea00d-beab-4bf2-9b96-a3a42a6b9e75": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "\u00a0\nalgorithm. So, what Bellman Ford says is,\u00a0\u00a0 well, you just go ahead and do it, we just\u00a0\nevery time you see an update to a vertex,\u00a0\u00a0 you update all its neighbors if they can be\u00a0\nupdated. And you are guaranteed if there are no\u00a0\u00a0 negative cycles that this p"
+    },
+    "babae370-f183-47f9-82b3-482f7e0a3b1c": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "rocess of updating\u00a0\nwill stabilize after n minus 1 rounds. \n\u00a0 So, after k rounds, it will\u00a0\nstabilize all parts of length k.\u00a0\u00a0 So, after n minus 1 rounds, you will\u00a0\nhave all paths of length n minus 1,\u00a0\u00a0 which will cover all the shortest paths. So, by\u00a0\nrepea"
+    },
+    "73efd2f0-7d25-4ff3-8ac7-670fe1913238": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "tedly doing this blind update, in some sense,\u00a0\u00a0 you uncover all shortest paths in\u00a0\nthe presence of negative edges.\u00a0\u00a0 So, this takes n cube time if you use an adjacency\u00a0\nmatrix, but if you use an adjacency list is m\u00a0\u00a0 times n, which in the worst case could "
+    },
+    "2f69d2cf-aea8-406e-a0d7-64fe08ea1ad9": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": "be n cubed,\u00a0\nbut it could be much better if m is small. \n\u00a0 And we can also exploit the fact that Bellman\u00a0\nFord should converge. But if it does not converge,\u00a0\u00a0 it tells us something interesting, which is that\u00a0\nthe distances continued to reduce and therefore"
+    },
+    "42fbd90f-c7dc-401b-a6a4-b4fd8fa8f68a": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " my\u00a0\u00a0 assumption that there were no negative cycles is\u00a0\nfalse. There are negative cycles in the graph. So,\u00a0\u00a0 by running Bellman Ford one more time, and\u00a0\nchecking if things change again, they can\u00a0\u00a0 only change by going down of course, if they go\u00a0\ndown, then"
+    },
+    "fedaf441-7055-4f91-839b-968db3dda5b4": {
+        "content_id": 41,
+        "course_name": "PDSA",
+        "title": "Single Sourse Shortest Paths with Negative Weights (Bellman-Ford Algorithm)",
+        "week": 5,
+        "chunk": " it means that you have a negative cycle\u00a0\u00a0 in your graph and therefore this was not a valid\u00a0\ngraph to compute shortest paths at all.  "
+    }
+}

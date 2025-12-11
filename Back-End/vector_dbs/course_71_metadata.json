@@ -1,0 +1,912 @@
+{
+    "4869d89d-1300-449a-a6b9-5779614f8dc8": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "One of the motivating examples\u00a0\nthat we gave for string matching\u00a0\u00a0 is using something like a text editor. So, when we\u00a0\nare editing text, then we are generating text. And\u00a0\u00a0 as we are generating the text, we are looking\u00a0\nfor some other patterns to make chang"
+    },
+    "fbc3718b-76be-4f8b-9551-e654defba591": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "es. \n\u00a0 But quite often, search happens in the\u00a0\ncontext of a piece of text that is fixed.\u00a0\u00a0 So, for instance, you might be trawling through\u00a0\na large body of work by a single author,\u00a0\u00a0 like the collected works of Shakespeare. Or\u00a0\nyou might be in an organizat"
+    },
+    "275808ce-52a9-442f-b470-bb890de9d7a4": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ion which has a\u00a0\u00a0 large body of reference manuals. Or in our\u00a0\nother example that we have frequently cited,\u00a0\u00a0 you might have genetic data for some organism\u00a0\nor organisms that you want to search in. \n\u00a0 So, this is a more typical situation where you\u00a0\nhave a b"
+    },
+    "95db5ca9-eb29-4bcb-a156-cdde5202a87e": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ody of text, which is more or less fixed,\u00a0\u00a0 but this text is going to be searched repeatedly.\u00a0\nSo, what would we search for, for instance,\u00a0\u00a0 if it is Shakespeare's plays, then we might\u00a0\nhave a quotation that we want to search and\u00a0\u00a0 find which plate came in"
+    },
+    "d080f649-ed70-4b86-902b-73a12ac96e35": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " and who spoke it. \nSo, this is a typical example where a number\u00a0\u00a0 of quotations are very famous from\u00a0\nShakespeare's plays. So, when we come\u00a0\u00a0 across one we want to know is this a quotation\u00a0\nfrom Shakespeare or not. So, we query this\u00a0\u00a0 text, which is fixed"
+    },
+    "787a7fdb-f40d-481c-940f-5b873136fb67": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": ". Similarly, if you have some\u00a0\nquestion about something to do with the operation\u00a0\u00a0 of your organization, or your plant machinery or\u00a0\nwhatever, you might want to query the reference\u00a0\u00a0 manual for a part number, or a process. \nAnd finally, when you have a gen"
+    },
+    "433d920c-0ca0-40cd-8b9a-5ded746c6003": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "e sequence\u00a0\u00a0 for an entire organism, and you want to find out\u00a0\nif a particular pattern is there, you might want\u00a0\u00a0 to query this or you might have a database of such\u00a0\ngenetic material from a number of organisms, and\u00a0\u00a0 you may want to look for it across this"
+    },
+    "e8621287-ed9d-4930-bc0f-da03555f87dc": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " database.\u00a0\nSo, in all these situations, the difference is\u00a0\u00a0 that we are searching for a pattern repeatedly in\u00a0\na piece of text that is not changing at all. \n\u00a0 So, we could hope, since the text is not\u00a0\nchanging, we could hope to do something with\u00a0\u00a0 the tex"
+    },
+    "80414b6b-c718-44fa-b3a4-609dbb33b878": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "t that is to process the text and make\u00a0\nit more efficient to search for this pattern.\u00a0\u00a0 So, that the cost of searching for the pattern\u00a0\ndoes not depend on the text at all. If you\u00a0\u00a0 remember, when we did things like Knuth, Morris,\u00a0\nPratt, and so on, we said"
+    },
+    "bb880856-c1dd-4ad7-8011-ec60ba0141e4": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " that we would do things\u00a0\u00a0 in time order n plus m, where n was the length of\u00a0\nthe text, and m was the length of the pattern. \n\u00a0 Now, if we have a fixed pattern, we\u00a0\nwould like to make this dependence on n,\u00a0\u00a0 or the fixed piece of text, we would like to mak"
+    },
+    "ad4199bf-3f85-4588-b3b3-bc4950432ad4": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "e\u00a0\nthis dependence on n go away, we would like the\u00a0\u00a0 search to be only proportional to the length\u00a0\nof the pattern. So, how can we do this? \n\u00a0 So, one way of doing this is to record the\u00a0\nwords in our text in a special kind of data\u00a0\u00a0 structure called a try. "
+    },
+    "2c255e19-4dc7-4c5f-a4b9-2a8f65726fca": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "So, the word try\u00a0\ncomes from information retrieval. So, it is\u00a0\u00a0 hidden inside the word retrieval. So, as you\u00a0\ncan imagine, in retrieval, it is pronounced\u00a0\u00a0 tree and that is how the original inventor of\u00a0\nthe tribe intended it to be pronounced. \n\u00a0 But since "
+    },
+    "72b3cea7-b476-4e53-9a1d-74c2cd578dd3": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "we use trees, all across the place\u00a0\nTREE all across the place in computing,\u00a0\u00a0 it has become conventional to call\u00a0\nthis data structure at try. So,\u00a0\u00a0 it is a special kind of tree. But to\u00a0\ndistinguish what special kind of tree it is,\u00a0\u00a0 we call it try? What ab"
+    },
+    "a52c519c-20eb-4184-89a0-9a37048807c6": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "out information\u00a0\nretrieval itself? Well, information\u00a0\u00a0 retrieval is the traditional subject of this\u00a0\nkind of search that we are talking about. \n\u00a0 You have a body of text and you want to search for\u00a0\nit. So, for instance, this has been the case with\u00a0\u00a0 librar"
+    },
+    "8127433f-9758-4537-b4e7-845067ad8f1a": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ies. For instance, if you are looking for\u00a0\na book in a library, or in the legal profession,\u00a0\u00a0 you have cases and cases which have taken place\u00a0\nin the past. And when you come across a new case,\u00a0\u00a0 the lawyers would like to look for precedents. \nSo, they woul"
+    },
+    "8bce71c8-bcdd-4b9a-b5b5-713e4847bc63": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "d like to search for earlier cases\u00a0\u00a0 which have similar features to the current\u00a0\ncase. So, information retrieval is a traditional\u00a0\u00a0 subject, which far goes back far beyond\u00a0\nmodern computing. But in the modern context,\u00a0\u00a0 whenever we query a search engine, w"
+    },
+    "73f1ff20-610a-4744-8657-cceccb6088af": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "hat\u00a0\nwe are doing is information retrieval. \n\u00a0 We have a body of text, namely all the texts on\u00a0\nthe internet, and we are searching for a pattern\u00a0\u00a0 against this. Now, of course this body of text\u00a0\non the internet is not a fixed piece of text,\u00a0\u00a0 because it ke"
+    },
+    "3c06d6ae-bb08-44aa-ae87-c11a66f1b0f4": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "eps changing. People\u00a0\nkeep adding and modifying documents.\u00a0\u00a0 But what search engines do is they try to index\u00a0\nor pre process documents once in a while. \n\u00a0 So, that effectively when you make your search,\u00a0\nit is not looking at the current state of the\u00a0\u00a0 docu"
+    },
+    "4c659251-8427-41c0-a51e-4cc6407bf6b1": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ments, but at the state of the documents\u00a0\nas they were when they were indexed. So,\u00a0\u00a0 it is as though the internet is a fixed\u00a0\nset of documents. And you are searching\u00a0\u00a0 in that so all of these falls under this\u00a0\nbroad category of information retrieval,\u00a0\u00a0 and"
+    },
+    "12ac64be-d413-4718-9f0a-fb01f6afcf09": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " the try was invented to deal with that. \nSo, what does a try look like? It is a special\u00a0\u00a0 kind of tree as we said. So, it has a root so it\u00a0\nis like our search trees and heaps and other trees\u00a0\u00a0 that we have seen an at every node other than the\u00a0\nroot, we ha"
+    },
+    "d560e09a-0773-4488-8c07-a078893f5d44": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ve a letter from our alphabet sigma.\u00a0\u00a0 Now, one of the properties is that if we\u00a0\nlook at any node in the tree, and we look\u00a0\u00a0 at the labels of its children, remember that\u00a0\neach node is labeled by a letter from sigma,\u00a0\u00a0 these labels are all going to be diffe"
+    },
+    "1507c134-d2fc-412f-8f3e-2f979bdfec14": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "rent.\u00a0\nSo, you will not have two children with the\u00a0\u00a0 same label. So, that is the property\u00a0\nof a try. So, on the right, we see\u00a0\u00a0 the try corresponding to a set of words. \nSo, remember, if you have a fixed text,\u00a0\u00a0 you can decompose if your only let us have a"
+    },
+    "51f8d906-2035-4879-b4d1-5d4ffc904437": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "\u00a0\nsimple situation where we are looking for words\u00a0\u00a0 in this text, we want to do a keyword search. So,\u00a0\nwe are only interested in recording in some sense,\u00a0\u00a0 the dictionary or the set of\u00a0\nwords that this text contains. \n\u00a0 So, suppose this text contains these"
+    },
+    "22e22460-3529-4e17-875c-6f541bcb4496": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " words bear,\u00a0\nbell, bid, bull, buy, sell, stop and stock.\u00a0\u00a0 So, what we have is a kind of clever\u00a0\norganization of these words in this tree form,\u00a0\u00a0 so that if you walk down and follow any path,\u00a0\nso for instance, if you follow this middle path,\u00a0\u00a0 then you re"
+    },
+    "68af10b8-0032-4474-b94b-67b732caa0db": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ad off the word bid, which is\u00a0\none of the words in your dictionary. \n\u00a0 If you follow this path, then you read off the\u00a0\nword buy which is also a word in your dictionary.\u00a0\u00a0 So, every maximal path, in our try denotes a word\u00a0\nin the dictionary. So, here for in"
+    },
+    "c7d9484f-0744-4463-b74a-cad47984af84": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "stance, we have\u00a0\u00a0 stop, and here on the right, we have stock. Now\u00a0\nthe fact that children have distinct labels means\u00a0\u00a0 that essentially we keep prefixes together\u00a0\nso that we do not have one path per word. \n\u00a0 So, all the words starting with b pass through\u00a0\n"
+    },
+    "d3bde597-d105-49de-9e87-fa326bf6b80c": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "this node b, all the words starting with s pass\u00a0\u00a0 through this node labeled list. Now buy\u00a0\nand bull start with b and u so up to here,\u00a0\u00a0 there is a common prefix and then they diverge.\u00a0\nSo, in this way at try compactifies the words\u00a0\u00a0 by sharing the prefix a"
+    },
+    "2abedbb0-0ac7-43c1-946c-5370257b0947": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "s far as possible,\u00a0\nand then taking us to the end. \n\u00a0 Now, there could be some ambiguity about where\u00a0\na word ends. So, we saw this if you remember,\u00a0\u00a0 when we did Huffman coding, we talked about\u00a0\nthe fact that when you are decoding a code,\u00a0\u00a0 you need to kno"
+    },
+    "05fb3db3-8f1b-4b65-96df-ece62bf5563d": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "w where the symbol should be\u00a0\nbroken, in order for us to be able to recover the\u00a0\u00a0 letters one by one. So, we said that one of the\u00a0\nthings that we like we wanted a quote to satisfy\u00a0\u00a0 is that no encoding of a letter is a prefix of\u00a0\nanother letter. So, we nee"
+    },
+    "057ab773-6229-47d9-acf1-e4dce418149c": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "d a similar property\u00a0\u00a0 here we need to know where the words end so\u00a0\nthat we know whether a word is there or not. \n\u00a0 So, for instance in this particular\u00a0\nthing, there is no possibly\u00a0\u00a0 sensible word but you might ask whether\u00a0\nthe word b e a is a word in our "
+    },
+    "2ec931aa-46f3-4c4e-8c11-4f7902b7a42d": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "set or not.\u00a0\u00a0 But, the way we do it in this particular thing is\u00a0\nto effectively add an end of letter symbol. So, if\u00a0\u00a0 you look notice this try here just to make things\u00a0\nsimple, we have denoted the last letter of every\u00a0\u00a0 word that by a square rather than a "
+    },
+    "04cdbfec-ef1b-49b1-bb56-0a9ae31b6a81": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "circle. \nBut in practice, what this means and we will see\u00a0\u00a0 later is that there is one extra symbol hanging\u00a0\noff each of these. So, each word is completed\u00a0\u00a0 by adding a dollar to it or some symbol,\u00a0\nwhich is not in my original alphabet sigma.\u00a0\u00a0 And this si"
+    },
+    "54da1410-a588-41da-a7c1-017458998af0": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "gnifies that the word is finished.\u00a0\nSo, that if I see a prefix of a word,\u00a0\u00a0 then a try will report that it is not a valid\u00a0\nword, it is just a part of the word. \n\u00a0 So, we typically build a try as we said, from\u00a0\na set of words. So, this set of words capital "
+    },
+    "6479441f-7212-42fc-8e1a-8d5b92782f2b": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "S\u00a0\u00a0 has some subset of words. So, in this particular\u00a0\ncase, if you remember, we had about eight words,\u00a0\u00a0 and totally we have some n symbols across these\u00a0\nwords. So, if you look at this particular thing,\u00a0\u00a0 we have 1, 2, 3, 4, 5, 6, 7, 8 words\u00a0\nand we have 4"
+    },
+    "b67a936c-7ec9-4be5-93bf-65fc74dc72b0": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " plus 4 plus 3, 11 15,\u00a0\u00a0 18, 22, 26 and 531 letters\u00a0\nacross these eight words. \n\u00a0 So, now to search for a word as we said,\u00a0\nwe follow the path. So, for example, if we\u00a0\u00a0 look for the word bell, then we follow we just\u00a0\nread off the path, so, the first letter"
+    },
+    "8dd41393-5e42-4ada-9215-e72bf61c0bfd": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " is b,\u00a0\u00a0 so we must go this way, the second letter e,\u00a0\nso, we must go this way, the third letter is l.\u00a0\u00a0 And then we come here and then we\u00a0\nhave implicitly hit this dollar. So,\u00a0\u00a0 if we finish the word and we have reached a node\u00a0\nwho successes a dollar, the"
+    },
+    "d79b3bf9-b464-4999-8ac2-61d81668feb3": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "n we have found it. \n\u00a0 On the other hand, if we look for a word that\u00a0\nfor instance, is not there at all, then we would\u00a0\u00a0 start with b u l. And now we want to look for a\u00a0\nsuccessor node labeled k but there is none. So,\u00a0\u00a0 we get stuck here. So, this is one w"
+    },
+    "78fb1b45-d3cb-4959-9086-ff619b329375": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ay in which\u00a0\nwe can fail. The other way in which we can fail\u00a0\u00a0 as I said is that we will complete reading\u00a0\nthe word but we do not reach a leaf node that\u00a0\u00a0 is we do not reach a node whose successor is\u00a0\ndollar. So, this is how we search for a word.\u00a0\u00a0 So, now"
+    },
+    "453b8c56-57c2-4dc5-a37f-dee96c8b9ca0": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " if we look at this, what can we say\u00a0\nabout this trie? So, first of all, each path\u00a0\u00a0 is a word in my set S. \nSo, obviously the longest path\u00a0\u00a0 is the length of the longest word. So, if\u00a0\nI take all the words in S, and I take the\u00a0\u00a0 length of them and I take t"
+    },
+    "34ad2fe2-358f-4fa2-9224-f9a70f48cac6": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "he maximum, then the\u00a0\nlongest word will represent the longest path. So,\u00a0\u00a0 every word is explicitly represented as a path in\u00a0\nmy try. Of course, because each node has at most,\u00a0\u00a0 one label for each letter, as a state as a child,\u00a0\na note cannot have more succ"
+    },
+    "86e6b763-97a8-4f7f-af7c-5e2a9787535b": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "esses, and then there\u00a0\u00a0 are a number of letters in alphabet. \nSo, this for instance, has three successes.\u00a0\u00a0 But in my alphabet here, if this is my\u00a0\nEnglish alphabet, even in this set of words,\u00a0\u00a0 we have used 8 or 10 words. So, we could not\u00a0\nhave more than "
+    },
+    "3315f35b-595b-45fd-bb8c-13396da9876b": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "26 successes if we are using\u00a0\u00a0 lowercase English letters or other anything.\u00a0\nBut not everything will have all successes. So,\u00a0\u00a0 b has three successes here, this b i has only\u00a0\none successor because there is only one word with\u00a0\u00a0 prefix b i. Similarly, s t o h"
+    },
+    "eb6511ea-99e8-46a6-b8ab-316d946e34f9": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "as two successes,\u00a0\nbecause we have both stop and stock and so on. \n\u00a0 Now, each leaf in my tree corresponds\u00a0\nto a word remember, each path\u00a0\u00a0 is a word, and each path will\u00a0\nterminate in a unique leaf.\u00a0\u00a0 So, every leaf is a word. And how many words\u00a0\ndid I ass"
+    },
+    "374b7deb-fd0b-43fd-abad-dbb6fc93c0dd": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ume we have smallest words in my,\u00a0\u00a0 in our set that we started with, so the number\u00a0\nof leaves in our tree is going to be smallest.\u00a0\u00a0 Now, in the worst case, we do not have any sharing\u00a0\nof prefixes, supposing our set just consisted of\u00a0\u00a0 maybe bear and say s"
+    },
+    "e3595a9d-5757-4260-88dc-3a5a38c5aa80": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ell, if this is my set, then\u00a0\nmy try would have looked like follows, I would\u00a0\u00a0 have had a b here, I would have had an s here, and\u00a0\nthen I would add e a r, and s e l l. So, I would\u00a0\u00a0 have had one root node plus, I would have had one\u00a0\nnode for every letter i"
+    },
+    "84707b4f-4377-4faa-9277-429bb6987c67": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "n every word in my set. \n\u00a0 And of course, I would have had the dollar nodes\u00a0\nwhich I have not counted, so I would have had two\u00a0\u00a0 dollar nodes. So, I would have n plus 1 node at\u00a0\nmost, now in general is not going to be n plus 1.\u00a0\u00a0 So, for instance, here, re"
+    },
+    "dff06a98-9d78-4d10-8800-8936d4d8fd55": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "member that we said that\u00a0\ndecided, I think 31 later, so we could have had\u00a0\u00a0 32 nodes not counting the dollar, but we\u00a0\ndo not have we have much less than 32.\u00a0\u00a0 If you look at this picture, we have 5 plus\u00a0\n6 11 plus 6 plus 5 16. So, we have about\u00a0\u00a0 21 instea"
+    },
+    "a087029f-5d1f-4bab-a38c-5988b5dfe644": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "d of 31? So, because of the sharing of\u00a0\nprefixes, the try can be smaller, but it cannot\u00a0\u00a0 be any worse than the total number of letters\u00a0\nin the set that you are trying to encode. \n\u00a0 So, this is a vanilla try. The vanilla try just\u00a0\nkeeps track of the words "
+    },
+    "c12a778f-ad79-43b2-96fa-08c759dfb739": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "that we have. Now you\u00a0\u00a0 could use this try to keep more information.\u00a0\nSo, supposing these words were drawn from a\u00a0\u00a0 sentence rather than a set of words. So,\u00a0\nhere is the sentence, see a bear, sell stock,\u00a0\u00a0 see a bull, buy stock. So, in this we\u00a0\nhave positi"
+    },
+    "ab6e7704-7aaa-4aeb-a2f3-079b1a71df46": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ons. So, we could have 0 1 2 3,\u00a0\u00a0 and so on. So, what we might want to do\u00a0\nis not just record the words in my try,\u00a0\u00a0 but also record where they occur in my try.\u00a0\nSo, if we look, for instance, for the word bid,\u00a0\u00a0 it says it occurs at positions 47 and 58. Th"
+    },
+    "6889bd82-365a-433a-bac0-4be131e6a00f": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "at\u00a0\nis because you see two occurrences a bid here,\u00a0\u00a0 we see a bid here. \nAnd where else to see a bid\u00a0\u00a0 so, maybe it is not in two occurrences.\u00a0\nSo, maybe it is buy, which would be\u00a0\u00a0 so let us see another word. So, maybe that\u00a0\nis a mistake. But let us see a"
+    },
+    "6fb5b1d6-1660-49e2-be0f-3d2861338d53": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " word like\u00a0\u00a0 see, see for instance. So, see occurs twice. So,\u00a0\nthe first time occurs right at the beginning. So,\u00a0\u00a0 if you look at s e e, it occurs at position\u00a0\n0, and it occurs at position 24. \n\u00a0 So, in this way, what we can do is we can\u00a0\nmaintain, so when"
+    },
+    "d24b3175-2839-48be-8555-8654e6277ad5": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " we reach the root node, instead\u00a0\u00a0 of just saying we have found the word we can store\u00a0\ninformation at that point. So, it becomes like a\u00a0\u00a0 function, it becomes a function where the words in\u00a0\nmy text collection are the keys. So, this is a bit\u00a0\u00a0 like a dictio"
+    },
+    "bf10eb5c-5b61-4495-89db-7e697b780ae5": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "nary stored in a very different\u00a0\nway. So, the keys are my paths in this try.\u00a0\u00a0 So, each key is a word in my text, and the\u00a0\nvalue that I store depends on what I want. \n\u00a0 So, in this particular try, I am trying\u00a0\nto store the positions of the words\u00a0\u00a0 as they "
+    },
+    "aed279fd-d7ca-472b-89db-e668e4c0510a": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "occur in this given piece of text. So,\u00a0\nthat not only when I find a word do I know it\u00a0\u00a0 is there, I also know where all it occurs.\u00a0\nSo, you can think of this, like, as I said,\u00a0\u00a0 a dictionary and a dictionary indirectly is\u00a0\nimplementing if you remember a ha"
+    },
+    "2d734e11-e6b3-4c52-9187-b99e93486b1e": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "sh function. \n\u00a0 So, a trie can be seen as a clever\u00a0\ntype of hash function where the\u00a0\u00a0 clever representation of a hash function where the\u00a0\nkey is happened to be words. So, one advantage of\u00a0\u00a0 a try we know is that every path is unique. So,\u00a0\nno two words will"
+    },
+    "69f03b24-339c-4aad-99da-6c3f6c41c6df": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " read to the same leaf. So,\u00a0\u00a0 there will be no collision. So, in that sense, it\u00a0\nis simpler than a hash function, where you compute\u00a0\u00a0 some value of the key and you might end up with\u00a0\ntwo different keys producing the same output.\n\u00a0 And then you have to reso"
+    },
+    "bcc25597-3c71-48b3-831c-24335253740d": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "lve this conflict. But\u00a0\non the other hand, the difference that we have\u00a0\u00a0 with a try is that we are explicitly keeping all\u00a0\nthese nodes so the penalty of not having conflicts\u00a0\u00a0 is that we are creating as many leaf nodes as\u00a0\nthere are elements in our set of "
+    },
+    "6830b299-60f0-4ddc-8191-f406e3200386": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "keys as many\u00a0\u00a0 words as we have. So, therefore, a trie will be\u00a0\nmuch more space expensive than a hash table. But\u00a0\u00a0 it is another way of using a trie, which is to\u00a0\njust use it as a way of keeping these key value\u00a0\u00a0 stores where you store the values at the ro"
+    },
+    "7fbf3513-b1c1-4d4d-841a-ff46e0cc03f4": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ot,\u00a0\nor the leaf nodes where the words terminate. \n\u00a0 So, let us look at a very simple implementation\u00a0\nof tries in Python. So, here is a Python class for\u00a0\u00a0 trie. So, what we are going to do is we are going\u00a0\nto keep this tree. So, initially, we start with a\u00a0"
+    },
+    "e643bb16-4d52-467b-b330-c7c11e4f1582": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "\u00a0 root, which is an, so we are going to maintain\u00a0\nthese children as keys in a dictionary. So,\u00a0\u00a0 each node will be a dictionary. And it is\u00a0\nentries will point to it is children. \n\u00a0 So, initially, I have a root node,\u00a0\nwhich is the empty dictionary.\u00a0\u00a0 And now"
+    },
+    "0d4c14d4-621d-4b6e-879a-91f8fac7c529": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " for I can start it off with a set of\u00a0\nwords, which by default is empty, but what I will\u00a0\u00a0 do otherwise is for every word in the set, I will\u00a0\nadd it to my trie. So, that is this add function.\u00a0\u00a0 So, the add function inserts a new word in the\u00a0\ntrie. So, what"
+    },
+    "6b41b0c9-0ad8-4c03-aa1e-21408ae54998": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " does it do which starts with\u00a0\u00a0 the root, then it appends this special symbol\u00a0\ndollar to the word, and now it walks through\u00a0\u00a0 this word, including the dollar. \nSo, it starts at the root, and it looks for\u00a0\u00a0 whether the first letter in my word is a key\u00a0\nor n"
+    },
+    "34ced9db-28cc-4bc8-8bd0-0a5f44de4708": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ot, if it is a key, it goes down that way,\u00a0\u00a0 so if there is already a node, say, say my\u00a0\nword is able, and my tree already had a b,\u00a0\u00a0 then what we would do is that we would\u00a0\nwalk down to a, then we will walk to the b,\u00a0\u00a0 key of a, and so on. \nAnd then final"
+    },
+    "1264fdf1-7ef0-41f9-b7bc-15d25ebdf9e7": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ly, when we do not have any\u00a0\u00a0 key, then we will create a new key. So, that is\u00a0\nthe idea. So, that is how we add a word to this\u00a0\u00a0 trie? And now, when we want to check for a word\u00a0\nin the trie remember that we follow the path. So,\u00a0\u00a0 there are three possibilit"
+    },
+    "5569c677-666c-45d4-a71a-219bce111f03": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ies. The first\u00a0\npossibility the good one is that I reached the\u00a0\u00a0 last node and I reached a dollar after that. \nSo, I can say yes, this word exists. Otherwise,\u00a0\u00a0 I might reach a situation where midway I get stuck\u00a0\nand then I can say no the word does not exi"
+    },
+    "574efe69-555a-4cb2-9b62-75fa8f6bbf11": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "st.\u00a0\u00a0 The third possibility that I reached midway\u00a0\nand my word ended the word I am looking for\u00a0\u00a0 s terminated, but it was not a complete word as\u00a0\nfar as tries is concerned. So, we return three\u00a0\u00a0 values True, False and none in this case. \nSo, if I, start at"
+    },
+    "a7962a76-a060-403e-93c5-b58ff63632ea": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " the route and I start walking\u00a0\u00a0 down if at any point. So, in add when we did not\u00a0\nfind something we added the key. So, here if it\u00a0\u00a0 is not in the keys, then we return False saying\u00a0\nthat we have reached a point where we got stuck.\u00a0\u00a0 Otherwise, we go to the"
+    },
+    "0c200ff5-8779-4393-bbe0-57672fa25547": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " next\u00a0\nkey and we keep going down. \n\u00a0 Finally, if we find that at the end, we have\u00a0\nreached a situation where the node that we\u00a0\u00a0 are pointing to has dollar as its next\u00a0\nkey then it means (())(17:55) the end of\u00a0\u00a0 the word we can return True. However,\u00a0\nif we"
+    },
+    "af902d71-896c-48bd-bda9-3fb1195325ad": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " have come out with this loop,\u00a0\u00a0 we are finished processing the tree we have the\u00a0\nword that we got and we did not bail out with a\u00a0\u00a0 false but we did not reach a dollar. So, dollar\u00a0\nis not in the keys then I will return. So,\u00a0\u00a0 this is an implementation a si"
+    },
+    "158965f2-e9b0-41fd-b2fc-5948a0be1846": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "mple implementation\u00a0\nof building a simple try and querying it. \n\u00a0 So, an interesting and important extension of this\u00a0\nnotion of a trie something called a suffix trie.\u00a0\u00a0 So, what we do in a suffix tries we take\u00a0\nthe set of words that are given to us and\u00a0\u00a0 w"
+    },
+    "b9be0bad-120a-4334-b01b-2f9b11605618": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "e expand it to include all the suffixes. So,\u00a0\nsupposing I take a word like this aba, aba,\u00a0\u00a0 then the suffixes are the word itself. \nThen the word dropping the first letters of baaba,\u00a0\u00a0 then just aaba then aba, then ba and finally\u00a0\na and then there is an em"
+    },
+    "f92a280d-0287-4bdb-bee5-e546ce8b2ace": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "pty suffix, there is\u00a0\u00a0 always an empty suffix. So, this set is the set\u00a0\nfor which I want to build a trie. So, if I build a\u00a0\u00a0 trie for this, so a suffix the suffixes of s are\u00a0\nthe set of all words such as there exists some\u00a0\u00a0 other word v such as v followed "
+    },
+    "24914675-0956-4a3b-b8c5-4d4f2f3a0781": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "by w is S. \nSo, I am assuming for now, just for simplicity,\u00a0\u00a0 that my capital S consists of a single word S.\u00a0\nSo, I am building the suffixes of a single word.\u00a0\u00a0 So, here is a trie for instance for this set. So,\u00a0\nhere is the thing for the empty word. So, I "
+    },
+    "386a7b2d-e863-4dc6-b63b-608d47d56579": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "have\u00a0\u00a0 dollar right at the top saying that after reading\u00a0\nno symbols are reached the end of the word, here\u00a0\u00a0 is the suffix a, a followed by dollar. \nThe next suffix is ba, so here is ba followed\u00a0\u00a0 by dollar. The next suffix is aba\u00a0\nthat is aba followed by "
+    },
+    "535424e5-3c3f-440f-b3c3-76ebe06c8a5f": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "dollar.\u00a0\u00a0 So, you can check that every suffix that\u00a0\nwe have in our word is in this suffix trie.\u00a0\u00a0 So, as before, what we do is we take the\u00a0\nsuffixes, and we append a dollar. Or rather,\u00a0\u00a0 we append a dollar. And then take the\u00a0\nsuffixes so because remember t"
+    },
+    "264279cd-3beb-4382-b058-933c3facfb12": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "hat if I put\u00a0\u00a0 w and I put the dollar at the end, then every\u00a0\nsuffix will automatically have the dollar. \n\u00a0 So, I do not have to keep on adding the dollar.\u00a0\nSo, I use a dollar, to mark the end of the word,\u00a0\u00a0 and then I build a suffix for tries for that\u00a0\nby"
+    },
+    "4e9770ee-d628-4919-a0d3-0a517856b9b4": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " examining every suffix. We will see how to\u00a0\u00a0 do that. Now, what can we do with a suffix trie?\u00a0\nWell, in the earlier case, remember that what we\u00a0\u00a0 checked was that the word that we had was either\u00a0\nof complete word if it 100 percent dollar. \n\u00a0 Or we could a"
+    },
+    "eb8a360c-6dc3-4099-8e6e-bb02a4a6d25f": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "t best check if it is a prefix if\u00a0\nit starts at the root and comes down and then\u00a0\u00a0 our search terminates not because we have not got\u00a0\na successor, but because we did not reach a leaf\u00a0\u00a0 node. Then we said, this is a partial match,\u00a0\nbut it is always a prefix"
+    },
+    "026096c1-75c5-4278-8d94-160064beb758": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": ", it is the prefix\u00a0\u00a0 of some word. So, if I want to know whether\u00a0\nthe word occurs anywhere in a word in my set,\u00a0\u00a0 then it need not be a prefix just a substring. \nSo, with a suffix try, we can answer that question\u00a0\u00a0 is w a substring? We can also answer ques"
+    },
+    "6a9fa533-2a69-4ca4-9e25-c49fa83bbcdc": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "tions\u00a0\nlike this, how many times does it occur is a\u00a0\u00a0 substring? And which is the longest repeated\u00a0\nsubstring? So, these are some of the questions\u00a0\u00a0 that we can answer. So, with a suffix trie,\u00a0\nwe can answer more questions than we can\u00a0\u00a0 with a vanilla trie"
+    },
+    "5c7d0c77-0df5-4dc6-87c6-4567c7312e4a": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": ", which just keeps\u00a0\ntrack of the words themselves. \n\u00a0 So, let us look at this particular suffix tries.\u00a0\nSo, we asked, for instance, for substring.\u00a0\u00a0 So, we asked whether abaaba is there. So,\u00a0\nas usual, what we do is we say abaaba.\u00a0\u00a0 And since I am able to "
+    },
+    "150859e4-bf1c-47a1-aff8-1924cd511341": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "process this, it is a\u00a0\nsubstring. On the other hand, if I try baabb,\u00a0\u00a0 I will say baab, and then I get stuck. So,\u00a0\nI cannot finish processing the word. \n\u00a0 So, when I cannot finish processing the word, then\u00a0\nI know it is not a substring. So, why does this\u00a0\u00a0"
+    },
+    "b5d99c3b-535a-4896-9a92-0f5a3867aaf1": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " work? Well, because the substring is something\u00a0\nwhich is sitting somewhere inside the word,\u00a0\u00a0 but I know that I have every suffix, so there\u00a0\nis a word corresponding to this suffix in my\u00a0\u00a0 suffix trie. So, wherever my substring\u00a0\nstarts, it defines a suffix"
+    },
+    "40a2d36d-7192-4cc2-aff6-6f01cd40e63a": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " of my word,\u00a0\u00a0 and that suffix is represented in my trie,\u00a0\nso there will be a path for that suffix. \n\u00a0 And this word, if it is a part of that suffix, if\u00a0\nit is a substring, it will process part of it and\u00a0\u00a0 stop. So, that is why every substring will be\u00a0\nrep"
+    },
+    "2938aa96-8dab-4e2a-afa7-46485665b542": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "resented, because it will be the prefix of\u00a0\u00a0 some suffix. So, every suffix is there. So, if I\u00a0\nstart where the substring is supposed to start,\u00a0\u00a0 so for instance, if I look at a valid substring of\u00a0\nthis, so like aab, then aab is part of this prefix\u00a0\u00a0 is par"
+    },
+    "d360617e-cd2f-4deb-bac3-a5e836b77b2b": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "t of this suffix. \nSo, I would find it by looking at aab, so\u00a0\u00a0 there is a longer part of it, but I am not worried\u00a0\nabout that I am only looking for substring. So,\u00a0\u00a0 this is how we would find substrings and this is\u00a0\nwhy the substrings will always be found c"
+    },
+    "48649bfc-5007-47f6-84f2-b3bde8ca89da": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "orrectly.\u00a0\u00a0 Now, if I want a more like the earlier\u00a0\nnormal try would tell us about prefixes,\u00a0\u00a0 we can also check if it is suffix by\u00a0\nasking whether after I have matched,\u00a0\u00a0 I can see a dollar at the next position\u00a0\nexactly as we did for the complete match. \n"
+    },
+    "05710f9e-a2d1-491c-8b41-3ee80904c5f4": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "\u00a0 So, for instance, if I see baa, then I want to\u00a0\nsee a dollar after this, but there is no dollar\u00a0\u00a0 after this. So, the word does not it cannot end in\u00a0\nbaa whereas if I do aba, then though there is an\u00a0\u00a0 extension down there is also one way of stopping\u00a0\nher"
+    },
+    "faf6e9f1-21d0-477a-b79b-38cdc3b827fe": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "e because one of the successes of that aba node\u00a0\u00a0 is a dollar. So, by looking for a dollar,\u00a0\nimmediately after the match among the successors\u00a0\u00a0 of the matching node, I can check whether or\u00a0\nnot the substring is a suffix of the string. \n\u00a0 Then we also said "
+    },
+    "ea9c910c-6d23-4670-86b6-5dc1e3397846": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "about number of occurrences.\u00a0\nSo, supposing I want to know the number of times\u00a0\u00a0 that aba occurs, so I come down to aba.\u00a0\nNow every time it occurs, there will be\u00a0\u00a0 a completion. If it occurs only once there is only\u00a0\none way of completing aba, but it occurs"
+    },
+    "99156569-5eac-4b69-b534-f4f746c7454c": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " twice.\u00a0\u00a0 So, in this case, aba occurs here. And aba also\u00a0\noccurs here occurs in the beginning and at the\u00a0\u00a0 end. So, if you look at the node for aba,\u00a0\nthen the completion where aba is the tail\u00a0\u00a0 and substring is just an immediate dollar,\u00a0\nwhereas the compl"
+    },
+    "95eea5cb-3d4e-4543-a4f5-8b6c5f4872fd": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "etion whereas the initial\u00a0\u00a0 thing is another aba followed by dollar. \nSo, in other words, you look for the number of\u00a0\u00a0 leaf nodes, remember a leaf node in\u00a0\na trie denotes a complete word. So,\u00a0\u00a0 you look for the number of completions of this\u00a0\nsubstring. And"
+    },
+    "d6f428f9-8ca7-4c3e-b802-051136acabdf": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " that tells you how many times the\u00a0\u00a0 substring occurs because every completion of the\u00a0\nsubstring will represent a different suffix. \n\u00a0 So, that is one way of checking so in this\u00a0\ncase, because this aba has two leaf nodes\u00a0\u00a0 below the aba node, I can get tha"
+    },
+    "00e29a82-b511-41eb-a780-12a8dea7f92e": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "t this aba\u00a0\nhas two extensions in my word, so it has\u00a0\u00a0 two occurrences. And by the same logic, you\u00a0\ncan ask, which is the longest such word. \n\u00a0 So, here, if we look at this, for\u00a0\ninstance, here is a word ba, which has two\u00a0\u00a0 below it, here is another one, a"
+    },
+    "ff6ce7da-b887-42e8-a34b-cbf5560663af": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": ", which\u00a0\nhas two below it. And finally, we have\u00a0\u00a0 the one that we found earlier, abs, which has\u00a0\ntwo below it. Now, you can check that if you\u00a0\u00a0 stop anywhere else in this, there are of course,\u00a0\ntechnically this also has to below it because\u00a0\u00a0 it has. So, ye"
+    },
+    "24197f38-b196-4aec-9648-0782275f6082": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ah, so we will not count the\u00a0\nempty word because empty word has every word,\u00a0\u00a0 kind of it patches every pattern, so non\u00a0\nempty words what we are looking at. \n\u00a0 So, you look at any other position like if you\u00a0\nstop here, you have only one leaf below it,\u00a0\u00a0 you"
+    },
+    "af92adc7-3bbc-4dc5-8faf-2e9243941c6b": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " stop here, you have only one leaf below\u00a0\nit. So, the only positions are these branching\u00a0\u00a0 positions. It is not a coincidence that the trie\u00a0\nbranches here, the trie branches here and the trie\u00a0\u00a0 branches here. So, we look among the branching\u00a0\npositions, whi"
+    },
+    "d0b85d81-f3d1-4c4b-8677-958e8b6b73c4": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ch is the lowest one so we again\u00a0\u00a0 get that not only does aba have two occurrences\u00a0\nas we calculated it is also the longest substring\u00a0\u00a0 which has more than one continuation. \nSo, we are not asking for the maximum number of\u00a0\u00a0 continuations that we could hav"
+    },
+    "f1634334-db32-41b7-ba7a-23c119a78e5b": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "e got by counting\u00a0\nwe are asking for which is the longest one. So,\u00a0\u00a0 we will look into the depth of the node,\u00a0\nwhich has more than one leaf below it.\u00a0\u00a0 So, these are all various interesting\u00a0\nquestions that you can answer about your fixed\u00a0\u00a0 text using a suf"
+    },
+    "7f561dcb-b8c3-4e13-8023-5b91215d6858": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "fix tries, which is expanding\u00a0\nyour set of words by all the suffixes. \n\u00a0 So, we can do a simple extension of our earlier\u00a0\nconstruction of a trie to build a suffix trie. So,\u00a0\u00a0 here, as we have assumed we are\u00a0\ndoing it with a single word. So,\u00a0\u00a0 we will assum"
+    },
+    "398d1d28-5ab6-4666-a491-0c7120f85319": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "e that the constructor takes\u00a0\u00a0 as input one word. And what it does, as we said is\u00a0\nwe expand the word by adding a dollar to it. \n\u00a0 And now we have to look at all the suffixes,\u00a0\nso we have to look at s 0, s 1. So, these are\u00a0\u00a0 the slices starting at differen"
+    },
+    "9218e835-02e4-481c-918e-a7be4f8236b3": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "t starting\u00a0\npositions up to the end. So, for every i\u00a0\u00a0 starting from 0 and going up to n minus 1, I start\u00a0\nat the root. And I go through the entire thing,\u00a0\u00a0 and I do the same thing that we did earlier\u00a0\nfor adding we just add it to this trie. \n\u00a0 So, we are "
+    },
+    "2c7b2abc-b6c5-444f-8037-bd4f9553636b": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "just processing every so this\u00a0\nis just making sure that I get every suffix\u00a0\u00a0 by taking every starting position in\u00a0\nthe range, 0 to length of s minus 1.\u00a0\u00a0 Now, once we have built that, then we have\u00a0\nthis function below called follow path,\u00a0\u00a0 which does what "
+    },
+    "e3cae8bc-e605-4d2a-82fa-7ec5cd2bce07": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "we did before. It takes an input\u00a0\nand it tries to trace the path in the suffix trie\u00a0\u00a0 and tells us what is the status of that thing?\nSo, if I bail out in between,\u00a0\u00a0 I return a none so what happens here is if\u00a0\nI am not able to execute this word in my\u00a0\u00a0 suff"
+    },
+    "fb8de2ab-839f-4d3c-b39e-9bbb61a3aa98": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ix trie, if I some point I get\u00a0\nstuck, then I return a none. Otherwise,\u00a0\u00a0 I go to the end and I return whatever I have got.\u00a0\nNow, this whatever I have got, I can analyze. So,\u00a0\u00a0 have I reached the end or have I not reached\u00a0\nthe end. So, for instance, if it "
+    },
+    "4a220225-6ace-42bc-89b7-93686ef90f4d": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "finds a path,\u00a0\u00a0 at all, that is the answer is not none,\u00a0\nthen I have found a substring. \n\u00a0 And this what we said before, as long as I can\u00a0\nprocess the entire string and not get stuck,\u00a0\u00a0 I have found a substring because every substring\u00a0\nwill occur as the be"
+    },
+    "f55dc5ac-ac95-4d42-ba42-582abac3d3b4": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ginning of some suffix. On the\u00a0\u00a0 other hand, if I want to check if it is a suffix,\u00a0\nthen not only must it be a substring. But when it\u00a0\u00a0 finishes, there must be a dollar following it. \nSo, I will have to say not only that I have\u00a0\u00a0 reached a node, which is n"
+    },
+    "6d16a0cc-e5c5-44a5-b0e8-c4607264d9d9": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ot the none node I\u00a0\nhave not bailed out in the middle of follow path.\u00a0\u00a0 But the node that I have reached has dollar\u00a0\nas one of its keys. Now remember, retrieve\u00a0\u00a0 not dollar also as we saw those things which\u00a0\nhad b and then or a and then had dollar here,\u00a0\u00a0 "
+    },
+    "0168bbf5-5574-4094-911f-1715604dc6a5": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "and then a b below and so on. \nSo, we do have nodes like this,\u00a0\u00a0 where I could stop here. And it could be that\u00a0\nit has a valid extension as a longer suffix,\u00a0\u00a0 but it also stops here as an terminating suffix.\u00a0\nSo, I just wanted among my successes, I have\u00a0\u00a0 "
+    },
+    "fb96cdfa-f55b-4909-9a2b-ef3ba6652fcb": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "dollar. So, it just says that among the\u00a0\nkeys that I see at the node where I stopped,\u00a0\u00a0 one of the keys is dollar. So, this is a very\u00a0\nsimple implementation of suffix tries. \n\u00a0 So, we said before that one of the drawbacks\u00a0\nof suffix tries compared to say u"
+    },
+    "1443d5d7-d0da-4fc1-a55e-b9c6987bb39b": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "sing a hash,\u00a0\u00a0 or a dictionary to maintain a key value store is\u00a0\nthat it is big. So, let us look in particular for\u00a0\u00a0 suffix tries, how big can a suffix trie be? So\u00a0\nsupposing I start with one word of length n. So,\u00a0\u00a0 can I have a suffix trie which is as lon"
+    },
+    "4040426c-0a4c-490c-ad19-cd1eae376136": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "g as n.\u00a0\nAnd this is easy. So, if I just have a word with\u00a0\u00a0 n copies of the same letter, then there are\u00a0\nn suffixes from 0 to a to the power n. \n\u00a0 So, each of these represents a\u00a0\ndifferent node in my trie. So,\u00a0\u00a0 I have this kind of a spine which is the len"
+    },
+    "f47b0770-b66f-4076-9382-70b8edc3c3a1": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "gth\u00a0\nof my word. But notice that in general, if I have\u00a0\u00a0 n letters, we have, as we said, n suffixes.\u00a0\nBecause you can chop of the first letter chop\u00a0\u00a0 of the sec, first two letters, chop of the first\u00a0\nthree letters. So, there are order n suffixes. \n\u00a0 And we"
+    },
+    "2b95aaa9-6ace-42d0-93dc-0ec7cb400331": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " said at the beginning that the problem\u00a0\nwith the trie blowing up happens when these\u00a0\u00a0 suffixes do not share a good prefix,\u00a0\nso they all kind of form lots of paths.\u00a0\u00a0 So, the question is, can I end up with n square\u00a0\nsuch things that is, each of those suffi"
+    },
+    "c4ac3de9-70cd-4977-882f-4d64994a31bf": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "xes\u00a0\u00a0 n suffixes essentially creates a new set of nodes\u00a0\nproportional to n. So, here is an example. \n\u00a0 So, we have na followed by nb so here for\u00a0\ninstances a cube b cube. Now what are the suffixes\u00a0\u00a0 of this? Well, we have the empty suffix of course,\u00a0\nbut w"
+    },
+    "c757c94f-b886-4896-81fb-aa7b332f4b86": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "e have b, then we have bb and we have bbb,\u00a0\u00a0 then we have abbb, aabbb and aaabbb. And now you\u00a0\nwill see that there are very few common prefixes.\u00a0\u00a0 So, here is the path for bbb and bbb. \nSo, what we have not drawn is all those dollar\u00a0\u00a0 nodes. So, there is a"
+    },
+    "8e7377d1-f7e5-436e-ba32-381b4fe6e862": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " dollar node sticking of\u00a0\nthese things. And there are dollar nodes sticking\u00a0\u00a0 of all these b\u2019s as well. So, a followed by three\u00a0\nb\u2019s as a dollar, b if aa followed by three b\u2019s as\u00a0\u00a0 a dollar and three a followed by three b\u2019s\u00a0\nas a dollar. So, there are 6 su"
+    },
+    "757bc3d2-34e8-40d2-bea8-9be105e5215c": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ffixes. \n\u00a0 So, there are these six dollar nodes that\u00a0\nwe have not drawn. But in addition to that,\u00a0\u00a0 what do we have? Well, we have, because of this\u00a0\nn b's, we have one suffix here of length n,\u00a0\u00a0 and then for each of the a's, we have that\u00a0\nsame suffix. So, "
+    },
+    "8d6f58eb-44b1-4f05-9b90-7076fb8852dc": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "we have n here, and we have\u00a0\u00a0 n here. So, we basically end up\u00a0\nwith n squared nodes, because\u00a0\u00a0 each of these suffixes is n times n. \nSo, it is n by 2 times n by 2, if you think of\u00a0\u00a0 the overall length is 2 n. So, in terms\u00a0\nof this n, if you think of n is e"
+    },
+    "baa5d72e-855a-4440-8d6c-21f7434b33d5": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ntire\u00a0\u00a0 length of the word, it is n by 2, but you\u00a0\nhave n suffixes corresponding to the n a\u2019s,\u00a0\u00a0 and each of those n suffixes has length n. So,\u00a0\nyou end up with n squared nodes. So, you can have\u00a0\u00a0 a kind of worst case suffix try in which you have\u00a0\nas many "
+    },
+    "c3d212df-1127-471c-92e0-4a71fe6f0b29": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "nodes as there are suffixes letters. But\u00a0\u00a0 this is something that we already knew that\u00a0\nsuffix tries are not very space efficient. \n\u00a0 So, to summarize, a try is a useful way to pre\u00a0\nprocess a fixed piece of text. And this is a\u00a0\u00a0 very common occurrence. As "
+    },
+    "b1c68e97-57ab-4a3e-987d-014938678c97": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "we said in principle,\u00a0\nan internet search engine is doing this. So,\u00a0\u00a0 it is maintaining information about a corpus\u00a0\nof documents at some snapshot in time. And then\u00a0\u00a0 your queries with (())(32:45), that snapshot. \nNow, it might update this corpus once in a "
+    },
+    "07f8932a-ee5e-4125-bec3-6d502f4d8938": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "while,\u00a0\u00a0 but it is not going to do it instantaneously.\u00a0\nIt is not so when you give a query to a search\u00a0\u00a0 engine, it is not going out and searching\u00a0\nin real time for documents, it is searching\u00a0\u00a0 against this pre processed index. Now, there are\u00a0\nmany more th"
+    },
+    "5df462df-7dda-4a84-a7ec-bada5c1185ad": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "ings that go into this indexing. \n\u00a0 And this is not part of what we are looking at.\u00a0\nBut this information retrieval is a way of taking\u00a0\u00a0 a fixed piece of text and transforming it into\u00a0\na representation a data structure which you can\u00a0\u00a0 query efficiently and"
+    },
+    "e0c901c2-76c3-434e-a53b-0345d69d7ee5": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": " trie or a suffix trie\u00a0\nis one of the starting points of doing this.\u00a0\u00a0 So, the advantage of doing this is then\u00a0\nonce you have pre processed it, as we see,\u00a0\u00a0 searching for a pattern, a string takes time\u00a0\nproportional to the length of the string,\u00a0\u00a0 you just "
+    },
+    "7460182a-497a-44ec-a789-8b982e149c80": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "have to run down the trie, you do not\u00a0\nhave to do anything with the rest of the trie. \n\u00a0 So, therefore searching becomes proportional to\u00a0\nwhat you are looking for, rather than what you\u00a0\u00a0 are looking at, which is what is happening in our\u00a0\ndynamic text in ou"
+    },
+    "5aee9bcc-f8c4-4124-bb19-ac5a2281a274": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "r dynamic text we had to search\u00a0\u00a0 all over the place for it, but by pre processing\u00a0\nwere able to search for it once and for all\u00a0\u00a0 by just going through the\u00a0\ntech the pattern once. \n\u00a0 So, suffix tries are an improvement on tries\u00a0\nbecause we can make more ex"
+    },
+    "0e01ca99-1532-4424-822c-ef2b6c3c2567": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "pressive searches as we\u00a0\u00a0 said we can look for arbitrary substrings we can\u00a0\nlook for the number of times a substring occurs\u00a0\u00a0 and so on. And overall the main drawback that we\u00a0\nfind in using tries is the size so we there are\u00a0\u00a0 ways of compressing tries but "
+    },
+    "a7c29900-9cb7-4699-8187-4b56ae782de9": {
+        "content_id": 71,
+        "course_name": "PDSA",
+        "title": "String Matching-Tries",
+        "week": 10,
+        "chunk": "then if you compress\u00a0\nit trie by the trie is going to change then you\u00a0\u00a0 lose something so it is not always clear that\u00a0\ncompressing a try will help in a static sense,\u00a0\u00a0 but if you have to update the try, then you\u00a0\nmight have to blow it up again and so on. "
+    }
+}

@@ -1,0 +1,436 @@
+{
+    "6170ecb7-f277-417b-80e3-aba7e5f32631": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "So, having seen lists and arrays in Python,\nlet us look at another very popular data structure that we use quite often, which is built into\nPython, namely a dictionary. So, how are dictionaries actually implemented\nin Python? So, recall, that an array or a"
+    },
+    "abfc8293-4e6d-484d-8a9c-b0127feb258c": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": " list allows\nus to access an element through its position. So, we can talk about l square bracket i , and\ni will range between 0 and n minus 1 where I have a list or an array of size n. So, the way we access an element or we name\nan element in a list or an"
+    },
+    "46780443-5740-4dce-bd10-b372274520d4": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": " array is through its position. If it is two-dimension, we will say row i\ncolumn j. In a dictionary, on the other hand, what we\nwant is to name or access an element through some abstract value. For instance, we might want to attach, for\ninstance, to name, "
+    },
+    "19b19048-42ba-4bd2-9826-a863f2fd1bde": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "a string, we might want to attach a value, for example, marks. We could have a dictionary, which has marks\nwhere the key is the name of the student or the roll number of the student, and the value\nthat we store against that name, or roll number will be the"
+    },
+    "e0d7fcd2-5f9d-4489-84dc-51f8d2a3e222": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": " marks of that student. So, we do not want to go through this process\nof first creating a mapping from all students to 0,1,2 to n minus 1 and then using an array. So, we would directly like to use this key\nto value mapping, so we want what is called a key "
+    },
+    "4455fcfa-4aec-43c9-bfd9-aa37f013fc9e": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "value store. But we want it to behave still like an array,\nin the sense that, if we pass a key to this dictionary we would like it to return the\nvalue in equal time for any key. So, this is a principle of random access. It should not depend on what the key"
+    },
+    "3fa05267-97f1-47a3-b18e-b3aeed2dd5f1": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": " is, it\nshould take roughly the same time to give me the value regardless of what key I provide. So, the question we want to know is, how is\nsuch a dictionary implemented. So, we know that, an array is the way to get\nrandom access memory. In an array, we h"
+    },
+    "cdf488b7-9aed-4296-9e6d-03a953111540": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "ave a contiguous block, and\nwe can get the offset of position i by looking at the first block and multiplying it by the\nnumber of i times the value of the size of the data entry, and getting the ith block\nin constant time. So, the underlying principle of a"
+    },
+    "7e4064c5-8930-4683-8c21-00a9bf7d2f10": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "ny random\naccess structure has to be this idea that you have a contiguous block and you can navigate\nan offset within the block. But our problem is that we want to not use\nthe 0 to n minus 1 as our entries, but we want to use these keys, so we need a way t"
+    },
+    "48896a78-8d3b-4085-9807-f76f66b7d5ea": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "o\nconvert these keys into 0 to n minus 1. So, we need a way to go from a key to a position\nin this array. So, we need a function, which can map keys\nto 0 to n minus 1. So, we want to give an a key k converted to\nan offset I, and this kind of a function is "
+    },
+    "f9db92e9-d5b3-4f12-8c7f-29b3b4a84dea": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "called a hash function. So, it takes a set of values. So, the set of values could be roll numbers,\nnames, any set, and maps these values to a fixed range, typically zero to n minus 1. So, it takes an arbitrary set and maps it\nto a small range of values. An"
+    },
+    "49ef21a3-2311-4a1f-8c26-d9263729a900": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "d usually, the range of values that you\nmap it to, is going to be much smaller than the range of possibilities. So, you can imagine that if you think of all\nthe possible names that you could have for students in a class or all the possible roll\nnumbers tha"
+    },
+    "9361b447-7101-4885-8a92-c310ec03e6a4": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "t you could create using the sequences of letters and numbers that you use for roll\nnumbers that is a very large set. But you will use a class will have only 50\npeople, 100 people, 200 people, whatever, some small number of actual people. So, you don't wan"
+    },
+    "f547dc19-7b62-47ed-8cca-69fc868a203e": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "t to have an enormous possible\nstorage for all possible names and all possible roll numbers, so you would actually like to\nmap this large set of values to a small set. But, of course, now the problem is, therefore,\nthat if I look at all the possible names "
+    },
+    "343f292c-d599-4dc7-add3-3cb00c70cf3a": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "that people could come with or all the possible\nroll numbers I could create, in general, it will be that two of these keys will map to\nthe same value, so this is what is called a collision. So, this hash function h maps s and s prime\nto the same value, eve"
+    },
+    "5f788cd8-a5dd-4ea1-ad75-6215d69192ab": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "n though it is not equal to s prime. Now, this cannot be avoided, because you are\ntaking a large set and you are pushing everything from here into a small set. So, it is not possible for everything in the\nlarge set to map to different things in the small s"
+    },
+    "54651090-cf4d-468d-83fe-de2caf33e491": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "et, because you just do not have that\nmany elements to map to. But what you would like to do is, to somehow\ndistribute this so that it is random. So, it should not be that, if I map a name,\nand if I map the next name or if I map a roll number, and I map th"
+    },
+    "6642fb6b-57cd-4363-a760-701a3f1cd55b": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "e next roll number the\nnext roll number will go and collide as it is called, so these are called collisions. So, the next number will collide. I would like to distribute, so that if I give\nyou a, so the ideal thing is that if I give you a random set of ele"
+    },
+    "39c37f40-bd07-4580-8175-554cceaa80c7": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "ments from here, which\nare kind of spaced out, hopefully they will all go to different things, this is what you\nwould like. You cannot guarantee it, but you would like\nthis to happen. So, if I give you a random collection of inputs\nfrom the last set, then "
+    },
+    "8ea826fa-b4a1-4e6b-8228-2076320ee6f4": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "with reasonable chance they should not collide. So, this is what a good hash function will\ndo. Just to illustrate, how important hash functions\nare. So, there is this now, current industry standard\ncalled SHA-256. So, this is used for cryptography and othe"
+    },
+    "0d2cc256-92f3-459b-ab1a-fdc6752ca2df": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "r\nthings. So, 256 refers to the fact that the output\nof this thing is to 256 bits. 256 bits is a large number it is 2 to the\npower 256. So, remember that 2 to the power 10 is 1,000. So, this is 1,000 to the power 25, roughly\nsomething like that. So, this i"
+    },
+    "ab961ce2-ef63-4852-a54d-d65dd987cbc9": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "s like 1 with 75 zeros after it. So, that is the space in which you are mapping. But it is not such a large space, if you think\nabout it, because what you can actually do is you can take, for instance an entire file. Now, a file could be a very large. So, "
+    },
+    "95a10378-b6eb-46fb-aed5-8f9fd310e46d": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "you can think of a file as a large number,\na file is a sequence of zeros and ones, so you can think of it as a large number or some\nvalue from some large set, and you can now map it to this 256 bit. So, for instance, it could be a movie or it\ncould be a do"
+    },
+    "64ebd27b-2f20-4516-9135-407d00806213": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "cument. So, it could be a very large file much larger\nthan this 1 with 75 zeros in terms of possibilities. So, each individual document will not be so\nmuch, but there are so many different documents. So, one application of SHA-256, which might\nbe surprisin"
+    },
+    "fcce1af2-163f-47f1-9730-471478c125b8": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "g to you, is that, if you do if you use a cloud storage system, supposing\nsomething like Dropbox, for instance. Sometimes, when you upload a very large file,\nit will actually upload very fast. And the reason is that actually, this system\ncomputes this SHA-"
+    },
+    "028f318f-ef7c-4ef2-b9df-536b69af551e": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "256 hash. And if it detects that this hash is already\npresent in the storage, it does not actually upload, it just kind of makes a pointer saying\none more copy of this file has been uploaded, it does not bother to upload it. So, in principle, if you had a "
+    },
+    "087d6f13-1255-49fe-ae4c-f3edafff58a5": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "hash, SHA-256,\nhash with two different files produce the same hash, you would not be able to upload\nthe second file because it will say it is already there. Now, in practice, this does not happen, so\nit just shows that the SHA-256, has been carefully desig"
+    },
+    "3cae7abc-c542-41bf-88f3-a6e8ed30c798": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "ned so that these collisions rarely happen. So, the way we use this hash function, as\nwe said, is we want to take the key and map it to a position an array, so this is called\na hash table. So, a hash table is an array of size n, combined\nwith a hash functi"
+    },
+    "ec9fba5f-37be-418d-a00f-f905bbd97bde": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "on, which maps keys to this range 0 to n minus 1. So, the idea is that h will map the keys that\nyou provide, whatever keys they are, so the keys are not restricted, only the range of\nthe hash function is restricted, it depends on what the keys are. So, the"
+    },
+    "ff5eab88-e038-4b32-93e3-b32cc8cfc17c": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": " ideal situation is that if I give\nyou are new key, k, and I want you to store something as for the dictionary, d of k, then\nyou will map it to this h of k the position in the array and hopefully that places available\nto you. So, I want to say d of k is eq"
+    },
+    "eaea896d-b59f-4f01-9f91-b7137fcc6827": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "ual to V. So, what will happen now, is that, I will\ngo from k to h of k, this will give me a number. This will be some number in 0 to n minus 1. Then I will go into my array, so this will\nbe some number, j. So, then I will go to position j, and I will\ntry "
+    },
+    "3196e042-6a1f-4f9c-b2c0-d3ef6ab812c1": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "to put this value V there. So, this is how dictionary should work. But what will happen is that sometimes because\nof collisions, that place is occupied. So, if there is already a value at that location\nthen this hash table has to deal with this collision. "
+    },
+    "7dbf2da1-27cd-4f14-bee5-8634b71489b4": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "It cannot just replace because then their\nold value will be lost It cannot put it in some random place, because if it puts it in\na random place, you will never find it. So, you need to have a systematic way of putting\nit somewhere where you will find it if"
+    },
+    "08a30dc0-35da-4b42-9288-d0b805b52394": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": " you look at it later. So, there are two ways to deal with this,\nwhich have some more confusing names. So, the first one is called open addressing,\nbut it is called closed hashing. And here, the idea is, you could not go outside\nthe array. So, what you hav"
+    },
+    "e5162307-0ca4-47d6-971d-b765878e6c78": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "e is that you came here. So, this is the place that you were looking\nto fill, but then unfortunately for you there is already something here. So now what you do is, you skip, right, so\nyou kind of have a kind of round robin. So, you do not necessarily go t"
+    },
+    "0ff87306-2956-4b17-acf1-0b6be998e4e9": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "o the next\nposition. But you kind of say, okay, if this is not\nthere then let me go plus 10 and see if there is a place there. If it is not there, then let me go plus 10. So, I just keep cycling around, going forward\nby probing a sequence of alternative sl"
+    },
+    "38180634-dc43-4764-bc53-1f04c0f0c54e": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "ots until I find a free slot. And in that free slot, now I must of course\nhave one extra piece of work, I must write the key also because I need to know that this\npiece belongs to that key. But essentially, this is the way you work,\nso you create an array "
+    },
+    "0c6e6919-eab1-46f4-a956-65c73d4d1b77": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "which is large enough, so there will be some extra slots. So, even after these collisions, you will\nstill find some extra space. So, if you anticipate that you will need say,\n1,000 entries in your dictionary, then you might put say an array of size 5,000. "
+    },
+    "6c5b0e5a-e688-4dc2-8db1-cb66ef232dad": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "So, you have a lot of free space to play with\nfor this kind of collision. hashing, hashing and avoiding collisions. The other option is to do what is called open\nhashing. So, this is now the confusion. Open hashing and open addressing are not the\nsame. So,"
+    },
+    "55b54ad2-1a19-4ca4-9f23-b55d24abb447": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": " open addressing means you are working\nwithin the same array. You are moving around to a new position and\nhoping it is free. And so it is like you get into, say, supposing\nyou get into a parking lot, and you find that there is no space for you to park in t"
+    },
+    "6fc6f84d-ceb6-4505-b03b-39d872c6a8c8": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "hat\nparticular row. Then you go out and you circle around and\nyou enter another row, and you try to look for a space, then you go out circle. Eventually, hopefully, there is a space, you\nwill find it. So, that is more like closed hashing. You just stay wit"
+    },
+    "19c1d61a-4f02-4da2-b41c-4f3cda1fd87e": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "hin that parking lot. You are looking for a free slot, so the free\nslot, this first slot you try to find was booked, so you go around looking for the next\nfree slot by randomly wandering around, not quite randomly. But you move around in some fixed sequenc"
+    },
+    "73f3bf5f-6eb7-48f5-b9a9-561ef4535e7c": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "e\nso that you can retrace that sequence later on when somebody comes looking for this value\nagain. Now in open hashing, on the other hand, remember\nthat you get into this, and this is my array. So, in close hashing, I actually store the\nvalue in the array."
+    },
+    "4eced400-948a-4c9a-9e38-1e00c696f423": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": " Now in open hashing, what I do is I do not\nstore the value in the array instead, for each position in the array, I maintain a list. So, the actual storage happens somewhere outside\nthis hash table. So, the hash table is only a collection of\nwhat you might"
+    },
+    "52118f76-a797-4e31-a680-8f5bbfe04989": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": " call pointers. So, if I hash key to a position in the array,\nthe array tells me, go and look there, that is the list of all values, which had the same\nhash value as the key you had, go and find it. So, I will maintain this elsewhere. And then now because "
+    },
+    "a239af4b-09a6-4da2-bac0-e94b08b296ad": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "that list is flexible,\nyou can grow and shrink, I do not have any constraint about it. So, this allows me to keep coalitions under\ncontrol in that sense, because I can just append to that list. So, these are these two standard ways. And, of course, you can"
+    },
+    "471c7cc7-af5d-4756-83fb-7baaa7af161b": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": " use some heuristics\nto do these better or worse, but this is the standard ways of dealing with collisions in\na hash table. So, you might have wondered. When you are taught to use dictionaries in\nPython, one of the things you are told is the key to a dicti"
+    },
+    "df7f0376-a4e8-48e7-a42c-f0d4cb9547c4": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "onary must be immutable. You cannot use for example, a list as a key\nfor a dictionary. Why is that the case? Well, now you know the answer. Because, in order to find the place where\nthe value is stored, the hash function has to be applied. So, the hash fun"
+    },
+    "9ae2daf8-ee3f-487a-b4e4-0dad5e25b032": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "ction is applied, when it\nis stored, at that point, the key has a value. Now, if it is a mutable data structure, the\nvalue can change. So, when I come back later on, and I try to\nhash that value, it will be a new value, and therefore I will not be able to "
+    },
+    "8e6b363e-7bc1-4893-b6a0-d4e4c0eb0610": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "find that\nposition in the dictionary anymore. So, I must guarantee that the value that I\nused inside the key remains fixed, because otherwise the hash function cannot return\nthe same value in a guaranteed way each time. So, this is one reason why Python in"
+    },
+    "8315ed97-ffe7-46c8-b168-b135342a5476": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "sists\nthat dictionary keys must be immutable, so that the hash value remains fixed across multiple\nvisits to that key when you enter that same dictionary. So, to summarize, dictionaries are extremely\npowerful data structures, which allow you to store value"
+    },
+    "e48ebf2e-3ff8-4cda-88bb-271936c66cfb": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "s against keys. And the way you implement a dictionary is\nby actually using this hash function. So, underlying it, there is an array of some\nsort, which has a random access storage from zero to n minus 1, but you want to take a\nkey and you want to put it a"
+    },
+    "233e91ec-1501-4545-ba17-2637f932cd9d": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "t position i. So, you want to take key and you want to map\nit to i belonging to 0 to n minus 1. And this is that function, h , which is a\nhashing function. So, you want to design a good hash function,\nwhich randomizes and does not collide too often. So, cr"
+    },
+    "009fe9e9-2980-487f-aa9b-18b449cd170b": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "eating a good hash function is a lot\nof work. So, the SHA-256, which I mentioned, was a\nmajor effort. It was a major effort to come up with this\nfunction, which would give you an output or 256 bits, and which had all the desirable\nproperties. So, to come u"
+    },
+    "f87d5cce-adc4-43c4-82de-c99119ae9a6b": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "p with a good hash function requires\na lot of mathematical reasoning about the function, and we are not going to get into\nthat, so we assume that we have a hash function. And in fact, in Python, there are hash functions. There are hash functions for differ"
+    },
+    "dce47adb-2882-47df-a946-1ab55e666702": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "ent immutable\ntypes, like strings and numbers and all that. So, you can actually create your own hash\ntable if you really want by using the Python hashing function. But when we use a hash table, one of the things\nthat we need to do is to deal with collisio"
+    },
+    "bc30b0f2-aa93-458f-a564-492ebe904308": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "ns. Because it is eminently possible that at different\npoint in time, two keys will give you the same location inside that array that you are\nusing. So, either you can use this probing technique,\nwhich is to just move around the array looking for a free sp"
+    },
+    "b4e168bc-fbe3-406d-9aca-ac37892c2162": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "ace, which is called open addressing,\nor closed hashing depending on what you want to call it. So, think of it as closed hashing means your\nworld is closed, you cannot move outside this area. So, you are restricted to being inside this\narray. Whereas open "
+    },
+    "d585f003-43a2-4169-8b65-9f3e8826cf18": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "hashing says actually, the place\nthat you are going to go to is somewhere outside. So, each of the slots in the array actually\npoints to a list of values, which shared the same position. So, if you have a collision, you just move\nand append to that list, s"
+    },
+    "1a2b3887-a412-4dfe-822e-1d9a105c9c76": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": "o each position i now maps to a collection of values. So, you first come here and then go there,\nand it still does not take much time. Because you assume, again, that you have a\ngood hash, so these collisions are rare. So, those lists will be ideally small"
+    },
+    "049c3f5c-7b2f-4788-8725-5cdd5dd74c28": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": ". You do not want everything to be collecting\nin one list, which would happen if all your elements collide. So, if you have a reasonable hash function,\nit will distribute the values across these lists, so searching those lists will not take\nmuch extra time"
+    },
+    "b8cc42d6-e38e-4919-b6ea-3bfa379ccee8": {
+        "content_id": 29,
+        "course_name": "PDSA",
+        "title": "Implementation of Dictionaries in Python",
+        "week": 3,
+        "chunk": ". So, there are many heuristics and optimizations\nwhich are available for dealing with collisions which we will not get into."
+    }
+}

@@ -1,0 +1,422 @@
+{
+    "4622b82b-d4ba-45c8-ab59-abedc56e0659": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "So, welcome to the course Programming Data\u00a0\nStructures and Algorithms using Python.\u00a0\u00a0 So, to begin with we will look at some of the\u00a0\nthings that you are already familiar with just to\u00a0\u00a0 get a refresher on Python and one of the things\u00a0\nI will start with is t"
+    },
+    "83e9538d-9520-4014-94f6-b11bf5bd6026": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "he environment in which we\u00a0\u00a0 are going to run Python code. So, I am going to be\u00a0\ntalking to you today about Jupyter notebooks. \n\u00a0 So, normally when we want to write and run\u00a0\ncode there are many options available to us,\u00a0\u00a0 perhaps the simplest option is what"
+    },
+    "aa3567d8-8877-4c7d-b6e1-449d6467c0c5": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " you\u00a0\nsee here, so you have a text editor,\u00a0\u00a0 so you type your code and then you\u00a0\nopen a kind of a console or a terminal\u00a0\u00a0 and then you load the code that you have typed\u00a0\nin in your text editor and then you run it. \n\u00a0 Now, this is of course, easy to do but\u00a0"
+    },
+    "3468b7c9-d3c0-4e10-8e82-1d95a8e3d1dc": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "\nit is a little bit tedious because if\u00a0\u00a0 you decide to make a change over\u00a0\nhere then you have to go back,\u00a0\u00a0 reload it, so going around in this kind\u00a0\nof cycle of edit and run is a little bit\u00a0\u00a0 cumbersome if you are using a separate text\u00a0\neditor and using di"
+    },
+    "ce2ddb79-cc45-4d4b-ba6a-9c9fa97c6b1f": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "rectly the console. \n\u00a0 So, this gives rise to a more convenient\u00a0\ninterface, which you are familiar with REPLIT\u00a0\u00a0 called an Integrated Development Environment\u00a0\nor IDE. So, in an IDE you have on one side\u00a0\u00a0 something where you can edit your code and side\u00a0\nby "
+    },
+    "a937983c-cb4b-445d-b462-cb8f18037593": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "side you have this command window where you\u00a0\u00a0 can run the code and see the output. \nAnd because you can now see the output\u00a0\u00a0 and edit your code in the same interface\u00a0\nit is much easier to cycle back and forth\u00a0\u00a0 and see how your code can be changed and how "
+    },
+    "36f5fe07-c856-45eb-b81e-8b23b250e1c2": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "the\u00a0\noutput changes. So, you have this quick cycle of\u00a0\u00a0 updating your code and running it, and of\u00a0\ncourse, an IDE has other features also,\u00a0\u00a0 so it offers you typically a debugger. \nA debugger will allow you to interrupt your\u00a0\u00a0 code and inspect the values o"
+    },
+    "817a0283-dd64-48f0-be03-b262fc03bce0": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "f various variables\u00a0\nto see what is going on. You might also be able\u00a0\u00a0 to prepare some test cases in advance and run\u00a0\nthem to see how your code performs and so on.\u00a0\u00a0 So, this is the default that most people\u00a0\nuse for developing serious amounts of code,\u00a0\u00a0 an"
+    },
+    "db213222-2f58-4e13-8f23-2510d5c1d293": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "d of course different IDEs are designed\u00a0\nfor different programming languages. \n\u00a0 Some like REPLIT support multiple\u00a0\nlanguages; other IDEs you might find\u00a0\u00a0 are dedicated to certain languages like\u00a0\nPython or Java or C plus plus and so on.\u00a0\u00a0 So, we already ha"
+    },
+    "07528226-a5eb-4dc9-8342-51644ca29e7c": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "ve an IDE but I am going to\u00a0\npresent to you yet another way of writing and\u00a0\u00a0 running code and the question is why would one\u00a0\nwant one more when you already have an IDE. \n \n\u00a0 So the main point that I would like to emphasize\u00a0\nis that writing code whether for"
+    },
+    "0d791521-b582-46b5-be6e-0cf2035440c3": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " yourself or for\u00a0\u00a0 teaching, like I am teaching now, also involves\u00a0\ncollaboration, very rarely do you write code only\u00a0\u00a0 for yourself, you usually work in a team. So, as\u00a0\na team you might be together developing the code\u00a0\u00a0 or this might be a larger team. \nFo"
+    },
+    "3d228fa3-1cdc-4294-898a-752918fa89a2": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "r instance, it could be\u00a0\u00a0 some kind of a research environment and this\u00a0\nis very common, say in machine learning,\u00a0\u00a0 you are trying to solve a problem, coding is part\u00a0\nof the solution but is not the solution in itself.\u00a0\u00a0 So, when you run the code not only it"
+    },
+    "10341097-718b-4961-8ebc-026a665f4516": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " is possible\u00a0\nthat more than one person may be running the\u00a0\u00a0 code or developing the code to run. \nBut there are maybe people who are not\u00a0\u00a0 running the code, who are not even aware of\u00a0\nhow the code works but who might want to know\u00a0\u00a0 what the code does. So, "
+    },
+    "7ca8ea86-3678-4f21-81e6-4d38c4621f4d": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "then you want\u00a0\nto be able to share your results. Now,\u00a0\u00a0 not notice that when you have a typical IDE, when\u00a0\nyou run the code you can see the results, but what\u00a0\u00a0 happens after you run the code. You cannot take\u00a0\nthe code, you cannot take the IDE open to anoth"
+    },
+    "e6733d3f-064b-4be8-a010-1cd5e740a4cd": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "er\u00a0\u00a0 office and show somebody what you have done. \nYou would like to have some way of preserving the\u00a0\u00a0 output for later, without having to go through a\u00a0\nsort of cumbersome process of saving it to a file\u00a0\u00a0 or preparing a report or something like that. So,\u00a0\n"
+    },
+    "34c7e59f-ae29-4f64-8ccb-701491a034f4": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "here on the right you see a typical view of what\u00a0\u00a0 a Jupyter notebook, which is an interface that\u00a0\nI am going to introduce today looks like. \n\u00a0 So, you have on one side the ability to write\u00a0\ntext, so in this case is just a simple title,\u00a0\u00a0 but you can also,"
+    },
+    "f19d6e41-bafc-4374-92fb-02faef32f299": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " as we will see, introduce more\u00a0\nannotations which describe what you have done or\u00a0\u00a0 what you are planning to do and then you have\u00a0\nin this block, you have the actual code exactly\u00a0\u00a0 as you would have typed it into a standard\u00a0\neditor or into an IDE and now a"
+    },
+    "49fbd63c-ec1a-4647-98ef-21acb0721ae7": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "t the bottom\u00a0\u00a0 you have outside this grey area, you have the\u00a0\noutput of the code what you would normally see\u00a0\u00a0 in a separate window on the side in an IDE. \nSo, the documentation is interleaved with the\u00a0\u00a0 code, so you have the documentation here, you can\u00a0\nh"
+    },
+    "c0525cc6-ea49-48da-833b-ec78a69a0cbd": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "ave more documentation, so in between your code\u00a0\u00a0 fragments or different parts of your code, you\u00a0\ncan introduce documentation without looking at it\u00a0\u00a0 in the comment section of a Python\u00a0\nprogram. So, in python of course,\u00a0\u00a0 you can include comments by writin"
+    },
+    "e8b95a13-e255-4a9f-a734-18e1a01b614d": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "g this hash\u00a0\nand then writing something after that. \n\u00a0 But this does not look very neat and it is\u00a0\nalso very difficult to format. The idea of\u00a0\u00a0 this notebook is that you can actually format\u00a0\nyour text and interleave it with the code so\u00a0\u00a0 that it looks read"
+    },
+    "0f6692b8-a01e-45c0-80cf-3b239ca09049": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "able. The other thing that you\u00a0\ncan do in this environment which is difficult\u00a0\u00a0 to do when you are working in an IDE is to\u00a0\nreplace one piece of code by another piece\u00a0\u00a0 of code without abandoning the previous one. \nYou do not want to throw it away, you wan"
+    },
+    "1332a1db-f1a9-4ecb-808c-db25260d7c92": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "t to say\u00a0\u00a0 what if I replace this by that, so I might have\u00a0\ntwo different definitions of the same function\u00a0\u00a0 and I may want to try out both of\u00a0\nthem without having to go through a\u00a0\u00a0 tedious process of loading a different file\u00a0\nor deleting one and replacing"
+    },
+    "6091fe1e-6803-4896-aeda-1309b18bd276": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " it by the other,\u00a0\u00a0 so I want both but only one to be active and\u00a0\nwe will see that in a notebook this is possible\u00a0\u00a0 because it really depends on which was the last\u00a0\ncopy of that function that you executed. \n\u00a0 And finally, as I said you would like to keep t"
+    },
+    "a9a2287d-1504-4533-9741-50458ecf521d": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "he\u00a0\noutputs available for somebody else to see. Now,\u00a0\u00a0 this could be for two reasons, one is you are\u00a0\njust reporting it, you want to prepare a kind\u00a0\u00a0 of documented output after you have run your\u00a0\ncode so that you can evaluate whether it did\u00a0\u00a0 the job that "
+    },
+    "e64c3e6a-54d0-443c-9825-815f33358675": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "it was supposed to do or you want to\u00a0\nrun it again. And the other thing is also that if\u00a0\u00a0 somebody else wants to run your code they should\u00a0\nbe able to see what you had got with your output,\u00a0\u00a0 so that when they run it they can see whether they\u00a0\nget the same"
+    },
+    "c4f7113b-d247-48e1-9384-4345fdbca854": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " output or they get some other output.\u00a0\u00a0 So, preserving the output is part of saving\u00a0\nthis project as it were for future use. \n\u00a0 So, the concrete interface that we are going to\u00a0\nlook at is something called a Jupyter notebook.\u00a0\u00a0 So, you may be familiar with"
+    },
+    "4ecc2cf8-103a-42d9-b1d6-779f2b106c4a": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " a spreadsheet.\u00a0\nSo, what is a spreadsheet? A spreadsheet is\u00a0\u00a0 basically a large, in some sense an\u00a0\nindefinitely large square matrix of cells\u00a0\u00a0 and in each of these cells you can put a value,\u00a0\nyou can put some text, you can put a formula. \n\u00a0 So, it is unst"
+    },
+    "67d429ef-ad66-4799-816a-c2ee0e7ca16e": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "ructured in the sense that it does\u00a0\nnot tell you specifically what each cell should\u00a0\u00a0 contain, but it is structured in the sense\u00a0\nthat there is a position, each cell has a\u00a0\u00a0 kind of location you have a column number and a\u00a0\nrow number and then you can write"
+    },
+    "7b4bfefc-16b1-47d5-ab78-d44e87386b11": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " formula saying\u00a0\u00a0 this cell should be the sum of two other\u00a0\ncells or it should be the sum of a column\u00a0\u00a0 of cells or a row of cells and so on. \nSo, Jupyter notebook is like a spreadsheet\u00a0\u00a0 except you have only this one column, so you\u00a0\ndo not have multiple c"
+    },
+    "4f5610b1-21d7-4457-837d-33d7b47a4a94": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "olumns but you can see\u00a0\u00a0 that you have one cell, then another cell,\u00a0\nthen another cell, then another cell, so you\u00a0\u00a0 have a sequence of cells from top to bottom,\u00a0\nso that is what a spreadsheet looks like. \n\u00a0 Now, in a spreadsheet you can do whatever you\u00a0\nwa"
+    },
+    "2486f0e3-1395-4ed0-914a-50fc39b873a2": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "nt with a cell. You can put many things,\u00a0\u00a0 you can put text, you can put numbers, you could\u00a0\nput formulas, you can put even charts, you can\u00a0\u00a0 put diagrams and so on, so in a Jupyter notebook\u00a0\neach cell holds either a piece of code or it holds\u00a0\u00a0 some text w"
+    },
+    "ff5ac617-45f3-4433-9d90-442dd5dd2b3a": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "hich you want to insert to explain\u00a0\nsomething about the code to somebody else. So,\u00a0\u00a0 it is either code or text. \nAnd as I said before the text\u00a0\u00a0 is not just a comment as you would put in a Python\u00a0\nprogram, it is something that has formatting. So,\u00a0\u00a0 how do "
+    },
+    "48437665-fedd-47c8-8cb5-ed9fbe267682": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "you specify the formatting? Well,\u00a0\nthe Jupyter notebook supports a format\u00a0\u00a0 called Markdown. So, this is a very simple type of\u00a0\nformat, which is like the type of formatting you\u00a0\u00a0 would do if you were just composing some text in\u00a0\na normal text mode without "
+    },
+    "5534fb36-f30f-4f06-8c75-a4a290af6b15": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "a word processor. \n\u00a0 So, you would basically have a hyphen to\u00a0\nindicate a bulleted item and all that and\u00a0\u00a0 the thing with Markdown is that it will convert it\u00a0\ninto nice formatted output. So, there are various\u00a0\u00a0 resources on the internet, so here is one, wh"
+    },
+    "3256d29f-bb14-4771-bd96-6d9dafac687a": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "ich\u00a0\nwill tell you how to actually use Markdown to\u00a0\u00a0 generate formatted output, so I will leave you to\u00a0\nlook that up, it is not very important for this\u00a0\u00a0 particular course, except that it can be done. \nSo, the main thing about a Jupyter notebook\u00a0\u00a0 is that "
+    },
+    "f922e125-4285-4fa7-8290-76b8a061f890": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "like in a spreadsheet, we can\u00a0\ndynamically change the spreadsheets contents\u00a0\u00a0 by either updating a cell with a new value\u00a0\nor when we update some values we can rerun\u00a0\u00a0 some formulas either explicitly or implicitly\u00a0\nto recompute some other values. So, in the"
+    },
+    "4ad2fb38-331b-4534-9b7c-8980243d298b": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " same\u00a0\u00a0 way in a Jupyter notebook you can add, code or\u00a0\nupdate code and then rerun that code. So, you can\u00a0\u00a0 change definitions of functions, you can rerun an\u00a0\noutput and see how it changes with each edit. \n\u00a0 So, you might wonder about the name\u00a0\nJupyter, so"
+    },
+    "0956665b-f268-4c0c-bdf5-4be6ef207c9a": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " the notebook as such,\u00a0\u00a0 this is a spreadsheet like format, this\u00a0\nnotebook as such is not specific to Python,\u00a0\u00a0 so it is a generic interface to any programming\u00a0\nenvironment, which allows you to kind of interpret\u00a0\u00a0 your code where you can write code and the"
+    },
+    "f4cdc97c-41ac-43db-8c03-a7348a24926f": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "n\u00a0\nimmediately get it to be recognized and run. \n\u00a0 So, that is what happens in Python, we\u00a0\nchange the code and then automatically\u00a0\u00a0 the python interpreter is able to\u00a0\nread the updated code and run it.\u00a0\u00a0 So, Jupyter was designed to work with three\u00a0\ndifferen"
+    },
+    "c8ef85d2-090b-404f-84e1-046bcf6ae1a5": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "t languages, Julia, Python and R. So,\u00a0\u00a0 R you may have come across in some statistical\u00a0\ncontext, so Julia is also a kind of scripting\u00a0\u00a0 language for these kinds of calculations. \nSo, if you take the first few letters of Julia,\u00a0\u00a0 Python and R you get Jupyte"
+    },
+    "d53b26ef-d226-4fa3-bfc0-612bc15bb617": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "r and that is the\u00a0\norigin of the name. We of course, will not\u00a0\u00a0 be using it for anything other than Python,\u00a0\nbut it is important to note that Jupyter as a\u00a0\u00a0 framework is not limited to only Python, you can\u00a0\nuse different what they call kernels, you can hav"
+    },
+    "a23d4058-edb7-4aab-846f-3e0d42552874": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "e\u00a0\u00a0 different programming languages supported behind\u00a0\nthe notebook as to the code that you run. \n\u00a0 So, one interesting, one reason we are focusing\u00a0\non the Jupyter notebook format is not that it is\u00a0\u00a0 necessary in some sense to understand data\u00a0\nstructures an"
+    },
+    "8e1d4dfb-9ca6-45f6-ab62-686d59e3c94a": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "d algorithms in this course,\u00a0\u00a0 but it is an extremely popular format in machine\u00a0\nlearning, which is the broader scope of this\u00a0\u00a0 whole program. So, if you look at code which is\u00a0\navailable for many machine learning projects,\u00a0\u00a0 it is typically saved and disse"
+    },
+    "5c5de276-4419-4a3b-8054-b8c90fa087e1": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "minated\u00a0\nusing the Jupyter notebook format. \n\u00a0 In particular if about the site called Kaggle, so\u00a0\nKaggle is a competition for ML \u2013 Machine Learning,\u00a0\u00a0 where they post problems, so some of these\u00a0\nare synthetic problems, some of them are\u00a0\u00a0 real problems, som"
+    },
+    "2a9ff082-dce1-49d0-8064-e000995af51e": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "e of them even have price\u00a0\nmoney because somebody wants a problem solved\u00a0\u00a0 and they are looking, it is like crowd sourcing,\u00a0\nthey want a number of people to attempt it. \n\u00a0 And after the competition closes many people\u00a0\nwill post their solutions and these so"
+    },
+    "9055dad6-bcb2-4815-ac3f-ee20c555649e": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "lutions are\u00a0\u00a0 typically in this notebook format, so you can then\u00a0\naccess the solution which will have both the code\u00a0\u00a0 and the documentation and then you can examine\u00a0\nit, rerun it, tinker with it and so on. So,\u00a0\u00a0 in particular this means that you get the\u00a0\no"
+    },
+    "789f3e45-c085-480d-86e6-89a147a28067": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "pportunity to take somebody else's code\u00a0\u00a0 for a given problem and see how it works by\u00a0\nmodifying it and trying to enhance it. \n\u00a0 So, the Jupyter notebook has become\u00a0\nso successful, especially with the\u00a0\u00a0 growth of interest in Machine Learning\u00a0\nthat it has w"
+    },
+    "770bdf6d-6682-47df-8076-cd66495ffffa": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "on a number of awards,\u00a0\u00a0 so the Jupyter project which\u00a0\nis behind the Jupyter notebook,\u00a0\u00a0 one in particular this ACM Software Systems award\u00a0\nin 2017, which is given for Significant Software\u00a0\u00a0 Systems, which are used by the community.\u00a0\nSo, it is a fairly pow"
+    },
+    "5617b753-8352-43d8-bfbf-b760bcfc23f8": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "erful tool. \n\u00a0 So, of course you can run Jupyter\u00a0\nnotebook on an individual system,\u00a0\u00a0 whatever system you have, whether it is Windows\u00a0\nor Mac or Linux by installing it and like any\u00a0\u00a0 other Python system you also have to import and\u00a0\ninstall the relevant lib"
+    },
+    "3370c785-2f9c-4190-a651-e6d52b5b2e96": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "raries that you need.\u00a0\u00a0 We on the other hand will be using a publicly\u00a0\navailable form of the Jupyter notebook which is\u00a0\u00a0 put up by Google in what is called Co-lab,\u00a0\nwhich is short for the Co laboratory.\n\u00a0 So, colab.research.google.com leads\u00a0\nyou to an inte"
+    },
+    "a0fa3a1c-3463-496b-98d7-893f94b9b81a": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "rface where you can\u00a0\u00a0 create these notebooks and save them and\u00a0\nit is most importantly free to use. So,\u00a0\u00a0 this has a slightly different look and\u00a0\nfeel from the Jupyter notebook that\u00a0\u00a0 you would install on your own system, but\u00a0\nessentially it is the same br"
+    },
+    "d5a6cc95-c79d-46eb-ac9c-88b4f3637de9": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "oad structure,\u00a0\u00a0 which has been customized by Google for their\u00a0\ninternal use and then released for public use. \n\u00a0 So, it is a customized Jupyter notebook. And one\u00a0\nof the things which will be useful for you, not\u00a0\u00a0 necessarily in this course but outside thi"
+    },
+    "fb1d57a3-3699-4ef0-b81e-e173fbe7563a": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "s\u00a0\ncourse and the other courses that you are doing\u00a0\u00a0 is that Colab has all the standard packages\u00a0\nfor machine learning pre-loaded. So,\u00a0\u00a0 in particular there is a very popular pack library\u00a0\ncalled scikit-learn, which has a lot of the\u00a0\u00a0 standard machine lear"
+    },
+    "f3c03da9-1328-433a-ba98-fdd2b9a2a233": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "ning models already\u00a0\nimplemented in it which you can call and use. \n\u00a0 And there is Google's own library called\u00a0\nTensorFlow which is used for deep learning\u00a0\u00a0 or deep neural networks, plus because it is\u00a0\nrunning on the cloud you also have access to\u00a0\u00a0 hardwar"
+    },
+    "9d2a6d42-808c-4dcf-a4f6-0d75c81dee97": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "e which is beyond the limitations of your\u00a0\npersonal computer. In particular Google makes it\u00a0\u00a0 possible for you to run some of this machine\u00a0\nlearning code on what is called a GPU. \n\u00a0 A GPU is a Graphical Processing Unit\u00a0\nand it is very useful to run the kin"
+    },
+    "8feb2012-9bde-4b22-ba9d-a0e051884050": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "d\u00a0\u00a0 of large scale matrix calculations which run\u00a0\nbehind the scenes in machine learning. So,\u00a0\u00a0 many calculations which would take an\u00a0\nenormous amount of time for you to run on\u00a0\u00a0 the laptop will run in a much more reasonable\u00a0\namount of time on Colab using a"
+    },
+    "baffd269-2046-4873-9eb9-094269b1a822": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " GPU. \n\u00a0 So, to summarize we will use Jupyter notebooks\u00a0\nbecause it is a convenient interface to develop\u00a0\u00a0 python code. In particular this ability to\u00a0\nedit save and share the code is useful for\u00a0\u00a0 me as an instructor also to be able to distribute\u00a0\nthe code "
+    },
+    "7d5ba312-ddc1-404f-9fc8-b1aa3fefbc05": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "that we discuss in this class, to you\u00a0\u00a0 after the class. So, you can incrementally update\u00a0\nand run your code. You can write documentation in\u00a0\u00a0 between your code using this Markdown syntax. \nAnd most importantly as I said you can preserve\u00a0\u00a0 the state of the"
+    },
+    "6059d4ed-f06a-475b-9310-d5ef6bc67b68": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": " notebook, in terms of\u00a0\nwhat you have run, what outputs you have\u00a0\u00a0 generated and export it. And this is extremely\u00a0\nuseful for collaboration and for sharing,\u00a0\u00a0 whether you are sharing it with a colleague or\u00a0\nyou are sharing it for teaching purposes like\u00a0\u00a0 w"
+    },
+    "908474c3-72b3-4324-b118-e54b3d42cc01": {
+        "content_id": 1,
+        "course_name": "PDSA",
+        "title": "Introduction to Jupyter Notebooks and Google Colab",
+        "week": 1,
+        "chunk": "e are doing here. And the particular version of\u00a0\nthe Jupyter notebook that we are going to be using\u00a0\u00a0 is Google's Colab which is free to use and\u00a0\nit is configured for Machine Learning. "
+    }
+}

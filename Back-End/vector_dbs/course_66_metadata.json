@@ -1,0 +1,324 @@
+{
+    "8cf2dcbc-0c6c-444b-baa5-5965041e627e": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "So, this week, we will turn our attention\nto a specific class of algorithms for matching strings. So, quite a lot of our computation these days\ndeals with text. So, most of our interactions with computers is in terms of word processors\nor searching the int"
+    },
+    "77b88aca-c376-4bb2-a799-70aa1350d4ad": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "ernet. So, we are constantly typing text and we are manipulating text.\nAnd searching for a string in a piece of text is a fundamental operation and all these.\nFor instance, if you have a text editor and you want to replace some erroneous text by\nsome corre"
+    },
+    "9d898fcf-6d37-498c-8176-04712b380908": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "ct text. You need to find all occurrences of the text\nthat you want to replace or if you make actually a query in a search engine. Then what the\nsearch engine is trying to do is to take the query that you have put in as a piece of text.\nAnd find all the do"
+    },
+    "a6c745e7-3813-4c99-b39b-b156249a70f7": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "cuments that it has in its index database, which match that piece\nof text. And we have already seen applications outside this conventional text processing. For instance, in genetics, you might want\nto look for a particular gene sequence in some string of D"
+    },
+    "20e49d32-7457-4ed5-937f-63ecd10eb3ea": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "NA. So, in all of these cases,\nwe have a pattern of text which we want to compare against some given text and find out\nif there is a match or not. So, if we look at this formally. First let us look at it\ninformally. So, if you look at for instance the patt"
+    },
+    "5987eb4e-2b5d-40e4-82b6-6966300a37f5": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "ern to be the word an. And we have\na text which in our case here is just a small word banana. So, we want to find out where all it matches.\nSo, we would find for instance that it matches here. So, there is the first an which appears\nright after the b. And "
+    },
+    "0faae6f2-b95b-4ae9-bcf9-0733b66e41cb": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "then there is one more match after that. So, there are two positions\nwhere this pattern matches this piece of text. So, a general question we could ask is given\na piece of text and given a pattern which is another piece of text, and in general,\nwe will ass"
+    },
+    "3d2b322c-bf0d-47f2-85b6-8832c1ef6744": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "ume that this pattern is not empty. Because it is empty of course it makes no\nsense to match it. So, let us assume that we have a non-empty pattern and we have some\nnon-empty text. So, the text will be of some length n there will be n character. The patter"
+    },
+    "8ff23793-56a0-4521-b283-4cf004c36749": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "n\nwill be of length m. And of course, m has to be smaller than n if you have a longer\npattern than the piece of text. If I look for banana in the word an I will not find\nit. So, you can assume that m is less than n for sure. And usually, we will assume tha"
+    },
+    "bedf6bad-ac0d-44ec-b56f-37158277cbdd": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "t it is much\nsmaller I mean for instance, you type a search query in a search engine, it will be a few\nwords you are searching for documents, which contain hundreds of words. So, usually the\nsame length of the pattern we can assume is much smaller than the"
+    },
+    "d0b462c9-e1a0-45ca-8235-dc24ff2c8a3c": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": " length of the document.\nSo, we are really interested in doing something which is kind of optimized in both these quantities. So, these letters that we use come from some\nset of symbols which is usually called an alphabet. So, this Greek letter capital sig"
+    },
+    "ed36c4c6-30f1-4bf2-8916-bed6e22df332": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "ma\nusually denotes the set of valid characters which I will encounter in the search. Now\nin most of our day to day use we deal with the characters we can type on the keyboard.\nBut you can imagine that you can do it in different languages or over different "
+    },
+    "823445ce-1dac-4747-811a-bb72fa99df80": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "symbol\nsets. So, some of the algorithms they may be a dependence\non what the size of this alphabet is. So, if it comes up we will refer to it explicitly\nusing sigma. So, the search problem that we are really interested in is to find every\nmatch. So, since "
+    },
+    "145c343c-4af1-48f0-882b-b792b42a3246": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "we assume that the pattern is of length m we are looking at the slices\nof length m in our text. So, start at a position i and go up to i plus m minus 1 so that is\na slice i colon i plus m. We want to check which all slices of this\nform match p. And we woul"
+    },
+    "eed26aa0-ce17-4a52-8507-b871e64677f2": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "d like to report every such i. So, every i so, in particular\nif we had a piece of text where patterns overlap. For instance, we have a a a as our text. And\nwe have 2 a's as our pattern. So, this is my pattern and this is my text. Then you would\nreport posi"
+    },
+    "4298a44a-c2d8-4d17-9fcb-64717a36c756": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "tion 0 because at position 0 there is a match for my pattern. But you would also report position 1 because\nat position 1 also if I start looking at the slice of length 2 I have a match for my pattern.\nSo, these positions need not be disjoint. So, we want e"
+    },
+    "8c7a752f-da0f-4ac5-83bd-3534a4f38c92": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "very i so, that the slice of\nlength m starting at i matches p. So, there is a very natural brute force way\nto do it which is to just look at every slice starting from i and compare the letters one\nby one. Now, of course, in Python, you could write this as "
+    },
+    "8cbf418c-1bf9-4962-9434-790733e9e13d": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "something like this. You could\njust compare as strings whether the slice of length m starting from ti is equal to the\npattern P. But this equality here hides of course an implicit search character by character. So, to make it explicit when we use our code\n"
+    },
+    "e96c3d7b-c4d4-40ac-a635-7b3af2860175": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "here we will not use string equality we will just use letter wise equality and write our\nexplicit loops. So, what we have here now is a loop. So, we start first of all we are\ngoing to report all the positions. So, we need to keep track of all the positions"
+    },
+    "fdb3b2ce-4cf4-439f-b783-9c521d23e9a4": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": " in\nthe list which we initialized to be empty, and if I am good to look for a pattern of\nlength m in my text then it cannot start further than n minus m from the end. Because if it is less than m characters from\nthe end then the pattern will not fit. So, I"
+    },
+    "12da1178-bc07-4311-ba4e-af22f7c3c302": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": " need to go only up to length of the text\nminus the length of the pattern. So, I start for every position from 0 to the length of\nthe text minus the length of the pattern. And for starting from there I initially assumed\nthat the slice matches. So, I have a"
+    },
+    "cddebd5e-ca85-46a4-9805-cb9caaf20f37": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": " Boolean matched which I assume is true which says\nthat I have not found a mismatch in this slice yet. And I start with the first position in the\nslice which is i plus j is going to be I am going to go from i plus 0 i plus 1 i plus\n2 up to i plus position "
+    },
+    "7b5e4650-8071-434d-b9d7-5687e08b2cef": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "length of p minus 1 m minus 1. So, I start with j equal to 0.\nSo, long as I am within that slice and so long as I have not found a mismatch I checked\nthe next position in the slide. So, I check whether the text that i plus j is equal to\nthe pattern at J. I"
+    },
+    "25e99840-0abe-429e-b9fa-ea93a1b01156": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "f at any point I find that the text at i\nplus j does not match the pattern at j I immediately flag it. I say that the mismatch has occurred\nso, matched becomes false. And then I increment my j. So, when I come back here, I have 2\noptions. Either I have fin"
+    },
+    "8926d91a-532b-4214-94a0-e30adad90768": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "ished the slice so is become length of p or I flag the mismatch\nso, match has become false. So, when I come out to the loop if I still have match set\nto true it must be that I reached the end of the pattern without finding a mismatch. So, I can append the "
+    },
+    "c1a12121-3d26-41b1-9bfe-4be86bca7574": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "current starting position,\nwhich I started with right now, to my list of match positions. And if matched is false,\nthen I found a mismatch. So, this i can be skipped. And I can go to the next i which\nis happening here in this for loop. So, this is a very n"
+    },
+    "41450d4a-baa1-42a5-beaa-be5e3b752c55": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "atural left to right. scan position\nby position. And the only optimization we have done is that we have basically made sure\nthat we come out of each slice as soon as we can. So, whenever we find a mismatch this while\nloop will exit. So, in particular, if I"
+    },
+    "a5306f60-9b7e-4199-b4e8-024e8b055507": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": " have a text, which looks like a, b, c, d, e and\nmy pattern looks like x, y. Then the moment I look at a b I will say that a does not match\nx and I will quit. Then I look at b c I will look at a dozen b does not match x and I will\nquit. So, if there is no "
+    },
+    "55f29181-2928-4cc7-b2a3-e8bee0b238d3": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "match at all between my pattern and my text, it will very quickly\ngo through all the positions without going through the full slice of each position each\ntime. Nevertheless, this is in general going to\nbe bad because in general I would have a lot of overla"
+    },
+    "6172a5f8-b0fe-4803-9b3f-73c4c665c944": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "p ending with a mismatch. So, I could\nhave for instance a text which has n a's. And a pattern which has m minus 1 a's plus\nb. So, now what I am going to do is I am going to for each slice I am going to first look\nat the first m minus 1 letters and believe "
+    },
+    "6ad977b0-af32-4d94-a020-2ad28191d5e7": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "there is a match. And then when I reach the\nlast letter I find there is a mismatch. And only then do I get out of the loop. So,\nfor each of these will actually go through the entire length of the pattern before it\nfinds a mismatch. So, in general, I am goi"
+    },
+    "ecaf83fb-633c-42e0-851e-b12379e1b9bb": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "ng to have a complexity of n times m. So, I actually\nwe remember that it does not actually go to n it goes to n minus m. But since m is small\nwe can assume that the number of positions we scan starting positions we scan is order\nn and for each of those we "
+    },
+    "1790da70-ff56-473e-b87b-7156442ea66a": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "are going through this slice of length n. So, this is the trivial\ncomplexity for a brute force algorithm. Now, we can do a simple modification of this\nwhich is also brute force. But the only thing is that instead of so many scan the slice\ni to i plus m. So"
+    },
+    "013600d4-c1b2-470d-961d-279506883638": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": ", we were scanning it from i to i plus m we could also scan it in reverse.\nSo, this is a reverse string match. So, the only difference comes here. So, we initialize\nj to be the last position in the slice and we go backwards. So, otherwise, there is no\nchan"
+    },
+    "e21e0d76-7e71-402c-8998-a14fbb9d6b67": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "ge. So, if you compare this code with the previous\ncode you will find that the only difference is j equal to 0 j equal to j plus 1. And the\nwhile condition j less than length of p is matched to J equal elect p paraffin j greater\nthan equal to 0 and j equal"
+    },
+    "f997858f-902f-490e-9d49-304fca6a60bc": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": " to j minus 1. So, all we are saying is that we are we are\nprocessing t from left to right. But each slice within t we are processing from right\nto left. So, there is no difference of course this is still order m n. So, this kind of a thing we will find qu"
+    },
+    "e9841dbd-e662-4184-920f-70817c7fe36b": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "ickly\nif we are doing right to left because the very first character from the right will mismatch.\nBut if we correspondingly put a bad string which starts with the first character having\na mismatch. Then we do it right to left again we spend order m time b"
+    },
+    "6abbdf8a-880f-4dd1-9299-35e17fb5f5b8": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "efore we find the match\nor the mismatch. So, this will also be ordered m n. So, why are we bothering with this? I mean, why would the reversing the scan b\nof any use because it just looks like a different version of the brute force. So, we can it turns out"
+    },
+    "1a5b65ce-9148-4739-b712-758f116268cd": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": " speed things up. So,\nsupposing that while we are matching we find a letter in the text which does not match\nany letter in the pattern. So, for instance supposing our text is this word bananamania\nand the pattern is bulk. So, if I scan from left to right t"
+    },
+    "63db3dcf-de39-4549-b35b-1a50196a4755": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "hen at this point, my first\nslice for instance b matches. And then the first mismatch I find is at the second position.\nAt this position, I find the letter a in my text and the letter u in my pattern. Now, a does not appear anywhere in my pattern.\nSo, ther"
+    },
+    "bdc1dc18-a04e-4a8e-bfc0-7b4b86dfbc0a": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "e is no way that bulk can overlap with that position where a is because there\nis no letter in my pattern which can match the a. So, what we can do is in this situation?\nWe can skip the next scan, the next scan would have been to start bulk from the positio"
+    },
+    "14cc84ef-5a35-4140-ae65-a8d62f79b46f": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "n\na but we already know that the position a is useless. So, we can take our pattern and\ngo past it. So, we can directly skip one position and\ngo and start at the third position. Suppose instead we were doing our reverse scan. So,\nwe have the same situation"
+    },
+    "bd91a96b-ac11-41eb-ae40-d6eadbea658c": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": ". But now we start from the right, and we find a mismatch with\nthe last letter which is again, an a against our k which has the is the last position in\nbulk. So, once again we know that a does not occur. So, it does not matter what is before\nthat we know t"
+    },
+    "6961f994-5f91-4e7e-8c6c-3cd6623bbe0a": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "hat we have to shift this entire word after the a. Because there is no point in trying any of\nthese intermediate things because all of them would overlap this a and if I overlap an a\nit cannot match my pattern. Because my pattern does not have an a anywher"
+    },
+    "9e26f167-ef3a-4783-9ff2-1add6971844f": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": "e. So, in this case\nI would actually shift it to the right by 3 positions rather than by 1 position. So,\ntherefore, we could have a faster skipping if we are using this kind of a heuristic to\nspeed up our search because when we see a letter which is in our"
+    },
+    "c54cf494-467e-4aba-ba6b-332d67b099a2": {
+        "content_id": 66,
+        "course_name": "PDSA",
+        "title": "String Matching",
+        "week": 10,
+        "chunk": " text. But not in our pattern then we can actually\nfast forward in some sense the scan. So, this is one special case of what is an optimization\ncalled the Boyer Moore algorithm which we shall look at next."
+    }
+}

@@ -1,0 +1,275 @@
+{
+    "16d052c0-838b-4521-ad14-6c4271fb3bb1": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "[Music] hello pdsa students in this tutorial we will summarize first three weeks of the course and the content goes from analysis of algorithms to searching to sorting and then lists arrays and dictionaries so let's start with the first point timing our co"
+    },
+    "5dad5a5f-e87a-4f72-a0b3-e47e2fb18fc4": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "de with respect to analysis of an algorithm knowing the amount of time a program takes is very important and therefore every programming language has its own way to compute the execution time including python python provides this library called time and th"
+    },
+    "c33e4fe4-bbce-4154-bed2-d15d8aaf86c7": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "is library has a function perf underscore counter this particular function returns a value which may not have any significance on its own but when we call this function before the beginning of the code and then at the end of the code and if we get the diff"
+    },
+    "e0a54ec1-4118-4090-a378-83fdcd651b71": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "erence between these two values then it tells us the exact time taken by the code block between these two function calls moving to next point analyzing an algorithm analysis of an algorithm has two aspects time and memory just now in previous slide we saw "
+    },
+    "1bddcd37-63fe-44ad-b310-9f49f96594f0": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "how to calculate the running time of a program and this particular running time is also referred as time complexity whereas the memory requirement is referred as space complexity moving forward time aspect of an algorithm is much more important than space "
+    },
+    "4271e628-7838-44ea-91b5-c7e5555b6c0c": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "hence here onwards we will focus majorly on time complexity which leads us to the next point running time of an algorithm is always calculated in terms of a function t of n where n is input size next point says upper bound on worst case gives us an overall"
+    },
+    "8e0ac6af-a878-4439-a808-ea117e17d51a": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": " guarantee on performance this upper bound on worst case is very important because it gives us the guarantee that no matter what the said algorithm will not take more than x amount of time let's explore this upper bound on worst case in detail using someth"
+    },
+    "7c347052-6cca-40ef-848f-723ee3cbe7ec": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "ing called as asymptotic notations there are many different notations but majorly we will focus on these three big o omega and theta bigo notation is defined as f of n is big o of g of n which means g of n is an upper bound for f of n this is exactly what "
+    },
+    "e15020b5-d1af-4886-9e92-7a869b2abbb1": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "we were discussing in the last point of previous slide as you see big o provides us the upper bound on the contrary omega provides us the lower bound f of n is omega of g of n means g of n is a lower bound for f of n and now the third notation which is the"
+    },
+    "5e5da0b8-19f4-4244-8624-ce492afdeff3": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "ta notation will guarantee upper bound as well as lower bound which means if f of n is theta of g of n then the algorithm or the solution which we found guarantees upper and lower bound which implies that the solution we have is optimal one once again as w"
+    },
+    "78e9cfc3-f81a-40e2-9c42-7b46afed6c28": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "e saw in previous slide upper bound on worst case gives us an overall guarantee on performance therefore we will measure every algorithm in terms of bigger notation so the next point is orders of magnitude these are some commonly encountered classes of fun"
+    },
+    "eca14963-352c-4e0c-b309-ff0a88609b91": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "ctions in each case c is a positive constant and n increases without bound and as you can see slower growing functions are listed at the top of the table whereas the fastest growing functions are at the bottom now we will see how to calculate the complexit"
+    },
+    "ab55a4d5-a9a1-403b-9ad9-0dd1a09c5e99": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "y of a specific algorithm in order to do so first we have to identify the type of algorithm it can be iterative program or it can be recursive one if it's iterative program then our focus should be on loops if it's a recursive algorithm then we have to wri"
+    },
+    "1fa82e3a-8ac7-4490-a031-c16ce87c03ff": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "te and solve a recurrence relation so the next point is searching algorithms we have studied two different types of algorithms linear search and binary search linear search is a naive algorithm which check every element in the list one by one whereas in bi"
+    },
+    "da161b3b-a214-4acf-a0ea-92c81c8e57ea": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "nary search we compare with midpoint element and we half the list till interval becomes empty but the only restriction or a prerequisite for binary search is that the input list must be sorted as you can see it is naturally recursive algorithm hence we wil"
+    },
+    "c5ed3de8-0ff6-49f0-a869-d8293956d84f": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "l have recurrence relation for this particular algorithm t of n is equal to t of n by 2 plus 1 as you can see binary search is faster than linear search from searching we will move to sorting algorithms and the first sorting algorithm is selection sort as "
+    },
+    "8114da18-bb98-4953-8748-e0dfaf3a23b5": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "the name suggests we will select a specific element from the input list and append it to the sorted list this specific element will be either minimum or maximum element based on whether we are looking for ascending order sorting or descending order sorting"
+    },
+    "90010544-833a-4d5d-b101-db387d0a4adf": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": " the next point is instead of this appending we can swap the elements and that will help us avoid the use of second list the total number of comparisons this algorithm will do is n into n plus 1 by 2 which is nothing but big o of n square another important"
+    },
+    "39c2de4e-0992-4c69-9959-9f7b874d5ee7": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": " point to note is the time complexity of selection sort remains the same irrespective of sequence of elements because every single time we have to iterate over the entire list to get that minimum or maximum another approach is insertion sort here instead o"
+    },
+    "83fcd30c-b458-4a21-a287-8ad63e663147": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "f selecting a minimum or maximum we pick any element from the list and insert it into the sorted list but still the number of comparisons remains the same but the difference is important with respect to this last point the time complexity of insertion sort"
+    },
+    "175aeda2-e844-4e41-baca-4cea14d73598": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": " varies based on the sequence of elements if our aim is to sort a list in ascending order and the input given is in descending order then in such a case insertion sort will have the worst performance possible after these two iterative algorithms next one i"
+    },
+    "259d04bc-c55c-4397-9647-de9d4eb8dd88": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "s recursive one and it is referred as merge sort merge sort divides the list into two halves after that it separately sorts the left and right half and we repeat this process till we have a singleton list and once we have all these sorted sub lists then we"
+    },
+    "0699fb52-e26a-48ad-94e2-e4bed1e32f66": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": " start this process of combining two lists into a fully sorted list for example and lists a and b can be merged together into list c based on following conditions if a is empty copy b into c if b is empty copy a into c otherwise compare first elements of a"
+    },
+    "7c2351b1-4e3e-4a0b-bd30-150299cfcfdd": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": " and b move the smaller of 2 to c repeat till you exhaust a and b as we saw this is an naturally recursive algorithm hence the recurrence for this particular algorithm is t of n is equal to 2 into t of n by 2 plus n on this same principle of dividing we ha"
+    },
+    "fdc6fd92-653e-4a0f-8447-f74a30fe2a6e": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "ve another algorithm called quick sort in quick sort we choose a specific element called pivot it can be any element from the given list but typically we select the first element in the list after that based on this before element we partition the list int"
+    },
+    "b5f9b98a-344b-4b7f-b49b-dc9a20e85db8": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "o two parts lower part and upper part lower part will have all those elements which are smaller than pivot and the upper part will have all those elements which are bigger than pivot and the pivot element goes between lower and upper parts this whole proce"
+    },
+    "ef099cd6-75f4-4dcf-85c8-42f4e003aae1": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "ss we and dividing into lower and upper parts has to be executed recursively for both these parts the advantage of this algorithm is this allows in place sort and it is also possible to write iterative implementation of quick sort even though it is natural"
+    },
+    "ae322096-bcf7-4f02-b906-2df93eee0e05": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "ly recursive and that helps us to avoid additional cost of recursive calls after studying these four sorting algorithms we must compare them based on various factors and then only based on our requirements we can select appropriate sorting algorithm for ou"
+    },
+    "2985aad2-1727-4f0d-8b88-b7efa1f1d032": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "r application after searching and sorting now let's move to the third part of this tutorial which is lists arrays and followed by dictionaries lists versus arrays here when we talk about lists we are talking about linked lists not the python lists linked l"
+    },
+    "12103184-fd95-49ed-9553-dd86cb619761": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "ists are flexible in length whereas arrays are of fixed size values stored in list are scattered in memory values in arrays are stored in contiguous block of memory in order to access a specific element in a list we must follow the links one after the othe"
+    },
+    "3591da8c-27f5-4af0-b252-731760a5d23e": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "r then only we can reach to a specific element but in arrays we have something called as a random access which means we can directly provide the index insertion and deletion is very easy in linked lists but it is very expensive when it comes to arrays simi"
+    },
+    "4e6cccb9-e3d7-4fc1-88c2-7ad966217eac": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "larly swapping elements takes constant time in lists because just like insertion or deletion we just have to take care of some plumbing which is nothing but changing some pointer values but on the other side just like insertion and deletion swapping takes "
+    },
+    "4ac5b039-5377-4ecf-9ac2-f07c8c5f4596": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "linear time because a large chunk of contiguous memory block has to be adjusted according to these operations after the difference between linked lists and arrays now let's see how lists are implemented in python it might be surprising but we studied that "
+    },
+    "d2a606bc-68d3-4b7f-97a9-1e0d5255479a": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "the python lists are not implemented as flexible linked lists in fact the underlying implementation of python list is using arrays and it works as it is explained in these two points whenever we create a list in python it assigns a fixed block in the memor"
+    },
+    "11224401-8fac-4c6d-bd92-bdae96f0f844": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "y and we double the size of array if the list overflows the internal array and that is why these python lists keep track of the last position of the list in the array so append and pop operations take constant time precisely amortized big of whereas insert"
+    },
+    "c578cc7a-9d94-4ef2-84f6-7526d0062d8d": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": " and delete operation takes linear time and that is why python lists behave more like arrays than linked lists now let's see the implementation of dictionaries in python python dictionary is implemented using something called as hash table hash table is no"
+    },
+    "979d03ae-fcbe-415d-983c-b364ad1a3036": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "thing but an array and a hash function hash function is used to decide where a specific value gets stored in this array and that is why there is a possibility that two different values may have same hash and such a scenario is termed as collision and that "
+    },
+    "546086a1-79ef-484d-a26a-4238ed69c8bd": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "is the reason creating a good hash function is very important but at the same time it is very difficult so no matter what how good hash function is there will always be collisions so we need a strategy to deal with collisions and we have studied two differ"
+    },
+    "b9e42e2b-f363-41e8-bc7f-f0ff8c72eb49": {
+        "content_id": 80,
+        "course_name": "PDSA",
+        "title": "Summary of Weeks 1 to 3",
+        "week": 4,
+        "chunk": "ent strategies closed dashing and open hashing in closed hashing we probe for the free space in the array whereas in the open hashing each slot in the hash table points to a list of key value pairs thank you for watching this tutorial happy learning"
+    }
+}

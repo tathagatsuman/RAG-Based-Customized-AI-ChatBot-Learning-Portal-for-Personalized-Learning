@@ -1,0 +1,198 @@
+{
+    "d33cedce-30f9-435d-9220-711135936875": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "So, let us conclude our discussion on\u00a0\nsorting by looking at some other issues.\n\u00a0 So, one of the issues is something called\u00a0\nstability. So, very often we are not sorting\u00a0\u00a0 single values, but we are sorting compound values.\u00a0\nSo, imagine that we have a table"
+    },
+    "9454b6be-be8b-4bb8-a907-3e046eb753d0": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": " and we are\u00a0\u00a0 sorting the rows in the table. So, each element\u00a0\nthat we want to sort corresponds to one row. So,\u00a0\u00a0 one row usually corresponds to values from many\u00a0\ncolumns. So, it is a tuple of values. It could be,\u00a0\u00a0 for example, a list of students, and eac"
+    },
+    "f246d6f0-3687-4ecf-b6fc-8515e8073ff5": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "h student\u00a0\nhas along the columns, you have roll number, you\u00a0\u00a0 have the name, you have the marks, and so on.\nSo, you can think of what you are sorting is\u00a0\u00a0 actually a spreadsheet. So, your list is a list\u00a0\nof rows. But each element in your list consists of\u00a0\u00a0"
+    },
+    "2a124b6b-4c8a-46bf-8580-a50fd368f78c": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": " some sub-parts. So, now when\u00a0\nwe sort, we typically sort\u00a0\u00a0 on one or more of these sub-parts. The sub-parts\u00a0\nare attributes or columns. So, you might want to\u00a0\u00a0 sort by name or you might want to sort by roll\u00a0\nnumber or you might want to sort by marks. \n\u00a0 A"
+    },
+    "f55d3fd3-fcb1-43fd-abd5-2520fb59e95d": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "nd quite often you might want to sort something\u00a0\nwhich has already been sorted. So, for instance,\u00a0\u00a0 it could be that your list is\u00a0\nprovided to you by roll number.\u00a0\u00a0 And now, for whatever reason\u00a0\nyou want to group the students\u00a0\u00a0 in alphabetical order of nam"
+    },
+    "f0c8729e-e3c2-4fcd-9fde-460dac4922ca": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "e. So, you\u00a0\nsort them by alphabetical order of name.\n\u00a0 Now, the question is, when I sort by alphabetical\u00a0\norder of name, I might get two students who have\u00a0\u00a0 the same name. They would have had a roll number.\u00a0\nIn the original sorting one of them would have\u00a0\u00a0"
+    },
+    "2fd68794-9ca7-4a81-9978-b068c4ba2f54": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": " a smaller roll number than the other. In the new\u00a0\nsorting by name, are the roll number still in the\u00a0\u00a0 same order or not or have they got shuffled. \nSo, this is something that we want to know. So,\u00a0\u00a0 for example, supposing you have sorted in\u00a0\nalphabetical o"
+    },
+    "6a96e367-4c80-45a4-9395-eb7db57a08a6": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "rder of name and now you want\u00a0\u00a0 to sort by marks, now when you get the same\u00a0\nstudents with the same marks, are they sorted\u00a0\u00a0 in alphabetical order of name or do they get\u00a0\nshuffled? So, this is called stable sorting.\n\u00a0 So, stability says that when I sort in"
+    },
+    "4540de9b-a440-46e1-a71f-22c555e36666": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": " another\u00a0\ncolumn, it should not disturb the sorting on a\u00a0\u00a0 previous column. So, later sorting should not\u00a0\ndisturb an earlier thing. And this is something\u00a0\u00a0 which is quite natural if you actually work\u00a0\nwith sorted things in spreadsheets and all that.\u00a0\u00a0 If y"
+    },
+    "f7b2b125-da84-4e7c-b710-12526b086b08": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "ou sort on something, you do not want\u00a0\nto go back and figure out that something\u00a0\u00a0 else has got sorted badly that you had\u00a0\nalready sorted in a previous column.\n\u00a0 So, unfortunately, the quicksort implementation\u00a0\nthat we looked at is not going to be stable,\u00a0\u00a0"
+    },
+    "606a4d05-8393-47ee-8d8a-f6e45ee2fd14": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": " because it does all this, if you remember,\u00a0\nyou suddenly do these kinds of exchanges.\u00a0\u00a0 So, if these values originally were in\u00a0\nsome order with respect to some value you\u00a0\u00a0 are not using right now for sorting and if, while\u00a0\npartitioning your sort of swappi"
+    },
+    "4891eada-b55e-49d9-838d-46afdeadeffb": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "ng things around,\u00a0\u00a0 then you might very well be exchanging\u00a0\nthings which are equal in some other key\u00a0\u00a0 and this is not good. So, the partitioning\u00a0\nof quicksort has to be very carefully done\u00a0\u00a0 to make sure that it is stable. It is possible to\u00a0\ndo it, but no"
+    },
+    "64cda3b6-26e8-40fa-938e-605de1cd3138": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "t the partitioning that we saw.\n\u00a0 Merge sort is easier to do. Basically, what you\u00a0\nwant to make sure is that when I have something\u00a0\u00a0 like 1, 3, 7 and merge it with, say, 2, 7, 9. So,\u00a0\nmaybe this had an A and this had a B with it. So,\u00a0\u00a0 I want to make sure "
+    },
+    "68d699d0-b999-4722-bac7-4a3d8bce2ea6": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "that in the final list the A7\u00a0\ncomes before the B7 this is what stability means.\u00a0\u00a0 It means that in the final list I want 1, 2, 3,\u00a0\n7, 7, 9, but the order of the 7s should be in the\u00a0\u00a0 same order in which I was presented to me in the\u00a0\nbeginning. I should no"
+    },
+    "c9817ea6-1f2e-4c66-be82-7785511d31b8": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "t have 7B followed by 7A,\u00a0\u00a0 even though A and B are not part of\u00a0\nmy current sorting procedure. So,\u00a0\u00a0 I am not looking at the A and B, but I want\u00a0\nto guarantee that this does not happen.\n\u00a0 So, in merge, what you do is, basically, if I\u00a0\nsee the same value on"
+    },
+    "54ca9499-2945-4495-8517-560c68b5ead0": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": " both sides, then I will\u00a0\u00a0 move the one from the left first. So, the value\u00a0\nfrom the right should not overtake the value on\u00a0\u00a0 the left. If you guarantee that that your merge\u00a0\nhas this kind of preference for the left list,\u00a0\u00a0 when you compare equal values, t"
+    },
+    "a388eddb-d765-48c5-8776-bc6a14cd3fa5": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "hen\u00a0\nyou will get a stable merge.\n\u00a0 Now, we have looked at basically\u00a0\ncriteria which involve the number of\u00a0\u00a0 comparisons and swaps that we make. But there\u00a0\nare situations where actually the data has to\u00a0\u00a0 physically be moved and it is not an easy thing\u00a0\nto "
+    },
+    "c5d06dad-09e5-4488-9ee4-c245d2a309e1": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "move data from one place to another. So,\u00a0\u00a0 you can imagine that the data\u00a0\nsitting in some heavy boxes. \n\u00a0 So, supposing you are doing a physical sorting or\u00a0\nsomething, then one of the things that you might\u00a0\u00a0 want to minimize is not just the number of boxes"
+    },
+    "1019dd7c-fb2b-420e-b5c5-5aff98152f07": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "\u00a0\nyou examine and exchange, you might be willing to\u00a0\u00a0 look at more boxes to examine and exchange\u00a0\nif you have to move your boxes overall.\n\u00a0 So, data movement is an orthogonal thing\u00a0\ncompared to anything that we have discussed\u00a0\u00a0 so far. But this is also an "
+    },
+    "23866174-7ed4-49b6-a15a-61d167277768": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "important criterion\u00a0\nwhen looking at certain categories of sorting. So,\u00a0\u00a0 sorting is a fairly vast. As we said, sorting\u00a0\nis used as a first step for a large number of\u00a0\u00a0 things and there are many different dimensions\u00a0\nto sorting which people have looked at."
+    },
+    "a70f6841-61c2-4ee9-8feb-4aa95ce08b12": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": " \n\u00a0 So, you should not think that if you\u00a0\nknow merge sort and quicksort you have\u00a0\u00a0 exhausted everything to do with sorting.\u00a0\nThere is a lot of sorting which is still\u00a0\u00a0 there and many different ways of sorting which\u00a0\nemphasize different aspects of the probl"
+    },
+    "e2c807f4-923b-4a2c-83d1-8d59c8f5d120": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "em.\n\u00a0 So, is there a best sorting algorithm?\u00a0\nWell, as you can see from our discussion,\u00a0\u00a0 the hints are quite clear that there is no\u00a0\nbest sorting algorithm overall. Quicksort is,\u00a0\u00a0 as we said, very often the algorithm of choice\u00a0\nwhen we are using built in"
+    },
+    "7c7c7904-1cfb-45ef-b385-cf29f3fc90e7": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": " functions and all that\u00a0\u00a0 people use quicksort, despite its worst case. \nBut there are situations, like we were talking\u00a0\u00a0 about those boxes, where you do not have the\u00a0\nluxury of sorting everything as a function.\u00a0\u00a0 So, sometimes you need to sort, example in"
+    },
+    "5d7b18b5-a1ce-455f-ac3f-b2b070164c04": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "\u00a0\na database, and in a database you need to\u00a0\u00a0 put parts of the data into memory and part\u00a0\nout. So, this is called external sorting.\n\u00a0 So, usually, merge sort is used for external\u00a0\nsorting. And merge sort is not the only n log\u00a0\u00a0 n algorithm. There is also a"
+    },
+    "c035e59d-481a-41ce-9e16-270b71ea3aac": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "n algorithm\u00a0\nwhich we will see later called heapsort,\u00a0\u00a0 which also does n log n. So, there are other n log\u00a0\nn algorithms. And very often, you might actually\u00a0\u00a0 use a hybrid strategy. So, you might use a divide\u00a0\nand conquer strategy when n is large. But then"
+    },
+    "83f2e635-0387-4d42-b837-fd7cfa0625c2": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "\u00a0\u00a0 when you get down to a small list, say like 16 or\u00a0\n32, you might switch over to insertion sort.\n\u00a0 So, a lot of different ways are there of\u00a0\ncombining algorithms or using the properties of,\u00a0\u00a0 sorting algorithm for different situations. So,\u00a0\nyou, it is us"
+    },
+    "e500f52e-23ec-4edc-89e0-d5725afd5126": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "eful to know that all these exist.\u00a0\u00a0 Although in many cases, you will typically\u00a0\nbe using a built-in sorting routine. So,\u00a0\u00a0 you do not really need to know the sorting\u00a0\nalgorithm as long as a built-in sort function\u00a0\u00a0 works. But there are situations where yo"
+    },
+    "f95c93ef-bbf8-45e6-8f5a-db881ca67351": {
+        "content_id": 25,
+        "course_name": "PDSA",
+        "title": "Concluding Remarks on Sorting Algorithms",
+        "week": 3,
+        "chunk": "u will\u00a0\nneed to sort for yourself and then it is useful\u00a0\u00a0 to know that there are these different options\u00a0\nand they all have their pluses and their minuses."
+    }
+}

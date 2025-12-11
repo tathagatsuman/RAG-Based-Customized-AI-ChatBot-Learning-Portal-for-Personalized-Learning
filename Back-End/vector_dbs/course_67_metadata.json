@@ -1,0 +1,429 @@
+{
+    "3b93591e-1cae-4189-b0d2-d4ea8a605036": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "So, let us look at the Boyer Moore algorithm\nfor string matching. So, what we said earlier was that we can speed up the brute force algorithm\nwhich scans each slice at a time by checking whether there is letter in my text which does\nnot appear in my patter"
+    },
+    "626adf4f-7314-44db-92ad-4929e0b894ca": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "n. So, the example we gave was this a in bananamania which does\nnot appear in bulk. And if you are scanning from the right for instance, then we can skip\nforward from position 0 to position 4 in one step. Because we know that that a cannot match\nanything i"
+    },
+    "6c66d576-ffc1-4555-be03-661399dc7f56": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "n the pattern. But this is of course a special case what do we do if we have a\nmismatch but that letter does appear in the pattern. Can we do anything intelligent in\nthat case. So, let us look at this example. So, we have\nthis pattern which is called stick"
+    },
+    "296c777b-b6ef-4004-948d-c0d0592c5233": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " and we have the text which is a stack width. So,\nif we march along from left to right eventually we will reach say this slice that we are examining\nagainst our pattern. And Now, when we do a right to left scan, the first letter, which\ndoes not match is i "
+    },
+    "2a8e629b-c900-462d-967e-fff1b8cd6276": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "in the text and k in the pattern. Now, i does not satisfy our earlier\nskipping criterion, because it does appear in the pattern here. But what we can Now, argue is that if I want\nto move this and try for a match I should try to align these i\u2019s. There is no"
+    },
+    "3b292180-c1cd-4da1-b883-7a8af09d2572": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " point\nin shifting this i by one because it is not going to match next time either I know, that\nI have seen an i. So, I need to take the pattern i and move it to that position. So, I would\nlike to shift Now, by two positions So, that these two i\u2019s become a"
+    },
+    "3958ce01-525c-47c0-9822-e83f40083ccc": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "ligned. So, this is\nthe second case. So, we have the first case where the pattern\nthe letter that I have mismatching does not appear in the pattern. And I can just skip\nover that entire position. And the second case is when I have this match and I align.\nS"
+    },
+    "2874c249-8397-4e5b-ab48-4cee45005264": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "o, we are going to scan the substring. Next Now, how are we going to find out where this\ni is? Well, we can pre-compute this, we are not going to go and look at our pattern each\ntime. What we can say is that, in the beginning,\nwe will go through a pattern "
+    },
+    "f09dfa14-6807-4a15-9848-1e6c3c8ee3c1": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "once and for every letter that appears in our pattern we\ncan compute the last occurrence of that letter inside that pattern. So, we will use last\nas a dictionary which takes a character and it tells us the position of the last occurrence\nof that character "
+    },
+    "3167bdad-1a40-4223-8252-aff30a70aea1": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "in the pattern. And of course, if the letter does not appear in our pattern\nat all then it will not be a key in the dictionary. So, we will able we will be able to check\nwhether the mismatch occurs in the pattern or not by checking the keys of the dictiona"
+    },
+    "0a929e55-bf91-449c-9bd8-e5d122971462": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "ry.\nAnd if it does occur in the pattern then we can find out where it occurs in the pattern\nby looking up this last information. So, in general, what we see is that we are at some\nj. So, this is our position j and then we want to shift this by that much. S"
+    },
+    "39176d01-625c-4a2d-992a-666cc9e93094": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "o, we want\nto shift by the difference between j and the last of c. And of course, if the special case where the\npattern does not have that character, then we can shift directly to j plus 1. So, we\nare at position j. So, this is my last of c. So, if this do"
+    },
+    "4312c683-13aa-4d14-ab11-b7c41fbd80ee": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "es not appear occur, So,\nsupposing this had been some other letter like z. Then I would just shift the entire\nthing after this to j plus 1. So, this was the earlier case that we saw. So, before we formalize this as an algorithm,\nlet us do an example a more"
+    },
+    "69454991-5aa3-40a3-ae18-448f34ba5d52": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " detailed example. And this is from the original paper by Boyer\nand Moore where they introduced these two skipping rules. So, here the text is which\nfinally halts full stop there are two spaces here. So, notice that the text has spaces\nand so, does the pat"
+    },
+    "95152e2b-53b1-4013-9cf2-13818e8f2699": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "tern. So, the which finally halts full stop 2 spaces at that point. And\nthe text actually, that we are searching for the pattern is at that. So, as before we started the beginning. So,\nwe are just doing this brute force scan with this optimization. So, we "
+    },
+    "88f1a27c-3f85-4824-a437-a5e4e2ae90a2": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "try to scan the\nstring starting the beginning. So, since at space that has 7 letters we look at the first\n7 letters of our text. So, we start from right to left. So, we will get a mismatch here.\nBut what do we know, about this mismatch? Well, this mismatch"
+    },
+    "8d437395-d64a-40a9-ac9d-4c895109d088": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " involves a letter f which\nis not there in my pattern. So, the rule says that if it is not there\nin my pattern, I must shift this entire pattern to start from here. So, I must shift it by\nin this case to beyond the f. So, I must shift it to pattern positio"
+    },
+    "41c75ae1-3066-4bd0-ad36-df1765870275": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "n 7. So, I shift the\npattern and now, I am scanning from the i in finally onwards. So, now again I have a\nmismatch at the rightmost position but this rightmost position is a space and the space\noccurs here. So, in such a situation I must shift by this much"
+    },
+    "a520a9ab-504a-476e-8e99-b60d17d720fd": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " the difference between\nthe two positions. So, I must shift by 4. Because the difference\nbetween this space and this space, there are 4 if I add 4 to this I come to this point.\nSo, I must align this thing by shift by 4. So, I shifted by 4 and Now, I align "
+    },
+    "1e2d6dd0-12a9-4a2e-ab21-2e2bb2398cbb": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "l y space\nh a l t with at that. So, this is my next thing. So, here if I go from the right then\nthis becomes my first mismatch. So, this mismatch again involves the letter l which is not there\nin my pattern at that. So, since it is not there in my pattern,"
+    },
+    "443bbbf5-a07e-4092-be14-fbaf3df9652c": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " I must go past it and\nstart from here onwards. So, I shift by 6 And my next search starts at the t s of halts.\nSo, Now, what do we see this matches this matches, but this is my first mismatch. Again,\nit is a space and a space occurs here and there are two"
+    },
+    "d554ff91-9884-4777-a61a-27bbad3480cc": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " apart. So, I have a space in\nthe pattern which is 2 before the space in my text. So, I shift by 2 to align those two\nspaces and I come here. Now, if I go again there is a space which is my first mismatch\nand this time, I must shift by 3 because it is 1 2 "
+    },
+    "8668a358-c923-48ef-951a-03b25f359a14": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "3. So, I move this beyond that, and\nget the space to align. And now, actually if you see there is a complete\nmatch between at and that So, starting at 22 I have a match. So, I would have recorded\nthis in my list of positions where there is a match. And Now"
+    },
+    "00da0c7b-8165-4477-8339-d42464053c3a": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": ", if I have a match. Then\nbecause of the nature of the pattern supposing for instance we saw that if you had all a's\nin a text and you had the pattern like this. So, if I find a match here I should just move\nahead and look for the next match. So, I must go"
+    },
+    "ebf2b63a-96da-4f99-80e9-fb702d591cdd": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " just go one step forward if\nI have a match I cannot skip I cannot assume that the pattern does not overlap with itself.\nSo, I will Now, move by 1. So, if I find a match I will move by 1 to the next position.\nAnd Now, again, I go and I find that the mismat"
+    },
+    "c14ee689-f1b0-474e-90d1-b5d735f5f218": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "ch is a space and the space is the very last\nposition and it must match with this. So, it must keep by 4. So, I move it by 4. And\nNow, I find at this position the letter n but this n does not appear. So, I must keep this whole thing after this.\nBut if I mo"
+    },
+    "61375ab1-fafe-4beb-8c1d-850f47c77b9c": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "ve it to that position then I started a position which is less than m from the end\nof my text string so, I can stop. So, the thing to notice that there are 35 positions\nactually if you count in the string. And notice that we have only scanned about 8 of th"
+    },
+    "c92c90bd-24e0-46e0-b145-a708e7404d38": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "em\nor 9 of them 8 I think. So, in practice though the brute force thing starts for every I with\nthis skipping heuristic you can actually skip over a large fraction of the i. In this case, we are seeing roughly about\none fourth of them 35. And we are seeing"
+    },
+    "d7b27b14-9d16-4dfa-bb37-748816bfac2b": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " only 8 starting positions. So, even if you subtract\nthe pattern from this and 7 you can say that there should have been about 28 starting positions\nor and out of 28 starting positions I am seeing only 8. So, it is between three and a half\nto four as a fac"
+    },
+    "9d9ea7a1-1027-43d4-8fa5-afbd195aab44": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "tor of reduction. And of course, within each scan, because I am doing this\nright to left scan as soon as I find a mismatch I stop. So, it is not that every scan also takes 7\nsteps. So, this is the advantage of doing this heuristic. So, you get this kind of"
+    },
+    "e52e9b8b-f28b-410c-b301-f355c164f787": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " skip\nover speed up so, you do not even see the whole text. So, that is a very important observation\nthat you can actually go through this text without seeing all the letters. And still\nbe sure that you have found all the occurrences of the pattern. So, le"
+    },
+    "7cabfa16-4170-4217-b61f-9b35a9945374": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "t us look at an implementation of this.\nSo, first we have to set up this dictionary which tells us the last occurrence of every\ncharacter in our pattern. So, we start with an empty dictionary. And then for every character,\nfor every position in my pattern "
+    },
+    "6745d113-5067-4ee4-a2f9-0ffe781ac659": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "I will update the last for that character to be its position.\nSo, we are going from left to right we want the last position. So, these are several occurrences\nof a letter. Then the rightmost position will be recorded\nin last which is what we want. Now, we "
+    },
+    "e1e9abb2-76f0-4383-8870-02276e3e3de9": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "can do the actual nested loop. So, because we\nare going to skip over positions we are not going to do a for last time for the brute\nforce thing we had said we will take i to range over every position from 0 to the length\nof the text minus the length of the"
+    },
+    "35aeed23-149b-412f-bee6-2691125ae45a": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " pattern. But now, since we are going to possibly skip\nover we will do this increment manually. Because sometimes we will not want to shift\ni by more than 1. So, we initialize i to 0 and we as before initialize as list of matching\npositions where we found "
+    },
+    "5a5ec42b-fa88-4228-b5ea-df8d75679df8": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "matches to be the empty list. So, earlier as we said for i going\nup to length of t minus length of p. Now, we are saying while i is less than or equal\nto that value. So, we assume as before that for the segment that we are looking at there\nis a match and w"
+    },
+    "8184621a-ea7d-442d-b7e2-5d58602928bd": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "e started the last position in the segment because we are doing right\nto left. So, this is the same thing we come from right\nto left right and check whether there is a match or not. So, when we come out of this\nloop there are two possibilities we have scan"
+    },
+    "c1475244-e370-4c38-abde-54dd63033870": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "ned the entire segment and there is a match or\nwe have found a mismatch. So, now we have to do appropriate things depending on what\nthe situations. So, if there is a match then we record it. So, we take the current starting\nposition i and append it to our "
+    },
+    "8a590e41-73ca-4b93-8572-a33032c85543": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "poslist. And we move to the next position in the right\nthis is what we said before because the patterns may self overlap. So, if we find a match we\njust move one position to the next and restart on matching. But what if it does not? Well,\nif it does not ma"
+    },
+    "a5f594b3-9ca0-483d-99b5-af30e053e062": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "tch remember that we have decremented j after we found a mismatch. So,\ntechnically, the mismatch was found at j i plus j. But we have decremented j. So, I am\njust restoring j here back to where the mismatch was. So, I want the mismatch to be recorded at\nt "
+    },
+    "3d30f124-3bc4-4f50-aafa-88affe9c0f73": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "i plus j. But since j was decremented inside the loop at the end of the loop after the\nmismatch was found. I am 1 position to the left of where the mismatch was in terms of\nwhat j holds. So, I restore j. Now, I have to check the two conditions. So, the two"
+    },
+    "e48cd55a-85d4-45b8-b644-78c299cef2ea": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " conditions\nare whether or not this letter occurs in p. So, if it does not occur in p let us do that\neasier. So, we check if it is in the keys of my dictionary last. If it is not there, then what do I do? I skip\nto the right of the pattern and right to tha"
+    },
+    "476762e7-96f3-4188-8a74-92042105f629": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "t position. So, I go so, this was a mismatch\nat position i plus j. So, I move forward to i plus j plus 1. So, this is the easy case.\nWhat if it was in my pattern? So, if it is in my pattern I need to go by the difference\nbetween j and last. Now, the diffic"
+    },
+    "43d117ac-3110-4dc4-b27b-f5adb4ab5275": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "ulty with that is that the last occurrence of this letter\nmay actually be beyond. So, as an example, supposing it is supposing\nI am look at a segment which has say a x a this is my text. And my pattern was of the\nform b x a. So, when I come to this positio"
+    },
+    "290735c3-044f-483e-9946-5cd9920e1e07": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "n here, and I find a mismatch between the a\nand the b a certainly in my pattern but this is the last occurrence of my pattern then\nit is already beyond the position where I found. So, I should not shift that a backwards\nand try to align it with this. Becau"
+    },
+    "793777c9-1663-457a-8c48-bf83983c744f": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "se it does not make sense to do that\nbecause I have already done that in the past. So, if the last of j happens to be smaller\nthan j. So, it is to the left then I will shift by the difference. If the last of j\nis bigger than j that is I have already seen t"
+    },
+    "fdf78017-f2e4-4b72-81d5-5c63eb39c4bf": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "hat and have gone past it already then I\nwill just move by 1 I will do nothing important. So, these 2 things are summarized. So, these\n2 things are summarized in this rule. So, you take the maximum of these 2 quantities\neither j minus last j if it is posit"
+    },
+    "11278c1c-bf59-40b4-84c9-795f078a26c8": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "ive or 1 in case j minus last j is negative than\nthe maximum would be 1. So, this if then else is summarized by just taking the max of these\n2 quantities notice that j cannot be equal to last j why can it not be equal because\nif it was equal that means tha"
+    },
+    "99b368e2-0e73-44bf-b4dc-852d893b976e": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "t these 2 are actually the same letter. If the position\nwhich I am looking at is the same as the last position of that letter my pattern I am looking\nat that position. So, therefore, it cannot be equal to it must be either strictly greater\nthan or strictly"
+    },
+    "17374be4-8c6e-451b-bc88-f1ead1db43cb": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " less than. So, this is our implementation of the Boyer Moore algorithm. So, though this heuristic is attractive in\npractice unfortunately we cannot claim anything in the worst case. Because if I take our usual\nworst case pattern which is a text which has "
+    },
+    "06a97940-07a4-416f-abde-77b73191b1e6": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "all a's and a pattern which has one b followed\nby m minus 1 a's then this is again going to take order n times m time even with this\nheuristic. But I am not going to get any non trivial shifts. So, without the dictionary\nthere is another bottleneck which i"
+    },
+    "faedaf45-efbc-4aff-a9f5-4abab9fda2c7": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "s that computing that last. So, what we said was that we will only look\nat the letters in our pattern and set up keys for them and not set up anything for the letters\nwhich are not in our pattern. Now, if your programming language does not support a dictio"
+    },
+    "242c8288-698b-4da1-95f5-fa3a331c559d": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "nary\nthen you have to actually set up a default value for all the letters which are not in\nthe pattern otherwise you will end up with some kind of a mismatch when you try to search\nfor that index. In which case setting up that preprocessing\ncould become pr"
+    },
+    "1774f020-33a8-45ff-98fc-5f18d7a7de1c": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "oportional to the size of your alphabet, you cannot have a kind of array\ntype of thing where you say that there is a catch all value. So, you need to do some\nkind of hashing in order to do with the dictionary does it for us for free. Otherwise, you have\nto"
+    },
+    "aead15a1-2b0c-41f6-9d48-338c1db33ca9": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": " hash it manually. So, where whatever you do you have to set up something which is order\nsize of sigma. But fortunately in Python, we do not have to worry about it. So, the\ndictionary computation is actually quite easy for the preprocessing. So, if you loo"
+    },
+    "20fe2b1c-4f48-4e67-b1ea-96d5e6d85e27": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "k at Boyer Moore in practice.\nIt is actually as we saw sub linear by which we mean that you see significantly less than\nthe number of characters in your string. When you are processing it. We saw that long example\nwhich has this property and people have do"
+    },
+    "a829c69f-d9a0-49e4-b798-c4a6a391d8e4": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "ne statistical experiments. So, if you take English\ntext and you take a 5 character pattern then typically you will see something like one\nfourth of a comparison per character. So, you are Getting a 75 percent saving in some\nsense on reading the entire tex"
+    },
+    "1847e447-6bc7-4b5e-a167-65e3551d65cb": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "t. So, this is the nature of the sub linearity\nand therefore, you can also imagine that because you are skipping based on the length of the\npattern if you find mismatches and your pattern is longer you will make longer jumps. So,\nas the pattern increases i"
+    },
+    "cb99b1ac-6db1-4a5e-9798-deed5d615f71": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "n length actually Boyer Moore becomes the heuristic becomes\nmore efficient because more characters get skipped. So, Boyer Moore though it is worst case no\nbetter than the brute force because of these very strong properties that it has with respect\nto reali"
+    },
+    "7847ae2d-ed4b-4879-8835-68bfaa4fb176": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "stic text. It is very often the algorithm which is implemented in utilities which requires\ntext search. So, for instance if you use Unix or Linux there is a utility called grep which\nsearches for patterns in a text file. So, grep actually uses Boyer Moore "
+    },
+    "c077ce28-a2df-46af-af85-0e90040f575c": {
+        "content_id": 67,
+        "course_name": "PDSA",
+        "title": "String Matching: Boyer-Moore Algorithm",
+        "week": 10,
+        "chunk": "as its underlying\nalgorithm."
+    }
+}

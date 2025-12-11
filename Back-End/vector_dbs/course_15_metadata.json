@@ -1,0 +1,471 @@
+{
+    "041451b3-1b70-4350-bea4-3e733efd1d70": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "So, we have seen how to express orders of\nmagnitude using this big O notation. So, before we get into some actual algorithms, let us\nlook at some examples of how we would look at very simple pieces of code, and try to\nestimate the complexity of the code. S"
+    },
+    "6324a5f9-a327-47a0-8a0c-04276ae70a55": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "o, typically there will be two types of code\nthat we look at; either it will be an iterative program, where we run some loops perhaps nested\nloops. Or it will be a recursive program, where the program calls itself. So, let us\nstart with some examples of it"
+    },
+    "4d04e1a5-2235-45ca-8ecd-e0a4069f7afb": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "erative programs. So, here is a very simple program that we\nall know, which is how to find the maximum in an in a list. So, what we do is we start\nassuming that the beginning of the list; the first element is the maximum. And then we\nscan through all the e"
+    },
+    "182db895-5406-438f-aacb-507ad8dcfe9b": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "lements, and wherever we find a value, which is bigger than the\ncurrent maximum; we updated to that value. So, in one scan of the list, we just keep\nthe track of maximum value that we see. So, the complexity of this is very easy to estimate.\nSo, first of a"
+    },
+    "20a2861d-a323-4081-9a3c-23d388b7952a": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ll we have to calculate what is the input size. So, a natural notion of\ninput size for this is the length of the list; because obviously we have to find the maximum\nand a longer list, it will take more time. And so, it is reasonable to say that the input\nl"
+    },
+    "1c83a403-7870-4eb9-9082-6180d403d4dc": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ist size or the input list length is the parameter of interest. Now, this is a single\nloop, so there is a for which goes through all the elements in the list. And is going\nto always scan all the elements, because we have no particular information about thi"
+    },
+    "96f59ce9-1d2d-4afe-b7f0-43a2c0bb84a3": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "s\nlist; we do not know whether the maximum value occurs in the beginning or in the middle or\nin the end. So, this is an example of a function that will always run that loop n times, where\nn is the size of the input list. So, this has worst case order n, bu"
+    },
+    "6bbc8a9a-fd4e-47e6-8610-f501327ad945": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "t it is also in\nsome sense every case order n. Now, let us look at the slightly more complicated\nquestion. We have a list of elements which is a no particular order, and we want to find\nout if the list has two duplicate elements; that is at least two eleme"
+    },
+    "01ba38f0-fd22-4da0-9de8-7f47a81dc9d9": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "nts which are the\nsame. So, for this we run a nested loop. So, what we do is we scan through every element;\nso we have this whole list. So, when we are looking at element A Li, we compare we compare\nthis to everything to the right of i. So, we have i plus "
+    },
+    "aa47b065-f7f4-44a4-8a1a-97dda084c024": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "1 up to n minus 1; so that\nis the nested loop. So, for every i from 0 to n minus 1, for every j from i to n minus\n1; so, maybe this should be i plus 1. From i plus 1 to n minus 1 we check whether Li\nis equal to Lj. If we ever find that Li equal to Lj, we w"
+    },
+    "49d15731-c5fe-4164-a229-6cc0721a7f78": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ill\nreturn False. If we find no Li is equal to Lj, then we would return True. So, this now\nis a nested loop; so there is an outer loop which runs n times, and there is an inner\nloop which runs. The first time it will run n minus 1 times, because it run fro"
+    },
+    "5bff0bd5-3cc8-4170-9cd5-6e9fc9750f89": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "m 1. If\nthe outer loop is at 0, it will run from 1 to n minus 1; if the outer loop is at 1, it\nwill run from 2 to n minus 1 and so on. So, it is going to run, the inner loop is going\nto run n minus 1 times the first time; then n minus 2 times the second ti"
+    },
+    "053213b0-8873-4819-9587-408fe8f2a991": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "me and so on.\nAnd finally, the last time is going to run once; and effectively there is going to be\na zeroth thing, which we will not worry about. So, if you add up this then this turns out\nto be n into n minus 1 by 2. So, we saw last time that n into n mi"
+    },
+    "189fe131-af97-463d-82d5-b5d81b779356": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "nus 1 by 2, we just discard\nthe lower powers of n. So, this is n squared by 2 minus n by 2; so we get rid of this,\nand we get rid of the constants. And we can declare that this particular nested loop has\nworst case complexity order n squared. Now, when is "
+    },
+    "b8dde077-5daa-49ed-ae33-ec2382840920": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "it going to reach at worst case is\ngoing to reach worst case if it is finally going to return True. That is it has to scan\nthrough every pair and decide that no pair is the same; so, there could be much better\nsituations. So, there could be situations wher"
+    },
+    "58c48edf-d23b-4613-82a7-69c71d70e12f": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "e the very first element L0 is equal to\nL1. Then write at the beginning of this nested\nloop, you will find that it is False and return. So, there could be good situation, there could\nbe bad situation. But as we said we are looking at the worst case situati"
+    },
+    "2aab911e-89b6-4c62-8a33-0c9372e414d0": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "on. And in the worst-case\nsituation here is one where there are no duplicates, and it is going to take n times order n squared. Let us look it at more computational examples;\nso let us look at the problem of matrix multiplication. So, if you remember matri"
+    },
+    "340fc394-a517-4296-85ed-ec501eace0ed": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "x multiplication,\nwe take two matrices which are of compatible size; and then we have to multiply them to\nproduce an element here. So, if this element here is in row i and column j, then we take\nrow i in this matrix. We take column j in this matrix, and we"
+    },
+    "f30a34f1-e6c7-4ab6-b56f-40853c34765c": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " multiply pairwise every\nelement A i k with B k j. So, that is how matrix multiplication happens. So, in particular\nif this has m times n that is m rows and n columns; and this has n rows and p columns,\nthen the output is going to have m rows and p columns"
+    },
+    "16e8eaca-8c85-493b-84b7-98e94b65c00d": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": ". So, the input matrices have to have this compatibility;\nthe number of columns of the first matrix must be equal to number of rows in second\nmatrix. And the final output matrix will have the same number of rows as the first matrix,\nis the same number of c"
+    },
+    "c7f9529a-a25b-48f7-985d-794ff8d56b4d": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "olumns is a second matrix. So, we will now use a very simple\nrepresentation of matrices. So, we will take a matrix like this and represent each row\nas a list. So, the matrix as a whole is the list of list; so each row is the list, each\nrow is one list. So,"
+    },
+    "69a75b6c-685f-4523-b2a8-d2d7178967e5": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " 1, 2, 3 is the first list; the second row is 4, 5, 6 is the second\nlist; and the whole matrix is a list of these rows. So, now if you look at the code what we have\nto do is first extract m, n, and p. So, we are going to assume that A and B can be multipli"
+    },
+    "a92b73e4-036d-4e0f-ad02-7746dd875ee9": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ed,\nso the number of rows in A, which is a number of elements at the top level of the list is\nm. The number of columns in A is equal to number of rows in B. So, we can take the number\nof rows in B as n, and the number of columns in B is the number of entri"
+    },
+    "8f0ac7b3-0592-4fc3-af91-85603a3a6a6b": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "es in the first\nelement of B. Because any of these rows has an equal number of entries; so we can just\npick the first one. So, B0 will be the first row of B, and the number of entries in that\nthe length of that will be p. So, we having got m, n and p; we h"
+    },
+    "354443a6-d7aa-4f6c-abc7-555255bc03d2": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ave to setup the output\nto be a list of m rows with p columns. So, this is p zeros, 0 for i in range p will\nsetup a list of p zeros; and then we took m of them, so we get m rows of p0. So, this\nis our initial output matrix and now we do this update rule. W"
+    },
+    "bf033226-0d1f-45cb-ba55-58e0db9cf999": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "e take each for each C\ni j, we run k over all n; and we take A i k times B k j and add it to the current value\nof C i j. So, we go over the number of rows in A and the number of columns in B. So, this\nnow is three nested loops, so this is going to take m i"
+    },
+    "cbdeb1d7-ad88-41eb-bcc1-8f75ad36d249": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "terations; this is going to take\nn iterations and this is going to take. Sorry, this is going to take p iterations, and this\nis going to take n iterations; so, m times n times p. So, the number of rows in A times a number\nof columns in B, times the number "
+    },
+    "b821907a-a950-4b3a-948b-3aa623a5fa32": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "of columns in A, which is the same as the number of rows\nin B. So, we are going to take m times n times p. And if we are actually multiplying square\nmatrices that is m is equal to n is equal to p; then this is going to be n times n times\nn or n cube. So, h"
+    },
+    "1ad9e1c4-1f70-48b1-98c0-0c62cf5b3036": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ere we see a natural example of a problem which is actually higher than\nn squared; so, far we saw nested loops of n squared. Now, here is a problem which is\nactually n cubed. At the other end of the spectrum, supposing\nwe want to find out the number of bit"
+    },
+    "7b2e11be-bddc-4693-b4da-35e57dc22198": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "s or number of binary digits in the binary representation\nof n. So, the usual way we do this is we keep dividing by 2, and we get each bit as we go\nalong. So, we can just keep a counter initialize it to 1, and we just want to see how many\ntimes we can divi"
+    },
+    "d4df55e4-fcfa-4131-a5eb-2bdf8788b6d4": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "de by 2 till we reach 1. So, we keep incrementing every time we divide\nby 2, and we stay above 1; and finally, we return this counter. So, this is what we said\nbefore when we looked at this binary search and so on; you know when we were halving the\ninterva"
+    },
+    "f7107499-f5ec-4f63-95db-e27d50188cfc": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "l. The number of times it takes to (have) n down to 1 is basically log n; so,\nthis is going to take order log n steps. So, for a list type of algorithm, where the\ninput is of size is n; a function which takes order of log n would be considered very efficie"
+    },
+    "d44f694f-1b35-4b50-b93e-ce491171d70d": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "nt.\nBut we said that first number theoretic problems like this, we should not count n, the number\nn itself as the input size. We should rather look at how much space it takes to write down\nn, which is roughly the number of digits in n. So, we are saying re"
+    },
+    "e1aa0643-031d-482a-beee-3be3792e5c9f": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ally that the number\nof digits in n is proportional to log of n; and the output is taking time log n to compute.\nSo, this is actually a linear function, even though it looks like it is taking log n time. Log n itself is the size of the input and\nthat somet"
+    },
+    "f7f810c9-795d-495a-b1cb-27d8eac78307": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "hing we have to keep here. Now, one thing you realize is that we might be\nwriting it in decimal and taking it out in the binaries. So, if you say log 10 of n and\nlog 2 of n; you might ask what is the connection between these two. It is not difficult to\nsee"
+    },
+    "0732afd4-dfb9-4ddd-8c20-55becca28711": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " that these are connected by a constant factor. So, if it is log anything of n to\nany base, its order of log any other base to n; so, this is also log of n. So, the input\nis say in base 10, so the size is a number of digits written in in decimal. The outpu"
+    },
+    "3296f2a7-7615-4023-b5bc-039a2984c894": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "t\nis logarithmic to base 2; but they are both of the same order of magnitude. Such a final example let us look at a very\nfamous problem; which is like a puzzle. So, you are supposed to take these discs which\nare of different diameter, and are arranged in d"
+    },
+    "8b03c67b-5903-4e0f-9c5b-1ef1e31e892f": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ecreasing order of size. And it is supposed\nto transfer them from one peg to another peg. But the constraint is you never allowed to\nput a bigger peg on top of the smaller peg. So, supposing you move the smallest one here,\nthen you cannot put the next bigg"
+    },
+    "c17cd6b1-b5e3-45af-b5ff-05ee99af4320": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "est one on top of it. So, you have to move biggest one\nto the other one. So, now the question is how are you going to transfer these n pegs\nfrom A to B? So, you are given a third peg. So, since you are given a third peg, in this\nsituation what you can do, "
+    },
+    "6e69572f-0374-49d0-a34e-bac8698d504d": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "is supposing this is smallest peg, this is the next biggest\npeg. Now, you can move this here and create a pile of two on that peg. So, this is how\nyou can use the third peg in order to make space to move things around. So, there is\na very well-known recurs"
+    },
+    "9613b100-7e53-43b5-bed9-6b7ca351cecd": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ive solution to this, and that says that I have these n pegs. Now,\nif I keep this peg at the bottom, this largest peg at the bottom; then anything can sit on\ntop of it. Because it is a largest disc at the bottom, anything can sit on top of it.\nSo, I can as"
+    },
+    "629c9953-1aaf-40ed-bcac-1be0e82f24ef": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " well assume that this disc never moves. So, now I take these n minus 1 pegs which\nare above, and I transfer them to the third one. Now, this is a smaller problem. And effectively\nI have all three pegs at my disposal, because I do not have to use this one."
+    },
+    "8b4b3b7f-b88c-4ff3-aae9-e0847bcf60fb": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " When I gets\nto the bottom, I can just put anything on top of it. So, having done this, now I have\nI have moved this n minus things here; now, I can move this biggest one to the peg that\nI wanted to be. And now I can again solve the same problem, recursive"
+    },
+    "a294818e-685f-492d-96cb-5a2e96ba6db1": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ly move this n\nminus 1 things here. So, I can move n minus 1 pegs from A to C which was supposed to be\nthe temporary peg, thinking of B as my intermediate peg. So, I do not use B as my final peg; then I\nmoved my biggest disc to the final peg. And then I ca"
+    },
+    "e3269c50-5c50-4306-8e6f-456312a9ab2f": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "n now again use the original thing\nA as intermediate thing, and move everything back from C to B. So, I have moved to n minus\n1 things from A to C, one disc from A to B, and n minus disc from C to B. So, when I have a recursive solution like\nthis, then the"
+    },
+    "9ebfa1ef-00c9-4bae-a728-da8e98ce8d4f": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " best way to express the complexity is to think of it, as a recursive formulation\nor a recurrence. So, let me say that the number of moves M, for an input of size n; if I have\nto move n discs M of n, it is a function of n. So, if I am moving one disc to mo"
+    },
+    "d1dbc0b2-3683-48d6-98fe-3903cf34b1bf": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "ve I can\nalways move it; means one disc means I start with three pegs and only one disc. Then I\ncan move it in one move; I do not have any constraints, so M of 1 is 1. On the other\nhand, if I have more than one disc, then I have to obey this recursive solu"
+    },
+    "bd9b873e-a00d-4154-96d5-4aea425e5752": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "tion. So,\nwhat I do is I first move this is from A to C, I move n minus 1 disc from A to C. then\nI moved this one disc from A to B, and then moved n minus 1 disc back from C to B. So, I have to solve this n minus 1 problem\ntwice, and in between I have move"
+    },
+    "232cdde6-a679-4281-a703-47dcf75859c8": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " one disc. So, if I combine this and this which are the\nsame, I get two times n minus 1 plus 1. This gives me a kind of recursive dependence of\nM of n on M of n minus 1. And the usual way to solve this is to expand or unwind the recurrence\nby substituting."
+    },
+    "bda07c5d-9fea-4575-8ed0-a008fcb86335": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " So, I start with M of n being two times n minus 1, n minus M of n minus\n1 plus 1. And now I can do the same thing to; I do not know what M of n minus 1 is.\nBut I can apply this same formula to that. So, I get two times M of n minus 2 plus 1,\nso this comes"
+    },
+    "4c222681-f864-412d-badd-477ae0e30d72": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " from expanding this, so, what is inside this bracket. And I have this outer two and I have this\nplus 1. So, if I expand this out again and kind of regroup; this 2 times 2 becomes 2\nsquared. These 2 times 1, plus 1 is here; and I have of course M times M o"
+    },
+    "dbabce16-0662-4793-999e-3e22e9324632": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "f n minus\n2. So, this is the kind of clean up version of this one step expansion. So, now I do I\nexpand this again; I will get something in terms of M of n minus 3. So, I will get 2\ntimes M of n minus 3 plus 1; and again if I combine and cleaned up, I will"
+    },
+    "f7d114ff-69e3-4fd5-8ff8-d536e3705367": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " get 2 squared\ntimes two is 2 cube times of M of n minus 1, n minus 3. And then I will get two squared\ntimes 1 4, and I already I have a 2 and I have a 1. So, 4 plus 2 plus 1 and if you read this carefully,\nit is actually 2 squared plus 2 to the 1 plus 2 t"
+    },
+    "f29d8c68-e961-4c4b-9db5-8da732446b5c": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "o the 0. So, each time I will get a higher\npower of 2; next time I will get plus 2 to the 3. And if you know this or you should\ncheck this, 1 plus 2 plus 4 is 7, which is 8 minus 1. If I add 8 to that I get 15, which\nis 16 minus 1. So, if I add up the powe"
+    },
+    "3c9fb767-ec99-49db-8f85-d07f85c96b01": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "rs of two up to n, I get 2 to the power n plus\n1 minus 1. So, I should use that fact to say that if\nI expand this k times, this 2 to the 3 will become 2 to the k. This n minus 3 will become\nn minus k; and this summation will be 2 to the power k minus 1. Be"
+    },
+    "28e5f687-9790-4e25-8b4e-d90daef8795c": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "cause I would have\n2 to the 0, plus 2 to the 1, up to 2 to the k minus 1. So, this becomes the general form after k\nsteps of substituting this recurrence; and eventually when I reach 1, I will have 2.\nIf I do this n minus 1 times, I will have n minus minus"
+    },
+    "757a2aae-b0fc-4269-88e8-6b70fe9115b8": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " 1, which is equal to 1. So,\nafter n minus 1 steps if I take to be n minus 1, then I will get M of 1, and this k is again\nn minus 1. So, I have 2 to the n minus 1 times M of M of 1, plus 2 to the n minus n minus\n1. But what is M of 1? M of 1 is just 1; M o"
+    },
+    "26a4d332-d363-4142-bf12-4778073e362c": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "f 1 was known to be 1. So, this is just 2\nto the n minus 1, plus 2 to the n minus 1 minus 1. So, is this plus this minus 1, which\nis two times this is 2 to the n minus 1. So essentially, I have now by kind of laboriously\nsubstituting and coming down to the"
+    },
+    "e06bb555-577f-49cb-9fc4-a5c74eb1336e": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " base case, I have argued that this tower of Hanoi solution\nactually takes exponential time. So, if I give you n discs is going to take you, 2 to\nthe power of n minus 1 moves to execute that recursive solution, in order to transfer all\nthe discs. So, to su"
+    },
+    "efb0e425-d6a2-4302-8594-d2439026a83f": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "mmarize what we have seen is that\nif we are looking at iterative programs with loops, then what we really need to understand\nis how many times the loops execute. If there are no loops, then it is just a straight line\nof code is equals to take the constant "
+    },
+    "62a69cc0-2509-40b4-b0ff-4e6f69c71e04": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "amount of steps. So, any interesting program will\nhave a loop which will depend on the input. We will run through the loop; if it is a for\nloop, it is a very easy to calculate. Because we know exactly how many times loop is going\nto execute. If it is while"
+    },
+    "6363e5a1-272d-4a0f-9b31-9e0c235a5f5b": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": " loop, then we have to be a little bit more careful to calculate\nhow many times it will take for the while to become 1. So, this is something that we saw, for instance,\nwhen we looked at that number of digits thing; so, here we had a while loop. So, when w"
+    },
+    "5c69b0f1-bfe3-4c77-a71c-6a60a17b8ea5": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "e\nhave a while loop, then we cannot tell a priory that is going to take n steps. So, we have\nto figure out how long it is going to take for that condition to become False and the\nloop terminates. So, if we have an iterative program, we are basically lookin"
+    },
+    "e6863dd5-eac1-40db-8d88-0c45340f4abf": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "g at the loops.\nIf we have a recursive program, then we have to understand the recurrence. So, we have\nto say, how the time complexity for the full input depends on the recursive or the inductive\nparts into which you are breaking it; and then we have to so"
+    },
+    "fc79d672-66d6-41c5-82d2-cb771b95bc34": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "lve this recurrence. So, we typically solve the recurrence like\nwe saw here. By expanding out the recurrence till you come out to the base case, where\nyou can substitute in a concrete value. And in all this we have to be very clear about\naccounting basic o"
+    },
+    "5f15d9b6-f82f-413e-adea-c35ad9be11c9": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "perations correctly. So, we said that this is the somewhat flexible\nnotion and we will be not too worried about this. But you have to make sure that you are\nnot for instance, hiding a function call. If you are calling a function inside loop,\nthen you have "
+    },
+    "888c45e0-739e-4960-b65d-0030560f67b4": {
+        "content_id": 15,
+        "course_name": "PDSA",
+        "title": "Calculating Complexity - Examples",
+        "week": 2,
+        "chunk": "to make sure that you can estimate the cost of that function; may not be just\none simple basic step."
+    }
+}

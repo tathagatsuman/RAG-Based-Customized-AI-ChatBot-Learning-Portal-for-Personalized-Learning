@@ -1,0 +1,457 @@
+{
+    "69628799-06a9-4403-9a74-51e5a556a4b4": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "So, till now we have seen two different\u00a0\nalgorithms beyond the brute force,\u00a0\u00a0 which work on strings. So, we\u00a0\nsaw the Boyer Mooore algorithm,\u00a0\u00a0 which uses the brute force idea with some\u00a0\nheuristics for taking care of mismatches\u00a0\u00a0 and skips over some letters"
+    },
+    "e6f29f3f-6bba-4deb-ba5e-920f0c14c6d2": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": ". And then we\u00a0\nsaw the Rabin Karp algorithm, which does a\u00a0\u00a0 completely different thing, it converts the whole\u00a0\nstring into a number and then relies on numeric\u00a0\u00a0 comparisons rather than string comparisons.\nSo, let us go back now to string base comparison.\u00a0\u00a0"
+    },
+    "2ca1c0cf-adc2-4d75-a6fd-7c04178580d6": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": " So, let us deviate back from that numeric\u00a0\ncomparison to string base comparison.\u00a0\u00a0 So, what we said at the beginning was that in\u00a0\na traditional brute force, or Boyer Mooore kind\u00a0\u00a0 of thing, we start with our text and for every\u00a0\nstarting position, we look "
+    },
+    "3f239178-9f23-4c60-b10e-cb5f8b2efcad": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "at the segment, or the\u00a0\u00a0 slice which is the length of our pattern and try\u00a0\nto match it, usually going from right to left.\n\u00a0 So, Boyer mooore tells us, that\u00a0\nwhen we are doing this matching,\u00a0\u00a0 when we find mismatches we can be clever. So,\u00a0\nif the position, "
+    },
+    "6e5edb2e-4150-4936-93e6-1b92f2d550c4": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "where we find a mismatch does\u00a0\u00a0 not appear in our pattern, we can skip beyond\u00a0\nthat position. So, we can update i to i plus j\u00a0\u00a0 plus 1. And if it does appear in my string then\u00a0\nI can pre-compute this last of c, and shift it,\u00a0\u00a0 so that the position where it"
+    },
+    "32cb4287-cac1-4ad1-81e5-78cd437d1836": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": " appears in my\u00a0\nstring, aligns with the position in the text. \n\u00a0 So, this could allow again to\u00a0\nskip over some useless matches.\u00a0\u00a0 But though this heuristic works\u00a0\nvery well in practice as we said,\u00a0\u00a0 it does not change the worst case from that of the\u00a0\nBrute"
+    },
+    "19a881c9-52e1-4f6c-9990-1d17960b0707": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": " force algorithm, which is order n times m,\u00a0\u00a0 because we could have this trivial pattern,\u00a0\nwhere the same letter occurs repeatedly in my\u00a0\u00a0 text. And the pattern is just a small variation\u00a0\nwith 1 b before m minus 1 is. So, now we will\u00a0\u00a0 try to see if we can"
+    },
+    "b514ff82-a05f-44c1-8810-a505ee8a838a": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": " beat this worst case and\u00a0\nget something, which is proportional to n. \n\u00a0 So, in the Boyer Moore algorithm, what we are\u00a0\ntrying to do is, learn from mismatches. So,\u00a0\u00a0 whenever we see a mismatch, we accelerate\u00a0\nthe search by pushing our index forward.\u00a0\u00a0 The "
+    },
+    "f165d348-e16e-4b96-bd5e-b27d9aec5b54": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "other approach, which is what we are going to\u00a0\nuse in the new algorithm is to remember how much\u00a0\u00a0 we have matched and see if we can update that\u00a0\nintelligently. So, can we intelligently reuse\u00a0\u00a0 partial matches, that we have seen so far.\nSo, let us look at a"
+    },
+    "1a8b34d8-2dd2-49bd-a7cd-8cb93870c4c4": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "n example. So,\u00a0\u00a0 supposing we are trying to search for this is\u00a0\nmy text, right on top and this is my pattern.\u00a0\u00a0 So, I am searching from the left, so when I\u00a0\nreach this a, b, a, b, and I have not yet found\u00a0\u00a0 a mismatch in my text, I have implicitly found\u00a0\na"
+    },
+    "68fe8cbb-1479-42bf-94c8-3c8934749d50": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": " prefix of my pattern in the text so far.\n\u00a0 So, that is the letters a, b, a, b, in orange\u00a0\nin my pattern. So, we have a prefix, that we\u00a0\u00a0 have matched so far. And this corresponds to in\u00a0\ngeneral, a suffix of what I have seen in the text,\u00a0\u00a0 because the posi"
+    },
+    "a5af1dbf-599f-4991-943c-4d31e82ec652": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "tion of this text right now is\u00a0\nat the beginning, but it could be in the middle.\u00a0\u00a0 So, if I am in the middle of the text then\u00a0\nthe part that I have matched in my pattern\u00a0\u00a0 will not be the entire text, it will\u00a0\nbe the last few letters in the text.\n\u00a0 So, the"
+    },
+    "5a180059-fb97-40bc-a1ba-a2ae436d897c": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": " suffix, so suffix is when I take a word\u00a0\nand I take something from here onward, so this\u00a0\u00a0 is a suffix. And a prefix is from the beginning up\u00a0\nto a point. So, there is a prefix of the pattern,\u00a0\u00a0 which is a suffix of the text. So,\u00a0\nthe last few letters in m"
+    },
+    "65644cb4-d01a-4797-a3e9-6b8453220290": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "y text,\u00a0\u00a0 match the first few letters in my pattern, this\u00a0\nis what we generally have as the information,\u00a0\u00a0 that we get when we are proceeding in\u00a0\na block without finding a mismatch.\n\u00a0 So, now the question is what happens when we\u00a0\nextend the search. So, the"
+    },
+    "8033348c-90e8-450b-85c8-638a9b1f0348": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": " good case is that\u00a0\u00a0 the next letter that I am looking for in this\u00a0\nblock, matches the next letter in my pattern. So,\u00a0\u00a0 earlier I had a, b, a, b, and the next letter here\u00a0\nis a, and this matches the next letter here. So,\u00a0\u00a0 the prefix that I have matched gr"
+    },
+    "d39d4450-5cde-4ee1-ba04-ddc55a1977e1": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "ows from a,\u00a0\nb, a, b, to a, b, a, b, a. So, this is good.\n\u00a0 But now what will happen next is that I will\u00a0\nfind a mismatch, because in my text I see a b,\u00a0\u00a0 but my pattern requires me to see a c. So,\u00a0\nif I were doing something like Boyer Moore,\u00a0\u00a0 or brute fo"
+    },
+    "99baac3f-7d3d-4701-b1e3-1d921f227737": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "rce at this point I will now shift\u00a0\nmy entire focus and restart a scan from scratch,\u00a0\u00a0 I will shift to a new block, I might shift\u00a0\nto a different position in that text. \n\u00a0 But I will essentially start scanning my\u00a0\npattern with zero information about any ma"
+    },
+    "a8122dd5-4789-4d48-9144-321b5afa715c": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "tch.\u00a0\u00a0 Instead, what we can observe is that, if we\u00a0\nare at this position, we still have a match.\u00a0\u00a0 So, there is still some part of the text we have\u00a0\nseen. So, we can believe that we have matched a,\u00a0\u00a0 b, a, b, even though we failed in our last\u00a0\nattempt to e"
+    },
+    "b6fbc884-c612-46ab-b330-2527e65c6f12": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "xtend that original pattern to c. \n\u00a0 So, I will reset this longest match. So, now we\u00a0\nare in the situation, where my text has come up\u00a0\u00a0 to here, so notice now that I have a suffix of\u00a0\nmy text, which matches a prefix of my pattern.\u00a0\u00a0 So, now if I proceed I "
+    },
+    "c5ea5b59-3c65-4bc9-9a67-8634ffcc8f3c": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "will see\u00a0\nthat the next letter matches this,\u00a0\u00a0 the next letter matches this, and I will\u00a0\nreport success, without having to go back. \n\u00a0 So, this is the main message here,\u00a0\nis that if we can remember somehow,\u00a0\u00a0 how much of the pattern match remains valid\u00a0\nth"
+    },
+    "5a9e402e-e9b9-4828-ae55-dda8bb4c4eb2": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "en I can believe that I have actually matched\u00a0\u00a0 that much. So, instead of restarting from here\u00a0\nand going forward, which is what I would do,\u00a0\u00a0 I can already kind of you know internalize the\u00a0\nfact that I have matched 4characters without\u00a0\u00a0 scanning them and "
+    },
+    "837bc66a-8d53-4d06-b593-24b820814eac": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "proceed from the fifth character\u00a0\nonwards. So, this is what we are trying to do. \n\u00a0 So, how do we do this reset, well we are going to\u00a0\ndo it by pre computing. So, just like in the Boyer\u00a0\u00a0 Moore algorithm, we learnt how to align letters by\u00a0\ndoing this last "
+    },
+    "ab638334-65d3-4b5d-b87b-d73ad45b9ae4": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "computation. So, here we are going\u00a0\u00a0 to see, if I find a mismatch and if my current\u00a0\npattern was so much, then what is the remaining\u00a0\u00a0 pattern, which continues to match after this.\u00a0\nSo, that is what we have to calculate now.\n\u00a0 So, we will use a graph of a "
+    },
+    "13fc597c-b5c4-4d74-b244-4a48377cc8d7": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "special kind to do\u00a0\nthis precomputation. So, let us assume that my\u00a0\u00a0 pattern has length m as usual. So, I will have\u00a0\na graph in which I construct m plus 1 nodes, 0,\u00a0\u00a0 1, up to m. So, let us assume that m is 6, so we\u00a0\nare doing it with our example a, b, a, "
+    },
+    "8c9c235f-000a-4ad0-9b32-b48b87b0e18d": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "b, a, c,\u00a0\u00a0 the same example as we had before. So, this is\u00a0\nlength 6. So, I will create 7 nodes 0 to 6.\n\u00a0 Now, what I will do is, I will construct\u00a0\nedges. So, the edge will tell me\u00a0\u00a0 how much the match has extended.\u00a0\nSo, the interpretation of node i\u00a0\u00a0 is th"
+    },
+    "d9b74458-19f7-4b90-9619-15e1ea3664df": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "at I have this sequence I have seen\u00a0\nso far matches up to position i. So,\u00a0\u00a0 if I have seen an a, so remember that my pattern\u00a0\nis a, b, a, b, a, c. So, if I have seen an a,\u00a0\u00a0 starting with the empty string, then I have\u00a0\nmatched up to position 1. So, I go fr"
+    },
+    "e0511177-60e2-4f34-a88e-dcc0fcc9eed0": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "om 0 to 1,\u00a0\u00a0 in my graph, after I see an a, if I see\u00a0\na b, then I have matched two positions,\u00a0\u00a0 so I go forward. So, as long as I do\u00a0\ncorrect matches I keep going forward.\n\u00a0 So, let us continue and finish a few more edges.\u00a0\nSo, a to b takes me from 0 to 1,"
+    },
+    "9e21057a-3370-4ba6-bbb8-60f87912b23a": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": " b sorry from\u00a0\u00a0 initially an a takes me from 0 to 1 after that\u00a0\nb takes me 1 to 2, if I see an a after that then\u00a0\u00a0 I match 3 characters and so on. Now, last time we\u00a0\nsaw in the previous example, that you could have a\u00a0\u00a0 situation that after I see a, b, a, b"
+    },
+    "5d784cff-1be9-40b7-a707-87d99fe59311": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": ", a, and then\u00a0\nI see a b here, where I wanted to see a c. \n\u00a0 So, here what will happen is I do a, b, a,\u00a0\nb, a. And now instead of proceeding forwards\u00a0\u00a0 I want to be able to compute that I have now seen\u00a0\na prefix of length 4. So, I would like to say\u00a0\u00a0 that "
+    },
+    "093cd463-b792-4b19-a568-194fae8b8f89": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "if I have seen the prefix of length 5, which\u00a0\nmatches a, b, a, b, a, and the next letter is a b\u00a0\u00a0 and not a c, then I do not give up hope, I\u00a0\nrecognize that I have still seen a, b, a, b.\n\u00a0 So, instead of seeing a length of 5, I have now\u00a0\nseen a length of 4"
+    },
+    "ae275d15-2ece-4b79-9436-cd5f7eb5464f": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": ". So, this is what we have to\u00a0\u00a0 do technically, so we have to go from a position\u00a0\ni, so any position in this graph and if I read\u00a0\u00a0 a letter a, then I must go to a new position,\u00a0\nwhich tells me how much of a match survives.\u00a0\u00a0 And this is all within the patt"
+    },
+    "7343cd90-4c59-474e-96e6-06125b4051f6": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "ern.\nSo, if the position matches then I just\u00a0\u00a0 go forward, if the position does not match then I\u00a0\nwill look for the longest suffix, that matches. So\u00a0\u00a0 basically, I can do it by brute force I can look\u00a0\nat a, b, a, b, a, b, and I can look at my text\u00a0\u00a0 a, b, "
+    },
+    "78f5bf47-55ef-4377-85b6-fe30d09d973f": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "a, b, a, c, and I can ask myself at\u00a0\nthis position, what is the longest prefix that\u00a0\u00a0 matches. So, I know that the longest prefix that\u00a0\nmatches has to be less than or equal to length 6,\u00a0\u00a0 because that is the length of my pattern.\nSo, I can ask does a patte"
+    },
+    "61be8166-9fc7-4180-9841-711be123d138": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "rn of length 6 match.\u00a0\u00a0 So, I can take 6, as my initial thing and check\u00a0\nand then I will find that it does not match. Then\u00a0\u00a0 I can ask whether a pattern of length 5 matches.\u00a0\nSo, if I link 5 matches I must start here,\u00a0\u00a0 again it does not match, because thi"
+    },
+    "a9389b96-31b5-461b-bcd7-ed39d8b81d5f": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "s a is\u00a0\nequal to this b, then I can ask whether a\u00a0\u00a0 pattern of length 4 matches. \nSo, then I will start here then I can say\u00a0\u00a0 this b matches, this a matches, this b matches,\u00a0\nthis a same matches and I can say yes. So, I can\u00a0\u00a0 exhaustively for every letter "
+    },
+    "98ca012a-df11-4f5a-809e-e65b4a351d12": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "that I add I\u00a0\ncan take the pattern which I have right now,\u00a0\u00a0 look at the last m characters I have seen.\u00a0\u00a0 And go through that and look for\u00a0\nshorter and shorter suffixes. \n\u00a0 So, I start with the longest possible suffix\u00a0\nm and see if it matches the entire pa"
+    },
+    "1b0cea1d-c2d6-4f0e-b726-aacc58f6e34a": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "ttern,\u00a0\u00a0 if it does not then I start with m minus 1 and\u00a0\nstart from the second last position pattern\u00a0\u00a0 and so on. So, this is a brute force calculation,\u00a0\nwhich will take me order m squared to add each\u00a0\u00a0 edge, because I have to try m different lengths\u00a0\nand "
+    },
+    "81a75c74-3c85-4655-9092-bd767b17fb2d": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "each of these things is going to be time\u00a0\u00a0 proportional to m, m minus 1 and so on. So, it\u00a0\nis going to be the usual summation 1 to m. So,\u00a0\u00a0 this is an expensive operation right\u00a0\nnow, we will see how to fix it. \n\u00a0 So, I can add each of these edges explicitl"
+    },
+    "ed531880-2b30-42be-b7a0-a2bb90d66fa9": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "y, that\u00a0\nis the but the point is I can build this graph.\u00a0\u00a0 So, building this graph is possible, so what is\u00a0\ngraph say if I have matched up to i and then I\u00a0\u00a0 see a letter a, what have I matched up to? So, in\u00a0\nthis graph technically, if I take my sigma to be"
+    },
+    "9a94cb57-953e-45ff-86f7-7fca0c2b3c56": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "\u00a0\u00a0 a, b, c, then I should have letters from\u00a0\nhere for all an edge for every letter.\n\u00a0 So, we have only drawn the letters\u00a0\nfor a and b except for this one,\u00a0\u00a0 because everywhere else if you think of a c,\u00a0\nwhenever I see a c, then the suffix ends in a c,\u00a0\u00a0 an"
+    },
+    "78bfe3ec-e6c2-43e4-a41d-3591194159c1": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "d the only prefix that ends in a c for my\u00a0\npattern was a, b, a, b, c. So, there is no\u00a0\u00a0 shorter prefix which ends in a c, because remember\u00a0\nI am taking the beginning of the pattern.\n\u00a0 So, all c's will take me back\u00a0\nto 0, every time I see a c.\u00a0\u00a0 So, we have"
+    },
+    "ea458b97-03f5-4d86-a694-40c336442fae": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": " not drawn it just to avoid cluttering\u00a0\nthe graph, but every edge from here on a c will\u00a0\u00a0 take me back. So, this graph has to be complete in\u00a0\nthat sense, it has to say that for every position\u00a0\u00a0 and for every letter, how do I go to a\u00a0\nnew position, which ma"
+    },
+    "a81deed9-d8f4-47c8-bbaf-d42ccc3d82d3": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "rks the new prefix,\u00a0\u00a0 if I was at this prefix before. But the point\u00a0\nis as I said this can be done by brute force,\u00a0\u00a0 but you cannot ignore. So, this\u00a0\ngraph has a few edges missing,\u00a0\u00a0 simply because it clutters up, but all those edges\u00a0\nthat are missing actu"
+    },
+    "6428c1ff-b288-469b-a7c1-89e1aa4aaee9": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "ally take you back to 0. \n\u00a0 So, this graph how do we use it? Well this\u00a0\ngraph is something that is called a finite state\u00a0\u00a0 automaton. So, it is a special kind of graph,\u00a0\nso we can interpret these numbers, these nodes\u00a0\u00a0 as states. So, it is a state in the s"
+    },
+    "399aac0b-ff3f-40b3-af48-6a4040b00b93": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "ense, it\u00a0\ntells us something about how much the computation\u00a0\u00a0 has progressed, it is telling us that we are in a\u00a0\nstate in which the pattern up to some position j\u00a0\u00a0 has matched. And the edges are what are\u00a0\ncalled transitions, if I see one letter\u00a0\u00a0 I move fr"
+    },
+    "c5ace4a6-6eeb-458d-a5f0-2d085a982b2f": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "om this state to another state.\nSo, an example of a state example, if you take\u00a0\u00a0 a lift for instance. So, a lift has is sitting\u00a0\nwith its door open, now if the action is to press\u00a0\u00a0 the door close button, then it goes to a state\u00a0\nwhere the door is closed, n"
+    },
+    "4967331a-8d3b-4a03-999a-a2427cf445c6": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "ow if you press a floor\u00a0\u00a0 number, it will go to a new state, where it is on\u00a0\na different floor, then the door will open. \n\u00a0 So, there are many states, so we go through\u00a0\nthese states and each state goes to the next\u00a0\u00a0 state by some action happening, the door"
+    },
+    "bc04353b-3373-449b-9418-6df6e5057f0e": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "\u00a0\nopens, you press a button and so on. So,\u00a0\u00a0 here the actions for us are reading a letter and\u00a0\nthe states are how much of the prefix is matched\u00a0\u00a0 so far. So, that is the graph that we have\u00a0\nconstructed. Now, how do we use this? Well we\u00a0\u00a0 process our word t"
+    },
+    "c8e5bf4b-d71a-4487-a5b7-cf3e7743e780": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "hrough this graph. So, we run\u00a0\nit in some sense on this automaton. So, we start\u00a0\u00a0 in this state, which is our initial state. So,\u00a0\ninitially we have seen nothing and therefore the\u00a0\u00a0 prefix that we have seen is the empty prefix. \nSo, remember that 0 correspo"
+    },
+    "ca9463ad-1848-4546-8345-a19d10820c46": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "nds to the\u00a0\u00a0 fact that I have seen up to but not including\u00a0\nP 0. So, this is just the empty string.\u00a0\u00a0 So, this is how much of the pattern\u00a0\nI have seen so far. Now, I read\u00a0\u00a0 so remember the example was that I was reading\u00a0\na, b, a, b, a, b, a, c. So, this is"
+    },
+    "29ffa95c-b152-4f67-9935-fd570027380f": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": " my text and\u00a0\u00a0 my pattern was a, b, a, b, a, c. So, when I read\u00a0\nthe first a in my text, I just follow this edge\u00a0\u00a0 and I come here. So, it is very simple I just read\u00a0\nthe next letter of my text and follow the edge,\u00a0\u00a0 that the automaton tells me to follow. "
+    },
+    "b15ded1a-0486-415e-9809-1f710076fb27": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "\nSo, I am now in state 1, I am now going to read\u00a0\u00a0 a b, because remember it is a, b, a, b, a, b, a,\u00a0\nc. So, we are this is the string time processing.\u00a0\u00a0 So, a I read a b and now here, now I have\u00a0\nfinished a and b. So, I read an a and I go to 3,\u00a0\u00a0 I read a "
+    },
+    "2d0ac250-e551-48b5-b289-cef2f1bf8d9b": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "b and I go to 4, I read an a\u00a0\nand I go to 5. So, up to this point I\u00a0\u00a0 have been following my pattern faithfully.\nNow, if you remember this is where my pattern did\u00a0\u00a0 not match, because I should have see I should have\u00a0\nliked to have seen a c, but i see a b i"
+    },
+    "45144ce7-6bc4-40ef-99df-0d8ad7d683de": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "nstead.\u00a0\u00a0 But now my automaton from here tells me that\u00a0\nif you see a b go to 4. So I go back to 4. Now,\u00a0\u00a0 I have got an a and a c to do, so I see\u00a0\nthe 5, then I see a 6 and I am done.\u00a0\u00a0 So, in this automaton, when I at any\u00a0\npoint if I reach the end of my p"
+    },
+    "19b5a1eb-dfed-434e-b41e-f2bb3afb6deb": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "attern,\u00a0\u00a0 it means I successfully saw the full prefix of\u00a0\nmy pattern. So, I actually matched it, so we\u00a0\u00a0 have found a full match for P and notice that\u00a0\nwe were able to do this without going backwards\u00a0\u00a0 and restarting our scan on the string.\nSo, we just sta"
+    },
+    "a97a68e9-bc99-475b-ae3d-1ce06a9145f1": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "rted from the beginning\u00a0\u00a0 of the string and we just kept on going\u00a0\nforwards and every time we saw a mismatch,\u00a0\u00a0 the this automaton, that we had precomputed will\u00a0\ntell us, where we are with respect to the current\u00a0\u00a0 state of the match, how much of the match "
+    },
+    "bd3f80d0-cb7e-4024-a454-ec26f6a503a3": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "can we\u00a0\nassume, we have done so far and just keep going.\u00a0\u00a0 So, that going back and restarting is subsumed\u00a0\nby this memory that I have saying that now I have\u00a0\u00a0 seen actually a, b, a, b. So, I can go forward.\u00a0\nSo, the single scan of our text suffices.\n\u00a0 So, "
+    },
+    "18fd54a8-9a73-480f-8d9a-d6e7a4794b21": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "to summarize, if we use this approach, where\u00a0\nwe are trying to remember some information about\u00a0\u00a0 the matches, that memory we can store\u00a0\nin this automaton, this special graph.\u00a0\u00a0 And once we have built this graph, then\u00a0\nwe can scan our text in one pass and i"
+    },
+    "838bdda7-4aac-4f28-ac4e-3ec02420946d": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "n\u00a0\u00a0 order n time, we can find the match.\nNow, notice that what we said was that any\u00a0\u00a0 time you reach the last state you will stop\u00a0\nand report success. Now, of course you can\u00a0\u00a0 then increment by one and restart this whole\u00a0\nprocess by taking that suffix of y"
+    },
+    "938a89be-09a7-4d5a-81bf-5046bc445adb": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "our string,\u00a0\u00a0 starting from the match plus 1. So, it is\u00a0\nnot very difficult to adapt this approach\u00a0\u00a0 to look for all matches, but right now this\u00a0\napproach is easiest and least messy to describe.\u00a0\u00a0 If you are only talking about the first match.\nSo, the firs"
+    },
+    "d80ec733-7557-4ec2-a837-7981ea222c06": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "t match can be found in order and\u00a0\u00a0 time, once you have the automaton. But the\u00a0\nproblem is computing the automaton. So,\u00a0\u00a0 what we said was that every edge with brute\u00a0\nforce, we will look at the longest prefix,\u00a0\u00a0 longest suffix, then the second longest suff"
+    },
+    "a0709a72-5f5d-42f3-8601-725dadd2570c": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "ix\u00a0\nand so on, to find out which is the largest\u00a0\u00a0 suffix, for which I have a prefix match.\nSo, that itself took m squared time for each\u00a0\u00a0 letter and each i. So, I have to do it once for\u00a0\nevery letter and I have to do once for every i.\u00a0\u00a0 So, there I have to"
+    },
+    "c20cf1af-d318-4eb0-aec7-861a66c7fac2": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": ", so every i there are\u00a0\nhow many states are there? Well, there are m,\u00a0\u00a0 m plus 1. So, order m states and there are as\u00a0\nmany letters as there are in my alphabet.\n\u00a0 So, I have to multiply m squared by m, to count\u00a0\nfor every state and by sigma to count for ev"
+    },
+    "24d104f6-f7f5-4770-af82-b32be571bc81": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "ery\u00a0\u00a0 letter. So, this actual computation\u00a0\nof this automaton, if I do it the way,\u00a0\u00a0 we described it here, in brute force with\u00a0\nactually going to take a lot of time,\u00a0\u00a0 it is going to take m cube times the size of the\u00a0\nalphabet. So, what we are going to see "
+    },
+    "9cb18fb1-cad6-4bbc-bd83-e31c81f23604": {
+        "content_id": 69,
+        "course_name": "PDSA",
+        "title": "String Matching Using Automata",
+        "week": 10,
+        "chunk": "is that,\u00a0\u00a0 this can actually be done in time proportional\u00a0\nto the length of the pattern. So, in order m time\u00a0\u00a0 and this is this clever algorithm due to Knuth\u00a0\nMorris, and Pratt which we will see next. "
+    }
+}

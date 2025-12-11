@@ -1,0 +1,730 @@
+{
+    "625fb358-c64e-48fe-941e-a2ba49f0021d": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "So, this week we will look at some general\u00a0\npowerful techniques for solving problems that can\u00a0\u00a0 be applied to a large variety of questions that we\u00a0\nneed to answer. So, the first of these is called\u00a0\u00a0 linear programming. So, a number of the questions\u00a0\nthat w"
+    },
+    "661e93d4-a103-480d-b46a-f05eb9911bda": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "e have asked in our algorithms course\u00a0\u00a0 have involved optimization. \nSo, remember when we started with graphs\u00a0\u00a0 with weighted graphs, we were\u00a0\nlooking for shortest paths,\u00a0\u00a0 then later on we were looking for spanning trees\u00a0\nwith a minimum cost, then when we"
+    },
+    "4307e93b-18b2-40db-9617-a3be1ec75958": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " were doing\u00a0\u00a0 dynamic programming, we looked at subsequence\u00a0\ns that were common to two words and we wanted\u00a0\u00a0 the longest such common subsequence. \nSo, in each case we are looking for some\u00a0\u00a0 optimal value, either the shortest the\u00a0\nsmallest or the largest or"
+    },
+    "760afb41-0f0e-4d17-82e4-e323fb178780": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " the longest.\u00a0\u00a0 And of course, these values have to be found\u00a0\nwithin some constraints for instance, the shortest\u00a0\u00a0 path between two nodes in a weighted graph must\u00a0\nof course follow the edges that are given to us,\u00a0\u00a0 so we are given some edges and among thos"
+    },
+    "4e9477f4-3ee4-4147-a141-fcc81c59a601": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "e\u00a0\nedges we have to construct the shortest path.\n\u00a0 In the same way, when we want to build a minimum\u00a0\ncost spanning tree, the spanning tree edges must\u00a0\u00a0 come from the edges that we already have. We\u00a0\ncannot construct new edges to make a spanning tree\u00a0\u00a0 and o"
+    },
+    "97e80677-78ca-43d9-bee0-9b2a0649b4fe": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "f course when we find the longest common\u00a0\nsubsequence, we are looking for letters which\u00a0\u00a0 occur in the same order in both the words that are\u00a0\ngiven to us, so we cannot shuffle the order. \n\u00a0 So, linear programming is a\u00a0\ngeneral class of problems which\u00a0\u00a0 fol"
+    },
+    "095719a4-e90c-49cf-ba5d-8c63c9200a7a": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "low a similar paradigm where we are trying to\u00a0\noptimize some value subject to some constraints.\u00a0\u00a0 The reason that this is called linear is because\u00a0\nthese constraints are given to us numerically\u00a0\u00a0 in terms of linear functions. So, you know that\u00a0\na linear fu"
+    },
+    "f2b7f1bc-7c07-4da6-9967-eec9445fb672": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "nction is something where you have\u00a0\u00a0 a variable multiplied by a constant but you do\u00a0\nnot have variables multiplied by each other. \n\u00a0 So, you cannot write x square or x times y\u00a0\nbut you can write xy and so on. So, supposing\u00a0\u00a0 we have input variables x1 to x"
+    },
+    "e9f0923b-b48a-4e21-b97f-6009e74c9804": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "m, then a linear\u00a0\nconstraint would be of this form, it will say some\u00a0\u00a0 linear combination, so we have coefficients ai\u00a0\nand the variables xi. So, some combination ai, xi\u00a0\u00a0 of our variables added up together is either\u00a0\nbelow some value or above some value. S"
+    },
+    "bfdd609e-1e41-4edd-b92b-0d434edc32f9": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "o,\u00a0\u00a0 the constraint could be a maximum constraint\u00a0\nit can be that it can be no more than something\u00a0\u00a0 or it can be no less than something. \nAnd finally subject to these constraints we\u00a0\u00a0 have to optimize. So, the optimization is given\u00a0\nin terms of some quant"
+    },
+    "b7c01765-88ff-4fdc-8ee5-b7ec2387d9e1": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ity of these variables.\u00a0\u00a0 So, this is typically written as an\u00a0\nobjective which is another linear function.\u00a0\u00a0 Now notice that some of these coefficients\u00a0\ncould be 0, so it could be that xj does not\u00a0\u00a0 contribute to the to the overall optimum at\u00a0\nall, in whic"
+    },
+    "9f1a4510-45eb-4a31-b68e-68fdbd4881ff": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "h case in this cost function or\u00a0\u00a0 this objective function cj might just be 0. \nBut this is the general form, we have these linear\u00a0\u00a0 constraints and then we have a linear function\u00a0\nwhich tells us what we are trying to optimize\u00a0\u00a0 maximize or minimize and now"
+    },
+    "1d008994-047c-4afb-8feb-f0d7d5464342": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " we have to find the\u00a0\noptimum values for this x1 to xm, subject to these\u00a0\u00a0 constraints which optimizes that objective. \nSo, let us look at an example. So, grandiose\u00a0\u00a0 sweets is a sweet shop that sells two types\u00a0\nof sweets, cashew barfis and dry fruit halwa"
+    },
+    "245018ae-4809-431a-8385-ad0bb719640f": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": ".\u00a0\u00a0 So, there is a profit associated\u00a0\nwith selling each of these.\u00a0\u00a0 For each box of barfis the shop makes rupees 100.\u00a0\nFor each box of halwa the shop earns rupees 600.\u00a0\u00a0 Now the daily demand is known they know that\u00a0\nthe no more than 200 boxes of barfis wil"
+    },
+    "ceb2ff1e-9073-463e-960e-982efd5c1c5e": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "l be\u00a0\u00a0 sold in any given day and no more than 300 boxes\u00a0\nof halwa will be given sold in any given day. \n\u00a0 Beyond that there is also a constraint\u00a0\nabout how many boxes they can produce? So,\u00a0\u00a0 the staff of the shop working throughout the day\u00a0\ncan produce at "
+    },
+    "7f1e7000-1bed-4c1c-bf28-7f75c210f119": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "most 400 boxes, these boxes can be\u00a0\u00a0 either barfi or halwa. So, now we are given these\u00a0\nfacts and our goal is to find out how many barfi\u00a0\u00a0 boxes and how many halwa boxes grandiose sweet\u00a0\nshould market every day so it maximizes profit?\n\u00a0 So, to use linear p"
+    },
+    "a0125974-6546-4116-b4c7-fab45a8fbfda": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "rogramming we have to\u00a0\nset up those linear constraints and the\u00a0\u00a0 linear objective as we said. So, first we\u00a0\nneed to identify what the variables are?\u00a0\u00a0 So, here it is very clear that the\u00a0\nvariables are how many barfis we produce\u00a0\u00a0 and how many halwas we pro"
+    },
+    "1f0211df-1eb6-4ac9-9fdc-ac55539470f1": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "duce or how many\u00a0\nboxes of burfi and how many boxes of halwa?\u00a0\u00a0 So, we use two variables in this case let us\u00a0\ncall them b and h. So, b is the number of boxes\u00a0\u00a0 of barfi we would like to produce and h is the\u00a0\nnumber of boxes of halwa, this should be halwa,\u00a0"
+    },
+    "a14a1fa9-4c12-4484-a6cc-56eae6a5cc51": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "\u00a0 that we want to produce each day.\nSo, what we know from these constraints\u00a0\u00a0 here is that if we produce b boxes of barfi\u00a0\nand h boxes of halwa, then the profit will be\u00a0\u00a0 100 for each of the b boxes and 600 for each of\u00a0\nthe halwa boxes so we will get 100 b"
+    },
+    "e22a047d-4a26-461e-a6c0-702d9802a373": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " plus 600 h.\u00a0\u00a0 But we have some constraints, so the\u00a0\nconstraint says that there is no point\u00a0\u00a0 in producing more than 200 barfi boxes\u00a0\nbecause they will not sell. So, 200 is\u00a0\u00a0 an upper limit on how many barfi boxes we should\u00a0\nbuy because the daily demand is"
+    },
+    "70e07980-8ef3-4cd3-ac59-0e5a46e87e96": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " at most 200. \n\u00a0 Similarly, the daily demand for halwa is at\u00a0\nmost 300. So, there is no point in making\u00a0\u00a0 more than 300 boxes. Remember b and h are the\u00a0\nquantities we are going to make in one day.\u00a0\u00a0 Then we also have this production constraint.\u00a0\nProduction"
+    },
+    "56f67d3a-26c0-4667-86eb-916c624e8ebc": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " constraint says that, the staff as\u00a0\u00a0 a whole cannot make more than 400 boxes\u00a0\nso the total amount of barfi plus halwa\u00a0\u00a0 put together cannot be more than 400. \nAnd finally, there is a kind of implicit\u00a0\u00a0 obvious constraint which we do not need to state,\u00a0\nwh"
+    },
+    "eb67f127-7d1b-4d1b-b038-42777a9e46fc": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ich is that, we cannot make negative boxes of\u00a0\u00a0 barfis and negative boxes of always so at least we\u00a0\nmake can make 0 boxes of one of them. So, b must\u00a0\u00a0 be bigger than equal to 0 and h must be bigger\u00a0\nthan equal to 0. So, here we have the constraint.\u00a0\u00a0 These"
+    },
+    "358ed2ee-7e10-4b15-853e-960d64a7b573": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " are our constraints. We have an upper bound\u00a0\non each of the boxes quantities and we have this\u00a0\u00a0 kind of cumulative bound which tells us that\u00a0\ntogether we cannot make more than 400 of each. \n\u00a0 So, this gives us one part of our thing,\u00a0\nnow we have to write "
+    },
+    "00c79c7a-4858-4c26-a4f1-a101b2a8bde8": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "our objective. So, our\u00a0\u00a0 objective is clearly to maximize our profit and\u00a0\nwe saw that the profit is given because of this\u00a0\u00a0 thing that 100 Rs per box of barfi and 600\u00a0\nper box of halwa, so we can get 100b plus 600h\u00a0\u00a0 as our profit that we want to maximize "
+    },
+    "71f37014-91d2-4550-a275-1c78ec87eeba": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "subject\u00a0\nto these constraints. So, this is now the linear\u00a0\u00a0 program that we want to solve, we are given\u00a0\nan objective which is a linear function of\u00a0\u00a0 our variables. We are given constraints which\u00a0\nare linear functions of our variables, now find\u00a0\u00a0 the optim"
+    },
+    "ed9c316f-1149-4535-9bbd-3eb575d79097": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "um values of b and h given this.\n\u00a0 So, one way to think about this is to understand\u00a0\nwhat combinations of b and h are actually allowed.\u00a0\u00a0 So, we can draw in this particular case because\u00a0\nwe have only two variables, we can draw this\u00a0\u00a0 quite easily as a two-"
+    },
+    "950a4bd8-ac41-4948-aade-5cbf7ab838ba": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "dimensional picture,\u00a0\na kind of a graph. So, here on the x axis,\u00a0\u00a0 I am looking at the number of barfis that I want\u00a0\nto get and on the y axis I am plotting the number\u00a0\u00a0 of halwa boxes that the shop will make. \nSo, the first constraint, this constraint tell"
+    },
+    "9ac00dfe-ccd7-4a23-98e2-0f608d3d233f": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "s\u00a0\u00a0 us that b must be less than or equal to 200. So,\u00a0\nthere is a line there indicating a boundary saying\u00a0\u00a0 that I should not go into this region at all\u00a0\nbecause this region is useless because the demand\u00a0\u00a0 for barfi boxes is not more than 200 in a day. \nAnd"
+    },
+    "f85a77f6-b6cb-447b-8d05-13c894687f54": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " similarly, there is a constraint on the halwa\u00a0\u00a0 boxes which says that the halwas should be no\u00a0\nmore than 300 because there is no more than that\u00a0\u00a0 demand. Then we have this demand which says that\u00a0\nthe total production capacity is limited to 400,\u00a0\u00a0 so this "
+    },
+    "64f18062-fd0d-45a9-bb6d-ef4187e09a59": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "becomes a line like this where b plus\u00a0\nh is equal to 400 that gives the boundary,\u00a0\u00a0 so everything that we produce must\u00a0\nbe below b plus h equal to 400. We\u00a0\u00a0 cannot cross 400 because our staff\u00a0\ncannot make that many boxes. \n\u00a0 Of course, we also have these 2"
+    },
+    "ef102d2f-cba8-496a-b90e-ee866be0f238": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " lines giving\u00a0\nconstraints saying that we must be above b equal\u00a0\u00a0 to 0 and we must be to the right of b equal to 0\u00a0\nand above h equal to 0. So, with this we get what\u00a0\u00a0 we can call a feasible region. So, any combination\u00a0\nof b and h which lies in this yellow"
+    },
+    "7d014de6-7655-457c-ae7a-32098a05d13a": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " region\u00a0\u00a0 is within all the constraints. It is below these\u00a0\nconstraints, it is below this constraint, it is\u00a0\u00a0 to the left of this constraint, it is above this\u00a0\nconstraint and to the right of this constraint.\u00a0\u00a0 So, we have to search for b and h\u00a0\nwithin this"
+    },
+    "bedeae33-67cb-4a18-96da-0824294a6a46": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " feasible reason. \n\u00a0 So, if you go back to the way we have solved\u00a0\nvarious problems a Brute Force Approach,\u00a0\u00a0 would be to actually search this entire space.\u00a0\nNow of course one complication here is that this\u00a0\u00a0 space is continuous. So, we could look at thing"
+    },
+    "c6893691-2390-422f-836a-8bb1697bbeed": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "s\u00a0\nlike we could even find things like 100, 100.01\u00a0\u00a0 and so on. There are arbitrarily many different\u00a0\nthings of course we cannot make fractional boxes\u00a0\u00a0 but still there is a large space to search. \nSo, for example if we take c to be our objective\u00a0\u00a0 functio"
+    },
+    "6031797b-6520-4e29-b5e9-7e82561e9184": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "n, 100 b plus ch, 600 h and then we pick\u00a0\na point. Say we pick this point, so at this point\u00a0\u00a0 what happens is that we are making 0 barfi boxes\u00a0\nand we are making a 100 halwa boxes. Since a 100\u00a0\u00a0 halwa boxes gives us 600 each, the total profit\u00a0\nthat I get h"
+    },
+    "0707bc4c-0d86-490c-bbe5-8f0e77beadeb": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ere is 600 into 100 is 60,000. \n\u00a0 Now, I can stay within the feasible region and\u00a0\nincrease my production of halwa boxes. So, I can\u00a0\u00a0 go up for example to 200 halwa boxes. If I go to\u00a0\n200 alpha boxes, then I will get 120000 or 120000\u00a0\u00a0 as my profit for the "
+    },
+    "d844b412-fbbd-42b1-b055-90330a3c5636": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "day. I can go still more\u00a0\nand go 250 halwa boxes and I will get 150,000.\u00a0\u00a0 I can start making some barfi boxes. So, for\u00a0\ninstance make 300 halwa boxes and that leaves me\u00a0\u00a0 a capacity of 100 because my total is 400. \nSo, I can make a 100 barfi boxes in addi"
+    },
+    "f0ef7a0d-b6d0-47b5-897a-3318c28043a7": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "tion\u00a0\u00a0 to those 300 halwa boxes, remember there is no\u00a0\npoint making more than 300 halva boxes because\u00a0\u00a0 I will go outside the feasible region. So,\u00a0\nthe maximum number of halva boxes I can make\u00a0\u00a0 is 300 and then I use my spare capacity to make\u00a0\n100 barfi bo"
+    },
+    "c1a6f30a-d0a0-4dce-a269-e49fdf1f8106": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "xes. So, I get 180000 from my halwa\u00a0\u00a0 and I get 10,000 from my 100 barfi boxes. So,\u00a0\nI get 190,000 and in fact you can kind of work\u00a0\u00a0 out even manually that this is going to be the\u00a0\noptimum value for this particular problem. \n\u00a0 So, notice that this particu"
+    },
+    "79c01689-3d97-4748-8f10-aa9ef187262a": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "lar value lies\u00a0\nat a corner of this feasible region. So,\u00a0\u00a0 it does not lie here, it does not lie inside,\u00a0\nof course it has to lie within this yellow zone\u00a0\u00a0 but it is lying on the boundary and more\u00a0\nthan the boundary it is lying at a corner.\u00a0\u00a0 So, this is o"
+    },
+    "0a18ce53-9870-4014-a792-6a4fe314d05a": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ne interesting property about\u00a0\nlinear programs that you will find that the\u00a0\u00a0 optimum value will always lie at a vertex. \nSo, if I draw this particular feasible region,\u00a0\u00a0 then what it means is the optimum value\u00a0\nmust be at one of these five points.\u00a0\u00a0 It can"
+    },
+    "5d896031-f1b9-453b-b135-a1cadd719d98": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "not be anywhere else. It must be at some\u00a0\nvertex in the polygon sense not in the graph\u00a0\u00a0 theoretic sense that we have been used to. But\u00a0\nif you think of polygons and shapes, it is at\u00a0\u00a0 some vertex of this feasible region that we draw\u00a0\nby inserting all our "
+    },
+    "b911a3d4-80de-4910-85f6-1ed0261c8f0d": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "constraints as lines. \n\u00a0 So, there is a very classical algorithm\u00a0\nwhich solves linear programs by exploiting\u00a0\u00a0 this observation. So, what you\u00a0\ndo is you start at any vertex,\u00a0\u00a0 so you first have to calculate of course that\u00a0\nfeasible region and once you calc"
+    },
+    "ce5cec92-8db2-4ce5-a983-58018061ae29": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ulate that\u00a0\u00a0 feasible region you know where the vertices are\u00a0\nwhich are all the corners in some sense of that\u00a0\u00a0 feasible region so you start at any one and\u00a0\nthen you evaluate the objective there. \n\u00a0 And then once you evaluate your objective there,\u00a0\nyou loo"
+    },
+    "314c4279-05c8-4d02-8931-7d7d4582a4b7": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "k at all the next nearby vertices, you look\u00a0\u00a0 at all the neighbouring vertices to the place\u00a0\nwhere you started and if the objective improves\u00a0\u00a0 by going to any one of them, then you move. If the\u00a0\nobjective does not move then if the objective does\u00a0\u00a0 not impr"
+    },
+    "301f3a6b-8675-4675-b2c3-a91213ec3736": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ove, then you stop. So, this is what is\u00a0\ncalled simplex. So, you just start at a vertex\u00a0\u00a0 and try to find a vertex whose objective value\u00a0\nis larger than all of its neighbours and you\u00a0\u00a0 can actually show that this is correct. \nNow the problem with this algo"
+    },
+    "ae8ad0ad-85e7-4409-9912-51a3119dcdf6": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "rithm is that\u00a0\u00a0 it is not necessarily efficient. It can take an\u00a0\nexponential amount of time but in most practical\u00a0\u00a0 problems like the kind of question that we raised\u00a0\nwith barfi and halwa, simplex actually works well\u00a0\u00a0 so this is quite often used in practi"
+    },
+    "a480c061-8a48-4aae-a9db-6cefec1abefd": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ce as\u00a0\na solution for these linear programs.\n\u00a0 There are theoretically clever ways to solve\u00a0\nlinear programs which are provably efficient,\u00a0\u00a0 so you can actually do this in polynomial\u00a0\ntime but simplex is an easy thing to do\u00a0\u00a0 and it is what most people use"
+    },
+    "2a8285bf-104f-4947-8bdf-426c21c6d306": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " if they are\u00a0\nnot very worried about this extreme cases.\u00a0\u00a0 So, we said that these solutions will exist\u00a0\u00a0 at the feasible vertices. So, for that of\u00a0\ncourse the feasible region must exist. \n\u00a0 So, the first point is the feasible region is\u00a0\nconvex, so convexit"
+    },
+    "1f3ac71f-a782-4656-ba3a-634bacf95e20": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "y is a geometric property\u00a0\u00a0 so intuitively something like this is not convex\u00a0\nand something like this is convex. So, formally\u00a0\u00a0 you can say that a shape is convex if I take\u00a0\nany 2 points inside the shape. And I draw them,\u00a0\u00a0 I draw a line connecting them. T"
+    },
+    "ae9e4166-deca-4e8a-99f6-8bc1efcfc92b": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "he entire line\u00a0\nstays within the shape, so this is not convex\u00a0\u00a0 whereas this is convex because I take any\u00a0\ntwo points anywhere and I connect them. \n\u00a0 So, in terms of our polygons, so the usual\u00a0\nthing holds. So, if a polygon is convex,\u00a0\u00a0 it will look like t"
+    },
+    "32ce011d-b77d-46d5-987d-3666f4874415": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "his and if the polygon is\u00a0\nnot convex for example a typical thing will\u00a0\u00a0 have a kind of inward facing corner. So, the\u00a0\nfeasible region for a linear program is always\u00a0\u00a0 going to be it turns out a convex polygon.\nAnd of course, the convex polygon may be\u00a0\u00a0 em"
+    },
+    "c4d90493-bf9d-4bad-b4d3-15a111b22967": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "pty. So, there may be no constraint with\u00a0\nno value which satisfies the constraint. So,\u00a0\u00a0 for instance supposing we had said that you\u00a0\nmust produce at least 250 barfi boxes and\u00a0\u00a0 you must produce at least 250 halwa boxes but\u00a0\nyou cannot produce more than 40"
+    },
+    "ca244a1a-517e-45e3-ba07-0a93216fcfc5": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "0 together. \n\u00a0 This will give me an infeasible set of constraints\u00a0\nbecause the first two constraints imply that\u00a0\u00a0 together I must make 500 but the third constraint\u00a0\nour old production constraint, that is I cannot\u00a0\u00a0 make more than 400. So, it is possible th"
+    },
+    "45f0cf18-dbcd-4c07-bd37-b6eee0bc6150": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "at\u00a0\nthe feasible region is actually empty that\u00a0\u00a0 you do not have a polygon does not have any\u00a0\ninterior in which case you have no solution. \n\u00a0 The other thing that may happen is that you\u00a0\nhave no upper bound in some direction. So,\u00a0\u00a0 for instance if I do not"
+    },
+    "a0344c41-93b8-4bb1-ad4b-0897d987c634": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " have an upper bound on my\u00a0\nhalwa and I only have an upper bound on my barfi,\u00a0\u00a0 then I say that my burfi will keep me here but I\u00a0\ncan go as high as I want, in terms of the halwa.\u00a0\u00a0 So, then there may be no upper bound or\u00a0\nupper limit on my objective functi"
+    },
+    "467a46c6-0d0c-4fde-addf-ba98320316a3": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "on. \n\u00a0 So, let us look at a slightly more elaborate\u00a0\nexample so supposing this sweet shop adds a\u00a0\u00a0 third suite, so in addition to their barfis and\u00a0\nhalwas, they have now added an almond rasmalai.\u00a0\u00a0 So, we know that for barfis and halwa\u00a0\nwe used to get a pr"
+    },
+    "0b21da4a-f5cd-4928-a7a8-623d952e6a7a": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ofit of 100 and 600\u00a0\u00a0 per box. Now rasmalai turns out to be\u00a0\nan even more profitable item to make.\u00a0\u00a0 The shop actually gets 1300\u00a0\nfor each box of rasmalai. \n\u00a0 So, here the daily demand as before for barfis and\u00a0\nhalwa is known that is no more than 200 boxes"
+    },
+    "29186581-f565-4b10-9df7-f0e060f0b275": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " of\u00a0\u00a0 burfi and 300 boxes of halwa can be sold in a\u00a0\nday but there is unlimited demand for rasmalai,\u00a0\u00a0 you can make as much rasmalai as\u00a0\nyou want and people will buy it.\u00a0\u00a0 However, we still have this capacity constraint\u00a0\nin our shop. So, the people who are"
+    },
+    "0acc2375-864c-4f35-93ec-a007667b54a0": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " boxing these\u00a0\u00a0 sweets cannot box more than 400 in a day. So, this\u00a0\nwas true when there were only 2 types of sweets,\u00a0\u00a0 the same constraint holds when\u00a0\nthere are 3 types of sweets. \n\u00a0 So, of course you could now look at this\u00a0\nand say if the rasmalai is unli"
+    },
+    "463a78e9-dcdb-4f12-9cda-5bcba251beca": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "mited\u00a0\u00a0 and there is a much higher profit for rasmalai and\u00a0\nI can make 400 boxes then the obvious solution in\u00a0\u00a0 this case is to just make 400 boxes of rasmalai.\u00a0\nNow it turns out that there is one more constraint\u00a0\u00a0 which is going to come, which will preven"
+    },
+    "bf45ef65-c4e5-4574-ada0-e97efe0749bd": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "t us\u00a0\nfrom doing that and that is that, we need to\u00a0\u00a0 use milk for both halwa and rasmalai and there\u00a0\nis some limitation in how much milk we have. \n\u00a0 So, the milk that we have will allow us to make\u00a0\n600 boxes of halwa of course we will not make 600\u00a0\u00a0 boxes "
+    },
+    "6d0595e5-8aa1-420a-bcea-4843c27d5cae": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "because we know that 300 is our upper bound\u00a0\nor it will allow us to make 200 boxes of rasmalai\u00a0\u00a0 but if I have made 200 boxes of rasmalai, I cannot\u00a0\nmake any more halwa because the halwa is already\u00a0\u00a0 all the milk is used up so the remaining 200\u00a0\nshould be "
+    },
+    "0d439a16-cfa1-4d35-8e90-a46b4e909bc5": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "barfi. So, maybe I should make a few\u00a0\u00a0 less rasmalai and make a few more halwa. \nSo, the point of this 600 and 200 says that\u00a0\u00a0 every box of rasmalai takes uses up three\u00a0\ntimes as much milk as every box of halwa. So,\u00a0\u00a0 this is our milk constraint so if we r"
+    },
+    "d0e82dc4-7423-47b0-88ec-b5c3acf1ab9d": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "educe our\u00a0\nhalwa by say 100 boxes, then we can get well 100\u00a0\u00a0 is not good, say 90 boxes then for those 90\u00a0\nboxes I can make 30 boxes of rasmalai. \n\u00a0 So, the question again is what is the mix that we\u00a0\nwant? So, we have a new linear program because we\u00a0\u00a0 have"
+    },
+    "27135a35-7533-49ac-9b4d-2f4de0499bf8": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " one extra variable which is the number\u00a0\nof rasmalai boxes which I will call r. So, as\u00a0\u00a0 before we have b and h, so we want to maximize the\u00a0\nprofit that we make by selling b boxes of barfi,\u00a0\u00a0 h boxes of halwa and r boxes of rasmalai where\u00a0\nthe profit per b"
+    },
+    "19644ffa-7e6f-450a-b0b5-cbeb2b7c7d13": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ox is 100, 600 and 1300. \n\u00a0 So, the constraints on the production of\u00a0\nindividual boxes are only for barfi and halwa\u00a0\u00a0 because they have the ones where there is a daily\u00a0\ndemand limit, rasmalai is unlimited. So, there is\u00a0\u00a0 no new constraint on the individual"
+    },
+    "35e061b9-4c0b-496b-8e7d-dfa94cd8fe4d": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " production\u00a0\nof rasmalai. However, together we know that we\u00a0\u00a0 cannot make more than 400 boxes. So, that overall\u00a0\nconstraint on production has not changed even\u00a0\u00a0 though we have added one more type of sweet to the\u00a0\nmix and now we have this new constraint whi"
+    },
+    "e388e965-69a5-423b-997d-52f8decc6fc8": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ch has\u00a0\u00a0 come from here, the milk constraints. \nSo, what this milk constraint says\u00a0\u00a0 is that so this is should be less\u00a0\nthan or equal to, it should say that\u00a0\u00a0 h plus 3r must be less than 600. So, we know that\u00a0\nif r is 0 then h can be 600, if h is 0 then r "
+    },
+    "2c73d77d-f73b-4ff1-a953-248283e5992a": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "can\u00a0\u00a0 be 200 and any combination in between is allowed\u00a0\nbut every time we remove one r we can substitute\u00a0\u00a0 3 h's or we need to remove 3 h's to get one r\u00a0\nbecause r takes 3 times as much milk as halwa. \n\u00a0 So, if I reduce h by 3, I can add 1 to r and keep\u00a0\nt"
+    },
+    "34e5ab6e-d136-4291-8992-6643dc3452e8": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "his equation because 1 to r will get multiplied\u00a0\u00a0 by 3. So, this is our overall constraint\u00a0\non the halwa rasmalai mix and as before\u00a0\u00a0 we cannot make negative amounts of anything\u00a0\nso b, h and r must all be bigger than 0. \n\u00a0 So, this is now this linear progr"
+    },
+    "b8b42fc3-e771-4f0d-923a-bd3f9d871fdd": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "am and last time\u00a0\nwe drew a picture so let us see what the picture\u00a0\u00a0 might look like, so this time the picture will\u00a0\nhave 3 dimensions. Because in the earlier case,\u00a0\u00a0 I had a two-dimensional picture, 1\u00a0\naxis was barfi and 1 axis was halwa\u00a0\u00a0 and now I have "
+    },
+    "957f4260-941f-4a7e-ac34-36376b935d35": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "a 3-dimensional picture. So,\u00a0\nI have 1 axis, so this part is my old picture\u00a0\u00a0 and now I have added a new dimension which is our\u00a0\nrasmalai and so if you look along this dimension,\u00a0\u00a0 we have our old constraint. \nSo, if I make no rasmalai,\u00a0\u00a0 if I make no rasm"
+    },
+    "e0e8dba5-6a6f-4b5a-b664-e5dcf365e294": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "alai, then I am on that\u00a0\nplane which involves only barfi and halwa\u00a0\u00a0 and this is exactly the picture we had before.\u00a0\nSo, this was that line which says that b plus h\u00a0\u00a0 less than 400 and this is the line which\u00a0\nsays that b is less than 200 and this is\u00a0\u00a0 the "
+    },
+    "2b5d460d-8628-45c2-9d59-3262d77af279": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "line which says h is less than 300. \nSo, in that plane where r is 0, so if this r\u00a0\u00a0 is actually all the way slide back to 0,\u00a0\nthen I get that plane there but if I start\u00a0\u00a0 moving in this direction then something has to\u00a0\ngive. So, either the rasmalai either "
+    },
+    "d2a564f5-8c4e-42af-8e8f-b3a16dfce6bf": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "the halwa\u00a0\u00a0 component comes down or the burfi component\u00a0\ncomes down. So, this is becomes a 3-dimensional\u00a0\u00a0 picture but the old observation that our points\u00a0\nwhere we are going to find the optimum are these\u00a0\u00a0 vertices still remains. \nSo, we only have these\u00a0\u00a0"
+    },
+    "5883a7ed-aac6-4a63-b795-a486fac12764": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " definitive vertices on this 3-dimensional shape,\u00a0\nit is convex, you can look at it and think it is,\u00a0\u00a0 there are no interior facing vertices. So, in this\u00a0\nconvex thing we have to look for these vertices\u00a0\u00a0 and we have to evaluate at each of them.\nAnd in thi"
+    },
+    "41a49229-240c-4de8-a707-a483d7ccb62e": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "s particular case\u00a0\u00a0 we claim that the optimum actually happens here.\u00a0\nSo, at this point we are kind of on this plane, so\u00a0\u00a0 we are not making any barfi at all, we are making\u00a0\n400 boxes, so we are achieving our production\u00a0\u00a0 capacity and in that we are using "
+    },
+    "2ddc7803-a023-446d-9cf2-30c30d719b2e": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "300 boxes of\u00a0\nhalwa and 100 boxes of rasmalai. So, remember\u00a0\u00a0 that I could make 600 boxes of halwa, so bringing\u00a0\nit down to 300, I am releasing 300 by 100 by 3 is\u00a0\u00a0 equal to 100 units of rasmalai worth of milk.\u00a0\nSo, that is why I am able to make 100 here. "
+    },
+    "f35f8a30-3caf-4d5b-8adb-158b874125e0": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "\n\u00a0 So, it is not actually a good idea to make as\u00a0\nmuch rasmalai as possible it is actually better\u00a0\u00a0 to make a little less rasmalai and make more\u00a0\nhalwa to make our production capacity and with\u00a0\u00a0 this you can calculate if you work out the cost\u00a0\nthat you act"
+    },
+    "1babeb3e-20c7-45a4-b988-a138971bdd54": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ually get 3,10,000 or 310000 rupees.\u00a0\u00a0 So, you might ask other than you know\u00a0\nfirst if you believe what I said and\u00a0\u00a0 you evaluate it at all these corners, then\u00a0\nyou can check that this is the maximum but\u00a0\u00a0 is there any other way to satisfy ourselves\u00a0\nthat "
+    },
+    "220ab39c-b12e-47b9-996e-ab1338179181": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "this particular value is optimal. \n\u00a0 So, is there any other validation of this\u00a0\nfact. So, let us see if we can figure out why\u00a0\u00a0 this particular combination of 0 barfi, 300 halwa\u00a0\nand 100 rasmalai is optimal. So, remember the\u00a0\u00a0 profit was given to us we got"
+    },
+    "9a86b386-5eda-43c2-89cf-1411fa2e6e77": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " 100 profit for\u00a0\neach box of barfi and 600 for halwa and 1300\u00a0\u00a0 for rasmalai. So, 100 b plus 600h and 1300 r is\u00a0\nwhat we get for any combination of b, h and r. \n\u00a0 Now we had a number of constraints but let us\u00a0\nfocus on these three particular constraints,\u00a0\u00a0"
+    },
+    "d1798e67-8342-44c0-8ccb-6fb70fe45836": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " so we had a constraint we said number of barfi\u00a0\nboxes is less than equal to 200, we will ignore\u00a0\u00a0 that but we will look at the number of halwa\u00a0\nboxes which is less than 300, then we know\u00a0\u00a0 that the total capacity constraint is less than\u00a0\n400 and we know t"
+    },
+    "e9ced6a4-6402-4843-986b-df072c6a5524": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "hat the combination because of\u00a0\u00a0 the milk constraint the combination of halwa plus\u00a0\nrasmalai is bounded by h plus 3r less than 600.\n\u00a0 So, what we can do is we can, remember that\u00a0\nwhen you have 2 equations you can combine them\u00a0\u00a0 and you get a third one. So,"
+    },
+    "f3595c4d-5d9d-4e19-8c28-70f358cdcfff": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " this is how for\u00a0\ninstance you solve simultaneous equations, you\u00a0\u00a0 create a new equation where then you can subtract\u00a0\none from the other and remove one variable. So,\u00a0\u00a0 you can take 2 equations, you can take a\u00a0\ncombination of these 2 equations add them and\u00a0"
+    },
+    "4f863816-763b-43b7-b2f2-5f7231aa58a5": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "\u00a0 you will get a new equation which is valid.\nSo, in this case I am going to construct a new\u00a0\u00a0 equation by multiplying the first one by 100,\u00a0\nthe second one by 100 and the third one by 400.\u00a0\u00a0 So, notice what happens if I get the first\u00a0\none, if I multiply b"
+    },
+    "021b3ad5-f494-4438-89a9-7ac2ee63d794": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "y 100 I get 100 h,\u00a0\u00a0 second one gives me another 100 h, the third one\u00a0\ngives me 400 h. So, between the 3, I get 600 h.\u00a0\u00a0 Now if I multiply the first one, there is\u00a0\nno other variable in the first one. So,\u00a0\u00a0 if I multiply the second one by 100, I get\u00a0\n100b b"
+    },
+    "95961c55-fbda-4ed0-bcd7-5d5742f29b03": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ut there is no b in the third one,\u00a0\u00a0 so the 400 times c does not contribute with b. \nSo, the total b's that I get is 100 b and 400\u00a0\u00a0 times c, the first one does not have any\u00a0\nr, second one has 400 r and the third one\u00a0\u00a0 has , second one has 100r because I a"
+    },
+    "abfbad4f-9ceb-4a09-8aab-91a99045845b": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "m\u00a0\nmultiplying by 100. And the third one is\u00a0\u00a0 1200 r because 400 times 3. So, I get 1300 r and\u00a0\non the right-hand side, I will get 300 into 100\u00a0\u00a0 plus 400 into 100 plus 600 into 400 so that is ,\u00a0\nso this will be 310000. So, if you work it out,\u00a0\u00a0 this is wh"
+    },
+    "4f3ee26a-62bc-45c1-bae2-6b0b90ee01e6": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "at you get you will get 100 b plus 600\u00a0\nh plus 1300 r is less than equal to 3,10,000.\n\u00a0 So, this is just by taking this particular\u00a0\ncombination of these 3 constraints, so if these\u00a0\u00a0 constraints are valid then this new constraint\u00a0\nis also a valid constraint"
+    },
+    "0b8968e0-1b31-4ecf-b6be-120944852288": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": " because it is just a\u00a0\u00a0 linear combination of the existing constraints\u00a0\nbut what is the left hand side of this?\u00a0\u00a0 The left-hand side of this is the profit. \nSo, we have magically got a constraint on which\u00a0\u00a0 the left-hand side is the total profit that we ca"
+    },
+    "3e6b5d46-3e6c-4211-aee5-3045a3dfbb32": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "n\u00a0\nachieve for any combination of b, h and r and it\u00a0\u00a0 says that this combination of b, h and r can be no\u00a0\nmore than this. No matter what b, h and r are. So,\u00a0\u00a0 the left-hand side of this constraint is a profit,\u00a0\nso if we can achieve this right-hand side at "
+    },
+    "3ba883dc-cd80-4922-ae86-4a793fd46ed3": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "any\u00a0\u00a0 combination then that must be an optimum.\nNow it is not saying this is the only optimum,\u00a0\u00a0 there may be other optimum but certainly\u00a0\nthis value that we have found or claimed\u00a0\u00a0 to found have found that 0, 300 and\u00a0\n100 is actually an optimum value. \n\u00a0 "
+    },
+    "87da5095-ca80-496b-8d57-47bc3e5d696d": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "So, this was very clever so how does it work? So,\u00a0\nwe derived this upper bound by taking a linear\u00a0\u00a0 combination of constraints and how did we get\u00a0\nthis linear combination of constraints? We sort of\u00a0\u00a0 guessed it? So, it turns out that you do not\u00a0\nneed to gu"
+    },
+    "ea5a0b85-d385-4ab4-956b-cdf3972381db": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ess it. So, it turns out that this\u00a0\u00a0 is always possible, it is always possible\u00a0\nto find a linear combination of constraints\u00a0\u00a0 which gives you an upper bound in this\u00a0\ncase because I am giving a maximization\u00a0\u00a0 problem. It gives me an upper bound on the\u00a0\nopti"
+    },
+    "08ebaba7-c623-4658-b8b9-c8f2216fd541": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "mum, if it was the minimization problem\u00a0\u00a0 it will give me a lower bound on this\u00a0\nit cannot be lower than something. \n\u00a0 Here it is saying that the profit cannot be higher\u00a0\nthan something. So, what we did was we took 100\u00a0\u00a0 times 1 equation plus 100 times ano"
+    },
+    "70e7bf0d-8a0b-4e99-a75c-c48b2b7452a9": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ther equation\u00a0\nplus 400 times another equation. So, the thing was\u00a0\u00a0 what we had to guess was these values, so\u00a0\nthese multipliers or these coefficients. \n\u00a0 So, implicitly we also add 0 times that thing\u00a0\nwhich said b is less than 200. So, this constraint\u00a0\u00a0 h"
+    },
+    "8c6e7145-3ed8-4c5e-ae07-d6f70e81cb31": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ad a multiplier of 0. So, they have some\u00a0\nconstraints which we did not use where you\u00a0\u00a0 can think the multiplier is 0 and some which\u00a0\nwe did use. Now we will always multiply by\u00a0\u00a0 some non-negative quantity but we do\u00a0\nnot know what these quantities are. \n\u00a0 S"
+    },
+    "c46e37e4-3974-440b-b421-282e45940791": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "o, you can think of these as\u00a0\nnow unknown, so I want some\u00a0\u00a0 a1 times constraint 1, plus a2 times constraint 2,\u00a0\u00a0 plus ak times constraint k. So, if I have k\u00a0\nconstraint so this becomes my combination. So,\u00a0\u00a0 I want to find some upper bound on this quantity\u00a0"
+    },
+    "ad120182-e8d2-4dc7-bd7e-9c44a517cdcb": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "\nand it turns out that you can solve this problem\u00a0\u00a0 and this problem is called the dual and if you\u00a0\nsolve this problem and find those constraints,\u00a0\u00a0 then those constraints will actually give\u00a0\nus a solution to the other problem.\n\u00a0 So, this is a very interes"
+    },
+    "d45757ea-4ada-45f1-a281-a82e850120a1": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ting aspect about linear\u00a0\nprogramming. We will not get into it but this is\u00a0\u00a0 a very deep observation about linear programs\u00a0\nthat you can actually take the constraints of\u00a0\u00a0 the original program and construct a new linear\u00a0\nprogram which involves combining th"
+    },
+    "86a67dfb-d118-4d3c-8592-8a5412571ab3": {
+        "content_id": 73,
+        "course_name": "PDSA",
+        "title": "Linear Programming",
+        "week": 11,
+        "chunk": "ose constraints\u00a0\u00a0 and derive from that something which gives you\u00a0\nan upper bound on the original solution. "
+    }
+}

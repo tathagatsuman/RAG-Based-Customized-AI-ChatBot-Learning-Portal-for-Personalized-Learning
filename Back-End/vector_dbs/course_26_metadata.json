@@ -1,0 +1,527 @@
+{
+    "7dc82f34-4034-45aa-9e9f-8f7c0ee84619": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "So, we have been studying sorting\u00a0\nand searching and we have somewhat\u00a0\u00a0 interchangeably been using words like lists and\u00a0\narrays. So, let us try and understand formally\u00a0\u00a0 what is difference between a list and an\u00a0\narray in the context of programming.\n\u00a0 So, w"
+    },
+    "16acc53a-22ca-4bbd-bc00-fe5e163900c3": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "e are interested in maintaining sequences of\u00a0\nvalues. So, we have a first value or second value,\u00a0\u00a0 and so on. And we would like to talk about\u00a0\nthe ith value and the jth value and maybe\u00a0\u00a0 look it up or exchange it and so on. So,\u00a0\nfundamentally, these two li"
+    },
+    "1374eda9-79d7-4512-906d-c3ee934c7022": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "sts and arrays\u00a0\u00a0 are two different ways of maintaining such\u00a0\na sequence. So, what is the difference?\n\u00a0 So, list in the conventional understanding of\u00a0\nthe word is a flexible length sequence. So,\u00a0\u00a0 it is a sequence that can grow and shrink. So,\u00a0\nthe idea wit"
+    },
+    "73697491-0b6f-4cc4-a83c-7911e8c19ecc": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "h a list is that you can modify its\u00a0\u00a0 structure. And this we see in a built in Python\u00a0\nlist, for example, because you can take a slice,\u00a0\u00a0 for example, and replace it by a longer slice or\u00a0\na shorter slice. So, you can expand and contract\u00a0\u00a0 a Python list, yo"
+    },
+    "96b4a830-530d-4650-b017-67bfd8087a42": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "u can append something to the\u00a0\nbeginning, you can delete a value in the middle.\u00a0\u00a0 So, the length can vary over time.\nBut because of this, it is hard to\u00a0\u00a0 put this list in a fixed place in memory, because\u00a0\nthe place that you require for the list may grow\u00a0\u00a0 "
+    },
+    "2997d84b-a4c4-4caa-bbd4-f7a42bde6720": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "and shrink over time. So, typically, a list\u00a0\nis scattered in memory. So, we will come back\u00a0\u00a0 to what this means. But it is, think of a list as\u00a0\nbeing dispersed. So, you cannot point to a segment\u00a0\u00a0 of memory and say the entire list is sitting\u00a0\nhere. It migh"
+    },
+    "83492398-3fe3-4b0d-b4fb-3151cba9e3c7": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "t be sitting in a lot of places.\n\u00a0 An array, on the other hand, is typically\u00a0\nsomething which is designed not to grow or shrink.\u00a0\u00a0 So, in the conventional understanding of an array,\u00a0\nit is a fixed size sequence. I need a sequence of\u00a0\u00a0 100 elements. Now, th"
+    },
+    "6ce61592-35eb-4592-944b-22621632a61a": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "is makes a lot of sense when\u00a0\nwe are processing graphs, for example. In a graph,\u00a0\u00a0 typically, we need something like the list\u00a0\nof all the vertices or we need the adjacency\u00a0\u00a0 matrix. And for these things, if we know the\u00a0\nnumber of vertices, we know the leng"
+    },
+    "e5ccca24-be51-43fc-bbec-7664c4cd981c": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "th of the\u00a0\u00a0 list and is never going to shrink or grow. We\u00a0\nneed to always have a list of n vertices. We\u00a0\u00a0 always need an adjacency matrix of n by n.\nSo, if we have a fixed size, then we know in\u00a0\u00a0 advance how much space we will need in memory.\u00a0\nSo, we can g"
+    },
+    "b4f03417-be88-4bc8-9063-796d3a4ff8ce": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "o ahead and block that space.\u00a0\u00a0 So, this makes an array something which sits\u00a0\nin a fixed space in memory and this will help\u00a0\u00a0 us as we will see access the elements in an\u00a0\narray faster than accessing them in a list.\n\u00a0 So, let us look at this in a\u00a0\nlittle mo"
+    },
+    "8fdd7f6d-d011-4e21-b91f-f7dcdd6f7ee3": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "re detail. So, a list\u00a0\u00a0 in this flexible sense, is typically a\u00a0\nsequence of node. So, each node has a value,\u00a0\u00a0 and it will point to the next node in the\u00a0\nsequence. So, you do not have to tell in advance\u00a0\u00a0 where these nodes are, because you can just ask\u00a0\nea"
+    },
+    "27052b18-f4d9-4c6a-aa65-88c10cce9711": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "ch node to tell us where the next node is. \n\u00a0 So, it is like following directions to go\u00a0\nsomeplace. You do not know the way all the way,\u00a0\u00a0 but you know that everybody in the\u00a0\nneighborhood knows the way. So,\u00a0\u00a0 you as the first person saying I am going in\u00a0\nt"
+    },
+    "27b38c21-5159-4fc8-b367-53e4354f8547": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "hat way, which road should I take. You go to\u00a0\u00a0 the next guy and he would say which road should\u00a0\nI take and you keep following these links.\n\u00a0 So, the picture that we should have in mind is\u00a0\nsomething like this. So, we have these nodes.\u00a0\u00a0 So, each node has a"
+    },
+    "46801e9d-fb2d-4a64-9c93-04dc027c28b4": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " value and each node has this\u00a0\ninformation which tells us where the next node is.\u00a0\u00a0 So, what we know typically is where the\u00a0\nlist begins. We could, if we want keep\u00a0\u00a0 information about where the last node in the\u00a0\nlist is. This might be helpful, for instance"
+    },
+    "d628069c-06bc-426a-80ad-7bc8842bbe28": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": ",\u00a0\u00a0 if we want to extend it by adding one more value\u00a0\nthere without going through the whole list.\u00a0\u00a0 But in principle what we really need is this\u00a0\nstructure which is often called a linked list.\n\u00a0 So, the linking basically refers to the fact that\u00a0\nI have thi"
+    },
+    "610c6194-9ee5-4b02-8e5a-c62a82119b33": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "s. So, think of it like a train. If you\u00a0\u00a0 have seen a train, a train consists of these\u00a0\nindependent wagons or bogies, and they are all\u00a0\u00a0 connected to each other. So, this list is like\u00a0\na train. We can detach it, we can reattach it.\u00a0\u00a0 And in principle, of c"
+    },
+    "eb023626-fda7-41d7-972b-3bd9b5d015ac": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "ourse, in a physical train,\u00a0\nthere is some link is made out of some hard metal,\u00a0\u00a0 so there cannot be so much distance. But if\u00a0\nthis link was made out of elastic and infinitely\u00a0\u00a0 stretchable, you could have a train in which the\u00a0\ndifferent parts of it are al"
+    },
+    "e697bf68-9614-41ec-b112-8b382ec0681a": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "l over the place.\n\u00a0 So, the main advantage of having this\u00a0\nlinked structure is that it is very easy to\u00a0\u00a0 modify a list. So, supposing I want to insert\u00a0\na new value x between the element i minus 1, Vi\u00a0\u00a0 minus 1 and Vi. So, what I need to do is basically\u00a0\nre"
+    },
+    "7acc47a1-716b-4987-90cf-5c3b918d2df1": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "structure this list. But it is, the structure is\u00a0\u00a0 only logical, it is not a physical structure. Each\u00a0\nof these notes are sitting somewhere in memory.\n\u00a0 So, what I need to do is make this Vi minus 1\u00a0\npoint to X and Vi X point to Vi. So, what I need\u00a0\u00a0 to do"
+    },
+    "422c58bc-442c-4b6a-bbec-c35fbe2fa68e": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " is basically change from this link which\u00a0\nsays that Vi connects to Vi, Vi minus 1 connects\u00a0\u00a0 to Vi, I need to say that Vi minus 1 connects to\u00a0\nX and X connects to Vi. So, there is some local,\u00a0\u00a0 what you can think of is plumbing. So, if you have\u00a0\nsome bloc"
+    },
+    "43358b0c-dae2-4f5d-b5a0-eb2145755113": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "k in a pipe, then one way is to of course\u00a0\u00a0 remove that piece of pipe and replace it or you\u00a0\ncan just bypass it by moving a pipe around it. So,\u00a0\u00a0 you can do some local operation and not\u00a0\naffect the whole plumbing network.\n\u00a0 So, you are just taking some loc"
+    },
+    "05bf247e-c42f-4c81-a776-52efd2724dfe": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "al neighborhood\u00a0\nof the nodes that you want to update and you are\u00a0\u00a0 making some changes in how the information\u00a0\nflows or how the sequencing happens. So,\u00a0\u00a0 this is how you insert. Similarly,\u00a0\nso now at the end of this, I mean,\u00a0\u00a0 I can think of it as I have "
+    },
+    "dfeb1220-1baa-4ccf-a612-89fa7efddeb2": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "put an X there. \nOf course, none of these is actually in any\u00a0\u00a0 physical sequence. These are all sitting\u00a0\nsomewhere abstractly in memory. So, this is only a\u00a0\u00a0 logical sequence that I go from 0 to 1, 1 to 2,\u00a0\nand so on. And now after this insert, I go from\u00a0\u00a0"
+    },
+    "1f8fb905-da94-4f1e-83f5-156e7b475b17": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " i minus 1 to this new value X, and then I go\u00a0\nfrom X to i. So, this should be i probably.\n\u00a0 So, now, here is a symmetric situation. I want to\u00a0\ndelete a node in the middle of a list. So, here,\u00a0\u00a0 what do I do? Well, it is simpler in a way. I need\u00a0\nto just t"
+    },
+    "6af97e53-f088-4303-9709-495c741dbb49": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "ake this and bypass it. So, this is like,\u00a0\u00a0 again, plumbing. You want to make sure\u00a0\nthat some piece of pipe which is blocked\u00a0\u00a0 is bypassed, so you just go passed it. So,\u00a0\nyou do this. And then logically speaking,\u00a0\u00a0 this Vi disappears. So, now I directly go"
+    },
+    "5f74c588-b13b-4086-9a0c-adbd2a84c199": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " from\u00a0\nthe previous node to the next node. That current\u00a0\u00a0 node which I want to delete is gone.\nNow, it is a separate matter in terms of\u00a0\u00a0 the programming language, how that lost node is\u00a0\nreturned back to memory so the memory does not get\u00a0\u00a0 used up with all"
+    },
+    "a0767ea8-b79e-4c5a-b2e6-9e891f830082": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " this junk. That is not something\u00a0\nwe have to worry. Python does it automatically.\u00a0\u00a0 So, Python is able to keep track of all these\u00a0\nthings, for instance, which get lost and take\u00a0\u00a0 care of it so that they do not become permanently\u00a0\na drain on the memory tha"
+    },
+    "aa0dced7-f5a4-4ead-8af7-200e01f39b9f": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "t you are using.\n\u00a0 So, in this way, if you have this linked\u00a0\nstructure, you can see that by doing some\u00a0\u00a0 local operations, you are able to manipulate the\u00a0\nlist quite easily. But the problem with this is\u00a0\u00a0 that you need to actually get to this position.\u00a0\nSo"
+    },
+    "de52e32e-a4f2-4bae-9c88-5f66a576ce37": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": ", you need to follow these links to access the\u00a0\u00a0 ith thing. So, the, in order to put this here,\u00a0\nI have to first get here. And the only way I\u00a0\u00a0 can get here is to actually walk down this list\u00a0\nfrom the head, because there is no way I know in\u00a0\u00a0 advance wher"
+    },
+    "96275c06-e167-41bb-8074-9dc5edc228dc": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "e the ith element sits in memory.\u00a0\nSo, I need to spend time proportional to i,\u00a0\u00a0 the position or the index I am looking\u00a0\nfor in order to reach the ith element.\n\u00a0 So, this is the flip side of this flexibility.\u00a0\nThe positive side is that I can make these loc"
+    },
+    "b0807b84-b651-4a87-b2db-1f1d330810b9": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "al\u00a0\u00a0 changes easily where I am. But to reach\u00a0\nthe place where I need to make the change,\u00a0\u00a0 I need to walk down always from the start,\u00a0\nbecause there is no direct way to get there.\n\u00a0 The other option is to have an array.\u00a0\nSo, as we said an array will take\u00a0\u00a0"
+    },
+    "1e1f3ddf-985c-4923-b93c-d0cae6ff0c40": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " a parameter n to start with and say that\u00a0\nthis is going to be always of size n.\u00a0\u00a0 And usually, it is also assumed that in an\u00a0\narray all the elements of the array are of\u00a0\u00a0 the same type. So, in most programming\u00a0\nlanguages this is also true of lists.\u00a0\u00a0 A li"
+    },
+    "45c9360e-5fe7-402a-8622-604621925b4c": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "st is also a list of a fixed type. Now,\u00a0\nPython has a very flexible thing which allows\u00a0\u00a0 you to have lists in which some elements are\u00a0\nintegers, some are dictionary, some are this,\u00a0\u00a0 some are that. So, in principle, a Python list\u00a0\nis actually a list of wha"
+    },
+    "1043c167-cad7-4ca8-8a6d-0d51e0fff7dc": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "t are called objects.\n\u00a0 But in most programming languages is a fixed type.\u00a0\nAnd a fixed type has a fixed size. If I want to\u00a0\u00a0 store an integer, it will take so much size, if I\u00a0\nwant to store a float, it will take so much size.\u00a0\u00a0 So, if I know how much size"
+    },
+    "19288879-f30e-4a4e-8f32-bc977eaf1770": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " a fixed\u00a0\nvalue takes and if I need n of them,\u00a0\u00a0 then I obviously need n times that space. \nSo, I can allocate when I start, if the\u00a0\u00a0 programming, programmer asks for an array of size\u00a0\nn of int, then I know how much space n ints take\u00a0\u00a0 and I can say, okay,"
+    },
+    "2dd8f8b7-b07e-48cf-b237-c571e763629e": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " here is a space with n ints\u00a0\nand I put it all in one position, in one place.\u00a0\u00a0 So, from the starting point, I know that the first\u00a0\nint is A0, the second int is A1 and so on and this\u00a0\u00a0 gives us what is called random access.\nSo, if I want to get to this ent"
+    },
+    "4a82e555-20e8-46ca-900f-94dc959f3d0d": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "ry and I\u00a0\u00a0 know where the array starts, then I just have\u00a0\nto calculate it from the way the array starts,\u00a0\u00a0 I have to skip past i times the space for an\u00a0\ninteger and I know that that position is going\u00a0\u00a0 to have this. It is like walking on tiles. If I\u00a0\nknow "
+    },
+    "ecb2fdfc-6c8f-42df-b7fe-15c89ac7fb3d": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "I have to walk 20 steps, then I can close\u00a0\u00a0 my eyes and walk 20 steps and I know that I\u00a0\nwill be there. Except that I do not have to,\u00a0\u00a0 in this case, physically walk. I do not have to\u00a0\ngo through 1, 2, 3, 4. It is not like a list.\u00a0\u00a0 I do not have to say, o"
+    },
+    "83d8dd93-e104-4fda-abed-04cd5d19379a": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "h, the next one is\u00a0\nhere and the next one is here, I do not.\n\u00a0 I can directly say, okay, I want to bypass to\u00a0\nthe ith position. So, if I am here, this is\u00a0\u00a0 where I need to be. So, I can actually, it just\u00a0\nbecomes an arithmetic calculation to calculate\u00a0\u00a0 wh"
+    },
+    "b12ab32d-7c05-42ee-abd9-0eff3f085e09": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "ere it is. So, this is called random access. \nSo, technically, what it means is that whether I\u00a0\u00a0 am accessing the beginning of the list, the\u00a0\nmiddle of the list or the end of the list,\u00a0\u00a0 it takes the same amount of time. It takes\u00a0\ntime which is independent"
+    },
+    "89e4255f-ae32-4953-93bf-b84442c18e51": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": ". So, whether the\u00a0\u00a0 list has 100 elements or 1 million elements,\u00a0\nit is going to take the same amount of time\u00a0\u00a0 to access it if it is an array, whereas in the\u00a0\nprevious example, in the flexible list, it took\u00a0\u00a0 time proportional to where I want it to go.\nSo"
+    },
+    "dfa2fd00-5a47-4d1b-949f-11038dfb61ec": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": ", if I wanted to work in the early part of\u00a0\u00a0 the list, it was fast. If I wanted to work in\u00a0\nthe later part of the list, it would be slow,\u00a0\u00a0 because I have to walk all the way there. Now,\u00a0\nof course, this is not a situation where one\u00a0\u00a0 is clearly better tha"
+    },
+    "eb44b746-2941-4a84-a850-e7dcbb2728b3": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "n the other. So, what we\u00a0\nhave lost in an array is the flexibility. \n\u00a0 In a list we could insert and delete things,\u00a0\nso we could grow and shrink the list without\u00a0\u00a0 any problem, provided we knew what to do where\u00a0\nwe were. But in an array, if we have to grow"
+    },
+    "f86e86ca-32a6-426c-8898-e4a06a19bcc2": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "\u00a0\u00a0 this list, supposing I want to insert a value\u00a0\nhere, then everything below it has to shift\u00a0\u00a0 by one position to make space. So,\u00a0\nyou know exactly what happens.\n\u00a0 When you try to put a book into a crowded\u00a0\nbookshelf, you have to push all the books. So,\u00a0\u00a0"
+    },
+    "60e49bd5-7d5b-4b62-9761-ce47336f44c0": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " that is a lot of work. And in the worst\u00a0\ncase, if you are putting it right at\u00a0\u00a0 the beginning of the bookshelf, then you\u00a0\nhave to move everything to the right. So,\u00a0\u00a0 it could take order n work to make space to insert\u00a0\nan element. And likewise, when you pu"
+    },
+    "65d62b0b-f12c-44bb-aa7f-ff39cb9d59b8": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "ll out a book\u00a0\u00a0 from the bookshelf and you leave a hole in the\u00a0\nshelf, you need to compress all the books. So,\u00a0\u00a0 you need to push everything from the right to the\u00a0\nleft. So, again, it could take order in time.\n\u00a0 So, for our earlier thing that plumbing was\u00a0"
+    },
+    "0d90a6ff-d492-45af-8123-8beadf0f814b": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "\nonly a two or three step operation. In the\u00a0\u00a0 neighborhood of the element, I wanted to add\u00a0\nor delete, I just had to move a few links. So,\u00a0\u00a0 that was a constant overhead, only problem\u00a0\nwas to find out where I was. Here, even if I\u00a0\u00a0 know where I am supposed"
+    },
+    "dda93b92-e32e-482f-a610-fbb50984bba8": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " to do it, it is going\u00a0\nto take me in the worst-case time proportional\u00a0\u00a0 to the number of elements which are to my right\u00a0\nand that could be in the worst-case order n.\n\u00a0 So, to summarize, if I look at these two\u00a0\nrepresentations of sequences, the typical\u00a0\u00a0 o"
+    },
+    "964d9e6d-6027-47b6-9e2f-a4c186c0d352": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "perations that we do when we are doing things\u00a0\nlike searching, sorting or manipulating arrays in\u00a0\u00a0 general, so the one operation is to exchange two\u00a0\nvalues. We do this all the time in sorting. We say\u00a0\u00a0 okay take the say in selection sort, we find the\u00a0\nmaxi"
+    },
+    "101b065b-1d74-4737-8fa5-0015f441411f": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "mum or the minimum, move it to the beginning\u00a0\u00a0 or we might take two adjacent values which are\u00a0\nout of order and swap them. In quicksort, we take\u00a0\u00a0 the pivot value and we move it somewhere.\nNow, in this we have to look up in general\u00a0\u00a0 a value which is at so"
+    },
+    "949d6315-2e56-4794-b655-80e1ceb691ab": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "me position i and some\u00a0\nother position j which may be very far away.\u00a0\u00a0 For an array, this is not a problem. If I know\u00a0\ni and j, I can calculate instantly where Ai is,\u00a0\u00a0 where Aj is, so it is exactly like swapping\u00a0\ntwo values of a normal type. If I want to\u00a0"
+    },
+    "466d1323-81a9-4f99-9ef0-0d840d641c5a": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "\u00a0 exchange the values of x and y or a and\u00a0\nb is exactly the same cost as compared to\u00a0\u00a0 swapping capital Ai capital Aj. But in a list, it\u00a0\nis not the case. I need to actually walk down to\u00a0\u00a0 Ai and I need to walk down to Aj. So, it will\u00a0\ntake me time proport"
+    },
+    "65eaacf9-a592-42e4-9ace-e81588c0b743": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "ional to the length of the\u00a0\u00a0 list in the worst case in order to do the swap.\nOn the other hand, if I have, it does not happen\u00a0\u00a0 in sorting and searching, because we are not\u00a0\nmanipulating the array. But if we have a need to\u00a0\u00a0 actually make this sequence shr"
+    },
+    "b6bf6243-fd0a-4837-8d6f-7ad32ee3f8ba": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "ink and grow, then\u00a0\nif I know where I am, if I am at a position and at\u00a0\u00a0 this point, I want to make a change, then, for the\u00a0\nlist, the flexible list this is a constant time.\u00a0\u00a0 I just have to do some rearrangement of these\u00a0\narrows which point from one node "
+    },
+    "fcf24849-c930-4e1f-b4d9-24107b20c8a0": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "to the next.\u00a0\u00a0 Whereas for an array in the worst case, if I need\u00a0\nto grow and shrink, as we said, you have to shift\u00a0\u00a0 a lot of value so it could be order n.\nSo, the reason to emphasize this is because\u00a0\u00a0 the analysis that we do for our algorithms\u00a0\nactually "
+    },
+    "6382ca55-cf8a-48a9-921e-eab0ca185589": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "depends on what representation we\u00a0\u00a0 are using, because we have been a little bit\u00a0\ncasual about this when we talked about searching\u00a0\u00a0 and sorting, because we have always sort of\u00a0\nassumed that we are working with arrays. \n\u00a0 When we said Ai all these basic\u00a0\no"
+    },
+    "9b857389-2d4f-427d-95a4-b911598f20d5": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "perations, when we said, for example,\u00a0\u00a0 swapping Ai and Aj is a basic operation, it was a\u00a0\nbasic operation if I do something like x comma y\u00a0\u00a0 is equal to y comma x, this is not\u00a0\na problem. But if I am saying Ai,\u00a0\u00a0 Aj is equal to Aj, Ai. Now, the question i"
+    },
+    "8449786c-111d-4ea6-bf71-00f7405670f4": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "s\u00a0\nto whether this is the basic operation or not\u00a0\u00a0 really depends on whether we are dealing with\u00a0\nan array or a list. So, in an array, this is a\u00a0\u00a0 basic operation. In a list, this need not be. If\u00a0\nI do not know where I am, I have a problem.\n\u00a0 So, as a conc"
+    },
+    "7514cb3b-bc11-4592-a7f7-2b8598c81453": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "rete instance of this, let\u00a0\nus look at this question of inserting in a\u00a0\u00a0 sorted list. We use this as a part of our\u00a0\ninsertion sort. So, I have a sorted list\u00a0\u00a0 and I want to take a value V and I want it.\u00a0\nSo, supposing this is an ascending order.\u00a0\u00a0 So, then"
+    },
+    "5a7763ea-a32d-47b9-ba47-54c36e63a6b5": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " what we said is we will keep walking\u00a0\none by one and we will find a position\u00a0\u00a0 and at that position, so till that position, for\u00a0\ninstance, we could keep swapping or whatever,\u00a0\u00a0 and then we will insert it there. We\u00a0\ntypically did it from the right-hand sid"
+    },
+    "9553db05-b55a-4016-995f-33fbd4e46b09": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "e,\u00a0\u00a0 it does not matter. But this is how we did it.\nNow, you might ask, okay, why did we do all this,\u00a0\u00a0 because it is a sorted sequence. So, why not\u00a0\njust use what we already have talked about. So,\u00a0\u00a0 we look here to say, should I insert it there.\u00a0\nIf it is"
+    },
+    "c15d49a2-366a-4494-b60d-ff94e2cb0bbe": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " the right place to insert, it is fine.\u00a0\u00a0 Otherwise, I need to insert it here or here. So, I\u00a0\ncan use binary search to find out where to insert.\u00a0\u00a0 And then having found it, I need to insert.\u00a0\nNow, there are two separate operations here;\u00a0\u00a0 one is binary sea"
+    },
+    "cc68b82e-e83e-4dd3-bfe9-9711eb63c722": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "rch and one is\u00a0\ninserting by making space.\n\u00a0 If I assume it is an array, then binary search\u00a0\nis good, because I can always go to the midpoint,\u00a0\u00a0 I mean, the 0 to midpoint, that quarte point or\u00a0\nthe three quarter point in constant time. So,\u00a0\u00a0 binary search "
+    },
+    "5dd169f7-f389-43da-a66a-1442391e9a7f": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "works well in an array, does not\u00a0\nwork so well in a list, because each time I\u00a0\u00a0 have to calculate the midpoint in the list I\u00a0\nhave to actually walk halfway down the list.\u00a0\u00a0 So, this part of it is good. Binary search\u00a0\nworks with arrays, but then I have to i"
+    },
+    "ee587e81-a919-45a2-b03c-724194cd417e": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "nsert.\n\u00a0 Now, if I were in a list and I was\u00a0\ntold to insert here, it is very cheap.\u00a0\u00a0 But if when a binary search finds it in an array\u00a0\nfast and tells me to insert then it is expensive.\u00a0\u00a0 So, I kind of gain on one and lose on the other.\u00a0\nSo, if I have an a"
+    },
+    "9e5faae8-8d74-4c83-89c2-4a62d0cb0f0e": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "rray, I will gain on the binary\u00a0\u00a0 search and I will lose on the insert step. \nAnd if I have a list representation,\u00a0\u00a0 I will lose on the insert position finding step.\u00a0\nWhere to insert, I will take time to find it.\u00a0\u00a0 But having founded the insertion will be "
+    },
+    "9d9527ec-18bc-4567-bc1f-b6cb6b59496a": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "just\u00a0\nthat plumbing. So, in some cases, the trade off\u00a0\u00a0 is such that it does not matter. That is why we\u00a0\nhave been a little casual about insertion sort\u00a0\u00a0 just saying that the insert is order n.\nBut it is not order n because of one or the\u00a0\u00a0 other is because"
+    },
+    "9ee8cf97-cdac-4548-8d2d-35cd7790dc08": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " whichever you choose one of\u00a0\nthese two operations will push it to order n.\u00a0\u00a0 So, the operation that pushes the order n is\u00a0\ndifferent. If it is an array, it is because of the\u00a0\u00a0 insertion operation. And if it is a list, it is\u00a0\nbecause of the finding the pos"
+    },
+    "e61a7c6a-1b28-4af9-85a5-e513db289781": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "ition operation. So,\u00a0\u00a0 this is something to keep in mind. Whenever you\u00a0\nare dealing with sequences, try to keep in mind\u00a0\u00a0 whether you are dealing with lists or the arrays\u00a0\nwhen you are doing the analysis especially.\n\u00a0 And also, of course, when\u00a0\nyou need it"
+    },
+    "0ce8df08-6fd2-4a3f-863f-bf3655c585c7": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " for a particular\u00a0\u00a0 requirement, just think about whether the list of\u00a0\nsequence you are using is going to be frequently\u00a0\u00a0 changing, is it dynamic, is it going to be\u00a0\ngrowing and shrinking or is it something\u00a0\u00a0 which is fixed once and for all. So, all\u00a0\nthese"
+    },
+    "2dbd8d52-bfff-443d-a150-f8a3a3f43d13": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " factors come into play when you choose\u00a0\u00a0 one of these two as a representation for the\u00a0\nsequence that you need in your program.\n\u00a0 So, to summarize, sequences can\u00a0\nbe stored as lists or arrays.\u00a0\u00a0 Lists are flexible, but accessing an element takes\u00a0\nlinear ti"
+    },
+    "99798fc0-e2bf-4ca9-bd9b-b20a80a9a30c": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": "me. And arrays support random access,\u00a0\u00a0 but expansion and contraction take linear time.\u00a0\nSo, when we do an analysis of an algorithm,\u00a0\u00a0 we have to take this into account. Now, one\u00a0\nof the things that we are doing in this course\u00a0\u00a0 is we are using Python. So,"
+    },
+    "8e4b3932-5688-4123-b50d-d1b9839a1009": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " the question is we\u00a0\nhave this data type called a list in Python.\n\u00a0 So, is this data type called\u00a0\na list? When we write this,\u00a0\u00a0 is this list a linked list in the sense that\u00a0\nwe described here with these nodes which are\u00a0\u00a0 connected together or is it like an"
+    },
+    "1959ae1a-cdfd-449f-bc19-c3065ff10070": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " array and\u00a0\nwhat do we do for arrays in Python? So, in Python,\u00a0\u00a0 there is this library which you have\u00a0\npossibly come across called numpy,\u00a0\u00a0 which allows us to actually define these arrays\u00a0\nwith a fixed size. But now given what we know\u00a0\u00a0 about Python lists,"
+    },
+    "0b2cbf8a-085d-454f-b3f3-a4da386fc0ea": {
+        "content_id": 26,
+        "course_name": "PDSA",
+        "title": "Difference Between Lists and Arrays (Theory)",
+        "week": 3,
+        "chunk": " are these going to be faster\u00a0\nthan Python lists or slower than Python lists? So,\u00a0\u00a0 these are some of the things that\u00a0\nwe will look at in a later lecture."
+    }
+}

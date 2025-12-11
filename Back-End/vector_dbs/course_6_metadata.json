@@ -1,0 +1,471 @@
+{
+    "3fe386a1-074f-4cbd-9272-e106d0b8b230": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "So, when we looked at the gcd problem and\u00a0\nthe primes examples, we covered some of\u00a0\u00a0 the more standard aspects of python in terms of\u00a0\ncontrol flow, so we saw conditionals if, we saw\u00a0\u00a0 loops for and while, we saw data structures\u00a0\nlike lists and dictionaries"
+    },
+    "4eae00a0-1b69-443a-b37c-6091e0cb35d2": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": ", we also looked at\u00a0\u00a0 breaking out of a loop, we also considered the\u00a0\nproblem of initializing a variable properly so\u00a0\u00a0 that python knows what type it is, so we saw all\u00a0\nthese standard things just to remind ourselves. Now, let us look at something slightly\u00a0"
+    },
+    "755ef7aa-4813-4042-a447-7d9bf40c8bc9": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "\u00a0 more exotic which is we will encounter in\u00a0\ncode so it is important to understand it,\u00a0\u00a0 so this is about how to handle errors in\u00a0\nour code or what are called exceptions. So, when we run code things go wrong, I mean if\u00a0\nall code ran perfectly it would be a"
+    },
+    "88c685a8-5e8d-4169-979e-919ba85c620d": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " very simple\u00a0\u00a0 world and sometimes they go wrong because\u00a0\nthere is something wrong with what we wrote\u00a0\u00a0 the logic is wrong, sometimes they go wrong\u00a0\nbecause the values are not what we expect.\u00a0\u00a0 So, there are many different types of errors\u00a0\nthat a code, pie"
+    },
+    "cb907be7-d7d5-4cc3-993b-d5af718ead68": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ce of code could generate. So, the most fundamental ones are those to do\u00a0\nwith values. For instance, you could have an\u00a0\u00a0 arithmetic expression, you could be dividing x by\u00a0\nz but unfortunately at this moment when you are\u00a0\u00a0 dividing x by z you forgot to chec"
+    },
+    "f8b984d0-b347-499c-8449-c97c8164f6fa": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "k and z actually\u00a0\nhappened to be 0 so this division is not defined\u00a0\u00a0 or there are functions python\u00a0\nsupports type conversion. So, in particular if you read input from the\u00a0\nkeyboard then it is always a string and now\u00a0\u00a0 if you want to interpret it as a numbe"
+    },
+    "22ff3652-a19e-4dae-af64-8f92df162f16": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "r you\u00a0\nhave to apply this function int in order to\u00a0\u00a0 convert it to a number. But what if that string\u00a0\ndoes not represent a number, supposing it has a\u00a0\u00a0 decimal point or it has characters other than\u00a0\n0 to 9, then python will throw an error. So,\u00a0\u00a0 in this ca"
+    },
+    "c931579b-9a5c-4498-805d-8e24ce388315": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "se it is the problem is that\u00a0\nthe string is not a valid integer, it is\u00a0\u00a0 a string but it does not represent something\u00a0\nthat python can understand as an integer. Another type of error is that you actually\u00a0\nuse an uninitialized variable. So,\u00a0\u00a0 you put an exp"
+    },
+    "b8ecd27a-6ee0-4df7-a0de-b3e2e589ede4": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ression y equal to 5 times x\u00a0\nbut so far you have not assigned a value to x,\u00a0\u00a0 so 5 times x has no meaning, so it\u00a0\ncannot assign a value to y either\u00a0\u00a0 or you have a complex structure like a list\u00a0\nand you are trying to access a position in\u00a0\u00a0 the list but th"
+    },
+    "1dcd3136-02fd-4e13-aed8-96d30abd54e8": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "e position you are trying to\u00a0\naccess is outside the bounds of the list. So, the list has positions remember from 0\u00a0\nto the length minus 1 and you are trying to\u00a0\u00a0 access an i which is outside that. Similarly,\u00a0\nyou could be doing it for a dictionary also you"
+    },
+    "051d2d2b-0088-483b-ac77-de39d675c27c": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "\u00a0\u00a0 are trying to access a key from a dictionary\u00a0\nbut that key does not exist. And finally,\u00a0\u00a0 there are things which could be outside the\u00a0\nscope of the program itself, the values are not\u00a0\u00a0 wrong inside the program but you are\u00a0\ninteracting with something out"
+    },
+    "f4d0d343-ae37-4455-b215-acdfeaf19f0e": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "side the program. A typical example when you\u00a0\nare trying to read a file\u00a0\u00a0 so supposing you try to open a file but the file\u00a0\nname that you are trying to use does not exist,\u00a0\u00a0 somebody has renamed the file or deleted it,\u00a0\nthen your program will throw an erro"
+    },
+    "ea079969-d096-4210-9d64-26fc090518ac": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "r. Similarly,\u00a0\u00a0 when you try to write a file, you might\u00a0\nwell find that the disk is out of space,\u00a0\u00a0 you want to write a large file there\u00a0\nis not enough space on the disk. Now, these are things which you cannot\u00a0\ndo much about within the program, so the\u00a0\u00a0 qu"
+    },
+    "76429249-e3cd-4d4e-b11f-3aada3e7059a": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "estion is can you anticipate this? So,\u00a0\nwhat the goal of exception handling is to\u00a0\u00a0 recover gracefully from errors wherever it is\u00a0\npossible. So, we want to try and anticipate\u00a0\u00a0 the kind of mistakes that might occur when our\u00a0\ncode runs and provide these alt"
+    },
+    "99330e63-b4ac-47e5-a283-d26ba2c6d0fd": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ernative paths,\u00a0\u00a0 a contingency plan as it were saying if this\u00a0\nhappens, if it goes wrong in this way do this,\u00a0\u00a0 if it goes wrong in that way do that or report\u00a0\nsomething to the user so that they know. Supposing, I asked the user to give me a file\u00a0\nname an"
+    },
+    "99707755-f141-4515-96f3-c05f4f73a50e": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "d I was not able to read the file,\u00a0\u00a0 instead of the program aborting and\u00a0\nthrowing some error it is better that\u00a0\u00a0 I print out a message to the user saying\u00a0\nthe file name you provided does not exist\u00a0\u00a0 try again, for example. So, this broadly\u00a0\nis what is cal"
+    },
+    "b1150cee-dd37-41d8-a98e-fed5c5c3e8cb": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "led exception handling. So, the good thing for us is that python actually\u00a0\ngives us information about each type of error\u00a0\u00a0 and this confirmation comes in two parts.\u00a0\nSo, first there is a kind of a name,\u00a0\u00a0 a type of error and the second is a description.\u00a0\u00a0 "
+    },
+    "4c83b5d8-fcba-41bb-8cba-af443206b6a9": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "So, the most common type of error is a\u00a0\nsyntax error, this is not valid python code. Now, if it is not valid python code\u00a0\nit cannot run and since it cannot run,\u00a0\u00a0 we cannot take any corrective action about it.\u00a0\nSo, we will not bother about syntax there is\u00a0"
+    },
+    "bf96f23e-44cd-418e-ab8f-bc52d444cfd8": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "\u00a0 an exception handling because nothing you can\u00a0\ndo, syntax errors come before the code runs,\u00a0\u00a0 exception handling comes when the code is\u00a0\nrunning. So, unless you have valid python code\u00a0\u00a0 there is no question of exception handling,\u00a0\nso there is not much we"
+    },
+    "445cbbb5-1d3c-443c-8073-fa2dd329baa4": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " can do about this. So, we are interested in errors when the code is\u00a0\nrunning so if you have actually run python code\u00a0\u00a0 and looked at the errors you will see some\u00a0\nof these and recognize them, for instance,\u00a0\u00a0 a name error, python calls a name error, an\u00a0\ner"
+    },
+    "c19e4a6a-cc29-45db-af2e-3a5e9ffbd975": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ror which occurs when you try to use a value\u00a0\u00a0 which is not defined, you have a\u00a0\nvariable x which is not defined. So, this is like our earlier thing\u00a0\nwhere we said y is equal to 5 times x\u00a0\u00a0 but x was not yet assigned a value\u00a0\nthen this would generate a nam"
+    },
+    "f85b53de-aa21-4ccf-8f7c-d0445f35267a": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "e error.\u00a0\u00a0 The other example we saw before where you try\u00a0\nto evaluate an arithmetic expression where\u00a0\u00a0 the numbers are defined but the denominator is 0\u00a0\nfor a division will give you a 0 division error. So, in each case there is a fixed kind\u00a0\nof a terminolo"
+    },
+    "a1303a94-cb7b-4a4a-912a-d963a9d855fd": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "gy that python uses. So,\u00a0\u00a0 every time you get a name error you will get this\u00a0\nmessage name error, but there will be a diagnostic\u00a0\u00a0 string, a kind of explanation which will\u00a0\ngive you a little bit more information\u00a0\u00a0 which was the name that was wrong. So, tha"
+    },
+    "83a82484-b5d3-480e-bee3-286e6bda64c6": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "t\u00a0\ncomes as a bonus for a human to read but\u00a0\u00a0 as far as we are concerned for exception\u00a0\nhandling what we are really interested in\u00a0\u00a0 is the first part because this will tell\u00a0\nus what kind of error occurred in our code. So, the final thing that we looked at\u00a0"
+    },
+    "322613ac-3166-4d4d-9b13-29405a211395": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "\nwas errors dealing with data structure,\u00a0\u00a0 so index error is that a list is out\u00a0\nof range and for example a key error\u00a0\u00a0 would be that a dictionary key that we\u00a0\nare trying to access does not exist.\u00a0\u00a0 So, in all such cases we want to\u00a0\nbe able to take correct"
+    },
+    "5689f992-e44b-4bfa-8b0c-964ee8311c6a": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ive action. So, what happens when code generates an\u00a0\nerror is called raising an exception.\u00a0\u00a0 So, when it raises an exception the code creates\u00a0\nthese two things, it creates the type of error\u00a0\u00a0 and creates a message. Now, we will see that\u00a0\nwe can actually ra"
+    },
+    "17a2f31e-b743-48dd-9226-edae3401bf3d": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ise exceptions ourselves,\u00a0\u00a0 so we can create an error if somebody\u00a0\nuses our code in the wrong way. For instance, supposing you\u00a0\ndefine a function called factorial\u00a0\u00a0 and somebody asks you to compute factorial\u00a0\nof minus 10 so we know that factorial is not\u00a0\u00a0 "
+    },
+    "50d2c020-acc5-4a2f-8fd2-a259b91511b4": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "well defined for negative numbers because\u00a0\nthe factorial is 10 times 9 times 7 up to\u00a0\u00a0 1 but if I start with minus 10, I cannot keep\u00a0\ngoing down because it will go infinitely far. So, what you do when you see factorial\u00a0\nof minus 10? Well, there are two thi"
+    },
+    "d3162ae4-43a9-4ece-975b-cc95b4c6e5a5": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ngs,\u00a0\u00a0 one is you can return some default value or you\u00a0\ncan actually raise an exception saying do not call\u00a0\u00a0 this factorial with function with a negative\u00a0\nnumber. So, raising exception we can do but we\u00a0\u00a0 are not going to focus too much on that,\u00a0\nwe will se"
+    },
+    "12db4b9b-40ce-45a0-9aaf-83913d941c55": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "e a small example later on. But the code that is running will in general\u00a0\nraise exceptions and what we want to focus on is\u00a0\u00a0 how we handle this exception. So, we know that\u00a0\nthe code that we call could generate an error\u00a0\u00a0 so how do we deal with that? And if"
+    },
+    "e381787c-04c9-4532-bf6b-4790fa6584a5": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " we do\u00a0\nnot deal with it what will happen is that\u00a0\u00a0 our code will crash. So, we call a function that\u00a0\nfunction generates an error, we do not have code\u00a0\u00a0 to cope with that error, so our function will also\u00a0\ncrash because a function that we called crashed.\u00a0\u00a0 "
+    },
+    "5b13d3a9-006c-4a6d-8387-943cc13432a6": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "So, it is in our interest to avoid that and\u00a0\nthat is why we want to handle the exceptions. So, to handle an exception we use this kind\u00a0\nof format so that we take the code that we\u00a0\u00a0 are trying to run. So, this is the actual code\u00a0\nthat we had, we are trying "
+    },
+    "4a7a084c-020b-4bf9-b0eb-75557bfcb4dd": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "to run this code\u00a0\u00a0 but we know that potentially there are some\u00a0\nthings in that code which might generate errors,\u00a0\u00a0 so we anticipate that by putting\u00a0\nit inside this thing called a try. So, the word try is self-explanatory, try to\u00a0\nrun this code. And now, if"
+    },
+    "8055efa5-3991-4046-a9e8-359081fce17a": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " it generates errors\u00a0\u00a0 take the following action, so that is what is\u00a0\nexcept does. So, except suggest what to do when\u00a0\u00a0 different types of errors happen, so with except\u00a0\nthere is an indicator about what exception or what\u00a0\u00a0 error we are handling. So, if the"
+    },
+    "84bbc7e5-2d54-4636-a88d-88e393228103": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " code generates\u00a0\nan index error then we will execute this code. Now, it happens in sequence, so if it is\u00a0\nan index error it will come here if it\u00a0\u00a0 is not an index error then this code will\u00a0\nnot apply, so it will go to the next line\u00a0\u00a0 and see is there any o"
+    },
+    "df58bb27-90b1-49f9-bbc2-ac61dbacdaf2": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ther except. The same except\u00a0\ncan handle more than one thing. So, this is saying\u00a0\u00a0 if it is a index error the first one happens but\u00a0\nif it is a name error or a key error then do this.\u00a0\u00a0 So, we could have the same\u00a0\nexception handling code,\u00a0\u00a0 handling more t"
+    },
+    "35eee8e8-e061-41a9-8119-407c23527c5c": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "han one type of error and\u00a0\nthese things are checked in sequence. So, it will first check for index error.\u00a0\nRemember the error will be only be of one type,\u00a0\u00a0 an error comes to us its of one type, if it\u00a0\nis an index error it will match this block,\u00a0\u00a0 if it is"
+    },
+    "d0664e26-e8b4-4818-acea-4715bca56755": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " not an index error it will not look\u00a0\nat this at all, it will directly come to this.\u00a0\u00a0 If it is not a name error or a key\u00a0\nerror, it will keep going down. So, maybe there is some errors\u00a0\nthat we do not know about,\u00a0\u00a0 but we still want to not have our code c"
+    },
+    "6156b388-9eab-4259-bc6c-3110e0a089b5": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "rash. So,\u00a0\nthen we can write an empty except, except with no\u00a0\u00a0 side qualifier saying which exception it\u00a0\napplies to and such an empty except will\u00a0\u00a0 kind of trap everything. So, everything that\u00a0\nreaches this point will execute this code. So, in this case th"
+    },
+    "0d02fcb1-0083-496b-b689-a8c06c82fb08": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ere are three types of errors\u00a0\nwhich we explicitly deal with, index error,\u00a0\u00a0 name error, key error, any error of any other type\u00a0\nwill come to this third except and stop here. So,\u00a0\u00a0 therefore obviously this kind of a except with\u00a0\nno qualifier should be at t"
+    },
+    "2b204524-f12e-49f7-ac1b-d23d6f6899a2": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "he end because we put\u00a0\u00a0 it at the beginning it will not pass anything to\u00a0\nany of the other things, this is the most general\u00a0\u00a0 trap, it is like you are having some kind of a\u00a0\u00a0 net to catch, a safety net supposing you have a\u00a0\nfootball field, so you have a ne"
+    },
+    "4143aa30-716f-4a07-b837-de63fa39aa8a": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "t and then you\u00a0\u00a0 have another net and then you have another net,\u00a0\nbut the biggest net is on the outside if you put\u00a0\u00a0 the biggest net on the inside nothing will\u00a0\nreach the smaller nets, so that is the goal. And finally this is something which\u00a0\nhappens even "
+    },
+    "03f788a5-9e41-4ca3-9f86-68d6fa9280d9": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "in for loops and while loops,\u00a0\u00a0 sometimes you want to check whether the\u00a0\nfor loop or the while loop exited normally.\u00a0\u00a0 I did not break out of it and I did not abort\u00a0\nit. Similarly, the default case hopefully is\u00a0\u00a0 that this code actually executes, the code\u00a0"
+    },
+    "fb525e60-5962-471d-ac21-010cd886e523": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "\nat the top actually executes without error. So, if I come without error then I will come here,\u00a0\u00a0 so we can attach an else to this try and\u00a0\nthis else basically will indicate that I\u00a0\u00a0 actually managed to finish that try block as\u00a0\nit is called without encoun"
+    },
+    "d8b017b5-605c-4095-a52c-943271cd6ca5": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "tering an error,\u00a0\u00a0 so this allows us to distinguish in our code the\u00a0\nsituation where an error happened and also the,\u00a0\u00a0 if there is something we want to do in case an\u00a0\nerror did not happen then we can do it here.\u00a0\u00a0 So, this is the broad structure of how we\u00a0"
+    },
+    "2e7866ac-91ce-4ba5-bbc5-3dd2620d88b2": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "\nuse this exception handling in our code. So, exception handling is not always used only\u00a0\nto track errors, it can also be a style of\u00a0\u00a0 programming in certain situations and most notably\u00a0\nwith dictionaries and keys. So, here for instance\u00a0\u00a0 is a dictionary w"
+    },
+    "97e31a93-5794-4732-8107-6a2e9b69b34d": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "hich stores the scores of\u00a0\ndifferent batters in cricket. So, the keys are\u00a0\u00a0 names and the values that you store is a list\u00a0\nof scores so far associated with that person. So, when I want to update this list there are\u00a0\ntwo possibilities as always with the dic"
+    },
+    "cb711be4-3e5e-4090-9ab1-c2ecf00638f9": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "tionary\u00a0\u00a0 that is the person whose name I am\u00a0\ngoing to, whose score I am going to\u00a0\u00a0 update already has an entry in the dictionary,\u00a0\nin that case I just append the current score\u00a0\u00a0 or this person does not have an entry\u00a0\nin which case I want to create this,\u00a0\u00a0"
+    },
+    "533d563d-73af-41d4-a127-2deb3a6799c8": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " we saw the same thing when we were doing\u00a0\nthis counting the differences of primes. We said if this difference has been seen before\u00a0\u00a0 increment that difference for this key otherwise\u00a0\ncreate a new entry in the dictionary for this\u00a0\u00a0 difference because it is"
+    },
+    "32a5bc28-0658-440f-9605-dd29235b90d4": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " the first time we are\u00a0\nseeing it. So, the way we did it there was a\u00a0\u00a0 traditional way we check whether the new\u00a0\nkey that we are looking at already exists. So, if the batter that we are looking at is\u00a0\nalready available in this dictionary as one\u00a0\u00a0 of the ke"
+    },
+    "206cba46-2aa8-49e0-b48f-e08b1f590dfc": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ys then I append the score for this\u00a0\nbatter otherwise I create a new list with this\u00a0\u00a0 one score and this is the first score that I have\u00a0\nadded for this batter, a new key and a new list,\u00a0\u00a0 so this is the traditional way. So, you check\u00a0\nwhether it is there i"
+    },
+    "42f80f89-1d54-4b81-a6bf-25e77a0d3e5f": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "f it is there you append\u00a0\u00a0 or you increment or whatever, update in\u00a0\nsome way otherwise you create a new entry. So, how would we do this in an exception handling\u00a0\nway? So, supposing we assume the key is there,\u00a0\u00a0 so we assume the key is there and we try\u00a0\nto "
+    },
+    "24ee33d9-742c-4423-b93a-394fda9dc0e3": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "update it, if it is there it will work,\u00a0\u00a0 if it is not there then it will throw this key\u00a0\nerror, so here is how we do it, we try to update\u00a0\u00a0 it that is our default, we assume that this key\u00a0\nalready exists and we try to append the score. But if this is not "
+    },
+    "71a250f5-265a-4438-8aa0-4aa773f30c32": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "the case then python will\u00a0\ncomplain saying that there is no scores of b so\u00a0\u00a0 this will give us a key error, so we say okay,\u00a0\nif there is a key error then do this instead.\u00a0\u00a0 So, this is not a case where we are flagging some\u00a0\nkind of drastic error but rather"
+    },
+    "28285479-af5c-4d81-94b5-b61c982c8cd8": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " we are using\u00a0\u00a0 this exception to signal which of\u00a0\nthe cases, so it is a complicated way\u00a0\u00a0 in one sense of doing if then else. But if you read it in English this is much easier,\u00a0\ntry to do this and if you cannot do this do that\u00a0\u00a0 instead which is more or l"
+    },
+    "c3b5a262-58da-4181-8ca8-541700dd6908": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "ess what you are saying\u00a0\nbefore but you are saying it in a more complicated\u00a0\u00a0 and convoluted way, instead of saying try to\u00a0\nupdate and then create you are saying if this key\u00a0\u00a0 already exist then update otherwise create, so it\u00a0\nis a matter of taste and styl"
+    },
+    "fc18947c-d1d2-4977-b032-6b6b7cb3470a": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "e which one is more\u00a0\u00a0 easy for you to understand, but this is just to\u00a0\nexplain that exceptions can be used in a sense\u00a0\u00a0 in a positive way, they do not have to only\u00a0\nbe used in a negative way to catch errors. So, to conclude this discussion of exceptions le"
+    },
+    "958d8531-98e7-408b-a0c1-13fefc85cad7": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "t\u00a0\nus see how this whole thing actually works. So,\u00a0\u00a0 supposing I have this main code which calls\u00a0\na function f so this will transfer control\u00a0\u00a0 to f which is defined somewhere else. Now, f in\u00a0\nturn may call another function g, so this will\u00a0\u00a0 again transfer "
+    },
+    "a4e259f8-554b-4e95-98f3-8e8bce2db2ae": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "control to g which is defined\u00a0\nyet another place, and g in turn may call an\u00a0\u00a0 h, so we have the sequence of calls so this\u00a0\ncalled this, this called this, this called this. So, we started with calling f\u00a0\nand eventually unknown to us\u00a0\u00a0 in some sequence h has"
+    },
+    "e4562cdd-41a7-4a9e-a4b1-0fa95edbae3a": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " got called. And now h\u00a0\ngenerates an error and it does not internally\u00a0\u00a0 handle it. So, what happens to this error? So,\u00a0\nwhat happens to this error is that we said before\u00a0\u00a0 that if an error is not handled then something\u00a0\nwill abort, but in this case it kind"
+    },
+    "f12fbb7a-f852-4a65-8855-8973a778a641": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " of is unfair\u00a0\u00a0 to ask this to abort because an error happened\u00a0\ndeep down, so it will actually abort in stages. So, this error will get passed back to g, so the\u00a0\ncall that g made to h will terminate in a kind of\u00a0\u00a0 incomplete fashion and now it is up to g t"
+    },
+    "36c5f486-bd6b-4a29-a54a-5ed73c2b2171": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "o figure\u00a0\nit out. So, it inherits this index error. So,\u00a0\u00a0 g will see with respect to h an index error,\u00a0\nso supposing there had been a try here,\u00a0\u00a0 except index error then g would have been\u00a0\nable to handle this. But maybe g did not. So,\u00a0\u00a0 if g did not handle"
+    },
+    "f4e2d051-5e00-43ae-bd6f-746b764bee1f": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " it then the same index error\u00a0\ngoes back to whatever called g. So, in this case\u00a0\u00a0 it goes back to f. So, again the possibility is\u00a0\nthat there was a try here which handles this. But if there was not then it goes back to where it\u00a0\ncalled. So, the sequence is"
+    },
+    "7f1ea5d2-6e00-48ce-9a34-691b6649cd2d": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": " that the index error\u00a0\u00a0 or whatever error it is goes back up the calling\u00a0\nstack as it were. So, you keep calling functions\u00a0\u00a0 and the error goes back in the same sequence\u00a0\nand wherever it is handled it will get handled,\u00a0\u00a0 if it does not get handed it\u00a0\nwill "
+    },
+    "ea9086e6-b241-4242-9877-19adcd9317c8": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "go all the way back to\u00a0\u00a0 the original code which started this\u00a0\nwhole sequence which is the code here. So, at this point now if I did not\u00a0\nanticipate it there is nothing more\u00a0\u00a0 I can do because this was the\u00a0\nbeginning, this was the main\u00a0\u00a0 function that was "
+    },
+    "d51751d7-7859-4aad-9256-bedff9bc0bc3": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "running. So, if I do not\u00a0\nhandle this then python has no option but to\u00a0\u00a0 abort the execution of the program. But if at any\u00a0\nintermediate stage there had been this try except\u00a0\u00a0 thing which caught it, then we could have taken\u00a0\nsome corrective action and fix "
+    },
+    "3702c301-90b2-4eec-82c6-6cb1868edc1e": {
+        "content_id": 6,
+        "course_name": "PDSA",
+        "title": "Exception Handling",
+        "week": 1,
+        "chunk": "this error."
+    }
+}

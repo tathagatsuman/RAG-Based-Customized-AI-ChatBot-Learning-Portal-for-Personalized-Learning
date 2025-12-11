@@ -1,0 +1,947 @@
+{
+    "3dabcc5f-cbc8-4d74-9898-c46f89f84e6f": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "First strategy to systematically explore a\u00a0\ngraph is called Breadth First Search. \n\u00a0 So, remember that we are looking at\u00a0\nreachability. So, what reachability said\u00a0\u00a0 was that we start from a vertex and marked it\u00a0\nas reachable. And now we systematically mark"
+    },
+    "824e2528-4b02-468b-8a64-8cfe6fe0d630": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "\u00a0\u00a0 all the neighbours of already known reachable\u00a0\nmarking. So, you start with the thing,\u00a0\u00a0 you know it is reachable look at its\u00a0\nneighbours, mark them as reachable,\u00a0\u00a0 look at their neighbours mark them at reachable,\u00a0\nstop when the target is marked, but you"
+    },
+    "32b9fe95-8a40-454e-8847-be4a239b48b6": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " want to\u00a0\u00a0 avoid going around and redoing something. So, you\u00a0\nneed to keep track of which guys are marked. \n\u00a0 We also said that we have two representations\u00a0\npossible, we have this adjacency matrix,\u00a0\u00a0 and we have the adjacency list, and\u00a0\nwe have to choose t"
+    },
+    "d2710f9b-4144-4e8a-b632-f013dab0c81f": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "he correct one.\u00a0\u00a0 So, what we are going to look at this time is the\u00a0\nfirst strategy, the breadth first search, and next\u00a0\u00a0 we will look at the depth first search. \nSo, in a breadth first search, we propagate\u00a0\u00a0 these things one level at a time. So, we start\u00a0"
+    },
+    "594639d6-4157-4575-9f44-7ebed054435d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "\nwith the vertex which is reachable in 0 steps,\u00a0\u00a0 then we see what all we can reach in 1 step. Then\u00a0\nfrom the 1 step vertices, we see what all we can\u00a0\u00a0 reach in 1 more step, so in 2 steps. From 2 what\u00a0\nwe can reach in 1 more step that is in 3 steps,\u00a0\u00a0 and "
+    },
+    "956e244e-44d1-4018-be82-d67467ce1494": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "so on. So, we kind of that is why it is\u00a0\ncalled breadth first, kind of growing this\u00a0\u00a0 set of nodes, broader and broader. \nAnd in depth first search, on the other hand,\u00a0\u00a0 I pick one neighbour, I say, I can\u00a0\ngo from here to this neighbour,\u00a0\u00a0 then you do not "
+    },
+    "e273bd96-0884-4031-b884-d69c9554d1d6": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "go and look at other neighbours,\u00a0\nyou say if I can go to that neighbour,\u00a0\u00a0 where can I go from there? So, I start\u00a0\nexploring from that neighbour. And I keep\u00a0\u00a0 exploring until I get stuck, I cannot go any\u00a0\nfurther. Then I come back and at each point,\u00a0\u00a0 I sa"
+    },
+    "d33f027e-0832-4983-84e6-e2dbb5456a08": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "y I got stuck now, which are the other\u00a0\nneighbours, which I did not explore. So,\u00a0\u00a0 I go backwards and forwards and explore all the\u00a0\nnodes. And this is called depth first search. \n\u00a0 So, in breadth first search, we explore the graph\u00a0\nlevel by level. So, we f"
+    },
+    "290c6ff8-e7d0-4f69-afee-260d1778e235": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "irst visit vertices one\u00a0\u00a0 step away, then two steps away, and so on. So,\u00a0\nwhenever we reach a vertex for the first time,\u00a0\u00a0 it has to be explored in the sense that I\u00a0\nhave to look at its neighbours, which I have\u00a0\u00a0 not seen so far, and explore them. And but,"
+    },
+    "af7de70d-e043-420f-9a6b-43f1527ea8fa": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "\u00a0\nwe must make sure that we do this only once.\u00a0\u00a0 So, we do not want to come back from, for example,\u00a0\nwe go from, as we said, we go from 9 and we say\u00a0\u00a0 we restate, then I do not want to look at\u00a0\n8, explore it, and then come back to 9. \n\u00a0 So, we must make su"
+    },
+    "f38a7cb9-7fc9-4af3-b7bc-ecd6070ee1b9": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "re that we do not\u00a0\nvisit a vertex twice. Or in other words,\u00a0\u00a0 we do not explore its neighbours twice, because if\u00a0\nwe do that, then we could go around forever. So,\u00a0\u00a0 for this, we need to maintain some information, so\u00a0\nwe need to know which vertices have bee"
+    },
+    "fcd3176d-8018-4dca-bca9-b683b62083a6": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "n visited.\u00a0\u00a0 And among these, we need to know which ones have\u00a0\nbeen explored. So, those which have been visited,\u00a0\u00a0 are then to be explored. \nSo, there are two steps. First, I\u00a0\u00a0 visit a vertex saying this is the first time\u00a0\nI have come here, so I need to ex"
+    },
+    "f2334197-024a-4aea-8ee7-2e762da6302a": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "plore it.\u00a0\u00a0 But I might be busy doing something else. So,\u00a0\u00a0 I come back later and I say now I have\u00a0\nnot visited this, let me explore it. \n\u00a0 So as usual, let us assume that our vertices\u00a0\nare 0 to n minus 1, then what we do is we set\u00a0\u00a0 up this dictionary or "
+    },
+    "3fecc480-e250-43f2-8673-4f0838d8ef54": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "function or whatever you\u00a0\nwant to call it, which marks each visit vertex\u00a0\u00a0 has either visited or not visited. So, we have\u00a0\nthe keys or the position 0 to n minus 1. And each\u00a0\u00a0 entry is either true or false. So initially,\u00a0\neverything is false, nothing is vis"
+    },
+    "6a3e64bf-75b2-41ed-8626-09aa1a1f9da3": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ited. \n\u00a0 Now we have to maintain those vertices. So, this\u00a0\nis telling us which vertices are visited. But it\u00a0\u00a0 has not told us which of these have been explored.\u00a0\nSo, there is a two step process, I visit a vertex,\u00a0\u00a0 and then I explore it that is I look at i"
+    },
+    "ab78dd28-286d-4d23-b5a6-7a322879500d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ts\u00a0\nneighbours. So, in order to do that, we need to\u00a0\u00a0 maintain this information in some systematic way\u00a0\nso that does the ones which I have yet to explore\u00a0\u00a0 will eventually be explored, and only once. \nSo, the standard way to do this is to use a\u00a0\u00a0 queue. So"
+    },
+    "b53cc5db-f7b9-4adf-8dd9-70879f98d539": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": ", what is the queue, a queue is just\u00a0\nwhat you think of as a queue in real life,\u00a0\u00a0 it is you join a queue from one end, and\u00a0\nthen when you move up to the queue. And\u00a0\u00a0 when you reach the end, that way, you are going\u00a0\nto get serviced, you move out of the que"
+    },
+    "750cdf34-a523-43db-b882-85b97511f448": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ue. \n\u00a0 So, supposing standing in a bank, or you\u00a0\nare standing, waiting for some delivery\u00a0\u00a0 in a fast food place, and you join at the\u00a0\nend of the queue, and when it is your turn,\u00a0\u00a0 you will be served at the counter. So, there\u00a0\nis an entry end, and there is "
+    },
+    "1c6a6ded-36c6-499e-8773-81df73a471da": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "an exit and\u00a0\u00a0 otherwise the sequence. So, this is a queue. \nSo, let us, so we can of course describe a queue\u00a0\u00a0 in Python as a list. And you can say\u00a0\nthat when I want to add to the queue,\u00a0\u00a0 I add on the right hand side of the list, I\u00a0\nappend. And I when I w"
+    },
+    "8e3bc566-bff1-4a3c-a378-d4c4a309ba33": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ant to exit the queue,\u00a0\u00a0 I remove the leftmost element. So, let us just for\u00a0\nconvenience, wrap this up as a class and an object\u00a0\u00a0 so that we deal with it more abstractly. \nSo, we have this class queue and that class\u00a0\u00a0 queue internally maintains a list, whi"
+    },
+    "a0117753-717c-40e1-8965-41e417ee07e9": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ch is\u00a0\ncalled queue the small queue. So, self dot\u00a0\u00a0 queue is initialized to empty. So, when I set up a\u00a0\nqueue, it is empty. Then I have an add operation.\u00a0\u00a0 So, I want to add v to the queue. What\u00a0\nit does, as we said is it appends to\u00a0\u00a0 the right so it takes"
+    },
+    "99a79f12-8deb-4a4c-bf23-23403c2394e6": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " a queue which is stored\u00a0\ninternally and appends the value v to it. \n\u00a0 Now, when I want to remove from the queue,\u00a0\ndelete from the queue, I essentially want to\u00a0\u00a0 take the zeroeth element, return it and reset\u00a0\nthe queue to start from the first element.\u00a0\u00a0 So"
+    },
+    "10163221-dd3d-48e4-b2db-474959b46079": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": ", I am taking the zeroeth element out. So,\u00a0\ndeleting from a queue or removing from a queue\u00a0\u00a0 reduces the length of the queue by 1. So,\u00a0\nthis customer is gone, this customer is\u00a0\u00a0 out of the queue, otherwise, the next customer\u00a0\nnot going to get to the head o"
+    },
+    "d1f1a21c-2387-41ed-9b85-f4efe298bd6e": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "f the queue. \n\u00a0 So, the first element of the queue is the\u00a0\none that is going to be processed next.\u00a0\u00a0 And when you process it, you remove that\u00a0\nthing from the queue. Now, obviously,\u00a0\u00a0 there is a problem here, if there is nothing in\u00a0\nthe queue? If I try to p"
+    },
+    "0a6155b7-1bd4-47f0-a545-ed1cba148d83": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "rocess an element, and\u00a0\u00a0 the queue is empty, it should not work. So, what\u00a0\nwe are going to do is not worry too much about it.\u00a0\u00a0 But we are just going to say that, by default,\u00a0\nwe assume that there is nothing to process. \n\u00a0 And if the queue is not empty, so"
+    },
+    "62c547de-7de9-47ed-892d-e45af609fb05": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " I put in\u00a0\na check before, I do not want this call this\u00a0\u00a0 thing to give me an error. So, this slice is\u00a0\nnot going to give me an error. But if I try\u00a0\u00a0 to access the zeroeth element of an empty list,\u00a0\nPython is going to say it is an index error. So,\u00a0\u00a0 I am g"
+    },
+    "50261398-a9ae-4ed0-b776-aa197b9a8b50": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "oing to ensure that it is not empty. So,\u00a0\nit is not empty, is basically saying that the\u00a0\u00a0 internal queue is not the empty list. \nSo, I write a separate function,\u00a0\u00a0 which basically returns true or false. And if it\u00a0\nreturns true, in other words, it is not em"
+    },
+    "39352be2-d350-4054-b520-2c9e02a025a0": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "pty,\u00a0\u00a0 then I will process it. If it is empty,\u00a0\nthen I will skip it. And finally,\u00a0\u00a0 just for inspection for debugging, you might\u00a0\nwant to check what the queue looks like. So,\u00a0\u00a0 we will have this function which converts this\u00a0\nqueue object to a string by jus"
+    },
+    "18847b33-3026-46be-abbf-92e440791f59": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "t returning the\u00a0\u00a0 string representation of the internal\u00a0\nlist. So, if I try to print a queue,\u00a0\u00a0 it will print a list. That is what it says. \nSo, this is now my class representing a queue,\u00a0\u00a0 which I will be using in breadth first search\u00a0\nin order to maintai"
+    },
+    "bb7558f8-ab81-4cff-804d-e3b5e9c07a53": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "n this extra information\u00a0\u00a0 about which vertices have been visited,\u00a0\nbut whose exploration is still pending. \n\u00a0 So, this to get an idea how the queue data\u00a0\nstructure works. So, supposing I start with\u00a0\u00a0 an empty queue, and then for 0, 1, 2, I add\u00a0\nthem. And "
+    },
+    "6e1eb190-1b2c-426d-a442-6ce83464827c": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "then for 0, 1, 2, I remove them.\u00a0\u00a0 So, what I do is I print the queue at every stage.\u00a0\nThis is why I said for debugging purposes. So,\u00a0\u00a0 after I add a 0, my queue looks like this.\u00a0\nAfter I add a 1, my queue looks like this,\u00a0\u00a0 after added 2 my queue looks li"
+    },
+    "b59b0681-7bb8-4c10-b425-7710b503d151": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ke this. And now I\u00a0\ncheck whether the queue is empty. And as expected,\u00a0\u00a0 it says it is not empty, it is false. So,\u00a0\nthis is the first half of the program. \n\u00a0 And now in the second half, I remove from\u00a0\nthe queue 3 times. So, I print the value\u00a0\u00a0 that is remo"
+    },
+    "25a06deb-72c2-4a03-8cb7-58fc6e097053": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ved and the remaining q. So,\u00a0\ninitially, the value because this is my q,\u00a0\u00a0 so the leftmost item 0 is removed. And what\u00a0\nremains is 1 2, I do it again, 1 is removed.\u00a0\u00a0 And what remains is 2. I do it 1 more time, the\u00a0\nfinal item comes out and add the empty l"
+    },
+    "af3fe743-9e26-4ade-a869-887b3a12d6f0": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ist.\u00a0\u00a0 And now if I query whether the queue is empty,\u00a0\nindeed, it is empty and returns me true. So, this\u00a0\u00a0 is just a simple way to illustrate how this queue\u00a0\ndata structure works in this object situation. \n\u00a0 So, with this queue in place, what are\u00a0\nwe going"
+    },
+    "ec48abda-0b29-4726-86b3-8a4d168887b9": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " to do? When we explore a vertex,\u00a0\u00a0 we look at all its neighbours. So, there\u00a0\nare two things remember whether a vertex\u00a0\u00a0 is visited and whether it is explored. So,\u00a0\nwhen we look at a neighbour, we first check,\u00a0\u00a0 whether it is been visited, if it is been vi"
+    },
+    "bdfeb9ea-8073-4b54-a56f-a547bb66444c": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "sited,\u00a0\nthen we have already done something or something\u00a0\u00a0 is pending, we do not touch it again. \nSo, if visited of j is false, then we want\u00a0\u00a0 to visit it. So, we say, if it has not\u00a0\nbeen visited before, I will now visit it,\u00a0\u00a0 so I will mark it as visited."
+    },
+    "b8a28363-6ac0-4274-855d-5056681a1c0d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " And I will put this\u00a0\nthing into the queue. Putting into the queue means\u00a0\u00a0 at some later stage, I am going to look at\u00a0\nits neighbours I am going to explore it. \n\u00a0 So, this is the basic step in breadth\u00a0\nfirst search, I start with the vertex\u00a0\u00a0 I mark it is v"
+    },
+    "d760102b-b7b8-46fe-ba6e-afac598c61a8": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "isited, put it in the queue,\u00a0\nthen I pull out something from the queue.\u00a0\u00a0 I check whether its neighbours are\u00a0\nvisited, put them into the queue.\u00a0\u00a0 And I keep doing this until I processed\u00a0\neverything that has been visited. \n\u00a0 So, initially visited is false f"
+    },
+    "6c3e6396-d614-4d11-8375-f7d467a4dfed": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "or\u00a0\nevery v, and the queue is empty.\u00a0\u00a0 So, if I start my breadth first search\u00a0\nat a particular vertex j, then I set that\u00a0\u00a0 vertex to be visited, I set it is visited\u00a0\nvalue to true and I added to the queue.\u00a0\u00a0 And now I keep removing from the queue.\u00a0\nSo, now"
+    },
+    "a0885c7b-6903-4688-adc7-b9b2b6cc39aa": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " I have something in the queue. \n\u00a0 So, I would have j and j needs to be explored.\u00a0\nSo, right at the beginning, I have started off\u00a0\u00a0 with one vertex which needs to be explored.\u00a0\nSo, I remove it from the head of the queue.\u00a0\u00a0 I look at all its neighbours, and"
+    },
+    "0e8aaedb-dcf8-4837-883c-6e213decbc0f": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " all the\u00a0\nunvisited neighbours get pushed in the queue.\u00a0\u00a0 Then at the next step, I will take one of those\u00a0\nneighbours and do the same thing and keep going\u00a0\u00a0 until I have processed everything which I have\u00a0\nvisited. So, I stop when the queue is empty. \n\u00a0 So,"
+    },
+    "82d9d775-b993-4747-ac96-87a9f42a87a8": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " here is my Python code for this breadth first\u00a0\nsearch. So, I am taking an adjacency matrix.\u00a0\u00a0 This is the graph that I am trying to\u00a0\nexplore. And this is my starting vertex v.\u00a0\u00a0 So, I need to now keep track of these data\u00a0\nstructures. I need to keep track "
+    },
+    "fcd0634c-13fa-4335-ad5f-0a1c0b5f2c2c": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "of the queue\u00a0\u00a0 and I need to keep track of this visited value.\u00a0\nSo, the first thing I do as before is I find out\u00a0\u00a0 how many vertices there are by querying the\u00a0\nshape attribute that NumPy tells me. \n\u00a0 So, remember that this is, logically it should\u00a0\nbe a squ"
+    },
+    "d515b97b-238f-4976-8bc5-744323afc71e": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "are matrix. So, rows should be equal\u00a0\u00a0 to columns, I just want one of them. So, what I\u00a0\ndo now is I initialize this visited thing which\u00a0\u00a0 I will keep as a dictionary to be false. So,\u00a0\nfor every vertex for every i in range of rows,\u00a0\u00a0 that is for everything "
+    },
+    "a5b30155-0837-4787-8cd0-526b3b75d790": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "from 0 to n minus 1, I\u00a0\ninitialize the visited of that i to be false.\u00a0\u00a0 And I create an empty queue. So, I am here right\u00a0\nnow. So, I have basically, I have initially set\u00a0\u00a0 visited v to be false for all the vertices in the\u00a0\ngraph. And I have taken the queue"
+    },
+    "12b06a60-115d-4b2a-8c7f-a78e664bf40f": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " to be empty. \n\u00a0 So, now I have done this. So, I have now\u00a0\nfinished my initialization. So, now I come\u00a0\u00a0 to this one. So, I want to start from j, which\u00a0\nis, confusingly called V over there. So, I set\u00a0\u00a0 visited a V equal to true. So, I initialize my\u00a0\nthing b"
+    },
+    "d4d06c4a-bdcc-4e13-93b2-a070423f85de": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "y saying the vertex I start my BFS from has\u00a0\u00a0 been visited, and I put it into the queue. \nAnd now finally, I have this\u00a0\u00a0 loop here. So, it says, so\u00a0\nlong as the queue is not empty,\u00a0\u00a0 take the first vertex in the queue, initially,\u00a0\nis going to be the vertex"
+    },
+    "c5943e62-6475-4be0-ba71-2c25939ae705": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " V that I started with.\u00a0\u00a0 For every neighbour, remember,\u00a0\nwe had this neighbour function,\u00a0\u00a0 which looked at all the elements in the row j,\u00a0\nand pulled out the ones. So, that gives me a\u00a0\u00a0 list of neighbours. So, for every K, which is\u00a0\na neighbour of J, if i"
+    },
+    "8e88b50f-04e2-479b-b343-2a9fe297759d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "t has not been visited,\u00a0\u00a0 then make it visited. So, basically, do this,\u00a0\nmake it visited and add it to the queue. \n\u00a0 So, notice what is happening. So, basically, this\u00a0\nvertex is now being put into the queue for later\u00a0\u00a0 processing. So, every vertex that I s"
+    },
+    "0cd88b4c-d0a8-47a3-b00f-125634ad1327": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ee for the\u00a0\nfirst time gets put into the queue, so it will\u00a0\u00a0 eventually be explored. But I will never put it a\u00a0\nsecond time because it will be marked as visited.\u00a0\u00a0 So, every time every vertex that is actually\u00a0\nvisited by it at some level of the search will"
+    },
+    "94089348-7641-4460-a31f-9a65250b6bb8": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "\u00a0\u00a0 be put into the queue. But once it is put\u00a0\nin the queue, and I will put a second time\u00a0\u00a0 because visited has been set to true, and I only\u00a0\ndo this for visited, where visited is false.\n\u00a0 And finally, at the end of\u00a0\nthis whole thing, my visited\u00a0\u00a0 dictionar"
+    },
+    "71758405-1cb0-43fe-a0a3-7a36df765bf3": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "y is set to true for every vertex I\u00a0\nactually saw. So, if I look at that, I should\u00a0\u00a0 get my answer. So, I just return that dictionary\u00a0\nas the outcome of this process. And this should\u00a0\u00a0 tell me, which are all the vertices, which\u00a0\nare reachable from the star"
+    },
+    "146b3dcd-a453-4e38-a6b0-3f51d853b751": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ting vertex V. \n\u00a0 So, let us see how it works on this graph,\u00a0\nfor instance. So initially, I have everything\u00a0\u00a0 visited is false. And supposing I want to run my\u00a0\nBFS from vertex 7. So, when I do that I initially\u00a0\u00a0 set visited of 7 to be true, and I put 7 int"
+    },
+    "b3fe8dc1-2074-4941-99ad-ccbc1431fc5b": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "o the\u00a0\nqueue. So, my queue looks like this. Now, I start\u00a0\u00a0 processing the queue. So, I pull out the 7, and\u00a0\nit has neighbours, 4, 5, and 8, all of which are\u00a0\u00a0 previously unvisited. So, I marked\u00a0\nthem all visited, and I removed the\u00a0\u00a0 7 and put 4, 5 and 8 in"
+    },
+    "890c7e18-cdf0-4601-bfb1-425b53d1bf1f": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "to the queue. \nSo, now I have to process these in this\u00a0\u00a0 particular order. So, because 4 got put into the\u00a0\nqueue, first, I will now pull out 4 and look at\u00a0\u00a0 its neighbours. So, the neighbours of 4, if you\u00a0\nsee are 0, 3, and 7, of which 7 is already marked,"
+    },
+    "0c7ebe09-06c6-47ca-a1a9-c05a04782b1b": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "\u00a0\u00a0 so from 4, it will add two new things 0 and\u00a0\n3 to be true, and put them in the queue.\u00a0\u00a0 And now 4 is done. Then I pick up the\u00a0\n5, because that is the next thing here,\u00a0\u00a0 so 5 is my next element in this queue here.\u00a0\nSo, 5 is here. So, I pull out the 5. \n\u00a0"
+    },
+    "b1f2fcef-d3f0-4540-8058-aa68594962a2": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " And now 5 has neighbours 3, 6, 7, and 8 of which\u00a0\n7 and 8 were already seen before, so only 6 gets\u00a0\u00a0 added. So, we keep doing this, now we pull out 8,\u00a0\nand we look at its neighbour, so the new neighbour\u00a0\u00a0 of 8. So, the neighbours of 8 are 5, 7 and 9,\u00a0\nof "
+    },
+    "7049c845-b8e9-4214-8732-2936a06545b9": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "which only 9 is new. So, I will pull out 8\u00a0\u00a0 and put a 9 to the queue. Then I will pull out\u00a0\n9. And nothing I am sorry, I will put out 0,\u00a0\u00a0 because I am doing it from the head of the\u00a0\nfew obviously. So, after 8 I pull out 0,\u00a0\u00a0 so 0 has neighbours 1 and 4, "
+    },
+    "6056a873-d444-428c-a529-1ce79bf81aa8": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "but 4 is already\u00a0\nbeen marked. So, it will only add 1 and 2. \n\u00a0 And now I will explore 3, the next thing and\u00a0\nthere is nothing new to add. I will explore 6,\u00a0\u00a0 there is nothing new to add. I will explore\u00a0\n9 there is nothing new to add, explore 1,\u00a0\u00a0 there is"
+    },
+    "c829d65a-a671-469b-ac19-df0104bc7adb": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " nothing new to add. I will explore 2.\u00a0\nSo, now I have explored everything that I put\u00a0\u00a0 into the queue and now the queue is empty and I\u00a0\nstop. And this visited array or dictionary tells\u00a0\u00a0 me that every vertex was visited in the process.\u00a0\nSo, this is how br"
+    },
+    "12007668-b062-4633-a51a-95b437572d0d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "eadth first search works. \n\u00a0 So, as an algorithm, how much time does it take?\u00a0\u00a0 So, let us assume that we have n vertices and m\u00a0\nedges. So, if G is a connected graph as we said\u00a0\u00a0 everything is connected, then it has at least\u00a0\nn minus 1 edges, but it could "
+    },
+    "d0376b30-10e4-4097-a7c5-954df36815ea": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "have at most\u00a0\u00a0 n into n minus square 1 by 2, so n squared\u00a0\nedges. Now, in BFS each reachable vertex is\u00a0\u00a0 processed exactly once this is what we said\u00a0\nonce you see it for the first time you market\u00a0\u00a0 visited, you never see it a second time. \nSo, there are tw"
+    },
+    "d90bbd62-f1c1-4124-871b-e072b76e647e": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "o steps you visit the vertex,\u00a0\u00a0 which case you added to the queue and you explore\u00a0\nthe vertex, you remove it from a queue. So,\u00a0\u00a0 each vertex enters the queue once and leaves the\u00a0\nqueue once. So, you visit and explore at most n\u00a0\u00a0 vertices. I mean, you may n"
+    },
+    "e4723404-ed19-440a-a072-57f125b5002d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ot explore all of them,\u00a0\nif not all of them are reachable if you have parts\u00a0\u00a0 of the graph which are unreachable will not reach\u00a0\nthem. But you certainly cannot explore more than n\u00a0\u00a0 steps, you have only n vertices and each vertex\u00a0\ncan enter and leave the q"
+    },
+    "2118ea0e-8762-444b-a2fb-bd103d7e6a43": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ueue only once. \n\u00a0 So, then the question is, how much time\u00a0\ndoes it take for the second step? See,\u00a0\u00a0 putting it into the queue is a\u00a0\none, is a kind of single operation,\u00a0\u00a0 I set visited to true and put it into the\u00a0\nqueue. When I remove it and explore it,\u00a0\u00a0 "
+    },
+    "1625a721-a70a-4229-bb66-f0108b20c5a2": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "I have to explore all its neighbours.\u00a0\nSo, how long does that take? \n\u00a0 So, in this adjacency matrix representation,\u00a0\nwe have to scan all the neighbours? So,\u00a0\u00a0 we have to look at all n entries in the row of i\u00a0\nregardless of how many neighbours it actually h"
+    },
+    "fedffa64-d043-4c99-81f5-8071411f46d1": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "as.\u00a0\u00a0 So, I have no option but to spend time\u00a0\nlooking at all the neighbours. Whereas,\u00a0\u00a0 if I had a clever version, which looked at the\u00a0\nadjacency list, then I would only pick up the\u00a0\u00a0 neighbours that are there I would not look at the\u00a0\nneighbours, which are"
+    },
+    "eac8d964-e6f3-4846-8cd8-3fa51e028a2c": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " the non-existent neighbours,\u00a0\u00a0 I would not have to look at what are the 0s and\u00a0\nmy adjacency matrix. So, it becomes faster. \n\u00a0 But of course, now the question is, if I am\u00a0\ndoing it with an adjacency list, depending on\u00a0\u00a0 the degree, it could take more or l"
+    },
+    "f36c1740-5db9-49d0-8b1c-1ceca890bc5c": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ess time to\u00a0\nprocess one vertex. So, if I am doing it with\u00a0\u00a0 an adjacency matrix, it is easier to calculate\u00a0\nwhat happens. I have put each vertex in once,\u00a0\u00a0 and each vertex I spend n time processing its\u00a0\nneighbours. So, I have n vertices I put in,\u00a0\u00a0 and ea"
+    },
+    "01ee5976-c5bb-44f7-b95f-d907e9adff13": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ch one takes time order n to scan its\u00a0\nneighbours. So, I have n times n is n squared. \n\u00a0 Now, for adjacency list representation, I\u00a0\nput each of these things into the queue once,\u00a0\u00a0 but when I pull it out how much time I spend on it\u00a0\ndepends on how many vert"
+    },
+    "7f164f9d-5022-43df-9000-d907f1a826c1": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ices it is connected. So,\u00a0\u00a0 this is a little bit problematic. So, let us\u00a0\nsee how to analyse this. So, one thing we can\u00a0\u00a0 observe is that even though the sum the degrees of\u00a0\nindividual vertices vary, I can tell you something\u00a0\u00a0 about the total degrees added"
+    },
+    "7c7a8e60-04b5-446c-a783-9643db7973f1": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " up across all\u00a0\nthe vertices. The claim is that if I add up\u00a0\u00a0 the degrees of all the vertices in my graph,\u00a0\nit must be two times the number of edges. \n\u00a0 And why is this, that is because\u00a0\nif I take a given edge, i comma j,\u00a0\u00a0 then it contributes the degree o"
+    },
+    "10402830-2885-43c4-a4b5-e5aaa47e6e8f": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "f i and it\u00a0\ncontributes the degree of j. So, each edge\u00a0\u00a0 gives me contribution to two vertices\u00a0\ndegrees. So, across all the m edges, I have\u00a0\u00a0 2 times m added to some degree or the other.\u00a0\nSo that means the sum of the degrees across\u00a0\u00a0 all the vertices in a "
+    },
+    "71813b70-2a04-4dd0-b338-0f947525796b": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "graph is always going to be\u00a0\n2 times m, regardless of how it is individually\u00a0\u00a0 distributed among the given vertices.\nSo now, to come back to the complexity,\u00a0\u00a0 if I use this adjacency matrix, as we said, in the\u00a0\nworst case, we are going to visit everything."
+    },
+    "572d4aca-161a-45ce-b8fb-21d75641348a": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " So,\u00a0\u00a0 we are going to n times we are going to put\u00a0\nthem into the queue. But even before that,\u00a0\u00a0 we have to first initialize this thing. So\u00a0\ninitially, we have to set visited i equal\u00a0\u00a0 to false for everything. So, we have to look at\u00a0\nall the vertices and i"
+    },
+    "58c0bf42-69b3-4c05-aef3-26b0eeb86a4c": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "nitialize each vertex. \n\u00a0 And then in the worst case, I am going to\u00a0\nvisit all of them and explore each of them.\u00a0\u00a0 But it takes n steps to explore a vertex. So, I\u00a0\nvisit n vertices, and I take n time to explore\u00a0\u00a0 each vertex. So, n times n is n squared. So"
+    },
+    "5316ebbd-498c-4619-8be5-75318d582fab": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": ", the\u00a0\noverall time becomes n squared. Whereas, if I have\u00a0\u00a0 an adjacency list, I still need to initialize the\u00a0\nvertices. So, I will take n steps. But now, we can\u00a0\u00a0 do something a little bit more sophisticated. \nSo, we say that, supposing I visited it as V1"
+    },
+    "4443f422-dcca-476e-a160-9f2e9a8cdd55": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": ",\u00a0\u00a0 V7, then V8, then V4, and so on. So, supposing\u00a0\nthis is my sequence, so let me just write it as 1,\u00a0\u00a0 7, 8, 4. So, I spend a certain\u00a0\namount of time doing this,\u00a0\u00a0 I spend a certain amount of time doing that I\u00a0\nspend less time doing this, and so on. So, "
+    },
+    "088b9e26-43af-488d-93d0-bf922b50433c": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "this is\u00a0\u00a0 how much time the inner part of that exploration\u00a0\ntakes place. It depends on the degree. \n\u00a0 But if I add up all these red lines, what am\u00a0\nI doing, I am adding up the degrees of all the\u00a0\u00a0 vertices, I am adding up the degree of 1 plus a\u00a0\ndegree of "
+    },
+    "0771cefb-3d32-4c9c-a277-916189fb8807": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "7. So, the total time I take is a sum\u00a0\u00a0 of degree 1 plus degree 7 plus degree\u00a0\n8 plus degree 4. So, even though\u00a0\u00a0 I cannot tell you which ones were fast, and which\u00a0\nones were slow, I can tell you that across these\u00a0\u00a0 n vertices, the total time that I took w"
+    },
+    "bc9cc829-4e48-4393-9be9-6d701fbcf3b6": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "as\u00a0\nthe sum of the degrees and that is 2m. \n\u00a0 So, this is a kind of interesting analysis. It\u00a0\nis not saying anything about each individual\u00a0\u00a0 thing is rather saying something about the\u00a0\nthing as a whole and saying that if I do more\u00a0\u00a0 work on one vertex, I m"
+    },
+    "e9e4e0bb-8ed6-496c-bd06-166ae8606811": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ust corresponding\u00a0\nbe doing less work on some other vertex.\u00a0\u00a0 So, this is the form of accounting which so\u00a0\nwe are really doing some accounting, we are\u00a0\u00a0 counting how many times these things happen. \nSo, the simpler form of accounting is I do this\u00a0\u00a0 n times"
+    },
+    "8e7056fe-7d99-4560-b438-8e08d4c39bc5": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": ", and each time I spend so much time, so\u00a0\nn times something. Whereas here, I am not saying\u00a0\u00a0 that. I am not saying I do, I am not telling\u00a0\nyou precisely how much I spend each time,\u00a0\u00a0 but I am saying that across these n vertices\u00a0\nare explored, I am going to"
+    },
+    "55f3b31f-4a32-45c5-9034-a00b50a9c188": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " add up totally to\u00a0\u00a0 only 2m steps, it cannot be more than 2m, even\u00a0\nif some of them are very large, others will have\u00a0\u00a0 to be correspondingly small, because there is\u00a0\nan upper bound on the sum of the degrees. \n\u00a0 So, this is what is sometimes called amortiz"
+    },
+    "11b98931-a8e6-48de-b3f4-3e2b73362419": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ed\u00a0\nanalysis. So, rather than looking at individual\u00a0\u00a0 operations and adding them up, I look at\u00a0\na cumulative set of operations. And I say\u00a0\u00a0 across the whole thing, I do not know\u00a0\nthat individual distribution very clearly,\u00a0\u00a0 but I know that overall, it cann"
+    },
+    "7604b741-d474-4b18-88ed-ef8aa7ae8f18": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ot take more.\u00a0\nSo, if I lose more, if I gain something there,\u00a0\u00a0 I will lose it here. If I lose something here, I\u00a0\nwill gain it there. So, I must take 2m steps. \n\u00a0 But still, this is not bad, because what\u00a0\nit is saying is that I spend n steps\u00a0\u00a0 visiting the"
+    },
+    "2e86fce6-2328-4690-8f0d-dc7809184b02": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " vertices, initializing and visiting\u00a0\nthem. And the exploration step across all the n\u00a0\u00a0 explorations takes 2m steps. So, the total\u00a0\ntime complexity now is not n squared,\u00a0\u00a0 but n plus 2m. And of course, I can drop the\u00a0\n2. And I can say it is order of n plus"
+    },
+    "5c6f9719-879a-49d6-9561-989e5b0922ec": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " m. So,\u00a0\u00a0 if I use an adjacency list, my amortized\u00a0\ncomplexity is n plus m rather than n squared. \n\u00a0 So, this is important for us, because in many\u00a0\nsituations, m is actually quite small compared\u00a0\u00a0 to n square. So, most of the graphs that\u00a0\nwe actually draw "
+    },
+    "457ace21-8a06-469c-bfa5-e00f562e898d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "and many of the graphs we\u00a0\u00a0 encounter in practice are what are called\u00a0\nsparse graphs. In a sparse graph, I have\u00a0\u00a0 edges which are proportional to n\u00a0\nusually, rather than n squared. So,\u00a0\u00a0 if I am doing m plus n time, I am doing much\u00a0\nbetter than if I am doi"
+    },
+    "0d4101a9-cee9-4dc1-a30e-0552a2e30f93": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ng an n squared time. \n\u00a0 So, for graphs, typically, this is the best\u00a0\npossible complexity order m plus n. So,\u00a0\u00a0 this is considered to be linear time for a graph.\u00a0\nNow, why is it the best possible time? Well, it\u00a0\u00a0 is difficult to imagine any serious graph p"
+    },
+    "a057a0da-7e24-48da-87dc-eef54802e680": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "roblem\u00a0\nin which you do not examine the whole graph. So,\u00a0\u00a0 if you examine all the graphs, and all the edges,\u00a0\nall the vertices and all the edges, then you need\u00a0\u00a0 to spend time order m plus n, you have to look at\u00a0\nthe whole graph. So, you cannot realistical"
+    },
+    "448f6417-fb67-4122-b3ba-70dc7065f352": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ly do\u00a0\u00a0 much without looking at the whole graph. \nBut on the other hand, if we separate out\u00a0\u00a0 m from n, and we do not just take m to be\u00a0\nits worst case, which is n squared, then I\u00a0\u00a0 can show that certain implementations like this\u00a0\nadjacency list actually w"
+    },
+    "43f55eb0-3923-4b82-81e4-3452cc9c57e5": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "orked much better. \n\u00a0 So now, let us see what more we can do with\u00a0\nBFS. So, with BFS so far, we have just said\u00a0\u00a0 that we can do reachability. But one of the things\u00a0\nthat we were interested in terms of reachability\u00a0\u00a0 was how to get from one place to another"
+    },
+    "0d3b0b52-e6ef-4797-9834-bf7652b72dcc": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": ". So, it\u00a0\nwould be nice if we could also record the path.\u00a0\u00a0 So, how do we recover a path from i to k?\nSo, in order to recover a path, we need to,\u00a0\u00a0 we know that there is a path because the visited\u00a0\nvalue of k is true. But when visited value of\u00a0\u00a0 k was set "
+    },
+    "9d52db49-ef4a-4578-848d-0c8ff039f7f2": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "to true, it was set to true from some\u00a0\nprevious thing. It was set to true because there\u00a0\u00a0 was an edge j comma k. So therefore, the\u00a0\nstep to reach k, last pass through j. \n\u00a0 So, I can now record that k is the parent of\u00a0\nj. Now from k, I can follow parent li"
+    },
+    "475a47e5-4654-4476-9958-c202550896f0": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "nks back\u00a0\u00a0 to trace back to path to i. So, if I, every time\u00a0\nI add an edge to the visited thing, if I record\u00a0\u00a0 from where I added that edge, then I can follow\u00a0\nthese links back. So, I keep track of one extra\u00a0\u00a0 dictionary called parent. So, here is a versio"
+    },
+    "66c22086-7103-4351-b713-3bb1b3acbdbc": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "n\u00a0\nof breadth first search which uses adjacency lists\u00a0\u00a0 and maintains this parent information. \nSo as before, we keep this visited\u00a0\u00a0 dictionary and now we have a new dictionary\u00a0\ncalled parent which are both initialized\u00a0\u00a0 to empty. Now, when we did an adjac"
+    },
+    "41410bcf-0557-4a9a-82df-564bc71100b5": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ency matrix, we\u00a0\nhad to basically initialize the visited thing from\u00a0\u00a0 based on the size of the matrix. So, we looked at\u00a0\nthe shape that is here, I can just take the keys\u00a0\u00a0 of this. So basically, it is the same thing, but\u00a0\nI ran through a loop from 0 to n m"
+    },
+    "4639ad88-5c95-4921-81f8-1097c1013a85": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "inus 1 and I say\u00a0\u00a0 that all the vertices are initially not visited\u00a0\nand all of them have no calculated parents. \n\u00a0 So, remember that the vertices run from 0 to\u00a0\nn minus 1. So, minus 1 cannot be the parent\u00a0\u00a0 because there is no vertex called minus 1 in\u00a0\nmy "
+    },
+    "e693db35-e4a0-48ef-a189-c61a9337d21a": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "thing. So, it is safe to use minus 1 as a\u00a0\u00a0 invalid value to say that parent for\u00a0\nthis vertex has not been calculated yet.\u00a0\u00a0 Now, this is BFS so I set up an empty queue,\u00a0\nI mark the initial vertex to be visited.\u00a0\u00a0 I add it to the queue. Now the initial\u00a0\nve"
+    },
+    "b95368ea-2f8c-49b0-a2fd-40ff642be3f6": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "rtex is where I start from. \n\u00a0 So, it was not visited from anywhere it was given\u00a0\nto me to start from there. So, I will not mark\u00a0\u00a0 its parent to be anything. So, I will leave\u00a0\nits parent as minus 1 for now. We know That\u00a0\u00a0 is if something is so it will be t"
+    },
+    "e3fa3c48-e65b-4d6b-a0ed-f90965596d3d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "he only vertex\u00a0\nthat will be visited, which was not visited from\u00a0\u00a0 somewhere. So, if something is visited, but its\u00a0\nparent is minus 1, I know that is where I started.\u00a0\u00a0 For every other vertex that I visit, I\u00a0\nwill set its parent as we will see. \n\u00a0 So, the "
+    },
+    "38dd35b0-b969-4f4f-ab3e-a995c64446a6": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "rest of the thing is the same\u00a0\nas the earlier BFS. So, while the q is\u00a0\u00a0 not empty, I take out the head of the q.\u00a0\nAnd now I am using an adjacency list. So,\u00a0\u00a0 I do not have to go through all the rows\u00a0\nin the matrix, I can just pick up this list\u00a0\u00a0 of neighbo"
+    },
+    "2fc5d372-926d-4655-81f5-a68320209f9a": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "urs of j. And for every such k, which\u00a0\nis a neighbour of j, if it has not been visited,\u00a0\u00a0 I set its visited status to true, I add it to\u00a0\nthe q. And now here is the new thing that I do.\u00a0\u00a0 I set its parent to be j because j is the\u00a0\nreason why k got added to "
+    },
+    "7323cf7f-1c8b-4696-a8f2-2e853ab191cd": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "this list. \n\u00a0 So, if I visited k, by following an age from\u00a0\nj to k, then I set the parent of k to be j.\u00a0\u00a0 And now I want to keep track of\u00a0\nboth of these quantities. So,\u00a0\u00a0 I return not just which ones are visited,\u00a0\nbut I also return this parent dictionary,\u00a0"
+    },
+    "90fc1682-bdce-463d-9814-3710ebccc506": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "\u00a0 which tells me if I say, you claim that\u00a0\nvertex 7 was visited, or vertex 9 was visited,\u00a0\u00a0 how did you get there? So, I will say parent, 9\u00a0\nwas something the parent of that do something,\u00a0\u00a0 and so on. So, I will kind of trace back\u00a0\napart from the target ba"
+    },
+    "88531b8b-c6f3-4e1d-97e4-37c2b1fbe034": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ck to the source. \n\u00a0 So, here is the same BFS we did earlier,\u00a0\nbut keeping track of the parent information,\u00a0\u00a0 so we want to start from 7. So, this is\u00a0\nwhere we are starting our BFS. So initially,\u00a0\u00a0 all parents are minus 1, all vertices are\u00a0\nfalse. So, now "
+    },
+    "0a9c586e-9f37-41ed-9842-b6e52fd78ea9": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "when we initialize, we mark\u00a0\u00a0 7 to be true, we do not change its\u00a0\nparent, but we put it in the queue.\n\u00a0 Now, each time we now pull out something from the\u00a0\nqueue and process it, we not only market visited\u00a0\u00a0 thing, we also market spirit. So, we pull out 7,\u00a0\n"
+    },
+    "cd46663b-e63a-48dc-9c14-d01b8cd9dd90": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "we mark 4, 5 and 8 as before, but the important\u00a0\u00a0 thing is that we have now put the parent of 4, 5\u00a0\nand 8 to be 7 saying that I reached these vertices\u00a0\u00a0 from 7, the last thing I did to reach them with\u00a0\n7. Similarly, I pick out 4, and I put 3 back\u00a0\u00a0 and 0 b"
+    },
+    "cdaf01d7-22ee-4754-9f7e-a89de402db64": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ack. \nAnd for each of them,\u00a0\u00a0 I set the parent to be 4 so I not just in addition\u00a0\nto making them true and putting them in the queue,\u00a0\u00a0 I also set the parent vertex. So, now from 5, I\u00a0\nget to 6. So, I say the parent of 6 is 5. From\u00a0\u00a0 8, I get to 9. So, I sa"
+    },
+    "7f627366-bbaf-4bea-ba5a-372ee839e4d4": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "y the\u00a0\nparent of 9 is 8. So, that is here.\u00a0\u00a0 Then from 0, I get to 1 and 2. So, I say\u00a0\nthe parents of both 1 and 2 are both 0. So,\u00a0\u00a0 that is here. And then after this, nothing\u00a0\nnew happens. And so I come out with this. \n\u00a0 So, now I have the fact that every"
+    },
+    "847cc423-3c5b-4ecd-86a4-d0a44b6ef878": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "thing\u00a0\nis visited. But if I asked, for instance,\u00a0\u00a0 how do I get from 7 to say, how did I get\u00a0\nfrom 7 to say 1? So, then it says I got from\u00a0\u00a0 1, I came back from 0, and 0, I came back from 4,\u00a0\nand 4, I came back from 7. So, this is my path. 7,\u00a0\u00a0 4, 0, 1. So"
+    },
+    "c68f6c60-4183-4f4f-8d32-fae6dd6cb7bb": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " 7, 4, 0, 1 is my path. So, this\u00a0\nis how I do it. So, set the path from 7 to 6,\u00a0\u00a0 for instance, 7, 5, 6. Before I start from 6,\u00a0\nit says 6 came from 5, and 5 says 5 came from 7.\u00a0\u00a0 Similarly, if I say, 2, it says 7, 4,\u00a0\n0, 2. So, this is how I use this. \n\u00a0 "
+    },
+    "163713a7-6df8-491f-8f0f-bfc67a878e5a": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "So, this is one thing I can do, which is recover\u00a0\nthe parent information, I can also recover\u00a0\u00a0 how far it is? So, of course, if I trace out the\u00a0\npath, then I get automatically how far it is,\u00a0\u00a0 because that is telling me how many steps it\u00a0\ntook to reach the"
+    },
+    "b453522e-f87a-4cd3-98fc-029f40e3e113": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "re. But I can also keep this\u00a0\u00a0 information directly. So, since I am exploring\u00a0\nlevel by level, I know that my first neighbours\u00a0\u00a0 were one step away, the neighbours of those\u00a0\nneighbours are two steps away, and so on. \n\u00a0 So, each time I explore a vertex, I c"
+    },
+    "347f3f37-d90e-4101-9e20-838d78a9500d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "an store\u00a0\nhow many steps away it is. And with this,\u00a0\u00a0 I can keep track of the shortest number of steps,\u00a0\nI need to get to every vertex. So, I can keep the\u00a0\u00a0 level and if I keep the level and the level is not\u00a0\n0, then it is visited. If it is not, if it is s"
+    },
+    "e3c50e0d-dde1-477b-b200-c716c9a6fcf7": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "et,\u00a0\u00a0 then it is not visited. So, I do not need to keep\u00a0\nvisited and level I can keep just the level. \n\u00a0 So, instead of visited j, I maintain level\u00a0\nof j. So, here I change the terminology. So,\u00a0\u00a0 it is the same BFS, but I am using level and in i.\u00a0\nIn earli"
+    },
+    "afaae196-08f3-4e2e-8404-745d92b171de": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "er, we initialize the visited to be false.\u00a0\u00a0 But now level is going to be a number. It\u00a0\nis how many steps I took. So, I am going to\u00a0\u00a0 say that level is now a number. And if it is minus\u00a0\n1, it means that this vertex has not been visited.\u00a0\u00a0 So, initially, no"
+    },
+    "768e03e8-464b-4c97-9f70-dd69f5ddf2e8": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " vertex is visited, same as\u00a0\nvisited false level is minus 1. And all vertices\u00a0\u00a0 have no parents, or parents are minus 1. \nSo, when I now start with V,\u00a0\u00a0 the first thing I do instead of setting visited\u00a0\nv to true is I set the level of V to 0. So,\u00a0\u00a0 I reache"
+    },
+    "55ff280c-3bdd-481e-aa9e-2a862204bbf5": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "d V, I started at V. So, in 0 steps,\u00a0\nI reached v. And then I do the usual thing,\u00a0\u00a0 I put it into the queue and I process the\u00a0\nqueue. So, while processing the queue,\u00a0\u00a0 as before I pick out the first element in the\u00a0\nqueue, I look at all it is neighbours. An"
+    },
+    "9e4bf9a1-3dcd-43c7-b01e-b7531956793d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "d now\u00a0\u00a0 instead of checking whether the vertex has been\u00a0\nvisited, which is what I was doing before, I will\u00a0\u00a0 check whether the level has been assigned. \nSo, if the level has not been assigned,\u00a0\u00a0 then it means it has not been visited. So, if the\u00a0\nlevel has "
+    },
+    "0bdd9c7f-633d-4104-8ef3-1d2976027768": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "not been assigned the level still minus\u00a0\u00a0 1. So, if the level is minus 1, then I have to\u00a0\nset the level. So, what do I set the level to?\u00a0\u00a0 Well, I have to set the level to be 1 more\u00a0\nthan the level from where I am looking at it.\u00a0\u00a0 So, if I am coming from j"
+    },
+    "eef5e89c-c0b7-4cad-bb86-4ae56320b4c2": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " to k, and if j was at\u00a0\nlevel 7, for example, then the new vertex k must\u00a0\u00a0 be at level 8. So, I set parent of k to j and\u00a0\nI set level of k to be level of j plus 1. So,\u00a0\u00a0 it is 1 more than where I came from. \nAnd at the end, now, I will return level\u00a0\u00a0 and p"
+    },
+    "aac4d7ac-9fc3-4693-bc28-44fe49af4302": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "arent. In level if I find entries minus 1 it\u00a0\nis false. If it is not minus 1, it is true. So,\u00a0\u00a0 I implicitly have the visited information\u00a0\ngiven back to me. And in addition, of course,\u00a0\u00a0 I have the actual path which is given by parent.\u00a0\nSo, notice that fro"
+    },
+    "479416d6-7116-48c1-9afb-fb48cf373699": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "m the parent thing, I can\u00a0\u00a0 actually go backwards and calculate the level.\u00a0\nBut this has now given me the level in one step.\u00a0\u00a0 So, this is what we said we initialize the level\u00a0\nset it to 0 for the source vertex. And every time\u00a0\u00a0 we visit a new vertex k, we"
+    },
+    "1a244291-eb3f-4186-823c-0ecd0b1a5881": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " increment the\u00a0\nlevel compared to where we came from. \n\u00a0 So, just our same example as before, so we start\u00a0\nat 7, initially, all levels and all parents are\u00a0\u00a0 minus 1, when I start with 7, now, I set this to\u00a0\nbe 0, so this is my initial thing. And now as I\u00a0\u00a0"
+    },
+    "3e5833b1-2ae2-4a3c-9d1c-116021be4102": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " go ahead, I mark these to be 1, so this is now\u00a0\n1, because these were marked from 7, then if I\u00a0\u00a0 go from 4, then I mark the level of 3 and 0 to\u00a0\nbe 2, because they were reachable from 4, which\u00a0\u00a0 was level 1. And then if I go from 5 to 6, again,\u00a0\n5 was alr"
+    },
+    "07bd7b2f-f4d0-4646-8c08-098a640647bb": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "eady at level 1, so 6 is at level 2. \n\u00a0 And now if I go to 8, for instance, 8 was at level\u00a0\n1, so 9 is at level 2. And now I get to level 3,\u00a0\u00a0 because 0 is at level 2. And if I explore the\u00a0\nneighbours of 0, then its neighbours will be\u00a0\u00a0 at level 3. So, 1 a"
+    },
+    "b0771e5c-3e8f-4019-aa52-b4b1fef5fe9d": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "nd 2, which are going to be\u00a0\nexplored next will now be at level 3. So, it\u00a0\u00a0 means it takes me 3 steps to get to 1 and 2. And\u00a0\nnow you can see on the left hand side that all the\u00a0\u00a0 entries have become different from minus 1.\u00a0\nSo, I have actually reached ever"
+    },
+    "8d22015c-c9bc-4593-b133-e2bc9285ecdc": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ything. So,\u00a0\u00a0 we are as usual just going to process\u00a0\nthe queue and find no changes. \n\u00a0 So, to summarize, breadth first search\u00a0\nis a systematic way to explore a graph.\u00a0\u00a0 And essentially, we record which vertices have\u00a0\nbeen visited and we use a queue to keep"
+    },
+    "39db11c7-f87f-497c-b32a-41262ab6ef96": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": " track\u00a0\u00a0 of which vertices are yet to be explored. If\u00a0\nwe use an adjacency matrix, then we end up\u00a0\u00a0 using n squared time regardless of\u00a0\nhow many edges that are in the graph.\u00a0\u00a0 So, this is not optimal, because very often,\u00a0\nyou will have a smaller number of "
+    },
+    "3cfbc4a1-5e67-48fa-81eb-940966fdf636": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "edges. \n\u00a0 So, we use adjacency lists to get m plus n because\u00a0\nthe work across all the vertices turns out to be\u00a0\u00a0 proportional to the sum of the degrees which\u00a0\nis bounded by 2m. We saw that we can add parent\u00a0\u00a0 information to recover the path and we can\u00a0\nmai"
+    },
+    "9b65facc-35ac-4e78-b3d0-22ca2aca50e0": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "ntain the level information to record the\u00a0\u00a0 length of the shortest path in terms of number of\u00a0\nedges. Now, the shortest path in terms of number\u00a0\u00a0 of edges may not be the actual shortest path we\u00a0\nare interested in as we will see later on. \n\u00a0 So, later on, w"
+    },
+    "28a1af6e-e4ba-4b61-aeec-bd7bf25faf1e": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "e might, we will look at shortest\u00a0\npaths where the edges are not just the only factor\u00a0\u00a0 but also there is a cost with each edge which\u00a0\ncould represent the distance or the time it takes\u00a0\u00a0 or the price of a ticket and so on. So, this will\u00a0\nconstitute what ar"
+    },
+    "1277717f-6064-4004-9156-9afe92c36470": {
+        "content_id": 33,
+        "course_name": "PDSA",
+        "title": "Breadth First Search BFS",
+        "week": 4,
+        "chunk": "e called weighted graphs. But\u00a0\u00a0 right now in an unweighted graph, if all edges so\u00a0\nwe are just counting how many steps we take, then\u00a0\u00a0 breadth first search will give us the shortest\u00a0\npath to every reachable node in the graph."
+    }
+}

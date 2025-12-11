@@ -1,0 +1,436 @@
+{
+    "08f7ded5-c642-46d6-b765-fa5f14bf3b30": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "So, we moved from linear\u00a0\nprogramming to network flows.\u00a0\u00a0 And we argued that network flows\u00a0\nshould also be a useful problem\u00a0\u00a0 for modeling other things. So, let\u00a0\nus look at an example like that.\n\u00a0 So, suppose we have a situation where there are\u00a0\n5 teachers"
+    },
+    "a41759fe-0a2c-4c25-a085-5f3534d34f1d": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": " and 5 subjects, and some teachers are\u00a0\u00a0 capable of teaching some of these subjects.\u00a0\nSo, our goal is to now find, of course,\u00a0\u00a0 an allocation of teachers to subjects. So, each\u00a0\ninstructor is willing to teach a set of courses,\u00a0\u00a0 some of them are willing to "
+    },
+    "3ad27a0f-ac29-4b70-b4ef-b00b5834b294": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "teach more than one\u00a0\ncourse. So, for instance, Deb here is willing\u00a0\u00a0 to teach both English and History, and Priya\u00a0\nis willing to teach both Biology and Maths.\n\u00a0 On the other hand, some subjects have\u00a0\nmore than one taker. So, maths is also\u00a0\u00a0 offered or can "
+    },
+    "ba585529-0636-4748-9722-8e75ac83fded": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "be offered by Kumar. And similarly,\u00a0\nhistory can also be offered by Sheila. So,\u00a0\u00a0 we now have to do this allocation, we have to\u00a0\nallocate courses to instructor. So, what do we\u00a0\u00a0 want to do? We want to find an allocation. So,\u00a0\nthat each course is taught by "
+    },
+    "0c04e45c-28ad-49b4-b8fa-0eb405f07bed": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "one instructor.\u00a0\u00a0 There is only one instructor per course.\nBut we also want to keep the instructors happy.\u00a0\u00a0 So, every instructor should get a course,\u00a0\nwhich he or she is willing to teach. So,\u00a0\u00a0 we should not be just say, we could always do\u00a0\nan allocation "
+    },
+    "c9dedd87-e665-425d-8e4f-dc8c1d554d16": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "this way. Just go across and say,\u00a0\u00a0 the first instructor gets the first course,\u00a0\nthe second instructor gets the second course,\u00a0\u00a0 and so on. But we want to respect these\u00a0\nedges. So, we want to make sure that the\u00a0\u00a0 allocation respects these edges. So, this i"
+    },
+    "4d94a9a0-9793-4038-9c65-177651b8ac8b": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "s an\u00a0\nexample of what is called bipartite matching.\n\u00a0 So, in bipartite matching, we have a graph. So,\u00a0\nwe have this graph, but the graph has some extra\u00a0\u00a0 structure. So, there are two sets of vertices.\u00a0\nSo, we have a set here, which I will call V0,\u00a0\u00a0 and a "
+    },
+    "88ecb68e-112d-434f-9ea4-64475eef0aa7": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "set here, which I will call V1. And all\u00a0\nthe edges go across these two partitions. So,\u00a0\u00a0 there are no edges from V0 to V0, and there are no\u00a0\nedges from V1 to V1. So, there is no edge from a\u00a0\u00a0 teacher to another teacher, and there is no edge\u00a0\nfrom a course "
+    },
+    "f9a324ad-26c6-42af-a989-146486b9d0ca": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "to another course all the edges go\u00a0\u00a0 from the teachers to courses.\nAnd now, we want to find\u00a0\u00a0 a subset of edges such that no two share an\u00a0\nendpoint. So, if I choose this edge, for instance,\u00a0\u00a0 then I am not allowed to choose this edge,\u00a0\nbecause that would c"
+    },
+    "8b8b0767-101f-48e3-a9d6-63f7749bb27f": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "orrespond to offering,\u00a0\u00a0 Priya offering two courses which is not\u00a0\nallowed. So, if I choose one edge, which\u00a0\u00a0 Priya is incident on the other edge must go.\nSimilarly, if I choose, for instance, this edge\u00a0\u00a0 and allocate History to Deb, then I should not\u00a0\nchoo"
+    },
+    "1a622740-ec25-40b1-a34c-d2dcad9f6b63": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "se this edge, because if History is already\u00a0\u00a0 part of an edge, history, as a subject has been\u00a0\nallotted a teacher, I should not try to a lot a\u00a0\u00a0 second teacher. So, that means formally that this\u00a0\nnode should not have two edges in the matching\u00a0\u00a0 incident. S"
+    },
+    "9fab27e0-2148-4b5a-bae6-e648936d8e11": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "o, we want to take a subset of edges,\u00a0\nso that no two of them share an endpoint.\n\u00a0 So, this is called a matching for obvious reasons,\u00a0\nbecause you are matching up a vertex in one set\u00a0\u00a0 with the vertex in the other set such that these\u00a0\nmatching vertices are"
+    },
+    "1b7ab757-1242-4093-ae0a-17447b09e80b": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": " connected by edges and the\u00a0\u00a0 matching is guaranteed to be kind of 1 is to 1,\u00a0\nthat is no vertex is matched to more than one\u00a0\u00a0 vertex on the other side. So, here, for instance,\u00a0\nyou could construct a matching. So, Aziz can only\u00a0\u00a0 teach physics, Priya can o"
+    },
+    "a780469d-9542-4995-8b97-0d756fbdb8c9": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "nly teach biology. \nAnd now, you have to make a choice. So, Sheila\u00a0\u00a0 can only teach History. So, you should allocate\u00a0\nhistory to Sheila. And now once you have allocated\u00a0\u00a0 History to Sheila, then you should give English\u00a0\nto Deb. And finally, once you have d"
+    },
+    "d957b0a6-57dd-4c28-96d2-4d6e0f0cd74a": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "one this,\u00a0\u00a0 Priya has already got Biology. So, Kumar should\u00a0\nget maths. So, this becomes now a largest matching\u00a0\u00a0 in which actually, every teacher has got a\u00a0\ncourse and every course has got a teacher.\n\u00a0 So, if you have an equal number of\u00a0\nthings on the lef"
+    },
+    "0585db02-debc-4df1-a320-85cd3730ae84": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "t-hand side, if so here,\u00a0\u00a0 the size of V0 is 5, and the size of\u00a0\nV1 is 5, then you can hope to do this,\u00a0\u00a0 to match everything on the left everything on the\u00a0\nright. So, this kind of a matching is kind of,\u00a0\u00a0 it is not only the largest, but it is\u00a0\none which a"
+    },
+    "7116d22f-79c7-47c9-bf39-1b3737eaca76": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "ctually matches everybody.\u00a0\u00a0 So, this is called a perfect matching. So, one\u00a0\nof the problems which is come arises very often\u00a0\u00a0 is this kind of perfect matching.\nSo, here is a question of allocating\u00a0\u00a0 courses to teachers, you can also think\u00a0\nof any other re"
+    },
+    "5b400819-40b0-4a43-bc5d-0f702fb2c15b": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "source allocation. So,\u00a0\u00a0 supposing you have a pool of vehicles and you\u00a0\nwant to allocate drivers to drive these vehicles,\u00a0\u00a0 then the same problem, you need to allocate a\u00a0\ndriver to a vehicle that he or she is comfortable\u00a0\u00a0 driving. And you need to make sur"
+    },
+    "7036b4cd-53d0-48ce-ad3b-11c3390692cb": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "e that all the\u00a0\ndrivers are using driving only one vehicle and\u00a0\u00a0 each vehicle is being driven by somebody.\nSo, in many of these resource allocation kinds\u00a0\u00a0 of questions, you can have a match, you can also\u00a0\nthink of matching in different contexts. Like\u00a0\u00a0 fo"
+    },
+    "0a1449e6-f20a-4e6d-8aeb-82e137e34fc0": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "r instance, we have a bunch of students on the\u00a0\nleft-hand side and a bunch of institutions on the\u00a0\u00a0 right-hand side. So, there it is not any more 1 is\u00a0\nto 1 because more than one student can be matched\u00a0\u00a0 to an institution. But you can imagine\u00a0\nthat if it i"
+    },
+    "2615d479-11b3-4ea6-9d85-03e7c6e292c2": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "s a bunch of preferences.\n\u00a0 So, supposing I have given a bunch of preferences\u00a0\nfor which courses I want to take then I can only\u00a0\u00a0 get matched to one of them. So, matching in\u00a0\ndifferent forms is a very important problem.\u00a0\u00a0 But this bipartite matching is a p"
+    },
+    "af7dc095-494e-42d7-8940-d8af064f523b": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "articularly\u00a0\nsimple and appealing version of the problem.\u00a0\u00a0 So, we said that we are going to use flows.\u00a0\nSo, let us see how we would use flows.\n\u00a0 So, what we want to do is to convert this to a\u00a0\nflow problem. So, remember in the flow problem,\u00a0\u00a0 we have a so"
+    },
+    "ff0d4851-c7e4-4c45-aa23-8bdda3ff706e": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "urce node and a sink node, so, here\u00a0\nis a source node, and here is a sink node. So,\u00a0\u00a0 I created a new source node and a new sink\u00a0\nnode. And now I want to think about this\u00a0\u00a0 matching as a flow. So, I want to think about\u00a0\nthe fact that if Sheila is going to "
+    },
+    "7f12d4a4-3c28-4a92-b08a-f3a2405e1778": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "teach\u00a0\u00a0 history, then I am going to flow something from\u00a0\nEnglish or History, from Sheila to history.\n\u00a0 So, now, the flow will represent what all can go\u00a0\nfrom the left to the right. And now, because the\u00a0\u00a0 flow is such that the capacity is going to be\u00a0\nset t"
+    },
+    "de5016df-80b4-489d-aa69-d58a94a103e0": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "o 1, I cannot flow 2 units of things. So,\u00a0\u00a0 I cannot flow more than 1 unit through any\u00a0\nof these edges. So, if I now have five edges\u00a0\u00a0 coming out from here to the 5 instructors, the\u00a0\nquestion is, can I flow 5 units if I flow 5 units,\u00a0\u00a0 then each of them mu"
+    },
+    "4911230f-432e-47e5-88ac-d56ddef42b68": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "st go out. So, there must be 1\u00a0\nunit of flow and each of these edges, there is no\u00a0\u00a0 storage remember so that if it goes\u00a0\nout, it must go out of that node.\n\u00a0 So, all this flow must leave these\u00a0\nrespective nodes in some direction.\u00a0\u00a0 And once it leaves in som"
+    },
+    "b023c3df-c362-46fe-bb36-62d7aa8768dd": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "e direction,\u00a0\nthey will reach the other side. But now,\u00a0\u00a0 because of the capacity constraints, supposing\u00a0\nI allocate in this flow, supposing I allocate\u00a0\u00a0 both Deb and Sheila to History, then I cannot push\u00a0\nthat flow out on the other side without storage,\u00a0\u00a0 "
+    },
+    "f56573db-1bb9-4d64-b014-ac00db79f82b": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "because if two units if two people are assigned\u00a0\nHistory, then it is going to create a problem\u00a0\u00a0 because only one of those flows can go to the\u00a0\ntarget and then I have to store that flow.\n\u00a0 So, you can easily see now, that checking, if we\u00a0\nhave a bipartite "
+    },
+    "bf9d8320-b98f-4f04-b50c-40f5a9bb5527": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "matching corresponds to finding a\u00a0\u00a0 maximum flow in this, if I get any maximum flow,\u00a0\nI can translate it into a bipartite matching,\u00a0\u00a0 and every bipartite matching will correspond\u00a0\nto a flow. So, if I want find the maximum\u00a0\u00a0 or the largest bipartite matchin"
+    },
+    "067e89cb-b60f-46e7-bde4-dc7e78b9a1e2": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "g, it\u00a0\ncorresponds to finding the maximum flow. \n\u00a0 So, we want to find a maximum flow to from s to\u00a0\nt under these constraints where I have added a\u00a0\u00a0 source which connects to everything in V0, I have\u00a0\nadded a target which connects to everything in V1,\u00a0\u00a0 and"
+    },
+    "1d75e958-f063-4f3f-bb2e-7ab5fd7e2af8": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": " then I put a capacity one constraint\u00a0\non all the edges in the network.\n\u00a0 So, this is an example, this and\u00a0\nother things that we have seen are\u00a0\u00a0 examples of what we call reductions.\u00a0\nSo, we want to solve a problem A. So,\u00a0\u00a0 in our particular case, this coul"
+    },
+    "b6962974-e2d7-450a-982d-d2d9dc14187c": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "d be bipartite\u00a0\nmatching. So, we want to solve A, what we know\u00a0\u00a0 how to solve is something else. So, this is\u00a0\nbipartite matching, and this is network flow.\u00a0\u00a0 So, we know how to solve network flow,\u00a0\nbecause we have the Ford Fulkerson algorithm,\u00a0\u00a0 what we no"
+    },
+    "c0d37342-aa57-4866-9308-0c22437792ff": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "w do is convert our problem from\u00a0\nbipartite matching to network flow.\n\u00a0 So, this is where we add s and t and we have\u00a0\ncapacity 1 and so on. So, we convert our bipartite\u00a0\u00a0 matching problem to a network flow problem. And\u00a0\nonce we have a network flow problem,"
+    },
+    "3cfb3bd3-3701-49c7-b789-ca08b26d9ee3": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": " we have a\u00a0\u00a0 solution for that network flow problem. So, the\u00a0\nnetwork flow problem will tell us, there solution\u00a0\u00a0 tell us which all edges have flow. And in this\u00a0\ncase, the edges which have flow correspond to the\u00a0\u00a0 edges which will be allocated in the match"
+    },
+    "2816b382-e8e4-4f0b-aa9c-ce9163f458d1": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "ing.\nSo, we can now reverse this thing and reconstruct\u00a0\u00a0 from the answer that the algorithm B gives us,\u00a0\nwe can get a reconstruct an answer for A. So,\u00a0\u00a0 we get an answer for the original problem. So,\u00a0\nthis is what we wanted it, given A we wanted\u00a0\u00a0 the answ"
+    },
+    "e15eced0-42f4-4a01-b1d4-37c0cfe0aa07": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "er that A should provide for X.\u00a0\nSo, what we do is we pass that answer,\u00a0\u00a0 the question to B look at the answer of B, and\u00a0\nthen reconstruct. So, this is a reduction.\n\u00a0 So, we say that A reduces to B. If I can solve B\u00a0\nI can solve A. So, solving A reduces to"
+    },
+    "1538fbca-07e9-4c97-ad08-3e6084029197": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": " solving B.\u00a0\u00a0 So, if we do this, as we have seen if you could\u00a0\ndo this fast. And of course, if you can do the\u00a0\u00a0 translation fast, that is also there. Then\u00a0\nyou can transfer an efficient solution for B\u00a0\u00a0 to an efficient solution for A, provided it does\u00a0\nnot"
+    },
+    "e01aadf8-922a-4bca-ab90-e91405076b43": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": " take you too long to do these two steps.\n\u00a0 And you know that this step is going to be\u00a0\nquick, then combined the whole thing is going\u00a0\u00a0 to be quick, I have after do some work, call this\u00a0\nB, get the answer from B which will be quick and\u00a0\u00a0 then reconstruct t"
+    },
+    "08cde799-9020-45a9-bc15-842bbbcf48cc": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "he answer for A. So, this\u00a0\nis a typical scenario of using reduction. So,\u00a0\u00a0 we have seen many such things. So, we have\u00a0\nseen specific problems which are reduced.\n\u00a0 So, when we looked at linear programming, we saw\u00a0\nthat you could take a specific problem invo"
+    },
+    "1ebfb59f-68a1-4d8e-99fb-aa3b254344f6": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "lving\u00a0\u00a0 sort of carpet sales or involving making\u00a0\nboxes of sweets, and model it directly as\u00a0\u00a0 linear programming. So, that is not a reduction\u00a0\nin a sense because those are concrete problems,\u00a0\u00a0 which I am modeling as reduction, whereas\u00a0\nhere we have taken o"
+    },
+    "753adf04-be49-4af4-abab-3f33ce9c6a65": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "ne problem in one domain,\u00a0\u00a0 I can take bipartite matching over arbitrary\u00a0\nbipartite graphs, and any search problem.\n\u00a0 So, there is a whole class of problems called\u00a0\nbipartite matching, I can take this entire\u00a0\u00a0 class of problems and solve it using a class\u00a0\n"
+    },
+    "abccf5df-bd0d-4b82-bd4b-5f88e72ee906": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "of problems called network flow. So, that is\u00a0\u00a0 the reduction thing. I can take any bipartite\u00a0\nmatching problem and convert it to a specific\u00a0\u00a0 network flow problem and reconstruct the answer.\u00a0\nSo, that is the reduction power. It is not saying\u00a0\u00a0 that you mod"
+    },
+    "8f838315-a9f3-4d8a-a7d4-607cdaeff068": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "el one question in terms of some\u00a0\nformulism but you are saying that every problem\u00a0\u00a0 of type A can be transformed into a problem of\u00a0\ntype B and the answer can be reconstructed.\n\u00a0 So, when we say efficient, what we will usually\u00a0\nmean as we will go ahead is t"
+    },
+    "1ccfa9e9-12d5-4c12-a63a-00e0988b64a7": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "hat both these\u00a0\u00a0 translations should be in polynomial time with\u00a0\nrespect to the size of the input of A. And the\u00a0\u00a0 size of the output of B must also not be\u00a0\ntoo large, because I have to reconstruct\u00a0\u00a0 back in polynomial time an answer for A.\nSo, in this sens"
+    },
+    "ae313dc8-2d69-4f02-a259-98632787c14b": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "e bipartite matching reduces\u00a0\u00a0 to maximum flow. Last time, we saw that\u00a0\nmaximum flow reduces to linear programming,\u00a0\u00a0 because we said that you can attach for each flow\u00a0\na variable, then we can write these constraints\u00a0\u00a0 which express the fact that the flows"
+    },
+    "c36618a0-d301-4e67-b01a-2de2a06ec0fd": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": " respect\u00a0\nthe capacities of the edges and at each node,\u00a0\u00a0 there is a conservation of flow, the incoming\u00a0\nflow must add up to the outgoing flow.\n\u00a0 So, these are the constraints they said two sets\u00a0\nof constraints one is the capacity constraints,\u00a0\u00a0 one is thi"
+    },
+    "bf09d46c-d954-4562-86c6-4863e0c816f0": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "s conservation constraint, and then we\u00a0\nhave this objective function which is maximize the\u00a0\u00a0 flow through the edges coming out of the source.\u00a0\nSo, maximum flow reduces to linear programming,\u00a0\u00a0 bipartite matching reduces to maximum flow as we\u00a0\nhave just see"
+    },
+    "c3b5bdc2-1952-4178-a91b-10d029875b0b": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "n and there could be other problems,\u00a0\u00a0 which we are not going to addressed here,\u00a0\nbut we will see a few examples later on.\n\u00a0 So, the important thing is that these must\u00a0\nbe efficient. So, what we can see is that,\u00a0\u00a0 when you do maximum flow to linear\u00a0\nprogra"
+    },
+    "53004503-a632-4091-97a4-dbfc551059ce": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "mming by adding one variable per\u00a0\u00a0 edge, then the number of variables is now\u00a0\nlinear in the size of the graph. And the\u00a0\u00a0 number of constraints is also linear, because we\u00a0\nhave one capacity constrained per edge, and we\u00a0\u00a0 have one conservation constraint per"
+    },
+    "316486b7-ae2c-41c2-8203-f51f72f34c8b": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": " node.\nSo, the problem in this pre-processing which\u00a0\u00a0 converts should not create to larger\u00a0\nsolution. So, that is the real goal\u00a0\u00a0 of making a reduction effective in terms\u00a0\nof translating efficient solutions.\u00a0\u00a0 So, this is the positive use of reductions in "
+    },
+    "63833f4a-7742-4be8-aacd-acb467639526": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "some\u00a0\nsense. So, we can take a problem that we know how\u00a0\u00a0 to solve and use it to solve another problem.\nNow, there is also another way of interpreting\u00a0\u00a0 reductions. Supposing, I do not know how to\u00a0\nsolve A, supposing I do not know how to solve A,\u00a0\u00a0 so I kn"
+    },
+    "e56ac206-d39f-4ac9-afe3-fa8228b56643": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "ow that solving A is hard. Now, I want\u00a0\nto check whether solving B is also hard. So,\u00a0\u00a0 supposing I can reduce A to B in the same way,\u00a0\nthen I claim that B must also be hard because\u00a0\u00a0 if I could solve B easily, then I have\u00a0\na simple way of solving A easily."
+    },
+    "7f876d76-972e-498c-a2f7-4a550847060d": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "\n\u00a0 But since I believe that A is hard to solve, it\u00a0\ncannot be easy to solve B. So, this is a kind of\u00a0\u00a0 an argument which would be difficult to do on\u00a0\nyour own. How do you look at a problem and say\u00a0\u00a0 that this problem is going to all instances this\u00a0\nproblem"
+    },
+    "1357ffd3-b9ef-4800-9a94-bc3cefb0abdd": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": " are hard to solve. So, on a specific\u00a0\u00a0 problem, it is hard, it is difficult to do this,\u00a0\nbut if I know some other problem, where somebody\u00a0\u00a0 has already done this hard work and established\u00a0\nthat that problem is difficult to solve.\n\u00a0 If I can reduce that pr"
+    },
+    "821deb67-5fa8-470c-bc2b-8404542e4891": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "oblem to my problem,\u00a0\nthen I can argue that my problem must be as\u00a0\u00a0 difficult as that one because if I could solve\u00a0\nthis one easily, then through this reduction,\u00a0\u00a0 I can transfer it back. So, this says basically\u00a0\nthat if I can solve B efficiently, I can so"
+    },
+    "a537610b-4d8e-4866-b9ba-8b395578e5f6": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "lve\u00a0\u00a0 A efficiently. So, conversely, if I cannot solve\u00a0\nA efficiently, I cannot solve B efficiently.\n\u00a0 So, the reason that we looked at linear\u00a0\nprogramming and network flows is not\u00a0\u00a0 to examine the algorithms for these we just gave\u00a0\na sketchy version of th"
+    },
+    "bcabcdea-2749-41f1-84a7-794fe1905ba5": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "e simplex version for how\u00a0\u00a0 simplex works for linear programming. And we\u00a0\nkind of by illustrated how the Ford Fulkerson\u00a0\u00a0 algorithm works for network flows without\u00a0\nactually proving that they are correct.\u00a0\u00a0 But the point is that these are big hammers.\nSo, "
+    },
+    "0a61a043-e76e-4b2d-b248-e339dd61d30c": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "these are very powerful techniques, which are\u00a0\u00a0 available to us to solve a lot of problems. So,\u00a0\nmany problems can be reduced to these. And these\u00a0\u00a0 have interned because they are such\u00a0\nuseful problems. There are commercially\u00a0\u00a0 available or even non commerc"
+    },
+    "6660c5a0-f59d-4ae8-87f0-f04957a06697": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "ially available,\u00a0\npublicly available libraries to solve these.\u00a0\u00a0 So, if you are using Python, or if you\u00a0\nare using some other programming language,\u00a0\u00a0 you will find a way to call a library which can\u00a0\nsolve a linear programming problem for you.\n\u00a0 And if you "
+    },
+    "9292f3c9-eda7-4e4a-8274-e15041b166fe": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "can model your problem in terms\u00a0\nof linear programming, then all you have to\u00a0\u00a0 do is call this library. So, therefore, it is\u00a0\nuseful to be able to do this translation. So,\u00a0\u00a0 this is a different aspect from the rest\u00a0\nof the course, where we will be looking\u00a0"
+    },
+    "892a7055-e64b-4d12-bd7b-166c8981a3af": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "\u00a0 at designing and analysing specific\u00a0\nalgorithms for specific problems.\n\u00a0 Here, we are saying that these are these\u00a0\u00a0 very powerful problems which can be\u00a0\nsolved and for which solutions exist.\u00a0\u00a0 So, can you take your problem and interpret\u00a0\nit as a linear p"
+    },
+    "0d024183-906d-4ba1-a767-ba1f22b5efa4": {
+        "content_id": 77,
+        "course_name": "PDSA",
+        "title": "Reductions",
+        "week": 11,
+        "chunk": "rogramming problem? Or can you\u00a0\u00a0 take a problem and interpret it as a network\u00a0\nproblem and then apply the technique that we\u00a0\u00a0 generally applies to linear programming\u00a0\nand network flow in order to solve?"
+    }
+}

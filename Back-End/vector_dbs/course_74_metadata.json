@@ -1,0 +1,534 @@
+{
+    "b5d04107-dd0b-4bba-9997-6e335cd54179": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "So, we saw that in linear programming, we\u00a0\nhave constraints which are given in terms of\u00a0\u00a0 linear functions. And we also have an objective,\u00a0\nwhich is another linear function in terms of the\u00a0\u00a0 variables that we are considering. So, linear\u00a0\nmeans we do not ha"
+    },
+    "09216504-341d-4c58-ab5b-629f78ae2fb7": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ve constraints where I have\u00a0\u00a0 x1 times x2, or xi squared or anything. So, the\u00a0\nconstraints all involve one variable multiplied\u00a0\u00a0 by one number one coefficient. \nSo, that is what linear means. So,\u00a0\u00a0 I never have variable constraints in which the\u00a0\nequation i"
+    },
+    "39551bfd-9779-4009-ab07-023a967d292a": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "nvolves variables multiplied by each\u00a0\u00a0 other. And we saw that this kind of constraint\u00a0\ndefines these lines which form a convex region.\u00a0\u00a0 And this feasible region, we can then explore\u00a0\nthe vertices. And this is what simplex does,\u00a0\u00a0 it starts looking at all "
+    },
+    "3429b5f8-99b6-4ebf-9154-f69c63b216c3": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "the corners in some\u00a0\nsense the vertices of this feasible region,\u00a0\u00a0 and you are guaranteed that the optimum\u00a0\nvalue if this feasible region is not\u00a0\u00a0 empty, there will be some optimum value, it will\u00a0\nalways be found at one of these vertices. \n\u00a0 So, it is effi"
+    },
+    "0f3aad0c-7dfe-4f40-86a2-d400d5b0128e": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "cient to look at the vertices.\u00a0\nSo, simplex will start at some vertex,\u00a0\u00a0 evaluate the objective. And if it\u00a0\ncan find a neighbouring vertex,\u00a0\u00a0 which has got a better value of the objective,\u00a0\nit will move to that one. So, it is like a\u00a0\u00a0 search problem along "
+    },
+    "c1b048b7-f650-4769-8ee7-8e1a657b406a": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "this boundary of\u00a0\nthis feasible region. So, you start\u00a0\u00a0 somewhere at one of the corners, look at your\u00a0\nneighbouring corners, if you can improve you go,\u00a0\u00a0 if you cannot improve you stops. \nSo, in that sense, it is a greedy algorithm,\u00a0\u00a0 you can show that thi"
+    },
+    "292f54cf-9be5-47af-ac7e-9ef3a69be6c8": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "s actually works. The\u00a0\nproblem is that computationally in the worst case,\u00a0\u00a0 it is exponential, and there are better algorithms\u00a0\nthat you can use to make it actually polynomial.\u00a0\u00a0 But it is conceptually very simple. And\u00a0\nthis is very often used in practice."
+    },
+    "1526e120-4ec8-49f7-afaa-f456fd7220c9": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": " \n\u00a0 Then we also saw that when you have an LP linear\u00a0\nprogramming problem with a bunch of constraints\u00a0\u00a0 and an objective function, you can also take the\u00a0\nconstraints and multiply it by some constants.\u00a0\u00a0 And make that into a dual problem. And these\u00a0\nconstan"
+    },
+    "7e397568-c8fb-4977-9d30-546216d6299f": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ts are multipliers that you use the\u00a0\u00a0 constraints on those constants are these are the\u00a0\nnew variables, the multipliers of these equations,\u00a0\u00a0 the constraints are that these multipliers must\u00a0\nbe positive and non-negative. They can be 0,\u00a0\u00a0 but they cannot be "
+    },
+    "2d64cd64-9e35-4ff8-939b-a69fc7260ff3": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "negative. And then when you\u00a0\nget to solve this dual problem, then you get a\u00a0\u00a0 solution to original problem. So, there is this\u00a0\nthing of LP duality, which is quite powerful.\u00a0\u00a0 So, now let us look at another\u00a0\naspect of linear programming. \n\u00a0 So, let us look "
+    },
+    "374a85f6-1a80-41a3-b981-520964265e39": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "at a problem which involves\u00a0\nplanning production, which is similar to last time\u00a0\u00a0 we were looking at a sweet shop and we are looking\u00a0\nat what is the production that we must achieve\u00a0\u00a0 for a given day the sweet shop. Now,\u00a0\nhere we are looking at slightly dif"
+    },
+    "c3d111a8-a8c9-432e-8d9d-07cde703bd9a": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ferent\u00a0\u00a0 scenario. So, we have a company that makes\u00a0\nhand woven carpets. And they have at the\u00a0\u00a0 beginning of the year 30 employees and each\u00a0\nemployee during a month he makes 20 carpets\u00a0\u00a0 and is paid 20000 rupees. \nSo, since 20 carpets earns him\u00a0\u00a0 a salary "
+    },
+    "a3de5bac-0ce0-4378-9879-bcad62ff28e8": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "of 20000 rupees, the labour costs per\u00a0\ncarpet is 1000 rupees, 1000 into 20 is 20000.\u00a0\u00a0 So, this is what it costs to make a carpet.\u00a0\nSo, now the problem is that we want to meet\u00a0\u00a0 some demand, which varies from month to\u00a0\nmonth. So, we do not always want to m"
+    },
+    "6bcda947-44dd-477d-9034-a71c681dec39": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ake\u00a0\u00a0 so if I have 30 employees and I make 20 carpets\u00a0\na month, I can make 600 carpets each month. \n\u00a0 But there is a demand which sometimes drops\u00a0\nbelow 600 And sometimes goes above 600.\u00a0\u00a0 So, we must if let us assume that we know this\u00a0\ndemand, we know thi"
+    },
+    "1bc375f8-68f0-403f-8bb8-33644883e5c5": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "s demand for each month of the\u00a0\u00a0 year. Therefore, we know the demand for January,\u00a0\nFebruary and so on. So, there are 12 months. So,\u00a0\u00a0 there are 12 quantities which are known in advance\u00a0\nthe demand for January the demand for February,\u00a0\u00a0 the demand for March"
+    },
+    "661b63c1-972b-4e70-bb21-6ff12f59e2c1": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": " and so on. So, we\u00a0\nhave these 12 demand quantities. \n\u00a0 And now we want to somehow adjust our production\u00a0\nto meet this demand. Now, there are two problems.\u00a0\u00a0 If I if I do not have a demand, supposing I\u00a0\nam only able to sell 500 carpets in a month,\u00a0\u00a0 if I m"
+    },
+    "f9ccb0ef-632b-4f49-a5fe-7b2eba8fd491": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ake 600 Then I have 100 left. On the other\u00a0\nhand, if I am supposed if I could sell 700 And I\u00a0\u00a0 make only 600 I am missing out on something.\u00a0\nSo, I would like to make as many carpets as the\u00a0\u00a0 demand requires and avoid making surplus perhaps\u00a0\nand certainly a"
+    },
+    "f2158b5c-62fe-4116-b331-9e82fb26c04d": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "void not meeting the demand.\n\u00a0 So, we have to cope with this varying demand.\u00a0\nSo, as a business, what is the option that is\u00a0\u00a0 available to us? Well, one option is\u00a0\nto ask these employees to work more.\u00a0\u00a0 So, then, of course for overtime, the cost goes\u00a0\nup s"
+    },
+    "aeac00ae-b9fc-40bf-827c-177eb22cb5da": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "o they are paid 20000 rupees for making\u00a0\u00a0 carpets and they make 20 carpets a month. So,\u00a0\nthis works out to 1000 rupees per carpet but\u00a0\u00a0 if they work overtime you have to pay the more\u00a0\nand how much more it is 80 percent more. \n\u00a0 So, 80 percent more translat"
+    },
+    "7ade5e53-281d-4e41-b7c6-570cc74aabca": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "es the fact\u00a0\nthat this will become 1800 per carpet\u00a0\u00a0 right for me new carpet they make beyond their\u00a0\nstated target of 20 they will be paid 1800 rupees\u00a0\u00a0 rather than 1000 rupees, but there is also a\u00a0\nconstraint saying that a single worker cannot make\u00a0\u00a0 cann"
+    },
+    "6cc807f3-8345-42be-8473-a4ed7c419f0f": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ot do more than 30 percent work over time,\u00a0\nthat means that, if I have made 20 carpets in\u00a0\u00a0 a month normally, then 30 percent, that is\u00a0\n6 so that you cannot make more than 26. \n\u00a0 So, one worker cannot make more than\u00a0\n26 carpets a month. So, if all your 30\u00a0"
+    },
+    "5bf00e2f-c144-4490-8a46-fa9ba62dc2a1": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "\u00a0 workers were working overtime, then each of\u00a0\nthem will be making 6 extra carpets perhaps,\u00a0\u00a0 so 6 into 30, you can get 180 carpets. So, our\u00a0\n600 carpets can now go to a max capacity of\u00a0\u00a0 780 if all our employees are paid overtime, but\u00a0\nour demand could ac"
+    },
+    "8e19fe6a-f359-4412-97a2-cb09db276d7f": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "tually go even beyond that.\u00a0\u00a0 So, then another option is to temporarily\u00a0\nemploy somebody to make additional carpets. \n\u00a0 So, you can expand your workforce. And of\u00a0\ncourse, when the demand shrinks, you do not\u00a0\u00a0 need this person. So, you can also reduce your\u00a0"
+    },
+    "8d0c4d60-2b12-4c3c-b939-4b380e86eae4": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "\nworkforce by firing somebody. So, there is a\u00a0\u00a0 cost associated with this. So, there is a cost\u00a0\nwith finding a new person. So, new person finding\u00a0\u00a0 costs you in addition to their salary, it costs\u00a0\nyou 3200 just to add somebody to your workforce,\u00a0\u00a0 it might"
+    },
+    "760e8be9-1f9d-436f-aa6d-f497cc60364f": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": " involve some training and searching\u00a0\nand all that and then getting somebody to leave\u00a0\u00a0 your company also requires some costs. \nSo, perhaps you have to give them a kind\u00a0\u00a0 of a bonus for hardship and so on.\u00a0\nSo, it costs 4000 to fire a person.\u00a0\u00a0 And the thi"
+    },
+    "fbeb51a7-95fa-4268-9ffa-2fe4e17b6179": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "rd option that we said when you\u00a0\nare going to foresee a demand next month,\u00a0\u00a0 which you do not have the capacity to meet,\u00a0\nbut this month, you have excess capacities that\u00a0\u00a0 you can make extra and keep it but if you keep it\u00a0\nthen you have to store it. So, th"
+    },
+    "6af3acbf-6a81-4af8-869a-46e0eed01a5b": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ere is a storage\u00a0\u00a0 cost which is 80 rupees per carpet. \nSo, these are all the costs involved. So,\u00a0\u00a0 you have a standard cost for per employee of 20000\u00a0\nrupees. So, if you hire somebody for a month, you\u00a0\u00a0 pay them 20000 rupees they make 20 carpets, but if\u00a0\n"
+    },
+    "85c692f5-4f97-4eb1-b1c7-983c233b7d0a": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "you want them to make more you have to pay extra\u00a0\u00a0 you to pay another 800 rupees per carpet, but\u00a0\nthey cannot make more than 6 extra you can hire\u00a0\u00a0 and fire people, but that cost money or you can\u00a0\nmake extra and store it and that costs money. \n\u00a0 So, now, o"
+    },
+    "14c9dd90-1ef8-4b2f-b9e0-510c026944ad": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ur target is obviously to find out\u00a0\nwhat is the minimum cost that I will incur if\u00a0\u00a0 I want to meet this monthly demand exactly for\u00a0\nall these 12 months. So, my target is to meet\u00a0\u00a0 the monthly demand and do it with the minimum\u00a0\ncost by suitably hiring, firi"
+    },
+    "047aad35-cb97-4a92-8ec3-aedc35c935ef": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ng and storing.\u00a0\u00a0 So, for this I need to know month by\u00a0\nmonth, how many people I need to employ.\u00a0\u00a0 So, let wi be the number of workers\u00a0\nwhom I employ in a given month. \n\u00a0 So, remember that I started the year with 30\u00a0\nemployees. So, w1, so, my i runs from 1"
+    },
+    "e1dd5bb9-2ad0-4be5-92ab-c82863ced0cd": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": " to 12;\u00a0\u00a0 1, 2, 3, 4 up to 12. 1 is January, 12 December.\u00a0\nSo, w0 represents how many workers I had in the\u00a0\u00a0 month before January and so that is 30. Let xi\u00a0\nbe the number of carpets that I make in month.\u00a0\u00a0 Ideally, I would like to make di carpets in a\u00a0\nmon"
+    },
+    "b7e298bc-c69f-4701-a365-7c57ce11fa4c": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "th I have a demand of i carpets but I may make\u00a0\u00a0 less or more depending on how many\u00a0\ncarpets I have surplus or how many\u00a0\u00a0 carpets I want to make surplus. \nSo, xi is not always equal to di.\u00a0\u00a0 So, as we said before, sometimes you cannot meet\u00a0\nthe demand from"
+    },
+    "82daab5c-03b1-4b78-8efb-dc3595ba910b": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": " your workers normal workload,\u00a0\u00a0 so you give them overtime. So, we can\u00a0\ncount the cost of overtime in terms of\u00a0\u00a0 number of carpets because we know that each\u00a0\ncarpet in overtime costs 1800 rupees. So,\u00a0\u00a0 it is sufficient to count how many carpets were\u00a0\nmade "
+    },
+    "23515a24-47f0-4031-9dc6-7e2a48fd5957": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "in overtime. So, that is called oi. \n\u00a0 So, we also have this possibility of adding\u00a0\nworkers and removing workers. So, hi will be the\u00a0\u00a0 number of new workers we hire at the beginning of\u00a0\nthe month i and fi will be the number of workers\u00a0\u00a0 that we get rid of "
+    },
+    "350a3a27-79d9-4dd0-8a4e-91a3f96c3534": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "at the beginning of month i.\u00a0\nSo, for instance, we start at the beginning of\u00a0\u00a0 January we had 30 employees, supposing we needed\u00a0\n27 employees in January we could have started\u00a0\u00a0 with f1 equal to 3 that is we could have fired\u00a0\npeople at the beginning of Janu"
+    },
+    "2559ff06-a06d-4d5d-b6cd-c4e10392e87c": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ary itself. \n\u00a0 And finally, in order to keep\u00a0\ntrack of this storage cost,\u00a0\u00a0 we need to know what surplus we\u00a0\nare carrying I mean how much of\u00a0\u00a0 production we have done which we have\u00a0\nnot yet sold. So, that is the surplus\u00a0\u00a0 carpets after month i and if I hav"
+    },
+    "f0a33a79-4f44-4480-bb32-47dfba126407": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "e a surplus\u00a0\ncarpet from month i then in the next month is\u00a0\u00a0 going to be costing me 80 rupees to store it. And\u00a0\nof course, I start the year with no inventory. \n\u00a0 So, I can assume that S0 at the at the beginning\u00a0\nof January that is the end of the previous m"
+    },
+    "4875312e-a4a9-403f-a524-07975792f1b3": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "onth\u00a0\u00a0 was 0. So, I have in some sense, one of these\u00a0\nfor every month. So, I have these 6 variables wi,\u00a0\u00a0 xi, oi, hi, fi and si. For one i equal to 1 to 12,\u00a0\n6 twelves are 72. And then I need these two extra\u00a0\u00a0 variables as we will see. For the month before"
+    },
+    "750cb93d-9528-4967-94ac-42a854ed2167": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "\u00a0\nwe started, we need to know what the surplus was\u00a0\u00a0 coming in. That is a kind of boundary condition,\u00a0\nwhat is the surplus coming into this year and how\u00a0\u00a0 many workers we had coming into this year. So,\u00a0\nwe have 74 variables in our linear program. \n\u00a0 So, no"
+    },
+    "5c736169-6380-4452-92a6-3eced5a4f04c": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "w we have to start\u00a0\nexpressing these constraints\u00a0\u00a0 in terms of these variables. So, the first\u00a0\nconstraint is, of course, that everything is\u00a0\u00a0 non-zero and non-negative, I cannot have minus\u00a0\nfive workers, nor can I hire a negative number\u00a0\u00a0 of workers, nor c"
+    },
+    "37ea20f2-7288-4eb7-9030-7d2697630593": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "an I produce a negative number\u00a0\nof carpets, so everything here is at least 0. So,\u00a0\u00a0 how many carpets do I make in a month? Well, every\u00a0\nworker who is employed will make 20 carpets. \n\u00a0 So, I will get 20 times wi, if I have wi people on\u00a0\nmy staff, they are g"
+    },
+    "cd00cbf6-ee58-45c5-8029-fabc7b6259be": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "uaranteed to make 20 carpets,\u00a0\u00a0 no more, no less. And in addition to that, some\u00a0\nof them will make carpets because I asked them to\u00a0\u00a0 do it in overtime. I am not particular about who\u00a0\ndoes it. So, I will just count cumulatively this\u00a0\u00a0 value that we have kep"
+    },
+    "7909215e-25a7-4390-a526-abc0c0a43e67": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "t track of oi as the total\u00a0\novertime, contribution to my carpets made. \n\u00a0 So, notice that this wi could also change. So,\u00a0\nit is not that I am sticking to the original\u00a0\u00a0 30 employees, I could now have for instance, 35\u00a0\nemployees, as we will see because of h"
+    },
+    "8c1eae4d-80b8-4980-bf4c-7c07cf8a4469": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "iring. But\u00a0\u00a0 whoever is there with me will make 20 carpets\u00a0\nplus some of them will make possibly overtime.\u00a0\u00a0 So, now the number of workers I have will have\u00a0\nto be consistent with these three numbers.\u00a0\u00a0 How many workers I had before this month, and\u00a0\nhow man"
+    },
+    "eb43bb32-52ee-42fd-bef9-81314b15af35": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "y I hired and fired in this month. \n\u00a0 So, this at the end of the last month, I had wi\u00a0\nminus one workers, this month, I hired some and\u00a0\u00a0 I fired some. So, the hired ones add to my\u00a0\nworker base, and the fired ones get removed\u00a0\u00a0 from my worker base. So, my n"
+    },
+    "99b62899-d51c-4b90-beac-bf9034fdc4bf": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ew worker set is the\u00a0\nold workers, plus the hirings minus the firings.\u00a0\u00a0 So, this is a constraint which basically tells\u00a0\nus how some of these values are connected,\u00a0\u00a0 it says that these sorry, it\u00a0\nsays that these three values\u00a0\u00a0 cannot be completely arbitrar"
+    },
+    "50364e0f-cab6-4f09-b509-f6e34bce8ab1": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "y, there must be\u00a0\nsome consistency between the workers in this\u00a0\u00a0 month in the workers in next month, and how many\u00a0\npeople are hired and fired in the next month. \n\u00a0 Similarly, there is a connection between\u00a0\nhow much I have surplus and how much I have\u00a0\u00a0 prod"
+    },
+    "e457eceb-ad41-415c-ab68-a1c8720f7cd4": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "uced in the last month. So, if I look at\u00a0\nwhat I had surplus before I started this month,\u00a0\u00a0 so that is how much I had at the end of the last\u00a0\nmonth. And then look at how much I make now,\u00a0\u00a0 so xi is how much I made in this month. So,\u00a0\nI already had si minus"
+    },
+    "9c418ba4-0278-41a4-906e-98bd4596525c": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": " 1 carpets in storage,\u00a0\u00a0 I made an additional xi this month. \nBut I also know that I got rid of\u00a0\u00a0 di carpets because that was a demand this\u00a0\nmonth. So, I remove this from my stock.\u00a0\u00a0 So, xi might have been smaller than\u00a0\ndi because I am using some old stock"
+    },
+    "81e1705a-2590-4409-876f-963ea28a558c": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": ".\u00a0\u00a0 Or it could be that xi is bigger than di because\u00a0\nI am keeping some stock to store next time,\u00a0\u00a0 but whatever excess happens goes into si. So,\u00a0\nideally si minus 1 plus xi should be equal to\u00a0\u00a0 di have exactly as many carpets as you need\u00a0\nto sell, but I c"
+    },
+    "44205639-efee-42af-9a1f-47f708397080": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ould be selling more. \n\u00a0 But remember that everything must be bigger than\u00a0\n0. So, si cannot be a negative number I cannot be\u00a0\u00a0 short selling I mean I cannot be not meeting the\u00a0\ndemand. So, I must be making at least these many\u00a0\u00a0 carpets and possibly more wi"
+    },
+    "27f94aa3-a894-412e-84fc-ecd4e0d9a42b": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "th storage and what\u00a0\nI made this month and that will translate as si.\u00a0\u00a0 And the final thing says that\u00a0\nthis there is a constraint on\u00a0\u00a0 this 30 percent limit in terms of production. \nSo, though we are not really keeping track of who\u00a0\u00a0 is producing what acro"
+    },
+    "90732eb2-5a3e-4482-bd1c-9d3c5bf64498": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ss all the workers, I\u00a0\nknow that each worker cannot produce more than\u00a0\u00a0 6 carpets. So, therefore, the total number of\u00a0\ncarpets that are produced in overtime in a given\u00a0\u00a0 month cannot be more than 6 times the number\u00a0\nof workers who are employed in that mont"
+    },
+    "90846910-b2fb-43a0-b1df-a7fd76ebd13d": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "h. So,\u00a0\u00a0 these are the constraints that I get in terms\u00a0\nof these monthly variables. So, these are all\u00a0\u00a0 indexed by i. So, there are all these things\u00a0\nhappen for equal i to 1, i equal to 2 and so on.\u00a0\u00a0 So, this is our linear program. \nNow, we have this init"
+    },
+    "05458bec-df3e-44c0-8c9c-021bca4bf0f6": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ial constraint which\u00a0\u00a0 says that w0 and s0 the two which are before this\u00a0\nyear's counting starts. So, so w0 should be 30.\u00a0\u00a0 So, not 0. So, w0 is 30, which says that before\u00a0\nI started this year I had 30 workers and I had no\u00a0\u00a0 surplus. Now, for i equal to 1 "
+    },
+    "553e93bd-cddd-4c26-ba16-7447b6b9a583": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "to 12, I know that\u00a0\nall these 12 into 6, 72 values are not negative,\u00a0\u00a0 then I know that the production in a month is\u00a0\nequal to the regular production of the wi workers\u00a0\u00a0 plus the overtime production. \nI know that the total number of workers\u00a0\u00a0 respects the "
+    },
+    "6e2dd66c-013a-4ac5-8522-9014613027ba": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "total number of workers I had\u00a0\nbefore plus the addition due to hiring and\u00a0\u00a0 the loss due to firing. I know that the surplus\u00a0\nis equal to this month's production plus this\u00a0\u00a0 month surplus from the previous month, minus this\u00a0\nmonth's demand. And finally, thi"
+    },
+    "68d15ec0-c800-42e7-a920-304854311f97": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "s is our limit\u00a0\u00a0 of 30 percent production on overtime. So, now, the\u00a0\nobjective function is to minimize the costs. So,\u00a0\u00a0 I have these different cost rates.\u00a0\nSo, this is the salary cost. \n\u00a0 So, the salary cost for the year is 20000, times\u00a0\nthe number of work"
+    },
+    "f4381520-3044-4753-8e38-45a766b9ce25": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ers in each month. So, 20000\u00a0\u00a0 times w1 is a salary costs for January and so\u00a0\n20000 times w12 is my salary costs for December.\u00a0\u00a0 Then I have a hiring cost. So, for each\u00a0\nworker that I had, remember that we had\u00a0\u00a0 to pay 3200 rupees as a fixed cost for\u00a0\nempl"
+    },
+    "43ade5aa-56d5-4aff-9515-5345c454efb5": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "oying this person from scratch. So,\u00a0\u00a0 if I just add up the number of workers\u00a0\nI have hired across the 12 months,\u00a0\u00a0 that times 3200 is my total hiring costs. \nSimilarly, if I add up the number of workers\u00a0\u00a0 who have been fired across 12 months, that times\u00a0\n4"
+    },
+    "10650fde-d431-4af2-bf6c-b711aecb5eb2": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "000 firing cost. Storage costs 80 rupees a month.\u00a0\u00a0 So, if I add up the number of carpets stored\u00a0\nat the end of each month, during this year,\u00a0\u00a0 multiply by 80, I get the total storage cost\u00a0\nincurred. And finally, remember that our overtime\u00a0\u00a0 gives the work"
+    },
+    "df82b9fb-e748-4a49-ad76-87487e7e6042": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "er an 80 percent bonus. So, instead\u00a0\nof 1000 rupees per carpet, for every carpet,\u00a0\u00a0 I make an overtime I have to pay 1800. \nSo, if I add up the total number of carpets made\u00a0\u00a0 an overtime across the months, and I multiply\u00a0\n1800 I get the extra cost I have p"
+    },
+    "f8d03e07-5a97-49c4-bb23-0343c921fa47": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "aid for\u00a0\u00a0 employing a worker in overtime, I will do that\u00a0\nbecause sometimes it is better to get a worker\u00a0\u00a0 in overtime to supposing I need only 6 extra\u00a0\ncarpets, it is better to make one worker work\u00a0\u00a0 overtime rather than hire a new worker who will\u00a0\nproduc"
+    },
+    "65f5e773-7c4c-43cb-8f73-27945e5ca6b2": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "e 20 carpets cost some money to hire. And\u00a0\u00a0 I will also add up with 14 carpets surplus. So,\u00a0\nthat is why overtime sometimes balances out. \n\u00a0 So, having set all this up. So, we have set up\u00a0\nthe constraints, we have set up the objective and\u00a0\u00a0 as we said befo"
+    },
+    "60278505-8db1-4f35-9449-632a200c330f": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "re, what we will typically\u00a0\ndo is run simplex and find a solution.\u00a0\u00a0 So, are we done? Well, in this case, it might\u00a0\nturn out that some of the values that we get\u00a0\u00a0 are fractional. So, supposing it says that h3 is\u00a0\nequal to 10.6. So, h3 is equal to 10.6 says"
+    },
+    "8dcf36f7-af88-48fa-85f7-358394d75cf8": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": " that\u00a0\u00a0 in March I should hire 10.6 people now obviously,\u00a0\nI cannot hire 10.6 people because people are\u00a0\u00a0 indivisible, I can hire 10 people, I can\u00a0\nhire 11 people, I cannot have 0.6 people. \n\u00a0 So, then we have to deal with this problem where\u00a0\nwe are expect"
+    },
+    "b8ce20cc-e1c2-421c-ad6a-43d190e6cf2d": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ing integer solutions, but our linear\u00a0\u00a0 program gives us fractional solutions. So, one\u00a0\nway to do it is to take a fractional solution\u00a0\u00a0 which is produced by simplex. And try to round\u00a0\nit off. So, we can say 10.6 workers, maybe I do\u00a0\u00a0 not want 10.6 workers,"
+    },
+    "b0518a49-56cf-4172-a305-6cb9869b4efb": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": " let me say if I produced\u00a0\nif I just employed 10 workers, what will be will\u00a0\u00a0 I meet the demand and what would be the cost if I\u00a0\ntook 11 workers will I meet the demand what will\u00a0\u00a0 be the cost and choose the better one. \nSo, you can round off your solutions"
+    },
+    "0bce8d28-b96c-49ab-bb16-20fd8376fc43": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": " to the\u00a0\u00a0 nearest integer or to the integers on either side\u00a0\nof that fraction and recompute the cost and see.\u00a0\u00a0 So, if your values are very large. So, if your\u00a0\nsolutions are things like 1800 and 1900 and so on,\u00a0\u00a0 then you can imagine that, adding plus minu"
+    },
+    "20e71322-4e8f-415f-9bee-bfb42f9167fe": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "s\u00a0\nhalf may not change much to the overall cost.\u00a0\u00a0 But if your values are small like 10.6, then\u00a0\n10 and 11 can make a huge difference, maybe\u00a0\u00a0 20000 rupees is what you pay for a worker. \nSo, between 10 workers and 11 workers, you end up\u00a0\u00a0 incurring an extr"
+    },
+    "c2b657cc-5f91-40f2-bbf2-af0211d8a677": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "a cost 20000 rupees, which might\u00a0\nbe a large fraction of your overall cost. So, the\u00a0\u00a0 values are small, you need to be very careful when\u00a0\nyou are rounding. And in fact, there is actually\u00a0\u00a0 no good way to do this in general. So, this if we\u00a0\ninsist that this"
+    },
+    "408e0c49-9b68-49a0-96d1-00ce21d742af": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": " optimization that we are doing in\u00a0\u00a0 linear programming must have integer solutions\u00a0\nand not arbitrary fractional solutions. \n\u00a0 Then the efficient or non-efficient even if you\u00a0\nsimplex or if you use the efficient ones that\u00a0\u00a0 we claim exist, they will not w"
+    },
+    "eaff84a4-fe3a-401d-8a62-bb932406fd17": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ork anymore, they\u00a0\nwill only allow you to solve the problem if you\u00a0\u00a0 allow arbitrary solutions, including fractions.\u00a0\nIf you insist on so called integer solutions,\u00a0\u00a0 then we get into this problem called\u00a0\ninteger linear programming. And this\u00a0\u00a0 turns out to "
+    },
+    "f7291403-8b87-4887-8b63-2db222b582a6": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "be computationally intractable. \nSo, we will see in C shortly what this means. But\u00a0\u00a0 computationally intractable really means\u00a0\nthat there is no clever way to do it. So,\u00a0\u00a0 remember, what we said was that there is a\u00a0\nfeasible region. And in this feasible reg"
+    },
+    "6af96d6e-3756-42de-939f-681757907664": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "ion,\u00a0\u00a0 of course, by brute force, you can search every\u00a0\ncombination. So, in particular, if you are looking\u00a0\u00a0 for integer points, you can search every integer\u00a0\ncombination within the feasible region. \n\u00a0 So, that will give you one way of solving it, but\u00a0\nthe"
+    },
+    "bfb45b00-1a4b-48f6-843b-9c887ddf419e": {
+        "content_id": 74,
+        "course_name": "PDSA",
+        "title": "Linear Programming  Production Planning",
+        "week": 11,
+        "chunk": "re could be a very large number of such integer\u00a0\u00a0 points integer combinations to choose from.\u00a0\nBut when we say computationally intractable,\u00a0\u00a0 it really says that some kind of exhaustive search\u00a0\nlike that is unavoidable in the worst case."
+    }
+}

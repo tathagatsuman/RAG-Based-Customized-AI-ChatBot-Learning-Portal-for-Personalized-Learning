@@ -1,0 +1,541 @@
+{
+    "333b7421-35cf-4b0c-998b-6122771d8901": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "So, let us continue with our recap of\u00a0\npython by looking at another example,\u00a0\u00a0 first we looked at gcd, now let us look at\u00a0\nthe problem of dealing with prime numbers. \n\u00a0 So, we would like to check primality, so remember\u00a0\nthat a prime number is 1 that is div"
+    },
+    "e5620c1b-8f3b-4bd5-b84a-d71576127486": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "isible\u00a0\u00a0 only by 1 and itself, it has no proper\u00a0\ndivisors other than 1 and itself, so prime\u00a0\u00a0 number has exactly 2 prime factors, a prime\u00a0\n2 factors 1 and n and it has (())(0:38) of 2,\u00a0\u00a0 so it is not enough to have only 1 factor so\u00a0\nif you look at 1, the n"
+    },
+    "6dfd11f5-424a-4a4b-a233-5c6728d7e207": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "umber 1, it has only\u00a0\u00a0 1 factor namely 1 because it is itself 1. \nSo, we need two different factors 1 and n so\u00a0\u00a0 technically speaking 1 is not a prime the\u00a0\nsmallest prime as you should know is 2.\u00a0\u00a0 So, one way to check whether a number is\u00a0\nprime is to comp"
+    },
+    "8c703817-ca3f-417e-aadc-023fbbe41d64": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "ute the list of factors\u00a0\u00a0 of that number and then check whether that\u00a0\nlist of factors contains exactly 1 and n.\n\u00a0 So, the list of factors of a number is very\u00a0\nsimilar to the loop that we wrote to compute\u00a0\u00a0 the common factors between two different numbers.\u00a0"
+    },
+    "46148839-0256-4e4a-8c71-dca9406d2139": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "\nSo, in the earlier gcd example that we looked at\u00a0\u00a0 we computed all the common factors between m and\u00a0\nn by running from 1 to the minimum of m and n\u00a0\u00a0 and for each number they divided both m and\u00a0\nn, we appended it to this list of factors.\n\u00a0 Here we do not h"
+    },
+    "e8179cf1-011c-4d26-89ac-8b49f6469cda": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "ave two numbers we only have\u00a0\none number so we just define this factor list\u00a0\u00a0 remember like in the common factor list earlier\u00a0\nwe have to assign it to empty to make sure that\u00a0\u00a0 python knows it is a list. Now, we run from, so\u00a0\nwe are looking factors of n, s"
+    },
+    "a2da5832-204e-44d7-aeb2-3293e4219721": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "o we run from 1 to\u00a0\u00a0 n plus 1 because we want n also to be in our loop,\u00a0\nso we run try out all numbers 1, 2, 3, 4, up to n\u00a0\u00a0 whenever we find a number which divides n\u00a0\nsuch that the remainder is 0 when divided by i\u00a0\u00a0 for each such i we appended.\nSo, this i"
+    },
+    "746dbd61-d146-4296-b833-c00da5a70ca5": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "s very similar to the\u00a0\u00a0 earlier common factor list except it is the list\u00a0\nof factors of a single number n. And now having\u00a0\u00a0 got this it is a simple matter to write a function\u00a0\nwhich checks if a number is prime you just compute\u00a0\u00a0 the factors of the number y"
+    },
+    "991f89bf-e753-45a0-82ca-e34a96ea4988": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "ou are trying to check\u00a0\nand verify that it is the list 1 comma n.\n\u00a0 So, this again tells us that 1 is not\u00a0\na prime because if I say factors of 1,\u00a0\u00a0 what I am going to get is just the list 1 which\u00a0\nis not equal to 1 comma 1. So, that is why\u00a0\u00a0 this function "
+    },
+    "113e0202-f9f5-4ea6-9654-498c7c1bbee2": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "will correctly compute that\u00a0\nthe smallest prime is actually 2. \n\u00a0 So, now that we know how to check a given\u00a0\nprime let us see what we can do with this. So,\u00a0\u00a0 the first thing we might ask is what are all the\u00a0\nprimes up to 100 say or what are all the primes\u00a0"
+    },
+    "a8de9b62-7bd6-4932-948d-4fe2c290e68a": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "\u00a0 up to 1000 so we want to list all the primes up to\u00a0\nsome number m, so again it is a very simple matter\u00a0\u00a0 we just start off with an empty list of primes\u00a0\nand we run a for loop saying for everything from\u00a0\u00a0 1 up to m, so remember the range function\u00a0\nhas to "
+    },
+    "ee1f746f-4f5a-4479-a5d1-e8736686ec1e": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "go to m plus 1 so that we capture m,\u00a0\u00a0 for everything from 1 to m if the number i is\u00a0\na prime and we can use that earlier function to\u00a0\u00a0 decide this if the earlier function returns true\u00a0\nthen i gets appended to this list of primes. So,\u00a0\u00a0 it is a very straig"
+    },
+    "db00b8dd-3206-4ff7-bf00-301d756695d0": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "htforward thing to compute the\u00a0\nlist of primes from 1 up to any given number m.\n\u00a0 On the other hand, supposing we do not want\u00a0\nthe list of primes up to a given number\u00a0\u00a0 m but we want the first m primes. Now,\u00a0\nprimes are infinite but there are gaps\u00a0\u00a0 so a p"
+    },
+    "9cb633dc-613e-413f-a977-0bf90fdfb224": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "riori it is not very clear if I ask you for\u00a0\nthe first 2000 primes, it is not very clear what\u00a0\u00a0 is the 2000th prime in value, how many numbers\u00a0\nshould I search for the first 2000 primes.\n\u00a0 So, here instead of using a for loop we will use\u00a0\na while loop and "
+    },
+    "62af389b-766f-4535-9597-62ec3523a3c8": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "count the primes as we get them\u00a0\u00a0 and when we reach the number m we will stop.\u00a0\nSo, we keep a counter to count how many primes\u00a0\u00a0 we have seen, we keep incrementing i and when we\u00a0\nhave reached m primes in our counter we stop.\n\u00a0 So, one thing to note in this"
+    },
+    "0ebde81d-4f8c-44f9-963e-d83edfa74b05": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " function is that we\u00a0\nhave used this feature in python called multiple\u00a0\u00a0 assignment. So, we want to keep track of a\u00a0\ncount, how many primes we have seen so far\u00a0\u00a0 and that is initially 0. We want to now\u00a0\nuse a while loop for this because we do\u00a0\u00a0 not know ho"
+    },
+    "17ff7d11-ea2d-4c06-8521-a06bb79f3a13": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "w many so in the earlier thing\u00a0\nwe ran i from 1 to a fixed number m plus 1\u00a0\u00a0 but here we do not know how many i's we have to\u00a0\nlook at, so we start with i equal to 1 and we\u00a0\u00a0 explicitly increment it inside the while loop.\nSo, this is the second initializati"
+    },
+    "d63810ae-a7ed-4cb2-84a8-609fe182096c": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "on and the\u00a0\u00a0 third one is we need to of course keep\u00a0\ntrack of the prime list. So, these are\u00a0\u00a0 three separate assignments count equal to 0, i\u00a0\nis equal to 1 and pl is equal to the empty list,\u00a0\u00a0 all collapsed into one single tuple assignment.\u00a0\nSo, the first "
+    },
+    "6aaf9978-add1-4ff0-b481-461637180cad": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "element of the tuple count is\u00a0\u00a0 assigned to the first element on the right 0,\u00a0\ni is assigned to 1, pl is assigned empty.\n\u00a0 And now what is our while loop say it says as\u00a0\nlong as I have not yet found m primes I will\u00a0\u00a0 check if the current number I am lookin"
+    },
+    "b0d8af67-0b62-43af-aa59-10e4cf9a3d22": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "g at is a\u00a0\nprime and if it is a prime then I do two things,\u00a0\u00a0 I increment the count so again this is a multiple\u00a0\nassignment or a multiple update, i count becomes\u00a0\u00a0 count plus 1 and pl now I use this plus for\u00a0\nlist which basically concatenates two lists,\u00a0\u00a0 "
+    },
+    "25fb7f95-2bc8-4299-8b14-3cbbb505e0a1": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "I already have some primes and I want to add 1 to,\u00a0\ni to it earlier I had use the append function here\u00a0\u00a0 I am using a plus function so this takes a list of\u00a0\nprimes already given to me, it takes a singleton\u00a0\u00a0 list with the new prime I have just found and\u00a0\nc"
+    },
+    "9b73d72e-3fdb-40a2-b329-ad0b1c791fd6": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "ombines it into a longer list pl plus i. \n\u00a0 And whatever I have done whether I found a\u00a0\nprime or not I must move on to the next i\u00a0\u00a0 so I have to increment i so that after 1 I will\u00a0\nlook at 2, after 2 I will look at 3 and so on\u00a0\u00a0 but i is not determining ho"
+    },
+    "58755844-3cb3-463b-9c30-d14c96df2287": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "w when the\u00a0\nloop ends, i will keep on incrementing\u00a0\u00a0 it is only when count reaches the value that I\u00a0\nwant the threshold that I want that this loop\u00a0\u00a0 will terminate. So, I cannot tell you in advance\u00a0\neven knowing m it is difficult to predict what\u00a0\u00a0 value i "
+    },
+    "ecb9ba7c-75cf-43ed-bbf7-a5b398ae7b20": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "will reach, I will only know at the\u00a0\nend what is the largest prime that I saw.\n\u00a0 So, this is used so this two examples are\u00a0\nbasically to illustrate the difference between\u00a0\u00a0 these two types of loops that python has and\u00a0\nalmost any other programming language"
+    },
+    "f3070466-c1fa-49a2-a4e0-fc2e01fa587e": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " has. So,\u00a0\u00a0 there is a for loop and a while loop. So, a\u00a0\nfor loop is something which is predictable,\u00a0\u00a0 we know in advance how many times\u00a0\nwe are going to execute it. \n\u00a0 So, in the kind of for loop we have used so far,\u00a0\nwe are running from 1 to m but in gen"
+    },
+    "c8433efb-2245-474a-b577-e571681f1973": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "eral as you\u00a0\u00a0 know in a python for loop you can run over\u00a0\na sequence or a list, so you can say for i\u00a0\u00a0 in l. So, it runs over but l is a fixed list you\u00a0\nshould not be changing that list for example,\u00a0\u00a0 so that is a very bad and dangerous practice, if\u00a0\nyou a"
+    },
+    "3332c042-28a6-46d8-ac89-4f7b0bb50e2e": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "re using a for loop do not change either the\u00a0\u00a0 index variable or what it is ranging over\u00a0\ninside the loop otherwise your program will\u00a0\u00a0 be very unpredictable. So, the whole purpose of\u00a0\na for loop is to be predictable I know I am going\u00a0\u00a0 to run this loop a "
+    },
+    "61df4a2c-a83f-4903-858a-f5231c517496": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "fixed number of times.\nOn the other hand, when I do not know how many\u00a0\u00a0 times I am going to execute the loop but the loop\u00a0\nwill terminate based on some condition that will\u00a0\u00a0 eventually become true then I use a while loop,\u00a0\nlike here when I am trying to com"
+    },
+    "2eaae3a1-b241-47b3-8575-13462733e3b9": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "pute the first\u00a0\u00a0 m primes but when I am writing a function with\u00a0\na while loop you must make sure that the while\u00a0\u00a0 loop will actually terminate. Because if you do\u00a0\nnot ever make that condition true for example\u00a0\u00a0 if this condition does not become false rathe"
+    },
+    "3ee99e18-71a5-49b7-9944-093d96864d39": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "r,\u00a0\nif this condition remains true forever then the\u00a0\u00a0 while loop will keep on running indefinitely.\nSo, you will have a function or a program which\u00a0\u00a0 does not terminate. So, you have to make sure\u00a0\nthat you are doing something inside your loop,\u00a0\u00a0 in this ca"
+    },
+    "cab417d9-f312-44ee-89db-bfae9cab750b": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "se count equal to count plus 1\u00a0\nwhich is taking me towards this progress\u00a0\u00a0 of making sure that the loop will\u00a0\neventually execute, will eventually exit.\n\u00a0 So, here is a different strategy for checking\u00a0\nprimes, we do not actually have to compute\u00a0\u00a0 the entire"
+    },
+    "516c6249-b3d4-4a7e-a673-6d09bcd49937": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " list of factors and then check that is\u00a0\n1 comma n. All I have to do is check whether there\u00a0\u00a0 is any factor between 2 and n minus 1. So, this is\u00a0\nagain to illustrate a style that we have seen long\u00a0\u00a0 ago in computational thinking what also you should\u00a0\nhave "
+    },
+    "ffb3a286-82c4-4ded-abbf-ccce8073581f": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "seen in other situations. We will assume\u00a0\u00a0 that a number is a prime. \nSo, we start off assuming\u00a0\u00a0 in this name result that the number n we are\u00a0\nconsidering is a prime. Now, we are looking\u00a0\u00a0 for proper factors so we are not interested in the\u00a0\nfactor 1, we a"
+    },
+    "10223618-1d26-4ae7-a8f8-1ef220cbd80e": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "re not interested in the factor n,\u00a0\u00a0 so we are going to run from 2 to n minus 1, so\u00a0\nthe range function goes from 2 to n because if\u00a0\u00a0 I have the upper limit as n the actual upper\u00a0\nlimit that we are looking at is n minus 1. \n\u00a0 So, in this range from 2 to n "
+    },
+    "f27c4e9f-83f8-4387-a2f7-9b7d1f4f8505": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "if I actually find\u00a0\na prime then I mean if I actually find a factor\u00a0\u00a0 rather then I know that this is not a prime so\u00a0\nmy initial assumption gets reversed and I change\u00a0\u00a0 it to false. At the end of this loop either I did\u00a0\nnot find a factor in which case my a"
+    },
+    "f7f9772f-8138-49b2-87f5-40c54b92159e": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "ssumption held\u00a0\u00a0 and it was true or I found a factor and it became\u00a0\nfalse and it is not a prime so whatever it is at\u00a0\u00a0 the end I return the result. So, this is a more\u00a0\ndirect way of checking if a number is prime,\u00a0\u00a0 you just cycle through all the factors an"
+    },
+    "aa4e0ab5-e0e2-4903-8477-008bc775ad2a": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "d if you\u00a0\nfind a nontrivial factor between 2 and n minus 1,\u00a0\u00a0 you switch your rating of this\u00a0\nnumber from true to false.\n\u00a0 Now, of course a nonprime number will have many\u00a0\nfactors. So, there is no point in looking once we\u00a0\u00a0 have found the first factor that"
+    },
+    "5325b0c7-b097-4c9d-97a3-baec06cf81ad": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " we are looking\u00a0\nfor, once we have found 1 factor we are done.\u00a0\u00a0 So, we can actually terminate this thing as soon\u00a0\nas we find a factor and that one way to do that\u00a0\u00a0 is to use this function called break. \nSo, what break does is that it breaks out of the\u00a0\u00a0 l"
+    },
+    "983b77ff-4d82-4c51-9576-13c12a08fc93": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "oop inside which it is so this break will\u00a0\nterminate the for loop the moment I find\u00a0\u00a0 some i between 2 and n minus 1 which\u00a0\nsets this result to be false. So,\u00a0\u00a0 I do not if I find 2 itself for example supposing\u00a0\nthe number is very large but it is an even nu"
+    },
+    "d507da75-fbf4-499d-bb9a-08bf002fc108": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "mber\u00a0\u00a0 the moment I know that 2 divides that number\u00a0\nI can stop I know it is not a prime.\n\u00a0 So, of course breaking out of a loop is\u00a0\nsometimes unavoidable, but very often\u00a0\u00a0 it leads to confusion about what is actually\u00a0\nhappening in the code, so you should "
+    },
+    "518d4551-8711-4b82-9984-3db5fa8e133f": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "use breaks\u00a0\u00a0 with caution, it is nicer usually to have\u00a0\nthis kind of a loop controlled by a while. So,\u00a0\u00a0 what we can now say is that I will use this result\u00a0\nitself to control the loop, so long as I have not\u00a0\u00a0 contradicted my assumption that the number is\u00a0\n"
+    },
+    "965755e3-8267-452e-b65e-49eca2c0fc04": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "a prime I will keep searching and the moment I\u00a0\u00a0 find a prime that is not a prime I will exit.\nSo, I assume that result is true and I start with\u00a0\u00a0 2. So, I am basically going to simulate this range\u00a0\n2 to the n by a while loop as we did earlier.\u00a0\u00a0 But now w"
+    },
+    "16ca0800-1ecc-45f9-a9af-c79508cad4b8": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "hat I do is I check whether I\u00a0\nhave two things now, I check whether I have\u00a0\u00a0 violated this so if the result becomes false that\u00a0\nis I have found a factor I will exit the loop\u00a0\u00a0 or if I have exceeded the number of the\u00a0\nrange of factors I am going to try.\n\u00a0 S"
+    },
+    "5f1787d6-16f9-43cc-98df-75b48fdf5dea": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "o, if I have cross from n minus 1 to n\u00a0\nthen I no longer have to continue I can\u00a0\u00a0 terminate with whatever result I have. So,\u00a0\nI need both result to be true, I have still\u00a0\u00a0 not discovered that it is not a prime and I have\u00a0\nnot run out of factors to try and "
+    },
+    "0b0247a0-742d-4b1b-b468-a2c381157ffb": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "if that is the\u00a0\u00a0 case then I try out the current factor and if the\u00a0\ncurrent factor actually divides or the current\u00a0\u00a0 candidate factor actually divides then I set the\u00a0\nresult to false so the next loop will terminate\u00a0\u00a0 and then I increment i so that progress"
+    },
+    "a6b60fd1-bd03-4f22-b180-7165ef3b8551": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "\u00a0\nso eventually even if no factors are found\u00a0\u00a0 i will eventually reach n and in both cases this\u00a0\nloop will terminate. So, remember when you write\u00a0\u00a0 a while it is your job to make sure that the\u00a0\nwhile actually terminates at some point.\n\u00a0 So, finally one thi"
+    },
+    "1cb42710-c717-4740-8d97-8fc094c86890": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "ng we can do with primes is to\u00a0\nspeed up this thing a little bit because factors\u00a0\u00a0 as we all know occur in pairs so if something, if\u00a0\n2 is a factor then n by 2 will be a factor, so if\u00a0\u00a0 2 divides 16 then 16 by 2, 8 is also a factor so\u00a0\nI do not need to sep"
+    },
+    "df0e3056-9f7d-4418-870c-f3818898c722": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "arately check 8, every time\u00a0\u00a0 I find a factor I find a matching factor.\nSo, in particular the factors divide as those\u00a0\u00a0 which are smaller than square root of n and\u00a0\nthose which are bigger. So, remember square\u00a0\u00a0 root of n is a number, so that square root\u00a0\no"
+    },
+    "d6b70005-7596-4c62-97aa-32a0490ba40d": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "f n is itself its pair, so every number,\u00a0\u00a0 every factor smaller than square root of n will\u00a0\nhave a factor bigger than square root of n.\n\u00a0 Of course in general square root of n will not\u00a0\nbe an integer unless n is a perfect square but\u00a0\u00a0 it is enough to look "
+    },
+    "2ca45c16-7f90-49b5-bb83-192c467b65b3": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "from 1 to square root of\u00a0\nn because all the factors beyond square root\u00a0\u00a0 of n are paired with all the factors before\u00a0\nsquare root of n. So, if n is a prime I just\u00a0\u00a0 need to check for factors from 2 to square\u00a0\nroot of n rather than 2 to n minus 1. \n\u00a0 So, in"
+    },
+    "09c52274-c134-4e19-923b-b42dcd34ad09": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " order to use square root I need to import\u00a0\nthis math function so I import math and now\u00a0\u00a0 the difference between the previous one and this\u00a0\nis that instead of checking earlier I was checking\u00a0\u00a0 i less than n, now I am stopping at a smaller\u00a0\nnumber i less th"
+    },
+    "74bbbbc3-9a21-4183-9a2d-6e8fb2684f0c": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "an square root of n everything\u00a0\u00a0 else is the same. So this marginally improves it\u00a0\nI mean in a sense it drastically improves because\u00a0\u00a0 square root of n will be smaller than n so if say\u00a0\nfor example n is say 1 million then square root of\u00a0\u00a0 n will be 1 thous"
+    },
+    "ce9efbed-ad72-4664-b3a2-98dde624818e": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "and, so there will be a drastic\u00a0\nimprovement in that sense. But actually we would\u00a0\u00a0 like something even more efficient than this\u00a0\nbut that is beyond the scope of this course.\n\u00a0 So, as a final exercise using primes let us look\u00a0\nat some properties of primes."
+    },
+    "c23a126e-248b-41d0-b95d-432c2312365d": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " So, one of the\u00a0\u00a0 things that is a very classical result about prime\u00a0\nnumbers is that there are infinitely many of them,\u00a0\u00a0 there is no such thing as the largest prime, there\u00a0\nare any number of proofs and if you do not know\u00a0\u00a0 some proofs I encourage you to "
+    },
+    "85f3385b-3abc-434d-895a-863ba526113d": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "find out because\u00a0\nthere are some very simple proofs of this.\n\u00a0 Now, primes become larger and larger so one of\u00a0\nthe natural questions that people have asked is\u00a0\u00a0 how are they distributed, how are the gaps between\u00a0\nthe primes. Obviously as you get larger and"
+    },
+    "c90688e9-09c5-42c6-b48d-bc2b2780eea6": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " larger\u00a0\u00a0 you would some, you can notice even if you look at\u00a0\nsmall numbers like you know numbers between 1 and\u00a0\u00a0 1000 between say 1 and 10 you have prime numbers\u00a0\nlike 2, 3, 5, 7 so they are pretty close.\n\u00a0 But if you start going up the ladder then by\u00a0\nth"
+    },
+    "ba4e5786-9d2d-4099-89da-93a2b3e2d5d6": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "e time you reach say the 40s you have 41, 43\u00a0\u00a0 then you have a big gap like 47 and so\u00a0\non. So, the gaps become larger between\u00a0\u00a0 the primes as the numbers become bigger so\u00a0\nhow are the primes distributed. So, you would\u00a0\u00a0 be inclined to think that as the num"
+    },
+    "eb658bc1-4da1-4264-a143-12ce22914691": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "bers become\u00a0\nlarger the gaps will keep on increasing.\n\u00a0 So, a particular interesting difference is\u00a0\ntwo. So, we say that two primes are twin primes\u00a0\u00a0 if they are difference of two. And why will there\u00a0\nbe a difference of two? Typically, they are two\u00a0\u00a0 odd n"
+    },
+    "5f2e4c58-d6bf-4349-9f89-c186607b1fba": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "umbers and they are usually of the form 2\u00a0\nto the k minus 1 or 2 to the k plus 1 this is a\u00a0\u00a0 typical type of format of two prime numbers.\nSo, it is not always the case but there are many\u00a0\u00a0 interesting primes which have this kind of a\u00a0\ndistribution. For exa"
+    },
+    "eb952242-16b5-480b-b5f6-b00fc666d094": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "mple, 15 and 17, no 15 and\u00a0\u00a0 17 are not prime so let us not worry about this\u00a0\nbut there are these twin primes and some of them\u00a0\u00a0 have this format but twin primes do exist like 17\u00a0\nand 19 are twin primes because they are 2 apart,\u00a0\u00a0 5 and 7 are twin primes b"
+    },
+    "4d75238e-0df8-4408-9400-fb19f3606465": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "ecause they are 2 apart\u00a0\nand so on 41 and 43 are also twin primes.\n\u00a0 So, the twin prime conjecture is one of\u00a0\nthe questions which is yet not resolved\u00a0\u00a0 in number theory is are there infinitely many\u00a0\ntwin primes. So, as we go into the larger and\u00a0\u00a0 larger nu"
+    },
+    "03b73435-188d-43bc-b613-e83800fad401": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "mbers and look at all the primes will\u00a0\nwe still find primes of the form p and p plus 2.\u00a0\u00a0 So, we will of course not be able to solve the\u00a0\ntwin prime conjecture using python, but we can\u00a0\u00a0 at least ask the following question which is if\u00a0\nI give you a range o"
+    },
+    "6f949c64-4fec-4038-9b8e-a532a32e4046": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "f numbers like we saw earlier\u00a0\u00a0 how to compute the primes up to a number m.\nSo, instead of just computing the primes up to\u00a0\u00a0 a number m supposing I ask you what\u00a0\nare the differences that I observe\u00a0\u00a0 between the primes between 1 and m. Now, you\u00a0\nwant to kee"
+    },
+    "9436a07f-2cc8-4cf7-bda1-1c1bd281859f": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "p track of just the differences,\u00a0\u00a0 we are not interested in the primes\u00a0\nthemselves, we are interested in the\u00a0\u00a0 difference between each prime\u00a0\nand the previous prime.\n\u00a0 So, this brings us to another very common data\u00a0\nstructure that is available in python. S"
+    },
+    "bc2bd377-f2df-44b4-ba29-51aa031dc158": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "o,\u00a0\u00a0 we have seen lists which have you have used\u00a0\nso far to compute the list of prime numbers\u00a0\u00a0 but now we do not want a list, we want to keep\u00a0\ntrack of how many times each difference occurs.\u00a0\u00a0 So, we want to keep track of a certain numbers\u00a0\nand for each o"
+    },
+    "e3625968-2683-4d64-84ee-a1cec191af07": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "f them we want to keep a counter.\n\u00a0 So, this is what we call a dictionary. So,\u00a0\nwe have a dictionary which will take a key\u00a0\u00a0 and associate with it a value, so the key\u00a0\nwill typically be in our case a difference\u00a0\u00a0 and the value is going to be the frequency "
+    },
+    "b8679e42-c9a1-4136-8a23-3d75a89cb6e9": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "of\u00a0\nthat difference. So, if I see that the number of\u00a0\u00a0 twin primes is actually infinite then the number\u00a0\nof times I see a difference of 2 we will keep on\u00a0\u00a0 growing, but if maybe for some other number like\u00a0\n17 maybe or 18 rather the number will be finite.\u00a0\u00a0"
+    },
+    "0ae67c8c-2276-43d2-9d20-d57527816aab": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " But what we want to do is generally compute\u00a0\nfor a finite range between 1 and m say what\u00a0\u00a0 are the differences that I get and how many\u00a0\ntimes do I see each of these differences.\n\u00a0 So, the first difference will be between the\u00a0\nsecond number and the because"
+    },
+    "1afdfef7-835e-49d7-a590-9f1de432c342": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " if I start with 2\u00a0\u00a0 as a smallest prime it has no difference with the\u00a0\nprevious prime because there is no previous prime.\u00a0\u00a0 So, for this prime difference function\u00a0\nit makes sense to start from 3. So,\u00a0\u00a0 the difference between 3 and 2 is\u00a0\nthe first differen"
+    },
+    "2bbfc3ee-431b-4f0e-b85b-8cc5e50419e7": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "ce that I observe\u00a0\u00a0 and then the difference between 5 and 3\u00a0\nwill be the next difference and so on.\n\u00a0 So, I will keep track of the last prime number\u00a0\nthat I have seen and I will initialize this to 2.\u00a0\u00a0 So, I assume that I have seen 2 as the smallest\u00a0\nprime"
+    },
+    "51e81654-92a0-41e4-a9d0-e45a30e8ec21": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " because 2 is always the smallest prime.\u00a0\u00a0 And now I have a dictionary which is going to keep\u00a0\ntrack of the frequency of each difference. So,\u00a0\u00a0 the keys of this dictionary are going to be the\u00a0\ndifferences, it is a difference, it is the number\u00a0\u00a0 which repre"
+    },
+    "f93c035b-c16d-42a0-80d0-364ebdd299a1": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "sents a difference between 1 prime and\u00a0\nthe next prime and the value is going to be how\u00a0\u00a0 many times I see 2 primes with that difference.\nSo, I start with 3 and I go until n so as usual\u00a0\u00a0 range goes to n plus 1. For each prime number\u00a0\nthat I see I compute "
+    },
+    "61fabae8-316a-4fa1-a165-729d9e439173": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "this difference what is the\u00a0\u00a0 difference between the prime number I just found\u00a0\nand the last prime number which I had seen before\u00a0\u00a0 and then I reset this number\u00a0\nto be the last prime because\u00a0\u00a0 next time this is going to be the last prime.\nNow, having done "
+    },
+    "7e6e849f-60b4-43ba-967d-58d2c05fdd49": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "this now I have to update my\u00a0\u00a0 dictionary. So, I check whether I have seen this\u00a0\ndifference before. So, does this difference appear\u00a0\u00a0 in the keys of this dictionary or not, if this\u00a0\nappears in the keys of dictionary I have already\u00a0\u00a0 seen this difference be"
+    },
+    "ca2f738f-5e3b-4717-a0f0-048e857d62b8": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "fore so I just increment\u00a0\nthe current value of that difference by 1.\n\u00a0 If I have not seen this difference before then I\u00a0\ncreate a new entry for this dictionary. See these\u00a0\u00a0 are all very familiar patterns which you have seen\u00a0\nbefore right from computational"
+    },
+    "449bbc9f-b11e-4807-a09e-c4cb19dcef92": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": " thinking onwards\u00a0\u00a0 but it is important to just recognize how to\u00a0\nuse these things, so we are just reviewing this.\u00a0\u00a0 So, this is a kind of an introduction to various\u00a0\nthings, so we have seen for loops, while loops\u00a0\u00a0 and we have seen dictionaries in the\u00a0\nco"
+    },
+    "a3522564-f0a8-4bcc-9f8f-1ada9900e4dc": {
+        "content_id": 4,
+        "course_name": "PDSA",
+        "title": "Python Recap - II",
+        "week": 1,
+        "chunk": "ntext of computing prime numbers."
+    }
+}

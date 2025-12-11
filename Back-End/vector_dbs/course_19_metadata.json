@@ -1,0 +1,359 @@
+{
+    "22c59bd4-0576-45d0-b653-d5ce5057f9b8": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "So, we have seen two intuitive algorithms,\u00a0\ninsertion sort and selection sort. And both\u00a0\u00a0 of them happen to be n squared. And we\u00a0\nknow that n squared is not good because\u00a0\u00a0 if we go beyond say something like n to the power\u00a0\n4 already, you will start getting"
+    },
+    "8116f1ac-2201-40bd-9251-d9c7fb32145b": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": " algorithms which\u00a0\u00a0 take too long to be feasible in practice. \nSo, we would like something which is\u00a0\u00a0 better than n squared. So, how do we do this?\u00a0\nSo, we need some other strategy and so here is a\u00a0\u00a0 strategy which is perhaps less intuitive than the\u00a0\none t"
+    },
+    "aec3aa1b-ea35-4bf2-90f5-3dfb398c6a68": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "hat we use for selection and Insertion Sort.\u00a0\u00a0 So, in this strategy, we divide the list into two\u00a0\nparts into two equal parts, in fact, two halves,\u00a0\u00a0 we separately sort the left\u00a0\nhalf and the right half. \n\u00a0 So, if we are still thinking in terms of that TA\u00a0\n"
+    },
+    "a258252b-b29a-466d-b18d-8839e6adefb3": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "problem that we had, so this instructor gives the\u00a0\u00a0 pile of papers to the TA, supposing the instructor\u00a0\nhas two TA, then the instructor can give half the\u00a0\u00a0 papers to one TA, and the other half to the other\u00a0\nTA and notice that these two halves can be sorted"
+    },
+    "0ff8d735-0c20-4a49-b6f3-0d3af66b625d": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "\u00a0\u00a0 without reference to each other. \nSo, each of them sorts their own half\u00a0\u00a0 within that half. But now the two halves have\u00a0\nto be reconciled, because some papers in the\u00a0\u00a0 bigger half in the first half might have\u00a0\nlower marks and some in the second half,\u00a0\u00a0 "
+    },
+    "5ca80fe4-dbce-4cf2-aeeb-93132bd2ebb5": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "and so on. So, then we have to take the two halves\u00a0\nand combine them to get a fully sorted list. So,\u00a0\u00a0 there is some work to be done to combine the\u00a0\nindividual TA answers or the TA sorted bundles\u00a0\u00a0 into one full sorted bundle. So, this is the\u00a0\nstrategy tha"
+    },
+    "51b6693c-d653-41ed-b328-0f5762572593": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "t we are going to look at now. \n\u00a0 So, in order to do this, let us focus on the\u00a0\nsecond part, which is the two TA of come back\u00a0\u00a0 and they have brought me two sorted bundles\u00a0\nof answer books, how do I combine them into\u00a0\u00a0 a single sorted bundle. So, I take tw"
+    },
+    "d1a88447-1d36-41dc-8e30-5fe3133fea68": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "o\u00a0\nsorted lists A and B, and I want to\u00a0\u00a0 combine it into a single sorted list, C. \nSo, this is something you can imagine, again,\u00a0\u00a0 physically, you put them down, so each of them\u00a0\nis sorted, with the highest mark on top. So,\u00a0\u00a0 which is the highest mark over"
+    },
+    "2f23f5b2-ee63-4a30-892f-398af162f21c": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "all? Well, it\u00a0\nis either the highest mark in the second pile\u00a0\u00a0 or the highest mark in the first pile. So,\u00a0\nI look at the top two, and I decide, oh,\u00a0\u00a0 this is higher than this. So, this must be\u00a0\nthe highest overall and I put it aside. \n\u00a0 Now I compare the h"
+    },
+    "008ed2d8-db2e-4446-b7ae-02b4199c879c": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "ighest here and the\u00a0\nsecond paper that is visible here, again,\u00a0\u00a0 the higher of the two must be the highest overall\u00a0\nand what is here, so I moved that there. So,\u00a0\u00a0 now I will kind of in some sense, in this physical\u00a0\nprocess, I am reversing the order, but th"
+    },
+    "1454f134-a8bf-4d44-98ba-3137dc31451c": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "e highest\u00a0\u00a0 paper comes down, then the second highest paper\u00a0\ncomes down and so on. So, by gradually, you know,\u00a0\u00a0 running through these two piles systematically,\u00a0\nI will be able to take them and run them down\u00a0\u00a0 to get the pile in a single sorted order. \nSo,"
+    },
+    "295595b5-f0de-4ac5-9f09-9a341cfa6105": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": " I compare the first element move the smaller\u00a0\u00a0 of the two or the bigger of the two to C and\u00a0\nrepeat until you exhausted. So, let us look at\u00a0\u00a0 this example. Supposing this happened, a trivial\u00a0\nthing. So, the first pile has only three papers,\u00a0\u00a0 32, 74, 89 a"
+    },
+    "3c79912c-3d87-41d4-a9ba-f5a53aedc61a": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "nd let us say that 32 and\u00a0\n21 are the papers which I can see. So,\u00a0\u00a0 they are the top of the pile. \nSo, in my earlier thing, so this\u00a0\u00a0 is slightly. So, this is now my top.\u00a0\nSo, I start from the left hand side.\u00a0\u00a0 So, I compare 21 and 32 and I want the new\u00a0\nl"
+    },
+    "128f9067-584c-49b6-82ab-62cc6daf4059": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "ist to also be in ascending order. So,\u00a0\u00a0 I compared 21 and 32 and the smaller of the two\u00a0\nis the smallest overall and move the 21 out. Now\u00a0\u00a0 I am focusing on the 55 compared to the 32. \nSo, these are the two that are visible to me,\u00a0\u00a0 if they were physicall"
+    },
+    "2e187bcb-4611-415f-a043-05299bdef230": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "y sitting there, I moved\u00a0\nthe smallest one out. And this is what is visibly\u00a0\u00a0 there. So, I now find the 32 smaller and\u00a0\nremove it. Now I am looking at these two,\u00a0\u00a0 because the other two are gone. So, now, 55\u00a0\nis smaller. Now I am looking at these two. \n\u00a0 N"
+    },
+    "f75706e3-1750-4180-a4fe-a39891876375": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "ow 64 is smaller and finally I moved 74\u00a0\nand 89 because there is nothing to compare\u00a0\u00a0 them with anymore. So, I only have to move from\u00a0\nthe first pile. So, this is how I would combine\u00a0\u00a0 two sorted lists into a single sorted list.\u00a0\nSo, this is what is called"
+    },
+    "aa2990a8-9d88-4d2b-a3a1-bed6a73840bf": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": " merging. So,\u00a0\u00a0 merging is the operation that I need after I have\u00a0\ngot the things sorted by two different TA. \n\u00a0 So, now, I have to get the thing to sort by\u00a0\nthese two different TA. So, how do I do it,\u00a0\u00a0 this is the Merge Sort part. So, I let n be the\u00a0\nlen"
+    },
+    "2722e683-1fad-4dcd-91c3-559cda68e8a2": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "gth. So I will first start the beginning,\u00a0\u00a0 and then I will sort the end. So, if I take\u00a0\nthe length and divide by 2, then I will get\u00a0\u00a0 two segments of roughly equal length. So, I will\u00a0\nsort the first half and sort the second half. \n\u00a0 And then I will merge "
+    },
+    "c8e36e5b-e210-4384-b391-aff58f5b3a8d": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "using the procedure, which\u00a0\nI just described how to take to merge links and\u00a0\u00a0 bring, give me back a fully merged list. So, I\u00a0\nam merging these two sorted half into B. And how\u00a0\u00a0 do we sort these two half? Well, we use the same\u00a0\nprocedure that is we will tak"
+    },
+    "4f7d58d7-b415-40ab-bde3-b7011e410557": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "e each of them break\u00a0\u00a0 them up into two parts. Sort the first half or\u00a0\nthe second half merge. How will we do that? \n\u00a0 Again, we will break it up into two parts. And\u00a0\nwhen do we stop when we stop? When we come to\u00a0\u00a0 a list which has only one element when it\u00a0"
+    },
+    "e0fd306b-8c92-4443-a696-2a7baac31c5e": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "\nhas only one element, then there is no more\u00a0\u00a0 work to do. So, let us look at an example. \nSo, supposing we have eight elements then I do\u00a0\u00a0 not know how to sort these eight elements. So I\u00a0\ndivided into the first half and the second half,\u00a0\u00a0 and I asked my t"
+    },
+    "81c21c45-fada-449f-a5af-46d808095c3a": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "wo TA to sort them, so they do not\u00a0\nknow how to sort them. So, they find two friends,\u00a0\u00a0 and they pass them each, the two halves of the\u00a0\nfirst half gets split into two lengths of two,\u00a0\u00a0 the second half gets split into two lengths of\u00a0\ntwo. So now I have 4 pa"
+    },
+    "1174cb88-84d5-485b-b83b-70d54a5176db": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "rts with to each. \n\u00a0 Now these two friends do not know how\u00a0\nto do this either. So they each call\u00a0\u00a0 two more friends, and give them one paper each.\u00a0\u00a0 So now basically, this has come like\u00a0\nthis. So this is how they have split.\u00a0\u00a0 So now the last guy in this l"
+    },
+    "cb0d259d-54c3-4015-898f-2a76339d25cc": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "ist, the last set of\u00a0\nTAs who have been roped into this job have an easy\u00a0\u00a0 job, because they have just got one paper. \nSo they say, Oh, this is easy, I can just give\u00a0\u00a0 it back to you. So Mr. 43 says I am done. Mr.\u00a0\n32 says I am done, and so on. So, all the"
+    },
+    "b0e77c1c-3ef9-470c-8189-047b69e716f0": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "se last\u00a0\u00a0 eight TA report that they have sorted their\u00a0\nwork. So now the second level TA have to\u00a0\u00a0 merge them. So I have to take these\u00a0\ntwo and merge them. So if I merge them,\u00a0\u00a0 then 32 is smaller than 43. \nSo I will replace the list at this level.\u00a0\u00a0 By the"
+    },
+    "b0ed468c-1940-4cf3-8ae8-ff82d250a9b8": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": " sorted version, I will do the same\u00a0\nthing with 22 and 78. Here, nothing changes.\u00a0\u00a0 The next one 157 comes before 63. The next one\u00a0\n113 comes before 91. So now I am finished with\u00a0\u00a0 this level, and I can throw away the singleton\u00a0\nthing. So all those TA and "
+    },
+    "1e29e883-92cf-4d0f-889f-220c05dd7dcc": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "are dismissed. \n\u00a0 So, now I have the sorted list of length two.\u00a0\nSo, I combined the sorted list of length two\u00a0\u00a0 into two sorted list or list of length four. So,\u00a0\nfrom the left hand side, I now get the list 22,\u00a0\u00a0 32, 43, 78, which is the sorted version of t"
+    },
+    "a882395e-5aff-4073-a300-04af4727d3b2": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "his.\u00a0\nAnd from the right hand side, I get 13, 57,\u00a0\u00a0 63, 91, which is a sorted version of this,\u00a0\nhow do I get a sorted version of this? \n\u00a0 I apply that merge function, I look at the smaller\u00a0\nof the two, I pull out the 13, then I pull out 57,\u00a0\u00a0 then I pull o"
+    },
+    "a3a554df-6266-4b7f-a83a-1a8a82853498": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "ut the 63. And I pull out the\u00a0\n91. Now again, I have got these two sorted\u00a0\u00a0 sequences of length 4, so I can throw away this\u00a0\nsmaller sequences that I had used in between. \n\u00a0 And now I do a similar merge here. So I say, I\u00a0\nwant 13 first, then I want 22, the"
+    },
+    "16dc3360-a071-442a-9a00-c092c4e1058a": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "n I want 32,\u00a0\u00a0 then I want 43, then I want 57. Then I want\u00a0\n63 then I want 78 and then I want 91. So,\u00a0\u00a0 this is my merge. So, if I apply this merge, I\u00a0\nget the sorted sequence on top, and I am done. So,\u00a0\u00a0 then I can throw away this and this is my final\u00a0\nan"
+    },
+    "7ed2de72-a9e6-4144-9e10-269b1462075f": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "swer. So this is how merge sort works. \n\u00a0 So, Merge Sort is an example of\u00a0\nsomething called divide and conquer,\u00a0\u00a0 you break up the problem into disjoint\u00a0\nparts solve each part separately, remember,\u00a0\u00a0 the two TA could go off into their respective\u00a0\nplaces an"
+    },
+    "8528d649-54cd-4852-b4cb-3f297d5e2fbe": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "d work without having to talk to each\u00a0\u00a0 other. And then when the solutions are done,\u00a0\nyou have to combine. That is a general step. \n\u00a0 So, there are two parts. One is breaking\u00a0\nit up. This case breaking it up was easier;\u00a0\u00a0 I just take the first half in the "
+    },
+    "9cf94006-3307-40b3-bfcf-3c4c0b94569e": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "second half.\u00a0\nAnd then there is a combining part, I take the\u00a0\u00a0 solution given to me by the first TA, solution\u00a0\ngiven the second TA and I have to merge them. \n\u00a0 So, that is divide and conquer. So, let us\u00a0\nlook at this merging thing in more detail.\u00a0\u00a0 So, if "
+    },
+    "e0b358f7-40f2-45f4-bda9-c457aba25261": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "I want to combine two sorted lists,\u00a0\nand I want to write the actual code for this,\u00a0\u00a0 then I have to look at these boundary conditions,\u00a0\nwhich we came to at the end of the thing that\u00a0\u00a0 we were executing. So, if one of the list\u00a0\nis empty, we just copy the ot"
+    },
+    "d86029c2-3bca-4d5e-a883-2c051bdba7c3": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "her list. \n\u00a0 So, if I have run out of things in A, then I\u00a0\njust take everything that is in B and put it\u00a0\u00a0 at the end of C. Similarly, if everything in B is\u00a0\nempty, then I just copy whatever is in A into C.\u00a0\u00a0 And if they are both not empty, then I look at\u00a0\n"
+    },
+    "afd92ada-6d79-4752-b24c-328bdfa5d6f9": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "the first element that is visible, or the first\u00a0\u00a0 element. I am scanning currently for both these\u00a0\nlists. And I take the smaller of these two and\u00a0\u00a0 append it to C. So, this is how merge works. \nSo, we repeat this until everything has been\u00a0\u00a0 moved. So, this"
+    },
+    "a54e33c1-14c2-4d28-b45c-fdb53b3c9f02": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": " is the merge function, which\u00a0\nwe will quickly look at. So, we have two lists,\u00a0\u00a0 and they could be a different length. So, A\u00a0\nis of length m and B is of length n. So, now,\u00a0\u00a0 what I will do is I will have\u00a0\nmy three lists, I have A and B,\u00a0\u00a0 which are of leng"
+    },
+    "9ce4d604-3f4b-4469-981d-68132ffd1e34": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "th m and n and I have my C. \n\u00a0 Now at any given point, I am going\u00a0\nto be looking at some element here\u00a0\u00a0 which I call i some element here, which I call\u00a0\nj and some element here, which I will call k.\u00a0\u00a0 So, as I progress, I am walking down these three\u00a0\nlists "
+    },
+    "39bfc781-9320-4c7c-87d5-a8bc4b96cbf8": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "the two lists that I am scanning to examine\u00a0\u00a0 and the third list C which I am building up. So,\u00a0\nI have these three indices i, j and k which are 0\u00a0\u00a0 initially and add this new list C which is empty.\u00a0\nSo, this is what I need to do to manipulate. \n\u00a0 So, now I"
+    },
+    "f4aa7314-6938-41bb-8e32-9be60d61e1cb": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": " go through these three steps. So, these\u00a0\nthree steps are here. So, if A is empty, so when\u00a0\u00a0 is A empty when i have reached, i has reached the\u00a0\nend. So, if i is equal to m that means A is empty.\u00a0\u00a0 Then I just copy B to C. So, I use this Python\u00a0\nfunction ca"
+    },
+    "ef291596-5a90-4336-8daf-3e82e7a543cb": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "lled extend which will take one\u00a0\u00a0 list and extend it to with another list. \nAnd what I am going to do is I am going to,\u00a0\u00a0 in that process, move k by a whole lot. I am\u00a0\ngoing to move k by however many letters I moved\u00a0\u00a0 values I moved from B, which is it, wa"
+    },
+    "da4052ba-ddcb-4d49-afb0-a420151541d5": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "s a\u00a0\nj and I moved from j to n. So, n minus j\u00a0\u00a0 elements have been shifted. If that is not the\u00a0\ncase, if A is not empty check if B is empty,\u00a0\u00a0 in which case symmetrically\u00a0\nI have j has gone to n. \n\u00a0 In which case I extend C by A and I move\u00a0\nk by n minus i "
+    },
+    "34b2ab2d-6cae-48de-bdfb-eda369efd91e": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "should be sorry, n minus i.\u00a0\u00a0 And finally, if neither of them is empty, then\u00a0\nI compare A[i] and B[j] and if A[i] is smaller\u00a0\u00a0 than B[j], then I append A[i] and I move i and k\u00a0\nand otherwise, I append B[j] and I move j and k.\u00a0\u00a0 So, if I push the indices, e"
+    },
+    "5a4a6f12-07b9-4d26-8d62-da828e0e37f9": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "ither i moves\u00a0\nand k moves or j moves or k moves. \n\u00a0 Now, when do I stop? Well, I have to eventually\u00a0\nmove m plus n elements into k, into C. So,\u00a0\u00a0 k has to go from 0 to n plus n. So, long as K is\u00a0\nnot yet m plus n, I have work to do. But when k\u00a0\u00a0 reaches m"
+    },
+    "91afe33f-bb96-41ae-a496-322c2e5bd95e": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": " plus n, I am done. So, that becomes my\u00a0\nterminating condition for this merge function. \n\u00a0 So, having got the merge function, what does\u00a0\nMerge Sort look like? Actually, it is much\u00a0\u00a0 simpler than merge as you would expect. So, if\u00a0\nyou have a list, which has"
+    },
+    "f57446c0-216a-4f31-b668-1a82e6ef2ac2": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": " at most one element,\u00a0\u00a0 there is nothing to be done. Otherwise, you sort\u00a0\nthe first half or the second half and merge them.\u00a0\u00a0 So, this is what it is, you find the length of\u00a0\nthe list you want to do, if the list, length of\u00a0\u00a0 the list is one or less, then yo"
+    },
+    "c5e3e0ce-7ac5-46ed-b9b2-9c9134b1c8dc": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "u just return\u00a0\nthe list that you got saying is already sorted,\u00a0\u00a0 otherwise you recursively call merge sort\u00a0\non the first half and the second half. \n\u00a0 Now remember that this will stop at n by 2 minus\u00a0\n1. So, the lists will be disjoint, but which will\u00a0\u00a0 cove"
+    },
+    "51022803-1ef5-42f6-9f70-65cca1f8c43d": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "r the entire thing nothing will be left out.\u00a0\nSo, 0 to n by 2 minus 1 will be n part L and n by\u00a0\u00a0 2 to n the n will be in part r. Now having got\u00a0\nboth of these, I just apply my merge function\u00a0\u00a0 to get a list which combines the two into a new\u00a0\nlist B and I "
+    },
+    "2adc76f5-8c89-45a0-86de-10e8571f6a08": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "return B. So, this is Merge Sort. \n\u00a0 To summarize, Merge Sort uses\u00a0\ndivide and conquer two sorted lists.\u00a0\u00a0 We divide the list into two halves so what\u00a0\neach half and merge the sorted halves.\u00a0\u00a0 So, why did we come to this at all is\u00a0\nbecause we said that inse"
+    },
+    "bc3f2dba-f6c1-4b65-a37e-c2bf4357c70e": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "rtion sort and\u00a0\u00a0 selection sort were not acceptable in terms\u00a0\nof their complexity because they were order\u00a0\u00a0 n squared and we wanted to get something\u00a0\nwhich is better than order n squared. So,\u00a0\u00a0 to complete our discussion of merge sort, we have\u00a0\nto analyze "
+    },
+    "046c3e2b-b345-437f-b75e-e12e15de3778": {
+        "content_id": 19,
+        "course_name": "PDSA",
+        "title": "Merge Sort",
+        "week": 2,
+        "chunk": "it which will be a separate exercise."
+    }
+}

@@ -1,0 +1,485 @@
+{
+    "32cf557a-881c-46e7-8ee7-e034dd57888a": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "So, we will now look at the\u00a0\nKnuth-Morris-Pratt algorithm\u00a0\u00a0 for string match. So, what we said last time\u00a0\nwas that if we can pre-process our string\u00a0\u00a0 into this automaton, which remembers the\u00a0\nlongest prefix match at every stage. So,\u00a0\u00a0 if I have a prefix ma"
+    },
+    "4ffd54d0-3076-41a0-a560-e3c9f30046e7": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "tch up to a\u00a0\nparticular letter, and if I read a letter;\u00a0\u00a0 what will be the new prefix set matches? \nSo, if we have such an automaton, the state I\u00a0\u00a0 denotes the match up to p of i. And the transition\u00a0\ntells us how this match gets updated if I read a\u00a0\u00a0 lette"
+    },
+    "6f4284f6-5482-4bd4-b847-4eeea8ea3184": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "r a at I; then we can do this in 1 scan\u00a0\nof our text by starting at the initial state,\u00a0\u00a0 following this automaton letter by letter, and\u00a0\nseeing if we reached the final state or not.\u00a0\u00a0 So, with a single scan of our\u00a0\ntext, we can find this pattern.\n\u00a0 So, the"
+    },
+    "f9e68575-620a-4d27-9b21-d2cb2a81da84": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " Knuth-Morris-Pratt algorithm is\u00a0\nessentially to compute this automaton efficiently.\u00a0\u00a0 So, remember we said that we only need to\u00a0\nlook at the last m letters of the text we are\u00a0\u00a0 scanning to decide, and effectively we are really\u00a0\nlooking at the last time le"
+    },
+    "7c3e40fb-313d-4fdb-b3f0-6cf9846779e7": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "tters of the pattern.\u00a0\u00a0 We have to match the pattern with itself. If\u00a0\nwe are matched a certain part of the pattern\u00a0\u00a0 and the next thing does not match;\u00a0\nthen where back in the pattern are we.\u00a0\u00a0 So, what the Knuth-Morris-Pratt algorithm says\u00a0\nis that you ac"
+    },
+    "a0198f4f-8266-466d-b8fc-f2d4605aa6db": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "tually match p against p itself.\u00a0\u00a0 And it computes this function match, which is\u00a0\ndefined as follows, match of a position j. So,\u00a0\u00a0 j is going to be between 0 and n minus\u00a0\n1, the positions in my string.\n\u00a0 The match of 0 of j is going to be the number k,\u00a0\nif"
+    },
+    "8eb8ac8d-c5ab-4d90-bb13-aef1f24b1a8c": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " the suffix, the longest suffix if I take my\u00a0\u00a0 thing here; so this is my pattern, and\u00a0\nif I take a j. So, then if I take 0 to j,\u00a0\u00a0 so the string from 0 to j is going to be 0\u00a0\nto J plus 1, written as this way in a slice.\u00a0\u00a0 The string from 0 to j has a suffi"
+    },
+    "00defe56-36aa-4120-8b80-4c7b6407bea3": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "x has\u00a0\na suffix, which corresponds to the prefix\u00a0\u00a0 0 to k minus 1. \nSo, if I go from 0 to k minus\u00a0\u00a0 1 in my pattern and if I look at this word; it is\u00a0\nthe same as this word, so that is match says. So,\u00a0\u00a0 match of j says that, if I look at the letters\u00a0\nfrom "
+    },
+    "846af27d-d7c4-40dc-b119-9180525fb264": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "0 to j, then the last k letters of this match\u00a0\u00a0 the first k letters of my string; the string from\u00a0\n0 to k minus 1, the prefix from 0 to k minus 1.\u00a0\u00a0 So, this is what I want to try and compute\u00a0\nin this Knuth-Morris-Pratt algorithm.\n\u00a0 So, let us assume that "
+    },
+    "7d564fbd-ed5c-4095-9360-a41f6d4514bd": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "we have done it\u00a0\u00a0 up to j. So, now we want to compute what happens\u00a0\nat j plus 1. And so we have computed match of j\u00a0\u00a0 and match of j is some k; so this is from 0 to k\u00a0\nminus 1, and this is from 0 to j. So, match of j\u00a0\u00a0 is k means that there is a segment of"
+    },
+    "62bfa615-a335-4f45-8765-a8de312eef4b": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " length k\u00a0\nhere, which matches a segment of length k here;\u00a0\u00a0 now, I want to extend it. So, the good case\u00a0\nis that this is actually equal to this. If\u00a0\u00a0 this is equal to this, then I will just extend\u00a0\nthe match. Then, I will say that if match of\u00a0\u00a0 j was equa"
+    },
+    "d4f91d18-7a7a-482e-a083-e6010ddf3cc3": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "l to k, then match of j plus 1 is\u00a0\ngoing to be equal to k plus 1, no problem.\n\u00a0 But what happens if these do not match? So, if I\u00a0\nhave some letter here which is different from some\u00a0\u00a0 letter here, which we have indicated by saying\u00a0\nthey are of different col"
+    },
+    "ef7b924a-d877-4d9d-91f2-b22d83e21a3c": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ors. Then, our goal is\u00a0\u00a0 to try and find some prefix here, which may not be\u00a0\nthe longest prefix. It might be a shorter suffix,\u00a0\u00a0 such that if I take the shorter suffix. \nSo, if I read off these letters\u00a0\u00a0 here, then if I look I will hopefully find an\u00a0\nexten"
+    },
+    "851488a6-a56b-4bc6-90b7-ef30743fe9e9": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "sion here; I will find this orange extension,\u00a0\u00a0 so let me draw this here. So, then I will\u00a0\nfind an orange block here; so this is what\u00a0\u00a0 we are trying to find. So, we are trying to find\u00a0\na shorter suffix which matches a shorter prefix,\u00a0\u00a0 but this orange let"
+    },
+    "5865796b-08ed-46d6-ab9b-13457d313242": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ter happens here. So, I can\u00a0\nextend the blue suffix by orange and I can expand\u00a0\u00a0 the corresponding blue prefix by orange.\nSo, this is what we are trying to do.\u00a0\u00a0 So, although we have called it match in\u00a0\nthe literature; this is usually called\u00a0\u00a0 the failure "
+    },
+    "0bb55b6d-6171-4f7b-851d-5860d9fc1e33": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "function. So, the failure function\u00a0\nhas a natural interpretation, which is that if\u00a0\u00a0 I fail to match here, where should I step back\u00a0\nand try again. So, if the match currently fails,\u00a0\u00a0 then it means that the current prefix which I\u00a0\nhave built up does not ex"
+    },
+    "ef6104d3-d7c2-48c1-8503-1c7f5240b0bb": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "tend anymore. So, what\u00a0\u00a0 is the best prefix that I can fall back to after\u00a0\nthis? So that is what failure is computing. So,\u00a0\u00a0 is exactly what we said for match; we will just\u00a0\nuse the word fail instead of match henceforth.\u00a0\u00a0 So, we want to be able to\u00a0\ncomput"
+    },
+    "b6190a40-72bf-4d01-b586-3866c5c8d6d7": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "e this quantity.\n\u00a0 So, this is how Knuth-Morris-Pratt suggests that\u00a0\nwe do this. So, we initialize this failure to be\u00a0\u00a0 0, which means that remember we had in that\u00a0\nautomaton that we built by hand, we said that\u00a0\u00a0 if you see a letter C, which is not at the "
+    },
+    "41b9632e-a7ef-4754-b5ca-f07a8a3876bb": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "end of\u00a0\nthe pattern at any point; then we will go back and\u00a0\u00a0 reset or prefix that is matched to the empty\u00a0\nprefix. So, that is a default assumption that\u00a0\u00a0 at any point, if I do not find a valid extension;\u00a0\nthen I will fall back to the empty prefix. So,\u00a0\u00a0 I"
+    },
+    "b7fe8cb1-7844-48a8-ad8c-61db0fe261c6": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " will just initialize this failed, if this\u00a0\nfail is just now function, which tells me for\u00a0\u00a0 every position from 0 to n minus 1. It tells me\u00a0\nwhat will be the remember that definition.\n\u00a0 So, fail of j or match of j is the longest suffix\u00a0\nof the first j lett"
+    },
+    "a08cf6ac-fa78-4ae6-a914-f2b0a2e2b110": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ers, which matches the first k\u00a0\u00a0 letters, if it is equal to k; so, the default is\u00a0\n0. So, now I am going to run through this, so I am\u00a0\u00a0 going to use j to walk through this sequence; and\u00a0\nI am going to use k to keep track of the latest\u00a0\u00a0 prefix I have seen "
+    },
+    "0743c986-dd5b-45d7-8a8a-90d7162e4577": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "so far. So, k\u00a0\nwill keep track of the current match,\u00a0\u00a0 and j will keep track of the next position which I\u00a0\nam trying to update. So, in our previous picture,\u00a0\u00a0 so k is this value, and j is telling me where\u00a0\nI am trying to update in this picture.\n\u00a0 So, as we"
+    },
+    "ee61f8de-41a1-45c9-8fa1-6e4df58cc8f9": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " said before, if the value at position J\u00a0\nmatches the pattern at position k. So, I have this\u00a0\u00a0 prefix up to k minus 1, because I have the value\u00a0\nk, I have matched k letters. So, 0 to k minus 1\u00a0\u00a0 matches 0 to j or 0 to j minus 1 rather;\u00a0\nbecause I am trying"
+    },
+    "aec231dc-7902-4d20-9730-268073cf3a59": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " to update the value at j,\u00a0\u00a0 so, I have matched up to. \nSo, I know that in some sense, the fail of\u00a0\u00a0 j minus 1 is equal to k, that is what I tell you.\u00a0\nAnd now you want to tell me what is fail of j? So,\u00a0\u00a0 I said that if this is equal to\u00a0\nthis, the next pos"
+    },
+    "da7a5dce-90e7-403a-8281-d7b0da0d69ca": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ition is equal;\u00a0\u00a0 then I can say fail of j is k plus 1,\u00a0\ni increment both. On the other hand,\u00a0\u00a0 if it is not then I have to find that longest\u00a0\nsuffix; but how can I do that? I go back here.\u00a0\u00a0 It is effectively going back here and\u00a0\nasking where should I go "
+    },
+    "54fa6fd6-b069-4223-a41c-6ded634baa03": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "backwards.\n\u00a0 So, I take the longest suffix that matches this\u00a0\nprefix. Notice that this prefix does not include\u00a0\u00a0 the letter that I had before. So, I take in\u00a0\nsome sense a shorter prefix, so I take this\u00a0\u00a0 prefix up to here. And then I look for the longest\u00a0\n"
+    },
+    "7a7d756f-f565-4787-a31c-d1a215e026b9": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "prefix suffix there, so that takes me backwards;\u00a0\u00a0 and then I try again. If it does not match,\u00a0\nagain I go backwards. I keep going backwards,\u00a0\u00a0 so long as I do not hit 0. Once I hit 0, then\u00a0\nI just give up and say j equal j plus 1. If I\u00a0\u00a0 find it before I "
+    },
+    "a7d33242-ae88-45e4-8ce3-28bcbd882790": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "hit 0, then at that position\u00a0\nI will extend it; so this is how it works. So,\u00a0\u00a0 I go backwards and I try to find a shorter prefix\u00a0\nthat matches, if I do find a shorter pre.\n\u00a0 So, I go backwards without incrementing j, so\u00a0\nI still looking at the same j. So, "
+    },
+    "c0459d43-7f0a-465a-baf7-a712164f47ce": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "I fixed a j,\u00a0\u00a0 it had a mismatch; I try to find a shorter prefix\u00a0\nwhich matches, so I go backwards. So, I find a\u00a0\u00a0 shorter prefix, check if it matches; so if I can\u00a0\nextend that and it is equal to j, I am looking\u00a0\u00a0 at now; otherwise I go backwards again. \nS"
+    },
+    "f73f0f8a-a7c9-44bd-8fd1-3f0253ae1493": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "o, there are two situations; one is I do find\u00a0\u00a0 it in which case at that position this loop\u00a0\ntakes over, and I get a new value of k. So,\u00a0\u00a0 so k is going up and down. So, k was set at\u00a0\nsomething and I am now resetting it backwards.\u00a0\u00a0 j is the one that is go"
+    },
+    "a63af5d8-0f5d-4aee-9993-3530bc88652d": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ing forward\u00a0\nposition by position; j starts at 0 and\u00a0\u00a0 goes to n minus 1, j never goes backwards.\nSo, I am one by one, I am setting j values;\u00a0\u00a0 but each time I might reduce the prefix\u00a0\nthat is matched, because I found a mismatch.\u00a0\u00a0 And if the prefix does n"
+    },
+    "0273cb72-3cad-45d5-a577-090bfe204f35": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ot match at all,\u00a0\nthen it goes back to 0 and I just leave.\u00a0\u00a0 Notice when I just increment j on its own, I\u00a0\ndo not touch it; which means that it has this\u00a0\u00a0 default value that I set initially remains 0. \nSo, 0 is already set, I do not have to set it. On\u00a0\u00a0 th"
+    },
+    "6acdc25c-ce8f-47e8-825e-f90bb7c19cad": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "e other hand, if it is some non-trivial value,\u00a0\nit will get set here. If I do find a prefix whose\u00a0\u00a0 extension matches t of j, p of j; then I will set\u00a0\nit here and I will proceed. So, this is how this\u00a0\u00a0 Knuth-Morris-Pratt algorithm computes this failure\u00a0\nfu"
+    },
+    "c89d7dd1-df88-4446-a3eb-5f0e852d8338": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "nction, or what we call the match function\u00a0\u00a0 in one scan from left to right.\nSo, how long does this take?\u00a0\u00a0 So, the claim was that the earlier thing that we\u00a0\nwere doing when we were explicitly calculating\u00a0\u00a0 the edges in the automaton was taking a long\u00a0\ntim"
+    },
+    "3ba79b0a-0a9b-4ae1-9977-5fdb1e198870": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "e. It was taking order m cubed times the\u00a0\u00a0 size of sigma, and we wanted to claim that this\u00a0\nthing actually takes time proportional to m.\n\u00a0 So, how do we show that this takes time\u00a0\nproportional to m? So, it is a little bit tricky.\u00a0\u00a0 So, one thing is very cl"
+    },
+    "674eb9eb-1914-4757-8b2f-373ad3e91901": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ear that j steps\u00a0\nthrough 0, 1, 2 and it never goes backwards;\u00a0\u00a0 so j is going to start from 1 and go to\u00a0\nm minus 1. So, inside this while loop,\u00a0\u00a0 j starts at 1 and goes up to m minus 1; so j gets\u00a0\nincremented m minus 1 time. So, there are m minus\u00a0\u00a0 1 iter"
+    },
+    "ae3e5ea5-a0a9-4a92-b8b5-b99d9fac8c5f": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ations, where j gets incremented. \nBut the problem is there are some iterations\u00a0\u00a0 like this one, where the while loop iterates\u00a0\nand decrements k without incrementing j. We have\u00a0\u00a0 iterations with k reduces and j is unchanged;\u00a0\nso not every iteration of the "
+    },
+    "9b13293b-bf77-47f3-8231-fe13cdd39e5e": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "while loop makes\u00a0\u00a0 progress with respect to j. I know that j can move\u00a0\nforward only m minus 1 times; but what about the\u00a0\u00a0 remaining times when it is doing nothing?\nHow many times is k going backwards; because\u00a0\u00a0 unless we can bound that, we cannot claim\u00a0\nth"
+    },
+    "cda63278-a70a-47bc-9c68-25600da004cc": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "at overall this thing takes time order n.\u00a0\u00a0 But there is a very simple observation that, you\u00a0\ncannot reduce k more times than you increase k,\u00a0\u00a0 so k starts at 0. There are some iterations where\u00a0\nk goes up by 1; and there are some iterations,\u00a0\u00a0 where k goes"
+    },
+    "b5c4de84-9556-4de7-9aa1-6b8cec5c6831": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " down, because the failure\u00a0\nfunction always takes you to the left.\u00a0\u00a0 But you cannot go left, beyond what you\u00a0\nhave gone right. So, the total number\u00a0\u00a0 of times you decrease k cannot be more than\u00a0\nthe total number of times you increase k.\n\u00a0 If k does not inc"
+    },
+    "4809d0bb-58f8-4ea9-8c44-f0a239a8830e": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "rease for every time you go\u00a0\ndown, you must have a matching going up. But\u00a0\u00a0 the matching going up happens only in one place,\u00a0\nwhere I do k equal to k plus 1. So, unless I have\u00a0\u00a0 a k equal to k plus 1, I cannot keep doing failure\u00a0\nk; because I will be at 0 "
+    },
+    "2d362951-c5ec-4948-80df-02d9cf83f990": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "and this thing will,\u00a0\u00a0 will not trigger the decrement. So, I have to\u00a0\nnow see whether I can control how many times k\u00a0\u00a0 increases; and if that tells me something, then\u00a0\nit will tell me how many times k can decrease,\u00a0\u00a0 across all the iterations. But notice t"
+    },
+    "a63fc0d3-649f-46af-b1ca-6beb27828eba": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "hat k\u00a0\nis incremented, only when j is incremented.\u00a0\u00a0 So, every time k is incremented, j is\u00a0\nalso incremented; but we already saw\u00a0\u00a0 that j increments at most m minus 1 times.\nSo, k can also increment at most m minus 1;\u00a0\u00a0 can be fewer, because sometimes j\u00a0\nm"
+    },
+    "1af6560e-ddb9-4b2d-b619-6faa6114f9a7": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ight go ahead without incrementing k.\u00a0\u00a0 But certainly every time k goes up j goes up. And\u00a0\nsince j cannot go up more than m minus 1 times,\u00a0\u00a0 k cannot go up more than 1 m minus 1 times.\u00a0\nIf it cannot go up more than m minus 1 times,\u00a0\u00a0 it cannot go down more"
+    },
+    "c5c0dc97-b49f-4fac-b8dd-42ff3e57b0f7": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " than m minus 1 times. So,\u00a0\nthis is a very careful and clever example of this\u00a0\u00a0 amortized analysis. I cannot promise you that\u00a0\nfor a given j, how many times k goes down; but\u00a0\u00a0 across all the iterations of the loop, I can tell\u00a0\nyou that j goes up at most m "
+    },
+    "326aea35-0422-41d3-ad43-78b53f5dbe1e": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "minus 1 times.\n\u00a0 And therefore, k goes down at most m minus 1 time;\u00a0\nso between them they have at most two m iterations\u00a0\u00a0 of the loop. So, the number of iterations of\u00a0\nthis loop is order n, and which is what I want.\u00a0\u00a0 So, this is a dramatic improvement, so"
+    },
+    "64485e2f-116e-4975-801a-3189a7afb229": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " when we\u00a0\ndid this naive calculation with the graph based\u00a0\u00a0 automaton; we were effectively computing\u00a0\nthis failure function. But we were doing\u00a0\u00a0 this complicated thing of looking at every suffix,\u00a0\nand scanning it and comparing it to every prefix\u00a0\u00a0 for ever"
+    },
+    "32ea7b57-e563-4e99-847f-5185ef2e951b": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "y letter. And therefore, we are getting\u00a0\nthis order n cubed times size of sigma; whereas\u00a0\u00a0 here we have simplified it to order m overall.\u00a0\nSo, now that we have the failure function.\n\u00a0 The actual string matching is very similar to\u00a0\nthat automaton based thin"
+    },
+    "144ac556-6901-4457-a92b-31e64edf1171": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "g; so we scan t in\u00a0\u00a0 one scan from the beginning to the end. So,\u00a0\nj is the position that we are looking at in\u00a0\u00a0 our string text, and k is the indication of how\u00a0\nmany matches state in our automaton; or it is\u00a0\u00a0 how many positions we have matched so far. \nSo,"
+    },
+    "4f3eb429-90c4-40d8-997a-e4ed796b90ec": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " every time I see an extension that is I am\u00a0\u00a0 looking at position j in my text. And my next\u00a0\nposition my string, I have already matched 0 to\u00a0\u00a0 k minus 1; so I have matched k positions. So, 0 to\u00a0\nk minus 1 has already matched; the next 1 matches,\u00a0\u00a0 then I p"
+    },
+    "b6f8c5bf-51e9-4552-901e-9888ae328bef": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "roceed. And if I have matched up to\u00a0\nposition m minus 1, if k reaches m minus 1;\u00a0\u00a0 that means I have matched from 0 to m minus 1,\u00a0\nthe first m minus 1, the first m characters.\n\u00a0 So, that means that I can return this\u00a0\nparticular value; so the particular\u00a0\u00a0 v"
+    },
+    "6f8c1f25-878b-48e2-8c97-cb56569fa4e2": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "alue I have is j minus m plus 1, which is\u00a0\nthe current I, where I found a match. So,\u00a0\u00a0 this is just exiting with the first match, so\u00a0\nit is returning; so I am exiting at the position\u00a0\u00a0 where I have a match. Otherwise, if I have found\u00a0\nan equality but I hav"
+    },
+    "ca60fb8f-1d2e-4cb9-a006-2f173c398754": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "e not finished matching,\u00a0\u00a0 then I will just increment j and k exactly as\u00a0\nwe did before. So, I am just saying that my\u00a0\u00a0 match has progressed, I have increased my prefix\u00a0\nmatch by 1; and I have moved to the next position.\u00a0\u00a0 Otherwise, like before, we will s"
+    },
+    "101f0159-2559-4ab8-9378-64b6e0344111": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ay that this\u00a0\nwas not a match; so this is not equal to.\n\u00a0 So, I will try to compute the best prefix that\u00a0\nI have for this letter. Now, this as we said\u00a0\u00a0 could take repeated decrements, but it will be\u00a0\nthe same as before. So, if it is not equal to;\u00a0\u00a0 I have"
+    },
+    "0b08bc5d-28b2-4bed-812c-29123e1ed982": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " to update this prefix, exactly as we did\u00a0\nwhen we computed the failure function. But here\u00a0\u00a0 we are using the failure function which is already\u00a0\ngiven to us; we do not have to re compute it. We\u00a0\u00a0 are just computing the failure function as it is\u00a0\ngiven to u"
+    },
+    "69f5dfab-9221-4028-bdd5-7071d0903cc1": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "s. So, the failure function remember is\u00a0\u00a0 given to us; so we have basically called that for\u00a0\nearlier function and stored it in this array fail.\u00a0\u00a0 And then, as before if we find that the prefix\u00a0\nis completely vacuous, then I will just increment\u00a0\u00a0 my positio"
+    },
+    "ca46ac63-0e95-4aaa-a221-3a76667a7c83": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "n and not do anything.\nSo, at the end if I have not exited,\u00a0\u00a0 if I have not existed, and I reached the end of\u00a0\nthis while loop; that means that no point in my\u00a0\u00a0 text. Did I reach the final state of my automaton,\u00a0\ndid I reach the fact that I have matched\u00a0\u00a0 "
+    },
+    "89a438af-9b55-4e65-9e05-8ca2664ad138": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "all m positions in my pattern. In this case,\u00a0\nI must report that there is no match, I will\u00a0\u00a0 return minus 1. So, this particular thing is very\u00a0\nexplicit like we said before, just to simplify the\u00a0\u00a0 way it works; it only reports the first match.\u00a0\nNow, if you"
+    },
+    "7fb13489-4c7b-4e5d-8794-8aad077c9675": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " want to do the next match, then you\u00a0\u00a0 have to take this value and restart KMP at that\u00a0\npoint. So, so we will not bother about that.\n\u00a0 So, the complexity of this is again going to be\u00a0\norder n plus m; for the same reason that this\u00a0\u00a0 loop is going to take n "
+    },
+    "ad2ababc-25a1-4ebe-ba25-5ac3a18db027": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "steps for j. But we also\u00a0\nsaid before that, we have this k going down;\u00a0\u00a0 and so it is going to be order n actually.\u00a0\nSo, we have an order n algorithm for matching,\u00a0\u00a0 assuming we have the failed failure function;\u00a0\nand the failure function took order m.\n\u00a0 So"
+    },
+    "dbec35f0-93ce-4a81-b1a6-a81a9192f01c": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": ", so therefore, now we have this algorithm\u00a0\nin one place; now, this Knuth-Morris-Pratt\u00a0\u00a0 algorithm KMP as it is called. It computes\u00a0\nthe failure function first in time order m;\u00a0\u00a0 and after pre processing, it can check the matches\u00a0\nin order m plus n time. A"
+    },
+    "d81c81f7-3830-407b-938a-e8f4100c847c": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "nd overall, this KMP\u00a0\u00a0 algorithm works in time, order m plus n. \nSo, in principle, this is the best that you\u00a0\u00a0 can do in case of worst case complexity. In the\u00a0\nworst case complexity of string matching, we have\u00a0\u00a0 to read every letter in our string, and we h"
+    },
+    "36e2144f-b3ed-48fd-86e1-0431585ff8cb": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "ave\u00a0\nto read every letter in our pattern. You cannot\u00a0\u00a0 do anything better than that. So, order n plus m\u00a0\njust says that we are taking enough time to read\u00a0\u00a0 our entire text, and our entire pattern; and then\u00a0\nmake a decision about where the first match is.\n\u00a0"
+    },
+    "129eadb3-24c3-46d3-a53c-9042bcfe51a3": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " So, you cannot hope to better this in the\u00a0\nworst case. So, asymptotically this is the\u00a0\u00a0 best algorithm that you can come up with. But as\u00a0\nwe have seen, though Boyer-Moore has a much worse\u00a0\u00a0 complexity in the worst case;\u00a0\nremember it is order m times n.\u00a0\u00a0 "
+    },
+    "4f170084-9be7-4aff-a906-8f665ebbae29": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "In practice, because you skip over, you\u00a0\nactually do not have to see the entire text. \n\u00a0 So, when you see mismatches, you can\u00a0\njump ahead. And that turns out to be,\u00a0\u00a0 in a sense more productive than keeping track of\u00a0\nthe optimum match, and doing it in this"
+    },
+    "893d4a9b-322c-4764-8783-2f83e802f4ae": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": " linear\u00a0\u00a0 time. So, we said before that Boyer-Moore is often\u00a0\nused in practice; because in real occurring texts,\u00a0\u00a0 the benefit that you get from that heuristic\u00a0\nskipping overcomes this m plus n thing.\n\u00a0 So, as we said the Unix utility grep for\u00a0\ninstance us"
+    },
+    "c4f96c4f-5668-44e6-8a0f-9e985c8bbd0a": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "es Boyer-Moore; and so do many other\u00a0\u00a0 utilities which have a built in\u00a0\nsearch function. So, string matching,\u00a0\u00a0 so it is a little bit like if you go back to the\u00a0\nsituation of sorting. So, we said that quick sort\u00a0\u00a0 in general has a the naive implementation "
+    },
+    "4a758dd2-99dd-43f4-b651-ef84baa90ec2": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "of,\u00a0\nquick sort has an order n squared behavior. But\u00a0\u00a0 in an average case, it actually is n log n; and\u00a0\nbecause of other reasons, it is very fast. \n\u00a0 So, many built in sorting functions use quick\u00a0\nsort, even though it is not theoretically optimum;\u00a0\u00a0 so, si"
+    },
+    "f74af3c8-8535-4ce3-a8d1-8cdcffd66baf": {
+        "content_id": 70,
+        "course_name": "PDSA",
+        "title": "String Matching: Knuth-Morris-Pratt Algorithm",
+        "week": 10,
+        "chunk": "milarly here though this KMP\u00a0\nalgorithm is theoretically optimum.\u00a0\u00a0 In practice, very often the sub optimal\u00a0\nBoyer-Moore algorithm, which has a worst case\u00a0\u00a0 (complexity) much worse than KMP, works out to\u00a0\nbe better in practice. And that is what is used."
+    }
+}

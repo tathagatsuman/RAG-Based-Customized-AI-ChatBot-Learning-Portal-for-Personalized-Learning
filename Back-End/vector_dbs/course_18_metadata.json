@@ -1,0 +1,429 @@
+{
+    "cf8b3d59-a042-48b0-a2c7-6c770934df58": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "So, we have seen one intuitive\u00a0\nalgorithm for sorting selection sort.\u00a0\u00a0 So, here is another one. So, remember the scenario\u00a0\nyou are the TA, the instructor has asked you to\u00a0\u00a0 arrange the graded papers in order of marks.\u00a0\nSo, the second algorithm works as fo"
+    },
+    "bc96e3a5-fe07-4638-b026-7b0321f5658a": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "llows. \n\u00a0 So, you look at the first paper and you put\u00a0\nit into a new pile, so you start off a pile.\u00a0\u00a0 And we are now going to the earlier case,\u00a0\nyou made sure that the pile was going to\u00a0\u00a0 be sorted by making sure that you carefully put\u00a0\nthe minimum value t"
+    },
+    "bf62ecb6-ca15-4517-877b-00bd3bc61290": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "here, now, you are just going\u00a0\u00a0 to put the first value you see over there. \nNow, this does not guarantee it is going to be\u00a0\u00a0 sorted. At least for one, it is sorted.\u00a0\nBut now when you move the second paper,\u00a0\u00a0 you have to put it correctly. So, if it if you\u00a0\n"
+    },
+    "153f17ba-062e-4cd5-a0e1-161b83467507": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "want the minimum at the bottom of the pile,\u00a0\u00a0 and the second paper is smaller, you have to slide\u00a0\nit below. If it is bigger, you put it on top. \n\u00a0 So, depending on the value of the second paper\u00a0\ncompared to the first paper, you have to put\u00a0\u00a0 it in the posi"
+    },
+    "3e8a3e37-d11d-4aec-a006-828bda1ecbff": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "tion. Now if you come to the\u00a0\nthird paper, there are three possibilities,\u00a0\u00a0 so you have paper 1, you have paper\u00a0\n2 and now paper 3 could go below,\u00a0\u00a0 both of them go above both of them or go in\u00a0\nbetween, depending on what its value is. \n\u00a0 So, in general, yo"
+    },
+    "396cb9a8-d4cf-4d6e-b04f-26b3ccc84930": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "u have to keep doing this for\u00a0\nevery paper for every paper, you take the new\u00a0\u00a0 pile, which is already has been sorted because of\u00a0\nway you created it. But now in order to maintain\u00a0\u00a0 the fact that it is sorted, you cannot just dump\u00a0\nit on top as you did in s"
+    },
+    "97bd7673-6994-4524-bb42-6fdd698ec546": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "elections, or you have\u00a0\u00a0 to find the correct position to insert. So, that\u00a0\nis why this is called insertion sort because every\u00a0\u00a0 time you have to insert the next value into\u00a0\nthe sorted list that you are creating. \n\u00a0 So, let us do this Insertion Sort now, ju"
+    },
+    "1e28147f-1e6e-4623-81e8-23a9036e1a22": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "st we\u00a0\nwill do it from left to right. So, I start from,\u00a0\u00a0 I start building up the new list from the left,\u00a0\nso I pick up the 74 and I create a new list.\u00a0\u00a0 Now when I pick up the 32 because 32 smaller\u00a0\nthan 74, it has to go to the left. So my new\u00a0\u00a0 list chan"
+    },
+    "73607762-946a-4e5c-add7-107e715d7a1d": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ges. So, 74 gets pushed 89 when I pick\u00a0\nup next, is now bigger than everything. \n\u00a0 So, it goes to the top of the pile. So, it just\u00a0\nstays at the top and nothing gets disturbed.\u00a0\u00a0 For 55, I have to move it down and push it\u00a0\ninto correct place. 21 goes all t"
+    },
+    "f4f46bdf-dbe0-4200-9a7d-17a8de1fabc0": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "he way to the\u00a0\u00a0 bottom and pushes everything to the right. And 64\u00a0\nagain goes in the middle and pushes 2 elements to\u00a0\u00a0 right. So, this is the way of insertion. So,\u00a0\nbasically 64 came and inserted itself between\u00a0\u00a0 the 55 and the 74. Hence, Insertion Sort. \n"
+    },
+    "a092001e-fb20-4133-81c0-a27ea6fe1f59": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "So, an insertion sort, basically you build a\u00a0\u00a0 new list, you pick the next element and\u00a0\ninsert it into this list. So initially,\u00a0\u00a0 you build a list of size one, which is sorted by\u00a0\nthe fact that it has only one element, every one\u00a0\u00a0 element list is by defini"
+    },
+    "1de03d8e-143e-44e7-848b-9f5bad560b90": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "tion sorted. Now once you\u00a0\nhave two elements by insertion, you make sure that\u00a0\u00a0 the two element list is sorted, then the\u00a0\nthree element list is sorted and so on. \n\u00a0 So, if you want to do this iteratively,\u00a0\nrather than it is like our selection sort,\u00a0\u00a0 if yo"
+    },
+    "236697e3-af65-4d97-b947-88817a0ddb76": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "u do not want to actually build a new list,\u00a0\nwhat you can assume is that so far, I have somehow\u00a0\u00a0 scan from 0 to i minus 1 and I have inserted\u00a0\nthem so that they are sorted. Now I take this\u00a0\u00a0 L[i] and I move backwards and insert\u00a0\nit into the position, then"
+    },
+    "1a43dc6f-b1f3-4f14-8095-4931ce1e3d01": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": " I would\u00a0\u00a0 have grown my sorted prefix up to here. \nSo, in selection sort the sorted prefix was\u00a0\u00a0 created by swapping the minimum\u00a0\nwith the beginning of the prefix.\u00a0\u00a0 Here, instead, what we do is we take the\u00a0\nnext element, which is not in the correct,\u00a0\u00a0 wh"
+    },
+    "c19ecf5f-edf0-4e3e-9bd8-74f4db548d13": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ich is not yet part of the sorted prefix, and I\u00a0\ninserted by moving it back, so the sorted prefix\u00a0\u00a0 will shift a little bit and make space for it. \nSo, here is Insertion Sort. So, it is actually\u00a0\u00a0 simpler to write than selection sort of\u00a0\nyou remember the a"
+    },
+    "983786e2-780d-4fb4-9458-2da18f8a8f00": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "mount of code there. So,\u00a0\u00a0 what we do is that again, if we compute the list\u00a0\nlength, and if the length is 0, then we return\u00a0\u00a0 otherwise, now we assume that we have already\u00a0\nsorted again, like selection sort, there is an\u00a0\u00a0 invariant that we are looking at p"
+    },
+    "dbd973a5-4b55-44e2-8b92-399b840bea5b": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "osition i, we\u00a0\nassume that 0 to i minus 1 is already sorted. \n\u00a0 So, we start with the ith position and now, we\u00a0\nwant to go backwards. So, if L[j] is smaller\u00a0\u00a0 than L[j-1], then we want to swap and continue.\u00a0\nSo, supposing I had, whatever it was, so say 21,"
+    },
+    "ba91dd90-b1db-400c-b213-531d91e69858": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "\u00a0\u00a0 34 56, 72 and now, I find say, the next\u00a0\nelement that I am looking at is a 43.\u00a0\u00a0 So, what I will do is that this is\u00a0\nmy i, so I will compare these two,\u00a0\u00a0 and then I will exchange them. \nAnd now I will shift my attention to\u00a0\u00a0 this position, because that "
+    },
+    "b9bb0aca-520c-4f3d-a326-dda761baa451": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "is where I am. So, I\u00a0\nwill do j equals j-1, then I will compare these\u00a0\u00a0 two and if necessary I will swap them. So, I will\u00a0\nnow make this into 56 and this into 43. And now I\u00a0\u00a0 will move my attention to this position, and then\u00a0\nI will compare these two posit"
+    },
+    "dae7ad05-f816-499a-a8d8-7656ba586916": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ions and see and now\u00a0\u00a0 I do not need to swap them. So, I will finish. \nNow the other possibility that could happen is\u00a0\u00a0 that I could go all the way and eventually\u00a0\nsupposing that we not 43 but say 13,\u00a0\u00a0 then eventually it'd have gone all the way\u00a0\nthere. An"
+    },
+    "4c44393a-2464-4bba-b504-f872725a46de": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "d then I would have reached the\u00a0\u00a0 beginning of the list. And now if I start\u00a0\nlooking at j minus 1, it is not a valid\u00a0\u00a0 value in Python will throw an index error.\u00a0\nThat is why I have this extra thing saying;\u00a0\u00a0 do not try to look at the previous element\u00a0\nif "
+    },
+    "24424165-6f1a-41cf-9d85-13d5e7a8e4db": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "you are already at the beginning. \n\u00a0 So, if you happen to insert and push it all the\u00a0\nway back, then just stop, So either you stop,\u00a0\u00a0 because you have reached the beginning, you have\u00a0\ninserted it by pushing it all the way to the end,\u00a0\u00a0 or you stop because "
+    },
+    "ce9f3397-7760-4b61-b1f2-678a79ba99ab": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "there is a point beyond which\u00a0\nit should not move anymore, because the previous\u00a0\u00a0 element is actually this element is bigger\u00a0\nthan or equal to the previous element. \n\u00a0 It is not smaller than so this is the insert\u00a0\nthing. And once you have done this by movi"
+    },
+    "080c5f6a-c68c-4c4b-97de-ed7b11931641": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ng this\u00a0\u00a0 L, L of i backwards to the correct position,\u00a0\nyou can claim that the sorted prefix has been\u00a0\u00a0 extended from i to plus 1. So, the invariant has\u00a0\nbeen extended. And in the limit, as I go to the\u00a0\u00a0 last position, I will have extended the prefix\u00a0\nto t"
+    },
+    "5a5e37fe-eb1b-481b-b1cd-664af9a2e78b": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "he entire thing. So, the whole thing will\u00a0\u00a0 be sorted. So, this is Insertion Sort. \nNow, we can also do this, just for illustration,\u00a0\u00a0 recursively. So, we can assume that this thing\u00a0\nis sorted as before, and now we can insert it,\u00a0\u00a0 but the sorting happens "
+    },
+    "4ec347d0-6a0e-4132-bbf0-d5115d9121c6": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "inductively. So,\u00a0\nthis is also useful to just think about it,\u00a0\u00a0 because you need some practice are\u00a0\nalso looking many problems that are\u00a0\u00a0 actually easier to formulate recursively. \nSo, in this case, it is not very difficult to do\u00a0\u00a0 it both ways. But let us"
+    },
+    "33572673-0d57-4cb6-af1a-ee40006e6084": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": " look at it recursively.\u00a0\nSo first, let us look at insert. So, we have this\u00a0\u00a0 operation here which is actually inserting,\u00a0\nso this is actually an insert operation.\u00a0\u00a0 So, let us see how to do this insert\u00a0\nin a recursive way. So, I have a list L\u00a0\u00a0 and I want"
+    },
+    "43d3c59a-ce7c-4017-8a70-cd63eaf87892": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": " to insert a value v from the right. \nSo, L is sorted and I am going to do exactly what\u00a0\u00a0 I did before, I am going to insert it\u00a0\nfrom the right recursively. So again,\u00a0\u00a0 the base case is that the list is empty, I do not\u00a0\nhave anything to insert into, then t"
+    },
+    "9cdbedf3-eaa8-4ee9-9c18-614255039e1e": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "he new list I\u00a0\u00a0 get is just a list consisting of the new value v,\u00a0\nI am inserting it. So, I have the old list plus\u00a0\u00a0 the value v in the correct position, the old list\u00a0\nis empty. So, the new list is just the value V in\u00a0\u00a0 the correct position, which is the s"
+    },
+    "9702ef56-62a1-4781-95da-96cd379afd68": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ingle. \nNow if the value v is actually bigger than\u00a0\u00a0 everything in the list, then I just take it at\u00a0\nthe end. So, L minus 1, remember that L minus 1\u00a0\u00a0 is the last value. So, if v is not smaller than\u00a0\nthe last value, in other words, is bigger than\u00a0\u00a0 equal t"
+    },
+    "3dcec180-df22-48ee-85e6-4097f89f9d0b": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "o the last value, then I just take L and I\u00a0\nappend value v to it and I return that list. \n\u00a0 Otherwise, I will move in one step. So, I will\u00a0\nrecursively, this is where the recursion comes;\u00a0\u00a0 I will insert v into the slice excluding the\u00a0\nlast element. So, I "
+    },
+    "30242f44-e353-442a-a8ce-377dfb7aa82f": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "will try to insert it one\u00a0\u00a0 step before, but I must remember to restore\u00a0\nthe last value afterwards. So I am basically\u00a0\u00a0 bypassing so I have this. And I have\u00a0\nchecked that we must go before this. \n\u00a0 So, I am trying to now insert it in this segment,\u00a0\nand the"
+    },
+    "0e6bea1d-1951-41df-9cec-4265dd598f80": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "n add back this, that is this value.\u00a0\u00a0 So, this is a recursive insert and\u00a0\nonce I have a recursive insert,\u00a0\u00a0 then insertion sort is very simple. So, I take\u00a0\nthe list, if it is empty, I return otherwise,\u00a0\u00a0 I take the last value in the list and inserted\u00a0\nint"
+    },
+    "cdc6eb1b-d12a-4117-9a89-dc8ac1802c6e": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "o the recursively sorted list up to\u00a0\u00a0 the n minus 1 value. So, this is\u00a0\na recursive Insertion Sort. \n\u00a0 Now there is another point to note between\u00a0\nthese two versions. So, if you look at the\u00a0\u00a0 iterative Insertion Sort like the selection\u00a0\nsought, it is actua"
+    },
+    "116d9c74-a4d2-446e-9160-84a2775109e6": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "lly maintaining\u00a0\u00a0 L and updating it in place, because all these\u00a0\noperations exchanging Li, Lj, Lj-1, all these\u00a0\u00a0 things do not disturb the identity of L. \nSo, though we are returning L. Actually L is\u00a0\u00a0 also being updated inside the function. So this\u00a0\nis ac"
+    },
+    "7e5125b4-339a-4c26-946c-17ba55a8a82e": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "tually sorting l as you go along. Whereas\u00a0\u00a0 when you are doing a recursive thing, typically\u00a0\nyou are constructing a new list. So, each time\u00a0\u00a0 you insert, you are constructing a new list. So\u00a0\nactually, this function will not disturb it. \n\u00a0 You will get actu"
+    },
+    "fb300bd6-0948-4783-8f3b-4eeb76da8859": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ally a new list back and the\u00a0\nold list does not change. Now there is this.\u00a0\u00a0 If you look at Python, actually, there are two\u00a0\nways to sort a list built in there is something\u00a0\u00a0 called L dot sort and there is a function\u00a0\ncalled sorted, which takes a list. So "
+    },
+    "bb8e2241-de38-4e76-b865-271ba1c9902b": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "this\u00a0\u00a0 is an in place sort or that\u00a0\nis it will actually take L and\u00a0\u00a0 update it to a sorted version of itself. \nBut sometimes you do not want that sometimes\u00a0\u00a0 you want to keep L but you want a sorted version\u00a0\nof its values. So, then you should do this. So,\u00a0"
+    },
+    "066a06a5-3ba9-4c80-b180-9596e5dbf739": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "\u00a0 then you will have to say L 2 is equal to sorted\u00a0\nof L. So, L will not change but L 2 will be the\u00a0\u00a0 sorted version. So, it is useful to have both\u00a0\nversions. But in this case, just to highlight\u00a0\u00a0 the recursive version of Insertion Sort will\u00a0\ncreate a new "
+    },
+    "edf1c1e0-5956-4edd-9412-572a50ee3110": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "list whereas the iterative version\u00a0\u00a0 will actually update the list in place. \nSo, let us analyze these two separately so,\u00a0\u00a0 analyses of the iterative version. So, the\u00a0\ncorrectness follows from the invariant just\u00a0\u00a0 as for selection sort. And if we look at\u00a0\n"
+    },
+    "e9b7c8b2-0d37-4c77-97be-1e2982a452f1": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "the efficiency, well, the outer loop again,\u00a0\u00a0 we have this outer loop, which executes\u00a0\nn times and inside we have an inner loop\u00a0\u00a0 and this inner loop is really this insert. \nSo, we have to take L of i and insert it into\u00a0\u00a0 0 to i -1. So, 0 to i -1 has i val"
+    },
+    "1ec580b2-2889-45bb-b61e-fdb9eac572d5": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ues. So, I have\u00a0\nto look at each of these values in the worst case,\u00a0\u00a0 because it might be smaller than L0. So the, it\u00a0\ntakes i steps to insert L of i into the prefix\u00a0\u00a0 0 to i - 1. So therefore, by the same logic, as\u00a0\nthe selection sought, the first time, I"
+    },
+    "97129fda-9c59-4329-bd17-90450e48ff66": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": " have to\u00a0\u00a0 do no insert, so it is 0, the first element is\u00a0\njust really in place, the second element has to\u00a0\u00a0 be inserted with respect to the first element, the\u00a0\nthird has been inserted, the first two and so on,\u00a0\u00a0 so is 0 plus 1 plus 2 up to n minus 1. \nAnd"
+    },
+    "9a406528-96c5-4437-a20f-1428805c7192": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": " using that same summation rule as we had\u00a0\u00a0 before, because now it is from 0 to n minus 1, the\u00a0\nsummation is n into n minus 1 by 2, not n into n\u00a0\u00a0 plus 1 by 2, but still, it is big O of n squared.\u00a0\nSo, that is how we can analyze insertions are\u00a0\u00a0 the same c"
+    },
+    "8aa55a14-d232-47be-badd-49baf98a1686": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "omplexity, essentially a selection. \nSo, in the case of the recursive version, so first\u00a0\u00a0 of all, I am I am glossing over the correctness,\u00a0\nbut you have to argue that the recursive\u00a0\u00a0 formulation is kind of correct, which is much\u00a0\neasier to do usually than "
+    },
+    "cf0b555c-c06c-461a-801e-a3b8b3462f06": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "iterate, because just by\u00a0\u00a0 looking at the structure of the function, you can\u00a0\nclaim that the recursive version is correct. \n\u00a0 But now, if I want to do an analysis, I have to\u00a0\nanalyze two functions, I have to take the time\u00a0\u00a0 here, which I am going to call T"
+    },
+    "e1ce8cc4-7a4f-4a5c-a7f0-91f997197393": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": " of i and I am\u00a0\ngoing to take the time here, which is called T\u00a0\u00a0 of S, TS. So, Ti of n is a time taken by\u00a0\ninsert for input of size n, TS of n is the\u00a0\u00a0 time taken by insertion sought for input of\u00a0\nsize n and Insertion Sort calls insert. \n \n\u00a0 So, let us loo"
+    },
+    "f496326f-580f-48a7-bb97-0f44465d96d4": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "k at insert first. So again, if it\u00a0\nis 0, it immediately returns the list containing\u00a0\u00a0 only the new value of v. So, T of Ti of 0 is\u00a0\none and Ti of n in the worst case is going to\u00a0\u00a0 have to call itself with n minus 1 values, and\u00a0\nthen do some work to append"
+    },
+    "e408688a-440d-40a3-bda6-eefd4e78690c": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": " back the value that\u00a0\u00a0 I skipped over. So, T i of n is going to be Ti\u00a0\nof of n minus 1 plus 1 and if you unwind this,\u00a0\u00a0 you will get 1 plus 1 plus 1 n times. \nIt is not very difficult; you can just check\u00a0\u00a0 for yourself that it goes down and get you get\u00a0\n1 "
+    },
+    "e1df143b-a40a-4009-afaf-28837838cc16": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "plus 1 plus 1 n times. So, Ti of n nd this is\u00a0\u00a0 the intuitive thing that we said earlier. Also\u00a0\nto insert in a list of i elements, we said you\u00a0\u00a0 need i steps. So, this is saying to insert in\u00a0\na list of n elements, you need n steps. \n\u00a0 What about T S? Well,"
+    },
+    "fb20c2ee-cb35-4ce5-b71e-c4638f6c9a0c": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": " TS again, when it is 0, you\u00a0\nreturn immediately. Otherwise, you first insert\u00a0\u00a0 and you sort, you have to do both. So, you have\u00a0\nto sort an n minus 1 elements and you have to\u00a0\u00a0 insert an n minus 1 elements. And so, you can\u00a0\nunwind this and you can figure o"
+    },
+    "30ab8b54-4982-4a47-9cf4-f9bacee428e4": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ut that this thing\u00a0\u00a0 is actually going to be 1 plus 2 plus n minus 1\u00a0\nand so this is going to give me n squared. \n\u00a0 So, to summarize insertion sort and\u00a0\nselection, sort of both intuitive\u00a0\u00a0 algorithms and these are both algorithms\u00a0\nthat we use quite natural"
+    },
+    "409d07fe-0695-48b0-b4bc-84f149154959": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ly. For instance,\u00a0\u00a0 insertion sort is typically the kind of\u00a0\nalgorithm you use, if you if you ever play cards,\u00a0\u00a0 you have to pick up a card and put it into\u00a0\nthe correct place in the hand that you have,\u00a0\u00a0 usually use Insertion Sort, it is already sorted,\u00a0\ny"
+    },
+    "fcd54ab1-7bc3-4b3a-a808-ee9ca3cd1ff8": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ou find the correct place to put it in. \n\u00a0 So here, in both cases, you create a new sorted\u00a0\nlist. But in this case, unlike the earlier one,\u00a0\u00a0 where you actually the sorted list was\u00a0\nautomatically built up in sorted order here, you\u00a0\u00a0 have to correctly inser"
+    },
+    "f94027bc-02e9-41b4-a180-63da4e16fd7c": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "t it in the correct place.\u00a0\nSo, the worst case complexity is order n squared.\u00a0\u00a0 But unlike selection sort, not\u00a0\nall cases take time n squared. \n\u00a0 Because if you look at this insert operation,\u00a0\nespecially in the iterative cases, very clear.\u00a0\u00a0 If you look at"
+    },
+    "c93cca33-b5a2-4a69-bfe0-97f681df6313": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": " the iterative insert operation,\u00a0\nnotice that if this element is already bigger than\u00a0\u00a0 the previous one, then I will not go into that\u00a0\nloop at all. So essentially, for each element, if\u00a0\u00a0 it is already in ascending order, the next element\u00a0\nwill be bigger th"
+    },
+    "9c8e9d9d-33a1-4a33-929b-bcc4d1c83e7a": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "an the previous element. \n\u00a0 So, I will not do this while at all.\u00a0\nSo, you could actually get almost\u00a0\u00a0 a linear time algorithm out of this depending on\u00a0\nhow the input is originally. So, Insertion Sort,\u00a0\u00a0 performance can be wildly different depending\u00a0\non whe"
+    },
+    "3fbaa10a-b649-4b64-9bdd-c01ec0bab3d8": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ther you have an already sorted input,\u00a0\u00a0 which is a good case. But it has to be sorted in\u00a0\nthe way if it is ordered in the opposite way. \n\u00a0 Supposing you are trying to sort in ascending\u00a0\norder and it is given to you in descending order,\u00a0\u00a0 then you are goin"
+    },
+    "bf301618-f95b-4e5a-a5f9-41befd6e43c1": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "g to spend a lot\u00a0\nof time because it needs time,\u00a0\u00a0 you are going to have to kind of move it back\u00a0\nto the beginning. So, supposing I have 7, 8, 6\u00a0\u00a0 as my lists, then I will put 7 then\u00a0\nI will have to bring 8 in here. \n\u00a0 Then I will bring 6 in here, and I wi"
+    },
+    "4f5c8054-769d-48d6-b50c-c5c87f9d273c": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "ll bring 5\u00a0\nand 8, so then I am going to do a lot of work,\u00a0\u00a0 but if it was 5, 6, 7, 8, Then I am going\u00a0\nto put 5 then 6 is going to come after that,\u00a0\u00a0 then 7 is going to come after that\u00a0\n8 is going to come after that. So,\u00a0\u00a0 depending on the order, it may b"
+    },
+    "c6421d91-82de-4643-9c40-75571fd9e94a": {
+        "content_id": 18,
+        "course_name": "PDSA",
+        "title": "Insertion Sort",
+        "week": 2,
+        "chunk": "e much more\u00a0\nefficient than the worst case of n squared."
+    }
+}
