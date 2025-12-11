@@ -1,0 +1,214 @@
+/* Styles for search bar */
+.search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #667eea;
+  }
+
+h3 {
+    color: #555;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    font-size: 1.75rem;
+}
+  
+.course-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+.chat-container {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+  }
+
+/* Card Styles */
+.card {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.cardWidth {
+    width: 49%;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.scrollable {
+    max-height: 350px; /* Adjust the height as needed */
+    overflow-y: auto;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Users, .Camp, .Req {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.Users div, .Camp div, .Req div {
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ececec;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.Users div:hover, .Camp div:hover, .Req div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Users h4, .Camp h4 {
+    margin: 10px 0;
+    color: #444;
+    font-size: 1.1rem;
+}
+
+.Users p, .Camp p, .Req p {
+    font-size: 0.95rem;
+    color: #777;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 15px;
+    margin-right: 5px;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.btn {
+    width: 100%;
+}
+
+.button:hover {
+    background: linear-gradient(90deg, #764ba2, #667eea);
+    transform: translateY(-2px);
+}
+
+/* Forms */
+form {
+    margin-top: 20px;
+    display: inline;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .cardWidth {
+        width: 94.213%; /* Cards take full width on smaller screens */
+    }
+    .Users, .Camp, .Req {
+        gap: 10px; /* Reduce gap between list items */
+    }
+    .search-bar {
+        flex-direction: column;
+    }
+    .search-input {
+        width: 100%; /* Search input takes full width */
+    }
+    .button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 495px) {
+    .cardWidth {
+        width: 89.56%; /* Cards take full width on smaller screens */
+    }
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .button {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+    .Users div, .Camp div, .Req div {
+        padding: 15px;
+    }
+    input[type="text"], textarea, select {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 395px) {
+    .cardWidth {
+        width: 88.15795%; /* Cards take full width on smaller screens */
+    }
+}
+
+@media (max-width: 350px) {
+    .cardWidth {
+        width: 86.1125%; /* Cards take full width on smaller screens */
+    }
+}

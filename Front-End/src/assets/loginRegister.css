@@ -1,0 +1,158 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.body {
+  width: 100%;
+  height: 100%;
+}
+
+.login-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; /* Change to column layout for smaller screens */
+}
+
+.imgbox {
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Adjust height for smaller screens */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Adding media query for larger screens */
+@media (min-width: 768px) {
+  .login-container {
+    flex-direction: row; /* Row layout for larger screens */
+  }
+
+  .imgbox {
+    width: 55%; /* Keep as per original */
+    height: 100vh; /* Full height for larger screens */
+  }
+
+  .contentbox {
+    width: 45%;
+  }
+}
+
+/* Overlay gradient for image */
+.imgbox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(225deg, #e91e63, #03a9f4);
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.imgbox img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contentbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Formbox styling */
+.formbox {
+  width: 100%;
+  max-width: 400px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h2 {
+  color: #607d8b;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #ff4584;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+/* Input styling */
+.inputbox {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.inputbox label {
+  font-size: 16px;
+  color: #607d8b;
+  margin-bottom: 5px;
+}
+
+.inputbox input,
+.inputbox select {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: 1px solid #607d8b;
+  background: transparent;
+  outline: none;
+}
+
+.inputbox input[type="submit"] {
+  background: #ff4584;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.inputbox input[type="submit"]:hover {
+  background: #f53677;
+}
+
+/* Media queries for small screens */
+@media (max-width: 767px) {
+  .formbox {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .inputbox input,
+  .inputbox select {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+}
+
+/* Error message styling */
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+
+/* Scrollable form content */
+.scrollable {
+  max-height: 60vh;
+  overflow-y: auto;
+}

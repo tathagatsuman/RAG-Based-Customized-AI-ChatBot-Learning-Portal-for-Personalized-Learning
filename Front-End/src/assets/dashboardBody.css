@@ -1,0 +1,53 @@
+/* Main Body Style */
+.body {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #A9F1DF, #FFBBBB);
+    padding-bottom: 20px; /* Add some bottom padding for spacing */
+}
+
+/* Container Style */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(-225deg, #EA8D8D, #A890FE);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex Wrapper */
+.fram {
+    display: flex;
+    gap: 20px;
+}
+
+/* Headings */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+/* Mobile Responsive Styling */
+@media (max-width: 768px) {
+    .fram {
+        flex-direction: column; /* Stack the frames vertically */
+        gap: 0;
+    }
+    h2 {
+        font-size: 1.75rem; /* Adjust heading size for smaller screens */
+    }
+}
+
+@media (max-width: 495px) {
+    .container {
+        padding: 15px;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
