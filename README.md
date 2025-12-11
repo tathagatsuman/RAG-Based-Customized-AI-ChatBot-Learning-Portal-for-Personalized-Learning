@@ -1,5 +1,6 @@
 # RAG-Based-Customized-AI-ChatBot-Learning-Portal-for-Personalized-Learning
-```markdown
+
+markdown
 # AI Learning Portal with RAG Chatbot
 
 An intelligent learning portal with full-stack architecture and integrated **RAG-based AI Chatbot**, built with:
